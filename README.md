@@ -2,12 +2,12 @@ This is a work-in-progress [website](https://fanwangecon.github.io/Tex4Econ/) of
 
 Materials gathered from various [projects](https://fanwangecon.github.io/research) in which latex is used. The goal of this repository is to make it easier to find/re-use latex files produced for various projects.
 
-Latex codes are tested to work with [Overleaf.com](https://overleaf.com). This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with the git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Overleaf output pages with example PDF files are linked below.
+This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
 
-The structure is to:
+The writing/structure is to:
 1. Store latex formatting file etc in separate files away from paper tex.
 2. For papers, write in tex fragments stored in separate files. Main tex paper file mainly contains structure/outline.
-3. Files synced through git/github, pull from github to edit/share on [Overleaf.com](https://overleaf.com) or locally.
+3. Files synced through git/github, pull from github to edit/share with co-authors on [overleaf.com](https://overleaf.com) or edit locally.
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
