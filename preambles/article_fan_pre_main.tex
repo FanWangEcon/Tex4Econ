@@ -1,4 +1,4 @@
-\documentclass[12pt,english]{article}
+% \documentclass[12pt,english]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% SEC: PACKAGEs MAIN  %%
@@ -13,7 +13,6 @@
 % \usepackage[monochrome]{xcolor}
 \usepackage{babel}
 \usepackage{setspace}
-\usepackage{breakurl}
 \usepackage{graphicx}
 \usepackage{booktabs,dcolumn}
 \usepackage{array}
@@ -65,10 +64,6 @@
 	\sectionmark{#1}}
 
 \newcommand{\rowgroup}[1]{\hspace{-0.5em}#1}
-
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
 \newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
