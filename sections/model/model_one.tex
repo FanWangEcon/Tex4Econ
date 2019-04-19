@@ -1,0 +1,15 @@
+\label{subsec:modelone}
+
+Given $\mu_{R_{yv}}$, $\sigma_{R_{yv}}$, and price $p^{N}_{yv}$, each household solves the following maximization problem:
+
+\begin{equation}
+\max_{c,N} c+\rho\cdot c^{2}+  \Bigg\{ \gamma\cdot H_{24}+\lambda \cdot \int_{R_{yv}} \left(H_{24}-R_{yv}\right)\mathbb{1}\left\{ H_{24}\ge R_{yv}\right\}dF(R_{yv}) \Bigg\}
+\end{equation}
+where:
+\[
+c=Y - p^{N}_{yv} \cdot N
+\]
+\[
+H_{24}(N,X,\epsilon)=\exp(A+ X\cdot\alpha+\epsilon)\cdot N^{\beta}
+\]
+The realized household utility $u_{yv}$ is a function of parameters and $Y, p^{N}_{yv}, X, F(R_{yv}),\epsilon$. Households make choices given $\Omega = \big(Y, p^{N}_{yv}, X\big)$, the i.i.d. productivity shock $\epsilon$, and $F(R_{yv})$. At the birth of a child, a household chooses the optimal amount of nutrition for the child over the next 24 months given the joint relative distribution of the reference health outcome and their own child's helath given that child's productivity shock and nutritional intake. The parents choose knowing that more nutritional intake--at a decreasing rate of return--will increase the probability that their child will catch up to or exceed the reference health.

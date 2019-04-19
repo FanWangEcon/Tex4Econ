@@ -1,40 +1,3 @@
-% \documentclass[12pt,english]{article}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%% SEC: PACKAGEs MAIN  %%
-%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{mathpazo}
-\usepackage{eulervm}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{color}
-% \usepackage[monochrome]{xcolor}
-\usepackage{babel}
-\usepackage{setspace}
-\usepackage{graphicx}
-\usepackage{booktabs,dcolumn}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage[font=singlespacing, skip=3pt]{caption}
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-%\usepackage[usenames,dvipsnames,svgnames,table,monochrome]{xcolor} % test black and white color results, 2018-11-21 08:48
-\usepackage{float}
-\usepackage[export]{adjustbox}[2011/08/13]
-\usepackage{enumitem}
-\usepackage{tikz}
-\usepackage{subfig}
-\usepackage{float}
-%\usepackage[nolists, tablesfirst, nomarkers]{endfloat}
-% \usepackage[unicode=true,pdfusetitle,
-%  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
-%  breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
-%  {hyperref}
-\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
-\usepackage{geometry}
-\usepackage{ragged2e}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% SEC: Indentation  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,39 +31,6 @@
 \newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
 \newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-%% SEC: Bibliography %%
-%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[authordate,
-backend=bibtex,
-doi=false,
-isbn=false,
-sorting=nyt,
-maxbibnames=10,
-maxcitenames=3,
-sortcites=False]{biblatex-chicago}
-
-\bibliography{../draft/bibliography, ../draft/bibliographymissing}
-\AtEveryBibitem{\clearlist{note}\clearlist{language}\clearlist{issn}} % clears issn
-\AtEveryBibitem{%
-	\ifentrytype{online}{%
-		\clearfield{urlyear}
-		\clearfield{urlmonth}
-		\clearfield{urlday}
-		\clearfield{note}
-		\clearlist{language}
-	}{%
-		\clearfield{eprint}%
-		\clearfield{url}%
-		\clearfield{urlyear}
-		\clearfield{urlmonth}
-		\clearfield{urlday}
-		\clearfield{note}
-		\clearlist{language}
-	}
-}%
-
-% \renewcommand*{\bibfont}{\small}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %% SEC: Footer  %%
@@ -220,5 +150,3 @@ sortcites=False]{biblatex-chicago}
 
 \newcommand{\EDIT}[2]{\textit{#1 (\textcolor{red}{\textbf{EDIT}} #2)}}
 \newcommand{\REFE}[1]{\textit{#1 (\textcolor{blue}{\textbf{R}})}}
-
-\makeatother

@@ -1,0 +1,55 @@
+\documentclass[12pt,english]{article}
+\input{../fragments/preamble_main.tex}
+\begin{document}
+
+\title{Sample Compiled Paper with \\
+       Various Sections, Tables and Graphs \\
+       Each Section Written in own Folder \\
+       Each subsection has its own tex file \\
+       Sample contents in this file \\ are from Different Papers}
+\author{Fan Wang\thanks{Department of Economics, University of Houston (email: fwang26@uh.edu), \url{https://fanwangecon.github.io/research.html}}}
+\maketitle
+
+\input{../sections/introconclude/abstract.tex}
+\begin{abstract}
+\singlespacing \abstractB
+\end{abstract}
+\vfill
+\pagebreak{}
+
+\section{Introduction}
+\input{../sections/introconclude/intro.tex}
+\paragraph{Related Literature}
+\input{../sections/introconclude/literature.tex}
+
+\section{Data}
+\subsection{Data One}
+\input{../sections/data/data_one.tex}
+\subsection{Data Two}
+\input{../sections/data/data_two.tex}
+
+\section{Model}
+\subsection{Model One}
+\input{../sections/model/model_one.tex}
+\subsection{Model Two}
+\input{../sections/model/model_two.tex}
+
+\section{Estimate}
+\subsection{Estimation One}
+\input{../sections/esti/esti_one.tex}
+\subsection{Estimation Two}
+\input{../sections/esti/esti_two.tex}
+
+
+\section{Conclusion}
+\input{../sections/introconclude/conclude.tex}
+
+
+\pagebreak
+\input{../fragments/cite/cite_end.tex}
+\pagebreak
+
+\appendix
+
+
+\end{document}

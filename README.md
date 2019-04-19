@@ -11,7 +11,15 @@ The writing/structure is to:
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
-# Article
+# One File Article
 
-1. [Standard Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/articles/article_fan.tex): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/articles/article_fan.tex) \|  [**preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/preambles/article_fan_pre_main.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/articles/article_fan.pdf)
-    + Basic research article template for all papers
+1. [Standard Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex) \|  [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.pdf)
+    + Basic research article template
+
+# Multi-Section Article
+
+1. Write and Compile Section by Section
+    + Each section has own folder
+    + Each subsection has own tex file
+    + Each section has a main file
+    + Each section has a compile file

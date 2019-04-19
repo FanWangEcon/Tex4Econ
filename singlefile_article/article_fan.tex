@@ -1,0 +1,94 @@
+\documentclass[12pt,english]{article}
+
+\input{../fragments/preamble_one.tex}
+\input{../fragments/preamble_two.tex}
+
+% Special String Shorthands
+\input{../fragments/shorthand/short_text.tex}
+\input{../fragments/shorthand/short_math.tex}
+
+% Numbers as Newcommands
+\input{../fragments/stats/stats_one.tex}
+
+% Citation
+\input{../fragments/cite/cite_preamble.tex}
+\bibliography{../_bib/ref_one, ../_bib/ref_two, ../_bib/ref_three, ../_bib/ref_four, ../_bib/ref_five}
+
+\makeatother
+
+\begin{document}
+
+\title{Paper Name}
+
+\author{Fan Wang\thanks{Department of Economics, University of Houston (email: fwang26@uh.edu)}}
+
+\maketitle
+\begin{abstract}
+\singlespacing This is my abstract \end{abstract}
+\vfill
+\pagebreak{}
+
+\section{Introduction}
+
+According to \textcite{becker_human_1986}, ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nunc orci, id pellentesque lacus ullamcorper at. Mauris venenatis gravida magna non dapibus. Nullam vel consequat purus, id luctus dui. Suspendisse vel auctor nulla. Proin ipsum felis, efficitur eu eleifend vitae, efficitur pellentesque mauris \autocite{case_lasting_2005, conti_understanding_2010}.
+
+\section{Model}
+
+Let $\tau$ be the fraction of poorest children receiving price discounts and $\delta$ be the percentage price discount that children receive. $Z\left(\tau,\delta\right)$ is the total cost of a subsidy in grams of protein for 1970, 1972, 1974 and 1976 cohorts, given reference point distribution $\Gamma$ for each cohort:
+
+\begin{equation}
+\label{eq:targetcost}
+Z\left(\tau,\delta\right) =
+\sum\limits_{
+	\substack{
+	\mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+	}
+\left\{\delta\cdot
+\int_{\epsilon}
+\int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+\int_{X}
+N\Big(
+\substack{
+	Y,X,\epsilon; \\
+	\delta, \Gamma_{\mathrm{cohort}}
+}
+\Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+\end{equation}
+As described earlier, we fix the joint distribution of the state space variables across cohorts, and so only the reference point distribution $\Gamma$ is cohort-specific in Equation \ref{eq:targetcost}. We start $\Gamma_{1970}$ as mentioned using the actual reference points in year 1970 from Atole villages, and solve for subsequent reference point distributions following Equation \ref{eq:hmeasure}.
+
+\section{Data}
+
+Let $\tau$ be the fraction of poorest children receiving price discounts and $\delta$ be the percentage price discount that children receive. $Z\left(\tau,\delta\right)$ is the total cost of a subsidy in grams of protein for 1970, 1972, 1974 and 1976 cohorts, given reference point distribution $\Gamma$ for each cohort:
+
+\begin{equation}
+\label{eq:targetcost}
+Z\left(\tau,\delta\right) =
+\sum\limits_{
+	\substack{
+	\mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+	}
+\left\{\delta\cdot
+\int_{\epsilon}
+\int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+\int_{X}
+N\Big(
+\substack{
+	Y,X,\epsilon; \\
+	\delta, \Gamma_{\mathrm{cohort}}
+}
+\Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+\end{equation}
+As described earlier, we fix the joint distribution of the state space variables across cohorts, and so only the reference point distribution $\Gamma$ is cohort-specific in Equation \ref{eq:targetcost}. We start $\Gamma_{1970}$ as mentioned using the actual reference points in year 1970 from Atole villages, and solve for subsequent reference point distributions following Equation \ref{eq:hmeasure}.
+
+
+\section{Conclusion}
+
+\pagebreak
+\input{../fragments/cite/cite_end.tex}
+\pagebreak
+
+\appendix
+\section{Data Figures and Tables}
+
+
+\end{document}

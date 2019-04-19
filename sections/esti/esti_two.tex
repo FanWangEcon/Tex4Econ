@@ -1,0 +1,38 @@
+\label{subsec:estitwo}
+
+We include in the model  measurement errors that allow us to estimate the parameters using maximum likelohood methods.
+As described previously, households observe $\Omega = \big(Y, p^{N}_{yv}, X\big)$, and the distributions of $R_{yv}$. In terms of choices and outcomes, the econometrician only observes $F^{*}$ and $N^{*}$, which differ from the true optimal nutritional choice $N$ by measurement error $\eta$ and true height outcome $h_{24}$ by $\iota$:
+\begin{equation}
+\log(N^{*}) = \log(N(Y, X, \epsilon; p^{N}_{yv},\mu_{R_{yv}},\sigma_{R_{yv}})) + \eta
+\end{equation}
+\begin{equation}
+\log(h_{24}^{*}) = \log(h_{24}(N(Y, X, \epsilon; p^{N}_{yv},\mu_{R_{yv}},\sigma_{R_{yv}}), X, \epsilon)) + \iota
+\end{equation}
+We assume that $\eta$ and $\iota$ are normally distributed, and that $\epsilon$, $\eta$ and $\iota$ are independent. The standard deviation of $\eta$ is $\sigma_{\eta}$ and the mean is $\mu_{\eta}=-\frac{\sigma_{\eta}^2}{2}$. The standard deviation for $\iota$ is $\sigma_{\iota}$ with mean $\mu_{\iota}=-\frac{\sigma_{\iota}^2}{2}$. The log likelihood is based on the difference between model optimal nutritional choices and observed nutritional choices, as well as the model height outcome and observed heights at 24 months of age:
+
+\begin{equation}
+\label{eq:likelihood}
+\max_{\theta\in\Theta} \sum_{y=1970}^{1975}\sum_{v} \bigg\{ \sum_{i=1}^{n_{yv}} \log \bigg( \int_{\epsilon} \phi_{\iota}
+\big(
+\ln h_{24,i}^{*}-
+\ln h_{24}(
+\substack{
+Y_{i}, X_{i}, \epsilon_i; \\
+\theta,\mu_{R_{yv}}, \sigma_{R_{yv}}
+}
+)
+\big)
+\cdot \phi_{\eta}\big(\ln N^{*}_{i} -
+\ln N(
+\substack{
+Y_{i}, X_{i}, \epsilon_i; \\
+\theta,\mu_{R_{yv}}, \sigma_{R_{yv}}
+}
+)
+\big) dF(\epsilon_i) \bigg)\bigg\}
+\end{equation}
+where
+\begin{equation}
+\theta=\{\underbrace{\rho, \gamma, \lambda}_{\text{Preference}}, \overbrace{\delta}^{\substack{\text{Atole} \\ \text{disc.}}}, \underbrace{A, \alpha , \beta, \sigma_{\epsilon} }_{\substack{\text{Production} \\ \text{Function}}}, \sigma_{\eta},\sigma_{\iota}\}
+\end{equation}
+Equation \ref{eq:likelihood} is determined by $\theta$ as well as a set of $\big(\mu_{R_{yv}}, \sigma_{R_{yv}}\big)$ that are village- and time-specific. This means that in estimating the model, we do not impose assumptions about where the current height distribution is with respect to the stationary height distribution. We solve for optimal choices given the observed individual specific $\Omega_i$ and the observed $\mu_{R_{yv}}, \sigma_{R_{yv}}$ for each year $y$ in village $v$.
