@@ -13,24 +13,24 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 # [One File Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex)
 
-For papers that are not too long, we might write all tex contents on the same page. This is the example single-file paper [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex) file, and this is the   [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.pdf) output. Even for single-file papers, various paper components listed below should be stored separately for clarity and convenience. 
+For papers that are not too long, we might write all tex contents on the same page. This is the example single-file paper [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex) file, and this is the   [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.pdf) output. Even for single-file papers, various paper components listed below should be stored separately for clarity and convenience.
 
-The paper [**Preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) is stored in its own file, and loads in the packages and settings, statistics/phrases/math, and citation from tex fragments listed below. A clear separation should be kept between these files, with the main [**preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) only loading inputs in.
+The paper [**preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) is stored in its own file, and loads in the packages and settings, statistics/phrases/math, and citation from tex fragments listed below. A clear separation should be kept between these files, with the main [**preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) only loading inputs in.
 
-The preamble file can be inserted at the top of a full paper file, for example at the top of this [multi-section file](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex).
+The preamble file can be inserted at the top of a full paper file, for example at the top of this [**multi-section file**](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex).
 
-For one-file article, we could directly load in the various tex fragments below. For example, we load these packages below into [this file](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex).
+For one-file article, we could directly load in the various tex fragments below. For example, we load these packages below into [**this file**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex).
 
 - **Numbers/Phrases/Math**: various tex fragments store key file components in separate files
     * [*Numbers*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/stats/stats_one.tex): Sometimes, we want to use the same number if various spots in the paper, these numbers should be stored as newcommands so that the number can be updated in one spot.
     * [*Often Used Phrases*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/shorthand/short_text.tex): Generally, there are terms that are used often in a paper. To make it easy to change these terms or to avoid having to rewrite over and over again, these terms could be stored as new commands.
-    * [*Often Used Math*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/shorthand/short_text.tex): We might need to reuse various Math Symbols or parts of equations, they should also be stored as newcommands.
+    * [*Often Used Math*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/shorthand/short_math.tex): We might need to reuse various Math Symbols or parts of equations, they should also be stored as newcommands.
     * The aggregate [*PDF*](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.pdf) file, compiling all subsection tex files together.
     * The [*overleaf*](https://www.overleaf.com/read/xjsqdwrkfrhq) file, allowing for live compilation.
 - **Citation**: structure to cite efficiently
     * [*Preamble Settings*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/cite/cite_preamble.tex): One file to be loaded into preambles sets citation settings.
     * [*End File Citation Settings*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/cite/cite_end.tex): One file to be loaded at the end of the paper that determines bibliography text display.
-    * [*Bib Files*](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib): Various bib files loaded from [zotero](https://www.zotero.org/) stored in own folder.
+    * [*bib Files*](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib): Various bib files loaded from [zotero](https://www.zotero.org/) stored in own folder.
 - **Packages and Settings**: Package loading etc.
     * [*Package Loading*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_one.tex)
     * [*Additional Packages and Settings*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_two.tex)
@@ -40,9 +40,13 @@ For one-file article, we could directly load in the various tex fragments below.
 
 When a paper is longer, it could be difficult to manage long latex files. Compiling could take long periods of time if the full paper requires compilation for any edits in a subsection. The structure below allows for editing paper in subsections and compiling by sections. The structure works locally as well as remotely on browser based compiler.
 
-Inside [overleaf](https://www.overleaf.com/read/xjsqdwrkfrhq), the aggregate tex file that combines all sections together should be set as the main/default file under project options. Then as subsection text fragments are edited inside overleaf, the full pdf file is updated on the right showing current changes.
+We compile together two files with the same structure:
+1. [Multi-section blank template](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main_blank.pdf) has no contents in the sections, useful for copy/cloning when starting new projects
+2. [Multi-section template with contents](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.pdf) has sample contents in sections, demonstrates what the file looks like filled up.
 
-The same [bib](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) file structure and [preamble fragment](https://github.com/FanWangEcon/Tex4Econ/tree/master/fragments) structure is used here as in the single file case above.
+Inside [**overleaf**](https://www.overleaf.com/read/xjsqdwrkfrhq), the aggregate tex file that combines all sections together should be set as the main/default file under project options. Then as subsection text fragments are edited inside overleaf, the full pdf file is updated on the right showing current changes.
+
+The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) file structure and [**preamble fragments**](https://github.com/FanWangEcon/Tex4Econ/tree/master/fragments) structure is used here as in the single file case above.
 
 - **Aggregate Tex and PDF**: combine subsections together in one joint overall paper file
     * The aggregate [*tex*](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex) file, only showing section and subsection headings.

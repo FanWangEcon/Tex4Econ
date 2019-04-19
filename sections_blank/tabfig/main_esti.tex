@@ -1,0 +1,62 @@
+% \FIGESTIFIT{../graphs/estimation}
+% \input{../preamble/group_d_data_pick/PARAMS.tex} # top of draft used by data tables as well
+% \input{../preamble/group_d_data_pick/DATASIMUPROBJ.tex}  # top of draft used by data tables as well
+% \FIGESTIMATES
+\input{../preamble/group_d_data_pick/var/PARAMSFY1000early.tex}
+% 2. Get SD
+\input{../preamble/group_d_data_pick/var/PARAMSFY10early.tex}
+% 3. Get SD for FB
+\input{../preamble/group_d_data_pick/var/PARAMSFY500early.tex}
+% 4a. sds
+\input{../preamble/group_d_data_pick/var/PARAMSLV15.tex}
+% 4a. sds
+\input{../preamble/group_d_data_pick/var/PARAMSLV105.tex}
+% 4a. mu A
+\input{../preamble/group_d_data_pick/var/PARAMSLV500.tex}
+% 4a. Kappa 99-01 mean + sd for all kappa
+\input{../preamble/group_d_data_pick/var/PARAMSLV10.tex}
+% 4c. Kappa 02-09, overrid mean 02-09
+\input{../preamble/group_d_data_pick/var/PARAMSLV1000.tex}
+% 4b. beta NE mean
+\input{../preamble/group_d_data_pick/var/PARAMSLV100.tex}
+\input{../preamble/group_d_data_pick/var/PARAMSLV50.tex}
+% finalized Production function estimates o11 and real
+\input{../preamble/group_d_data_pick/prod_var/PARAMS_adist_o11_rel.tex}
+
+\FIGESTIMATESFY{Parameter Estimates}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRACTIONS Borrowing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Borrow Frac Central
+\input{../preamble/group_d_data_pick/pcky_var/CKY1000_mpoly.tex}
+% Borrow Frac Northeast
+\input{../preamble/group_d_data_pick/pcky_var/CKY15_msimu.tex}
+% Informal Borrow Shares
+\input{../preamble/group_d_data_pick/pcky_var/CKY15_msimu_ibbf_ne.tex}
+\input{../preamble/group_d_data_pick/pcky_var/CKY15_msimu_ibbf_ce.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CKY AMOUNTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% K Amount NE and CE and Y for CE both from SIMU 15
+\input{../preamble/group_d_data_pick/pcky_var/CKY15_msimu_kne.tex}
+\input{../preamble/group_d_data_pick/pcky_var/CKY15_msimu_kce.tex}
+\input{../preamble/group_d_data_pick/pcky_var/CKY15_msimu_yce.tex}
+\input{../preamble/group_d_data_pick/pcky_var/CKY1_msimu_cne_v2.tex}
+% Y Amount NE from mpoly 100
+% \input{../preamble/group_d_data_pick/pcky_var/CKY100_mpoly_yne.tex}
+\input{../preamble/group_d_data_pick/pcky_var/CKY500_mpoly_yne_v2.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Probabilities Means
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Probabilities
+\input{../preamble/group_d_data_pick/pcky_raw/PROB1.tex}
+% replace prob confidence interval
+\input{../preamble/group_d_data_pick/pcky_var/PROB500.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACTUAL DATA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{../preamble/group_d_data_pick/pcky_data.tex}
+
+\FITPRBKY{Model Fits}
