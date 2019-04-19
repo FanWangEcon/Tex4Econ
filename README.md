@@ -13,8 +13,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 # [One File Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex)
 
-This is the [**article Main File**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex). It is a [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex) file, and is compiled to this [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.pdf) file.
-
+For papers that are not too long, we might write all tex contents on the same page. This is the example single-file paper [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex) file, and this is the   [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.pdf) output. Even for single-file papers, various paper components listed below should be stored separately for clarity and convenience. 
 
 The paper [**Preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) is stored in its own file, and loads in the packages and settings, statistics/phrases/math, and citation from tex fragments listed below. A clear separation should be kept between these files, with the main [**preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) only loading inputs in.
 
