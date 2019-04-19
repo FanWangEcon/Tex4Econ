@@ -1,0 +1,229 @@
+\documentclass[12pt,english]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: PACKAGEs MAIN  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mathpazo}
+\usepackage{eulervm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+% \usepackage[monochrome]{xcolor}
+\usepackage{babel}
+\usepackage{setspace}
+\usepackage{breakurl}
+\usepackage{graphicx}
+\usepackage{booktabs,dcolumn}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[font=singlespacing, skip=3pt]{caption}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage[usenames,dvipsnames,svgnames,table,monochrome]{xcolor} % test black and white color results, 2018-11-21 08:48
+\usepackage{float}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{subfig}
+\usepackage{float}
+%\usepackage[nolists, tablesfirst, nomarkers]{endfloat}
+% \usepackage[unicode=true,pdfusetitle,
+%  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+%  breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+%  {hyperref}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{ragged2e}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Indentation  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
+\setlength{\parindent}{15pt}
+\makeatletter
+%\doublespacing
+\onehalfspacing
+\date{January 16, 2019}
+%\date{\today}
+%\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: new commands  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\exhyphenpenalty=10000\hyphenpenalty=10000
+\newcommand\invisiblesection[1]{%
+	\refstepcounter{section}%
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+	\sectionmark{#1}}
+
+\newcommand{\rowgroup}[1]{\hspace{-0.5em}#1}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+\newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Bibliography %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[authordate,
+backend=bibtex,
+doi=false,
+isbn=false,
+sorting=nyt,
+maxbibnames=10,
+maxcitenames=3,
+sortcites=False]{biblatex-chicago}
+
+\bibliography{../draft/bibliography, ../draft/bibliographymissing}
+\AtEveryBibitem{\clearlist{note}\clearlist{language}\clearlist{issn}} % clears issn
+\AtEveryBibitem{%
+	\ifentrytype{online}{%
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}{%
+		\clearfield{eprint}%
+		\clearfield{url}%
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}
+}%
+
+% \renewcommand*{\bibfont}{\small}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Footer  %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{calc}
+\setlength{\footskip}{\paperheight
+	-(1in+\voffset+\topmargin+\headheight+\headsep+\textheight)
+	-0.75in}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% \usepackage{setspace}
+% \usepackage{parskip}
+% \usepackage{float}
+%
+% \usepackage{graphicx}
+% \usepackage{booktabs,dcolumn}
+% \usepackage[font=singlespacing,skip=5pt]{caption}
+%
+% \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%
+% \usepackage[margin=1in]{geometry}
+%
+%
+% \usepackage{mathpazo} % add possibly `sc` and `osf` options
+% \usepackage{eulervm}
+%
+% \usepackage[bottom]{footmisc}
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% %% Recent addition
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{mathtools} % for \coloneqq, 2018-08-27 10:49
+\usepackage{accents} % for double dilta 2018-11-16 17:49
+\newcommand{\dbtilde}[1]{\accentset{\approx}{#1}}
+\usepackage[outdir=./]{epstopdf} % to include eps files, 2018-11-19 08:59
+% 2018-11-21 08:51 black and white testing of eps graphs
+\usepackage{xspace} % 2018-11-22 15:07 added for newcommand space problem
+
+% 2018-12-03 11:28: color box to generate legend for equilibrium results plots
+\usepackage[most]{tcolorbox}
+% \definecolor{background}{HTML}{FCF9EE}
+% \definecolor{background}{HTML}{FFFFFF}
+\definecolor{background}{HTML}{f2f2f2}
+% \definecolor{linecolor}{HTML}{581810}
+\definecolor{linecolor}{HTML}{000000}
+\AtBeginEnvironment{tcolorbox}{\scriptsize}
+
+% For capitalization Needs
+\usepackage{mfirstuc}
+
+% More Math
+% \usepackage{pgfmath}
+
+% 2018-12-30 13:02
+\usetikzlibrary{positioning}
+
+% 2019-01-02 19:32, to allow for multiple footnotes together
+\usepackage[multiple]{footmisc}
+
+% 2019-01-07 11:34, to allow for calculations
+\usepackage{calculator}
+
+%
+%
+% \setlength{\parskip}{1mm}
+%
+% \setlength{\parindent}{20pt}
+% \large
+% \date{\today}
+%
+% \onehalfspace
+%
+% \fboxsep=2mm%padding thickness
+% \fboxrule=0.5pt%border thickness
+%
+% %\exhyphenpenalty=10000\hyphenpenalty=10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Table formatting, 2018-08-27 16:57, for equilibrium solution table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{array}
+\usepackage{makecell}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Common Section Headings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\section}{\@startsection {section}{1}{\z@}%
+             {-3.5ex \@plus -1ex \@minus -.2ex}%
+             {2.3ex \@plus .2ex}%
+             {\normalfont\Large\scshape\bfseries}}
+
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+             {-3.25ex\@plus -1ex \@minus -.2ex}%
+             {1.5ex \@plus .2ex}%
+             {\normalfont\large\scshape\bfseries}}
+
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{2}{\z@}%
+             {-3.25ex\@plus -1ex \@minus -.2ex}%
+             {1.5ex \@plus .2ex}%
+             {\normalfont\normalsize}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Edit Notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\EDIT}[2]{\textit{#1 (\textcolor{red}{\textbf{EDIT}} #2)}}
+\newcommand{\REFE}[1]{\textit{#1 (\textcolor{blue}{\textbf{R}})}}
+
+\makeatother
