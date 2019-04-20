@@ -30,7 +30,7 @@ For one-file article, we could directly load in the various tex fragments below.
 - **Citation**: structure to cite efficiently
     * [*Preamble Settings*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/cite/cite_preamble.tex): One file to be loaded into preambles sets citation settings.
     * [*End File Citation Settings*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/cite/cite_end.tex): One file to be loaded at the end of the paper that determines bibliography text display.
-    * [*bib Files*](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib): Various bib files loaded from [zotero](https://www.zotero.org/) stored in own folder.
+    * [*bib Files*](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib): Various bib files loaded from [zotero](https://www.zotero.org/) stored in own folder. Sync directly to zotero via overleaf.
 - **Packages and Settings**: Package loading etc.
     * [*Package Loading*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_one.tex)
     * [*Additional Packages and Settings*](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_two.tex)
