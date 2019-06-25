@@ -1,0 +1,73 @@
+\documentclass[12pt,english]{article}
+\usepackage[utf8]{inputenc}
+
+% url package
+\usepackage{hyperref}
+
+% Bibliography package
+\usepackage[authordate, backend=biber]{biblatex-chicago}
+\bibliography{fansample}
+
+% Titling and Author
+\title{Sandbox Testing Latex}
+\author{Fan Wang (University of Houston)}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Equation Test}
+
+Inline: $\sigma_y = \sqrt{ \sum_{y} P(Y=y) \cdot \left( y - \mu_y \right)^2}$
+
+$$\Omega^{\max} = \exp(z^{\max}) \cdot \left(\Lambda^{\max}\right)^{\alpha}$$
+
+\begin{equation}
+\label{eq:1}
+\sum_{i=0}^{\infty} a_i x^i
+\end{equation}
+
+\section{Citation Testing}
+
+\textcite{becker_human_1986} is a paper on Human Capital.
+
+\section{URL Test}
+
+\begin{itemize}
+	\item \href{http://fanwangecon.github.io}{Fan Wang Site}
+	\item \href{https://fanwangecon.github.io/CodeDynaAsset/}{Fan Wang Dynamic Asset Code Repository}
+\end{itemize}
+
+
+\pagebreak
+
+\section{Pandoc}
+
+\subsection{Install and convert Tex to Word}
+
+For editing latex files in word.
+
+\begin{enumerate}
+	\item install pandoc: \href{https://pandoc.org/installing.html}{Pandoc Site Installation Link}
+	\item open up command line
+	\item \textit{cd into where tex file is}: cd \path{C:/Users/fan/Tex4Econ/_other/pandoc}
+	\item \textit{run this for tex to word}: pandoc -s fansample.tex -o fansample.docx
+\end{enumerate}
+
+\subsection{Convert from Tex to Word with bibliography}
+
+\begin{enumerate}
+	\item \textit{run this for word to tex}: pandoc --bibliography=fansample.bib -o fansample.docx fansample.tex
+\end{enumerate}
+
+\subsection{Convert from back to Tex from Word}
+
+\begin{enumerate}
+	\item \textit{run this for word to tex}: pandoc -s fansample.docx -o fansampleBACKDOCX.tex
+\end{enumerate}
+
+
+\printbibliography
+
+\end{document}

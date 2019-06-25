@@ -1,0 +1,146 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Sandbox Testing Latex},
+            pdfauthor={Fan Wang (University of Houston)},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{Sandbox Testing Latex}
+\author{Fan Wang (University of Houston)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{equation-test}{%
+\section{Equation Test}\label{equation-test}}
+
+Inline:
+\(\sigma_{y} = \sqrt{\sum_{y}^{}P(Y = y) \cdot \left( y - \mu_{y} \right)^{2}}\)
+
+\[\Omega^{\max} = \exp(z^{\max}) \cdot \left( \Lambda^{\max} \right)^{\alpha}\]
+
+\[\sum_{i = 0}^{\infty}a_{i}x^{i}\]
+
+\hypertarget{citation-testing}{%
+\section{Citation Testing}\label{citation-testing}}
+
+is a paper on Human Capital.
+
+\hypertarget{url-test}{%
+\section{URL Test}\label{url-test}}
+
+\begin{itemize}
+\item
+  \href{http://fanwangecon.github.io}{Fan Wang Site}
+\item
+  \href{https://fanwangecon.github.io/CodeDynaAsset/}{Fan Wang Dynamic
+  Asset Code Repository}
+\end{itemize}
+
+\hypertarget{pandoc}{%
+\section{Pandoc}\label{pandoc}}
+
+\hypertarget{install-and-convert-tex-to-word}{%
+\subsection{Install and convert Tex to
+Word}\label{install-and-convert-tex-to-word}}
+
+For editing latex files in word.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  install pandoc: \href{https://pandoc.org/installing.html}{Pandoc Site
+  Installation Link}
+\item
+  open up command line
+\item
+  \emph{cd into where tex file is}: cd
+\item
+  \emph{run this for tex to word}: pandoc -s fansample.tex -o
+  fansample.docx
+\end{enumerate}
+
+\hypertarget{convert-from-tex-to-word-and-markdown}{%
+\subsection{Convert from tex to word and
+markdown}\label{convert-from-tex-to-word-and-markdown}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{run this for tex to word}: pandoc -s fansample.tex -o
+  fansample.docx
+\item
+  \emph{run this for tex to md}: pandoc -s fansample.tex -o fansample.md
+\end{enumerate}
+
+\hypertarget{convert-from-back-to-tex-from-word-and-markdown}{%
+\subsection{Convert from back to tex from word and
+markdown}\label{convert-from-back-to-tex-from-word-and-markdown}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  run this to convert tex to word: pandoc -s fansample.tex -o
+  fansample.docx
+\item
+  run this to convert tex to markdown: pandoc -s fansample.tex -o
+  fansample.md
+\end{enumerate}
+
+\hypertarget{convert-with-bibliography}{%
+\subsection{Convert with Bibliography}\label{convert-with-bibliography}}
+
+Suppose the file pandoc --bibliography=BiblatexChinaClosureWestern.bib
+-o Draft20180210.docx Draft20180210.tex
+
+\end{document}
