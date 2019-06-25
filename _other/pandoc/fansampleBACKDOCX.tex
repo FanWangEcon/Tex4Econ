@@ -74,7 +74,13 @@ Inline:
 \hypertarget{citation-testing}{%
 \section{Citation Testing}\label{citation-testing}}
 
-is a paper on Human Capital.
+Becker and Tomes (1986) is a paper on Human Capital. Early childhood
+health and economic circumstances could have lasting effects on adult
+socioeconomic outcomes (Case, Fertig, and Paxson 2005).\footnote{"In
+  this article, we develop a framework for analyzing the causal effects
+  of interventions in the presence of latent factors that could affect
+  outcomes, even in the absence of interventions" (Conti and Heckman
+  2010).}
 
 \hypertarget{url-test}{%
 \section{URL Test}\label{url-test}}
@@ -94,7 +100,7 @@ is a paper on Human Capital.
 \subsection{Install and convert Tex to
 Word}\label{install-and-convert-tex-to-word}}
 
-For editing latex files in word.
+For editing latex files in word to benefit from tracked changes.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -110,37 +116,40 @@ For editing latex files in word.
   fansample.docx
 \end{enumerate}
 
-\hypertarget{convert-from-tex-to-word-and-markdown}{%
-\subsection{Convert from tex to word and
-markdown}\label{convert-from-tex-to-word-and-markdown}}
+\hypertarget{convert-from-tex-to-word-with-bibliography}{%
+\subsection{Convert from Tex to Word with
+bibliography}\label{convert-from-tex-to-word-with-bibliography}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \emph{run this for tex to word}: pandoc -s fansample.tex -o
-  fansample.docx
-\item
-  \emph{run this for tex to md}: pandoc -s fansample.tex -o fansample.md
+  \emph{run this for word to tex}: pandoc --bibliography=fansample.bib
+  -o fansample.docx fansample.tex
 \end{enumerate}
 
-\hypertarget{convert-from-back-to-tex-from-word-and-markdown}{%
-\subsection{Convert from back to tex from word and
-markdown}\label{convert-from-back-to-tex-from-word-and-markdown}}
+\hypertarget{convert-from-word-from-tex}{%
+\subsection{Convert from Word from
+Tex}\label{convert-from-word-from-tex}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  run this to convert tex to word: pandoc -s fansample.tex -o
-  fansample.docx
-\item
-  run this to convert tex to markdown: pandoc -s fansample.tex -o
-  fansample.md
+  \emph{run this for word to tex}: pandoc -s fansample.docx -o
+  fansampleBACKDOCX.tex
 \end{enumerate}
 
-\hypertarget{convert-with-bibliography}{%
-\subsection{Convert with Bibliography}\label{convert-with-bibliography}}
+Becker, Gary S, and Nigel Tomes. 1986. ``Human Capital and the Rise and
+Fall of Families.'' \emph{Journal of Labor Economics} 4 (3): S1--39.
+\url{http://ideas.repec.org/a/ucp/jlabec/v4y1986i3ps1-39.html}.
 
-Suppose the file pandoc --bibliography=BiblatexChinaClosureWestern.bib
--o Draft20180210.docx Draft20180210.tex
+Case, Anne, Angela Fertig, and Christina Paxson. 2005. ``The Lasting
+Impact of Childhood Health and Circumstance.'' \emph{Journal of Health
+Economics} 24 (2): 365--89.
+\url{https://doi.org/10.1016/j.jhealeco.2004.09.008}.
+
+Conti, Gabriella, and James J Heckman. 2010. ``Understanding the Early
+Origins of the Education--Health Gradient.'' \emph{Perspectives on
+Psychological Science} 5 (5): 585--605.
+\url{https://doi.org/10.1177/1745691610383502}.
 
 \end{document}
