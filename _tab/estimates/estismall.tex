@@ -1,0 +1,87 @@
+\documentclass[12pt,english]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+% \usepackage[monochrome]{xcolor}
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs,dcolumn}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[font=singlespacing, skip=3pt]{caption}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{float}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{subfig}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{ragged2e}
+
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
+\setlength{\parindent}{0pt}
+\makeatletter
+%\doublespacing
+\onehalfspacing
+\date{January 16, 2019}
+\newcommand{\rowgroup}[1]{\hspace{-0.5em}#1}
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+\newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\usepackage{array}
+\usepackage{makecell}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+% Titling and Author
+\title{Estimates Table Small}
+\author{\href{fanwangecon.github.io}{Fan Wang}}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+\begin{table}[!ht]
+\centering{}
+{\small
+	\caption{\label{tab:paramesti}Estimated Model Parameters with Standard Errors}
+	\begin{tabular}{|c|cc|c|cc}
+		\toprule
+		\multicolumn{6}{c}{\textbf{Parameter Estimates (s.e.) }} \\
+		\midrule
+		\multicolumn{6}{c}{\vspace{-3mm}} \\
+		\multicolumn{3}{l}{Price Discount}	& \multicolumn{3}{l}{Production Function} \\
+		\multicolumn{6}{c}{\vspace{-3mm}} \\
+		$\rho$  & $-0.0725$  & $(0.0038) $ 	 	&        $A$ & $4.1036$ & $(0.020)$ \\
+		$\gamma$ & $0.0347$  & $(0.0039) $ 	    &    	 $\alpha_{H0}$ & $0.0344$ & $(0.016)$ \\
+		$\lambda$ & $-0.041$ & $(0.0065) $      &        $\alpha_{male}$ & $0.0074$ & $(0.0026)$ \\
+   		\multicolumn{2}{c}{} 	              & &        $\beta$ & $0.0753$ & $(0.016)$  \\
+   		\multicolumn{2}{c}{} 	              & &        $\sigma_\epsilon$ & $0.0100$ &   $(0.0011)$ \\		
+		\multicolumn{6}{c}{} \\
+		\multicolumn{3}{l}{Price Discount} & \multicolumn{3}{l}{Measurement Error} \\
+		\multicolumn{6}{c}{\vspace{-3mm}} \\		
+		$\delta$ & $0.3756$ & $(0.026)$ & $\sigma_\eta$ & $0.3830$ & $(0.013)$ \\
+   		\multicolumn{2}{c}{} 	              & &        s$\sigma_\iota$ & $0.0425$ &   $(0.0013)$ \\
+		\bottomrule
+	\end{tabular}
+}
+\end{table}
+\end{document}
+
+
