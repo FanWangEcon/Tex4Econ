@@ -1,0 +1,141 @@
+\documentclass[12pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+
+
+\usepackage{amsfonts}
+
+\usepackage{listings}
+\lstset{%
+	basicstyle=\small\ttfamily,
+	language=[LaTeX]{TeX}
+}
+% url package
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Reduce Spacing for Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+\titlespacing\section{0pt}{2pt}{0pt}
+\titlespacing\subsection{0pt}{2pt}{0pt}
+\titlespacing\subsubsection{0pt}{2pt}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Reduce Spacing for Math Equations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{1pt}
+  \setlength\belowdisplayskip{1pt}
+  \setlength\abovedisplayshortskip{1pt}
+  \setlength\belowdisplayshortskip{1pt}
+}
+
+% Titling and Author
+\title{Reduce Latex Spacing}
+\author{Fan Wang (University of Houston)}
+\date{\today}
+
+\everypar{\looseness=-1}
+\linepenalty=1000
+
+\begin{document}\fontsize{9.5}{14}\rm
+
+Various journals have requirements for paper lengths. Your paper is longer. How do you reduce paper length without changing much text to satisfy submission requirements? abc efg sdlfjk lsdkjf lkjdfer.
+
+\section{Font}
+
+Are you using a non-standard font. \textbf{mathpazo} is a family type with nice math equations, but the texts and equations take up more space, potentially exceeding journals' submission limits. Switching from mathpazo to the default font could save pages.
+
+A good font is \textbf{mathptmx}.
+
+also use \textbf{microtype} for fine improvements.
+
+\section{Heading Spacing}
+
+\href{https://tex.stackexchange.com/questions/53338/reducing-spacing-after-headings}{reducing spacing after headings}
+
+\begin{lstlisting}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{0pt}{0pt}
+\titlespacing\subsection{0pt}{0pt}{0pt}
+\titlespacing\subsubsection{0pt}{0pt}{0pt}
+\end{lstlisting}
+
+\section{Equation Spacing}
+
+\subsection{Equation with Reduced Spacing}
+Given $\mu_{R_{yv}}$, $\sigma_{R_{yv}}$, and price $p^{N}_{yv}$, each household solves the following maximization problem:
+\begin{equation}
+\max_{c,N} c+\rho\cdot c^{2}+  \Bigg\{ \gamma\cdot H_{24}+\lambda \cdot \int_{R_{yv}} \left(H_{24}-R_{yv}\right)\mathbb{1}\left\{ H_{24}\ge R_{yv}\right\}dF(R_{yv}) \Bigg\}
+\end{equation}
+where:
+\[
+c=Y - p^{N}_{yv} \cdot N
+\]
+\[
+H_{24}(N,X,\epsilon)=\exp(A+ X\cdot\alpha+\epsilon)\cdot N^{\beta}
+\]
+The realized household utility $u_{yv}$ is a function of parameters and $Y, p^{N}_{yv}, X, F(R_{yv}),\epsilon$. Households make choices given $\Omega = \big(Y, p^{N}_{yv}, X\big)$, the i.i.d. productivity shock $\epsilon$, and $F(R_{yv})$. At the birth of a child, a household chooses the optimal amount of nutrition for the child over the next 24 months given the joint relative distribution of the reference health outcome and their own child's helath given that child's productivity shock and nutritional intake. The parents choose knowing that more nutritional intake-at a decreasing rate of return-will increase the probability that their child will catch-up to or exceed the reference health. \footnote{We assume that parents do not consider the nutritional choices of other parents for their own maximization in order to focus purely on the effect of the change in the reference point.}
+
+\subsection{Code to Reduce Equation Spacing}
+\begin{lstlisting}
+\makeatletter
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{40pt}
+  \setlength\belowdisplayskip{40pt}
+  \setlength\abovedisplayshortskip{40pt}
+  \setlength\belowdisplayshortskip{40pt}
+}
+\makeatother
+\begin{document}
+text
+\begin{gather}
+  1 + 1 = 2
+\end{gather}
+text
+\begin{equation}
+  1 + 1 = 2
+\end{equation}
+\end{document}
+\end{lstlisting}
+
+
+\section{Margins}
+
+You can change margins a little bit, but better not.
+
+\begin{lstlisting}
+\geometry{
+a4paper,
+noheadfoot=true,
+left=1.0in,
+right=1.0in,
+top=1.0in,
+bottom=1.0in,
+}
+\end{lstlisting}
+
+\section{Paragraphs}
+
+\begin{lstlisting}
+\everypar{\looseness=-1}
+\linepenalty=1000
+\end{lstlisting}
+
+\section{Figures}
+
+\begin{lstlisting}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\dblfloatpagefraction{.9} % for two column documents
+\renewcommand\topfraction{.9}
+\renewcommand\dbltopfraction{.9} % for two column documents
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}   
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+\end{lstlisting}
+
+\end{document}
