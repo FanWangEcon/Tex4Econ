@@ -1,0 +1,5 @@
+*.html linguist-vendored
+*.bcf linguist-vendored
+*.pdf linguist-vendored
+*.png linguist-vendored
+*.jpg linguist-vendored
