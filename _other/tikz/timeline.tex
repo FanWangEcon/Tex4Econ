@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\usepackage{caption}
+
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
 
@@ -11,6 +13,8 @@
 \definecolor{myGreen}{RGB}{0,255,71}
 
 \begin{document}
+
+\section{Tikz Example 1}
 
 \begin{tikzpicture}[scale=1]
 \node[align=center] at (1,0.5) {Susceptible\\stage};
@@ -30,6 +34,8 @@
 \node[align=center] at (6.25,-0.85) {Symptomatic\\period};
 \node[align=center] at (4.6,-1.3) {Onset of\\symptoms};
 \end{tikzpicture}
+
+\section{Tikz Example 2}
 
 \begin{tikzpicture}[%
     every node/.style={
@@ -77,9 +83,7 @@
 
 \end{tikzpicture}
 
-
-
-Use this as template
+\section{Tikz Example 3}
 
 \begin{tikzpicture}
 \draw (0,0) -- (13,0);
@@ -99,11 +103,7 @@ Use this as template
   (e.north) to[out=60,in=150] (f.north);
 \end{tikzpicture}\qquad
 
-\linebreak
-
-
-
-Use this as template
+\section{Tikz Example 4}
 
 \begin{tikzpicture}
 \draw (0,0) -- (13,0);
@@ -123,45 +123,54 @@ Use this as template
   (e.north|-f.north) to[out=60,in=120] (f.north);
 \end{tikzpicture}
 
+\section{Tikz With Caption}
 
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}[object/.style={thin,double,<->}]
+  \draw[object] (7cm,-1cm) -- (6cm,-2cm) node[midway,above] {a label};
+\end{tikzpicture}
+\caption{A caption.}
+\end{figure}
 
+\section{Tikz Townsend Wang Timeline}
 
-Use this as template
-
+\begin{figure}[!ht]
+\begin{minipage}{1\linewidth}
+\caption{Model Timeline}
 \begin{tikzpicture}
 \draw (0,0) -- (12,0);
 \foreach \x in {0,3,6,9,12}
   \draw (\x cm,2pt) -- (\x cm,-2pt);
-
-\node[align=center] at (1.5, 1) { Asset Choices \\ $k, b$ };
-
-\node[align=center] at (3, 2.1) {$\epsilon$ \\ realized};
+% Last Period
+\node[align=center] at (1.5, 0.7) {choose \\ $k, b$ };
+% Current Period
+\node[align=center] at (3, 2.1)  (a) {$ \epsilon$ \\ realized};
 \draw [thin, -] (3, 1.6) -- (3, 0);
-
-\node[align=center] at (4.5, 1) {Wealth \\ Realization \\ $\Lambda_t(k, b, \epsilon)$ };
-
-\node[align=center] at (6, 1.8) {$r^I$ \\ realized};
-\draw [thin, dashed] (6, 1.3) -- (6, 0);
-
-\node[align=center] at (7.5, 1) {Asset \\ Choices \\ $k'(\Lambda, R^I, \epsilon)$ \\ $b'(\Lambda, R^I, \epsilon)$ };
-
-\node[align=center] at (9, 2.1) {$\epsilon_{t+1}|\epsilon_{t}$ \\ realized};
+\node[align=center] at (4.5, 0.7) (b) {wealth  \\ $\Lambda(k,b, \epsilon)$ };
+\node[align=center] at (6, 1.6)  (a) {$ r^I$ \\ realized};
+\draw [thin, dashed] (6, 1.0) -- (6, 0);
+\node[align=center] at (7.5, 0.7) {choose \\ $k^{\prime}, b^{\prime}(r^I)$ };
+% Next Period
+\node[align=center] at (9, 2.1) {$ \epsilon^{\prime}$ \\ realized};
 \draw [thin, -] (9, 1.6) -- (9, 0);
-
-\draw (0,0) node[below=3pt] (a) {$(i)$} node[above=3pt] {};
-\draw (3,0) node[below=3pt] (b) {$(ii)$} node[above=3pt] {};
-\draw (6,0)  node[below=3pt]  {$(iii)$} node[above=3pt] (c) {};
-\draw (9,0) node[below=3pt](d) {$(iv)$} node[above=3pt] {};
-
-
-\draw (12,0) node[below=3pt](e) {$(v)$} node[above=3pt] {};
-
-\draw[latex-latex]
-  (e.north|-f.north) -- (f.north);
-\draw[latex-latex,blue]
-  (e.north|-f.north) to[bend left] (f.north);
-\draw[latex-latex,red]
-  (e.north|-f.north) to[out=60,in=120] (f.north);
+\node[align=center] at (10.5, 0.7) {wealth  \\ $\Lambda(k^{\prime}, b^{\prime}, \epsilon^{\prime})$ };
+\node[align=center] at (12, 1.6)  (a) {$ r^{I\prime}$ \\ realized};
+\draw [thin, dashed] (12, 1.0) -- (12, 0);
+% Text Below
+\draw (1,0) node[below=7pt] {\textbf{last} period};
+% \draw [thick,decorate,decoration={brace,amplitude=6pt,raise=0pt,mirror}] (2.8,-0.30) -- (8.8,-0.30);
+\draw (6,0)  node[below=7pt]  {\textbf{current} period};
+\draw (11,0) node[below=7pt] {\textbf{next} period};
+% % Arrows
+% \draw[latex-latex,blue]
+%   (a.north|-b.north) to[out=60,in=120] (b.north);
+% \draw[latex-latex,red]
+%   (e.north|-f.north) to[out=60,in=120] (f.north);
 \end{tikzpicture}
+{\footnotesize
+\emph{Notes:} (1) $k$, the risky capital choice, is determined before productivity shock $\epsilon$ realization. (2) $b^{\prime}$, the net financial choice including principle and interests owed, is determined given $r^I$, which is the interest rate cost of informal loan taken out this period.}
+\end{minipage}
+\end{figure}
 
 \end{document}
