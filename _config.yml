@@ -3,3 +3,4 @@ title: Project Reusable Latex Codes
 google_analytics: UA-92953468-7
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
