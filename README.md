@@ -72,3 +72,9 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     * [Conclusion](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/conclude.tex) from the intro and conclusion folder.
     * [Model Subsection One](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
     * [Model Subsection Two](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
+
+
+----
+Files are from [Fan](https://fanwangecon.github.io)'s [Tex4Econ](https://github.com/FanWangEcon/Tex4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
+
+[![HitCount](http://hits.dwyl.io/FanWangEcon/Tex4Econ.svg)](http://hits.dwyl.io/FanWangEcon/Tex4Econ)
