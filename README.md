@@ -1,6 +1,12 @@
+[![HitCount](http://hits.dwyl.io/fanwangecon/Tex4Econ.svg)](https://github.com/FanWangEcon/Tex4Econ)  [![Star](https://img.shields.io/github/stars/fanwangecon/Tex4Econ?style=social)](https://github.com/FanWangEcon/Tex4Econ/stargazers) [![Fork](https://img.shields.io/github/forks/fanwangecon/Tex4Econ?style=social)](https://github.com/FanWangEcon/Tex4Econ/network/members) [![Star](https://img.shields.io/github/watchers/fanwangecon/Tex4Econ?style=social)](https://github.com/FanWangEcon/Tex4Econ/watchers)
+
 This is a work-in-progress [website](https://fanwangecon.github.io/Tex4Econ/) of support files for writing various files with latex, produced by [Fan](https://fanwangecon.github.io/). The project includes sample file for papers, exams, homeworks, etc.
 
 Materials gathered from various [projects](https://fanwangecon.github.io/research) in which latex is used. The goal of this repository is to make it easier to find/re-use latex files produced for various projects.
+
+[![](https://img.shields.io/github/last-commit/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/m/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/pulls)
+
+# Overleaf Integration
 
 This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
 
@@ -77,4 +83,8 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
 ----
 Files are from [Fan](https://fanwangecon.github.io)'s [Tex4Econ](https://github.com/FanWangEcon/Tex4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
-[![HitCount](http://hits.dwyl.io/FanWangEcon/Tex4Econ.svg)](http://hits.dwyl.io/FanWangEcon/Tex4Econ)
+![RepoSize](https://img.shields.io/github/repo-size/fanwangecon/Tex4Econ)
+![CodeSize](https://img.shields.io/github/languages/code-size/fanwangecon/Tex4Econ)
+![Language](https://img.shields.io/github/languages/top/fanwangecon/Tex4Econ)
+![Release](https://img.shields.io/github/downloads/fanwangecon/Tex4Econ/total)
+![License](https://img.shields.io/github/license/fanwangecon/Tex4Econ)
