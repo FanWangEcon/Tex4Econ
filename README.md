@@ -81,7 +81,7 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
 
 
 ----
-Files are from [Fan](https://fanwangecon.github.io)'s [Tex4Econ](https://github.com/FanWangEcon/Tex4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
+Please contact [![](https://img.shields.io/github/followers/fanwangecon?label=FanWangEcon&style=social)](https://github.com/FanWangEcon) [![](https://img.shields.io/twitter/follow/fanwangecon?label=%20&style=social)](https://twitter.com/fanwangecon) for issues or problems.
 
 ![RepoSize](https://img.shields.io/github/repo-size/fanwangecon/Tex4Econ)
 ![CodeSize](https://img.shields.io/github/languages/code-size/fanwangecon/Tex4Econ)
