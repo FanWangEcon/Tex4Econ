@@ -1,0 +1,193 @@
+\documentclass[12pt,english]{article}
+
+%pandoc --bibliography=references201804.bib -o DRAFT20190831_IER_submit.docx DRAFT20190831_IER_submit.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: PACKAGEs MAIN  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{mathptmx}
+\usepackage{microtype}
+\everypar{\looseness=-1}
+\linepenalty=1000
+
+\usepackage{amsmath}
+\usepackage{bbm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+
+\usepackage{setspace}
+
+
+\usepackage{breakurl}
+\usepackage{graphicx}
+\usepackage{booktabs,dcolumn}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[font=singlespacing, skip=3pt]{caption}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{float}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{subfig}
+\usepackage{float}
+%\usepackage[nolists, tablesfirst, nomarkers]{endfloat}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+%\usepackage{geometry}
+\usepackage[text={16cm,24cm}]{geometry}
+\usepackage{ragged2e}
+
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Indentation  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
+\makeatletter
+%\date{Janunary 2, 2018}
+\date{\today}
+%\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: new commands  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\exhyphenpenalty=10000\hyphenpenalty=10000
+\newcommand\invisiblesection[1]{%
+	\refstepcounter{section}%
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+	\sectionmark{#1}}
+
+\newcommand{\rowgroup}[1]{\hspace{-0.5em}#1}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+\newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Bibliography %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[authordate,
+backend=biber,
+doi=false,
+isbn=false,
+sorting=nyt,
+maxbibnames=10,
+sortcites=False]{biblatex-chicago}
+
+\bibliography{references201804} % or
+\AtEveryBibitem{\clearlist{issn}} % clears issn
+\AtEveryBibitem{%
+	\ifentrytype{online}{%
+		\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}
+	}{%
+		\clearfield{url}%
+		\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}
+	}
+}%
+
+\renewcommand*{\bibfont}{\small}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Footer  %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{calc}
+\setlength{\footskip}{\paperheight
+	-(1in+\voffset+\topmargin+\headheight+\headsep+\textheight)
+	-0.75in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Image and Table Sizing  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\imgscaleindiff}{0.85}
+\newcommand{\imgscale}{0.25}
+\newcommand{\imgscaletwopanel}{0.80}
+\newcommand{\imgscalefourpanel}{0.60}
+\newcommand{\imgscalematlab}{0.52}
+\newcommand{\imgscalematlablarge}{0.70}
+\newcommand{\imgscalestata}{0.25}
+
+\newcommand{\imgscalestatathree}{0.23}
+\newcommand{\imgscalestatasmall}{0.20}
+\newcommand{\imgscalestatalarger}{0.25}
+\newcommand{\imgscalestatalargest}{0.33}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Reduce Spacing for Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[compact]{titlesec}
+\titlespacing\section{0pt}{0pt}{0pt}
+\titlespacing\subsection{0pt}{0pt}{0pt}
+\titlespacing\subsubsection{0pt}{0pt}{0pt}
+%\titlespacing\paragraph{0pt}{15pt}{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Remove the spacing between paragraphs and have a small paragraph indentation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{15pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Reduce Spacing for Math Equations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\g@addto@macro\normalsize{%
+	\setlength\abovedisplayskip{1.5pt}
+	\setlength\belowdisplayskip{1.5pt}
+	\setlength\abovedisplayshortskip{1.5pt}
+	\setlength\belowdisplayshortskip{1.5pt}
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Reduce Spacing for Figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\textfloatsep}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Line Spacing for Main Text and Footnotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Using the setspace package:
+%\setstretch{1.5}
+\doublespacing
+%\onehalfspacing
+
+%Change footnote
+\usepackage[hang]{footmisc}
+% separation between foonotes
+\addtolength{\footnotesep}{1mm}
+% within footnote separation
+\renewcommand{\footnotelayout}{\setstretch{1.3}}%
+\setlength{\footnotemargin}{4mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Abstract Width %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewenvironment{abstract}
+%{\small
+%	\begin{center}
+%		\bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+%	\end{center}
+%	\list{}{%
+%		\setlength{\leftmargin}{0mm}% <---------- CHANGE HERE
+%		\setlength{\rightmargin}{\leftmargin}%
+%	}%
+%	\item\relax}
+%{\endlist}
+
+\begin{document}\fontsize{12}{14}\rm
