@@ -8,7 +8,6 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 1. [Sample Githug page](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/): [**md**](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/samplepage.md)
 
-
 # git
 
 1. [Git Subtree](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html): [**Rmd**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
