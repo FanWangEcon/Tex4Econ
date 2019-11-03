@@ -2,6 +2,20 @@
 
 ## RMD YML Front Matters
 
+### Standard Front-matter
+
+```{yml}
+output:
+  html_notebook:
+    number_sections: yes
+  html_document:
+    df_print: paged
+    number_sections: yes
+  pdf_document:
+    number_sections: true
+urlcolor: blue
+```
+
 ### Numbered listings
 
 ```{yml}
@@ -22,21 +36,29 @@ output:
 
 ### Colored Links
 
-Add blue to url Links
+Add blue to url Links, all else default
 
 ```{yml}
-title: "Introductory Mathematics for Economists  \nUniversity of Houston, Fall 2019"
+---
+title: "File"
 output:
   word_document: default
   html_notebook: default
   html_document: default
   pdf_document: default
+  md_document:
+    variant: markdown_github  
 urlcolor: blue
+---
+
+Back to **[Fan](https://fanwangecon.github.io/)**'s R4Econ Homepage **[Table of Content](https://fanwangecon.github.io/R4Econ/)**
+
+# File
 ```
 
-## Colored Links
+### Table of Content
 
-Add blue to url Links
+Add table of content
 
 ```{yml}
 title: "Introductory Mathematics for Economists  \nUniversity of Houston, Fall 2019"

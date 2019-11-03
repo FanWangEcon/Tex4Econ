@@ -69,7 +69,7 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
 - **Section Main Tex Files**: this file gathers subsection inputs together, used for section by section compilation
     * [Introduction Conclusion Section Main File](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/main.tex)
     * [Model Section Main File](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_main.tex)
-    * [Estimation Section Main File](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/esti/esti_main.tex)    
+    * [Estimation Section Main File](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/esti/esti_main.tex)
 - **Subsection Tex Files**: each subsection has own tex file:
     * [Introduction](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/intro.tex) from the intro and conclusion folder.
     * [Conclusion](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/conclude.tex) from the intro and conclusion folder.
@@ -79,6 +79,10 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     * [Model Subsection One](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
     * [Model Subsection Two](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
 
+
+# Miscellaneous Files
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/_nontex/) with support files for git, github, and github pages, and others. 
 
 ----
 Please contact [![](https://img.shields.io/github/followers/fanwangecon?label=FanWangEcon&style=social)](https://github.com/FanWangEcon) [![](https://img.shields.io/twitter/follow/fanwangecon?label=%20&style=social)](https://twitter.com/fanwangecon) for issues or problems.

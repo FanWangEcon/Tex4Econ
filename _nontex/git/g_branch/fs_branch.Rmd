@@ -1,0 +1,36 @@
+---
+title: "Git Branching"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+  html_notebook: default
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Repositories](https://github.com/FanWangEcon).
+
+## Develope from Branch
+
+```{bash, eval = FALSE}
+# Step into REPO
+cd ~/ThaiJMP
+
+# List my branches
+git branch
+
+# Create new branch
+git branch revise_for_red_submit
+git branch
+
+# Work on new branch
+git checkout revise_for_red_submit
+
+# When pushing
+git push -u github revise_for_red_submit
+
+# On different computer
+git fetch github revise_for_red_submit
+git checkout revise_for_red_submit
+```

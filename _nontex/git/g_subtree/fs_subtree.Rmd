@@ -1,0 +1,112 @@
+---
+title: "Git folder within Git Folder--Git Subtree Project and Draft"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+  html_notebook: default
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/_nontex/).
+
+# Git subtree
+
+**Search**
+
+- git submodule
+- Git subtree
+- import subtree to existing repository
+- import repo to existing repository as subtree
+
+**Issue**
+
+- There is a main folder, which is a git folder (code etc folder), shared in dropbox
+- There is a remote repository (paper draft).
+- Pull remote paper draft into git folder for whole project so remote repo for draft folder looks like a regular folder in dropbox in the shared master git repo folder with co-authors.
+
+**Solution**
+
+How to sync both folders properly? Traditional option is submodule, do not use that, use **subtree**, which is a standard feature for git since *v1.7.11*.
+
+## Create subtree in existing repository
+
+1. There is some git repository: *"C:/Users/fan/Documents/Dropbox (UH-ECON)/Project Emily Minority Survey/"*
+    - make sure the repository does has been synced, no uncommited changes
+2. Add remote git url for draft folder
+    - *git remote add github_draft git@github.com:FanWangEcon/ChinaSchoolClosure.git*
+3. Suppose folder *Drafts_RR* is not in the repository yet, create subtree under that
+    - *git subtree add --prefix=Drafts_RR/ github_draft master*: pull from master branch of remote repo github_draft defined in step 2, add remote repo files to Drafts_RR folder
+4. now updates in github_draft repo are synced inside the github repo. but github_draft remains independently syncable with overleaf. So overleaf does not have to be synced to much larger non-tex folder.
+
+## Sync Subtree Changes with Folder and Sub folder.
+
+1. make some changes in subfolder
+2. sync with the github repo first, commit changes in the master folder first.
+3. sync with subtre subfolder
+    - *cd "C:/Users/fan/Documents/Dropbox (UH-ECON)/Project Emily Minority Survey/"*
+    - *git subtree push --prefix=Drafts_RR github_draft master*
+
+### Commands Together
+
+```{bash, eval = FALSE}
+
+# Project git folder in dropbox
+cd "C:/Users/fan/Documents/Dropbox (UH-ECON)/Project Emily Minority Survey/Drafts_RR"
+
+# Add new paper draft remote url to project git remote urls
+# github main is project repo url, github_draft is overleaf synced folder
+git remote -v
+git remote add github_draft git@github.com:FanWangEcon/ChinaSchoolClosure.git
+git remote -v
+
+# Add subtree, Drafts_RR should not exist yet
+git subtree add --prefix=Drafts_RR github_draft
+
+
+git subtree add --prefix "C:/Users/fan/Documents/Dropbox (UH-ECON)/Project Emily Minority Survey/Drafts_RR" git@github.com:FanWangEcon/ChinaSchoolClosure.git master --squash
+
+git subtree split --prefix=Drafts_RR/ -b ChinaSchoolClosure
+Do not use submodule
+```
+
+### Console outputs
+
+```{bash, eval = FALSE}
+ $ git subtree add --prefix=Drafts_RR/ github_draft master
+ git fetch github_draft master
+ Enter passphrase for key '/c/Users/fan/.ssh/id_rsa':
+ warning: no common commits
+ remote: Enumerating objects: 235, done.
+ remote: Counting objects: 100% (235/235), done.
+ remote: Compressing objects: 100% (177/177), done.
+ remote: Total 235 (delta 110), reused 133 (delta 50), pack-reused 0
+ Receiving objects: 100% (235/235), 3.02 MiB | 3.58 MiB/s, done.
+ Resolving deltas: 100% (110/110), done.
+ From github.com:FanWangEcon/ChinaSchoolClosure
+  * branch            master     -> FETCH_HEAD
+  * [new branch]      master     -> github_draft/master
+ Added dir 'Drafts_RR'
+ fan@LAPTOP-55QHS6DU MINGW64 ~/Documents/Dropbox (UH-ECON)/Project Emily Minority Survey (master)
+ $ ls
+  Code/         Drafts/                  Images/                           notes.md        'Possible Questions and Answers.docx'   > andbox/                                  Tables/
+  CodeEdccRR/   Drafts_RR/               Log/                              onenote1.pdf     presentation/                          > choolConsolidation_main_sexHan_wlt.pdf  'Tables Old'/
+  comments/    'eth disparities irb'/   'Model Variables Graph Factory'/   onenote2.pdf    'R&R comments.docx'                     choolConsolidationDraft_V1.pdf
+  Data/         Feedback/               'Notes and drafts, language'/      Planning.xmind   README.md                              Submissions/
+  desktop.ini  'Government Documents'/  'Notes and Papers'/                policies/       'Reference papers'/                     summer2014visitors/
+
+ fan@LAPTOP-55QHS6DU MINGW64 ~/Documents/Dropbox (UH-ECON)/Project Emily Minority Survey (master)
+ $ ls Drafts_RR
+ _bib/  _fig/  _tab/  draft_main.pdf  draft_main.tex  fragments/  preamble_main.tex  sections/
+```
+
+### Links
+
+- [Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- [Working with submodules](https://github.blog/2016-02-01-working-with-submodules/)
+- [4 Git Submodules Alternatives You Should Know](https://codeburst.io/4-git-submodules-alternatives-you-should-know-592095859b0)
+- [Git subtree: the alternative to Git submodule](https://www.atlassian.com/git/tutorials/git-subtree)
+    + instructions came from here
+- [What is Git subtree?](https://tsh.io/blog/git-subtree-or-how-i-stopped-worrying-and-learned-to-love-external-dependencies/)
+- [git subtrees: a tutorial](https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844)
