@@ -6,6 +6,27 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 [![](https://img.shields.io/github/last-commit/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/m/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/pulls)
 
+# Latex Tools
+
+## TIKZ
+
+1. [Tikz Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.pdf)
+
+## Conversion
+
+1. [Pandoc File Conversion](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.pdf)
+
+# Latex Layout
+
+## Sizing
+
+1. [Reduce Line-Gap](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.pdf)
+
+## Footer and Headers
+
+1. [Repaginate Response for Referees](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.pdf)
+
+
 # Overleaf Integration
 
 This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
@@ -78,16 +99,6 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     * [Conclusion](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/conclude.tex) from the intro and conclusion folder.
     * [Model Subsection One](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
     * [Model Subsection Two](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
-
-# Latex Tools
-
-## Sizing
-
-1. Reduce Line-Gap: [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.pdf)
-
-## Footer and Headers
-
-1. Repaginate Response for Referees: [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.pdf)
 
 
 # Miscellaneous Files
