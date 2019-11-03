@@ -1,0 +1,117 @@
+\documentclass[12pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{listings}
+\usepackage{csquotes}
+
+
+% url package
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue]{hyperref}
+
+% Titling and Autho
+\begin{document}
+
+\begingroup
+  \centering
+  \LARGE Repage Document add Responses to Referees to End of File \\[1.5em]
+  \large \href{http://fanwangecon.github.io/}{Fan Wang} (\href{http://fanwangecon.github.io/Tex4Econ}{Tex4Econ}) \\[1.5em]
+  \large \today \par
+\endgroup
+
+\begin{abstract}
+We paginate the main body of the file, re-paginate appendix with letter section headings, then re-paginate a post appendix section with numeric section headings. Final section could be appended file response to referees, which is included with main file to allow for consistent table and graph referencing and citations, but then should be split out as separate file afterwards.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{Searchs}
+\begin{itemize}
+  \item latex reset page number
+\end{itemize}
+
+\paragraph{Code} Core Latex
+
+\begin{lstlisting}
+  % Reset Appendix
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+  % Reset Response to Referee
+  \setcounter{section}{0}
+  \renewcommand{\thesection}{\arabic{section}}
+\end{lstlisting}
+
+\paragraph{Links}
+\begin{enumerate}
+  \item \href{https://tex.stackexchange.com/questions/259085/restart-page-numbering-for-memoir-appendix}{Restart page numbering for memoir appendix}
+\end{enumerate}
+
+\section{Data\label{sec:data}}
+\Blindtext
+\section{Estimation\label{sec:esti}}
+\Blindtext
+\section{Conclusion}
+\blindtext
+
+\pagebreak
+\clearpage
+
+\appendix
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Data Details\label{app:data}}
+\blindtext
+\section{Derivations}
+\blindtext
+\section{Robustness Checks}
+\Blindtext
+\pagebreak
+\clearpage
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{\arabic{section}}
+
+\section{Responses to Editor}
+\begin{quotation}
+\textbf{AE: }\enquote{\blindtext}
+\end{quotation}
+
+In Sections \ref{sec:data} and \ref{app:data}. \blindtext
+
+\subsection{Editor Question One}
+\begin{quotation}
+\textbf{AE: }\enquote{\blindtext}
+\end{quotation}
+
+\blindtext
+\clearpage
+\pagebreak
+
+\section{Responses to Referee One}
+\begin{quotation}
+\textbf{R1: }\enquote{\blindtext}
+\end{quotation}
+
+\blindtext
+
+\subsection{Referee One Question One}
+\begin{quotation}
+\textbf{R1: }\enquote{\blindtext}
+\end{quotation}
+
+\Blindtext
+
+\subsection{Referee One Question Two}
+\begin{quotation}
+\textbf{R1: }\enquote{\blindtext}
+\end{quotation}
+
+\Blindtext
+
+\end{document}
+
+
+\end{document}
