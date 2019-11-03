@@ -7,9 +7,11 @@ pageorder: 0
 ## Fan Wang
 ![](images/profile_tiny.jpg)
 
-Assistant Professor  
-[Department of Economics](http://www.uh.edu/class/economics/people/faculty/)  
-University of Houston  
+Assistant Professor
+
+[Department of Economics](http://www.uh.edu/class/economics/people/faculty/)
+
+University of Houston
 
 ## Working Papers
 

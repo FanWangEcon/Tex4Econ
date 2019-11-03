@@ -6,7 +6,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 # Gitpages
 
-1. [Sample Githug page](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/): [**md**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/githubpages/sample/samplepage.md) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
+1. [Sample Githug page](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/): [**md**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/githubpages/sample/samplepage.md) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/)
 
 # git
 
