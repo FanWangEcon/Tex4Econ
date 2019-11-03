@@ -1,6 +1,8 @@
 
 # Sample Github pages Markdown File
 
+See [markdown file](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/githubpages/sample/samplepage.md). This page is generated from markdown. This is a template file for a [github pages site](http://fanwangecon.github.io/).
+
 ## Fan Wang
 ![](images/profile_tiny.jpg)
 
