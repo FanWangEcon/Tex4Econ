@@ -31,7 +31,15 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 1.  [Repaginate Response for Referees](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.pdf)
 
-# 3. Overleaf Integration
+# 3. Overleaf Integration and Template
+
+## 3.1 Basic Template Files
+
+In overleaf, click on New Project, choose upload project, then select from one of the templte zip files below.
+
+1. [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
+
+## 3.2 Github Integration
 
 This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
 
