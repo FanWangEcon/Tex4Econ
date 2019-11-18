@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Bibliography %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[authordate,
+backend=bibtex,
+doi=false,
+isbn=false,
+sorting=nyt,
+maxbibnames=10,
+maxcitenames=3,
+sortcites=False]{biblatex-chicago}
+
+
+% \bibliography{../_bib/ref_one, ../_bib/ref_two, ../_bib/ref_three, ../_bib/ref_four, ../_bib/ref_five}
+
+\AtEveryBibitem{\clearlist{note}\clearlist{language}\clearlist{issn}} % clears issn
+\AtEveryBibitem{%
+	\ifentrytype{online}{%
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}{%
+		\clearfield{eprint}%
+		\clearfield{url}%
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}
+}
+
+% \renewcommand*{\bibfont}{\small}

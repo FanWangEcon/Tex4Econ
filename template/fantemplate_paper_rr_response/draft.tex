@@ -1,0 +1,211 @@
+\documentclass[12pt,english]{article}
+
+\input{fragments/preamble_packages.tex}
+\input{fragments/preamble_layout.tex}
+\input{fragments/preamble_citation.tex}
+
+% Responses to Referees
+\usepackage{blindtext}
+\newcommand{\aptxspc}{1.8}
+\newcommand{\rrquote}{1.1}
+\newcommand{\rrxspc}{1.5}
+
+\bibliography{bib/ref_one, bib/ref_two}
+
+\makeatother
+
+\begin{document}
+
+\title{Paper with Response to Referee\\Multiple Sections Separate Page Numberings and Bibliography}
+
+\author{\href{http://fanwangecon.github.io/}{Fan Wang} \thanks{See \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ} for more latex examples.}}
+
+
+\maketitle
+\begin{abstract}
+\singlespacing \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{We estimate} the impact of educational infrastructure consolidation on educational attainment using the case of China’s rural primary school closure policies in the early 2000s. The rationale for consolidation policies is that economies of scale will enable higher quality education, but distance to school increases for children in villages with school closures. We use data from a large household survey covering 728 villages in 7 provinces in China, and exploit variation in villages’ year of school closure and children’s ages at closure to identify the causal impact of school closure. For children exposed to closure during their primary school ages, we find an average decrease of 0.60 years of schooling for girls after age 15, but no significant effect for boys. Negative effects strengthen with time since closure. There is no evidence of a differential trend in educational attainment between individuals in villages with school closure and those in villages without, as indicated by an analysis using older cohorts beyond primary school age when closure occurred. Different effects by gender may be related to greater sensitivity of girls’ enrollment to distance and greater responsiveness of boys’ enrollment to quality.\end{abstract}
+\vfill
+\pagebreak{}
+
+\section{Introduction}
+
+According to ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nunc orci, id pellentesque lacus ullamcorper at. Mauris venenatis gravida magna non dapibus. Nullam vel consequat purus, id luctus dui. Suspendisse vel auctor nulla. Proin ipsum felis, efficitur eu eleifend vitae, efficitur pellentesque mauris \autocite{case_lasting_2005, conti_understanding_2010}.
+
+\section{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{Data}}
+
+Village closure information is taken from a village head survey, which was collected in conjunction with household surveys. Village heads were asked if the village currently had a primary school, and asked about the year of school closure if the village school had been closed. Based on the village heads survey, there are four categories of closure status. The first category includes 193 villages that did not have village schools in 2011 and experienced school closure between 1999 and 2010. In the second category, which included 22 villages, a school closure year between 1999 and 2010 was reported, but village heads also reported that the village currently had a school in 2011. In this case, it is plausible that new schools were built in these 22 villages after school closure.\footnote{Generally students went to schools in township centers after village school closure, but in these 22 villages, it is possible that a new consolidated school was built inside these villages.} In the third category, 430 villages had village schools in 2011 and did not experience school closure.\footnote{We do not have survey information on the opening year of the schools. The vast majority of these schools should have been established in the 1980s and early 1990s when the central government aimed to have a school in each village to provide education to rural children.} Finally, the fourth category includes 48 villages that had never had a primary school and 35 that do not currently have a school but had a village primary school at some point between 1954 and 1999. In the following analysis, we designate the first and second categories as school closure. The third and fourth categories are coded as non-closure.\footnote{We will test the robustness of regression results to dropping the second and fourth categories from the closure and non-closure groups.}
+
+
+\section{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3167023}{Model}\label{sec:data}}
+
+Let $\tau$ be the fraction of poorest children receiving price discounts and $\delta$ be the percentage price discount that children receive. $Z\left(\tau,\delta\right)$ is the total cost of a subsidy in grams of protein for 1970, 1972, 1974 and 1976 cohorts, given reference point distribution $\Gamma$ for each cohort:
+
+\begin{equation}
+\label{eq:targetcost}
+Z\left(\tau,\delta\right) =
+\sum\limits_{
+	\substack{
+	\mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+	}
+\left\{\delta\cdot
+\int_{\epsilon}
+\int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+\int_{X}
+N\Big(
+\substack{
+	Y,X,\epsilon; \\
+	\delta, \Gamma_{\mathrm{cohort}}
+}
+\Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+\end{equation}
+
+\section{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{Estimation}}
+
+In Section \ref{sec:data}, we categorized villages by their school closure status. Among the 193 villages that did not have village schools in 2011 and experienced school closure between 1999 and 2010, there were 45 villages where the closed village school was a teaching-point. Among the 430 villages that had village schools in 2011 and did not experience school closure, there were 44 villages where the village school in 2011 was a teaching-point. Teaching-point village primary schools offer up to 4 years of within-village primary education partly with the aim of reducing travel distance for students. While teaching-points might offer proximity and small-school benefits for young village students, when quality is defined  narrowly in terms of the physical facility quality and teacher qualifications, teaching-points are of lower quality compared to other primary schools. In this section, we analyze the heterogeneity of closure effects by teaching-points status.
+
+We estimate:
+\begin{singlespace}\vspace*{-\baselineskip}
+	\begin{eqnarray}
+	\label{eq:tp}
+	E_{pvia} & = & \phi + \beta_{v}  + \rho_{pa} + \rho^{\tau}_{a} \cdot \text{TP}_{v}
+	\nonumber \\
+	&  & + \sum_{\tau \in \left\{0, 1\right\}}
+	\left(
+	\sum_{z=1}^Z \tilde{\lambda^{\tau}_{z}} \cdot \mathbb{1} \left\{ l_{z}\leq t_{i}\leq u_{z} \right\}
+	\cdot c_{v}
+	\right)
+	\cdot \mathbb{1} \left\{ \text{TP}_{v} = \tau \right\}
+	\\
+	&  &
+	+ X_i \cdot \gamma + X_i \cdot \text{TP}_{v} \cdot \gamma^{\tau} \nonumber\\
+	&  & + \epsilon_{i}  \nonumber
+	\end{eqnarray}
+\end{singlespace}\noindent\ignorespaces
+where $\text{TP}_v = 1$ if the village had a teaching-point school in 2011 or had a teaching-point school that was closed before 2001. Equation \ref{eq:tp} allows teaching-point villages to have differential age patterns and covariate effects.
+
+\section{Results}
+
+\input{"tab/tab3_fm_pna_texbody"}
+
+Table \ref{regone} presents estimates of \(\lambda \) in Equation \ref{eq:targetcost}. The first panel presents overall results, while the sex-specific results are shown in the second and third panels. In each panel, we compare three subsets of children below age 14 against baseline group -- those between 14 and 21 at the time of school closure. Columns 1 and 2 include all individuals between 1 and 44 years of age in 2011, columns 3 and 4 restrict to individuals between 10 and 34, and columns 5 and 6 restrict further to individuals between 15 and 34 years of age. The even-numbered columns drop villages that never had a school from the villages without closure group (category 4 as defined in data section). All regressions include several individual and household controls.\footnote{All regressions include controls for households size, a dummy for if the individual is Han and a categorical variable for the relative wealth. The relative wealth variable is based on the survey question that asked households if they are better or worse off than village average. We do not have income measures for all families. The village income per capita variable shown in summary Table \ref{regone} is from the village-head survey and not based on household incomes.} All standard errors are clustered at the village-level. Column 1 contains our focal main result, other columns contain results for robustness checks which we discuss later.
+
+\begin{figure}[h]
+	\centering
+	\caption{\small Effect of School Closure on Educational Attainment (Number of Grades Completed by 2011) by 15 Age-at-Closure Group.}
+	\includegraphics[width=1.0\textwidth, center]{"img/GM14S2B15_cvnc_1no".png}
+	\captionsetup{width=1.0\textwidth}
+	\caption*{\footnotesize Each $a$--$b$ group shows impact of closure on grades completed by 2011 for children who were between $a$ and $b$ years of age at the time of school closure. These results correspond to results from column 1 of Table \ref{regone} which had 5 age-at-closure groups. \label{figoneb}}
+\end{figure}
+
+As noted earlier, school closures typically imply disruption, greater distance, and better quality school facilities for affected students. Our prior analyses showed that the impact of closure on attainment is not of short-term duration, indicating that there is limited short-term disruption effects of closure on attainment. To investigate mechanisms behind the impacts of school closure on educational attainment, we analyze how the two possible factors --  distance to school and quality of school -- are linked to enrollment status at the time of the survey. Here, we focus only on children between 5 to 12 years of age in 2011, ages at which nearly all children attend primary school in 2011.\footnote{Although previously in regressions on educational attainment we include children who were age 13 at year of closure into the group that may still attend primary school and therefore be exposed to school closure, we only include children who are in the age range that is definitely for primary school in the enrollment regression here.} For these children, we have information about distance to primary school and primary school quality.\footnote{For older individuals in the survey who are included in the earlier attainment regressions, we do not have measures for the quality of school when they were attending primary school.} We use children from both villages with and without school closure in these regressions. The data for these analyses come from columns 2 and 3 of Table \ref{figoneb}.
+
+Primary school enrollment in 2011 is high but not full. For children at 5 years of age, the enrollment rate is 10 percent. At age 6 and 7, the enrollment rate increases to 47 percent and then 83 percent. Enrollment peaks at 94.4 percent at age 11.\footnote{After primary school, at age 13, 15 and 17, enrollment rates drops to 92, 82, and 55 percent respectively.} In the following regressions, we analyze the relationship between distance, quality and school enrollment.
+
+We regress enrollment on distance to closest primary school and quality of these schools. Regressions control for county fixed effects, province-specific age fixed effects, village per capita income, village per capita land size, village population size, household relative wealth, the number of household members and household ethnicity. Despite the controls, the coefficients we obtain for distance to school and quality of school would not be causal if there are unobserved village-level attributes that affect enrollment and that are also correlated with distance and quality. Our inclusion of village-level controls and county fixed effects, however, seeks to reduce the risk of omitted variables bias our estimates.
+
+
+\section{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3316939}{Conclusion}}
+
+In solving and estimating this model, I developed a set of solution and estimation algorithms. The solution algorithm captures the impacts of variations in the four fixed costs, three interest rates, and one collateral constraint on the household-specific feasible risky and safe asset choice sets, the average costs (returns) of borrowing (savings) across the seven credit market participation categories, and conditional and marginal asset distributions. The estimation algorithm chooses initial values for estimation by exploring the global properties of the estimation objective function through polynomial approximations. The solution and estimation algorithms can reduce estimation time by taking advantage of scalable cloud computing resources.
+
+\pagebreak
+\begingroup
+\setstretch{1.0}
+%\setstretch{1.1}
+\setlength\bibitemsep{0pt}
+\printbibliography
+\endgroup
+\pagebreak
+
+
+\appendix
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Data Details\label{app:data}}
+\blindtext
+\section{Derivations}
+\blindtext
+\section{Robustness Checks}
+\Blindtext
+\pagebreak
+\clearpage
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{\arabic{section}}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\begin{refsection}
+\section{Responses to Editors and Referees}
+\begin{spacing}{\rrxspc}
+We appreciate the insightful questions and helpful suggestions raised by the Associate editor, referee one, and referee two and three. An important paper discussed related issued \autocite{becker_human_1986, case_lasting_2005}. \blindtext
+\end{spacing}
+
+\section{Responses to Editor}
+\begin{spacing}{\rrquote}
+\end{spacing}
+\begin{quotation}
+\textbf{AE: }\enquote{\blindtext}
+\end{quotation}
+
+In Sections \ref{sec:data} and \ref{app:data}. \blindtext
+
+\subsection{Editor Question One}
+\begin{spacing}{\rrquote}
+\begin{quotation}
+\textbf{AE: }\enquote{\blindtext}
+\end{quotation}
+\end{spacing}
+
+\begin{spacing}{\rrxspc}
+\blindtext
+\end{spacing}
+\clearpage
+\pagebreak
+
+\section{Responses to Referee One}
+\begin{spacing}{\rrquote}
+\begin{quotation}
+\textbf{R1: }\enquote{\blindtext}
+\end{quotation}
+\end{spacing}
+
+\begin{spacing}{\rrxspc}
+\blindtext
+\end{spacing}
+
+\subsection{Referee One Question One}
+\begin{spacing}{\rrquote}
+\begin{quotation}
+\textbf{R1: }\enquote{\blindtext}
+\end{quotation}
+\end{spacing}
+
+\begin{spacing}{\rrxspc}
+\Blindtext
+\end{spacing}
+
+\subsection{Referee One Question Two}
+\begin{spacing}{\rrquote}
+\begin{quotation}
+\textbf{R1: }\enquote{\blindtext}
+\end{quotation}
+\end{spacing}
+
+\begin{spacing}{\rrxspc}
+\Blindtext
+\end{spacing}
+
+\pagebreak
+\begingroup
+\setstretch{1.0}
+%\setstretch{1.1}
+\setlength\bibitemsep{0pt}
+\printbibliography[heading=subbibliography]
+\endgroup
+\pagebreak
+\end{refsection}
+
+\end{document}
