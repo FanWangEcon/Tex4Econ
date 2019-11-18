@@ -1,0 +1,74 @@
+\documentclass[12pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+
+% url package
+\usepackage{hyperref}
+
+
+% Titling and Author
+\title{Sandbox Testing Equations}
+\author{Fan Wang (University of Houston)}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Two Cases}
+$$
+x = 
+\begin{cases*}
+    -x           & if  $x < 0 $  \\
+    \phantom{-}x & if  $x\ge 0$
+\end{cases*} 
+$$
+
+\begin{align}
+x = 
+\begin{cases*}
+-x           & if  $x < 0 $  \\
+\phantom{-}x & if  $x\ge 0$
+\end{cases*} 
+\end{align}
+
+\section{Two Cases, same line}
+\begin{equation*}
+f(x) = \begin{cases}
+             0  & \text{if } x < 0 \\
+             1  & \text{if } x \ge 0
+       \end{cases} \quad
+g(x) = \begin{cases}
+             f(x)+1  & \text{if } x < 0 \\
+             f(x)-1  & \text{if } x \ge 0
+       \end{cases}
+\end{equation*}
+
+\begin{align}
+f(x) = \begin{cases}
+             0  & \text{if } x < 0 \\
+             1  & \text{if } x \ge 0
+       \end{cases} \quad
+g(x) = \begin{cases}
+             f(x)+1  & \text{if } x < 0 \\
+             f(x)-1  & \text{if } x \ge 0
+       \end{cases}
+\end{align}
+
+case star
+\begin{align}
+f(x) = 
+\begin{cases*}
+0  & if $x < 0$ \\
+1  & if $x \ge 0$
+\end{cases*}
+\quad
+g(x) = 
+\begin{cases*}
+f(x)+1  & if $ x < 0$ \\
+f(x)-1  & if $ x \ge 0$
+\end{cases*}
+\end{align}
+
+\end{document}
