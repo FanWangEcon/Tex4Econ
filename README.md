@@ -37,27 +37,35 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 In overleaf, click on New Project, choose upload project, then select from one of the templte zip files below.
 
-1. [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
-2. [Template Figure Table and Reference Roman 12 Double Space](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/): [**tex**](https://github.com/FanWangEcon2/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/fantemplate_basic_roman.zip)
+1.  [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
+2.  [Template Figure Table and Reference Roman 12 Double Space](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/): [**tex**](https://github.com/FanWangEcon2/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/fantemplate_basic_roman.zip)
 
 ## 3.2 Paper Template Files
 
 In overleaf, click on New Project, choose upload project, then select from one of the templte zip files below.
 
-1. [Template Paper, Response to Referees, Section Numbering and Bib](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/fantemplate_paper_rr_response.zip)
-    - figures, tables, references
-    - separate page numbers for each section: *\renewcommand{\thesection}{\arabic{section}}*
-    - separate heading count for responses to referees: *\setcounter{section}{0}*
-    - separate bibliographies: *refsection*
+1.  [Template Paper, Response to Referees, Section Numbering and Bib](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/fantemplate_paper_rr_response.zip)
+    -   figures, tables, references
+    -   separate page numbers for each section: _\\renewcommand{\\thesection}{\\arabic{section}}_
+    -   separate heading count for responses to referees: _\\setcounter{section}{0}_
+    -   separate bibliographies: _refsection_
 
-## 3.3 Github Integration
+## 3.3 Recommendations Template Files
+
+In overleaf, click on New Project, choose upload project, then select from one of the templte zip files below.
+
+1.  [Template Recommendation Letter](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/fantemplate_recommendation.zip)
+    -   recommendation letter with logo and signature
+    -   contact and address panel
+
+## 3.4 Github Integration
 
 This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
 
 The writing/structure is to:
-1\. Store latex formatting file etc in separate files away from paper tex.
-2\. For papers, write in tex fragments stored in separate files. Main tex paper file mainly contains structure/outline.
-3\. Files synced through git/github, pull from github to edit/share with co-authors on [overleaf.com](https://overleaf.com) or edit locally.
+1. Store latex formatting file etc in separate files away from paper tex.
+2. For papers, write in tex fragments stored in separate files. Main tex paper file mainly contains structure/outline.
+3. Files synced through git/github, pull from github to edit/share with co-authors on [overleaf.com](https://overleaf.com) or edit locally.
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
@@ -90,8 +98,8 @@ For one-file article, we could directly load in the various tex fragments below.
 When a paper is longer, it could be difficult to manage long latex files. Compiling could take long periods of time if the full paper requires compilation for any edits in a subsection. The structure below allows for editing paper in subsections and compiling by sections. The structure works locally as well as remotely on browser based compiler.
 
 We compile together two files with the same structure:
-1\. [Multi-section blank template](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main_blank.pdf) has no contents in the sections, useful for copy/cloning when starting new projects
-2\. [Multi-section template with contents](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.pdf) has sample contents in sections, demonstrates what the file looks like filled up.
+1. [Multi-section blank template](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main_blank.pdf) has no contents in the sections, useful for copy/cloning when starting new projects
+2. [Multi-section template with contents](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.pdf) has sample contents in sections, demonstrates what the file looks like filled up.
 
 Inside [**overleaf**](https://www.overleaf.com/read/xjsqdwrkfrhq), the aggregate tex file that combines all sections together should be set as the main/default file under project options. Then as subsection text fragments are edited inside overleaf, the full pdf file is updated on the right showing current changes.
 
