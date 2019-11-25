@@ -16,6 +16,40 @@
 
 \maketitle
 
+\subsection{Substack vs Array}
+
+Using Substack, fonts are small under max:
+\begin{align}
+    \begin{split}
+        \label{eq:Value}
+        v_{ih}\left(a,z\right)
+        =
+        \max_{
+            \substack{
+                c>0\\
+                a' \in \{0,[\bar{A}_{ih},\infty)\}
+                }
+            }
+        u\left(c\right)+  \beta \int v_{ih}\left(a',z'\right)f(z'|z)dz'\\
+    \end{split}
+\end{align}
+
+Using Array, fonts are larger under max:
+\begin{align}
+    \begin{split}
+        \label{eq:Value}
+        v_{ih}\left(a,z\right)
+        =
+        \max_{
+            \begin{array}{cc}
+                c>0\\
+                a' \in \{0,[\bar{A}_{ih},\infty)\}\\
+            \end{array}
+            }
+        u\left(c\right)+  \beta \int v_{ih}\left(a',z'\right)f(z'|z)dz'\\
+    \end{split}
+\end{align}
+
 \section{multiple lines}
 
 \begin{align}
