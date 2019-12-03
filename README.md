@@ -10,8 +10,10 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 ## 1.1 [References](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference)
 
-1.  [Biblatex Citation and Bibliography](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.pdf)
-
+1.  [Biblatex Citation and Bibliography](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.pdf)
+    - *biblatex-chicago; \textcite{becker_human_1986}; \autocite{becker_human_1986}*
+2.  [Section References, Vary Link Colors by Section](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref/labelref_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref/labelref_test.pdf)
+    - *Section \ref{sec:intro} (Page \pageref{sec:intro}); \hypersetup{hidelinks=true}*
 
 ## 1.2 [Equations](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation)
 

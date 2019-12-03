@@ -1,0 +1,112 @@
+\documentclass[12pt,english]{article}
+
+\usepackage{setspace}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage[bottom]{footmisc}
+\usepackage{blindtext}
+
+\usepackage{filecontents}
+% This creates a bib file called ref.bib in the same folder as the current tex file
+\begin{filecontents}{ref.bib}
+@article{becker_human_1986,
+	title = {Human Capital and the Rise and Fall of Families},
+	volume = {4},
+	url = {http://ideas.repec.org/a/ucp/jlabec/v4y1986i3ps1-39.html},
+	pages = {S1--39},
+	number = {3},
+	journaltitle = {Journal of Labor Economics},
+	author = {Becker, Gary S and Tomes, Nigel},
+	urldate = {2012-02-15},
+	date = {1986}
+}
+@article{conti_understanding_2010,
+	title = {Understanding the Early Origins of the Education–Health Gradient},
+	volume = {5},
+	issn = {1745-6916, 1745-6924},
+	url = {http://pps.sagepub.com/content/5/5/585.abstract},
+	doi = {10.1177/1745691610383502},
+	pages = {585--605},
+	number = {5},
+	journaltitle = {Perspectives on Psychological Science},
+	author = {Conti, Gabriella and Heckman, James J},
+	urldate = {2012-02-16},
+	date = {2010-09-01},
+	keywords = {health, education, genetics, treatment effects}
+}
+\end{filecontents}
+
+\usepackage[authordate,
+backend=bibtex,
+doi=false,
+isbn=false,
+sorting=nyt,
+maxbibnames=10,
+maxcitenames=3,
+sortcites=False]{biblatex-chicago}
+\bibliography{ref}
+
+\begin{document}
+
+\title{Basic Bibliography and Reference Testing}
+\author{\href{http://fanwangecon.github.io/}{Fan Wang} \thanks{See \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ} for more latex examples.}}
+
+\maketitle
+\begin{abstract}
+\singlespacing In this \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{paper}, we look at how to reference sections and reference section page numbers. And we also include in the bibliography links to on which page the references were mentioned. Hyperref is used to show links in subsections in different ways, some clickable, some not.\end{abstract}
+\vfill
+\pagebreak{}
+
+
+\maketitle
+
+According to \textcite{becker_human_1986}, ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nunc orci, id pellentesque lacus ullamcorper at. Mauris venenatis gravida magna non dapibus. Nullam vel consequat purus, id luctus dui. Suspendisse vel auctor nulla. Proin ipsum felis, efficitur eu eleifend vitae, efficitur pellentesque mauris \autocite{becker_human_1986}.
+
+\paragraph{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{Data}}
+
+Village closure information is taken from a village head survey, which was collected in conjunction with household surveys. Village heads were asked if the village currently had a primary school, and asked about the year of school closure if the village school had been closed. Based on the village heads survey, there are four categories of closure status. The first category includes 193 villages that did not have village schools in 2011 and experienced school closure between 1999 and 2010. In the second category, which included 22 villages, a school closure year between 1999 and 2010 was reported, but village heads also reported that the village currently had a school in 2011. In this case, it is plausible that new schools were built in these 22 villages after school closure.\footnote{Generally students went to schools in township centers after village school closure, but in these 22 villages, it is possible that a new consolidated school was built inside these villages.}
+
+\section{Introduction\label{sec:intro}}
+\blindtext\footnote{\autocite{conti_understanding_2010}}.
+
+\section{Data\label{sec:data}}
+\Blindtext
+
+\section{Estimation\label{sec:estimate}}
+\Blindtext
+
+\section{Conclusion\label{sec:conclude}}
+
+In Section \ref{sec:intro} (Page \pageref{sec:intro}), we introduced the paper. In Section \ref{sec:data} (Page \pageref{sec:data}), we discussed the data. In Section \ref{sec:estimate} (Page \pageref{sec:estimate}), we discussed the estimation results.
+\blindtext
+
+\pagebreak
+\appendix
+
+\section{References here not Colored or Linked}
+\begingroup
+{\hypersetup{hidelinks=true}
+Now we change settings for the appendix, so that the page numbers do not light up. Earlier they did.
+
+In Section \ref{sec:intro} (Page \pageref{sec:intro}), we introduced the paper. In Section \ref{sec:data} (Page \pageref{sec:data}), we discussed the data. In Section \ref{sec:estimate} (Page \pageref{sec:estimate}), we discussed the estimation results.
+}
+\endgroup
+
+\section{References here have Red Color}
+\begingroup
+{\hypersetup{colorlinks=true, linkcolor=red, citecolor=red, plainpages=false, pdfpagelabels=true, urlcolor=red}
+	Now we change settings for the appendix, so that the page numbers do not light up. Earlier they did.
+	In Section \ref{sec:intro} (Page \pageref{sec:intro}), we introduced the paper. In Section \ref{sec:data} (Page \pageref{sec:data}), we discussed the data. In Section \ref{sec:estimate} (Page \pageref{sec:estimate}), we discussed the estimation results. For more help on the hyperref package's options, see: \href{http://mirror.utexas.edu/ctan/macros/latex/contrib/hyperref/doc/options.pdf}{hyperref package options}.
+}
+\endgroup
+
+
+
+\pagebreak
+\begingroup
+%\setstretch{1.1}
+\setlength\bibitemsep{0pt}
+\printbibliography
+\endgroup
+\pagebreak
+
+\end{document}
