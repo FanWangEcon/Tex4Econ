@@ -5,32 +5,35 @@
 
 % url package
 \usepackage{hyperref}
-
+\usepackage[colorlinks=true,
+            linkcolor=blue,
+            urlcolor=blue,
+            anchorcolor = blue,
+            citecolor=gray]{hyperref}
 
 % Titling and Author
 \title{Sandbox Testing Equations}
-\author{Fan Wang (University of Houston)}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
 \date{\today}
-
 \begin{document}
 
 \maketitle
 
 \section{Two Cases}
 $$
-x = 
+x =
 \begin{cases*}
     -x           & if  $x < 0 $  \\
     \phantom{-}x & if  $x\ge 0$
-\end{cases*} 
+\end{cases*}
 $$
 
 \begin{align}
-x = 
+x =
 \begin{cases*}
 -x           & if  $x < 0 $  \\
 \phantom{-}x & if  $x\ge 0$
-\end{cases*} 
+\end{cases*}
 \end{align}
 
 \section{Two Cases, same line}
@@ -58,13 +61,13 @@ g(x) = \begin{cases}
 
 case star
 \begin{align}
-f(x) = 
+f(x) =
 \begin{cases*}
 0  & if $x < 0$ \\
 1  & if $x \ge 0$
 \end{cases*}
 \quad
-g(x) = 
+g(x) =
 \begin{cases*}
 f(x)+1  & if $ x < 0$ \\
 f(x)-1  & if $ x \ge 0$
