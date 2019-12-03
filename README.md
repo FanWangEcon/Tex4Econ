@@ -6,28 +6,29 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 [![](https://img.shields.io/github/last-commit/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/m/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/pulls)
 
-# 1. Latex Tools
+# 1. Latex References, Equations, Tables and Figures
 
-## 1.1 [Equations](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation)
+## 1.1 [References](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference)
+
+1.  [Biblatex Citation and Bibliography](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.pdf)
+
+
+## 1.2 [Equations](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation)
 
 1.  [Multiple Lines](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/multilines.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/multilines.pdf)
 2.  [Equation Cases](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.pdf)
 
-## 1.2 [Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/)
+## 1.3 [Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/)
 
 1.  [Multi-Panel Estimation Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.pdf)
 2.  [Small Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.pdf)
 
-## 1.3 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
+## 1.4 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
 
 1.  [Tikz Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.pdf)
 2.  [Tikz Linear Spline Equation Plotting](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.pdf)
 
-## 1.4 Conversion
-
-1.  [Pandoc File Conversion](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.pdf)
-
-# 2. Latex Layout
+# 2. Latex Layout etc.
 
 ## 2.1 Sizing
 
@@ -37,16 +38,23 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 1.  [Repaginate Response for Referees](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.pdf)
 
-# 3. Overleaf Integration and Template
+# 3. Latex Specialized Packages
 
-## 3.1 Basic Template Files
+## 3.1 Conversion
+
+1.  [Pandoc File Conversion](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.pdf)
+
+
+# 4. Overleaf Integration and Template
+
+## 4.1 Basic Template Files
 
 In overleaf, click on New Project, choose upload project, then select from one of the templte zip files below.
 
 1.  [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
 2.  [Template Figure Table and Reference Roman 12 Double Space](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/): [**tex**](https://github.com/FanWangEcon2/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/fantemplate_basic_roman.zip)
 
-## 3.2 Paper Template Files
+## 4.2 Paper Template Files
 
 In overleaf, click on New Project, choose upload project, then select from one of the templte zip files below.
 
@@ -56,7 +64,7 @@ In overleaf, click on New Project, choose upload project, then select from one o
     -   separate heading count for responses to referees: _\\setcounter{section}{0}_
     -   separate bibliographies: _refsection_
 
-## 3.3 Recommendations Template Files
+## 4.3 Recommendations Template Files
 
 In overleaf, click on New Project, choose upload project, then select from one of the templte zip files below.
 
@@ -64,7 +72,7 @@ In overleaf, click on New Project, choose upload project, then select from one o
     -   recommendation letter with logo and signature
     -   contact and address panel
 
-## 3.4 Github Integration
+## 4.4 Github Integration
 
 This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
 
@@ -75,7 +83,7 @@ The writing/structure is to:
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
-# 4. [One File Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex)
+# 5. [One File Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex)
 
 For papers that are not too long, we might write all tex contents on the same page. This is the example single-file paper [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex) file, and this is the   [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.pdf) output. Even for single-file papers, various paper components listed below should be stored separately for clarity and convenience.
 
@@ -99,7 +107,7 @@ For one-file article, we could directly load in the various tex fragments below.
     -   [_Package Loading_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_one.tex)
     -   [_Additional Packages and Settings_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_two.tex)
 
-# 5. [Multi-Section Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex)
+# 6. [Multi-Section Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex)
 
 When a paper is longer, it could be difficult to manage long latex files. Compiling could take long periods of time if the full paper requires compilation for any edits in a subsection. The structure below allows for editing paper in subsections and compiling by sections. The structure works locally as well as remotely on browser based compiler.
 
@@ -136,7 +144,7 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     -   [Model Subsection One](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
     -   [Model Subsection Two](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
 
-# 6. Miscellaneous Files
+# 7. Miscellaneous Files
 
 1. [Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/nontex/) with support files for git, github, and github pages, and others.
 2. [RevealJS Repository](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/) with support files for reveal.js academic presentations.
