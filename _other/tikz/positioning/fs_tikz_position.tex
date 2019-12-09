@@ -1,0 +1,119 @@
+\documentclass{article}
+
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in
+}
+
+% url package
+\usepackage{hyperref}
+
+% Titling and Author
+\title{Latex Tikz Test, Relative Position on Page and Alignment}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Relative Positioning}
+
+\subsection{First line}
+Using the code below, we draw from $x=0$ and $y=0$, to $x=1$ and $y=2$, the second point:
+\begin{verbatim}
+\draw (0,0) --(1,2);
+\end{verbatim}
+\bigskip
+\begin{tikzpicture}
+\draw (0,0) --(1,2);
+\end{tikzpicture}
+
+\subsection{Center Align Half Width Lines}
+For lines below, we draw several partial page lines and align to page center:
+\begin{verbatim}
+\begin{center}
+\begin{tikzpicture}
+\draw (0,2) -- (0.25*\textwidth,2);
+\draw (0,1) -- (0.5*\textwidth,1);
+\end{tikzpicture}
+\end{center}
+\end{verbatim}
+\bigskip
+\begin{center}
+\begin{tikzpicture}
+\draw (0,2) -- (0.25*\textwidth,2);
+\draw (0,1) -- (0.5*\textwidth,1);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Big line that fills page within margin}
+Tikz coordinates are in cm. On A4 page, we have $21.0$ cm width by $29.7$ cm height. Each inch is $2.54$ cm. So with $1.0$ cm border on the left and on the right, we have $21-2.54\cdot2=15.92$, $15.92$ cm.
+For lines below, we draw several full and partial page width lines:
+\begin{verbatim}
+\begin{center}
+\begin{tikzpicture}
+\draw (0,6) -- (7,6);
+\draw (0,5) -- (15.92,5);
+\draw (0,4) -- (0.45*\textwidth,4);
+\draw (0,3) -- (0.5*\textwidth,3);
+\draw (0,2) -- (0.9*\textwidth,2);
+\draw (0,1) -- (\textwidth,1);
+\end{tikzpicture}
+\end{center}
+\end{verbatim}
+Note that we center the lines. Centering does not disrupt the coordinates, but just places entire tikz in the middle of page considering all plotted lines
+\bigskip
+\begin{center}
+\begin{tikzpicture}
+\draw (0,6) -- (7,6);
+\draw (0,5) -- (15.92,5);
+\draw (0,4) -- (0.45*\textwidth,4);
+\draw (0,3) -- (0.5*\textwidth,3);
+\draw (0,2) -- (0.9*\textwidth,2);
+\draw (0,1) -- (\textwidth,1);
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+For additional, information, see \href{https://tex.stackexchange.com/questions/58292/a-line-of-length-textwidth-in-tikz}{A line of length textwidth in TikZ}
+
+\subsection{Box in the Middle of Page}
+Now draw half width relative position box in the middle of pageFor lines below, we draw several full and partial page width lines:
+\begin{verbatim}
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- 
+(0,0.5*\textwidth) -- 
+(0.5*\textwidth, 0.5*\textwidth) -- 
+(0.5*\textwidth, 0) -- (0, 0);
+\end{tikzpicture}
+\end{center}
+\end{verbatim}
+Note that the box is centered.
+\bigskip
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (0,0.5*\textwidth) -- (0.5*\textwidth, 0.5*\textwidth) -- (0.5*\textwidth, 0) -- (0, 0);
+\end{tikzpicture}
+\end{center}
+
+\end{document}
