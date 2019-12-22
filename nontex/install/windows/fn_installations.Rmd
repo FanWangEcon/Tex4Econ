@@ -1,5 +1,5 @@
 ---
-title: "Python and R set-up and Installations on New Computer"
+title: "New Windows Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations"
 output:
   pdf_document:
     df_print: paged
@@ -14,7 +14,7 @@ urlcolor: blue
 always_allow_html: yes
 ---
 
-Go back to [fan](http://fanwangecon.github.io/)'s [Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/nontex/).
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
@@ -39,6 +39,7 @@ python -V
 Download and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path
 
 See Anaconda Installation Directory, in anaconda prompt:
+
 ```{bash}
 where anaconda
 # C:/ProgramData/Anaconda3/Scripts/anaconda.exe
@@ -49,6 +50,12 @@ where jupyter
 where jupyter-kernelspec
 # if R installed already
 where r
+
+###############################
+# Add these to Windows PATH:
+###############################
+# C:/ProgramData/Anaconda3/Scripts
+# C:/ProgramData/Anaconda3
 ```
 
 To Add Anaconda to Path, In Windows
@@ -88,12 +95,17 @@ python ~/PyFan/ProjectSupport/graph/subplot.py
 ## Additional Packages
 
 ```{r}
-conda install statsmodels
-conda install datashape
-conda install seaborn
-conda install -c conda-forge interpolation
-conda install -c conda-forge awscli
+conda install statsmodels datashape seaborn
+# conda install statsmodels
+# conda install datashape
+# conda install seaborn
+
+conda install -c conda-forge interpolation awscli
+# conda install -c conda-forge interpolation
+# conda install -c conda-forge awscli
+
 conda install -c anaconda boto3
+
 conda install -c r r-irkernel
 ```
 
@@ -128,9 +140,9 @@ note that installation will not work if the machine's version of R is not up to 
 install.packages("installr")
 library("installr")
 install.Rtools()
-# c:/Rtools/bin;
-# c:/Rtools/mingw_32/bin;
-# c:/Rtools/mingw_64/bin;
+# c:\Rtools\bin;
+# c:\Rtools\mingw_32\bin;
+# c:\Rtools\mingw_64\bin;
 
 # main packagevps
 install.packages(c("tidyr", "tidyverse", "tidymodels"))
@@ -295,14 +307,16 @@ source('C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.R')
 source('C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R')
 # A file involving estimation
 source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
+
+# C:\Users\fan\R4Econ\summarize\dist\fst_hist_onevar.Rmd
+# C:\Users\fan\R4Econ\support\tibble\fs_tib_basics.Rmd
+# C:\Users\fan\R4Econ\optimization\cesloglin\fst_ces_plan_linlog.Rmd
 ```
 
 # Other Programs to Install
 
 ## Development Programs
 
-- [git for windows](https://git-scm.com/download/win): after install, try "cd ~/PyFan"
-- [atom](https://atom.io/)
 - [pycharm](https://www.jetbrains.com/pycharm/)
 
 ## Key Programs

@@ -1,5 +1,5 @@
 ---
-title: "Atom, Git, Github, etc Set-up for Linux"
+title: "Example and Tutorial for Atom, Git, Github, etc Set-up for Linux"
 output:
   pdf_document:
     df_print: paged
@@ -14,7 +14,7 @@ urlcolor: blue
 always_allow_html: yes
 ---
 
-Go back to [fan](http://fanwangecon.github.io/)'s [Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/nontex/).
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
@@ -42,8 +42,10 @@ sudo apt-get install atom
 sudo apt-get install git
 # generate repo directory and sync
 mkdir ~/PyFan
+# mkdir fanwangecon.github.io PyFan Tex4Econ R4Econ M4Econ Py4Econ Teaching
 cd ~/PyFan
 git init
+# git config only needs to happen once, info stored under ~/.gitconfig
 git config --global user.name "Fan Wang"
 git config --global user.email wangfanbsg75@live.com
 git remote add github git@github.com:FanWangEcon/PyFan.git
@@ -91,7 +93,7 @@ conda update --all
 
 ## Install PyCharm
 
-PyCharm can be installed from Ubuntu apps. 
+PyCharm can be installed from Ubuntu apps.
 
 ```{bash}
 <!-- for Debian -->

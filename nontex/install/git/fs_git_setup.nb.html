@@ -11,7 +11,7 @@
 
 
 
-<title>New Windows Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations</title>
+<title>Git and Github Example and Tutorial, Sync with Multiple Repositories, Store Password</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -1743,7 +1743,7 @@ summary {
 
 
 
-<h1 class="title toc-ignore">New Windows Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations</h1>
+<h1 class="title toc-ignore">Git and Github Example and Tutorial, Sync with Multiple Repositories, Store Password</h1>
 
 </div>
 
@@ -1752,372 +1752,175 @@ summary {
 <p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="http://fanwangecon.github.io/Tex4Econ/">Tex4Econ and Miscellaneous Repository</a>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
-<div id="conda" class="section level1">
-<h1><span class="header-section-number">1</span> Conda</h1>
-<p>Use conda across platforms, so that locally on windows and ubuntu and remotely on aws, can have the same software setup environment.</p>
-<p>Search for Anaconda Prompt, right click, choose run as administrator.</p>
-<p>Check software versions.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxuY29uZGEgbGlzdCBhbmFjb25kYVxucHl0aG9uIC1WXG5gYGBcbmBgYCJ9 -->
-<pre class="bash"><code>```bash
-conda list anaconda
-python -V</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## First Time Conda Install
-
-Download and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path
-
-See Anaconda Installation Directory, in anaconda prompt:
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxud2hlcmUgYW5hY29uZGFcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvYW5hY29uZGEuZXhlXG53aGVyZSBweXRob25cbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL3B5dGhvbi5leGVcbndoZXJlIGp1cHl0ZXJcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvanVweXRlci5leGVcbndoZXJlIGp1cHl0ZXIta2VybmVsc3BlY1xuIyBpZiBSIGluc3RhbGxlZCBhbHJlYWR5XG53aGVyZSByXG5cbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQWRkIHRoZXNlIHRvIFdpbmRvd3MgUEFUSDpcbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHNcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzXG5gYGAifQ== --&gt;
-
-```bash
-where anaconda
-# C:/ProgramData/Anaconda3/Scripts/anaconda.exe
-where python
-# C:/ProgramData/Anaconda3/python.exe
-where jupyter
-# C:/ProgramData/Anaconda3/Scripts/jupyter.exe
-where jupyter-kernelspec
-# if R installed already
-where r
-
-###############################
-# Add these to Windows PATH:
-###############################
-# C:/ProgramData/Anaconda3/Scripts
-# C:/ProgramData/Anaconda3</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>To Add Anaconda to Path, In Windows 1. search for: Environment Variables 2. Edit Environment Variables 3. Add new to Path (lower half): - C:/ProgramData/Anaconda3/Scripts/ - C:/ProgramData/Anaconda3/ 4. Now open up regular windows command Prompt, Type in: - conda –version - also Close and Open up Git Bash: conda –version</p>
-<div id="conda-update" class="section level2">
-<h2><span class="header-section-number">1.1</span> Conda Update</h2>
-<p>Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyAjIGlmIHRoZXJlIGFyZSBidWdzXG4jIGNvbmRhIGNsZWFuIC0tcGFja2FnZXNcbiMgdXNlIGNvbmRhLWZvcmdlIGFzIG1haW4gY2hhbm5lbCwgbW9yZSB1cGRhdGVkIHBhY2thZ2VzXG5jb25kYSBjb25maWcgLS1hZGQgY2hhbm5lbHMgY29uZGEtZm9yZ2VcbiMgbm9ybWFsIHVwZGF0ZVxuY29uZGEgdXBkYXRlIC0tYWxsXG5gYGAifQ== -->
-<pre class="bash"><code># # if there are bugs
-# conda clean --packages
-# use conda-forge as main channel, more updated packages
-conda config --add channels conda-forge
-# normal update
-conda update --all</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="conda-test-python" class="section level2">
-<h2><span class="header-section-number">1.2</span> Conda Test Python</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB3aW5kb3dzXG5weXRob24gXCJDOi9Vc2Vycy9mYW4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcIlxucHl0aG9uIFwiQzovVXNlcnMvZmFuL1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcIlxuIyBsaW51eFxucHl0aG9uIH4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcbnB5dGhvbiB+L1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcbmBgYCJ9 -->
-<pre class="r"><code># windows
-python &quot;C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py&quot;
-python &quot;C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py&quot;
-# linux
-python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
-python ~/PyFan/ProjectSupport/graph/subplot.py</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="additional-packages" class="section level2">
-<h2><span class="header-section-number">1.3</span> Additional Packages</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29uZGEgaW5zdGFsbCBzdGF0c21vZGVscyBkYXRhc2hhcGUgc2VhYm9yblxuIyBjb25kYSBpbnN0YWxsIHN0YXRzbW9kZWxzXG4jIGNvbmRhIGluc3RhbGwgZGF0YXNoYXBlXG4jIGNvbmRhIGluc3RhbGwgc2VhYm9yblxuXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGludGVycG9sYXRpb24gYXdzY2xpXG4jIGNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2UgaW50ZXJwb2xhdGlvblxuIyBjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGF3c2NsaVxuXG5jb25kYSBpbnN0YWxsIC1jIGFuYWNvbmRhIGJvdG8zXG5cbmNvbmRhIGluc3RhbGwgLWMgciByLWlya2VybmVsXG5gYGAifQ== -->
-<pre class="r"><code>conda install statsmodels datashape seaborn
-# conda install statsmodels
-# conda install datashape
-# conda install seaborn
-
-conda install -c conda-forge interpolation awscli
-# conda install -c conda-forge interpolation
-# conda install -c conda-forge awscli
-
-conda install -c anaconda boto3
-
-conda install -c r r-irkernel</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-<div id="r-installation" class="section level1">
-<h1><span class="header-section-number">2</span> R Installation</h1>
-<p>Try to install R from within Conda. The procedure here is the same for windows as well as linux machines.</p>
-<div id="fully-uninstall-r" class="section level2">
-<h2><span class="header-section-number">2.1</span> Fully uninstall r</h2>
-<p>open up RStudio, and see where paths are. also open up R from command prompt, see where paths are.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLmxpYlBhdGgoKVxuYGBgIn0= -->
-<pre class="r"><code>.libPath()</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Open up install and uninstall programs, find R and Rstudio, and uninstall them. Then delete all files found path paths shown by <em>.libPath()</em>, looking at these: - <em>C:/Users/fan/Documents/R/win-library/3.6</em> - <em>C:/Program Files/R/R-3.6.1/library</em></p>
-</div>
-<div id="install-r-outside-of-conda" class="section level2">
-<h2><span class="header-section-number">2.2</span> Install R (outside of Conda)</h2>
+<div id="download-programs" class="section level1">
+<h1><span class="header-section-number">1</span> Download Programs</h1>
 <ol style="list-style-type: decimal">
-<li><a href="https://cloud.r-project.org/">download R</a></li>
-<li><a href="https://rstudio.com/products/rstudio/download/">download R-studio</a></li>
-<li>Open R-studio and auto-detect R</li>
-<li>Install packages</li>
+<li>Install <a href="https://git-scm.com/download/win">git for windows</a>: after install, try “cd ~/PyFan”</li>
+<li>Install <a href="https://atom.io/">atom</a></li>
+<li>Might need to install <a href="https://www.putty.org/">putty</a> possibly</li>
 </ol>
-<p>note that installation will not work if the machine’s version of R is not up to date, this could be the case with default R versions for some linux installations.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIFItdG9vbHNcbmluc3RhbGwucGFja2FnZXMoXCJpbnN0YWxsclwiKVxubGlicmFyeShcImluc3RhbGxyXCIpXG5pbnN0YWxsLlJ0b29scygpXG4jIGM6XFxSdG9vbHNcXGJpbjtcbiMgYzpcXFJ0b29sc1xcbWluZ3dfMzJcXGJpbjtcbiMgYzpcXFJ0b29sc1xcbWluZ3dfNjRcXGJpbjtcblxuIyBtYWluIHBhY2thZ2V2cHNcbmluc3RhbGwucGFja2FnZXMoYyhcInRpZHlyXCIsIFwidGlkeXZlcnNlXCIsIFwidGlkeW1vZGVsc1wiKSlcbiMgZGV2ZWxvcG1lbnQgcGFja2FnZXNcbmluc3RhbGwucGFja2FnZXMoYyhcImRldnRvb2xzXCIsIFwiaXJrZXJuZWxcIiwgXCJwa2dkb3duXCIsIFwicm94eWdlbjJcIikpXG4jIG90aGVyIHBhY2thZ2VzXG5pbnN0YWxsLnBhY2thZ2VzKGMoXCJBRVJcIiwgXCJtaW5wYWNrLmxtXCIsIFwia25pdHJcIiwgXCJrYWJsZUV4dHJhXCIsIFwibWF0bGFiXCIpKVxuXG4jIEluc3RhbGwgbXkgcGFja2FnZVxuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwiZmFud2FuZ2Vjb24vUjRFY29uXCIpXG5gYGAifQ== -->
-<pre class="r"><code># Install R-tools
-install.packages(&quot;installr&quot;)
-library(&quot;installr&quot;)
-install.Rtools()
-# c:\Rtools\bin;
-# c:\Rtools\mingw_32\bin;
-# c:\Rtools\mingw_64\bin;
-
-# main packagevps
-install.packages(c(&quot;tidyr&quot;, &quot;tidyverse&quot;, &quot;tidymodels&quot;))
-# development packages
-install.packages(c(&quot;devtools&quot;, &quot;irkernel&quot;, &quot;pkgdown&quot;, &quot;roxygen2&quot;))
-# other packages
-install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;matlab&quot;))
-
-# Install my package
-devtools::install_github(&quot;fanwangecon/R4Econ&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
-<div id="set-up-r-environment-in-conda" class="section level2">
-<h2><span class="header-section-number">2.3</span> Set up R-Environment in Conda</h2>
-<p>Conda environments are language agnostic. pip is a package manager for Python. venv is an environment manager for Python. conda is both a package and environment manager and is language agnostic. Inside Anaconda Prompt:</p>
-<p>Key packages are generally available in conda’s default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. after adding <em>conda-forge</em> to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the <em>r_env</em> generation line with and without first adding <em>conda-forge</em> to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the <em>conda-forge</em> channels.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBTZXQgdXAgQ2hhbm5lbFxuY29uZGEgY29uZmlnIC0tYWRkIGNoYW5uZWxzIGNvbmRhLWZvcmdlXG4jIGluc3RhbGwga2V5IHIgcGFja2FnZXMgd2l0aGluIGEgci1lbnZpcm9ubWVudFxuY29uZGEgZW52IHJlbW92ZSAtbiByX2VudlxuY29uZGEgY3JlYXRlIC1uIHJfZW52IHItZXNzZW50aWFscyByLWJhc2Ugci10aWR5ciByLXRpZHl2ZXJzZSByLWRldnRvb2xzIHItaXJrZXJuZWwgci1wa2dkb3duIHItcm94eWdlbjJcbiMgc2VlIGFsbCBpbnN0YWxsZWQgZW52aXJvbm1lbnRzXG5jb25kYSBlbnYgbGlzdFxuIyBhY3RpdmF0ZSBhbiBlbnZpcm9ubWVudCB0byB1c2UgaXQsIGlmIGluIGJhc2UsIHIgZG9lcyBub3QgZXhpc3QsIGlzb2xhdGVkIGluIHJfZW52XG5jb25kYSBhY3RpdmF0ZSByX2VudlxuIyBzZWUgcGFja2FnZXMgaW4gZW52aXJvbm1lbnRcbmNvbmRhIGxpc3RcbiMgdG8gcXVpdFxuY29uZGEgZGVhY3RpdmF0ZVxuYGBgIn0= -->
-<pre class="bash"><code># Set up Channel
-conda config --add channels conda-forge
-# install key r packages within a r-environment
-conda env remove -n r_env
-conda create -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
-# see all installed environments
-conda env list
-# activate an environment to use it, if in base, r does not exist, isolated in r_env
-conda activate r_env
-# see packages in environment
-conda list
-# to quit
-conda deactivate</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ul>
-<li><strong>Location</strong>: Installed environments are shown appear in the <em>envs</em> folder of <em>C:/ProgramData/Anaconda3/envs/</em>. Can be easily deleted without disrupting the main base installation for conda. This is very important. During installation, could easily run into problems, and need to re-install. Much better to only re-install a folder. Note that when R is installed in <em>envs</em>, it will not show up under add or remove programs for uninstallation from there, has to be uninstalled, deleted directly here.</li>
-<li><strong>Use only in Env</strong>: Note that if we installed r inside r_env, if we type <em>r</em> under the base environment, we can not enter r. We can only enter r within r_env. With PATH properly set-up, this happens under Conda Prompt, Windows Prompt, etc.</li>
-<li><strong>Multiple Pythons</strong>: With the above installation for R, one benefit is that if R requires a different version of Python than what the base environment uses, the r_env could have a different python version. So type <em>python</em> in the base environment as well as inside the <em>r_env</em>. This also means potentially there could be duplicated installations I think. Look at the python versions under <em>conda list</em> in the base and in the r-environment.</li>
-<li><strong>File Size</strong>: Note that this creates a large installation folder, <em>C:/ProgramData/Anaconda3/envs/r_env/</em>, without additional packages, is 1.3 GB in size</li>
-</ul>
-</div>
-<div id="install-additional-packages-inside-the-r-environment" class="section level2">
-<h2><span class="header-section-number">2.4</span> Install Additional Packages inside the R-environment</h2>
-<p>These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better.</p>
-<p>This did not work in windows, <em>tidymodels</em> failed to install. Perhaps because of directory issues. <em>tidymodels</em> required <em>rstanarm</em>, and <em>rstanarm</em> failed to install.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyMjIE9uZSBsaW5lXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItYWVyIHItbWlucGFjay5sbSByLWtuaXRyIHIta2FibGVFeHRyYSByLW1hdGxhYlxuIyBjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItcnN0YW5hcm1cblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgRXN0aW1hdGlvblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIEVzdGltYXRpb24gVG9vbHNcbiMgdGlkeW1vZGVscyBkb2VzIG5vdCB3b3JrIGZyb24gY29uZGEgaW5zdGFsbFxuIyBMaW5lYXIgUmVncmVzc2lvbiBQYWNrYWdlXG4jIGh0dHBzOi8vYW5hY29uZGEub3JnL2NvbmRhLWZvcmdlL3ItYWVyXG4jIE5vbmxpbmVhciBSZWdyZXNzaW9uIFBhY2thZ2VcbiMgaHR0cHM6Ly9hbmFjb25kYS5vcmcvY29uZGEtZm9yZ2Uvci1taW5wYWNrLmxtXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItYWVyIHItbWlucGFjay5sbVxuIyBlbnRlciByIGFuZCB1c2UgZGV2dG9vbHNcbiMgaW5zdGFsbC5wYWNrYWdlcyhcInRpZHltb2RlbHNcIilcblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgVmlzdWFsaWF0aW9uXG4jIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1rbml0ciByLWthYmxlRXh0cmFcblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgVXRpbGl0aWVzXG4jIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQWxsb3dpbmcgZm9yIEludm9raW5nIE1hdGxhYiBGaWxlcyBmcm9tIEluc2lkZSBSXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItbWF0bGFiXG5gYGAifQ== -->
-<pre class="bash"><code>### One line
-conda install -c conda-forge r-aer r-minpack.lm r-knitr r-kableExtra r-matlab
-# conda install -c conda-forge r-rstanarm
-
-#######################################
-### Estimation
-#######################################
-# Estimation Tools
-# tidymodels does not work fron conda install
-# Linear Regression Package
-# https://anaconda.org/conda-forge/r-aer
-# Nonlinear Regression Package
-# https://anaconda.org/conda-forge/r-minpack.lm
-conda install -c conda-forge r-aer r-minpack.lm
-# enter r and use devtools
-# install.packages(&quot;tidymodels&quot;)
-
-#######################################
-### Visualiation
-#######################################
-conda install -c conda-forge r-knitr r-kableExtra
-
-#######################################
-### Utilities
-#######################################
-# Allowing for Invoking Matlab Files from Inside R
-conda install -c conda-forge r-matlab</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Install additional packages from inside R. The devtools install will install packages inside <em>envs/r_env/Lib/R</em>.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgT3duIFBhY2thZ2VcbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjI1xuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwiZmFud2FuZ2Vjb24vUjRFY29uXCIpXG4jIGluc3RhbGxfZGV2KFwiY2xpXCIpXG5gYGAifQ== -->
-<pre class="r"><code>#######################################
-### Own Package
-#######################################
-devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
-# install_dev(&quot;cli&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="r-studio-set-up-download-from-rstudio" class="section level2">
-<h2><span class="header-section-number">2.5</span> R-Studio Set-up Download from Rstudio</h2>
+<div id="git-and-github-security-set-up" class="section level1">
+<h1><span class="header-section-number">2</span> git and Github Security Set-up</h1>
 <ol style="list-style-type: decimal">
-<li>Download R-studio, and install, as normal (not from conda, directly from rstudio website latest windows version)</li>
-<li>Open up anaconda prompt, enter <em>r_env</em> environment: <em>activate r_env</em></li>
-<li>cd into rstudio exe file folder: cd “C:/Program Files/RStudio/bin”</li>
-<li>start r-studio from inside <em>r_env</em>: rstudio.exe</li>
-<li>inside r-studio, check: <em>.libPaths()</em>
+<li>open up git bash</li>
+<li>generate rsa
 <ul>
-<li>“C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library”</li>
+<li><em>ssh-keygen -t rsa -C “<a href="mailto:wangfanbsg75@live.com" class="email">wangfanbsg75@live.com</a>”</em></li>
+<li>when prompted, do not enter “file in which save the key”, when prompted for passphrase, enter “WHATEVERPASSWORDIS”</li>
+</ul></li>
+<li>copy key
+<ul>
+<li>WINDOWS: <em>clip &lt; ~/.ssh/id_rsa.pub</em></li>
+<li>LINUX: <em>cat ~/.ssh/id_rsa.pub</em></li>
+</ul></li>
+<li>log on to github ssh section, generate new ssh rsa key
+<ul>
+<li>SSH and GPG keys, choose New SSH key, paste in clipped text.</li>
 </ul></li>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYWN0aXZhdGUgcl9lbnZcbmNkIFwiQzovUHJvZ3JhbSBGaWxlcy9SU3R1ZGlvL2JpblwiXG5yc3R1ZGlvLmV4ZVxuXG5jZCBcIkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnlcIlxuXCJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluL3JzdHVkaW8uZXhlXCJcbmBgYCJ9 -->
-<pre class="bash"><code>activate r_env
-cd &quot;C:/Program Files/RStudio/bin&quot;
-rstudio.exe
-
-cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
-&quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBpbnNpZGUgZ2l0IGJhc2hcbnNzaC1rZXlnZW4gLXQgcnNhIC1DIFwid2FuZ2ZhbmJzZzc1QGxpdmUuY29tXCJcbiMgdGhpcyBjb3BpZXMgdGhlIHRleHQgaW4gdGhlIC5wdWIgZmlsZSBnZW5lcmF0ZWRcbmNsaXAgPCB+Ly5zc2gvaWRfcnNhLnB1YlxuYGBgIn0= -->
+<pre class="bash"><code># inside git bash
+ssh-keygen -t rsa -C &quot;wangfanbsg75@live.com&quot;
+# this copies the text in the .pub file generated
+clip &lt; ~/.ssh/id_rsa.pub</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:</p>
+</div>
+<div id="start-and-sync-key-repositories" class="section level1">
+<h1><span class="header-section-number">3</span> Start and Sync Key Repositories</h1>
+<p>Inside git bash (open as <em>administrator</em>), Sync Several Key Repositories that should be synced on all computers:</p>
+<ol style="list-style-type: decimal">
+<li>fanwangecon.github.io: Github root repo</li>
+<li>PyFan: Private Repo with Python Support Files</li>
+<li><a href="https://github.com/FanWangEcon/Tex4Econ">Tex4Econ</a>: Latex, installation, and various other support files, public repo.</li>
+<li><a href="https://github.com/FanWangEcon/R4Econ">R4Econ</a>: Public repo, R package, R research programs</li>
+<li><a href="https://github.com/FanWangEcon/M4Econ">M4Econ</a>: Public repo, Matlab package, Matlab examples and research files</li>
+<li><a href="https://github.com/FanWangEcon/Py4Econ">Py4Econ</a>: Public repo, Python package, Python research programs</li>
+<li>Teaching: Private teaching repository</li>
+</ol>
+<p>Other repositories can be synced when needed on an ad-hoc basis. The repositories above are essential repositories.</p>
+<div id="repo-folders-and-global-config" class="section level2">
+<h2><span class="header-section-number">3.1</span> Repo Folders and Global config</h2>
+<p>Remember git bash or bash should be in windows opened as <em>administrator</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuPCEtLSBmb3IgdWJ1bnR1IC0tPlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvYmlvbmljL2FtZDY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXCJcbnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYlxuPCEtLSBmb3IgZGViaWFuIC0tPlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvZGViaWFuOS94ODZfNjQvcnN0dWRpby0xLjIuNTAzMy1hbWQ2NC5kZWJcIlxuc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXG5jb25kYSBpbnN0YWxsIC1jIHIgcnN0dWRpb1xuY2QgXCJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluXCJcbnJzdHVkaW8uZXhlXG5cbmNkIFwiQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeVwiXG5cIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4vcnN0dWRpby5leGVcIlxuYGBgIn0= -->
-<pre class="bash"><code>&lt;!-- for ubuntu --&gt;
-wget &quot;https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb&quot;
-sudo apt install ./rstudio-1.2.5033-amd64.deb
-&lt;!-- for debian --&gt;
-wget &quot;https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb&quot;
-sudo apt install ./rstudio-1.2.5033-amd64.deb
-conda install -c r rstudio
-cd &quot;C:/Program Files/RStudio/bin&quot;
-rstudio.exe
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBjZCB0byByb290IGZvbGRlclxuY2QgflxuIyBnZW5lcmF0ZSBhbGwgbmVlZGVkIGtleSByZXBvc2l0b3JpZXNcbm1rZGlyIGZhbndhbmdlY29uLmdpdGh1Yi5pbyBQeUZhbiBUZXg0RWNvbiBSNEVjb24gTTRFY29uIFB5NEVjb24gVGVhY2hpbmdcblxuIyBTZXQgZ2xvYmFsIGNvbmZpZyBzZXR0aW5ncywgaW4gfi8uZ2l0Y29uZmlnXG5naXQgY29uZmlnIC0tZ2xvYmFsIHVzZXIubmFtZSBcIkZhbiBXYW5nXCJcbmdpdCBjb25maWcgLS1nbG9iYWwgdXNlci5lbWFpbCB3YW5nZmFuYnNnNzVAbGl2ZS5jb21cbmBgYCJ9 -->
+<pre class="bash"><code># cd to root folder
+cd ~
+# generate all needed key repositories
+mkdir fanwangecon.github.io PyFan Tex4Econ R4Econ M4Econ Py4Econ Teaching
 
-cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
-&quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
+# Set global config settings, in ~/.gitconfig
+git config --global user.name &quot;Fan Wang&quot;
+git config --global user.email wangfanbsg75@live.com</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="install-packages-from-r-studio" class="section level2">
-<h2><span class="header-section-number">2.6</span> Install Packages from R-Studio</h2>
-<p>Install addition files inside Rstudio. Easier to debug potentially. Install rtools as described <a href="https://thecoatlessprofessor.com/programming/cpp/installing-rtools-for-compiled-code-via-rcpp/">here</a>: <a href="https://cran.r-project.org/bin/windows/Rtools/">rtools download</a>. Alternatively:</p>
+<div id="initalize-and-add-remote-repo-for-each" class="section level2">
+<h2><span class="header-section-number">3.2</span> Initalize and add remote repo for each:</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcImluc3RhbGxyXCIpXG5saWJyYXJ5KFwiaW5zdGFsbHJcIilcbiMgTm90ZSB0aGF0IHRoaXMgd2lsbCBnZW5lcmF0ZSBzZXZlcmFsIHBvcC11cCB3aW5kb3dzXG5pbnN0YWxsLlJ0b29scygpXG4jIGNob29zZSB0byBvbmx5IGluc3RhbGwgNjQgYml0IHRvb2xjaGFpblxuIyB0aGlzIGluc3RhbGxzIGcrKyB3aGljaCBpcyBuZWVkZWQgZm9yIHJzdGFuYXJtXG4jIEFkZCB0aGVzZSBiZWxvdyB0byB3aW5kb3dzIHBhdGhcbiMgYzovUnRvb2xzL2JpbjtcbiMgYzovUnRvb2xzL21pbmd3XzY0L2JpbjtcblxuaWYgKCFyZXF1aXJlKGRldnRvb2xzKSkge1xuICBpbnN0YWxsLnBhY2thZ2VzKFwiZGV2dG9vbHNcIilcbiAgbGlicmFyeShkZXZ0b29scylcbn1cbmxpYnJhcnkoZGV2dG9vbHMpXG5pbnN0YWxsX2dpdGh1YihcInN0YW4tZGV2L3JzdGFuYXJtXCIsIGFyZ3MgPSBcIi0tcHJlY2xlYW5cIilcblxuc2V0d2QoJ0M6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnknKVxuXG5pbnN0YWxsLnBhY2thZ2VzKFwic3Rhbi1kZXYvcnN0YW5hcm1cIiwgZGVwZW5kZW5jaWVzPVRSVUUsIElOU1RBTExfb3B0cyA9IGMoJy0tbm8tbG9jaycpKVxuXG4jIG90aGVyIHBhY2thZ2VzXG5pbnN0YWxsLnBhY2thZ2VzKGMoXCJ0aWR5bW9kZWxzXCIsIFwiQUVSXCIsIFwibWlucGFjay5sbVwiLCBcImtuaXRyXCIsIFwia2FibGVFeHRyYVwiLCBcIm1hdGxhYlwiKSlcblxuIyBJbnN0YWxsIG15IHBhY2thZ2VcbmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YihcImZhbndhbmdlY29uL1I0RWNvblwiKVxuYGBgIn0= -->
-<pre class="r"><code>install.packages(&quot;installr&quot;)
-library(&quot;installr&quot;)
-# Note that this will generate several pop-up windows
-install.Rtools()
-# choose to only install 64 bit toolchain
-# this installs g++ which is needed for rstanarm
-# Add these below to windows path
-# c:/Rtools/bin;
-# c:/Rtools/mingw_64/bin;
-
-if (!require(devtools)) {
-  install.packages(&quot;devtools&quot;)
-  library(devtools)
-}
-library(devtools)
-install_github(&quot;stan-dev/rstanarm&quot;, args = &quot;--preclean&quot;)
-
-setwd(&#39;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&#39;)
-
-install.packages(&quot;stan-dev/rstanarm&quot;, dependencies=TRUE, INSTALL_opts = c(&#39;--no-lock&#39;))
-
-# other packages
-install.packages(c(&quot;tidymodels&quot;, &quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;matlab&quot;))
-
-# Install my package
-devtools::install_github(&quot;fanwangecon/R4Econ&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBJbml0aWFsaXplIFJlcG9zaXRvcmllc1xuY2Qgfi9mYW53YW5nZWNvbi5naXRodWIuaW9cbmdpdCBpbml0XG5naXQgcmVtb3RlIGFkZCBnaXRodWIgZ2l0QGdpdGh1Yi5jb206ZmFud2FuZ2Vjb24vZmFud2FuZ2Vjb24uZ2l0aHViLmlvLmdpdFxuY2Qgfi9QeUZhblxuZ2l0IGluaXRcbmdpdCByZW1vdGUgYWRkIGdpdGh1YiBnaXRAZ2l0aHViLmNvbTpmYW53YW5nZWNvbi9QeUZhblxuY2Qgfi9UZXg0RWNvblxuZ2l0IGluaXRcbmdpdCByZW1vdGUgYWRkIGdpdGh1YiBnaXRAZ2l0aHViLmNvbTpmYW53YW5nZWNvbi9UZXg0RWNvblxuY2Qgfi9SNEVjb25cbmdpdCBpbml0XG5naXQgcmVtb3RlIGFkZCBnaXRodWIgZ2l0QGdpdGh1Yi5jb206ZmFud2FuZ2Vjb24vUjRFY29uXG5jZCB+L000RWNvblxuZ2l0IGluaXRcbmdpdCByZW1vdGUgYWRkIGdpdGh1YiBnaXRAZ2l0aHViLmNvbTpmYW53YW5nZWNvbi9NNEVjb25cbmNkIH4vUHk0RWNvblxuZ2l0IGluaXRcbmdpdCByZW1vdGUgYWRkIGdpdGh1YiBnaXRAZ2l0aHViLmNvbTpmYW53YW5nZWNvbi9QeTRFY29uXG5jZCB+L1RlYWNoaW5nXG5naXQgaW5pdFxuZ2l0IHJlbW90ZSBhZGQgZ2l0aHViIGdpdEBnaXRodWIuY29tOmZhbndhbmdlY29uL1RlYWNoaW5nXG5gYGAifQ== -->
+<pre class="bash"><code># Initialize Repositories
+cd ~/fanwangecon.github.io
+git init
+git remote add github git@github.com:fanwangecon/fanwangecon.github.io.git
+cd ~/PyFan
+git init
+git remote add github git@github.com:fanwangecon/PyFan
+cd ~/Tex4Econ
+git init
+git remote add github git@github.com:fanwangecon/Tex4Econ
+cd ~/R4Econ
+git init
+git remote add github git@github.com:fanwangecon/R4Econ
+cd ~/M4Econ
+git init
+git remote add github git@github.com:fanwangecon/M4Econ
+cd ~/Py4Econ
+git init
+git remote add github git@github.com:fanwangecon/Py4Econ
+cd ~/Teaching
+git init
+git remote add github git@github.com:fanwangecon/Teaching</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<div id="test-files" class="section level3">
-<h3><span class="header-section-number">2.6.1</span> Test Files</h3>
-<p>Test the following file to see if we can execute a R file. Do it inside <em>r_env</em> and inside a <em>r</em> session.</p>
+</div>
+<div id="sync-repo-in-ssh-secure-session" class="section level2">
+<h2><span class="header-section-number">3.3</span> Sync Repo in SSH Secure Session</h2>
+<p>Pull latested from multiple repositories. Just Paste the following lines.</p>
+<ol style="list-style-type: decimal">
+<li>start ssh-agent secure session</li>
+<li>pull from multiple Repositories upon start of working session.</li>
+<li>commit changes as work on one computer</li>
+<li>upon leaving a computer with commited changes, push all</li>
+</ol>
+<p>Start and end ssh session:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBBIHNpbXBsZSBmaWxlIHdpdGggc3VtbWFyeSBzdGF0aXN0aWNzIHVzaW5nIHRpZHl2ZXJzZVxuc291cmNlKCdDOi9Vc2Vycy9mYW4vUjRFY29uL3N1bW1hcml6ZS9kaXN0L2ZzdF9oaXN0X29uZXZhci5SJylcbiMgQW5vdGhlciBzaW1wbGUgZmlsZSB3aXRoIHN1bW1hcnkgc3RhdGlzdGljcyB1c2luZyB0aWR5dmVyc2VcbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9zdXBwb3J0L3RpYmJsZS9mc190aWJfYmFzaWNzLlInKVxuIyBBIGZpbGUgaW52b2x2aW5nIGVzdGltYXRpb25cbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUicpXG5cbiMgQzpcXFVzZXJzXFxmYW5cXFI0RWNvblxcc3VtbWFyaXplXFxkaXN0XFxmc3RfaGlzdF9vbmV2YXIuUm1kXG4jIEM6XFxVc2Vyc1xcZmFuXFxSNEVjb25cXHN1cHBvcnRcXHRpYmJsZVxcZnNfdGliX2Jhc2ljcy5SbWRcbiMgQzpcXFVzZXJzXFxmYW5cXFI0RWNvblxcb3B0aW1pemF0aW9uXFxjZXNsb2dsaW5cXGZzdF9jZXNfcGxhbl9saW5sb2cuUm1kXG5gYGAifQ== -->
-<pre class="r"><code># A simple file with summary statistics using tidyverse
-source(&#39;C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.R&#39;)
-# Another simple file with summary statistics using tidyverse
-source(&#39;C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R&#39;)
-# A file involving estimation
-source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBUbyBhdm9pZCBoYXZpbmcgdG8gZW50ZXIgcGFzc3dvcmQgZWFjaCB0aW1lLCBzdGFydCBiYWNrZ3JvdW5kIGF1dGhlbnRpY2F0aW9uIGFnZW50LlxuZXZhbCBcIiQoc3NoLWFnZW50KVwiXG5zc2gtYWRkIH4vLnNzaC9pZF9yc2FcblxuIyB0byBzdG9wIHRoZSBzc2ggc2Vzc2lvblxua2lsbCAkU1NIX0FHRU5UX1BJRFxuYGBgIn0= -->
+<pre class="bash"><code># To avoid having to enter password each time, start background authentication agent.
+eval &quot;$(ssh-agent)&quot;
+ssh-add ~/.ssh/id_rsa
 
-# C:\Users\fan\R4Econ\summarize\dist\fst_hist_onevar.Rmd
-# C:\Users\fan\R4Econ\support\tibble\fs_tib_basics.Rmd
-# C:\Users\fan\R4Econ\optimization\cesloglin\fst_ces_plan_linlog.Rmd</code></pre>
+# to stop the ssh session
+kill $SSH_AGENT_PID</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-</div>
-</div>
-</div>
-<div id="other-programs-to-install" class="section level1">
-<h1><span class="header-section-number">3</span> Other Programs to Install</h1>
-<div id="development-programs" class="section level2">
-<h2><span class="header-section-number">3.1</span> Development Programs</h2>
-<ul>
-<li><a href="https://www.jetbrains.com/pycharm/">pycharm</a></li>
-</ul>
-</div>
-<div id="key-programs" class="section level2">
-<h2><span class="header-section-number">3.2</span> Key Programs</h2>
-<ul>
-<li>Adobe Acrobat
-<ul>
-<li>go to adobe website, log in using <a href="mailto:fwang26@uh.edu" class="email">fwang26@uh.edu</a></li>
-<li>go to my account, choose view and download my apps, choose acrobat &amp; PDF, download Acrobat DC</li>
-<li>UH account can only be activated on two accounts at once, so need to kick other computers out temporarily potentially</li>
-</ul></li>
-</ul>
-</div>
-<div id="utilities" class="section level2">
-<h2><span class="header-section-number">3.3</span> Utilities</h2>
-<ul>
-<li>7-zip</li>
-</ul>
+<p>Pull from repos:</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBJbml0aWFsaXplIFJlcG9zaXRvcmllcywgZG8gdGhlc2Ugb25lIGJ5IG9uZSBmaXJzdFxuY2Qgfi9mYW53YW5nZWNvbi5naXRodWIuaW9cbmdpdCBwdWxsIGdpdGh1YiBtYXN0ZXJcbmNkIH4vUHlGYW5cbmdpdCBwdWxsIGdpdGh1YiBtYXN0ZXJcbmNkIH4vVGV4NEVjb25cbmdpdCBwdWxsIGdpdGh1YiBtYXN0ZXJcbmNkIH4vUjRFY29uXG5naXQgcHVsbCBnaXRodWIgbWFzdGVyXG5jZCB+L000RWNvblxuZ2l0IHB1bGwgZ2l0aHViIG1hc3RlclxuY2Qgfi9QeTRFY29uXG5naXQgcHVsbCBnaXRodWIgbWFzdGVyXG5jZCB+L1RlYWNoaW5nXG5naXQgcHVsbCBnaXRodWIgbWFzdGVyXG5gYGAifQ== -->
+<pre class="bash"><code># Initialize Repositories, do these one by one first
+cd ~/fanwangecon.github.io
+git pull github master
+cd ~/PyFan
+git pull github master
+cd ~/Tex4Econ
+git pull github master
+cd ~/R4Econ
+git pull github master
+cd ~/M4Econ
+git pull github master
+cd ~/Py4Econ
+git pull github master
+cd ~/Teaching
+git pull github master</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Push from repos committed changes</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBJbml0aWFsaXplIFJlcG9zaXRvcmllcywgZG8gdGhlc2Ugb25lIGJ5IG9uZSBmaXJzdFxuY2Qgfi9mYW53YW5nZWNvbi5naXRodWIuaW9cbmdpdCBwdXNoIC11IGdpdGh1YiBtYXN0ZXJcbmNkIH4vUHlGYW5cbmdpdCBwdXNoIC11IGdpdGh1YiBtYXN0ZXJcbmNkIH4vVGV4NEVjb25cbmdpdCBwdXNoIC11IGdpdGh1YiBtYXN0ZXJcbmNkIH4vUjRFY29uXG5naXQgcHVzaCAtdSBnaXRodWIgbWFzdGVyXG5jZCB+L000RWNvblxuZ2l0IHB1c2ggLXUgZ2l0aHViIG1hc3RlclxuY2Qgfi9QeTRFY29uXG5naXQgcHVzaCAtdSBnaXRodWIgbWFzdGVyXG5jZCB+L1RlYWNoaW5nXG5naXQgcHVzaCAtdSBnaXRodWIgbWFzdGVyXG5gYGAifQ== -->
+<pre class="bash"><code># Initialize Repositories, do these one by one first
+cd ~/fanwangecon.github.io
+git push -u github master
+cd ~/PyFan
+git push -u github master
+cd ~/Tex4Econ
+git push -u github master
+cd ~/R4Econ
+git push -u github master
+cd ~/M4Econ
+git push -u github master
+cd ~/Py4Econ
+git push -u github master
+cd ~/Teaching
+git push -u github master</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIk5ldyBXaW5kb3dzIENvbXB1dGVyIERhdGEtU2NpZW5jZSBTZXQtdXA6IFB5dGhvbiAoYW5hY29uZGEsIHB5Y2hhcm0pLCBSIChyLXN0dWRpbykgYW5kIG90aGVyIFByb2dyYW1zIEluc3RhbGxhdGlvbnMiDQpvdXRwdXQ6DQogIHBkZl9kb2N1bWVudDoNCiAgICBkZl9wcmludDogcGFnZWQNCiAgICBudW1iZXJfc2VjdGlvbnM6IHRydWUNCiAgaHRtbF9ub3RlYm9vazoNCiAgICBudW1iZXJfc2VjdGlvbnM6IHRydWUNCiAgd29yZF9kb2N1bWVudDoNCiAgICBudW1iZXJfc2VjdGlvbnM6IHRydWUNCiAgaHRtbF9kb2N1bWVudDoNCiAgICBudW1iZXJfc2VjdGlvbnM6IHRydWUNCnVybGNvbG9yOiBibHVlDQphbHdheXNfYWxsb3dfaHRtbDogeWVzDQotLS0NCg0KR28gYmFjayB0byBbZmFuXShodHRwOi8vZmFud2FuZ2Vjb24uZ2l0aHViLmlvLykncyBbVGV4NEVjb24gYW5kIE1pc2NlbGxhbmVvdXMgUmVwb3NpdG9yeV0oaHR0cDovL2ZhbndhbmdlY29uLmdpdGh1Yi5pby9UZXg0RWNvbi8pLg0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwgZXZhbCA9IEZBTFNFKQ0KYGBgDQoNCiMgQ29uZGENCg0KVXNlIGNvbmRhIGFjcm9zcyBwbGF0Zm9ybXMsIHNvIHRoYXQgbG9jYWxseSBvbiB3aW5kb3dzIGFuZCB1YnVudHUgYW5kIHJlbW90ZWx5IG9uIGF3cywgY2FuIGhhdmUgdGhlIHNhbWUgc29mdHdhcmUgc2V0dXAgZW52aXJvbm1lbnQuDQoNClNlYXJjaCBmb3IgQW5hY29uZGEgUHJvbXB0LCByaWdodCBjbGljaywgY2hvb3NlIHJ1biBhcyBhZG1pbmlzdHJhdG9yLg0KDQpDaGVjayBzb2Z0d2FyZSB2ZXJzaW9ucy4NCg0KDQpgYGB7YmFzaH0NCmNvbmRhIGxpc3QgYW5hY29uZGENCnB5dGhvbiAtVg0KYGBgDQoNCiMjIEZpcnN0IFRpbWUgQ29uZGEgSW5zdGFsbA0KDQpEb3dubG9hZCBhbmQgaW5zdGFsbCBmb3IgYWxsIHVzZXJzLiBBZnRlcndhcmRzLCBBbmFjb25kYSBkb2VzIG5vdCBhdXRvbWF0aWNhbGx5IGdldCBhZGRlZCB0byBXaW5kb3dzIFBhdGguIE5lZWQgdG8gdXNlIEFuYWNvbmRhIFByb21wdCB0byBhY2Nlc3MgcHJvZ3JhbXMuIFRvIGFjY2VzcyBBbmFjb25kYSBwYWNrYWdlcyBmcm9tIHdpbmRvd3MgcHJvbXB0LCBmcm9tIGdpdCBiYXNoLCBmcm9tIFIsIGV0YywgbmVlZCB0byBBZGQgQW5hY29uZGEgdG8gV2luZG93cyBQYXRoDQoNClNlZSBBbmFjb25kYSBJbnN0YWxsYXRpb24gRGlyZWN0b3J5LCBpbiBhbmFjb25kYSBwcm9tcHQ6DQoNCmBgYHtiYXNofQ0Kd2hlcmUgYW5hY29uZGENCiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvYW5hY29uZGEuZXhlDQp3aGVyZSBweXRob24NCiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL3B5dGhvbi5leGUNCndoZXJlIGp1cHl0ZXINCiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvanVweXRlci5leGUNCndoZXJlIGp1cHl0ZXIta2VybmVsc3BlYw0KIyBpZiBSIGluc3RhbGxlZCBhbHJlYWR5DQp3aGVyZSByDQoNCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMgQWRkIHRoZXNlIHRvIFdpbmRvd3MgUEFUSDoNCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMNCiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzDQpgYGANCg0KVG8gQWRkIEFuYWNvbmRhIHRvIFBhdGgsIEluIFdpbmRvd3MNCjEuIHNlYXJjaCBmb3I6IEVudmlyb25tZW50IFZhcmlhYmxlcw0KMi4gRWRpdCBFbnZpcm9ubWVudCBWYXJpYWJsZXMNCjMuIEFkZCBuZXcgdG8gUGF0aCAobG93ZXIgaGFsZik6DQogICAgLSBDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvU2NyaXB0cy8NCiAgICAtIEM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy8NCjQuIE5vdyBvcGVuIHVwIHJlZ3VsYXIgd2luZG93cyBjb21tYW5kIFByb21wdCwgVHlwZSBpbjoNCiAgICAtIGNvbmRhIC0tdmVyc2lvbg0KICAgIC0gYWxzbyBDbG9zZSBhbmQgT3BlbiB1cCBHaXQgQmFzaDogY29uZGEgLS12ZXJzaW9uDQoNCiMjIENvbmRhIFVwZGF0ZQ0KDQpPcGVuIHVwIEFuYWNvbmRhIE5hdmlnYXRvciwgaXQgd2lsbCB1cGRhdGUgbmF2aWdhdG9yIGF1dG9tYXRpY2FsbHkuIElmIHRoZXJlIGFyZSBlcnJvcnMsIG1pZ2h0IGhhdmUgdG8gY2xlYW4gZmlyc3QuDQoNCmBgYHtiYXNofQ0KIyAjIGlmIHRoZXJlIGFyZSBidWdzDQojIGNvbmRhIGNsZWFuIC0tcGFja2FnZXMNCiMgdXNlIGNvbmRhLWZvcmdlIGFzIG1haW4gY2hhbm5lbCwgbW9yZSB1cGRhdGVkIHBhY2thZ2VzDQpjb25kYSBjb25maWcgLS1hZGQgY2hhbm5lbHMgY29uZGEtZm9yZ2UNCiMgbm9ybWFsIHVwZGF0ZQ0KY29uZGEgdXBkYXRlIC0tYWxsDQpgYGANCg0KIyMgQ29uZGEgVGVzdCBQeXRob24NCg0KYGBge3J9DQojIHdpbmRvd3MNCnB5dGhvbiAiQzovVXNlcnMvZmFuL1B5RmFuL1Byb2plY3RTdXBwb3J0L1Rlc3RpbmcvTnVtcHkvRnVuY3Rpb25zLnB5Ig0KcHl0aG9uICJDOi9Vc2Vycy9mYW4vUHlGYW4vUHJvamVjdFN1cHBvcnQvZ3JhcGgvc3VicGxvdC5weSINCiMgbGludXgNCnB5dGhvbiB+L1B5RmFuL1Byb2plY3RTdXBwb3J0L1Rlc3RpbmcvTnVtcHkvRnVuY3Rpb25zLnB5DQpweXRob24gfi9QeUZhbi9Qcm9qZWN0U3VwcG9ydC9ncmFwaC9zdWJwbG90LnB5DQpgYGANCg0KIyMgQWRkaXRpb25hbCBQYWNrYWdlcw0KDQpgYGB7cn0NCmNvbmRhIGluc3RhbGwgc3RhdHNtb2RlbHMgZGF0YXNoYXBlIHNlYWJvcm4NCiMgY29uZGEgaW5zdGFsbCBzdGF0c21vZGVscw0KIyBjb25kYSBpbnN0YWxsIGRhdGFzaGFwZQ0KIyBjb25kYSBpbnN0YWxsIHNlYWJvcm4NCg0KY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSBpbnRlcnBvbGF0aW9uIGF3c2NsaQ0KIyBjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGludGVycG9sYXRpb24NCiMgY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSBhd3NjbGkNCg0KY29uZGEgaW5zdGFsbCAtYyBhbmFjb25kYSBib3RvMw0KDQpjb25kYSBpbnN0YWxsIC1jIHIgci1pcmtlcm5lbA0KYGBgDQoNCiMgUiBJbnN0YWxsYXRpb24NCg0KVHJ5IHRvIGluc3RhbGwgUiBmcm9tIHdpdGhpbiBDb25kYS4gVGhlIHByb2NlZHVyZSBoZXJlIGlzIHRoZSBzYW1lIGZvciB3aW5kb3dzIGFzIHdlbGwgYXMgbGludXggbWFjaGluZXMuDQoNCiMjIEZ1bGx5IHVuaW5zdGFsbCByDQoNCm9wZW4gdXAgUlN0dWRpbywgYW5kIHNlZSB3aGVyZSBwYXRocyBhcmUuDQphbHNvIG9wZW4gdXAgUiBmcm9tIGNvbW1hbmQgcHJvbXB0LCBzZWUgd2hlcmUgcGF0aHMgYXJlLg0KDQpgYGB7Un0NCi5saWJQYXRoKCkNCmBgYA0KDQpPcGVuIHVwIGluc3RhbGwgYW5kIHVuaW5zdGFsbCBwcm9ncmFtcywgZmluZCBSIGFuZCBSc3R1ZGlvLCBhbmQgdW5pbnN0YWxsIHRoZW0uIFRoZW4gZGVsZXRlIGFsbCBmaWxlcyBmb3VuZCBwYXRoIHBhdGhzIHNob3duIGJ5ICoubGliUGF0aCgpKiwgbG9va2luZyBhdCB0aGVzZToNCiAgICAtICpDOi9Vc2Vycy9mYW4vRG9jdW1lbnRzL1Ivd2luLWxpYnJhcnkvMy42Kg0KICAgIC0gKkM6L1Byb2dyYW0gRmlsZXMvUi9SLTMuNi4xL2xpYnJhcnkqDQoNCiMjIEluc3RhbGwgUiAob3V0c2lkZSBvZiBDb25kYSkNCg0KMS4gW2Rvd25sb2FkIFJdKGh0dHBzOi8vY2xvdWQuci1wcm9qZWN0Lm9yZy8pDQoyLiBbZG93bmxvYWQgUi1zdHVkaW9dKGh0dHBzOi8vcnN0dWRpby5jb20vcHJvZHVjdHMvcnN0dWRpby9kb3dubG9hZC8pDQozLiBPcGVuIFItc3R1ZGlvIGFuZCBhdXRvLWRldGVjdCBSDQo0LiBJbnN0YWxsIHBhY2thZ2VzDQoNCm5vdGUgdGhhdCBpbnN0YWxsYXRpb24gd2lsbCBub3Qgd29yayBpZiB0aGUgbWFjaGluZSdzIHZlcnNpb24gb2YgUiBpcyBub3QgdXAgdG8gZGF0ZSwgdGhpcyBjb3VsZCBiZSB0aGUgY2FzZSB3aXRoIGRlZmF1bHQgUiB2ZXJzaW9ucyBmb3Igc29tZSBsaW51eCBpbnN0YWxsYXRpb25zLg0KDQpgYGB7cn0NCiMgSW5zdGFsbCBSLXRvb2xzDQppbnN0YWxsLnBhY2thZ2VzKCJpbnN0YWxsciIpDQpsaWJyYXJ5KCJpbnN0YWxsciIpDQppbnN0YWxsLlJ0b29scygpDQojIGM6XFJ0b29sc1xiaW47DQojIGM6XFJ0b29sc1xtaW5nd18zMlxiaW47DQojIGM6XFJ0b29sc1xtaW5nd182NFxiaW47DQoNCiMgbWFpbiBwYWNrYWdldnBzDQppbnN0YWxsLnBhY2thZ2VzKGMoInRpZHlyIiwgInRpZHl2ZXJzZSIsICJ0aWR5bW9kZWxzIikpDQojIGRldmVsb3BtZW50IHBhY2thZ2VzDQppbnN0YWxsLnBhY2thZ2VzKGMoImRldnRvb2xzIiwgImlya2VybmVsIiwgInBrZ2Rvd24iLCAicm94eWdlbjIiKSkNCiMgb3RoZXIgcGFja2FnZXMNCmluc3RhbGwucGFja2FnZXMoYygiQUVSIiwgIm1pbnBhY2subG0iLCAia25pdHIiLCAia2FibGVFeHRyYSIsICJtYXRsYWIiKSkNCg0KIyBJbnN0YWxsIG15IHBhY2thZ2UNCmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YigiZmFud2FuZ2Vjb24vUjRFY29uIikNCmBgYA0KDQojIyBTZXQgdXAgUi1FbnZpcm9ubWVudCBpbiBDb25kYQ0KDQpDb25kYSBlbnZpcm9ubWVudHMgYXJlIGxhbmd1YWdlIGFnbm9zdGljLiBwaXAgaXMgYSBwYWNrYWdlIG1hbmFnZXIgZm9yIFB5dGhvbi4gdmVudiBpcyBhbiBlbnZpcm9ubWVudCBtYW5hZ2VyIGZvciBQeXRob24uIGNvbmRhIGlzIGJvdGggYSBwYWNrYWdlIGFuZCBlbnZpcm9ubWVudCBtYW5hZ2VyIGFuZCBpcyBsYW5ndWFnZSBhZ25vc3RpYy4gSW5zaWRlIEFuYWNvbmRhIFByb21wdDoNCg0KS2V5IHBhY2thZ2VzIGFyZSBnZW5lcmFsbHkgYXZhaWxhYmxlIGluIGNvbmRhJ3MgZGVmYXVsdCBjaGFubmVsIChvZmZpY2lhbCBkaXN0cmlidXRpb24pIGFuZCBhbHNvIHRoZSBtb3JlIGZyZXF1ZW50bHkgdXBkYXRlZCBjb25kYS1mb3JnZSBjaGFubmVsLiBQcmlvcml0aXplIGNvbmRhLWZvcmdlIHRvIGdldCB0aGUgbGF0ZXN0IHBhY2thZ2VzLiBhZnRlciBhZGRpbmcgKmNvbmRhLWZvcmdlKiB0byBjaGFubmVscywgdGhhdCB3aWxsIGJlIHByaW9yaXRpemVkLCBzbyB3aGVuIGNyZWF0aW5nIGEgbmV3IGVudmlyb25tZW50LCBjb25kYSB3aWxsIGluc3RhbGwgZmlyc3QgZnJvbSBjb25kYS1mb3JnZSBpZiBwYWNrYWdlIGV4aXN0cyB0aGVyZS4gVHJ5IHRoZSAqcl9lbnYqIGdlbmVyYXRpb24gbGluZSB3aXRoIGFuZCB3aXRob3V0IGZpcnN0IGFkZGluZyAqY29uZGEtZm9yZ2UqIHRvIGNoYW5uZWwsIGFuZCBzZWUgdGhhdCB0aGUgcGFja2FnZXMgaW5zdGFsbGVkIHdpbGwgaGF2ZSBkaWZmZXJlbnQgdmVyc2lvbnMsIHJlZmxlY3RpbmcgdmVyc2lvbnMgaW4gdGhlIGRlZmF1bHQgY2hhbm5lbCBhbmQgaW4gdGhlICpjb25kYS1mb3JnZSogY2hhbm5lbHMuDQoNCmBgYHtiYXNofQ0KIyBTZXQgdXAgQ2hhbm5lbA0KY29uZGEgY29uZmlnIC0tYWRkIGNoYW5uZWxzIGNvbmRhLWZvcmdlDQojIGluc3RhbGwga2V5IHIgcGFja2FnZXMgd2l0aGluIGEgci1lbnZpcm9ubWVudA0KY29uZGEgZW52IHJlbW92ZSAtbiByX2Vudg0KY29uZGEgY3JlYXRlIC1uIHJfZW52IHItZXNzZW50aWFscyByLWJhc2Ugci10aWR5ciByLXRpZHl2ZXJzZSByLWRldnRvb2xzIHItaXJrZXJuZWwgci1wa2dkb3duIHItcm94eWdlbjINCiMgc2VlIGFsbCBpbnN0YWxsZWQgZW52aXJvbm1lbnRzDQpjb25kYSBlbnYgbGlzdA0KIyBhY3RpdmF0ZSBhbiBlbnZpcm9ubWVudCB0byB1c2UgaXQsIGlmIGluIGJhc2UsIHIgZG9lcyBub3QgZXhpc3QsIGlzb2xhdGVkIGluIHJfZW52DQpjb25kYSBhY3RpdmF0ZSByX2Vudg0KIyBzZWUgcGFja2FnZXMgaW4gZW52aXJvbm1lbnQNCmNvbmRhIGxpc3QNCiMgdG8gcXVpdA0KY29uZGEgZGVhY3RpdmF0ZQ0KYGBgDQoNCi0gKipMb2NhdGlvbioqOiBJbnN0YWxsZWQgZW52aXJvbm1lbnRzIGFyZSBzaG93biBhcHBlYXIgaW4gdGhlICplbnZzKiBmb2xkZXIgb2YgKkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzLyouIENhbiBiZSBlYXNpbHkgZGVsZXRlZCB3aXRob3V0IGRpc3J1cHRpbmcgdGhlIG1haW4gYmFzZSBpbnN0YWxsYXRpb24gZm9yIGNvbmRhLiBUaGlzIGlzIHZlcnkgaW1wb3J0YW50LiBEdXJpbmcgaW5zdGFsbGF0aW9uLCBjb3VsZCBlYXNpbHkgcnVuIGludG8gcHJvYmxlbXMsIGFuZCBuZWVkIHRvIHJlLWluc3RhbGwuIE11Y2ggYmV0dGVyIHRvIG9ubHkgcmUtaW5zdGFsbCBhIGZvbGRlci4gTm90ZSB0aGF0IHdoZW4gUiBpcyBpbnN0YWxsZWQgaW4gKmVudnMqLCBpdCB3aWxsIG5vdCBzaG93IHVwIHVuZGVyIGFkZCBvciByZW1vdmUgcHJvZ3JhbXMgZm9yIHVuaW5zdGFsbGF0aW9uIGZyb20gdGhlcmUsIGhhcyB0byBiZSB1bmluc3RhbGxlZCwgZGVsZXRlZCBkaXJlY3RseSBoZXJlLg0KLSAqKlVzZSBvbmx5IGluIEVudioqOiBOb3RlIHRoYXQgaWYgd2UgaW5zdGFsbGVkIHIgaW5zaWRlIHJfZW52LCBpZiB3ZSB0eXBlICpyKiB1bmRlciB0aGUgYmFzZSBlbnZpcm9ubWVudCwgd2UgY2FuIG5vdCBlbnRlciByLiBXZSBjYW4gb25seSBlbnRlciByIHdpdGhpbiByX2Vudi4gV2l0aCBQQVRIIHByb3Blcmx5IHNldC11cCwgdGhpcyBoYXBwZW5zIHVuZGVyIENvbmRhIFByb21wdCwgV2luZG93cyBQcm9tcHQsIGV0Yy4NCi0gKipNdWx0aXBsZSBQeXRob25zKio6IFdpdGggdGhlIGFib3ZlIGluc3RhbGxhdGlvbiBmb3IgUiwgb25lIGJlbmVmaXQgaXMgdGhhdCBpZiBSIHJlcXVpcmVzIGEgZGlmZmVyZW50IHZlcnNpb24gb2YgUHl0aG9uIHRoYW4gd2hhdCB0aGUgYmFzZSBlbnZpcm9ubWVudCB1c2VzLCB0aGUgcl9lbnYgY291bGQgaGF2ZSBhIGRpZmZlcmVudCBweXRob24gdmVyc2lvbi4gU28gdHlwZSAqcHl0aG9uKiBpbiB0aGUgYmFzZSBlbnZpcm9ubWVudCBhcyB3ZWxsIGFzIGluc2lkZSB0aGUgKnJfZW52Ki4gVGhpcyBhbHNvIG1lYW5zIHBvdGVudGlhbGx5IHRoZXJlIGNvdWxkIGJlIGR1cGxpY2F0ZWQgaW5zdGFsbGF0aW9ucyBJIHRoaW5rLiBMb29rIGF0IHRoZSBweXRob24gdmVyc2lvbnMgdW5kZXIgKmNvbmRhIGxpc3QqIGluIHRoZSBiYXNlIGFuZCBpbiB0aGUgci1lbnZpcm9ubWVudC4NCi0gKipGaWxlIFNpemUqKjogTm90ZSB0aGF0IHRoaXMgY3JlYXRlcyBhIGxhcmdlIGluc3RhbGxhdGlvbiBmb2xkZXIsICpDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvZW52cy9yX2Vudi8qLCB3aXRob3V0IGFkZGl0aW9uYWwgcGFja2FnZXMsIGlzIDEuMyBHQiBpbiBzaXplDQoNCiMjIEluc3RhbGwgQWRkaXRpb25hbCBQYWNrYWdlcyBpbnNpZGUgdGhlIFItZW52aXJvbm1lbnQNCg0KVGhlc2UgYXJlIHBhY2thZ2VzIHRoYXQgSSB1c2UsIHRoZXNlIHNob3VsZCBiZSBpbnN0YWxsZWQgaW5zaWRlIHRoZSBlbnZpcm9ubWVudC4gT3IgdGhleSBjb3VsZCBiZSBpbnN0YWxsZWQgbGF0ZXIgZnJvbSBpbnNpZGUgci1zdHVkaW8uIEluc3RhbGxpbmcgaW5zaWRlIHItc3R1ZGlvIGlzIGEgbG90IGJldHRlci4NCg0KVGhpcyBkaWQgbm90IHdvcmsgaW4gd2luZG93cywgKnRpZHltb2RlbHMqIGZhaWxlZCB0byBpbnN0YWxsLiBQZXJoYXBzIGJlY2F1c2Ugb2YgZGlyZWN0b3J5IGlzc3Vlcy4gKnRpZHltb2RlbHMqIHJlcXVpcmVkICpyc3RhbmFybSosIGFuZCAqcnN0YW5hcm0qIGZhaWxlZCB0byBpbnN0YWxsLg0KDQpgYGB7YmFzaH0NCiMjIyBPbmUgbGluZQ0KY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSByLWFlciByLW1pbnBhY2subG0gci1rbml0ciByLWthYmxlRXh0cmEgci1tYXRsYWINCiMgY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSByLXJzdGFuYXJtDQoNCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KIyMjIEVzdGltYXRpb24NCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KIyBFc3RpbWF0aW9uIFRvb2xzDQojIHRpZHltb2RlbHMgZG9lcyBub3Qgd29yayBmcm9uIGNvbmRhIGluc3RhbGwNCiMgTGluZWFyIFJlZ3Jlc3Npb24gUGFja2FnZQ0KIyBodHRwczovL2FuYWNvbmRhLm9yZy9jb25kYS1mb3JnZS9yLWFlcg0KIyBOb25saW5lYXIgUmVncmVzc2lvbiBQYWNrYWdlDQojIGh0dHBzOi8vYW5hY29uZGEub3JnL2NvbmRhLWZvcmdlL3ItbWlucGFjay5sbQ0KY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSByLWFlciByLW1pbnBhY2subG0NCiMgZW50ZXIgciBhbmQgdXNlIGRldnRvb2xzDQojIGluc3RhbGwucGFja2FnZXMoInRpZHltb2RlbHMiKQ0KDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMjIyBWaXN1YWxpYXRpb24NCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSByLWtuaXRyIHIta2FibGVFeHRyYQ0KDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMjIyBVdGlsaXRpZXMNCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KIyBBbGxvd2luZyBmb3IgSW52b2tpbmcgTWF0bGFiIEZpbGVzIGZyb20gSW5zaWRlIFINCmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1tYXRsYWINCmBgYA0KDQpJbnN0YWxsIGFkZGl0aW9uYWwgcGFja2FnZXMgZnJvbSBpbnNpZGUgUi4gVGhlIGRldnRvb2xzIGluc3RhbGwgd2lsbCBpbnN0YWxsIHBhY2thZ2VzIGluc2lkZSAqZW52cy9yX2Vudi9MaWIvUiouDQoNCmBgYHtyfQ0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjDQojIyMgT3duIFBhY2thZ2UNCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKCJmYW53YW5nZWNvbi9SNEVjb24iKQ0KIyBpbnN0YWxsX2RldigiY2xpIikNCmBgYA0KDQojIyBSLVN0dWRpbyBTZXQtdXAgRG93bmxvYWQgZnJvbSBSc3R1ZGlvDQoNCjEuIERvd25sb2FkIFItc3R1ZGlvLCBhbmQgaW5zdGFsbCwgYXMgbm9ybWFsIChub3QgZnJvbSBjb25kYSwgZGlyZWN0bHkgZnJvbSByc3R1ZGlvIHdlYnNpdGUgbGF0ZXN0IHdpbmRvd3MgdmVyc2lvbikNCjIuIE9wZW4gdXAgYW5hY29uZGEgcHJvbXB0LCBlbnRlciAqcl9lbnYqIGVudmlyb25tZW50OiAqYWN0aXZhdGUgcl9lbnYqDQozLiBjZCBpbnRvIHJzdHVkaW8gZXhlIGZpbGUgZm9sZGVyOiBjZCAiQzovUHJvZ3JhbSBGaWxlcy9SU3R1ZGlvL2JpbiINCjQuIHN0YXJ0IHItc3R1ZGlvIGZyb20gaW5zaWRlICpyX2Vudio6IHJzdHVkaW8uZXhlDQo1LiBpbnNpZGUgci1zdHVkaW8sIGNoZWNrOiAqLmxpYlBhdGhzKCkqDQogICAgLSAiQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeSINCg0KYGBge2Jhc2h9DQphY3RpdmF0ZSByX2Vudg0KY2QgIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4iDQpyc3R1ZGlvLmV4ZQ0KDQpjZCAiQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeSINCiJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluL3JzdHVkaW8uZXhlIg0KYGBgDQoNCkZvciBsaW51eCwgbm90ZSB0aGF0IHJzdHVkaW8gb2ZmZXJzIFVidW50dSBhcyB3ZWxsIGFzIERlYmlhbiB2ZXJzaW9ucyB0aGF0IGNhbiBiZSBpbnN0YWxsZWQgd2l0aCB3Z2V0Og0KDQpgYGB7YmFzaH0NCjwhLS0gZm9yIHVidW50dSAtLT4NCndnZXQgImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvYmlvbmljL2FtZDY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViIg0Kc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViDQo8IS0tIGZvciBkZWJpYW4gLS0+DQp3Z2V0ICJodHRwczovL2Rvd25sb2FkMS5yc3R1ZGlvLm9yZy9kZXNrdG9wL2RlYmlhbjkveDg2XzY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViIg0Kc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViDQpjb25kYSBpbnN0YWxsIC1jIHIgcnN0dWRpbw0KY2QgIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4iDQpyc3R1ZGlvLmV4ZQ0KDQpjZCAiQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeSINCiJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluL3JzdHVkaW8uZXhlIg0KYGBgDQoNCiMjIEluc3RhbGwgUGFja2FnZXMgZnJvbSBSLVN0dWRpbw0KDQpJbnN0YWxsIGFkZGl0aW9uIGZpbGVzIGluc2lkZSBSc3R1ZGlvLiBFYXNpZXIgdG8gZGVidWcgcG90ZW50aWFsbHkuIEluc3RhbGwgcnRvb2xzIGFzIGRlc2NyaWJlZCBbaGVyZV0oaHR0cHM6Ly90aGVjb2F0bGVzc3Byb2Zlc3Nvci5jb20vcHJvZ3JhbW1pbmcvY3BwL2luc3RhbGxpbmctcnRvb2xzLWZvci1jb21waWxlZC1jb2RlLXZpYS1yY3BwLyk6IFtydG9vbHMgZG93bmxvYWRdKGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL2Jpbi93aW5kb3dzL1J0b29scy8pLiBBbHRlcm5hdGl2ZWx5Og0KDQpgYGB7cn0NCmluc3RhbGwucGFja2FnZXMoImluc3RhbGxyIikNCmxpYnJhcnkoImluc3RhbGxyIikNCiMgTm90ZSB0aGF0IHRoaXMgd2lsbCBnZW5lcmF0ZSBzZXZlcmFsIHBvcC11cCB3aW5kb3dzDQppbnN0YWxsLlJ0b29scygpDQojIGNob29zZSB0byBvbmx5IGluc3RhbGwgNjQgYml0IHRvb2xjaGFpbg0KIyB0aGlzIGluc3RhbGxzIGcrKyB3aGljaCBpcyBuZWVkZWQgZm9yIHJzdGFuYXJtDQojIEFkZCB0aGVzZSBiZWxvdyB0byB3aW5kb3dzIHBhdGgNCiMgYzovUnRvb2xzL2JpbjsNCiMgYzovUnRvb2xzL21pbmd3XzY0L2JpbjsNCg0KaWYgKCFyZXF1aXJlKGRldnRvb2xzKSkgew0KICBpbnN0YWxsLnBhY2thZ2VzKCJkZXZ0b29scyIpDQogIGxpYnJhcnkoZGV2dG9vbHMpDQp9DQpsaWJyYXJ5KGRldnRvb2xzKQ0KaW5zdGFsbF9naXRodWIoInN0YW4tZGV2L3JzdGFuYXJtIiwgYXJncyA9ICItLXByZWNsZWFuIikNCg0Kc2V0d2QoJ0M6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnknKQ0KDQppbnN0YWxsLnBhY2thZ2VzKCJzdGFuLWRldi9yc3RhbmFybSIsIGRlcGVuZGVuY2llcz1UUlVFLCBJTlNUQUxMX29wdHMgPSBjKCctLW5vLWxvY2snKSkNCg0KIyBvdGhlciBwYWNrYWdlcw0KaW5zdGFsbC5wYWNrYWdlcyhjKCJ0aWR5bW9kZWxzIiwgIkFFUiIsICJtaW5wYWNrLmxtIiwgImtuaXRyIiwgImthYmxlRXh0cmEiLCAibWF0bGFiIikpDQoNCiMgSW5zdGFsbCBteSBwYWNrYWdlDQpkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoImZhbndhbmdlY29uL1I0RWNvbiIpDQpgYGANCg0KIyMjIFRlc3QgRmlsZXMNCg0KVGVzdCB0aGUgZm9sbG93aW5nIGZpbGUgdG8gc2VlIGlmIHdlIGNhbiBleGVjdXRlIGEgUiBmaWxlLiBEbyBpdCBpbnNpZGUgKnJfZW52KiBhbmQgaW5zaWRlIGEgKnIqIHNlc3Npb24uDQoNCmBgYHtyfQ0KIyBBIHNpbXBsZSBmaWxlIHdpdGggc3VtbWFyeSBzdGF0aXN0aWNzIHVzaW5nIHRpZHl2ZXJzZQ0Kc291cmNlKCdDOi9Vc2Vycy9mYW4vUjRFY29uL3N1bW1hcml6ZS9kaXN0L2ZzdF9oaXN0X29uZXZhci5SJykNCiMgQW5vdGhlciBzaW1wbGUgZmlsZSB3aXRoIHN1bW1hcnkgc3RhdGlzdGljcyB1c2luZyB0aWR5dmVyc2UNCnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9zdXBwb3J0L3RpYmJsZS9mc190aWJfYmFzaWNzLlInKQ0KIyBBIGZpbGUgaW52b2x2aW5nIGVzdGltYXRpb24NCnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUicpDQoNCiMgQzpcVXNlcnNcZmFuXFI0RWNvblxzdW1tYXJpemVcZGlzdFxmc3RfaGlzdF9vbmV2YXIuUm1kDQojIEM6XFVzZXJzXGZhblxSNEVjb25cc3VwcG9ydFx0aWJibGVcZnNfdGliX2Jhc2ljcy5SbWQNCiMgQzpcVXNlcnNcZmFuXFI0RWNvblxvcHRpbWl6YXRpb25cY2VzbG9nbGluXGZzdF9jZXNfcGxhbl9saW5sb2cuUm1kDQpgYGANCg0KIyBPdGhlciBQcm9ncmFtcyB0byBJbnN0YWxsDQoNCiMjIERldmVsb3BtZW50IFByb2dyYW1zDQoNCi0gW3B5Y2hhcm1dKGh0dHBzOi8vd3d3LmpldGJyYWlucy5jb20vcHljaGFybS8pDQoNCiMjIEtleSBQcm9ncmFtcw0KDQotIEFkb2JlIEFjcm9iYXQNCiAgICArIGdvIHRvIGFkb2JlIHdlYnNpdGUsIGxvZyBpbiB1c2luZyBmd2FuZzI2QHVoLmVkdQ0KICAgICsgZ28gdG8gbXkgYWNjb3VudCwgY2hvb3NlIHZpZXcgYW5kIGRvd25sb2FkIG15IGFwcHMsIGNob29zZSBhY3JvYmF0ICYgUERGLCBkb3dubG9hZCBBY3JvYmF0IERDDQogICAgKyBVSCBhY2NvdW50IGNhbiBvbmx5IGJlIGFjdGl2YXRlZCBvbiB0d28gYWNjb3VudHMgYXQgb25jZSwgc28gbmVlZCB0byBraWNrIG90aGVyIGNvbXB1dGVycyBvdXQgdGVtcG9yYXJpbHkgcG90ZW50aWFsbHkNCg0KIyMgVXRpbGl0aWVzDQoNCi0gNy16aXANCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkdpdCBhbmQgR2l0aHViIEV4YW1wbGUgYW5kIFR1dG9yaWFsLCBTeW5jIHdpdGggTXVsdGlwbGUgUmVwb3NpdG9yaWVzLCBTdG9yZSBQYXNzd29yZCINCm91dHB1dDoNCiAgcGRmX2RvY3VtZW50Og0KICAgIGRmX3ByaW50OiBwYWdlZA0KICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZQ0KICBodG1sX25vdGVib29rOg0KICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZQ0KICB3b3JkX2RvY3VtZW50Og0KICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZQ0KICBodG1sX2RvY3VtZW50Og0KICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZQ0KdXJsY29sb3I6IGJsdWUNCmFsd2F5c19hbGxvd19odG1sOiB5ZXMNCi0tLQ0KDQpHbyBiYWNrIHRvIFtmYW5dKGh0dHA6Ly9mYW53YW5nZWNvbi5naXRodWIuaW8vKSdzIFtUZXg0RWNvbiBhbmQgTWlzY2VsbGFuZW91cyBSZXBvc2l0b3J5XShodHRwOi8vZmFud2FuZ2Vjb24uZ2l0aHViLmlvL1RleDRFY29uLykuDQoNCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFLCBldmFsID0gRkFMU0UpDQpgYGANCg0KIyBEb3dubG9hZCBQcm9ncmFtcw0KDQoxLiBJbnN0YWxsIFtnaXQgZm9yIHdpbmRvd3NdKGh0dHBzOi8vZ2l0LXNjbS5jb20vZG93bmxvYWQvd2luKTogYWZ0ZXIgaW5zdGFsbCwgdHJ5ICJjZCB+L1B5RmFuIg0KMi4gSW5zdGFsbCBbYXRvbV0oaHR0cHM6Ly9hdG9tLmlvLykNCjMuIE1pZ2h0IG5lZWQgdG8gaW5zdGFsbCBbcHV0dHldKGh0dHBzOi8vd3d3LnB1dHR5Lm9yZy8pIHBvc3NpYmx5DQoNCiMgZ2l0IGFuZCBHaXRodWIgU2VjdXJpdHkgU2V0LXVwDQoNCjEuIG9wZW4gdXAgZ2l0IGJhc2gNCjIuIGdlbmVyYXRlIHJzYQ0KICAgIC0gKnNzaC1rZXlnZW4gLXQgcnNhIC1DICJ3YW5nZmFuYnNnNzVAbGl2ZS5jb20iKg0KICAgIC0gd2hlbiBwcm9tcHRlZCwgZG8gbm90IGVudGVyICJmaWxlIGluIHdoaWNoIHNhdmUgdGhlIGtleSIsIHdoZW4gcHJvbXB0ZWQgZm9yIHBhc3NwaHJhc2UsIGVudGVyICJXSEFURVZFUlBBU1NXT1JESVMiDQozLiBjb3B5IGtleQ0KICAgIC0gV0lORE9XUzogKmNsaXAgPCB+Ly5zc2gvaWRfcnNhLnB1YioNCiAgICAtIExJTlVYOiAqY2F0IH4vLnNzaC9pZF9yc2EucHViKg0KNC4gbG9nIG9uIHRvIGdpdGh1YiBzc2ggc2VjdGlvbiwgZ2VuZXJhdGUgbmV3IHNzaCByc2Ega2V5DQogICAgLSBTU0ggYW5kIEdQRyBrZXlzLCBjaG9vc2UgTmV3IFNTSCBrZXksIHBhc3RlIGluIGNsaXBwZWQgdGV4dC4NCg0KYGBge2Jhc2h9DQojIGluc2lkZSBnaXQgYmFzaA0Kc3NoLWtleWdlbiAtdCByc2EgLUMgIndhbmdmYW5ic2c3NUBsaXZlLmNvbSINCiMgdGhpcyBjb3BpZXMgdGhlIHRleHQgaW4gdGhlIC5wdWIgZmlsZSBnZW5lcmF0ZWQNCmNsaXAgPCB+Ly5zc2gvaWRfcnNhLnB1Yg0KYGBgDQoNCiMgU3RhcnQgYW5kIFN5bmMgS2V5IFJlcG9zaXRvcmllcw0KDQpJbnNpZGUgZ2l0IGJhc2ggKG9wZW4gYXMgKmFkbWluaXN0cmF0b3IqKSwgU3luYyBTZXZlcmFsIEtleSBSZXBvc2l0b3JpZXMgdGhhdCBzaG91bGQgYmUgc3luY2VkIG9uIGFsbCBjb21wdXRlcnM6DQoNCjEuIGZhbndhbmdlY29uLmdpdGh1Yi5pbzogR2l0aHViIHJvb3QgcmVwbw0KMi4gUHlGYW46IFByaXZhdGUgUmVwbyB3aXRoIFB5dGhvbiBTdXBwb3J0IEZpbGVzDQozLiBbVGV4NEVjb25dKGh0dHBzOi8vZ2l0aHViLmNvbS9GYW5XYW5nRWNvbi9UZXg0RWNvbik6IExhdGV4LCBpbnN0YWxsYXRpb24sIGFuZCB2YXJpb3VzIG90aGVyIHN1cHBvcnQgZmlsZXMsIHB1YmxpYyByZXBvLg0KNC4gW1I0RWNvbl0oaHR0cHM6Ly9naXRodWIuY29tL0ZhbldhbmdFY29uL1I0RWNvbik6IFB1YmxpYyByZXBvLCBSIHBhY2thZ2UsIFIgcmVzZWFyY2ggcHJvZ3JhbXMNCjUuIFtNNEVjb25dKGh0dHBzOi8vZ2l0aHViLmNvbS9GYW5XYW5nRWNvbi9NNEVjb24pOiBQdWJsaWMgcmVwbywgTWF0bGFiIHBhY2thZ2UsIE1hdGxhYiBleGFtcGxlcyBhbmQgcmVzZWFyY2ggZmlsZXMNCjYuIFtQeTRFY29uXShodHRwczovL2dpdGh1Yi5jb20vRmFuV2FuZ0Vjb24vUHk0RWNvbik6IFB1YmxpYyByZXBvLCBQeXRob24gcGFja2FnZSwgUHl0aG9uIHJlc2VhcmNoIHByb2dyYW1zDQo3LiBUZWFjaGluZzogUHJpdmF0ZSB0ZWFjaGluZyByZXBvc2l0b3J5DQoNCk90aGVyIHJlcG9zaXRvcmllcyBjYW4gYmUgc3luY2VkIHdoZW4gbmVlZGVkIG9uIGFuIGFkLWhvYyBiYXNpcy4gVGhlIHJlcG9zaXRvcmllcyBhYm92ZSBhcmUgZXNzZW50aWFsIHJlcG9zaXRvcmllcy4NCg0KIyMgUmVwbyBGb2xkZXJzIGFuZCBHbG9iYWwgY29uZmlnDQoNClJlbWVtYmVyIGdpdCBiYXNoIG9yIGJhc2ggc2hvdWxkIGJlIGluIHdpbmRvd3Mgb3BlbmVkIGFzICphZG1pbmlzdHJhdG9yKi4NCg0KYGBge2Jhc2h9DQojIGNkIHRvIHJvb3QgZm9sZGVyDQpjZCB+DQojIGdlbmVyYXRlIGFsbCBuZWVkZWQga2V5IHJlcG9zaXRvcmllcw0KbWtkaXIgZmFud2FuZ2Vjb24uZ2l0aHViLmlvIFB5RmFuIFRleDRFY29uIFI0RWNvbiBNNEVjb24gUHk0RWNvbiBUZWFjaGluZw0KDQojIFNldCBnbG9iYWwgY29uZmlnIHNldHRpbmdzLCBpbiB+Ly5naXRjb25maWcNCmdpdCBjb25maWcgLS1nbG9iYWwgdXNlci5uYW1lICJGYW4gV2FuZyINCmdpdCBjb25maWcgLS1nbG9iYWwgdXNlci5lbWFpbCB3YW5nZmFuYnNnNzVAbGl2ZS5jb20NCmBgYA0KDQojIyBJbml0YWxpemUgYW5kIGFkZCByZW1vdGUgcmVwbyBmb3IgZWFjaDoNCg0KYGBge2Jhc2h9DQojIEluaXRpYWxpemUgUmVwb3NpdG9yaWVzDQpjZCB+L2ZhbndhbmdlY29uLmdpdGh1Yi5pbw0KZ2l0IGluaXQNCmdpdCByZW1vdGUgYWRkIGdpdGh1YiBnaXRAZ2l0aHViLmNvbTpmYW53YW5nZWNvbi9mYW53YW5nZWNvbi5naXRodWIuaW8uZ2l0DQpjZCB+L1B5RmFuDQpnaXQgaW5pdA0KZ2l0IHJlbW90ZSBhZGQgZ2l0aHViIGdpdEBnaXRodWIuY29tOmZhbndhbmdlY29uL1B5RmFuDQpjZCB+L1RleDRFY29uDQpnaXQgaW5pdA0KZ2l0IHJlbW90ZSBhZGQgZ2l0aHViIGdpdEBnaXRodWIuY29tOmZhbndhbmdlY29uL1RleDRFY29uDQpjZCB+L1I0RWNvbg0KZ2l0IGluaXQNCmdpdCByZW1vdGUgYWRkIGdpdGh1YiBnaXRAZ2l0aHViLmNvbTpmYW53YW5nZWNvbi9SNEVjb24NCmNkIH4vTTRFY29uDQpnaXQgaW5pdA0KZ2l0IHJlbW90ZSBhZGQgZ2l0aHViIGdpdEBnaXRodWIuY29tOmZhbndhbmdlY29uL000RWNvbg0KY2Qgfi9QeTRFY29uDQpnaXQgaW5pdA0KZ2l0IHJlbW90ZSBhZGQgZ2l0aHViIGdpdEBnaXRodWIuY29tOmZhbndhbmdlY29uL1B5NEVjb24NCmNkIH4vVGVhY2hpbmcNCmdpdCBpbml0DQpnaXQgcmVtb3RlIGFkZCBnaXRodWIgZ2l0QGdpdGh1Yi5jb206ZmFud2FuZ2Vjb24vVGVhY2hpbmcNCmBgYA0KDQojIyBTeW5jIFJlcG8gaW4gU1NIIFNlY3VyZSBTZXNzaW9uDQoNClB1bGwgbGF0ZXN0ZWQgZnJvbSBtdWx0aXBsZSByZXBvc2l0b3JpZXMuIEp1c3QgUGFzdGUgdGhlIGZvbGxvd2luZyBsaW5lcy4NCg0KMS4gc3RhcnQgc3NoLWFnZW50IHNlY3VyZSBzZXNzaW9uDQoyLiBwdWxsIGZyb20gbXVsdGlwbGUgUmVwb3NpdG9yaWVzIHVwb24gc3RhcnQgb2Ygd29ya2luZyBzZXNzaW9uLg0KMy4gY29tbWl0IGNoYW5nZXMgYXMgd29yayBvbiBvbmUgY29tcHV0ZXINCjQuIHVwb24gbGVhdmluZyBhIGNvbXB1dGVyIHdpdGggY29tbWl0ZWQgY2hhbmdlcywgcHVzaCBhbGwNCg0KU3RhcnQgYW5kIGVuZCBzc2ggc2Vzc2lvbjoNCg0KYGBge2Jhc2h9DQojIFRvIGF2b2lkIGhhdmluZyB0byBlbnRlciBwYXNzd29yZCBlYWNoIHRpbWUsIHN0YXJ0IGJhY2tncm91bmQgYXV0aGVudGljYXRpb24gYWdlbnQuDQpldmFsICIkKHNzaC1hZ2VudCkiDQpzc2gtYWRkIH4vLnNzaC9pZF9yc2ENCg0KIyB0byBzdG9wIHRoZSBzc2ggc2Vzc2lvbg0Ka2lsbCAkU1NIX0FHRU5UX1BJRA0KYGBgDQoNClB1bGwgZnJvbSByZXBvczoNCg0KYGBge2Jhc2h9DQojIEluaXRpYWxpemUgUmVwb3NpdG9yaWVzLCBkbyB0aGVzZSBvbmUgYnkgb25lIGZpcnN0DQpjZCB+L2ZhbndhbmdlY29uLmdpdGh1Yi5pbw0KZ2l0IHB1bGwgZ2l0aHViIG1hc3Rlcg0KY2Qgfi9QeUZhbg0KZ2l0IHB1bGwgZ2l0aHViIG1hc3Rlcg0KY2Qgfi9UZXg0RWNvbg0KZ2l0IHB1bGwgZ2l0aHViIG1hc3Rlcg0KY2Qgfi9SNEVjb24NCmdpdCBwdWxsIGdpdGh1YiBtYXN0ZXINCmNkIH4vTTRFY29uDQpnaXQgcHVsbCBnaXRodWIgbWFzdGVyDQpjZCB+L1B5NEVjb24NCmdpdCBwdWxsIGdpdGh1YiBtYXN0ZXINCmNkIH4vVGVhY2hpbmcNCmdpdCBwdWxsIGdpdGh1YiBtYXN0ZXINCmBgYA0KDQpQdXNoIGZyb20gcmVwb3MgY29tbWl0dGVkIGNoYW5nZXMNCg0KYGBge2Jhc2h9DQojIEluaXRpYWxpemUgUmVwb3NpdG9yaWVzLCBkbyB0aGVzZSBvbmUgYnkgb25lIGZpcnN0DQpjZCB+L2ZhbndhbmdlY29uLmdpdGh1Yi5pbw0KZ2l0IHB1c2ggLXUgZ2l0aHViIG1hc3Rlcg0KY2Qgfi9QeUZhbg0KZ2l0IHB1c2ggLXUgZ2l0aHViIG1hc3Rlcg0KY2Qgfi9UZXg0RWNvbg0KZ2l0IHB1c2ggLXUgZ2l0aHViIG1hc3Rlcg0KY2Qgfi9SNEVjb24NCmdpdCBwdXNoIC11IGdpdGh1YiBtYXN0ZXINCmNkIH4vTTRFY29uDQpnaXQgcHVzaCAtdSBnaXRodWIgbWFzdGVyDQpjZCB+L1B5NEVjb24NCmdpdCBwdXNoIC11IGdpdGh1YiBtYXN0ZXINCmNkIH4vVGVhY2hpbmcNCmdpdCBwdXNoIC11IGdpdGh1YiBtYXN0ZXINCmBgYA0K</div>
 
 
 
@@ -2164,7 +1967,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("fn_installations.Rmd");
+  window.initializeSourceEmbed("fs_git_setup.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

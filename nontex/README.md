@@ -16,16 +16,20 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - *wget; bash; source*
     - *ssh-keygen -t rsa; cat*
 
-# gitpages
+# github pages and git
 
-1. [Sample Githug page](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/): [**md**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/githubpages/sample/samplepage.md) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/)
+1. [Multiple git Repositories setup with Github](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/git/fs_git_setup.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html)
+    - set up ssh rsa security with github
+    - initalize multiple repositories
+    - secure ssh session to avoid passphrase entry
+    - *mkdir d1 d2; git config --global; git init; git remote add*
+    - *eval "$(ssh-agent)"; ssh-add ~/.ssh/id_rsa*
+    - *git pull github master; git pull -u github master*
+2. [Sample Githug page](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/): [**md**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/githubpages/sample/samplepage.md) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/)
     - Conda base Python, and Conda environment for R
     - *conda update --all*
     - *Rtools, install.packages(), devtools::install_github()*
-
-# git
-
-1. [Git Subtree](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_subtree/fs_subtree.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
+3. [Git Subtree](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_subtree/fs_subtree.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
     - dropbox folder as main project git
     - subfolder also as git subtree synced to overleaf
     - **git**: *git subtree add, push, pull*

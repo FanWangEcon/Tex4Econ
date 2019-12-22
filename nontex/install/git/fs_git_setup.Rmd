@@ -1,0 +1,162 @@
+---
+title: "Git and Github Example and Tutorial, Sync with Multiple Repositories, Store Password"
+output:
+  pdf_document:
+    df_print: paged
+    number_sections: true
+  html_notebook:
+    number_sections: true
+  word_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# Download Programs
+
+1. Install [git for windows](https://git-scm.com/download/win): after install, try "cd ~/PyFan"
+2. Install [atom](https://atom.io/)
+3. Might need to install [putty](https://www.putty.org/) possibly
+
+# git and Github Security Set-up
+
+1. open up git bash
+2. generate rsa
+    - *ssh-keygen -t rsa -C "wangfanbsg75@live.com"*
+    - when prompted, do not enter "file in which save the key", when prompted for passphrase, enter "WHATEVERPASSWORDIS"
+3. copy key
+    - WINDOWS: *clip < ~/.ssh/id_rsa.pub*
+    - LINUX: *cat ~/.ssh/id_rsa.pub*
+4. log on to github ssh section, generate new ssh rsa key
+    - SSH and GPG keys, choose New SSH key, paste in clipped text.
+
+```{bash}
+# inside git bash
+ssh-keygen -t rsa -C "wangfanbsg75@live.com"
+# this copies the text in the .pub file generated
+clip < ~/.ssh/id_rsa.pub
+```
+
+# Start and Sync Key Repositories
+
+Inside git bash (open as *administrator*), Sync Several Key Repositories that should be synced on all computers:
+
+1. fanwangecon.github.io: Github root repo
+2. PyFan: Private Repo with Python Support Files
+3. [Tex4Econ](https://github.com/FanWangEcon/Tex4Econ): Latex, installation, and various other support files, public repo.
+4. [R4Econ](https://github.com/FanWangEcon/R4Econ): Public repo, R package, R research programs
+5. [M4Econ](https://github.com/FanWangEcon/M4Econ): Public repo, Matlab package, Matlab examples and research files
+6. [Py4Econ](https://github.com/FanWangEcon/Py4Econ): Public repo, Python package, Python research programs
+7. Teaching: Private teaching repository
+
+Other repositories can be synced when needed on an ad-hoc basis. The repositories above are essential repositories.
+
+## Repo Folders and Global config
+
+Remember git bash or bash should be in windows opened as *administrator*.
+
+```{bash}
+# cd to root folder
+cd ~
+# generate all needed key repositories
+mkdir fanwangecon.github.io PyFan Tex4Econ R4Econ M4Econ Py4Econ Teaching
+
+# Set global config settings, in ~/.gitconfig
+git config --global user.name "Fan Wang"
+git config --global user.email wangfanbsg75@live.com
+```
+
+## Initalize and add remote repo for each:
+
+```{bash}
+# Initialize Repositories
+cd ~/fanwangecon.github.io
+git init
+git remote add github git@github.com:fanwangecon/fanwangecon.github.io.git
+cd ~/PyFan
+git init
+git remote add github git@github.com:fanwangecon/PyFan
+cd ~/Tex4Econ
+git init
+git remote add github git@github.com:fanwangecon/Tex4Econ
+cd ~/R4Econ
+git init
+git remote add github git@github.com:fanwangecon/R4Econ
+cd ~/M4Econ
+git init
+git remote add github git@github.com:fanwangecon/M4Econ
+cd ~/Py4Econ
+git init
+git remote add github git@github.com:fanwangecon/Py4Econ
+cd ~/Teaching
+git init
+git remote add github git@github.com:fanwangecon/Teaching
+```
+
+## Sync Repo in SSH Secure Session
+
+Pull latested from multiple repositories. Just Paste the following lines.
+
+1. start ssh-agent secure session
+2. pull from multiple Repositories upon start of working session.
+3. commit changes as work on one computer
+4. upon leaving a computer with commited changes, push all
+
+Start and end ssh session:
+
+```{bash}
+# To avoid having to enter password each time, start background authentication agent.
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/id_rsa
+
+# to stop the ssh session
+kill $SSH_AGENT_PID
+```
+
+Pull from repos:
+
+```{bash}
+# Initialize Repositories, do these one by one first
+cd ~/fanwangecon.github.io
+git pull github master
+cd ~/PyFan
+git pull github master
+cd ~/Tex4Econ
+git pull github master
+cd ~/R4Econ
+git pull github master
+cd ~/M4Econ
+git pull github master
+cd ~/Py4Econ
+git pull github master
+cd ~/Teaching
+git pull github master
+```
+
+Push from repos committed changes
+
+```{bash}
+# Initialize Repositories, do these one by one first
+cd ~/fanwangecon.github.io
+git push -u github master
+cd ~/PyFan
+git push -u github master
+cd ~/Tex4Econ
+git push -u github master
+cd ~/R4Econ
+git push -u github master
+cd ~/M4Econ
+git push -u github master
+cd ~/Py4Econ
+git push -u github master
+cd ~/Teaching
+git push -u github master
+```
