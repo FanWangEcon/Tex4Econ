@@ -1,0 +1,82 @@
+---
+title: "Atom, Git, Github, etc Set-up for Linux"
+output:
+  pdf_document:
+    df_print: paged
+    number_sections: true
+  html_notebook:
+    number_sections: true
+  word_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/nontex/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# Atom Install
+
+Can be directly installed from Ubuntu store.
+
+```{bash}
+# install atom
+sudo apt-get install atom
+```
+
+- *personal access token*: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f
+- *Gist id*: 754fa9ca57eb7ddc1ee89775f934b59f
+
+# Git Install
+
+1. install git
+2. once rsa set up, sync repo
+
+```{bash}
+# install git
+sudo apt-get install git
+# generate repo directory and sync
+mkdir ~/PyFan
+cd ~/PyFan
+git init
+git config --global user.name "Fan Wang"
+git config --global user.email wangfanbsg75@live.com
+git remote add github git@github.com:FanWangEcon/PyFan.git
+git pull github master
+```
+
+# Github and local repo
+
+1. generate rsa
+    - ssh-keygen -t rsa -C "wangfanbsg75@live.com", when prompted, do not enter "file in which save the key", when prompted for passphrase, enter "WHATEVERPASSWORDIS"
+2. copy key
+3. log on to github ssh section, generate new ssh rsa key
+
+```{bash}
+ssh-keygen -t rsa -C "wangfanbsg75@live.com"
+cat ~/.ssh/id_rsa.pub
+```
+
+# Conda Install
+
+conda install linux
+
+1. wget to download from url to download folder
+2. bash to install
+3. follow instructions, type yes
+4. source ~/.bashrc
+
+```{bash}
+# could be saved in current folder: pwd
+# could be saved in download folder: ~/Downloads
+wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+# install file
+bash "Anaconda3-2019.10-Linux-x86_64.sh"
+# refresh
+source ~/.bashrc
+```
