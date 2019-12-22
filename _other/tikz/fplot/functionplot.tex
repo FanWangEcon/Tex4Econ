@@ -26,7 +26,7 @@
 \definecolor{myGreen}{RGB}{0,255,71}
 
 % Titling and Author
-\title{Latex Tikz Test, Linear Equation Plotting, Linear Spline}
+\title{Latex Tikz Examples, Linear Equation Plotting, Linear Spline}
 \author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
 \date{\today}
 
@@ -39,7 +39,7 @@
 % A. slopes of lines a b c d
 \def\ssa{0.8}
 \def\ssb{1.0}
-\def\ssc{1.1}
+\def\ssc{2}
 \def\ssd{0.6}
 % B. y-intercepts of lines a b c d
 \def\iia{+1.0}
@@ -132,7 +132,7 @@ Draw four lines, sum them up linear spline, then invert. A3 page has 29.7 cm wid
 % (((\iia+\iib)+((-\iib/\ssb))*(\ssa+\ssb))/\rescale)
 \subsection{Summed Lines Invert}
 \begin{tikzpicture}
-    \draw[->] (-3,0) -- (4,0) node[right] {$N$};
+    \draw[->] (-3,0) -- (4,0) node[right] {$N$};    
     \draw[->] (0,-3) -- (0,4) node[above] {$N_m$};
     \clip (-3,-3) rectangle (7,4);
     \draw[line width=0.25mm,

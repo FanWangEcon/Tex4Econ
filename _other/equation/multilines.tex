@@ -4,7 +4,14 @@
 \usepackage{mathtools}
 
 % url package
+
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 % Titling and Author
 \title{Sandbox Testing Equations, Multiple Lines}
@@ -15,7 +22,80 @@
 
 \maketitle
 
+
+\section{Multiple Lines of Equation}
+
+\subsection{Split, Center around Symbol}
+\begin{verbatim}
+\begin{align}\label{eq:split}
+  \begin{split}
+    x_1 &= 1 \\
+    y &= 1        \\
+    h(x) &= f(-20 + 10 + 20) \\
+    g(x) &= f(12) \approx 2
+  \end{split}
+\end{align}
+\end{verbatim}
+
+\begin{align}\label{eq:split}
+  \begin{split}
+    x_1 &= 1 \\
+    y &= 1        \\
+    h(x) &= f(-20 + 10 + 20) \\
+    g(x) &= f(12) \approx 2
+  \end{split}
+\end{align}
+
+\pagebreak
+
+\subsection{Gathered, Center of Page}
+\begin{verbatim}
+\begin{align}\label{eq:gathered}
+  \begin{gathered}
+    x_1 = 1, x_2 = 1        \\
+    h(x) = f(-20 + 15 + 17) \\
+    h(x) = f(12) \approx 1
+  \end{gathered}
+\end{align}
+\end{verbatim}
+
+\begin{align}\label{eq:gathered}
+  \begin{gathered}
+    x_1 = 1, x_2 = 1        \\
+    h(x) = f(-20 + 15 + 17) \\
+    h(x) = f(12) \approx 1
+  \end{gathered}
+\end{align}
+
+\pagebreak
+
 \section{Substack vs Array}
+\begin{verbatim}
+\begin{align}
+    \begin{split}
+    \label{eq:Value}
+    v_{ih}\left(a,z\right)
+        =
+        \max_{
+            \substack{
+                c>0\\
+                a' \in \{0,[\bar{A}_{ih},\infty)\}
+                }
+            }
+        u\left(c\right)+  \beta \int v_{ih}\left(a',z'\right)f(z'|z)dz'\\
+    \label{eq:Value}
+    v_{ih}\left(a,z\right)
+        =
+        \max_{
+            \begin{array}{cc}
+                c>0\\
+                a' \in \{0,[\bar{A}_{ih},\infty)\}\\
+            \end{array}
+            }
+        u\left(c\right)+  \beta \int v_{ih}\left(a',z'\right)f(z'|z)dz'\\
+    \end{split}
+\end{align}
+\end{verbatim}
 
 Using Substack, fonts are small under max:
 \begin{align}
@@ -49,7 +129,23 @@ Using Array, fonts are larger under max:
     \end{split}
 \end{align}
 
+\pagebreak
+
 \section{Multiple Lines}
+
+\begin{verbatim}
+\begin{align}
+    x = y + z +
+    \left\{
+      \begin{array}{l}
+            a \\
+            + b \\
+            + c \\
+            + d \\
+      \end{array}
+    \right\}
+\end{align}
+\end{verbatim}
 
 \begin{align}
     x = y + z +

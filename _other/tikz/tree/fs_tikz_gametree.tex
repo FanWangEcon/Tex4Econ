@@ -1,0 +1,124 @@
+\documentclass{article}
+
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in
+}
+
+% url package
+\usepackage{hyperref}
+\usepackage{subcaption}
+
+% Titling and Author
+\title{Latex Tikz Examples, Discrete and Continuous Strategy Trees}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% A.1 Node styles
+\tikzset{
+    % Two node styles for game trees: solid and hollow
+    solid node/.style={circle,draw,inner sep=1.5,fill=black},
+    hollow node/.style={circle,draw,inner sep=1.5,fill=white}
+}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+
+% A.2 Level Styles
+    % Specify spacing for each level of the tree
+    \tikzstyle{level 1}=[level distance=17mm,sibling distance=25mm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=15mm]
+
+% B Level 1 point
+\node(0)[solid node,label=above:{$P1$}]{} 
+
+% C Level 2 Node (child nodes)
+% C.1 First child node, left
+child{
+    % C.1.a Node line color
+    [red]
+    % C.1.b Node dot 
+    node(1)[solid node, label=below:{red dot}]{}
+    % C.1.c now go to edge
+    edge from parent 
+        % C.1.c Node along edge
+        node[sloped, above, black, text width=3cm]{Minimum Choice showing up along this red line}
+    }
+% C.2 Middle Child node, do not show line, invisible
+child{
+    % Main node of level 2 middle node, same y-axis height as node left and right
+    % Y-shift to move level 3 child node lower
+    [purple] node(2)[solid node, xshift=30, yshift=-50, label=right:{hello}]{}
+    % D.1 Left level 3 (from middle level 2)
+    child{
+        [black] 
+        node[hollow node,label=below:{$(a,b)$}]{} 
+        edge from parent 
+            node[left]{$C$}
+        }
+    child{
+        [black]
+        node[hollow node,label=below:{$(c,d)$}]{} 
+        edge from parent 
+            node[right]{$D$}
+        }
+    edge from parent 
+        %note that you need to adjust the yshift if you change the level distance
+        node[left, black, xshift=-5, yshift=0, text width = 1mm]{$\alpha$\\$\beta$\\$\sigma$} 
+    }
+child{
+    [black]
+    node(3)[solid node, label=right:{hi there}, green]{}
+    edge from parent 
+        node[right, xshift=0, yshift=15, text width=2cm]{Some text for this edge}
+    };
+% information set
+\draw[dashed, bend right] 
+    (1) to (3);
+\draw[dashed, bend left, line width=0.5mm, blue] 
+    (0) to 
+        node[right, text width=1.25cm, xshift=5, yshift=-10] 
+            {\tiny{label right of blue dashed line}}
+        (2);
+\end{tikzpicture}
+\end{center}
+
+
+% \begin{istgame}[font=\scriptsize]
+% \setistgrowdirection{east}
+% \cntmdistance{20mm}{20mm}
+% \cntmAistb{q_1=0}[at end,below]{q_1=1,000}[at end,above]
+% \istrootcntmA(0){1}
+%   \istbA[draw=none]
+%   \endist
+% \cntmAistb{q_2=0}[at end,below]{q_2=1,000}[at end,above]
+% \istrootcntmA(1)(0-1)<[xshift=3pt]90>{2}
+%   \istbA[draw=none]{}{\pi_1,\pi_2}
+%   \endist
+% \end{istgame}
+
+
+
+\end{document}

@@ -25,9 +25,10 @@
 
 % url package
 \usepackage{hyperref}
+\usepackage{subcaption}
 
 % Titling and Author
-\title{Latex Tikz Test, Relative Position on Page and Alignment}
+\title{Latex Tikz Examples, Relative Position on Page and Alignment}
 \author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
 \date{\today}
 
@@ -115,5 +116,86 @@ Note that the box is centered.
 \draw (0,0) -- (0,0.5*\textwidth) -- (0.5*\textwidth, 0.5*\textwidth) -- (0.5*\textwidth, 0) -- (0, 0);
 \end{tikzpicture}
 \end{center}
+
+\subsection{Four Boxes Same Page in Larger Box}
+There are four plots that I would like to draw together, four panels of tikz. We are defining height and width by textwidth, in this case textwidth is the width of each subfigure. 
+
+\begin{itemize}
+    \item tikz page panels subplots
+    \item latex subfigure
+\end{itemize}
+
+\begin{verbatim}
+\def\fhratio{0.50}
+\def\fwratio{1.0}
+\begin{subfigure}[b]{0.49\textwidth}
+    \begin{center}
+    \begin{tikzpicture}
+    \draw (0,0) -- 
+        (0,\fhratio*\textwidth) -- 
+        (\fwratio*\textwidth, \fhratio*\textwidth) -- 
+        (\fwratio*\textwidth, 0) -- (0, 0);
+    \draw 
+        (0.3*\fwratio*\textwidth,0.3*\fhratio*\textwidth) -- 
+        (0.7*\fwratio*\textwidth,0.7*\fhratio*\textwidth);
+    \end{tikzpicture}
+    \end{center}
+    \caption{Panel A}
+    \label{fig:panela}
+\end{subfigure}
+\end{figure}
+\end{verbatim}
+Repeat this four timnes in a figure:
+\def\fhratio{0.50}
+\def\fwratio{1.0}
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \begin{center}
+        \begin{tikzpicture}
+        \draw (0,0) -- (0,\fhratio*\textwidth) -- (\fwratio*\textwidth, \fhratio*\textwidth) -- (\fwratio*\textwidth, 0) -- (0, 0);
+        \draw (0.3*\fwratio*\textwidth,0.3*\fhratio*\textwidth) --(0.7*\fwratio*\textwidth,0.7*\fhratio*\textwidth);
+        \end{tikzpicture}
+        \end{center}
+        \caption{Panel A}
+        \label{fig:panela}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \begin{center}
+        \begin{tikzpicture}
+        \draw (0,0) -- (0,\fhratio*\textwidth) -- (\fwratio*\textwidth, \fhratio*\textwidth) -- (\fwratio*\textwidth, 0) -- (0, 0);
+        \draw (0.3*\fwratio*\textwidth,0.3*\fhratio*\textwidth) --(0.7*\fwratio*\textwidth,0.7*\fhratio*\textwidth);
+        \end{tikzpicture}
+        \end{center}
+        \caption{Panel B}
+        \label{fig:panelb}
+    \end{subfigure}
+    \bigskip
+    \\
+    \begin{subfigure}[b]{0.49\textwidth}
+        \begin{center}
+        \begin{tikzpicture}
+        \draw (0,0) -- (0,\fhratio*\textwidth) -- (\fwratio*\textwidth, \fhratio*\textwidth) -- (\fwratio*\textwidth, 0) -- (0, 0);
+        \draw (0.3*\fwratio*\textwidth,0.3*\fhratio*\textwidth) --(0.7*\fwratio*\textwidth,0.7*\fhratio*\textwidth);
+        \end{tikzpicture}
+        \end{center}
+        \caption{Panel C}
+        \label{fig:panelc}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \begin{center}
+        \begin{tikzpicture}
+        \draw (0,0) -- (0,\fhratio*\textwidth) -- (\fwratio*\textwidth, \fhratio*\textwidth) -- (\fwratio*\textwidth, 0) -- (0, 0);
+        \draw (0.3*\fwratio*\textwidth,0.3*\fhratio*\textwidth) --(0.7*\fwratio*\textwidth,0.7*\fhratio*\textwidth);
+        \end{tikzpicture}
+        \end{center}
+        \caption{Panel D}
+        \label{fig:paneld}
+    \end{subfigure}    
+    \caption{Figure with Four Subfigures Each Containing Tikz Figure}\label{fig:tikztogether}
+\end{figure}
+
 
 \end{document}
