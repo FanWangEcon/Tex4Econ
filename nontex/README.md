@@ -1,7 +1,5 @@
 ---
-layout: default
 title: Miscellaneous Files, Install Conda (Python), R, Git, etc
-pageorder: 0
 ---
 
 This is a work-in-progress [website](https://fanwangecon.github.io/Tex4Econ/nontex) of miscellaneous research support files, produced by [Fan](https://fanwangecon.github.io/). Materials include miscellaneous git,  github and github pages issues.
