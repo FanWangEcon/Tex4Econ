@@ -3,13 +3,19 @@
 
 % url package
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
 
 % Bibliography package
 \usepackage[authordate, backend=biber]{biblatex-chicago}
 \bibliography{fansample}
 
 % Titling and Author
-\title{Sandbox Testing Latex}
+\title{Latex Example, Pandoc Conversion}
 \author{Fan Wang (University of Houston)}
 \date{\today}
 
@@ -46,7 +52,7 @@ $$\Omega^{\max} = \exp(z^{\max}) \cdot \left(\Lambda^{\max}\right)^{\alpha}$$
 
 \subsection{Install and convert Tex to Word}
 
-For editing latex files in word to benefit from tracked changes. 
+For editing latex files in word to benefit from tracked changes.
 
 \begin{enumerate}
 	\item install pandoc: \href{https://pandoc.org/installing.html}{Pandoc Site Installation Link}

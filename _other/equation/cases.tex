@@ -4,7 +4,6 @@
 \usepackage{mathtools}
 
 % url package
-\usepackage{hyperref}
 \usepackage[colorlinks=true,
             linkcolor=blue,
             urlcolor=blue,
@@ -12,7 +11,7 @@
             citecolor=gray]{hyperref}
 
 % Titling and Author
-\title{Sandbox Testing Equations}
+\title{Latex Example, Equation Cases}
 \author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
 \date{\today}
 \begin{document}
@@ -20,6 +19,15 @@
 \maketitle
 
 \section{Two Cases}
+
+\begin{verbatim}
+  x =
+  \begin{cases*}
+      -x           & if  $x < 0 $  \\
+      \phantom{-}x & if  $x\ge 0$
+  \end{cases*}
+\end{verbatim}
+
 $$
 x =
 \begin{cases*}
@@ -36,7 +44,23 @@ x =
 \end{cases*}
 \end{align}
 
+\pagebreak
+
 \section{Two Cases, same line}
+
+\begin{verbatim}
+  \begin{equation*}
+  f(x) = \begin{cases}
+               0  & \text{if } x < 0 \\
+               1  & \text{if } x \ge 0
+         \end{cases} \quad
+  g(x) = \begin{cases}
+               f(x)+1  & \text{if } x < 0 \\
+               f(x)-1  & \text{if } x \ge 0
+         \end{cases}
+  \end{equation*}
+\end{verbatim}
+
 \begin{equation*}
 f(x) = \begin{cases}
              0  & \text{if } x < 0 \\
@@ -73,5 +97,7 @@ f(x)+1  & if $ x < 0$ \\
 f(x)-1  & if $ x \ge 0$
 \end{cases*}
 \end{align}
+
+\pagebreak
 
 \end{document}

@@ -6,6 +6,13 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
 \usepackage{geometry}
 \geometry{
 	a3paper,
@@ -32,6 +39,7 @@
 
 \begin{document}
 
+\maketitle
 
 %%%%%%%%%%%%%%%%%%%%%
 %%% Line Values
@@ -64,7 +72,7 @@
 \begin{multicols}{3}
 [
 \section{Tikz Four Lines}
-Draw four lines, sum them up linear spline, then invert. A3 page has 29.7 cm width. Below, width is 7 cm for each plot, so 21 cm all together generally. Margins are 1 inch on each side, so about 5 cm together. 
+Draw four lines, sum them up linear spline, then invert. A3 page has 29.7 cm width. Below, width is 7 cm for each plot, so 21 cm all together generally. Margins are 1 inch on each side, so about 5 cm together.
 ]
 
 \subsection{Four Relative Allocation Lines}
@@ -74,7 +82,7 @@ Draw four lines, sum them up linear spline, then invert. A3 page has 29.7 cm wid
     \draw[line width=0.25mm,domain=-2:4,smooth,variable=\x, \cla] plot ({\x},{\iia+\x*\ssa});
     \draw[line width=0.25mm,domain=-2:4,smooth,variable=\x, \clb] plot ({\x},{\iib+\x*\ssb});
     \draw[line width=0.25mm,domain=-2:4,smooth,variable=\x, \clc] plot ({\x},{\iic+\x*\ssc});
-    \draw[line width=0.25mm,domain=-2:4,smooth,variable=\x, \cld] plot ({\x},{\iid+\x*\ssd});    
+    \draw[line width=0.25mm,domain=-2:4,smooth,variable=\x, \cld] plot ({\x},{\iid+\x*\ssd});
 \end{tikzpicture}
 
 \subsection{Inequality Constrained $Y > 0$}
@@ -91,13 +99,13 @@ Draw four lines, sum them up linear spline, then invert. A3 page has 29.7 cm wid
 \begin{tikzpicture}
     \draw[->] (-3,0) -- (4,0) node[right] {$N_m$};
     \draw[->] (0,-3) -- (0,4) node[above] {$N$};
-    \draw[line width=0.25mm,domain=(-\iia/\ssa):4,smooth,variable=\x, \cla] 
+    \draw[line width=0.25mm,domain=(-\iia/\ssa):4,smooth,variable=\x, \cla]
         plot ({\x},{(\iia+\x*\ssa)});
-    \draw[line width=0.25mm,domain=(-\iib/\ssb):4,smooth,variable=\x, \clb] 
+    \draw[line width=0.25mm,domain=(-\iib/\ssb):4,smooth,variable=\x, \clb]
         plot ({\x},{((\iia+\iib)+\x*(\ssa+\ssb))});
-    \draw[line width=0.25mm,domain=(-\iic/\ssc):4,smooth,variable=\x, \clc] 
+    \draw[line width=0.25mm,domain=(-\iic/\ssc):4,smooth,variable=\x, \clc]
         plot ({\x},{((\iia+\iib+\iic)+\x*(\ssa+\ssb+\ssc))});
-    \draw[line width=0.25mm,domain=(-\iid/\ssd):4,smooth,variable=\x, \cld] 
+    \draw[line width=0.25mm,domain=(-\iid/\ssd):4,smooth,variable=\x, \cld]
         plot ({\x},{((\iia+\iib+\iic+\iid)+\x*(\ssa+\ssb+\ssc+\ssd))});
 \end{tikzpicture}
 
@@ -105,34 +113,34 @@ Draw four lines, sum them up linear spline, then invert. A3 page has 29.7 cm wid
 \begin{tikzpicture}
     \draw[->] (-3,0) -- (4,0) node[right] {$N_m$};
     \draw[->] (0,-3) -- (0,4) node[above] {$N$};
-    \draw[line width=0.25mm,domain=(-\iia/\ssa):4,smooth,variable=\x, \cla] 
+    \draw[line width=0.25mm,domain=(-\iia/\ssa):4,smooth,variable=\x, \cla]
         plot ({\x},{(\iia+\x*\ssa)/\rescale});
-    \draw[line width=0.25mm,domain=(-\iib/\ssb):4,smooth,variable=\x, \clb] 
+    \draw[line width=0.25mm,domain=(-\iib/\ssb):4,smooth,variable=\x, \clb]
         plot ({\x},{((\iia+\iib)+\x*(\ssa+\ssb))/\rescale});
-    \draw[line width=0.25mm,domain=(-\iic/\ssc):4,smooth,variable=\x, \clc] 
+    \draw[line width=0.25mm,domain=(-\iic/\ssc):4,smooth,variable=\x, \clc]
         plot ({\x},{((\iia+\iib+\iic)+\x*(\ssa+\ssb+\ssc))/\rescale});
-    \draw[line width=0.25mm,domain=(-\iid/\ssd):4,smooth,variable=\x, \cld] 
+    \draw[line width=0.25mm,domain=(-\iid/\ssd):4,smooth,variable=\x, \cld]
         plot ({\x},{((\iia+\iib+\iic+\iid)+\x*(\ssa+\ssb+\ssc+\ssd))/\rescale});
 \end{tikzpicture}
-    
+
 \subsection{$Y > 0$--Linear Spline}
 \begin{tikzpicture}
     \draw[->] (-3,0) -- (4,0) node[right] {$N_m$};
     \draw[->] (0,-3) -- (0,4) node[above] {$N$};
-    \draw[line width=0.25mm,domain=(-\iia/\ssa):(-\iib/\ssb),smooth,variable=\x, \cla] 
+    \draw[line width=0.25mm,domain=(-\iia/\ssa):(-\iib/\ssb),smooth,variable=\x, \cla]
         plot ({\x},{(\iia+\x*\ssa)/\rescale});
-    \draw[line width=0.25mm,domain=(-\iib/\ssb):(-\iic/\ssc),smooth,variable=\x, \clb] 
+    \draw[line width=0.25mm,domain=(-\iib/\ssb):(-\iic/\ssc),smooth,variable=\x, \clb]
         plot ({\x},{((\iia+\iib)+\x*(\ssa+\ssb))/\rescale});
-    \draw[line width=0.25mm,domain=(-\iic/\ssc):(-\iid/\ssd),smooth,variable=\x, \clc] 
+    \draw[line width=0.25mm,domain=(-\iic/\ssc):(-\iid/\ssd),smooth,variable=\x, \clc]
         plot ({\x},{((\iia+\iib+\iic)+\x*(\ssa+\ssb+\ssc))/\rescale});
-    \draw[line width=0.25mm,domain=(-\iid/\ssd):4,smooth,variable=\x, \cld] 
+    \draw[line width=0.25mm,domain=(-\iid/\ssd):4,smooth,variable=\x, \cld]
         plot ({\x},{((\iia+\iib+\iic+\iid)+\x*(\ssa+\ssb+\ssc+\ssd))/\rescale});
 \end{tikzpicture}
 
 % (((\iia+\iib)+((-\iib/\ssb))*(\ssa+\ssb))/\rescale)
 \subsection{Summed Lines Invert}
 \begin{tikzpicture}
-    \draw[->] (-3,0) -- (4,0) node[right] {$N$};    
+    \draw[->] (-3,0) -- (4,0) node[right] {$N$};
     \draw[->] (0,-3) -- (0,4) node[above] {$N_m$};
     \clip (-3,-3) rectangle (7,4);
     \draw[line width=0.25mm,
