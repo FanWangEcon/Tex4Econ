@@ -394,13 +394,19 @@ where r</code></pre>
 <p>Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.</p>
 <pre class="bash"><code># # if there are bugs
 # conda clean --packages
+# use conda-forge as main channel, more updated packages
+conda config --add channels conda-forge
 # normal update
 conda update --all</code></pre>
 </div>
 <div id="conda-test-python" class="section level2">
 <h2><span class="header-section-number">1.3</span> Conda Test Python</h2>
-<pre class="r"><code>python &quot;C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py&quot;
-python &quot;C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py&quot;</code></pre>
+<pre class="r"><code># windows
+python &quot;C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py&quot;
+python &quot;C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py&quot;
+# linux
+python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
+python ~/PyFan/ProjectSupport/graph/subplot.py</code></pre>
 </div>
 <div id="additional-packages" class="section level2">
 <h2><span class="header-section-number">1.4</span> Additional Packages</h2>
@@ -425,15 +431,19 @@ conda install -c r r-irkernel</code></pre>
 <div id="install-r-outside-of-conda" class="section level2">
 <h2><span class="header-section-number">2.2</span> Install R (outside of Conda)</h2>
 <ol style="list-style-type: decimal">
-<li><a href="https://cran.r-project.org/bin/windows/base/">download R</a></li>
-<li><a href="https://cran.r-project.org/bin/windows/base/">download R-studio</a></li>
+<li><a href="https://cloud.r-project.org/">download R</a></li>
+<li><a href="https://rstudio.com/products/rstudio/download/">download R-studio</a></li>
 <li>Open R-studio and auto-detect R</li>
 <li>Install packages</li>
 </ol>
+<p>note that installation will not work if the machine’s version of R is not up to date, this could be the case with default R versions for some linux installations.</p>
 <pre class="r"><code># Install R-tools
 install.packages(&quot;installr&quot;)
 library(&quot;installr&quot;)
 install.Rtools()
+# c:/Rtools/bin;
+# c:/Rtools/mingw_32/bin;
+# c:/Rtools/mingw_64/bin;
 
 # main packagevps
 install.packages(c(&quot;tidyr&quot;, &quot;tidyverse&quot;, &quot;tidymodels&quot;))
@@ -472,7 +482,7 @@ conda deactivate</code></pre>
 <div id="install-additional-packages-inside-the-r-environment" class="section level2">
 <h2><span class="header-section-number">2.4</span> Install Additional Packages inside the R-environment</h2>
 <p>These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better.</p>
-<p>This did not work, <em>tidymodels</em> failed to install. Perhaps because of directory issues. <em>tidymodels</em> required <em>rstanarm</em>, and <em>rstanarm</em> failed to install.</p>
+<p>This did not work in windows, <em>tidymodels</em> failed to install. Perhaps because of directory issues. <em>tidymodels</em> required <em>rstanarm</em>, and <em>rstanarm</em> failed to install.</p>
 <pre class="bash"><code>### One line
 conda install -c conda-forge r-aer r-minpack.lm r-knitr r-kableExtra r-matlab
 # conda install -c conda-forge r-rstanarm
@@ -525,6 +535,19 @@ rstudio.exe
 
 cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
 &quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
+<p>For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:</p>
+<pre class="bash"><code>&lt;!-- for ubuntu --&gt;
+wget &quot;https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb&quot;
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+&lt;!-- for debian --&gt;
+wget &quot;https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb&quot;
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+conda install -c r rstudio
+cd &quot;C:/Program Files/RStudio/bin&quot;
+rstudio.exe
+
+cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
+&quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
 </div>
 <div id="install-packages-from-r-studio" class="section level2">
 <h2><span class="header-section-number">2.6</span> Install Packages from R-Studio</h2>
@@ -537,7 +560,7 @@ install.Rtools()
 # this installs g++ which is needed for rstanarm
 # Add these below to windows path
 # c:/Rtools/bin;
-# c:/Rtools/mingw_62/bin;
+# c:/Rtools/mingw_64/bin;
 
 if (!require(devtools)) {
   install.packages(&quot;devtools&quot;)
@@ -574,6 +597,7 @@ source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39
 <ul>
 <li><a href="https://git-scm.com/download/win">git for windows</a>: after install, try “cd ~/PyFan”</li>
 <li><a href="https://atom.io/">atom</a></li>
+<li><a href="https://www.jetbrains.com/pycharm/">pycharm</a></li>
 </ul>
 </div>
 <div id="key-programs" class="section level2">

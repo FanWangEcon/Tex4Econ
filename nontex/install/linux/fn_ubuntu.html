@@ -422,7 +422,29 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 # install file
 bash &quot;Anaconda3-2019.10-Linux-x86_64.sh&quot;
 # refresh
-source ~/.bashrc</code></pre>
+source ~/.bashrc
+# show all installed packages under current envir
+conda list
+# see where key files are installed
+which python
+which conda
+# use conda-forge as main channel and update all
+conda config --add channels conda-forge
+conda update --all</code></pre>
+<div id="install-pycharm" class="section level2">
+<h2><span class="header-section-number">4.1</span> Install PyCharm</h2>
+<p>PyCharm can be installed from Ubuntu apps.</p>
+<pre class="bash"><code>&lt;!-- for Debian --&gt;
+sudo tar xfz pycharm-*.tar.gz -C /opt/
+cd /opt/pycharm-*/bin
+./pycharm.sh</code></pre>
+</div>
+</div>
+<div id="r-install" class="section level1">
+<h1><span class="header-section-number">5</span> R install</h1>
+<p>R could be installed first as below. Or follow the <a href="https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html">instructions on this page</a> to install from conda an environment for R, with associated R-studio.</p>
+<pre class="bash"><code>apt-get update
+apt-get install r-base r-base-dev</code></pre>
 </div>
 
 

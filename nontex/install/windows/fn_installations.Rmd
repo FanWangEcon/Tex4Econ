@@ -68,6 +68,8 @@ Open up Anaconda Navigator, it will update navigator automatically. If there are
 ```{bash}
 # # if there are bugs
 # conda clean --packages
+# use conda-forge as main channel, more updated packages
+conda config --add channels conda-forge
 # normal update
 conda update --all
 ```
@@ -75,8 +77,12 @@ conda update --all
 ## Conda Test Python
 
 ```{r}
+# windows
 python "C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py"
 python "C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py"
+# linux
+python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
+python ~/PyFan/ProjectSupport/graph/subplot.py
 ```
 
 ## Additional Packages
@@ -110,16 +116,21 @@ Open up install and uninstall programs, find R and Rstudio, and uninstall them. 
 
 ## Install R (outside of Conda)
 
-1. [download R](https://cran.r-project.org/bin/windows/base/)
-2. [download R-studio](https://cran.r-project.org/bin/windows/base/)
+1. [download R](https://cloud.r-project.org/)
+2. [download R-studio](https://rstudio.com/products/rstudio/download/)
 3. Open R-studio and auto-detect R
 4. Install packages
+
+note that installation will not work if the machine's version of R is not up to date, this could be the case with default R versions for some linux installations.
 
 ```{r}
 # Install R-tools
 install.packages("installr")
 library("installr")
 install.Rtools()
+# c:/Rtools/bin;
+# c:/Rtools/mingw_32/bin;
+# c:/Rtools/mingw_64/bin;
 
 # main packagevps
 install.packages(c("tidyr", "tidyverse", "tidymodels"))
@@ -163,7 +174,7 @@ conda deactivate
 
 These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better.
 
-This did not work, *tidymodels* failed to install. Perhaps because of directory issues. *tidymodels* required *rstanarm*, and *rstanarm* failed to install.
+This did not work in windows, *tidymodels* failed to install. Perhaps because of directory issues. *tidymodels* required *rstanarm*, and *rstanarm* failed to install.
 
 ```{bash}
 ### One line
@@ -223,6 +234,22 @@ cd "C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library"
 "C:/Program Files/RStudio/bin/rstudio.exe"
 ```
 
+For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:
+
+```{bash}
+<!-- for ubuntu -->
+wget "https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb"
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+<!-- for debian -->
+wget "https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb"
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+conda install -c r rstudio
+cd "C:/Program Files/RStudio/bin"
+rstudio.exe
+
+cd "C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library"
+"C:/Program Files/RStudio/bin/rstudio.exe"
+```
 
 ## Install Packages from R-Studio
 
@@ -237,7 +264,7 @@ install.Rtools()
 # this installs g++ which is needed for rstanarm
 # Add these below to windows path
 # c:/Rtools/bin;
-# c:/Rtools/mingw_62/bin;
+# c:/Rtools/mingw_64/bin;
 
 if (!require(devtools)) {
   install.packages("devtools")

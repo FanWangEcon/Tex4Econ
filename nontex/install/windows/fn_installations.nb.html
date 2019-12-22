@@ -1759,6 +1759,10 @@ summary {
 <p>Check software versions.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuY29uZGEgbGlzdCBhbmFjb25kYVxucHl0aG9uIC1WXG5gYGAifQ== -->
+<pre class="bash"><code>conda list anaconda
+python -V</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="first-time-conda-install" class="section level2">
@@ -1767,6 +1771,17 @@ summary {
 <p>See Anaconda Installation Directory, in anaconda prompt:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxud2hlcmUgYW5hY29uZGFcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvYW5hY29uZGEuZXhlXG53aGVyZSBweXRob25cbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL3B5dGhvbi5leGVcbndoZXJlIGp1cHl0ZXJcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvanVweXRlci5leGVcbndoZXJlIGp1cHl0ZXIta2VybmVsc3BlY1xuIyBpZiBSIGluc3RhbGxlZCBhbHJlYWR5XG53aGVyZSByXG5gYGAifQ== -->
+<pre class="bash"><code>where anaconda
+# C:/ProgramData/Anaconda3/Scripts/anaconda.exe
+where python
+# C:/ProgramData/Anaconda3/python.exe
+where jupyter
+# C:/ProgramData/Anaconda3/Scripts/jupyter.exe
+where jupyter-kernelspec
+# if R installed already
+where r</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>To Add Anaconda to Path, In Windows 1. search for: Environment Variables 2. Edit Environment Variables 3. Add new to Path (lower half): - C:/ProgramData/Anaconda3/Scripts/ - C:/ProgramData/Anaconda3/ 4. Now open up regular windows command Prompt, Type in: - conda –version - also Close and Open up Git Bash: conda –version</p>
@@ -1776,6 +1791,14 @@ summary {
 <p>Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyAjIGlmIHRoZXJlIGFyZSBidWdzXG4jIGNvbmRhIGNsZWFuIC0tcGFja2FnZXNcbiMgdXNlIGNvbmRhLWZvcmdlIGFzIG1haW4gY2hhbm5lbCwgbW9yZSB1cGRhdGVkIHBhY2thZ2VzXG5jb25kYSBjb25maWcgLS1hZGQgY2hhbm5lbHMgY29uZGEtZm9yZ2VcbiMgbm9ybWFsIHVwZGF0ZVxuY29uZGEgdXBkYXRlIC0tYWxsXG5gYGAifQ== -->
+<pre class="bash"><code># # if there are bugs
+# conda clean --packages
+# use conda-forge as main channel, more updated packages
+conda config --add channels conda-forge
+# normal update
+conda update --all</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1783,6 +1806,14 @@ summary {
 <h2><span class="header-section-number">1.3</span> Conda Test Python</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB3aW5kb3dzXG5weXRob24gXCJDOi9Vc2Vycy9mYW4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcIlxucHl0aG9uIFwiQzovVXNlcnMvZmFuL1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcIlxuIyBsaW51eFxucHl0aG9uIH4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcbnB5dGhvbiB+L1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcbmBgYCJ9 -->
+<pre class="r"><code># windows
+python &quot;C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py&quot;
+python &quot;C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py&quot;
+# linux
+python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
+python ~/PyFan/ProjectSupport/graph/subplot.py</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1790,6 +1821,15 @@ summary {
 <h2><span class="header-section-number">1.4</span> Additional Packages</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29uZGEgaW5zdGFsbCBzdGF0c21vZGVsc1xuY29uZGEgaW5zdGFsbCBkYXRhc2hhcGVcbmNvbmRhIGluc3RhbGwgc2VhYm9yblxuY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSBpbnRlcnBvbGF0aW9uXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGF3c2NsaVxuY29uZGEgaW5zdGFsbCAtYyBhbmFjb25kYSBib3RvM1xuY29uZGEgaW5zdGFsbCAtYyByIHItaXJrZXJuZWxcbmBgYCJ9 -->
+<pre class="r"><code>conda install statsmodels
+conda install datashape
+conda install seaborn
+conda install -c conda-forge interpolation
+conda install -c conda-forge awscli
+conda install -c anaconda boto3
+conda install -c r r-irkernel</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1802,6 +1842,9 @@ summary {
 <p>open up RStudio, and see where paths are. also open up R from command prompt, see where paths are.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLmxpYlBhdGgoKVxuYGBgIn0= -->
+<pre class="r"><code>.libPath()</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Open up install and uninstall programs, find R and Rstudio, and uninstall them. Then delete all files found path paths shown by <em>.libPath()</em>, looking at these: - <em>C:/Users/fan/Documents/R/win-library/3.6</em> - <em>C:/Program Files/R/R-3.6.1/library</em></p>
@@ -1809,13 +1852,33 @@ summary {
 <div id="install-r-outside-of-conda" class="section level2">
 <h2><span class="header-section-number">2.2</span> Install R (outside of Conda)</h2>
 <ol style="list-style-type: decimal">
-<li><a href="https://cran.r-project.org/bin/windows/base/">download R</a></li>
-<li><a href="https://cran.r-project.org/bin/windows/base/">download R-studio</a></li>
+<li><a href="https://cloud.r-project.org/">download R</a></li>
+<li><a href="https://rstudio.com/products/rstudio/download/">download R-studio</a></li>
 <li>Open R-studio and auto-detect R</li>
 <li>Install packages</li>
 </ol>
+<p>note that installation will not work if the machine’s version of R is not up to date, this could be the case with default R versions for some linux installations.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBJbnN0YWxsIFItdG9vbHNcbmluc3RhbGwucGFja2FnZXMoXCJpbnN0YWxsclwiKVxubGlicmFyeShcImluc3RhbGxyXCIpXG5pbnN0YWxsLlJ0b29scygpXG4jIGM6L1J0b29scy9iaW47XG4jIGM6L1J0b29scy9taW5nd18zMi9iaW47XG4jIGM6L1J0b29scy9taW5nd182NC9iaW47XG5cbiMgbWFpbiBwYWNrYWdldnBzXG5pbnN0YWxsLnBhY2thZ2VzKGMoXCJ0aWR5clwiLCBcInRpZHl2ZXJzZVwiLCBcInRpZHltb2RlbHNcIikpXG4jIGRldmVsb3BtZW50IHBhY2thZ2VzXG5pbnN0YWxsLnBhY2thZ2VzKGMoXCJkZXZ0b29sc1wiLCBcImlya2VybmVsXCIsIFwicGtnZG93blwiLCBcInJveHlnZW4yXCIpKVxuIyBvdGhlciBwYWNrYWdlc1xuaW5zdGFsbC5wYWNrYWdlcyhjKFwiQUVSXCIsIFwibWlucGFjay5sbVwiLCBcImtuaXRyXCIsIFwia2FibGVFeHRyYVwiLCBcIm1hdGxhYlwiKSlcblxuIyBJbnN0YWxsIG15IHBhY2thZ2VcbmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YihcImZhbndhbmdlY29uL1I0RWNvblwiKVxuYGBgIn0= -->
+<pre class="r"><code># Install R-tools
+install.packages(&quot;installr&quot;)
+library(&quot;installr&quot;)
+install.Rtools()
+# c:/Rtools/bin;
+# c:/Rtools/mingw_32/bin;
+# c:/Rtools/mingw_64/bin;
+
+# main packagevps
+install.packages(c(&quot;tidyr&quot;, &quot;tidyverse&quot;, &quot;tidymodels&quot;))
+# development packages
+install.packages(c(&quot;devtools&quot;, &quot;irkernel&quot;, &quot;pkgdown&quot;, &quot;roxygen2&quot;))
+# other packages
+install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;matlab&quot;))
+
+# Install my package
+devtools::install_github(&quot;fanwangecon/R4Econ&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1825,6 +1888,21 @@ summary {
 <p>Key packages are generally available in conda’s default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. after adding <em>conda-forge</em> to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the <em>r_env</em> generation line with and without first adding <em>conda-forge</em> to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the <em>conda-forge</em> channels.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBTZXQgdXAgQ2hhbm5lbFxuY29uZGEgY29uZmlnIC0tYWRkIGNoYW5uZWxzIGNvbmRhLWZvcmdlXG4jIGluc3RhbGwga2V5IHIgcGFja2FnZXMgd2l0aGluIGEgci1lbnZpcm9ubWVudFxuY29uZGEgZW52IHJlbW92ZSAtbiByX2VudlxuY29uZGEgY3JlYXRlIC1uIHJfZW52IHItZXNzZW50aWFscyByLWJhc2Ugci10aWR5ciByLXRpZHl2ZXJzZSByLWRldnRvb2xzIHItaXJrZXJuZWwgci1wa2dkb3duIHItcm94eWdlbjJcbiMgc2VlIGFsbCBpbnN0YWxsZWQgZW52aXJvbm1lbnRzXG5jb25kYSBlbnYgbGlzdFxuIyBhY3RpdmF0ZSBhbiBlbnZpcm9ubWVudCB0byB1c2UgaXQsIGlmIGluIGJhc2UsIHIgZG9lcyBub3QgZXhpc3QsIGlzb2xhdGVkIGluIHJfZW52XG5jb25kYSBhY3RpdmF0ZSByX2VudlxuIyBzZWUgcGFja2FnZXMgaW4gZW52aXJvbm1lbnRcbmNvbmRhIGxpc3RcbiMgdG8gcXVpdFxuY29uZGEgZGVhY3RpdmF0ZVxuYGBgIn0= -->
+<pre class="bash"><code># Set up Channel
+conda config --add channels conda-forge
+# install key r packages within a r-environment
+conda env remove -n r_env
+conda create -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
+# see all installed environments
+conda env list
+# activate an environment to use it, if in base, r does not exist, isolated in r_env
+conda activate r_env
+# see packages in environment
+conda list
+# to quit
+conda deactivate</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -1837,14 +1915,50 @@ summary {
 <div id="install-additional-packages-inside-the-r-environment" class="section level2">
 <h2><span class="header-section-number">2.4</span> Install Additional Packages inside the R-environment</h2>
 <p>These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better.</p>
-<p>This did not work, <em>tidymodels</em> failed to install. Perhaps because of directory issues. <em>tidymodels</em> required <em>rstanarm</em>, and <em>rstanarm</em> failed to install.</p>
+<p>This did not work in windows, <em>tidymodels</em> failed to install. Perhaps because of directory issues. <em>tidymodels</em> required <em>rstanarm</em>, and <em>rstanarm</em> failed to install.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyMjIE9uZSBsaW5lXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItYWVyIHItbWlucGFjay5sbSByLWtuaXRyIHIta2FibGVFeHRyYSByLW1hdGxhYlxuIyBjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItcnN0YW5hcm1cblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgRXN0aW1hdGlvblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIEVzdGltYXRpb24gVG9vbHNcbiMgdGlkeW1vZGVscyBkb2VzIG5vdCB3b3JrIGZyb24gY29uZGEgaW5zdGFsbFxuIyBMaW5lYXIgUmVncmVzc2lvbiBQYWNrYWdlXG4jIGh0dHBzOi8vYW5hY29uZGEub3JnL2NvbmRhLWZvcmdlL3ItYWVyXG4jIE5vbmxpbmVhciBSZWdyZXNzaW9uIFBhY2thZ2VcbiMgaHR0cHM6Ly9hbmFjb25kYS5vcmcvY29uZGEtZm9yZ2Uvci1taW5wYWNrLmxtXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItYWVyIHItbWlucGFjay5sbVxuIyBlbnRlciByIGFuZCB1c2UgZGV2dG9vbHNcbiMgaW5zdGFsbC5wYWNrYWdlcyhcInRpZHltb2RlbHNcIilcblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgVmlzdWFsaWF0aW9uXG4jIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1rbml0ciByLWthYmxlRXh0cmFcblxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgVXRpbGl0aWVzXG4jIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQWxsb3dpbmcgZm9yIEludm9raW5nIE1hdGxhYiBGaWxlcyBmcm9tIEluc2lkZSBSXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItbWF0bGFiXG5gYGAifQ== -->
+<pre class="bash"><code>### One line
+conda install -c conda-forge r-aer r-minpack.lm r-knitr r-kableExtra r-matlab
+# conda install -c conda-forge r-rstanarm
+
+#######################################
+### Estimation
+#######################################
+# Estimation Tools
+# tidymodels does not work fron conda install
+# Linear Regression Package
+# https://anaconda.org/conda-forge/r-aer
+# Nonlinear Regression Package
+# https://anaconda.org/conda-forge/r-minpack.lm
+conda install -c conda-forge r-aer r-minpack.lm
+# enter r and use devtools
+# install.packages(&quot;tidymodels&quot;)
+
+#######################################
+### Visualiation
+#######################################
+conda install -c conda-forge r-knitr r-kableExtra
+
+#######################################
+### Utilities
+#######################################
+# Allowing for Invoking Matlab Files from Inside R
+conda install -c conda-forge r-matlab</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Install additional packages from inside R. The devtools install will install packages inside <em>envs/r_env/Lib/R</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgT3duIFBhY2thZ2VcbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjI1xuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFwiZmFud2FuZ2Vjb24vUjRFY29uXCIpXG4jIGluc3RhbGxfZGV2KFwiY2xpXCIpXG5gYGAifQ== -->
+<pre class="r"><code>#######################################
+### Own Package
+#######################################
+devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
+# install_dev(&quot;cli&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1862,6 +1976,33 @@ summary {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYWN0aXZhdGUgcl9lbnZcbmNkIFwiQzovUHJvZ3JhbSBGaWxlcy9SU3R1ZGlvL2JpblwiXG5yc3R1ZGlvLmV4ZVxuXG5jZCBcIkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnlcIlxuXCJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluL3JzdHVkaW8uZXhlXCJcbmBgYCJ9 -->
+<pre class="bash"><code>activate r_env
+cd &quot;C:/Program Files/RStudio/bin&quot;
+rstudio.exe
+
+cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
+&quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuPCEtLSBmb3IgdWJ1bnR1IC0tPlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvYmlvbmljL2FtZDY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXCJcbnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYlxuPCEtLSBmb3IgZGViaWFuIC0tPlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvZGViaWFuOS94ODZfNjQvcnN0dWRpby0xLjIuNTAzMy1hbWQ2NC5kZWJcIlxuc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXG5jb25kYSBpbnN0YWxsIC1jIHIgcnN0dWRpb1xuY2QgXCJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluXCJcbnJzdHVkaW8uZXhlXG5cbmNkIFwiQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeVwiXG5cIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4vcnN0dWRpby5leGVcIlxuYGBgIn0= -->
+<pre class="bash"><code>&lt;!-- for ubuntu --&gt;
+wget &quot;https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb&quot;
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+&lt;!-- for debian --&gt;
+wget &quot;https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb&quot;
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+conda install -c r rstudio
+cd &quot;C:/Program Files/RStudio/bin&quot;
+rstudio.exe
+
+cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
+&quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1870,6 +2011,34 @@ summary {
 <p>Install addition files inside Rstudio. Easier to debug potentially. Install rtools as described <a href="https://thecoatlessprofessor.com/programming/cpp/installing-rtools-for-compiled-code-via-rcpp/">here</a>: <a href="https://cran.r-project.org/bin/windows/Rtools/">rtools download</a>. Alternatively:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcImluc3RhbGxyXCIpXG5saWJyYXJ5KFwiaW5zdGFsbHJcIilcbiMgTm90ZSB0aGF0IHRoaXMgd2lsbCBnZW5lcmF0ZSBzZXZlcmFsIHBvcC11cCB3aW5kb3dzXG5pbnN0YWxsLlJ0b29scygpXG4jIGNob29zZSB0byBvbmx5IGluc3RhbGwgNjQgYml0IHRvb2xjaGFpblxuIyB0aGlzIGluc3RhbGxzIGcrKyB3aGljaCBpcyBuZWVkZWQgZm9yIHJzdGFuYXJtXG4jIEFkZCB0aGVzZSBiZWxvdyB0byB3aW5kb3dzIHBhdGhcbiMgYzovUnRvb2xzL2JpbjtcbiMgYzovUnRvb2xzL21pbmd3XzY0L2JpbjtcblxuaWYgKCFyZXF1aXJlKGRldnRvb2xzKSkge1xuICBpbnN0YWxsLnBhY2thZ2VzKFwiZGV2dG9vbHNcIilcbiAgbGlicmFyeShkZXZ0b29scylcbn1cbmxpYnJhcnkoZGV2dG9vbHMpXG5pbnN0YWxsX2dpdGh1YihcInN0YW4tZGV2L3JzdGFuYXJtXCIsIGFyZ3MgPSBcIi0tcHJlY2xlYW5cIilcblxuc2V0d2QoJ0M6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnknKVxuXG5pbnN0YWxsLnBhY2thZ2VzKFwic3Rhbi1kZXYvcnN0YW5hcm1cIiwgZGVwZW5kZW5jaWVzPVRSVUUsIElOU1RBTExfb3B0cyA9IGMoJy0tbm8tbG9jaycpKVxuXG4jIG90aGVyIHBhY2thZ2VzXG5pbnN0YWxsLnBhY2thZ2VzKGMoXCJ0aWR5bW9kZWxzXCIsIFwiQUVSXCIsIFwibWlucGFjay5sbVwiLCBcImtuaXRyXCIsIFwia2FibGVFeHRyYVwiLCBcIm1hdGxhYlwiKSlcblxuIyBJbnN0YWxsIG15IHBhY2thZ2VcbmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YihcImZhbndhbmdlY29uL1I0RWNvblwiKVxuYGBgIn0= -->
+<pre class="r"><code>install.packages(&quot;installr&quot;)
+library(&quot;installr&quot;)
+# Note that this will generate several pop-up windows
+install.Rtools()
+# choose to only install 64 bit toolchain
+# this installs g++ which is needed for rstanarm
+# Add these below to windows path
+# c:/Rtools/bin;
+# c:/Rtools/mingw_64/bin;
+
+if (!require(devtools)) {
+  install.packages(&quot;devtools&quot;)
+  library(devtools)
+}
+library(devtools)
+install_github(&quot;stan-dev/rstanarm&quot;, args = &quot;--preclean&quot;)
+
+setwd(&#39;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&#39;)
+
+install.packages(&quot;stan-dev/rstanarm&quot;, dependencies=TRUE, INSTALL_opts = c(&#39;--no-lock&#39;))
+
+# other packages
+install.packages(c(&quot;tidymodels&quot;, &quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;matlab&quot;))
+
+# Install my package
+devtools::install_github(&quot;fanwangecon/R4Econ&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="test-files" class="section level3">
@@ -1877,6 +2046,14 @@ summary {
 <p>Test the following file to see if we can execute a R file. Do it inside <em>r_env</em> and inside a <em>r</em> session.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBBIHNpbXBsZSBmaWxlIHdpdGggc3VtbWFyeSBzdGF0aXN0aWNzIHVzaW5nIHRpZHl2ZXJzZVxuc291cmNlKCdDOi9Vc2Vycy9mYW4vUjRFY29uL3N1bW1hcml6ZS9kaXN0L2ZzdF9oaXN0X29uZXZhci5SJylcbiMgQW5vdGhlciBzaW1wbGUgZmlsZSB3aXRoIHN1bW1hcnkgc3RhdGlzdGljcyB1c2luZyB0aWR5dmVyc2VcbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9zdXBwb3J0L3RpYmJsZS9mc190aWJfYmFzaWNzLlInKVxuIyBBIGZpbGUgaW52b2x2aW5nIGVzdGltYXRpb25cbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUicpXG5gYGAifQ== -->
+<pre class="r"><code># A simple file with summary statistics using tidyverse
+source(&#39;C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.R&#39;)
+# Another simple file with summary statistics using tidyverse
+source(&#39;C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R&#39;)
+# A file involving estimation
+source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1912,7 +2089,7 @@ summary {
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlB5dGhvbiBhbmQgUiBzZXQtdXAgYW5kIEluc3RhbGxhdGlvbnMgb24gTmV3IENvbXB1dGVyIg0Kb3V0cHV0Og0KICBwZGZfZG9jdW1lbnQ6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogIGh0bWxfbm90ZWJvb2s6DQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogIHdvcmRfZG9jdW1lbnQ6DQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogIGh0bWxfZG9jdW1lbnQ6DQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQp1cmxjb2xvcjogYmx1ZQ0KYWx3YXlzX2FsbG93X2h0bWw6IHllcw0KLS0tDQoNCkdvIGJhY2sgdG8gW2Zhbl0oaHR0cDovL2ZhbndhbmdlY29uLmdpdGh1Yi5pby8pJ3MgW01pc2NlbGxhbmVvdXMgUmVwb3NpdG9yeV0oaHR0cDovL2ZhbndhbmdlY29uLmdpdGh1Yi5pby9UZXg0RWNvbi9ub250ZXgvKS4NCg0KYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9DQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsIGV2YWwgPSBGQUxTRSkNCmBgYA0KDQojIENvbmRhDQoNClVzZSBjb25kYSBhY3Jvc3MgcGxhdGZvcm1zLCBzbyB0aGF0IGxvY2FsbHkgb24gd2luZG93cyBhbmQgdWJ1bnR1IGFuZCByZW1vdGVseSBvbiBhd3MsIGNhbiBoYXZlIHRoZSBzYW1lIHNvZnR3YXJlIHNldHVwIGVudmlyb25tZW50Lg0KDQpTZWFyY2ggZm9yIEFuYWNvbmRhIFByb21wdCwgcmlnaHQgY2xpY2ssIGNob29zZSBydW4gYXMgYWRtaW5pc3RyYXRvci4NCg0KQ2hlY2sgc29mdHdhcmUgdmVyc2lvbnMuDQoNCg0KYGBge2Jhc2h9DQpjb25kYSBsaXN0IGFuYWNvbmRhDQpweXRob24gLVYNCmBgYA0KDQojIyBGaXJzdCBUaW1lIENvbmRhIEluc3RhbGwNCg0KRG93bmxvYWQgYW5kIGluc3RhbGwgZm9yIGFsbCB1c2Vycy4gQWZ0ZXJ3YXJkcywgQW5hY29uZGEgZG9lcyBub3QgYXV0b21hdGljYWxseSBnZXQgYWRkZWQgdG8gV2luZG93cyBQYXRoLiBOZWVkIHRvIHVzZSBBbmFjb25kYSBQcm9tcHQgdG8gYWNjZXNzIHByb2dyYW1zLiBUbyBhY2Nlc3MgQW5hY29uZGEgcGFja2FnZXMgZnJvbSB3aW5kb3dzIHByb21wdCwgZnJvbSBnaXQgYmFzaCwgZnJvbSBSLCBldGMsIG5lZWQgdG8gQWRkIEFuYWNvbmRhIHRvIFdpbmRvd3MgUGF0aA0KDQpTZWUgQW5hY29uZGEgSW5zdGFsbGF0aW9uIERpcmVjdG9yeSwgaW4gYW5hY29uZGEgcHJvbXB0Og0KYGBge2Jhc2h9DQp3aGVyZSBhbmFjb25kYQ0KIyBDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvU2NyaXB0cy9hbmFjb25kYS5leGUNCndoZXJlIHB5dGhvbg0KIyBDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvcHl0aG9uLmV4ZQ0Kd2hlcmUganVweXRlcg0KIyBDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvU2NyaXB0cy9qdXB5dGVyLmV4ZQ0Kd2hlcmUganVweXRlci1rZXJuZWxzcGVjDQojIGlmIFIgaW5zdGFsbGVkIGFscmVhZHkNCndoZXJlIHINCmBgYA0KDQpUbyBBZGQgQW5hY29uZGEgdG8gUGF0aCwgSW4gV2luZG93cw0KMS4gc2VhcmNoIGZvcjogRW52aXJvbm1lbnQgVmFyaWFibGVzDQoyLiBFZGl0IEVudmlyb25tZW50IFZhcmlhYmxlcw0KMy4gQWRkIG5ldyB0byBQYXRoIChsb3dlciBoYWxmKToNCiAgICAtIEM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9TY3JpcHRzLw0KICAgIC0gQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzLw0KNC4gTm93IG9wZW4gdXAgcmVndWxhciB3aW5kb3dzIGNvbW1hbmQgUHJvbXB0LCBUeXBlIGluOg0KICAgIC0gY29uZGEgLS12ZXJzaW9uDQogICAgLSBhbHNvIENsb3NlIGFuZCBPcGVuIHVwIEdpdCBCYXNoOiBjb25kYSAtLXZlcnNpb24NCg0KIyMgQ29uZGEgVXBkYXRlDQoNCk9wZW4gdXAgQW5hY29uZGEgTmF2aWdhdG9yLCBpdCB3aWxsIHVwZGF0ZSBuYXZpZ2F0b3IgYXV0b21hdGljYWxseS4gSWYgdGhlcmUgYXJlIGVycm9ycywgbWlnaHQgaGF2ZSB0byBjbGVhbiBmaXJzdC4NCg0KYGBge2Jhc2h9DQojICMgaWYgdGhlcmUgYXJlIGJ1Z3MNCiMgY29uZGEgY2xlYW4gLS1wYWNrYWdlcw0KIyBub3JtYWwgdXBkYXRlDQpjb25kYSB1cGRhdGUgLS1hbGwNCmBgYA0KDQojIyBDb25kYSBUZXN0IFB5dGhvbg0KDQpgYGB7cn0NCnB5dGhvbiAiQzovVXNlcnMvZmFuL1B5RmFuL1Byb2plY3RTdXBwb3J0L1Rlc3RpbmcvTnVtcHkvRnVuY3Rpb25zLnB5Ig0KcHl0aG9uICJDOi9Vc2Vycy9mYW4vUHlGYW4vUHJvamVjdFN1cHBvcnQvZ3JhcGgvc3VicGxvdC5weSINCmBgYA0KDQojIyBBZGRpdGlvbmFsIFBhY2thZ2VzDQoNCmBgYHtyfQ0KY29uZGEgaW5zdGFsbCBzdGF0c21vZGVscw0KY29uZGEgaW5zdGFsbCBkYXRhc2hhcGUNCmNvbmRhIGluc3RhbGwgc2VhYm9ybg0KY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSBpbnRlcnBvbGF0aW9uDQpjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGF3c2NsaQ0KY29uZGEgaW5zdGFsbCAtYyBhbmFjb25kYSBib3RvMw0KY29uZGEgaW5zdGFsbCAtYyByIHItaXJrZXJuZWwNCmBgYA0KDQojIFIgSW5zdGFsbGF0aW9uDQoNClRyeSB0byBpbnN0YWxsIFIgZnJvbSB3aXRoaW4gQ29uZGEuIFRoZSBwcm9jZWR1cmUgaGVyZSBpcyB0aGUgc2FtZSBmb3Igd2luZG93cyBhcyB3ZWxsIGFzIGxpbnV4IG1hY2hpbmVzLg0KDQojIyBGdWxseSB1bmluc3RhbGwgcg0KDQpvcGVuIHVwIFJTdHVkaW8sIGFuZCBzZWUgd2hlcmUgcGF0aHMgYXJlLg0KYWxzbyBvcGVuIHVwIFIgZnJvbSBjb21tYW5kIHByb21wdCwgc2VlIHdoZXJlIHBhdGhzIGFyZS4NCg0KYGBge1J9DQoubGliUGF0aCgpDQpgYGANCg0KT3BlbiB1cCBpbnN0YWxsIGFuZCB1bmluc3RhbGwgcHJvZ3JhbXMsIGZpbmQgUiBhbmQgUnN0dWRpbywgYW5kIHVuaW5zdGFsbCB0aGVtLiBUaGVuIGRlbGV0ZSBhbGwgZmlsZXMgZm91bmQgcGF0aCBwYXRocyBzaG93biBieSAqLmxpYlBhdGgoKSosIGxvb2tpbmcgYXQgdGhlc2U6DQogICAgLSAqQzovVXNlcnMvZmFuL0RvY3VtZW50cy9SL3dpbi1saWJyYXJ5LzMuNioNCiAgICAtICpDOi9Qcm9ncmFtIEZpbGVzL1IvUi0zLjYuMS9saWJyYXJ5Kg0KDQojIyBJbnN0YWxsIFIgKG91dHNpZGUgb2YgQ29uZGEpDQoNCjEuIFtkb3dubG9hZCBSXShodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy9iaW4vd2luZG93cy9iYXNlLykNCjIuIFtkb3dubG9hZCBSLXN0dWRpb10oaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvYmluL3dpbmRvd3MvYmFzZS8pDQozLiBPcGVuIFItc3R1ZGlvIGFuZCBhdXRvLWRldGVjdCBSDQo0LiBJbnN0YWxsIHBhY2thZ2VzDQoNCmBgYHtyfQ0KIyBJbnN0YWxsIFItdG9vbHMNCmluc3RhbGwucGFja2FnZXMoImluc3RhbGxyIikNCmxpYnJhcnkoImluc3RhbGxyIikNCmluc3RhbGwuUnRvb2xzKCkNCg0KIyBtYWluIHBhY2thZ2V2cHMNCmluc3RhbGwucGFja2FnZXMoYygidGlkeXIiLCAidGlkeXZlcnNlIiwgInRpZHltb2RlbHMiKSkNCiMgZGV2ZWxvcG1lbnQgcGFja2FnZXMNCmluc3RhbGwucGFja2FnZXMoYygiZGV2dG9vbHMiLCAiaXJrZXJuZWwiLCAicGtnZG93biIsICJyb3h5Z2VuMiIpKQ0KIyBvdGhlciBwYWNrYWdlcw0KaW5zdGFsbC5wYWNrYWdlcyhjKCJBRVIiLCAibWlucGFjay5sbSIsICJrbml0ciIsICJrYWJsZUV4dHJhIiwgIm1hdGxhYiIpKQ0KDQojIEluc3RhbGwgbXkgcGFja2FnZQ0KZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKCJmYW53YW5nZWNvbi9SNEVjb24iKQ0KYGBgDQoNCiMjIFNldCB1cCBSLUVudmlyb25tZW50IGluIENvbmRhDQoNCkNvbmRhIGVudmlyb25tZW50cyBhcmUgbGFuZ3VhZ2UgYWdub3N0aWMuIHBpcCBpcyBhIHBhY2thZ2UgbWFuYWdlciBmb3IgUHl0aG9uLiB2ZW52IGlzIGFuIGVudmlyb25tZW50IG1hbmFnZXIgZm9yIFB5dGhvbi4gY29uZGEgaXMgYm90aCBhIHBhY2thZ2UgYW5kIGVudmlyb25tZW50IG1hbmFnZXIgYW5kIGlzIGxhbmd1YWdlIGFnbm9zdGljLiBJbnNpZGUgQW5hY29uZGEgUHJvbXB0Og0KDQpLZXkgcGFja2FnZXMgYXJlIGdlbmVyYWxseSBhdmFpbGFibGUgaW4gY29uZGEncyBkZWZhdWx0IGNoYW5uZWwgKG9mZmljaWFsIGRpc3RyaWJ1dGlvbikgYW5kIGFsc28gdGhlIG1vcmUgZnJlcXVlbnRseSB1cGRhdGVkIGNvbmRhLWZvcmdlIGNoYW5uZWwuIFByaW9yaXRpemUgY29uZGEtZm9yZ2UgdG8gZ2V0IHRoZSBsYXRlc3QgcGFja2FnZXMuIGFmdGVyIGFkZGluZyAqY29uZGEtZm9yZ2UqIHRvIGNoYW5uZWxzLCB0aGF0IHdpbGwgYmUgcHJpb3JpdGl6ZWQsIHNvIHdoZW4gY3JlYXRpbmcgYSBuZXcgZW52aXJvbm1lbnQsIGNvbmRhIHdpbGwgaW5zdGFsbCBmaXJzdCBmcm9tIGNvbmRhLWZvcmdlIGlmIHBhY2thZ2UgZXhpc3RzIHRoZXJlLiBUcnkgdGhlICpyX2VudiogZ2VuZXJhdGlvbiBsaW5lIHdpdGggYW5kIHdpdGhvdXQgZmlyc3QgYWRkaW5nICpjb25kYS1mb3JnZSogdG8gY2hhbm5lbCwgYW5kIHNlZSB0aGF0IHRoZSBwYWNrYWdlcyBpbnN0YWxsZWQgd2lsbCBoYXZlIGRpZmZlcmVudCB2ZXJzaW9ucywgcmVmbGVjdGluZyB2ZXJzaW9ucyBpbiB0aGUgZGVmYXVsdCBjaGFubmVsIGFuZCBpbiB0aGUgKmNvbmRhLWZvcmdlKiBjaGFubmVscy4NCg0KYGBge2Jhc2h9DQojIFNldCB1cCBDaGFubmVsDQpjb25kYSBjb25maWcgLS1hZGQgY2hhbm5lbHMgY29uZGEtZm9yZ2UNCiMgaW5zdGFsbCBrZXkgciBwYWNrYWdlcyB3aXRoaW4gYSByLWVudmlyb25tZW50DQpjb25kYSBlbnYgcmVtb3ZlIC1uIHJfZW52DQpjb25kYSBjcmVhdGUgLW4gcl9lbnYgci1lc3NlbnRpYWxzIHItYmFzZSByLXRpZHlyIHItdGlkeXZlcnNlIHItZGV2dG9vbHMgci1pcmtlcm5lbCByLXBrZ2Rvd24gci1yb3h5Z2VuMg0KIyBzZWUgYWxsIGluc3RhbGxlZCBlbnZpcm9ubWVudHMNCmNvbmRhIGVudiBsaXN0DQojIGFjdGl2YXRlIGFuIGVudmlyb25tZW50IHRvIHVzZSBpdCwgaWYgaW4gYmFzZSwgciBkb2VzIG5vdCBleGlzdCwgaXNvbGF0ZWQgaW4gcl9lbnYNCmNvbmRhIGFjdGl2YXRlIHJfZW52DQojIHNlZSBwYWNrYWdlcyBpbiBlbnZpcm9ubWVudA0KY29uZGEgbGlzdA0KIyB0byBxdWl0DQpjb25kYSBkZWFjdGl2YXRlDQpgYGANCg0KLSAqKkxvY2F0aW9uKio6IEluc3RhbGxlZCBlbnZpcm9ubWVudHMgYXJlIHNob3duIGFwcGVhciBpbiB0aGUgKmVudnMqIGZvbGRlciBvZiAqQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvKi4gQ2FuIGJlIGVhc2lseSBkZWxldGVkIHdpdGhvdXQgZGlzcnVwdGluZyB0aGUgbWFpbiBiYXNlIGluc3RhbGxhdGlvbiBmb3IgY29uZGEuIFRoaXMgaXMgdmVyeSBpbXBvcnRhbnQuIER1cmluZyBpbnN0YWxsYXRpb24sIGNvdWxkIGVhc2lseSBydW4gaW50byBwcm9ibGVtcywgYW5kIG5lZWQgdG8gcmUtaW5zdGFsbC4gTXVjaCBiZXR0ZXIgdG8gb25seSByZS1pbnN0YWxsIGEgZm9sZGVyLiBOb3RlIHRoYXQgd2hlbiBSIGlzIGluc3RhbGxlZCBpbiAqZW52cyosIGl0IHdpbGwgbm90IHNob3cgdXAgdW5kZXIgYWRkIG9yIHJlbW92ZSBwcm9ncmFtcyBmb3IgdW5pbnN0YWxsYXRpb24gZnJvbSB0aGVyZSwgaGFzIHRvIGJlIHVuaW5zdGFsbGVkLCBkZWxldGVkIGRpcmVjdGx5IGhlcmUuDQotICoqVXNlIG9ubHkgaW4gRW52Kio6IE5vdGUgdGhhdCBpZiB3ZSBpbnN0YWxsZWQgciBpbnNpZGUgcl9lbnYsIGlmIHdlIHR5cGUgKnIqIHVuZGVyIHRoZSBiYXNlIGVudmlyb25tZW50LCB3ZSBjYW4gbm90IGVudGVyIHIuIFdlIGNhbiBvbmx5IGVudGVyIHIgd2l0aGluIHJfZW52LiBXaXRoIFBBVEggcHJvcGVybHkgc2V0LXVwLCB0aGlzIGhhcHBlbnMgdW5kZXIgQ29uZGEgUHJvbXB0LCBXaW5kb3dzIFByb21wdCwgZXRjLg0KLSAqKk11bHRpcGxlIFB5dGhvbnMqKjogV2l0aCB0aGUgYWJvdmUgaW5zdGFsbGF0aW9uIGZvciBSLCBvbmUgYmVuZWZpdCBpcyB0aGF0IGlmIFIgcmVxdWlyZXMgYSBkaWZmZXJlbnQgdmVyc2lvbiBvZiBQeXRob24gdGhhbiB3aGF0IHRoZSBiYXNlIGVudmlyb25tZW50IHVzZXMsIHRoZSByX2VudiBjb3VsZCBoYXZlIGEgZGlmZmVyZW50IHB5dGhvbiB2ZXJzaW9uLiBTbyB0eXBlICpweXRob24qIGluIHRoZSBiYXNlIGVudmlyb25tZW50IGFzIHdlbGwgYXMgaW5zaWRlIHRoZSAqcl9lbnYqLiBUaGlzIGFsc28gbWVhbnMgcG90ZW50aWFsbHkgdGhlcmUgY291bGQgYmUgZHVwbGljYXRlZCBpbnN0YWxsYXRpb25zIEkgdGhpbmsuIExvb2sgYXQgdGhlIHB5dGhvbiB2ZXJzaW9ucyB1bmRlciAqY29uZGEgbGlzdCogaW4gdGhlIGJhc2UgYW5kIGluIHRoZSByLWVudmlyb25tZW50Lg0KLSAqKkZpbGUgU2l6ZSoqOiBOb3RlIHRoYXQgdGhpcyBjcmVhdGVzIGEgbGFyZ2UgaW5zdGFsbGF0aW9uIGZvbGRlciwgKkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52LyosIHdpdGhvdXQgYWRkaXRpb25hbCBwYWNrYWdlcywgaXMgMS4zIEdCIGluIHNpemUNCg0KIyMgSW5zdGFsbCBBZGRpdGlvbmFsIFBhY2thZ2VzIGluc2lkZSB0aGUgUi1lbnZpcm9ubWVudA0KDQpUaGVzZSBhcmUgcGFja2FnZXMgdGhhdCBJIHVzZSwgdGhlc2Ugc2hvdWxkIGJlIGluc3RhbGxlZCBpbnNpZGUgdGhlIGVudmlyb25tZW50LiBPciB0aGV5IGNvdWxkIGJlIGluc3RhbGxlZCBsYXRlciBmcm9tIGluc2lkZSByLXN0dWRpby4gSW5zdGFsbGluZyBpbnNpZGUgci1zdHVkaW8gaXMgYSBsb3QgYmV0dGVyLg0KDQpUaGlzIGRpZCBub3Qgd29yaywgKnRpZHltb2RlbHMqIGZhaWxlZCB0byBpbnN0YWxsLiBQZXJoYXBzIGJlY2F1c2Ugb2YgZGlyZWN0b3J5IGlzc3Vlcy4gKnRpZHltb2RlbHMqIHJlcXVpcmVkICpyc3RhbmFybSosIGFuZCAqcnN0YW5hcm0qIGZhaWxlZCB0byBpbnN0YWxsLiANCg0KYGBge2Jhc2h9DQojIyMgT25lIGxpbmUNCmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1hZXIgci1taW5wYWNrLmxtIHIta25pdHIgci1rYWJsZUV4dHJhIHItbWF0bGFiDQojIGNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1yc3RhbmFybQ0KDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMjIyBFc3RpbWF0aW9uDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMgRXN0aW1hdGlvbiBUb29scw0KIyB0aWR5bW9kZWxzIGRvZXMgbm90IHdvcmsgZnJvbiBjb25kYSBpbnN0YWxsDQojIExpbmVhciBSZWdyZXNzaW9uIFBhY2thZ2UNCiMgaHR0cHM6Ly9hbmFjb25kYS5vcmcvY29uZGEtZm9yZ2Uvci1hZXINCiMgTm9ubGluZWFyIFJlZ3Jlc3Npb24gUGFja2FnZQ0KIyBodHRwczovL2FuYWNvbmRhLm9yZy9jb25kYS1mb3JnZS9yLW1pbnBhY2subG0NCmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1hZXIgci1taW5wYWNrLmxtDQojIGVudGVyIHIgYW5kIHVzZSBkZXZ0b29scw0KIyBpbnN0YWxsLnBhY2thZ2VzKCJ0aWR5bW9kZWxzIikNCg0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjDQojIyMgVmlzdWFsaWF0aW9uDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1rbml0ciByLWthYmxlRXh0cmENCg0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjDQojIyMgVXRpbGl0aWVzDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMgQWxsb3dpbmcgZm9yIEludm9raW5nIE1hdGxhYiBGaWxlcyBmcm9tIEluc2lkZSBSDQpjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItbWF0bGFiDQpgYGANCg0KSW5zdGFsbCBhZGRpdGlvbmFsIHBhY2thZ2VzIGZyb20gaW5zaWRlIFIuIFRoZSBkZXZ0b29scyBpbnN0YWxsIHdpbGwgaW5zdGFsbCBwYWNrYWdlcyBpbnNpZGUgKmVudnMvcl9lbnYvTGliL1IqLg0KDQpgYGB7cn0NCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KIyMjIE93biBQYWNrYWdlDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YigiZmFud2FuZ2Vjb24vUjRFY29uIikNCiMgaW5zdGFsbF9kZXYoImNsaSIpDQpgYGANCg0KIyMgUi1TdHVkaW8gU2V0LXVwIERvd25sb2FkIGZyb20gUnN0dWRpbw0KDQoxLiBEb3dubG9hZCBSLXN0dWRpbywgYW5kIGluc3RhbGwsIGFzIG5vcm1hbCAobm90IGZyb20gY29uZGEsIGRpcmVjdGx5IGZyb20gcnN0dWRpbyB3ZWJzaXRlIGxhdGVzdCB3aW5kb3dzIHZlcnNpb24pDQoyLiBPcGVuIHVwIGFuYWNvbmRhIHByb21wdCwgZW50ZXIgKnJfZW52KiBlbnZpcm9ubWVudDogKmFjdGl2YXRlIHJfZW52Kg0KMy4gY2QgaW50byByc3R1ZGlvIGV4ZSBmaWxlIGZvbGRlcjogY2QgIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4iDQo0LiBzdGFydCByLXN0dWRpbyBmcm9tIGluc2lkZSAqcl9lbnYqOiByc3R1ZGlvLmV4ZQ0KNS4gaW5zaWRlIHItc3R1ZGlvLCBjaGVjazogKi5saWJQYXRocygpKg0KICAgIC0gIkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnkiDQoNCmBgYHtiYXNofQ0KYWN0aXZhdGUgcl9lbnYNCmNkICJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluIg0KcnN0dWRpby5leGUNCg0KY2QgIkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnkiDQoiQzovUHJvZ3JhbSBGaWxlcy9SU3R1ZGlvL2Jpbi9yc3R1ZGlvLmV4ZSINCmBgYA0KDQoNCiMjIEluc3RhbGwgUGFja2FnZXMgZnJvbSBSLVN0dWRpbw0KDQpJbnN0YWxsIGFkZGl0aW9uIGZpbGVzIGluc2lkZSBSc3R1ZGlvLiBFYXNpZXIgdG8gZGVidWcgcG90ZW50aWFsbHkuIEluc3RhbGwgcnRvb2xzIGFzIGRlc2NyaWJlZCBbaGVyZV0oaHR0cHM6Ly90aGVjb2F0bGVzc3Byb2Zlc3Nvci5jb20vcHJvZ3JhbW1pbmcvY3BwL2luc3RhbGxpbmctcnRvb2xzLWZvci1jb21waWxlZC1jb2RlLXZpYS1yY3BwLyk6IFtydG9vbHMgZG93bmxvYWRdKGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL2Jpbi93aW5kb3dzL1J0b29scy8pLiBBbHRlcm5hdGl2ZWx5Og0KDQpgYGB7cn0NCmluc3RhbGwucGFja2FnZXMoImluc3RhbGxyIikNCmxpYnJhcnkoImluc3RhbGxyIikNCiMgTm90ZSB0aGF0IHRoaXMgd2lsbCBnZW5lcmF0ZSBzZXZlcmFsIHBvcC11cCB3aW5kb3dzDQppbnN0YWxsLlJ0b29scygpDQojIGNob29zZSB0byBvbmx5IGluc3RhbGwgNjQgYml0IHRvb2xjaGFpbg0KIyB0aGlzIGluc3RhbGxzIGcrKyB3aGljaCBpcyBuZWVkZWQgZm9yIHJzdGFuYXJtDQojIEFkZCB0aGVzZSBiZWxvdyB0byB3aW5kb3dzIHBhdGgNCiMgYzovUnRvb2xzL2JpbjsNCiMgYzovUnRvb2xzL21pbmd3XzYyL2JpbjsNCg0KaWYgKCFyZXF1aXJlKGRldnRvb2xzKSkgew0KICBpbnN0YWxsLnBhY2thZ2VzKCJkZXZ0b29scyIpDQogIGxpYnJhcnkoZGV2dG9vbHMpDQp9DQpsaWJyYXJ5KGRldnRvb2xzKQ0KaW5zdGFsbF9naXRodWIoInN0YW4tZGV2L3JzdGFuYXJtIiwgYXJncyA9ICItLXByZWNsZWFuIikNCg0Kc2V0d2QoJ0M6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnknKQ0KDQppbnN0YWxsLnBhY2thZ2VzKCJzdGFuLWRldi9yc3RhbmFybSIsIGRlcGVuZGVuY2llcz1UUlVFLCBJTlNUQUxMX29wdHMgPSBjKCctLW5vLWxvY2snKSkNCg0KIyBvdGhlciBwYWNrYWdlcw0KaW5zdGFsbC5wYWNrYWdlcyhjKCJ0aWR5bW9kZWxzIiwgIkFFUiIsICJtaW5wYWNrLmxtIiwgImtuaXRyIiwgImthYmxlRXh0cmEiLCAibWF0bGFiIikpDQoNCiMgSW5zdGFsbCBteSBwYWNrYWdlDQpkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoImZhbndhbmdlY29uL1I0RWNvbiIpDQpgYGANCg0KIyMjIFRlc3QgRmlsZXMNCg0KVGVzdCB0aGUgZm9sbG93aW5nIGZpbGUgdG8gc2VlIGlmIHdlIGNhbiBleGVjdXRlIGEgUiBmaWxlLiBEbyBpdCBpbnNpZGUgKnJfZW52KiBhbmQgaW5zaWRlIGEgKnIqIHNlc3Npb24uDQoNCmBgYHtyfQ0KIyBBIHNpbXBsZSBmaWxlIHdpdGggc3VtbWFyeSBzdGF0aXN0aWNzIHVzaW5nIHRpZHl2ZXJzZQ0Kc291cmNlKCdDOi9Vc2Vycy9mYW4vUjRFY29uL3N1bW1hcml6ZS9kaXN0L2ZzdF9oaXN0X29uZXZhci5SJykNCiMgQW5vdGhlciBzaW1wbGUgZmlsZSB3aXRoIHN1bW1hcnkgc3RhdGlzdGljcyB1c2luZyB0aWR5dmVyc2UNCnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9zdXBwb3J0L3RpYmJsZS9mc190aWJfYmFzaWNzLlInKQ0KIyBBIGZpbGUgaW52b2x2aW5nIGVzdGltYXRpb24NCnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUicpDQpgYGANCg0KIyBPdGhlciBQcm9ncmFtcyB0byBJbnN0YWxsDQoNCiMjIERldmVsb3BtZW50IFByb2dyYW1zDQoNCi0gW2dpdCBmb3Igd2luZG93c10oaHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZC93aW4pOiBhZnRlciBpbnN0YWxsLCB0cnkgImNkIH4vUHlGYW4iDQotIFthdG9tXShodHRwczovL2F0b20uaW8vKQ0KLSBbcHljaGFybV0oaHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS9weWNoYXJtLykNCg0KIyMgS2V5IFByb2dyYW1zDQoNCi0gQWRvYmUgQWNyb2JhdA0KICAgICsgZ28gdG8gYWRvYmUgd2Vic2l0ZSwgbG9nIGluIHVzaW5nIGZ3YW5nMjZAdWguZWR1DQogICAgKyBnbyB0byBteSBhY2NvdW50LCBjaG9vc2UgdmlldyBhbmQgZG93bmxvYWQgbXkgYXBwcywgY2hvb3NlIGFjcm9iYXQgJiBQREYsIGRvd25sb2FkIEFjcm9iYXQgREMNCiAgICArIFVIIGFjY291bnQgY2FuIG9ubHkgYmUgYWN0aXZhdGVkIG9uIHR3byBhY2NvdW50cyBhdCBvbmNlLCBzbyBuZWVkIHRvIGtpY2sgb3RoZXIgY29tcHV0ZXJzIG91dCB0ZW1wb3JhcmlseSBwb3RlbnRpYWxseQ0KDQojIyBVdGlsaXRpZXMNCg0KLSA3LXppcA0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlB5dGhvbiBhbmQgUiBzZXQtdXAgYW5kIEluc3RhbGxhdGlvbnMgb24gTmV3IENvbXB1dGVyIg0Kb3V0cHV0Og0KICBwZGZfZG9jdW1lbnQ6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogIGh0bWxfbm90ZWJvb2s6DQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogIHdvcmRfZG9jdW1lbnQ6DQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogIGh0bWxfZG9jdW1lbnQ6DQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQp1cmxjb2xvcjogYmx1ZQ0KYWx3YXlzX2FsbG93X2h0bWw6IHllcw0KLS0tDQoNCkdvIGJhY2sgdG8gW2Zhbl0oaHR0cDovL2ZhbndhbmdlY29uLmdpdGh1Yi5pby8pJ3MgW01pc2NlbGxhbmVvdXMgUmVwb3NpdG9yeV0oaHR0cDovL2ZhbndhbmdlY29uLmdpdGh1Yi5pby9UZXg0RWNvbi9ub250ZXgvKS4NCg0KYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9DQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsIGV2YWwgPSBGQUxTRSkNCmBgYA0KDQojIENvbmRhDQoNClVzZSBjb25kYSBhY3Jvc3MgcGxhdGZvcm1zLCBzbyB0aGF0IGxvY2FsbHkgb24gd2luZG93cyBhbmQgdWJ1bnR1IGFuZCByZW1vdGVseSBvbiBhd3MsIGNhbiBoYXZlIHRoZSBzYW1lIHNvZnR3YXJlIHNldHVwIGVudmlyb25tZW50Lg0KDQpTZWFyY2ggZm9yIEFuYWNvbmRhIFByb21wdCwgcmlnaHQgY2xpY2ssIGNob29zZSBydW4gYXMgYWRtaW5pc3RyYXRvci4NCg0KQ2hlY2sgc29mdHdhcmUgdmVyc2lvbnMuDQoNCg0KYGBge2Jhc2h9DQpjb25kYSBsaXN0IGFuYWNvbmRhDQpweXRob24gLVYNCmBgYA0KDQojIyBGaXJzdCBUaW1lIENvbmRhIEluc3RhbGwNCg0KRG93bmxvYWQgYW5kIGluc3RhbGwgZm9yIGFsbCB1c2Vycy4gQWZ0ZXJ3YXJkcywgQW5hY29uZGEgZG9lcyBub3QgYXV0b21hdGljYWxseSBnZXQgYWRkZWQgdG8gV2luZG93cyBQYXRoLiBOZWVkIHRvIHVzZSBBbmFjb25kYSBQcm9tcHQgdG8gYWNjZXNzIHByb2dyYW1zLiBUbyBhY2Nlc3MgQW5hY29uZGEgcGFja2FnZXMgZnJvbSB3aW5kb3dzIHByb21wdCwgZnJvbSBnaXQgYmFzaCwgZnJvbSBSLCBldGMsIG5lZWQgdG8gQWRkIEFuYWNvbmRhIHRvIFdpbmRvd3MgUGF0aA0KDQpTZWUgQW5hY29uZGEgSW5zdGFsbGF0aW9uIERpcmVjdG9yeSwgaW4gYW5hY29uZGEgcHJvbXB0Og0KYGBge2Jhc2h9DQp3aGVyZSBhbmFjb25kYQ0KIyBDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvU2NyaXB0cy9hbmFjb25kYS5leGUNCndoZXJlIHB5dGhvbg0KIyBDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvcHl0aG9uLmV4ZQ0Kd2hlcmUganVweXRlcg0KIyBDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvU2NyaXB0cy9qdXB5dGVyLmV4ZQ0Kd2hlcmUganVweXRlci1rZXJuZWxzcGVjDQojIGlmIFIgaW5zdGFsbGVkIGFscmVhZHkNCndoZXJlIHINCmBgYA0KDQpUbyBBZGQgQW5hY29uZGEgdG8gUGF0aCwgSW4gV2luZG93cw0KMS4gc2VhcmNoIGZvcjogRW52aXJvbm1lbnQgVmFyaWFibGVzDQoyLiBFZGl0IEVudmlyb25tZW50IFZhcmlhYmxlcw0KMy4gQWRkIG5ldyB0byBQYXRoIChsb3dlciBoYWxmKToNCiAgICAtIEM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9TY3JpcHRzLw0KICAgIC0gQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzLw0KNC4gTm93IG9wZW4gdXAgcmVndWxhciB3aW5kb3dzIGNvbW1hbmQgUHJvbXB0LCBUeXBlIGluOg0KICAgIC0gY29uZGEgLS12ZXJzaW9uDQogICAgLSBhbHNvIENsb3NlIGFuZCBPcGVuIHVwIEdpdCBCYXNoOiBjb25kYSAtLXZlcnNpb24NCg0KIyMgQ29uZGEgVXBkYXRlDQoNCk9wZW4gdXAgQW5hY29uZGEgTmF2aWdhdG9yLCBpdCB3aWxsIHVwZGF0ZSBuYXZpZ2F0b3IgYXV0b21hdGljYWxseS4gSWYgdGhlcmUgYXJlIGVycm9ycywgbWlnaHQgaGF2ZSB0byBjbGVhbiBmaXJzdC4NCg0KYGBge2Jhc2h9DQojICMgaWYgdGhlcmUgYXJlIGJ1Z3MNCiMgY29uZGEgY2xlYW4gLS1wYWNrYWdlcw0KIyB1c2UgY29uZGEtZm9yZ2UgYXMgbWFpbiBjaGFubmVsLCBtb3JlIHVwZGF0ZWQgcGFja2FnZXMNCmNvbmRhIGNvbmZpZyAtLWFkZCBjaGFubmVscyBjb25kYS1mb3JnZQ0KIyBub3JtYWwgdXBkYXRlDQpjb25kYSB1cGRhdGUgLS1hbGwNCmBgYA0KDQojIyBDb25kYSBUZXN0IFB5dGhvbg0KDQpgYGB7cn0NCiMgd2luZG93cw0KcHl0aG9uICJDOi9Vc2Vycy9mYW4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHkiDQpweXRob24gIkM6L1VzZXJzL2Zhbi9QeUZhbi9Qcm9qZWN0U3VwcG9ydC9ncmFwaC9zdWJwbG90LnB5Ig0KIyBsaW51eA0KcHl0aG9uIH4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHkNCnB5dGhvbiB+L1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHkNCmBgYA0KDQojIyBBZGRpdGlvbmFsIFBhY2thZ2VzDQoNCmBgYHtyfQ0KY29uZGEgaW5zdGFsbCBzdGF0c21vZGVscw0KY29uZGEgaW5zdGFsbCBkYXRhc2hhcGUNCmNvbmRhIGluc3RhbGwgc2VhYm9ybg0KY29uZGEgaW5zdGFsbCAtYyBjb25kYS1mb3JnZSBpbnRlcnBvbGF0aW9uDQpjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGF3c2NsaQ0KY29uZGEgaW5zdGFsbCAtYyBhbmFjb25kYSBib3RvMw0KY29uZGEgaW5zdGFsbCAtYyByIHItaXJrZXJuZWwNCmBgYA0KDQojIFIgSW5zdGFsbGF0aW9uDQoNClRyeSB0byBpbnN0YWxsIFIgZnJvbSB3aXRoaW4gQ29uZGEuIFRoZSBwcm9jZWR1cmUgaGVyZSBpcyB0aGUgc2FtZSBmb3Igd2luZG93cyBhcyB3ZWxsIGFzIGxpbnV4IG1hY2hpbmVzLg0KDQojIyBGdWxseSB1bmluc3RhbGwgcg0KDQpvcGVuIHVwIFJTdHVkaW8sIGFuZCBzZWUgd2hlcmUgcGF0aHMgYXJlLg0KYWxzbyBvcGVuIHVwIFIgZnJvbSBjb21tYW5kIHByb21wdCwgc2VlIHdoZXJlIHBhdGhzIGFyZS4NCg0KYGBge1J9DQoubGliUGF0aCgpDQpgYGANCg0KT3BlbiB1cCBpbnN0YWxsIGFuZCB1bmluc3RhbGwgcHJvZ3JhbXMsIGZpbmQgUiBhbmQgUnN0dWRpbywgYW5kIHVuaW5zdGFsbCB0aGVtLiBUaGVuIGRlbGV0ZSBhbGwgZmlsZXMgZm91bmQgcGF0aCBwYXRocyBzaG93biBieSAqLmxpYlBhdGgoKSosIGxvb2tpbmcgYXQgdGhlc2U6DQogICAgLSAqQzovVXNlcnMvZmFuL0RvY3VtZW50cy9SL3dpbi1saWJyYXJ5LzMuNioNCiAgICAtICpDOi9Qcm9ncmFtIEZpbGVzL1IvUi0zLjYuMS9saWJyYXJ5Kg0KDQojIyBJbnN0YWxsIFIgKG91dHNpZGUgb2YgQ29uZGEpDQoNCjEuIFtkb3dubG9hZCBSXShodHRwczovL2Nsb3VkLnItcHJvamVjdC5vcmcvKQ0KMi4gW2Rvd25sb2FkIFItc3R1ZGlvXShodHRwczovL3JzdHVkaW8uY29tL3Byb2R1Y3RzL3JzdHVkaW8vZG93bmxvYWQvKQ0KMy4gT3BlbiBSLXN0dWRpbyBhbmQgYXV0by1kZXRlY3QgUg0KNC4gSW5zdGFsbCBwYWNrYWdlcw0KDQpub3RlIHRoYXQgaW5zdGFsbGF0aW9uIHdpbGwgbm90IHdvcmsgaWYgdGhlIG1hY2hpbmUncyB2ZXJzaW9uIG9mIFIgaXMgbm90IHVwIHRvIGRhdGUsIHRoaXMgY291bGQgYmUgdGhlIGNhc2Ugd2l0aCBkZWZhdWx0IFIgdmVyc2lvbnMgZm9yIHNvbWUgbGludXggaW5zdGFsbGF0aW9ucy4NCg0KYGBge3J9DQojIEluc3RhbGwgUi10b29scw0KaW5zdGFsbC5wYWNrYWdlcygiaW5zdGFsbHIiKQ0KbGlicmFyeSgiaW5zdGFsbHIiKQ0KaW5zdGFsbC5SdG9vbHMoKQ0KIyBjOi9SdG9vbHMvYmluOw0KIyBjOi9SdG9vbHMvbWluZ3dfMzIvYmluOw0KIyBjOi9SdG9vbHMvbWluZ3dfNjQvYmluOw0KDQojIG1haW4gcGFja2FnZXZwcw0KaW5zdGFsbC5wYWNrYWdlcyhjKCJ0aWR5ciIsICJ0aWR5dmVyc2UiLCAidGlkeW1vZGVscyIpKQ0KIyBkZXZlbG9wbWVudCBwYWNrYWdlcw0KaW5zdGFsbC5wYWNrYWdlcyhjKCJkZXZ0b29scyIsICJpcmtlcm5lbCIsICJwa2dkb3duIiwgInJveHlnZW4yIikpDQojIG90aGVyIHBhY2thZ2VzDQppbnN0YWxsLnBhY2thZ2VzKGMoIkFFUiIsICJtaW5wYWNrLmxtIiwgImtuaXRyIiwgImthYmxlRXh0cmEiLCAibWF0bGFiIikpDQoNCiMgSW5zdGFsbCBteSBwYWNrYWdlDQpkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoImZhbndhbmdlY29uL1I0RWNvbiIpDQpgYGANCg0KIyMgU2V0IHVwIFItRW52aXJvbm1lbnQgaW4gQ29uZGENCg0KQ29uZGEgZW52aXJvbm1lbnRzIGFyZSBsYW5ndWFnZSBhZ25vc3RpYy4gcGlwIGlzIGEgcGFja2FnZSBtYW5hZ2VyIGZvciBQeXRob24uIHZlbnYgaXMgYW4gZW52aXJvbm1lbnQgbWFuYWdlciBmb3IgUHl0aG9uLiBjb25kYSBpcyBib3RoIGEgcGFja2FnZSBhbmQgZW52aXJvbm1lbnQgbWFuYWdlciBhbmQgaXMgbGFuZ3VhZ2UgYWdub3N0aWMuIEluc2lkZSBBbmFjb25kYSBQcm9tcHQ6DQoNCktleSBwYWNrYWdlcyBhcmUgZ2VuZXJhbGx5IGF2YWlsYWJsZSBpbiBjb25kYSdzIGRlZmF1bHQgY2hhbm5lbCAob2ZmaWNpYWwgZGlzdHJpYnV0aW9uKSBhbmQgYWxzbyB0aGUgbW9yZSBmcmVxdWVudGx5IHVwZGF0ZWQgY29uZGEtZm9yZ2UgY2hhbm5lbC4gUHJpb3JpdGl6ZSBjb25kYS1mb3JnZSB0byBnZXQgdGhlIGxhdGVzdCBwYWNrYWdlcy4gYWZ0ZXIgYWRkaW5nICpjb25kYS1mb3JnZSogdG8gY2hhbm5lbHMsIHRoYXQgd2lsbCBiZSBwcmlvcml0aXplZCwgc28gd2hlbiBjcmVhdGluZyBhIG5ldyBlbnZpcm9ubWVudCwgY29uZGEgd2lsbCBpbnN0YWxsIGZpcnN0IGZyb20gY29uZGEtZm9yZ2UgaWYgcGFja2FnZSBleGlzdHMgdGhlcmUuIFRyeSB0aGUgKnJfZW52KiBnZW5lcmF0aW9uIGxpbmUgd2l0aCBhbmQgd2l0aG91dCBmaXJzdCBhZGRpbmcgKmNvbmRhLWZvcmdlKiB0byBjaGFubmVsLCBhbmQgc2VlIHRoYXQgdGhlIHBhY2thZ2VzIGluc3RhbGxlZCB3aWxsIGhhdmUgZGlmZmVyZW50IHZlcnNpb25zLCByZWZsZWN0aW5nIHZlcnNpb25zIGluIHRoZSBkZWZhdWx0IGNoYW5uZWwgYW5kIGluIHRoZSAqY29uZGEtZm9yZ2UqIGNoYW5uZWxzLg0KDQpgYGB7YmFzaH0NCiMgU2V0IHVwIENoYW5uZWwNCmNvbmRhIGNvbmZpZyAtLWFkZCBjaGFubmVscyBjb25kYS1mb3JnZQ0KIyBpbnN0YWxsIGtleSByIHBhY2thZ2VzIHdpdGhpbiBhIHItZW52aXJvbm1lbnQNCmNvbmRhIGVudiByZW1vdmUgLW4gcl9lbnYNCmNvbmRhIGNyZWF0ZSAtbiByX2VudiByLWVzc2VudGlhbHMgci1iYXNlIHItdGlkeXIgci10aWR5dmVyc2Ugci1kZXZ0b29scyByLWlya2VybmVsIHItcGtnZG93biByLXJveHlnZW4yDQojIHNlZSBhbGwgaW5zdGFsbGVkIGVudmlyb25tZW50cw0KY29uZGEgZW52IGxpc3QNCiMgYWN0aXZhdGUgYW4gZW52aXJvbm1lbnQgdG8gdXNlIGl0LCBpZiBpbiBiYXNlLCByIGRvZXMgbm90IGV4aXN0LCBpc29sYXRlZCBpbiByX2Vudg0KY29uZGEgYWN0aXZhdGUgcl9lbnYNCiMgc2VlIHBhY2thZ2VzIGluIGVudmlyb25tZW50DQpjb25kYSBsaXN0DQojIHRvIHF1aXQNCmNvbmRhIGRlYWN0aXZhdGUNCmBgYA0KDQotICoqTG9jYXRpb24qKjogSW5zdGFsbGVkIGVudmlyb25tZW50cyBhcmUgc2hvd24gYXBwZWFyIGluIHRoZSAqZW52cyogZm9sZGVyIG9mICpDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvZW52cy8qLiBDYW4gYmUgZWFzaWx5IGRlbGV0ZWQgd2l0aG91dCBkaXNydXB0aW5nIHRoZSBtYWluIGJhc2UgaW5zdGFsbGF0aW9uIGZvciBjb25kYS4gVGhpcyBpcyB2ZXJ5IGltcG9ydGFudC4gRHVyaW5nIGluc3RhbGxhdGlvbiwgY291bGQgZWFzaWx5IHJ1biBpbnRvIHByb2JsZW1zLCBhbmQgbmVlZCB0byByZS1pbnN0YWxsLiBNdWNoIGJldHRlciB0byBvbmx5IHJlLWluc3RhbGwgYSBmb2xkZXIuIE5vdGUgdGhhdCB3aGVuIFIgaXMgaW5zdGFsbGVkIGluICplbnZzKiwgaXQgd2lsbCBub3Qgc2hvdyB1cCB1bmRlciBhZGQgb3IgcmVtb3ZlIHByb2dyYW1zIGZvciB1bmluc3RhbGxhdGlvbiBmcm9tIHRoZXJlLCBoYXMgdG8gYmUgdW5pbnN0YWxsZWQsIGRlbGV0ZWQgZGlyZWN0bHkgaGVyZS4NCi0gKipVc2Ugb25seSBpbiBFbnYqKjogTm90ZSB0aGF0IGlmIHdlIGluc3RhbGxlZCByIGluc2lkZSByX2VudiwgaWYgd2UgdHlwZSAqciogdW5kZXIgdGhlIGJhc2UgZW52aXJvbm1lbnQsIHdlIGNhbiBub3QgZW50ZXIgci4gV2UgY2FuIG9ubHkgZW50ZXIgciB3aXRoaW4gcl9lbnYuIFdpdGggUEFUSCBwcm9wZXJseSBzZXQtdXAsIHRoaXMgaGFwcGVucyB1bmRlciBDb25kYSBQcm9tcHQsIFdpbmRvd3MgUHJvbXB0LCBldGMuDQotICoqTXVsdGlwbGUgUHl0aG9ucyoqOiBXaXRoIHRoZSBhYm92ZSBpbnN0YWxsYXRpb24gZm9yIFIsIG9uZSBiZW5lZml0IGlzIHRoYXQgaWYgUiByZXF1aXJlcyBhIGRpZmZlcmVudCB2ZXJzaW9uIG9mIFB5dGhvbiB0aGFuIHdoYXQgdGhlIGJhc2UgZW52aXJvbm1lbnQgdXNlcywgdGhlIHJfZW52IGNvdWxkIGhhdmUgYSBkaWZmZXJlbnQgcHl0aG9uIHZlcnNpb24uIFNvIHR5cGUgKnB5dGhvbiogaW4gdGhlIGJhc2UgZW52aXJvbm1lbnQgYXMgd2VsbCBhcyBpbnNpZGUgdGhlICpyX2VudiouIFRoaXMgYWxzbyBtZWFucyBwb3RlbnRpYWxseSB0aGVyZSBjb3VsZCBiZSBkdXBsaWNhdGVkIGluc3RhbGxhdGlvbnMgSSB0aGluay4gTG9vayBhdCB0aGUgcHl0aG9uIHZlcnNpb25zIHVuZGVyICpjb25kYSBsaXN0KiBpbiB0aGUgYmFzZSBhbmQgaW4gdGhlIHItZW52aXJvbm1lbnQuDQotICoqRmlsZSBTaXplKio6IE5vdGUgdGhhdCB0aGlzIGNyZWF0ZXMgYSBsYXJnZSBpbnN0YWxsYXRpb24gZm9sZGVyLCAqQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvKiwgd2l0aG91dCBhZGRpdGlvbmFsIHBhY2thZ2VzLCBpcyAxLjMgR0IgaW4gc2l6ZQ0KDQojIyBJbnN0YWxsIEFkZGl0aW9uYWwgUGFja2FnZXMgaW5zaWRlIHRoZSBSLWVudmlyb25tZW50DQoNClRoZXNlIGFyZSBwYWNrYWdlcyB0aGF0IEkgdXNlLCB0aGVzZSBzaG91bGQgYmUgaW5zdGFsbGVkIGluc2lkZSB0aGUgZW52aXJvbm1lbnQuIE9yIHRoZXkgY291bGQgYmUgaW5zdGFsbGVkIGxhdGVyIGZyb20gaW5zaWRlIHItc3R1ZGlvLiBJbnN0YWxsaW5nIGluc2lkZSByLXN0dWRpbyBpcyBhIGxvdCBiZXR0ZXIuDQoNClRoaXMgZGlkIG5vdCB3b3JrIGluIHdpbmRvd3MsICp0aWR5bW9kZWxzKiBmYWlsZWQgdG8gaW5zdGFsbC4gUGVyaGFwcyBiZWNhdXNlIG9mIGRpcmVjdG9yeSBpc3N1ZXMuICp0aWR5bW9kZWxzKiByZXF1aXJlZCAqcnN0YW5hcm0qLCBhbmQgKnJzdGFuYXJtKiBmYWlsZWQgdG8gaW5zdGFsbC4NCg0KYGBge2Jhc2h9DQojIyMgT25lIGxpbmUNCmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1hZXIgci1taW5wYWNrLmxtIHIta25pdHIgci1rYWJsZUV4dHJhIHItbWF0bGFiDQojIGNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1yc3RhbmFybQ0KDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMjIyBFc3RpbWF0aW9uDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMgRXN0aW1hdGlvbiBUb29scw0KIyB0aWR5bW9kZWxzIGRvZXMgbm90IHdvcmsgZnJvbiBjb25kYSBpbnN0YWxsDQojIExpbmVhciBSZWdyZXNzaW9uIFBhY2thZ2UNCiMgaHR0cHM6Ly9hbmFjb25kYS5vcmcvY29uZGEtZm9yZ2Uvci1hZXINCiMgTm9ubGluZWFyIFJlZ3Jlc3Npb24gUGFja2FnZQ0KIyBodHRwczovL2FuYWNvbmRhLm9yZy9jb25kYS1mb3JnZS9yLW1pbnBhY2subG0NCmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1hZXIgci1taW5wYWNrLmxtDQojIGVudGVyIHIgYW5kIHVzZSBkZXZ0b29scw0KIyBpbnN0YWxsLnBhY2thZ2VzKCJ0aWR5bW9kZWxzIikNCg0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjDQojIyMgVmlzdWFsaWF0aW9uDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCmNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2Ugci1rbml0ciByLWthYmxlRXh0cmENCg0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjDQojIyMgVXRpbGl0aWVzDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCiMgQWxsb3dpbmcgZm9yIEludm9raW5nIE1hdGxhYiBGaWxlcyBmcm9tIEluc2lkZSBSDQpjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIHItbWF0bGFiDQpgYGANCg0KSW5zdGFsbCBhZGRpdGlvbmFsIHBhY2thZ2VzIGZyb20gaW5zaWRlIFIuIFRoZSBkZXZ0b29scyBpbnN0YWxsIHdpbGwgaW5zdGFsbCBwYWNrYWdlcyBpbnNpZGUgKmVudnMvcl9lbnYvTGliL1IqLg0KDQpgYGB7cn0NCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KIyMjIE93biBQYWNrYWdlDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YigiZmFud2FuZ2Vjb24vUjRFY29uIikNCiMgaW5zdGFsbF9kZXYoImNsaSIpDQpgYGANCg0KIyMgUi1TdHVkaW8gU2V0LXVwIERvd25sb2FkIGZyb20gUnN0dWRpbw0KDQoxLiBEb3dubG9hZCBSLXN0dWRpbywgYW5kIGluc3RhbGwsIGFzIG5vcm1hbCAobm90IGZyb20gY29uZGEsIGRpcmVjdGx5IGZyb20gcnN0dWRpbyB3ZWJzaXRlIGxhdGVzdCB3aW5kb3dzIHZlcnNpb24pDQoyLiBPcGVuIHVwIGFuYWNvbmRhIHByb21wdCwgZW50ZXIgKnJfZW52KiBlbnZpcm9ubWVudDogKmFjdGl2YXRlIHJfZW52Kg0KMy4gY2QgaW50byByc3R1ZGlvIGV4ZSBmaWxlIGZvbGRlcjogY2QgIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4iDQo0LiBzdGFydCByLXN0dWRpbyBmcm9tIGluc2lkZSAqcl9lbnYqOiByc3R1ZGlvLmV4ZQ0KNS4gaW5zaWRlIHItc3R1ZGlvLCBjaGVjazogKi5saWJQYXRocygpKg0KICAgIC0gIkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnkiDQoNCmBgYHtiYXNofQ0KYWN0aXZhdGUgcl9lbnYNCmNkICJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluIg0KcnN0dWRpby5leGUNCg0KY2QgIkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnkiDQoiQzovUHJvZ3JhbSBGaWxlcy9SU3R1ZGlvL2Jpbi9yc3R1ZGlvLmV4ZSINCmBgYA0KDQpGb3IgbGludXgsIG5vdGUgdGhhdCByc3R1ZGlvIG9mZmVycyBVYnVudHUgYXMgd2VsbCBhcyBEZWJpYW4gdmVyc2lvbnMgdGhhdCBjYW4gYmUgaW5zdGFsbGVkIHdpdGggd2dldDoNCg0KYGBge2Jhc2h9DQo8IS0tIGZvciB1YnVudHUgLS0+DQp3Z2V0ICJodHRwczovL2Rvd25sb2FkMS5yc3R1ZGlvLm9yZy9kZXNrdG9wL2Jpb25pYy9hbWQ2NC9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYiINCnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYg0KPCEtLSBmb3IgZGViaWFuIC0tPg0Kd2dldCAiaHR0cHM6Ly9kb3dubG9hZDEucnN0dWRpby5vcmcvZGVza3RvcC9kZWJpYW45L3g4Nl82NC9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYiINCnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYg0KY29uZGEgaW5zdGFsbCAtYyByIHJzdHVkaW8NCmNkICJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluIg0KcnN0dWRpby5leGUNCg0KY2QgIkM6L1Byb2dyYW1EYXRhL0FuYWNvbmRhMy9lbnZzL3JfZW52L0xpYi9SL2xpYnJhcnkiDQoiQzovUHJvZ3JhbSBGaWxlcy9SU3R1ZGlvL2Jpbi9yc3R1ZGlvLmV4ZSINCmBgYA0KDQojIyBJbnN0YWxsIFBhY2thZ2VzIGZyb20gUi1TdHVkaW8NCg0KSW5zdGFsbCBhZGRpdGlvbiBmaWxlcyBpbnNpZGUgUnN0dWRpby4gRWFzaWVyIHRvIGRlYnVnIHBvdGVudGlhbGx5LiBJbnN0YWxsIHJ0b29scyBhcyBkZXNjcmliZWQgW2hlcmVdKGh0dHBzOi8vdGhlY29hdGxlc3Nwcm9mZXNzb3IuY29tL3Byb2dyYW1taW5nL2NwcC9pbnN0YWxsaW5nLXJ0b29scy1mb3ItY29tcGlsZWQtY29kZS12aWEtcmNwcC8pOiBbcnRvb2xzIGRvd25sb2FkXShodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy9iaW4vd2luZG93cy9SdG9vbHMvKS4gQWx0ZXJuYXRpdmVseToNCg0KYGBge3J9DQppbnN0YWxsLnBhY2thZ2VzKCJpbnN0YWxsciIpDQpsaWJyYXJ5KCJpbnN0YWxsciIpDQojIE5vdGUgdGhhdCB0aGlzIHdpbGwgZ2VuZXJhdGUgc2V2ZXJhbCBwb3AtdXAgd2luZG93cw0KaW5zdGFsbC5SdG9vbHMoKQ0KIyBjaG9vc2UgdG8gb25seSBpbnN0YWxsIDY0IGJpdCB0b29sY2hhaW4NCiMgdGhpcyBpbnN0YWxscyBnKysgd2hpY2ggaXMgbmVlZGVkIGZvciByc3RhbmFybQ0KIyBBZGQgdGhlc2UgYmVsb3cgdG8gd2luZG93cyBwYXRoDQojIGM6L1J0b29scy9iaW47DQojIGM6L1J0b29scy9taW5nd182NC9iaW47DQoNCmlmICghcmVxdWlyZShkZXZ0b29scykpIHsNCiAgaW5zdGFsbC5wYWNrYWdlcygiZGV2dG9vbHMiKQ0KICBsaWJyYXJ5KGRldnRvb2xzKQ0KfQ0KbGlicmFyeShkZXZ0b29scykNCmluc3RhbGxfZ2l0aHViKCJzdGFuLWRldi9yc3RhbmFybSIsIGFyZ3MgPSAiLS1wcmVjbGVhbiIpDQoNCnNldHdkKCdDOi9Qcm9ncmFtRGF0YS9BbmFjb25kYTMvZW52cy9yX2Vudi9MaWIvUi9saWJyYXJ5JykNCg0KaW5zdGFsbC5wYWNrYWdlcygic3Rhbi1kZXYvcnN0YW5hcm0iLCBkZXBlbmRlbmNpZXM9VFJVRSwgSU5TVEFMTF9vcHRzID0gYygnLS1uby1sb2NrJykpDQoNCiMgb3RoZXIgcGFja2FnZXMNCmluc3RhbGwucGFja2FnZXMoYygidGlkeW1vZGVscyIsICJBRVIiLCAibWlucGFjay5sbSIsICJrbml0ciIsICJrYWJsZUV4dHJhIiwgIm1hdGxhYiIpKQ0KDQojIEluc3RhbGwgbXkgcGFja2FnZQ0KZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKCJmYW53YW5nZWNvbi9SNEVjb24iKQ0KYGBgDQoNCiMjIyBUZXN0IEZpbGVzDQoNClRlc3QgdGhlIGZvbGxvd2luZyBmaWxlIHRvIHNlZSBpZiB3ZSBjYW4gZXhlY3V0ZSBhIFIgZmlsZS4gRG8gaXQgaW5zaWRlICpyX2VudiogYW5kIGluc2lkZSBhICpyKiBzZXNzaW9uLg0KDQpgYGB7cn0NCiMgQSBzaW1wbGUgZmlsZSB3aXRoIHN1bW1hcnkgc3RhdGlzdGljcyB1c2luZyB0aWR5dmVyc2UNCnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9zdW1tYXJpemUvZGlzdC9mc3RfaGlzdF9vbmV2YXIuUicpDQojIEFub3RoZXIgc2ltcGxlIGZpbGUgd2l0aCBzdW1tYXJ5IHN0YXRpc3RpY3MgdXNpbmcgdGlkeXZlcnNlDQpzb3VyY2UoJ0M6L1VzZXJzL2Zhbi9SNEVjb24vc3VwcG9ydC90aWJibGUvZnNfdGliX2Jhc2ljcy5SJykNCiMgQSBmaWxlIGludm9sdmluZyBlc3RpbWF0aW9uDQpzb3VyY2UoJ0M6L1VzZXJzL2Zhbi9SNEVjb24vb3B0aW1pemF0aW9uL2Nlc2xvZ2xpbi9mc3RfY2VzX3BsYW5fbGlubG9nLlInKQ0KYGBgDQoNCiMgT3RoZXIgUHJvZ3JhbXMgdG8gSW5zdGFsbA0KDQojIyBEZXZlbG9wbWVudCBQcm9ncmFtcw0KDQotIFtnaXQgZm9yIHdpbmRvd3NdKGh0dHBzOi8vZ2l0LXNjbS5jb20vZG93bmxvYWQvd2luKTogYWZ0ZXIgaW5zdGFsbCwgdHJ5ICJjZCB+L1B5RmFuIg0KLSBbYXRvbV0oaHR0cHM6Ly9hdG9tLmlvLykNCi0gW3B5Y2hhcm1dKGh0dHBzOi8vd3d3LmpldGJyYWlucy5jb20vcHljaGFybS8pDQoNCiMjIEtleSBQcm9ncmFtcw0KDQotIEFkb2JlIEFjcm9iYXQNCiAgICArIGdvIHRvIGFkb2JlIHdlYnNpdGUsIGxvZyBpbiB1c2luZyBmd2FuZzI2QHVoLmVkdQ0KICAgICsgZ28gdG8gbXkgYWNjb3VudCwgY2hvb3NlIHZpZXcgYW5kIGRvd25sb2FkIG15IGFwcHMsIGNob29zZSBhY3JvYmF0ICYgUERGLCBkb3dubG9hZCBBY3JvYmF0IERDDQogICAgKyBVSCBhY2NvdW50IGNhbiBvbmx5IGJlIGFjdGl2YXRlZCBvbiB0d28gYWNjb3VudHMgYXQgb25jZSwgc28gbmVlZCB0byBraWNrIG90aGVyIGNvbXB1dGVycyBvdXQgdGVtcG9yYXJpbHkgcG90ZW50aWFsbHkNCg0KIyMgVXRpbGl0aWVzDQoNCi0gNy16aXANCg==</div>
 
 
 
