@@ -313,6 +313,49 @@ source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
 # C:\Users\fan\R4Econ\optimization\cesloglin\fst_ces_plan_linlog.Rmd
 ```
 
+# Install Latex
+
+Use a combination of overleaf and local compile. The goal is to have the same installation set-up for windows as well as linux. And hopefully, locally compilable file also can be compiled on overleaf (only use packages also available on overleaf).
+
+There are several pieces of things to install:
+
+1. latex compiler: pdflatex, etc
+2. tex distributions: MikTex, texlive
+    + these folders, once various packages are installed, could be very large, many GB
+3. latex packages from distributions
+3. editor (gui): Atom, texStudio, etc
+
+## Uninstall
+
+- uninstall *MiKTeX*: delete from programs, then delete remaining folder in Program Files.
+- uninstall *texlive*: go to *c:/texlive*, delete the folder
+
+## Install
+
+*Install on Windows*
+
+- [Install Texstudio](https://www.texstudio.org/)
+- [Install texlive](https://www.tug.org/texlive/acquire-netinstall.html)
+
+*Install on Ubuntu*
+
+install texlive and texstudio ubuntu/debian.
+
+```{bash}
+sudo apt-get update
+sudo apt-get install texlive-full
+sudo apt-get install texstudio
+```
+
+## Compile in Atom
+
+Install the [latex](https://github.com/thomasjo/atom-latex) package on atom.
+
+```{bash}
+# set TeX path
+# C:\texlive\2019\bin\win32
+```
+
 # Other Programs to Install
 
 ## Development Programs

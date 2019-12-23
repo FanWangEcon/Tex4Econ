@@ -605,16 +605,56 @@ source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39
 </div>
 </div>
 </div>
+<div id="install-latex" class="section level1">
+<h1><span class="header-section-number">3</span> Install Latex</h1>
+<p>Use a combination of overleaf and local compile. The goal is to have the same installation set-up for windows as well as linux. And hopefully, locally compilable file also can be compiled on overleaf (only use packages also available on overleaf).</p>
+<p>There are several pieces of things to install:</p>
+<ol style="list-style-type: decimal">
+<li>latex compiler: pdflatex, etc</li>
+<li>tex distributions: MikTex, texlive
+<ul>
+<li>these folders, once various packages are installed, could be very large, many GB</li>
+</ul></li>
+<li>latex packages from distributions</li>
+<li>editor (gui): Atom, texStudio, etc</li>
+</ol>
+<div id="uninstall" class="section level2">
+<h2><span class="header-section-number">3.1</span> Uninstall</h2>
+<ul>
+<li>uninstall <em>MiKTeX</em>: delete from programs, then delete remaining folder in Program Files.</li>
+<li>uninstall <em>texlive</em>: go to <em>c:/texlive</em>, delete the folder</li>
+</ul>
+</div>
+<div id="install" class="section level2">
+<h2><span class="header-section-number">3.2</span> Install</h2>
+<p><em>Install on Windows</em></p>
+<ul>
+<li><a href="https://www.texstudio.org/">Install Texstudio</a></li>
+<li><a href="https://www.tug.org/texlive/acquire-netinstall.html">Install texlive</a></li>
+</ul>
+<p><em>Install on Ubuntu</em></p>
+<p>install texlive and texstudio ubuntu/debian.</p>
+<pre class="bash"><code>sudo apt-get update
+sudo apt-get install texlive-full
+sudo apt-get install texstudio</code></pre>
+</div>
+<div id="compile-in-atom" class="section level2">
+<h2><span class="header-section-number">3.3</span> Compile in Atom</h2>
+<p>Install the <a href="https://github.com/thomasjo/atom-latex">latex</a> package on atom.</p>
+<pre class="bash"><code># set TeX path
+# C:\texlive\2019\bin\win32</code></pre>
+</div>
+</div>
 <div id="other-programs-to-install" class="section level1">
-<h1><span class="header-section-number">3</span> Other Programs to Install</h1>
+<h1><span class="header-section-number">4</span> Other Programs to Install</h1>
 <div id="development-programs" class="section level2">
-<h2><span class="header-section-number">3.1</span> Development Programs</h2>
+<h2><span class="header-section-number">4.1</span> Development Programs</h2>
 <ul>
 <li><a href="https://www.jetbrains.com/pycharm/">pycharm</a></li>
 </ul>
 </div>
 <div id="key-programs" class="section level2">
-<h2><span class="header-section-number">3.2</span> Key Programs</h2>
+<h2><span class="header-section-number">4.2</span> Key Programs</h2>
 <ul>
 <li>Adobe Acrobat
 <ul>
@@ -625,7 +665,7 @@ source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39
 </ul>
 </div>
 <div id="utilities" class="section level2">
-<h2><span class="header-section-number">3.3</span> Utilities</h2>
+<h2><span class="header-section-number">4.3</span> Utilities</h2>
 <ul>
 <li>7-zip</li>
 </ul>

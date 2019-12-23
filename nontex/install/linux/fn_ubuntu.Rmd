@@ -32,6 +32,9 @@ sudo apt-get install atom
 - *personal access token*: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f
 - *Gist id*: 754fa9ca57eb7ddc1ee89775f934b59f
 
+- *personal access token*: b36b4d26ff2b5b626a1d7f66e3bc60c582a85c21
+- *Gist id*: a883a7ba62661dbe9b907d24b651b780
+
 # Git Install
 
 1. install git
