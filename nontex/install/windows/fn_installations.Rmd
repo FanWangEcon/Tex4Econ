@@ -1,5 +1,5 @@
 ---
-title: "New Windows Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations"
+title: "New Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations"
 output:
   pdf_document:
     df_print: paged
@@ -19,6 +19,38 @@ Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Re
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
+
+# Objective
+
+For the following types of programming tasks, install relevant programs, that are cross platform compatible. Test at the end that example programs work.
+
+1. Python
+    + Anaconda Dist
+    + Pycharm
+    + atom hydrogen
+2. R
+    + R
+    + Rstudio
+    + atom hydrogen
+3. Matlab
+    + Matlab
+4. Latex and PDF
+    + atom latex
+    + texstudio
+    + texlive
+    + okular pdf
+
+Test at the end:
+
+1. Do sample *py* files work?
+    + work from command line?
+    + work from atom (hydrogen)
+2. Do sample *rmd* files work?
+    + work from r-studio
+    + work from atom (hydrogen), r file
+3. Do tex templates compile?
+    + tikz files
+    + template files with bib
 
 # Conda
 
@@ -76,12 +108,18 @@ Open up Anaconda Navigator, it will update navigator automatically. If there are
 # # if there are bugs
 # conda clean --packages
 # use conda-forge as main channel, more updated packages
+conda config --get channels
 conda config --add channels conda-forge
+conda config --get channels
+# remove conda-forge from channels (do so for main env install)
+conda config --remove channels conda-forge
 # normal update
 conda update --all
 ```
 
 ## Conda Test Python
+
+Fist test python under command line:
 
 ```{r}
 # windows
@@ -90,6 +128,32 @@ python "C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py"
 # linux
 python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
 python ~/PyFan/ProjectSupport/graph/subplot.py
+```
+
+## Jupyter and Atom Hydrogen
+
+For both Jupyter as well as Atom, always open from command prompt, open from *Anaconda Prompt* with admin rights.
+
+First, open up *Jupyter Notebook*, does the python kernel work? If does not, uninstall and re-install Anaconda.
+
+```{bash}
+# start jupyter lab, from prompt
+jupyter lab
+```
+
+Now test python within atom:
+
+1. install hydrogen in atom. Follow [instructions](http://nteract.io/atom).
+    - terminal in windows or linux after installation: *apm install hydrogen*
+    - apm is the atom package manager.
+2. go to the programs above and try to run.
+
+```{bash}
+# Once atom is installed, can use apm to install packages
+apm install hydrogen
+# Inside Conda open up atom
+atom
+# open up any py from from within, try 1+1, does it work?
 ```
 
 ## Additional Packages
@@ -106,7 +170,7 @@ conda install -c conda-forge interpolation awscli
 
 conda install -c anaconda boto3
 
-conda install -c r r-irkernel
+# conda install -c r r-irkernel
 ```
 
 # R Installation
@@ -129,22 +193,49 @@ Open up install and uninstall programs, find R and Rstudio, and uninstall them. 
 ## Install R (outside of Conda)
 
 1. [download R](https://cloud.r-project.org/)
+    + for debian: [Johannes Ranke](https://cran.r-project.org/bin/linux/debian/)
 2. [download R-studio](https://rstudio.com/products/rstudio/download/)
 3. Open R-studio and auto-detect R
 4. Install packages
 
-note that installation will not work if the machine's version of R is not up to date, this could be the case with default R versions for some linux installations.
+note that installation will not work if the machine's version of R is not up to date, this could be the case with default R versions for some linux installations. For Debian for example, need to update the *source.list* to include sources that have more recent versions of R.
+
+Additionally, need to install *libcurl4-openssl-dev* and *libssl-dev* from command prompt first inside Debian.
+
+```{bash}
+# Go to get latesdebian latest r sources.list
+cat /etc/apt/sources.list
+# Install this First (should already be installed)
+sudo apt install dirmngr
+
+# Debian R is maintained by Johannes Ranke, copied from https://cran.r-project.org/bin/linux/debian/:
+apt-key adv --keyserver keys.gnupg.net --recv-key 'E19F5F87128899B192B1A2C2AD5F960A256A04AF'
+# Add to source.list, for debian stretch (9)
+# sudo su added for security issue as super-user
+sudo su -c "sudo echo 'deb http://cloud.r-project.org/bin/linux/debian stretch-cran35/' >> /etc/apt/sources.list"
+# if added wrong lines, delete 3rd line
+sudo sed '3d' /etc/apt/sources.list
+
+# Update and Install R, should say updated from cloud.r
+sudo apt-get update
+sudo apt-get install r-base r-base-dev
+
+# Also install these, otherwise r-packages do not install:
+sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libssl-dev
+```
 
 ```{r}
-# Install R-tools
+# Install R-tools, RTOOLS is for WINDOWS
 install.packages("installr")
 library("installr")
 install.Rtools()
-# c:\Rtools\bin;
-# c:\Rtools\mingw_32\bin;
-# c:\Rtools\mingw_64\bin;
+# c:/Rtools/bin;
+# c:/Rtools/mingw_32/bin;
+# c:/Rtools/mingw_64/bin;
 
 # main packagevps
+# tidymodel installation on linux difficult
 install.packages(c("tidyr", "tidyverse", "tidymodels"))
 # development packages
 install.packages(c("devtools", "irkernel", "pkgdown", "roxygen2"))
@@ -153,6 +244,11 @@ install.packages(c("AER", "minpack.lm", "knitr", "kableExtra", "matlab"))
 
 # Install my package
 devtools::install_github("fanwangecon/R4Econ")
+
+# Kernel
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+devtools::install_github('IRkernel/IRkernel')
+IRkernel::installspec()
 ```
 
 ## Set up R-Environment in Conda
@@ -162,7 +258,8 @@ Conda environments are language agnostic. pip is a package manager for Python. v
 Key packages are generally available in conda's default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. after adding *conda-forge* to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the *r_env* generation line with and without first adding *conda-forge* to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the *conda-forge* channels.
 
 ```{bash}
-# Set up Channel
+# Set up Channel, for R, to get latest r-packages
+# do not set-up channels to prioritize conda-forge for main env.
 conda config --add channels conda-forge
 # install key r packages within a r-environment
 conda env remove -n r_env
@@ -251,8 +348,8 @@ For linux, note that rstudio offers Ubuntu as well as Debian versions that can b
 ```{bash}
 <!-- for ubuntu -->
 wget "https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb"
-sudo apt install ./rstudio-1.2.5033-amd64.deb
 <!-- for debian -->
+sudo apt install ./rstudio-1.2.5033-amd64.deb
 wget "https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb"
 sudo apt install ./rstudio-1.2.5033-amd64.deb
 conda install -c r rstudio
@@ -292,6 +389,11 @@ install.packages("stan-dev/rstanarm", dependencies=TRUE, INSTALL_opts = c('--no-
 # other packages
 install.packages(c("tidymodels", "AER", "minpack.lm", "knitr", "kableExtra", "matlab"))
 
+# for r-kernel to work in Atom
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+devtools::install_github('IRkernel/IRkernel')
+IRkernel::installspec()
+
 # Install my package
 devtools::install_github("fanwangecon/R4Econ")
 ```
@@ -308,9 +410,9 @@ source('C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R')
 # A file involving estimation
 source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
 
-# C:\Users\fan\R4Econ\summarize\dist\fst_hist_onevar.Rmd
-# C:\Users\fan\R4Econ\support\tibble\fs_tib_basics.Rmd
-# C:\Users\fan\R4Econ\optimization\cesloglin\fst_ces_plan_linlog.Rmd
+# C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.Rmd
+# C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.Rmd
+# C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd
 ```
 
 # Install Latex
@@ -347,14 +449,38 @@ sudo apt-get install texlive-full
 sudo apt-get install texstudio
 ```
 
-## Compile in Atom
+## Compile in Atom and Texstudio
 
-Install the [latex](https://github.com/thomasjo/atom-latex) package on atom.
+Install the following two packages in atom:
+
+1. [latex](https://github.com/thomasjo/atom-latex) package on atom.
+2. [language-latex](https://atom.io/packages/language-latex) package on atom
+
+In Atom Latex setting, note that on different platforms, paths to texlive are different:
+
+- Path:
+    + Windows: *C:/texlive/2019/bin/win32*
+    + Chromebook Linux: */usr/bin/latex*
+- Which PDF viewer to use:
+    + download Okular and use [Okular](https://okular.kde.org/)
 
 ```{bash}
 # set TeX path
-# C:\texlive\2019\bin\win32
+# C:/texlive/2019/bin/win32
+
+# Latex, after installation
+# see where texlive appears under root folder directories
+sudo find / -name "texlive"
+# see latex version, if texlive is used
+latex -v
+# see main exe directory
+which latex
+# /usr/bin/latex
 ```
+
+Go to Tex4Econ and compile various template files and other types of files there to see if tex is working.
+
+Compile the same files in texstudio.
 
 # Other Programs to Install
 
@@ -364,10 +490,20 @@ Install the [latex](https://github.com/thomasjo/atom-latex) package on atom.
 
 ## Key Programs
 
-- Adobe Acrobat
+**PDF**
+
+- PDF Okular
+    + Linux: *sudo apt-get install okular*
+    + Windows: install okular from windows app store
+- PDF Adobe Acrobat
     + go to adobe website, log in using fwang26@uh.edu
     + go to my account, choose view and download my apps, choose acrobat & PDF, download Acrobat DC
     + UH account can only be activated on two accounts at once, so need to kick other computers out temporarily potentially
+
+**VPN**
+
+- [Proton VPN](https://protonvpn.com/): unlimited usage free version available.
+
 
 ## Utilities
 
