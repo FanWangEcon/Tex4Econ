@@ -77,6 +77,9 @@ conda install linux
 4. source ~/.bashrc
 
 ```{bash}
+# To remove conda Fully
+rm -rf ~/anaconda3
+
 # could be saved in current folder: pwd
 # could be saved in download folder: ~/Downloads
 wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
@@ -84,15 +87,34 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 bash "Anaconda3-2019.10-Linux-x86_64.sh"
 # refresh
 source ~/.bashrc
+
 # show all installed packages under current envir
 conda list
 # see where key files are installed
 which python
 which conda
 # use conda-forge as main channel and update all
-conda config --add channels conda-forge
+/* conda config --add channels conda-forge */
 conda update --all
 ```
+
+Additional statistics and related models to install:
+
+```{r}
+conda install -y statsmodels datashape seaborn
+# conda install statsmodels
+# conda install datashape
+# conda install seaborn
+
+conda install -c conda-forge -y interpolation awscli
+# conda install -c conda-forge interpolation
+# conda install -c conda-forge awscli
+
+conda install -c anaconda -y boto3
+
+# conda install -c r r-irkernel
+```
+
 
 ## Install PyCharm
 

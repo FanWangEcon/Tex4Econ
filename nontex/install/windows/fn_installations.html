@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -268,6 +268,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -329,7 +330,6 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
-  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -341,6 +341,18 @@ summary {
   display: none;
 }
 </style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
 
 <!-- code folding -->
 
@@ -424,8 +436,12 @@ python -V</code></pre>
 <div id="first-time-conda-install" class="section level2">
 <h2><span class="header-section-number">2.1</span> First Time Conda Install</h2>
 <p>Download and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path</p>
+<p>To install conda in Debian, follow <a href="https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html">these instructions</a>.</p>
 <p>See Anaconda Installation Directory, in anaconda prompt:</p>
-<pre class="bash"><code>where anaconda
+<pre class="bash"><code># To remove conda Fully
+rm -rf ~/anaconda3
+
+where anaconda
 # C:/ProgramData/Anaconda3/Scripts/anaconda.exe
 where python
 # C:/ProgramData/Anaconda3/python.exe
@@ -454,7 +470,12 @@ conda config --get channels
 # remove conda-forge from channels (do so for main env install)
 conda config --remove channels conda-forge
 # normal update
-conda update --all</code></pre>
+conda update --all
+
+# install additional packages
+conda install -y statsmodels datashape seaborn
+conda install -c conda-forge -y interpolation awscli
+conda install -c anaconda -y boto3</code></pre>
 </div>
 <div id="conda-test-python" class="section level2">
 <h2><span class="header-section-number">2.3</span> Conda Test Python</h2>
@@ -485,32 +506,39 @@ jupyter lab</code></pre>
 apm install hydrogen
 # Inside Conda open up atom
 atom
-# open up any py from from within, try 1+1, does it work?</code></pre>
-</div>
-<div id="additional-packages" class="section level2">
-<h2><span class="header-section-number">2.5</span> Additional Packages</h2>
-<pre class="r"><code>conda install statsmodels datashape seaborn
-# conda install statsmodels
-# conda install datashape
-# conda install seaborn
-
-conda install -c conda-forge interpolation awscli
-# conda install -c conda-forge interpolation
-# conda install -c conda-forge awscli
-
-conda install -c anaconda boto3
-
-# conda install -c r r-irkernel</code></pre>
+# open up any py from from within, try 1+1, does it work?
+# also use script, try ctrl + shift + b, run whole file (not hydrogen)</code></pre>
 </div>
 </div>
 <div id="r-installation" class="section level1">
 <h1><span class="header-section-number">3</span> R Installation</h1>
 <p>Try to install R from within Conda. The procedure here is the same for windows as well as linux machines.</p>
 <div id="fully-uninstall-r" class="section level2">
-<h2><span class="header-section-number">3.1</span> Fully uninstall r</h2>
-<p>open up RStudio, and see where paths are. also open up R from command prompt, see where paths are.</p>
+<h2><span class="header-section-number">3.1</span> Fully Uninstall r</h2>
+<p>Open up RStudio, and see where paths are. also open up R from command prompt, see where paths are.</p>
 <pre class="r"><code>.libPath()</code></pre>
 <p>Open up install and uninstall programs, find R and Rstudio, and uninstall them. Then delete all files found path paths shown by <em>.libPath()</em>, looking at these: - <em>C:/Users/fan/Documents/R/win-library/3.6</em> - <em>C:/Program Files/R/R-3.6.1/library</em></p>
+<p>For Linux:</p>
+<ul>
+<li>if used apt-get to install, R installed under main user drive, deactivate conda, and check which conda</li>
+</ul>
+<pre class="bash"><code># Exit Conda
+conda deactivate
+# where is R installed outside of Conda
+which R
+# /usr/bin/R
+# To remove all
+sudo apt-get remove r-base
+sudo apt-get remove r-base-core
+
+# Inside Conda base
+conda activate
+# Conda r_env
+conda activate r_env
+# Where is it installed?
+which R
+# /home/wangfanbsg75/anaconda3/bin/R
+conda uninstall r-base</code></pre>
 </div>
 <div id="install-r-outside-of-conda" class="section level2">
 <h2><span class="header-section-number">3.2</span> Install R (outside of Conda)</h2>
@@ -525,7 +553,13 @@ conda install -c anaconda boto3
 </ol>
 <p>note that installation will not work if the machine’s version of R is not up to date, this could be the case with default R versions for some linux installations. For Debian for example, need to update the <em>source.list</em> to include sources that have more recent versions of R.</p>
 <p>Additionally, need to install <em>libcurl4-openssl-dev</em> and <em>libssl-dev</em> from command prompt first inside Debian.</p>
-<pre class="bash"><code># Go to get latesdebian latest r sources.list
+<pre class="bash"><code># If inside Debian, due to some tidymodel install issues, do this`
+conda install -c r r
+conda install -c r r-essentials
+conda install -c r r-igraph
+conda install -c conda-forge igraph
+
+# Go to get latesdebian latest r sources.list
 cat /etc/apt/sources.list
 # Install this First (should already be installed)
 sudo apt install dirmngr
@@ -542,43 +576,76 @@ sudo sed '3d' /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get install r-base r-base-dev
 
-# Also install these, otherwise r-packages do not install:
+# Also install these, otherwise r-packages do not install
+# libxml2 seems need for tidymodels
 sudo apt-get install libcurl4-openssl-dev
-sudo apt-get install libssl-dev</code></pre>
-<pre class="r"><code># Install R-tools, RTOOLS is for WINDOWS
+sudo apt-get install libssl-dev
+sudo apt-get install libxml2-dev</code></pre>
+<p>Which R?</p>
+<ul>
+<li><em>export RSTUDIO_WHICH_R=/usr/bin/R</em></li>
+<li><em>export RSTUDIO_WHICH_R=/home/wangfanbsg75/anaconda3/bin/R</em></li>
+</ul>
+<pre class="r"><code># Can enter R from Command Prompt Conda ENV, much faster than from r-studio
+# Install R-tools, RTOOLS is for WINDOWS
 install.packages(&quot;installr&quot;)
 library(&quot;installr&quot;)
 install.Rtools()
-# c:\Rtools\bin;
-# c:\Rtools\mingw_32\bin;
-# c:\Rtools\mingw_64\bin;
+# c:/Rtools/bin;
+# c:/Rtools/mingw_32/bin;
+# c:/Rtools/mingw_64/bin;
 
 # main packagevps
 # tidymodel installation on linux difficult
-install.packages(c(&quot;tidyr&quot;, &quot;tidyverse&quot;, &quot;tidymodels&quot;))
+install.packages(c(&quot;tidyverse&quot;, &quot;tidymodels&quot;, &quot;tidyr&quot;))
 # development packages
-install.packages(c(&quot;devtools&quot;, &quot;irkernel&quot;, &quot;pkgdown&quot;, &quot;roxygen2&quot;))
+install.packages(c(&quot;devtools&quot;, &quot;IRkernel&quot;, &quot;pkgdown&quot;, &quot;roxygen2&quot;, &quot;kableExtra&quot;))
 # other packages
-install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;matlab&quot;))
+install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;matlab&quot;))
 
-# Install my package
+# Install my package, need to prepare package to work for ubuntu
+# if install does not work, load locally
 devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
 
 # Kernel
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
-devtools::install_github('IRkernel/IRkernel')
 IRkernel::installspec()</code></pre>
 </div>
 <div id="set-up-r-environment-in-conda" class="section level2">
 <h2><span class="header-section-number">3.3</span> Set up R-Environment in Conda</h2>
 <p>Conda environments are language agnostic. pip is a package manager for Python. venv is an environment manager for Python. conda is both a package and environment manager and is language agnostic. Inside Anaconda Prompt:</p>
 <p>Key packages are generally available in conda’s default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. after adding <em>conda-forge</em> to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the <em>r_env</em> generation line with and without first adding <em>conda-forge</em> to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the <em>conda-forge</em> channels.</p>
-<pre class="bash"><code># Set up Channel, for R, to get latest r-packages
-# do not set-up channels to prioritize conda-forge for main env.
-conda config --add channels conda-forge
+<pre class="bash"><code># outside of conda, install some depencies
+sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libssl-dev
+sudo apt-get install libxml2-dev
+
 # install key r packages within a r-environment
 conda env remove -n r_env
-conda create -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
+# start empty environment
+conda create -n r_env
+# activate env and check, nothing yet
+conda activate r_env
+conda list
+
+# check channel and add env specific channel
+conda config --get channels
+# to get latest r, use conda-forge, which has more recent Rs
+# conda config --env --add channels conda-forge
+# channels for base
+conda config --get channels
+# channels for cur env
+conda config --get channels --env
+
+# install files
+conda install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y
+
+# trouble with igraph installation, install here from conda
+# conda install -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
+conda install -n r_env -c r r-igraph
+conda install -n r_env -c conda-forge igraph
+conda install -n r_env -c r r-rstantools r-rstan r-rstanarm -y
+
 # see all installed environments
 conda env list
 # activate an environment to use it, if in base, r does not exist, isolated in r_env
@@ -597,34 +664,33 @@ conda deactivate</code></pre>
 <div id="install-additional-packages-inside-the-r-environment" class="section level2">
 <h2><span class="header-section-number">3.4</span> Install Additional Packages inside the R-environment</h2>
 <p>These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better.</p>
-<p>This did not work in windows, <em>tidymodels</em> failed to install. Perhaps because of directory issues. <em>tidymodels</em> required <em>rstanarm</em>, and <em>rstanarm</em> failed to install.</p>
-<pre class="bash"><code>### One line
-conda install -c conda-forge r-aer r-minpack.lm r-knitr r-kableExtra r-matlab
-# conda install -c conda-forge r-rstanarm
+<p><em>tidymodel</em> has installation issues sometimes.</p>
+<p>In <em>r_env</em>, type in <em>R</em>, and then install from inside terminal’s R:</p>
+<pre class="bash"><code># enter into env
+conda activate r_env
+# enter R or type in rstudio
+# sicne R is only install inside r_env, has to enter rstudio from r_env
+R
+rstudio
 
-#######################################
-### Estimation
-#######################################
-# Estimation Tools
-# tidymodels does not work fron conda install
-# Linear Regression Package
-# https://anaconda.org/conda-forge/r-aer
-# Nonlinear Regression Package
-# https://anaconda.org/conda-forge/r-minpack.lm
-conda install -c conda-forge r-aer r-minpack.lm
-# enter r and use devtools
-# install.packages(&quot;tidymodels&quot;)
+# main packagevps
+# tidymodel installation on linux difficult
+install.packages(c(&quot;rstantools&quot;, &quot;rstan&quot;, &quot;rstanarm&quot;))
+install.packages(c(&quot;tidyr&quot;, &quot;tidyverse&quot;, &quot;tidymodels&quot;))
 
-#######################################
-### Visualiation
-#######################################
-conda install -c conda-forge r-knitr r-kableExtra
+# tidymodels
+# development packages
+install.packages(c(&quot;devtools&quot;, &quot;IRkernel&quot;, &quot;pkgdown&quot;, &quot;roxygen2&quot;, &quot;kableExtra&quot;))
+# other packages
+install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;matlab&quot;))
 
-#######################################
-### Utilities
-#######################################
-# Allowing for Invoking Matlab Files from Inside R
-conda install -c conda-forge r-matlab</code></pre>
+# Install my package, need to prepare package to work for ubuntu
+# if install does not work, load locally
+devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
+
+# Kernel
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+IRkernel::installspec()</code></pre>
 <p>Install additional packages from inside R. The devtools install will install packages inside <em>envs/r_env/Lib/R</em>.</p>
 <pre class="r"><code>#######################################
 ### Own Package
@@ -708,9 +774,9 @@ source('C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R')
 # A file involving estimation
 source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
 
-# C:\Users\fan\R4Econ\summarize\dist\fst_hist_onevar.Rmd
-# C:\Users\fan\R4Econ\support\tibble\fs_tib_basics.Rmd
-# C:\Users\fan\R4Econ\optimization\cesloglin\fst_ces_plan_linlog.Rmd</code></pre>
+# C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.Rmd
+# C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.Rmd
+# C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd</code></pre>
 </div>
 </div>
 </div>
@@ -758,7 +824,7 @@ sudo apt-get install texstudio</code></pre>
 <ul>
 <li>Path:
 <ul>
-<li>Windows: <em>C:\201932</em></li>
+<li>Windows: <em>C:/texlive/2019/bin/win32</em></li>
 <li>Chromebook Linux: <em>/usr/bin/latex</em></li>
 </ul></li>
 <li>Which PDF viewer to use:
@@ -767,7 +833,7 @@ sudo apt-get install texstudio</code></pre>
 </ul></li>
 </ul>
 <pre class="bash"><code># set TeX path
-# C:\texlive\2019\bin\win32
+# C:/texlive/2019/bin/win32
 
 # Latex, after installation
 # see where texlive appears under root folder directories
@@ -808,12 +874,15 @@ which latex
 <p><strong>VPN</strong></p>
 <ul>
 <li><a href="https://protonvpn.com/">Proton VPN</a>: unlimited usage free version available.</li>
+<li>Express VPN</li>
 </ul>
 </div>
 <div id="utilities" class="section level2">
 <h2><span class="header-section-number">5.3</span> Utilities</h2>
 <ul>
 <li>7-zip</li>
+<li>evernote</li>
+<li>keepass</li>
 </ul>
 </div>
 </div>
@@ -835,23 +904,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

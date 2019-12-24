@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -268,6 +268,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -329,7 +330,6 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
-  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -341,6 +341,18 @@ summary {
   display: none;
 }
 </style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
 
 <!-- code folding -->
 
@@ -373,9 +385,9 @@ summary {
 <pre class="bash"><code># install atom
 sudo apt-get install atom</code></pre>
 <ul>
-<li><p><em>personal access token</em>: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f</p></li>
+<li><em>personal access token</em>: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f</li>
 <li><p><em>Gist id</em>: 754fa9ca57eb7ddc1ee89775f934b59f</p></li>
-<li><p><em>personal access token</em>: b36b4d26ff2b5b626a1d7f66e3bc60c582a85c21</p></li>
+<li><em>personal access token</em>: b36b4d26ff2b5b626a1d7f66e3bc60c582a85c21</li>
 <li><p><em>Gist id</em>: a883a7ba62661dbe9b907d24b651b780</p></li>
 </ul>
 </div>
@@ -420,21 +432,38 @@ cat ~/.ssh/id_rsa.pub</code></pre>
 <li>follow instructions, type yes</li>
 <li>source ~/.bashrc</li>
 </ol>
-<pre class="bash"><code># could be saved in current folder: pwd
+<pre class="bash"><code># To remove conda Fully
+rm -rf ~/anaconda3
+
+# could be saved in current folder: pwd
 # could be saved in download folder: ~/Downloads
 wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 # install file
 bash &quot;Anaconda3-2019.10-Linux-x86_64.sh&quot;
 # refresh
 source ~/.bashrc
+
 # show all installed packages under current envir
 conda list
 # see where key files are installed
 which python
 which conda
 # use conda-forge as main channel and update all
-conda config --add channels conda-forge
+/* conda config --add channels conda-forge */
 conda update --all</code></pre>
+<p>Additional statistics and related models to install:</p>
+<pre class="r"><code>conda install -y statsmodels datashape seaborn
+# conda install statsmodels
+# conda install datashape
+# conda install seaborn
+
+conda install -c conda-forge -y interpolation awscli
+# conda install -c conda-forge interpolation
+# conda install -c conda-forge awscli
+
+conda install -c anaconda -y boto3
+
+# conda install -c r r-irkernel</code></pre>
 <div id="install-pycharm" class="section level2">
 <h2><span class="header-section-number">4.1</span> Install PyCharm</h2>
 <p>PyCharm can be installed from Ubuntu apps.</p>
@@ -468,23 +497,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
