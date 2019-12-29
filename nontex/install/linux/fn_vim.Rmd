@@ -1,0 +1,199 @@
+---
+title: "Example and Tutorial for Vim Editor (Linux)"
+output:
+  pdf_document:
+    df_print: paged
+    number_sections: true
+  html_notebook:
+    number_sections: true
+  word_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# Vim Installations
+
+Vim ships with Debian.
+
+Additional packages to install:
+
+```{bash}
+vim
+```
+
+Also install neo-vim
+
+```{bash}
+sudo apt-get install neovim
+```
+
+## Plug-ins
+
+Follow the [instructions here](https://github.com/junegunn/vim-plug/wiki/tutorial) for installations. Two steps:
+
+1. generate ~/.vim and ~/.vimrc folders
+2. curl plug.vim to ~/.vim/autoload
+3. update ~/.vimrc file with ininstructions regarding which files to install.
+4. open vim, type: *:PlugInstall* or *:PlugUpdate*, should start seeing updating packages.
+5. type: *:scriptnames* to see loaded plugins
+6. just comment out or delete plug lines for packages no longer needed.
+7. how to install a particular package? See [vimawesome](https://vimawesome.com/plugin/onedark-vim)
+
+```{bash}
+# curl plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# create vimrc file
+cd $HOME
+vim .vimrc
+
+# paste into file the text below.
+```
+
+Example .vimrc file with only one package one dark atom visual for vim:
+
+```{bash}
+if empty(glob('~/.vim/autoload/plug.vim'))
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'joshdick/onedark.vim'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+colorscheme onedark
+```
+
+# Vim Basics
+
+```{bash}
+# to open vim
+vim -v
+# to exit vim
+:q!
+# open up file from google drive
+vim "/mnt/chromeos/GoogleDrive/MyDrive/Reading Papers/Reading/Referee/pa_2019_oct_journal/jor_12345_comments.Rmd"
+# start editing, type i to enter insert mode
+i
+# when editing is done, to exit and save, write and quit
+# esc first
+:wq
+```
+
+# Vim Cursor Movements
+
+Move cursor to the beginning of a line? This should not be done in edit mode, esc, use movement commands, then back to insert mode. There are six most basic movements, *wbjk()0$*:
+
+```{bash}
+# forward one word
+w
+# back one word to begin
+b
+# back to word to end
+e
+
+# forward one line, achieved by also pressing downward arrow
+j
+# backward one line, achieved by pressing upward arrow
+k
+# left arrow
+h
+# right arrow
+l
+
+# Jump forward one Sentence
+)
+# Jump backward one Sentence
+(
+
+# Begin of line
+0
+# End of Line
+$
+
+# Begin of File
+gg
+# End of File
+G
+```
+
+In combination, the basic commands can be used in combination
+
+```{bash}
+# move to the beginning of the next line
+j0
+# move to the end of the next line
+j$
+```
+
+# Vim Editing
+
+Delete a line.
+
+```{bash}
+# select text with cursor, then d for delete
+d
+```
+
+# Very Convinent Functions
+
+Some functionalities take much more efforts to complete in many other editors, but are very easy in vim:
+
+```{bash}
+# combine lines: bunch of lines, with carriage break, one block of text, reflow/join
+# 1. select block
+Vjjjj
+# 2. reflow/join
+J
+```
+
+## Combo Operations
+
+1. Delete:
+    - delete current word and go into insert mode: *ciw*
+    - Delete current word: *dw*
+    - Delete from cursor until end of sentence: *dis*
+    - Delete from cursor to end of line: *d$* or *D*
+    - Delete until end of paragraph: *dip*
+
+# Vim Errors
+
+Vim seems frozen (hard for vim to freeze, it is not really frozen). This is likely due to pressing *ctrl + s*, then need to press *ctrl + q*.
+
+vim error: "E297: Write error in swap file"
+
+```
+# Trying to save
+:w
+# E297 can not save, override changes elswhere, and force save what is on screen.
+:e!
+```
+
+# Vim Set-Up
+
+Use [one-dark atom theme](https://github.com/joshdick/onedark.vim), otherwise color hard to read.
+
+```{bash}
+
+```

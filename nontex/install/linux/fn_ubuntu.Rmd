@@ -27,6 +27,8 @@ Can be directly installed from Ubuntu store.
 ```{bash}
 # install atom
 sudo apt-get install atom
+# install various atom packages that are necessary
+apm install vim-mode-plus
 ```
 
 - *personal access token*: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f
@@ -132,6 +134,27 @@ cd /opt/pycharm-*/bin
 R could be installed first as below. Or follow the [instructions on this page](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html) to install from conda an environment for R, with associated R-studio.
 
 ```{bash}
-apt-get update
-apt-get install r-base r-base-dev
+# Debian R is maintained by Johannes Ranke, copied from https://cran.r-project.org/bin/linux/debian/:
+apt-key adv --keyserver keys.gnupg.net --recv-key 'E19F5F87128899B192B1A2C2AD5F960A256A04AF'
+# Add to source.list, for debian stretch (9)
+# sudo su added for security issue as super-user
+sudo su -c "sudo echo 'deb http://cloud.r-project.org/bin/linux/debian stretch-cran35/' >> /etc/apt/sources.list"
+# if added wrong lines, delete 3rd line
+sudo sed '3d' /etc/apt/sources.list
+
+# Update and Install R, should say updated from cloud.r
+sudo apt-get update
+sudo apt-get install r-base r-base-dev
+```
+
+# Install Other Programs and Packages
+
+Other key programs and packages to install.
+
+- vim: faster editor, on lower resource machines, atom is slow and typing could feel laggy.
+- htop: for resource monitoring
+
+```
+sudo apt-get install vim
+sudo apt-get install htop
 ```
