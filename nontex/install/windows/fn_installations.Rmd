@@ -542,6 +542,21 @@ Compile the same files in texstudio.
 
 # Other Programs to Install
 
+## Package Managers
+
+- [scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)
+
+```
+# in powershell
+# enter cmd
+# type powershell in cmd to enter powershell from cmd
+powershell
+# permission
+set-executionpolicy remotesigned -scope currentuser
+# install
+iwr -useb get.scoop.sh | iex
+```
+
 ## Development Programs
 
 - [pycharm](https://www.jetbrains.com/pycharm/)

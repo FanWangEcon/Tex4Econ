@@ -119,6 +119,75 @@ syntax on
 colorscheme onedark
 ```
 
+## Install Neovim in Conda (Windows)
+
+```
+# install scoop and use scoop
+scoop install neovim
+
+# follow vim-plug instructions
+md ~\AppData\Local\nvim\autoload
+$uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\AppData\Local\nvim\autoload\plug.vim"
+  )
+)
+```
+
+Create init.vim file:
+
+```
+cd ~\AppData\Local\nvim\
+nvim init.vim
+```
+
+paste these in *:set paste*:
+
+```
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/AppData/Local/nvim/site/plugged')
+
+" Declare the list of plugins.
+Plug 'vim-airline/vim-airline'
+
+" Visual Settings
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+" Color theme plugins
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/seoul256.vim'
+Plug 'jaredgorski/spacecamp'
+Plug 'lifepillar/vim-solarized8'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Color Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+syntax on
+
+" onedark:
+colorscheme onedark
+
+" seoul256:
+" seoul256 (dark), 236 is darkest
+" let g:seoul256_background = 236
+" colorscheme seoul256
+
+" spacecamp:
+" colorscheme spacecamp
+
+" vim-solarized8:
+" set background=dark
+" colorscheme solarized8
+```
+
 # Vim Basics
 
 ```{bash}
