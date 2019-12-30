@@ -10,7 +10,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 \usepackage{geometry}
@@ -39,7 +39,7 @@
 \section{Annotate Text in Figure}
 
 \subsection{Slope and Intercept Annotate}
- 
+
 Draw axis below, and a line, middle of page, and annotate the slope of the intercept with arrows. Annotate with box without color.
 
 \begin{verbatim}
@@ -71,7 +71,49 @@ Draw axis below, and a line, middle of page, and annotate the slope of the inter
 \end{tikzpicture}
 \end{center}
 
+\subsection{Anote Slope, X intercept and Y intercept}
 
+Draw a line, then point to its slope, x and y intercepts.
+
+\begin{enumerate}
+  \item Define the slope and y-intercept: $a_i, b_i$
+  \item Define and calculate the x-intercept: $c_i = -\frac{a_i}{b_i}$
+  \item Define the text that should appear for each element: $a_{desca}$
+  \item Drawing lines pointing to $a$, $b$ or $c$ points:
+  \begin{itemize}
+    \item direction: $d_i \in \left\{NE, SE, SW, NW\right\}$
+    \item rotation: $0 <= e_i <= 90$, which direction points to text
+    \item dist one: $f_i > 0 $, straight distance from origin
+    \item dist two: $g_i > 0 $, distance of line
+    \item point start: $h^o_i, h^o_i$, starting point based on the four pieces of information
+    \item point end: $h^d_i, h^d_i$, ending point based on the four pieces of information
+  \end{itemize}
+\end{enumerate}
+
+So end up drawing using $a$, $b$ for line, $h^o$ for one point $h*d$ line small segment.
+
+\begin{verbatim}
+\end{verbatim}
+\bigskip
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (-1,0) -- (6,0) node[right] {$N_m$};
+\draw[->] (0,-1) -- (0,6) node[above] {$N_{m^{\prime}}$};
+
+% A. Clip area so that line below is only drawn inside finite box
+\clip (-3,-1) rectangle (6,6);
+
+% B. Draw a line with intercept and slope
+\draw[line width=0.50mm,domain=-1:6,smooth,variable=\x, blue] plot ({\x},{1+\x*1.25});
+
+% C. Draw Line pointing to Intercept of line
+\draw[->, line width=0.75mm] (-1.7,2.2) -- (-0.1,1.1);
+
+% D. Draw a transparent text box that wraps text
+\node[text width=3cm] at (-1.4,3.25) {\large{$\bm{\alpha_i}$ (this is the position of the \textbf{x-intercept}), wrap text.}};
+
+\end{tikzpicture}
+\end{center}
 
 
 \end{document}

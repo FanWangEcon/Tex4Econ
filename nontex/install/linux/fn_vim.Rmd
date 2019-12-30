@@ -22,27 +22,22 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 # Vim Installations
 
-Vim ships with Debian.
-
-Additional packages to install:
+Vim ships with Debian. Also install neo-vim:
 
 ```{bash}
 vim
-```
-
-Also install neo-vim
-
-```{bash}
 sudo apt-get install neovim
 ```
 
-## Plug-ins
+Just installing onedark, neovim seems to work better than vim. Vim has delete lag, and extra white space rows at the bottom of the screen that could take up very large screen segment. Neovim with onedark does not have this issue, could be due to some basic setting differences.
 
-Follow the [instructions here](https://github.com/junegunn/vim-plug/wiki/tutorial) for installations. Two steps:
+## Install Vim-Plug Plug-ins manager for Vim
+
+Follow the [instructions here](https://github.com/junegunn/vim-plug/wiki/tutorial) for installations. Several steps:
 
 1. generate ~/.vim and ~/.vimrc folders
 2. curl plug.vim to ~/.vim/autoload
-3. update ~/.vimrc file with ininstructions regarding which files to install.
+3. update ~/.vimrc file with instructions regarding which files to install.
 4. open vim, type: *:PlugInstall* or *:PlugUpdate*, should start seeing updating packages.
 5. type: *:scriptnames* to see loaded plugins
 6. just comment out or delete plug lines for packages no longer needed.
@@ -74,6 +69,45 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'joshdick/onedark.vim'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+colorscheme onedark
+```
+
+## Install Vim-Plug Plug-ins manager for Neovim
+
+Follow the [instructions here](https://github.com/junegunn/vim-plug/wiki/tutorial) for installations. Very similar steps as above for Vim:
+
+1. curl *plug.vim* to *.local/share/nvim*. Directory different than vim
+2. create nvim folder under .config, vimrc contents should be in this file: *~/.config/nvim/init.vim*
+3. enter nvim and *:PlugInstall*
+
+```{bash}
+# Neovim (~/.local/share/nvim/site/autoload)
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# create vimrc file
+mkdir ~/.config/nvim
+nvim ~/.config/nvim/init.vim
+
+# paste into file the text below.
+```
+
+Vimrc file with atom styling:
+```
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.local/share/nvim/site/plugged')
+
+" Declare the list of plugins.
+Plug 'joshdick/onedark.vim'
+Plug 'vim-airline/vim-airline'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -127,6 +161,9 @@ l
 # Jump backward one Sentence
 (
 
+# Forward one page and back one page
+# ctrl+f, ctrl+b
+
 # Begin of line
 0
 # End of Line
@@ -154,6 +191,8 @@ Delete a line.
 ```{bash}
 # select text with cursor, then d for delete
 d
+# delete until end of line, outside insert mode
+D
 ```
 
 # Very Convinent Functions
