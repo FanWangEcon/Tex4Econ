@@ -123,6 +123,11 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 
+colorscheme onedark
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " For Goyo
 let g:goyo_width=85
 
@@ -137,8 +142,6 @@ let g:limelight_conceal_guifg = '#777777'
 let g:limelight_bop = '^.*$'
 let g:limelight_eop = '\n'
 let g:limelight_paragraph_span = 0
-
-colorscheme onedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " UI Settings
@@ -184,9 +187,14 @@ call plug#begin('~/AppData/Local/nvim/site/plugged')
 " Declare the list of plugins.
 Plug 'vim-airline/vim-airline'
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " Visual Settings
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'reedes/vim-pencil'
 
 " Color theme plugins
 Plug 'joshdick/onedark.vim'
@@ -194,6 +202,7 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'jaredgorski/spacecamp'
 Plug 'lifepillar/vim-solarized8'
+Plug 'reedes/vim-colors-pencil'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -201,7 +210,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Color Settings
 """""""""""""""""""""""""""""""""""""""""""""""""
-
 syntax on
 
 " onedark:
@@ -218,6 +226,60 @@ colorscheme onedark
 " vim-solarized8:
 " set background=dark
 " colorscheme solarized8
+
+" vim-colors-pencil:
+" let g:pencil_higher_contrast_ui = 0
+" colorscheme pencil
+" set background=dark
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" For Goyo
+let g:goyo_width=85
+
+" For LimeLight
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+" if Limelight should highlight line rather than paragraph
+" let g:limelight_bop = '^.*$'
+" let g:limelight_eop = '\n'
+let g:limelight_paragraph_span = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" UI Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Keep cursor in the middle of the page, useful for editing text
+set so=999
+" Turn limelight on by default
+" autocmd VimEnter * Limelight
+" Turn Goyo on by default
+autocmd VimEnter * Goyo
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Markdown **, * etc settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" set concealcursor=n
+" set conceallevel=3
+" hi Asterisks NONE
+" hi AsteriskBold  cterm=bold gui=bold
+" syn match Asterisks contained "**" conceal
+" syn match AsteriskBold "\\\@<!\*\*[^"*|]\+\*\*" contains=Asterisks
+autocmd VimEnter * highlight Normal ctermbg=black
+" ctermfg=grey
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Other Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""
+set paste               " to enable pasting in windows
+```
+
+```
+nvim "C:/Users/d674a/Tex4Econ/_other/equation/multilines.tex"
 ```
 
 # Vim Basics
