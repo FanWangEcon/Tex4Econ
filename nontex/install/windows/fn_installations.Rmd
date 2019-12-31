@@ -156,13 +156,17 @@ Now test python within atom:
 1. install hydrogen in atom. Follow [instructions](http://nteract.io/atom).
     - terminal in windows or linux after installation: *apm install hydrogen*
     - apm is the atom package manager.
-2. go to the programs above and try to run.
+2. Pull/Sync with Git and open mulitple projects in atom, follow [guide here](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html).
+3. go to the programs above and try to run.
 
 ```{bash}
 # Once atom is installed, can use apm to install packages
 apm install hydrogen
+apm install project-manager
 # Inside Conda open up atom
 atom
+# open multiple projects from atom at the same time, after repos synced
+atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/Py4Econ
 # open up any py from from within, try 1+1, does it work?
 # also use script, try ctrl + shift + b, run whole file (not hydrogen)
 ```

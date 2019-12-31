@@ -109,6 +109,7 @@ Pull latested from multiple repositories. Just Paste the following lines.
 2. pull from multiple Repositories upon start of working session.
 3. commit changes as work on one computer
 4. upon leaving a computer with commited changes, push all
+5. create bash file to make it easier to repeat steps
 
 Start and end ssh session:
 
@@ -159,4 +160,34 @@ cd ~/Py4Econ
 git push -u github master
 cd ~/Teaching
 git push -u github master
+```
+
+to create bash file to store these (from git bash in windows):
+
+```{bash}
+# store bash file in ~\PyFan\bin
+mkdir ~/PyFan/bin
+cd ~/PyFan/bin
+
+# create bash file
+vim pull_repos
+vim push_repos
+
+# paste the text below over, comfirm bash loc with: which bash
+#!/usr/bin/bash
+echo start fan github pull
+# Security
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/id_rsa
+# Pull from Persistent Repos
+cd ~/fanwangecon.github.io
+git pull github master
+# Stop Secured SSH
+kill $SSH_AGENT_PID
+
+# change permission to make file an executable
+chmod u+x ~/PyFan/bin/pull_repos
+chmod u+x ~/PyFan/bin/push_repos
+# execute script
+bash ~/PyFan/bin/pull_repos
 ```
