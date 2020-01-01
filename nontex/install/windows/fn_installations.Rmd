@@ -163,8 +163,11 @@ Now test python within atom:
 # Once atom is installed, can use apm to install packages
 apm install hydrogen
 apm install project-manager
+apm install sublime-style-column-selection
+
 # Inside Conda open up atom
 atom
+
 # open multiple projects from atom at the same time, after repos synced
 atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/Py4Econ
 # open up any py from from within, try 1+1, does it work?
@@ -487,7 +490,7 @@ There are several pieces of things to install:
 2. tex distributions: MikTex, texlive
     + these folders, once various packages are installed, could be very large, many GB
 3. latex packages from distributions
-3. editor (gui): Atom, texStudio, etc
+3. editor (gui): Atom, Sublime text, texStudio, etc
 
 ## Uninstall
 
@@ -561,9 +564,29 @@ set-executionpolicy remotesigned -scope currentuser
 iwr -useb get.scoop.sh | iex
 ```
 
-## Development Programs
+## Editors
 
-- [pycharm](https://www.jetbrains.com/pycharm/)
+In addition to Atom.
+
+### Notepad++
+
+[Notepad++](https://notepad-plus-plus.org/downloads/v7.8.2/). Many old projects have xml folder structures for Notepad++.
+
+- Silently update file changes made in other editors: Settings, Preferences, MISC., File Status Auto Detection, Update Silently.
+### Sublime
+
+[Sublime](https://www.sublimetext.com/3)
+
+there are some issues with atom. When a file is edited inside Vim, when changes are saved, a [temp file is created in atom](https://github.com/atom/atom/issues/17186). Sublime would, however, still show the file with the changes. This makes dual screen editing very difficult. Sublime text is used for this situation.
+
+*Sublime Setup*:
+
+- [r and rmd setup](https://weibeld.net/r/rmd_sublime_package.html)
+
+
+### PyCharm
+
+[pycharm](https://www.)jetbrains.com/pycharm/)
 
 ## Key Programs
 

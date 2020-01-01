@@ -156,5 +156,6 @@ Other key programs and packages to install.
 
 ```
 sudo apt-get install vim
+sudo apt-get install sublime-text
 sudo apt-get install htop
 ```

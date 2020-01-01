@@ -154,7 +154,11 @@ set so=999
 autocmd VimEnter * Goyo
 ```
 
-## Install Neovim in Conda (Windows)
+## Install Neovim in Windows
+
+Install and access neovim all from windows powershell. Type in *powershell* in regular command prompt for example.
+
+### Install Neovim and Vim-Plug in Windows
 
 ```
 # install scoop and use scoop
@@ -171,7 +175,9 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 )
 ```
 
-Create init.vim file:
+### Set up init.vim File in Windows
+
+Inside powershell, create init.vim file:
 
 ```
 cd ~\AppData\Local\nvim\
@@ -246,7 +252,7 @@ let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
 " if Limelight should highlight line rather than paragraph
-" let g:limelight_bop = '^.*$'
+let g:limelight_bop = '^.*$'
 " let g:limelight_eop = '\n'
 let g:limelight_paragraph_span = 0
 
@@ -269,7 +275,7 @@ autocmd VimEnter * Goyo
 " hi AsteriskBold  cterm=bold gui=bold
 " syn match Asterisks contained "**" conceal
 " syn match AsteriskBold "\\\@<!\*\*[^"*|]\+\*\*" contains=Asterisks
-autocmd VimEnter * highlight Normal ctermbg=black
+" autocmd VimEnter * highlight Normal ctermbg=black
 " ctermfg=grey
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -281,6 +287,11 @@ set paste               " to enable pasting in windows
 ```
 nvim "C:/Users/d674a/Tex4Econ/_other/equation/multilines.tex"
 ```
+
+### Full Screen Vim Window in Windows
+
+It is nice to have full screen, no distraction work experience. To set command prompt to full screen (to get rid of scrolling bar on the right in full screen), use windows command prompt which allows for full screen, right click on window top border, choose property, then choose layout, then set height and width of window size and buffer size to be the same. This will allow for full screen experience.
+
 
 # Vim Basics
 

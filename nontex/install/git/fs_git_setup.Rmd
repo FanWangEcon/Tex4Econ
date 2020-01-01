@@ -125,7 +125,7 @@ kill $SSH_AGENT_PID
 Pull from repos:
 
 ```{bash}
-# Initialize Repositories, do these one by one first
+# Pull from Repositories, do these one by one first
 cd ~/fanwangecon.github.io
 git pull github master
 cd ~/PyFan
@@ -145,7 +145,7 @@ git pull github master
 Push from repos committed changes
 
 ```{bash}
-# Initialize Repositories, do these one by one first
+# Push to Repositories, do these one by one first
 cd ~/fanwangecon.github.io
 git push -u github master
 cd ~/PyFan

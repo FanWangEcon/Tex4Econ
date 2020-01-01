@@ -10,7 +10,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 \usepackage{geometry}
@@ -52,7 +52,7 @@
 \tikzstyle{level 3}=[level distance=6mm,sibling distance=6mm]
 \tikzstyle{level 4}=[level distance=4mm,sibling distance=4mm]
 % B Level 1 point
-\node(0)[solid node,label=left:{$P1$}]{} 
+\node(0)[solid node,label=left:{$P1$}]{}
 [grow=right]
 child{
     [red]
@@ -103,17 +103,17 @@ child{
     \tikzstyle{level 2}=[level distance=15mm,sibling distance=15mm]
 
 % B Level 1 point
-\node(0)[solid node,label=above:{$P1$}]{} 
+\node(0)[solid node,label=above:{$P1$}]{}
 
 % C Level 2 Node (child nodes)
 % C.1 First child node, left
 child{
     % C.1.a Node line color
     [red]
-    % C.1.b Node dot 
+    % C.1.b Node dot
     node(1)[solid node, label=below:{red dot}]{}
     % C.1.c now go to edge
-    edge from parent 
+    edge from parent
         % C.1.c Node along edge
         node[sloped, above, black, text width=3cm]{Minimum Choice showing up along this red line}
     }
@@ -124,37 +124,80 @@ child{
     [purple] node(2)[solid node, xshift=30, yshift=-50, label=right:{hello}]{}
     % D.1 Left level 3 (from middle level 2)
     child{
-        [black] 
-        node[hollow node,label=below:{$(a,b)$}]{} 
-        edge from parent 
+        [black]
+        node[hollow node,label=below:{$(a,b)$}]{}
+        edge from parent
             node[left]{$C$}
         }
     child{
         [black]
-        node[hollow node,label=below:{$(c,d)$}]{} 
-        edge from parent 
+        node[hollow node,label=below:{$(c,d)$}]{}
+        edge from parent
             node[right]{$D$}
         }
-    edge from parent 
+    edge from parent
         %note that you need to adjust the yshift if you change the level distance
-        node[left, black, xshift=-5, yshift=0, text width = 1mm]{$\alpha$\\$\beta$\\$\sigma$} 
+        node[left, black, xshift=-5, yshift=0, text width = 1mm]{$\alpha$\\$\beta$\\$\sigma$}
     }
 child{
     [black]
     node(3)[solid node, label=right:{hi there}, green]{}
-    edge from parent 
+    edge from parent
         node[right, xshift=0, yshift=15, text width=2cm]{Some text for this edge}
     };
 % information set
-\draw[dashed, bend right] 
+\draw[dashed, bend right]
     (1) to (3);
-\draw[dashed, bend left, line width=0.5mm, blue] 
-    (0) to 
-        node[right, text width=1.25cm, xshift=5, yshift=-10] 
+\draw[dashed, bend left, line width=0.5mm, blue]
+    (0) to
+        node[right, text width=1.25cm, xshift=5, yshift=-10]
             {\tiny{label right of blue dashed line}}
         (2);
 \end{tikzpicture}
 \end{center}
+
+\section{Grow Three to the Right, Discrete and Continuous Muliple}
+
+There are three choices, choose consumption share first, which also means the residual goes to overall investment share.
+
+\begin{enumerate}
+  \item \textbf{continous}, choose consumption, or aggregate investment, rightward bend span, three node, center longer to match bend
+  \item \textbf{continous}, choose investment in capital, type 1 asset, residual goes to type two asset, rightward span, three node, center longer to match bend
+  \item \textbf{discrete}, within type 2 asset, choose a achieve the desired level of type two, rightward, five nodes, equi-distance
+\end{enumerate}
+
+\subsection{Nodes Only}
+
+When developing trees, to simply the problem, first just draw nodes and branches, no text, no benidng, no coloring.
+
+\def\famm{5mm}
+\begin{center}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]W
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 3}=[level distance=\famm,sibling distance=\famm]
+% B Level 1 point
+\node(0)[solid node,label=left:{$P1$}]{}
+[grow=right]
+child
+child{
+    [grow=right]
+    child
+    child{
+        [grow=right]
+        child
+        child
+        child
+        child
+        child
+        }
+    child
+    }
+child;
+\end{tikzpicture}
+\end{center}
+
+
 
 
 % \begin{istgame}[font=\scriptsize]
