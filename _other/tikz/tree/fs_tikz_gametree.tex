@@ -43,6 +43,57 @@
     hollow node/.style={circle,draw,inner sep=1.5,fill=white}
 }
 
+\section{Grow Tree towards Different Directions}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+\tikzstyle{level 1}=[level distance=10mm,sibling distance=10mm]
+\tikzstyle{level 2}=[level distance=12mm,sibling distance=7mm]
+\tikzstyle{level 3}=[level distance=6mm,sibling distance=6mm]
+\tikzstyle{level 4}=[level distance=4mm,sibling distance=4mm]
+% B Level 1 point
+\node(0)[solid node,label=left:{$P1$}]{} 
+[grow=right]
+child{
+    [red]
+    node(1)[solid node, label=below:{red dot}]{}
+    }
+child{
+    [purple]
+    node(2)[solid node]{}
+    [grow=right]
+    child
+    child{
+        [black]
+        node(4)[hollow node, green]{}
+        [grow=right]
+        child
+        child{
+            [grow=right]
+            child
+            child
+            child
+            }
+        }
+    child
+    child
+    child{
+            [black]
+            node(5)[hollow node, red]{}
+            [grow=up]
+            child
+            child
+        }
+    }
+child{
+    [black]
+    node(3)[solid node, label=above:{hi there}, green]{}
+    };
+\end{tikzpicture}
+\end{center}
+
+\section{Continuous and Discrete}
+
 \begin{center}
 \begin{tikzpicture}[scale=1.5,font=\footnotesize]
 
