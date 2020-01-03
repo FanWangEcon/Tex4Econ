@@ -1,0 +1,326 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Example and Tutorial for Atom, Git, Github, etc Set-up for Linux},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{Example and Tutorial for Atom, Git, Github, etc Set-up for Linux}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+Go back to \href{http://fanwangecon.github.io/}{fan}'s
+\href{http://fanwangecon.github.io/Tex4Econ/}{Tex4Econ and Miscellaneous
+Repository}.
+
+\hypertarget{atom-install}{%
+\section{Atom Install}\label{atom-install}}
+
+Can be directly installed from Ubuntu store.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install atom}
+\FunctionTok{sudo}\NormalTok{ apt-get install atom}
+\CommentTok{# install various atom packages that are necessary}
+\FunctionTok{apm}\NormalTok{ install vim-mode-plus}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\item
+  \emph{personal access token}: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f
+\item
+  \emph{Gist id}: 754fa9ca57eb7ddc1ee89775f934b59f
+\item
+  \emph{personal access token}: b36b4d26ff2b5b626a1d7f66e3bc60c582a85c21
+\item
+  \emph{Gist id}: a883a7ba62661dbe9b907d24b651b780
+\end{itemize}
+
+\hypertarget{git-install}{%
+\section{Git Install}\label{git-install}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  install git
+\item
+  once rsa set up, sync repo
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install git}
+\FunctionTok{sudo}\NormalTok{ apt-get install git}
+\CommentTok{# generate repo directory and sync}
+\FunctionTok{mkdir}\NormalTok{ ~/PyFan}
+\CommentTok{# mkdir fanwangecon.github.io PyFan Tex4Econ R4Econ M4Econ Py4Econ Teaching}
+\BuiltInTok{cd}\NormalTok{ ~/PyFan}
+\FunctionTok{git}\NormalTok{ init}
+\CommentTok{# git config only needs to happen once, info stored under ~/.gitconfig}
+\FunctionTok{git}\NormalTok{ config --global user.name }\StringTok{"Fan Wang"}
+\FunctionTok{git}\NormalTok{ config --global user.email wangfanbsg75@live.com}
+\FunctionTok{git}\NormalTok{ remote add github git@github.com:FanWangEcon/PyFan.git}
+\FunctionTok{git}\NormalTok{ pull github master}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{github-and-local-repo}{%
+\section{Github and local repo}\label{github-and-local-repo}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  generate rsa
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ssh-keygen -t rsa -C
+    ``\href{mailto:wangfanbsg75@live.com}{\nolinkurl{wangfanbsg75@live.com}}'',
+    when prompted, do not enter ``file in which save the key'', when
+    prompted for passphrase, enter ``WHATEVERPASSWORDIS''
+  \end{itemize}
+\item
+  copy key
+\item
+  log on to github ssh section, generate new ssh rsa key
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ssh-keygen}\NormalTok{ -t rsa -C }\StringTok{"wangfanbsg75@live.com"}
+\FunctionTok{cat}\NormalTok{ ~/.ssh/id_rsa.pub}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{conda-install}{%
+\section{Conda Install}\label{conda-install}}
+
+conda install linux
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  wget to download from url to download folder
+\item
+  bash to install
+\item
+  follow instructions, type yes
+\item
+  source \textasciitilde{}/.bashrc
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# To remove conda Fully}
+\FunctionTok{rm}\NormalTok{ -rf ~/anaconda3}
+
+\CommentTok{# could be saved in current folder: pwd}
+\CommentTok{# could be saved in download folder: ~/Downloads}
+\FunctionTok{wget}\NormalTok{ https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh}
+\CommentTok{# install file}
+\FunctionTok{bash} \StringTok{"Anaconda3-2019.10-Linux-x86_64.sh"}
+\CommentTok{# refresh}
+\BuiltInTok{source}\NormalTok{ ~/.bashrc}
+
+\CommentTok{# show all installed packages under current envir}
+\ExtensionTok{conda}\NormalTok{ list}
+\CommentTok{# see where key files are installed}
+\FunctionTok{which}\NormalTok{ python}
+\FunctionTok{which}\NormalTok{ conda}
+\CommentTok{# use conda-forge as main channel and update all}
+\ExtensionTok{/*}\NormalTok{ conda config --add channels conda-forge */}
+\ExtensionTok{conda}\NormalTok{ update --all}
+\end{Highlighting}
+\end{Shaded}
+
+Additional statistics and related models to install:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{conda install }\OperatorTok{-}\NormalTok{y statsmodels datashape seaborn}
+\CommentTok{# conda install statsmodels}
+\CommentTok{# conda install datashape}
+\CommentTok{# conda install seaborn}
+
+\NormalTok{conda install }\OperatorTok{-}\NormalTok{c conda}\OperatorTok{-}\NormalTok{forge }\OperatorTok{-}\NormalTok{y interpolation awscli}
+\CommentTok{# conda install -c conda-forge interpolation}
+\CommentTok{# conda install -c conda-forge awscli}
+
+\NormalTok{conda install }\OperatorTok{-}\NormalTok{c anaconda }\OperatorTok{-}\NormalTok{y boto3}
+
+\CommentTok{# conda install -c r r-irkernel}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{install-pycharm}{%
+\subsection{Install PyCharm}\label{install-pycharm}}
+
+PyCharm can be installed from Ubuntu apps.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{<}\NormalTok{!}\ExtensionTok{--}\NormalTok{ for Debian --}\OperatorTok{>}
+\FunctionTok{sudo}\NormalTok{ tar xfz pycharm-*.tar.gz -C /opt/}
+\BuiltInTok{cd}\NormalTok{ /opt/pycharm-*/bin}
+\ExtensionTok{./pycharm.sh}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{r-install}{%
+\section{R install}\label{r-install}}
+
+R could be installed first as below. Or follow the
+\href{https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html}{instructions
+on this page} to install from conda an environment for R, with
+associated R-studio.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Debian R is maintained by Johannes Ranke, copied from https://cran.r-project.org/bin/linux/debian/:}
+\ExtensionTok{apt-key}\NormalTok{ adv --keyserver keys.gnupg.net --recv-key }\StringTok{'E19F5F87128899B192B1A2C2AD5F960A256A04AF'}
+\CommentTok{# Add to source.list, for debian stretch (9)}
+\CommentTok{# sudo su added for security issue as super-user}
+\FunctionTok{sudo}\NormalTok{ su -c }\StringTok{"sudo echo 'deb http://cloud.r-project.org/bin/linux/debian stretch-cran35/' >> /etc/apt/sources.list"}
+\CommentTok{# if added wrong lines, delete 3rd line}
+\FunctionTok{sudo}\NormalTok{ sed }\StringTok{'3d'}\NormalTok{ /etc/apt/sources.list}
+
+\CommentTok{# Update and Install R, should say updated from cloud.r}
+\FunctionTok{sudo}\NormalTok{ apt-get update}
+\FunctionTok{sudo}\NormalTok{ apt-get install r-base r-base-dev}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{install-other-programs-and-packages}{%
+\section{Install Other Programs and
+Packages}\label{install-other-programs-and-packages}}
+
+Other key programs and packages to install.
+
+\begin{itemize}
+\tightlist
+\item
+  vim: faster editor, on lower resource machines, atom is slow and
+  typing could feel laggy.
+\item
+  htop: for resource monitoring
+\end{itemize}
+
+\begin{verbatim}
+sudo apt-get install vim
+sudo apt-get install sublime-text
+sudo apt-get install htop
+\end{verbatim}
+
+\end{document}

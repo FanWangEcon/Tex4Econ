@@ -544,7 +544,7 @@ code
 
 ### VSCode Extensions
 
-Press *Ctrl + P*, paste the *ext install* commands below to install extensions. Extensions are in: *%USERPROFILE%\.vscode\extensions* for windows. Can change code for extension there.
+Press *Ctrl + P*, paste the *ext install* commands below to install extensions. Extensions are in: *%USERPROFILE%/.vscode/extensions* for windows. Can change code for extension there.
 
 ```{bash}
 # [Microsoft Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
@@ -601,7 +601,7 @@ To take advantage of Okular (where background color can be none-white for exampl
 2. Change: *latex-workshop.view.pdf.external.viewer.command* to *C:/Program Files/SumatraPDF/SumatraPDF.exe*
  open up *C:/Users/fan/AppData/Roaming/Code/User/settings.json*, and copy these in:
 
-```{JSON}
+```
 "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
 "latex-workshop.view.pdf.external.synctex.args": [
   "-forward-search",

@@ -33,7 +33,6 @@
 \hypersetup{
             colorlinks=true,
             linkcolor=Maroon,
-            filecolor=Maroon,
             citecolor=Blue,
             urlcolor=blue,
             breaklinks=true}
@@ -790,6 +789,54 @@ install texlive and texstudio ubuntu/debian.
 
 Test file compilations in TexStudio.
 
+\hypertarget{sumatrapdf}{%
+\subsection{SumatraPDF}\label{sumatrapdf}}
+
+For windows, install
+\href{https://www.sumatrapdfreader.org/download-free-pdf-viewer.html}{SumatraPDF}.
+Can easily modify colors.
+
+\textbf{Settings}
+
+\href{https://medium.com/greatnote/kindle-sepia-color-code-1fed14b1a5ef}{Kindle
+Sepia} modifications:
+
+\begin{itemize}
+\tightlist
+\item
+  Background color:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Kindle Sepia: \emph{fbf0d9}
+  \item
+    Kindle Sepia Light: \emph{fff8e6}
+  \end{itemize}
+\item
+  Text color:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Kindle Sepia: \emph{5f4b32}
+  \item
+    Kindle Sepia Darker: \emph{503f2a}
+  \item
+    Kindle Sepia Darkerer: \emph{1e170f}
+  \end{itemize}
+\end{itemize}
+
+\begin{verbatim}
+FixedPageUI [
+    TextColor = #1e170f
+    BackgroundColor = #fff8e6
+    SelectionColor = #f5fc0c
+    WindowMargin = 2 4 2 4
+    PageSpacing = 4 4
+]
+\end{verbatim}
+
 \hypertarget{okular-pdf}{%
 \subsection{Okular PDF}\label{okular-pdf}}
 
@@ -800,35 +847,48 @@ windows app store
 \subsubsection{Okular Shortcuts and
 Features}\label{okular-shortcuts-and-features}}
 
-\textbf{Features}:
+\textbf{Settings}:
 
 \begin{itemize}
 \tightlist
-\item
-  Okular 3 pages per row view:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    view, overview
-  \end{itemize}
-\item
-  Automatic Update when PDF updated elsewhere
-
-  \begin{itemize}
-  \tightlist
-  \item
-    this is one of the key reasons to use okular, when I knit a Rmd file
-    to PDF, the currently open Okular PDF file automatically updates and
-    does not give file is open error like Acrobat.
-  \end{itemize}
 \item
   Background color:
 
   \begin{itemize}
   \tightlist
   \item
-    can easily change background color to non-white.
+    background behind pdf: configure okular, general, use custom
+    backgroun color, Gainsboro gray: \emph{DCDCDC}, kindle sepia:
+    \emph{FBF0D9}
+  \item
+    pdf background itself: configure okular, accessbility, change color,
+    change paper color, Light Kindle Sepia: \emph{fff8e6}
+  \end{itemize}
+\end{itemize}
+
+\textbf{Features}:
+
+\begin{itemize}
+\tightlist
+\item
+  Okular 3 pages per row view: view, overview
+\item
+  Automatic Update when PDF updated elsewhere: this is one of the key
+  reasons to use okular, when I knit a Rmd file to PDF, the currently
+  open Okular PDF file automatically updates and does not give file is
+  open error like Acrobat.
+\item
+  Background color:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    background behind pdf: configure okular, general, use custom
+    backgroun color, Gainsboro gray: \emph{DCDCDC}, kindle sepia:
+    \emph{FBF0D9}
+  \item
+    pdf background itself: configure okular, accessbility, change color,
+    change paper color, Light Kindle Sepia: \emph{fff8e6}
   \end{itemize}
 \end{itemize}
 
@@ -872,11 +932,22 @@ allows for pleasant programming and writing experiences. See here for
 \href{https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html}{vim}
 installations.
 
+All settings here JSON files here:
+
+\begin{itemize}
+\tightlist
+\item
+  windows: \emph{C:/Users/fan/AppData/Roaming/Code/User}, can be
+  modified here directly
+\end{itemize}
+
 \hypertarget{vscode-installation}{%
 \subsection{VSCode Installation}\label{vscode-installation}}
 
 VSCode is much more light-weight than Atom, much faster. On Windows,
-download \href{https://code.visualstudio.com/download}{here}.
+download \href{https://code.visualstudio.com/download}{here}. VScode
+settings easy to change for various extensions. Very very good Latex
+Editor, probably the best I have used.
 
 For Linux:
 
@@ -908,7 +979,9 @@ For Linux:
 \subsubsection{VSCode Extensions}\label{vscode-extensions}}
 
 Press \emph{Ctrl + P}, paste the \emph{ext install} commands below to
-install extensions:
+install extensions. Extensions are in:
+\emph{\%USERPROFILE\%/.vscode/extensions} for windows. Can change code
+for extension there.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1010,11 +1083,86 @@ breath.
 \end{enumerate}
 
 \hypertarget{vscode-and-latex}{%
-\paragraph{VSCode and Latex}\label{vscode-and-latex}}
+\subsubsection{VSCode and Latex}\label{vscode-and-latex}}
 
 Download
 \href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{Latex
 Workshop}.
+
+\textbf{Settings}
+
+change background border pdf color (not pdf but border): \emph{ctrl +
+shift + x}, LatexWorkshop, Settings, Configure Extension Settings,
+Search for background, change color name. or enter:
+\emph{latex-workshop.view.pdf.backgroundColor}. use gainsboro gray:
+\emph{\#DCDCDC}, or lightgray \emph{\#D3D3D3}.
+
+To take advantage of Okular (where background color can be none-white
+for example). Go to settings, and: 1. Change:
+\emph{latex-workshop.view.pdf.viewer} to external 2. Change:
+\emph{latex-workshop.view.pdf.external.viewer.command} to
+\emph{C:/Program Files/SumatraPDF/SumatraPDF.exe} open up
+\emph{C:/Users/fan/AppData/Roaming/Code/User/settings.json}, and copy
+these in:
+
+\begin{verbatim}
+"latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+"latex-workshop.view.pdf.external.synctex.args": [
+  "-forward-search",
+  "%TEX%",
+  "%LINE%",
+  "-reuse-instance",
+  "-inverse-search",
+  "code \"C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+  "%PDF%",
+]
+\end{verbatim}
+
+\textbf{Features}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  upon savings, rebuid file and update pdf (similar to overleaf)
+\item
+  hover offers equation preview
+\end{enumerate}
+
+\textbf{Shortcuts}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  preview: \emph{ctrl + alt + v}
+\item
+  synctex location: \emph{ctrl + alt + j}
+\end{enumerate}
+
+\hypertarget{vscode-settings.json}{%
+\subsubsection{VSCode settings.json}\label{vscode-settings.json}}
+
+The settings.json file, \emph{\%APPDATA\%/Code/User/settings.json}:
+
+\begin{verbatim}
+{
+  "r.rterm.windows": "C:/Program Files/R/R-3.6.2/bin/x64/R.exe",
+  "window.zoomLevel": 0,
+  "latex-workshop.view.pdf.viewer": "external",
+  "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+  "latex-workshop.view.pdf.external.synctex.args": [
+        "-forward-search",
+        "%TEX%",
+        "%LINE%",
+        "-reuse-instance",
+        "-inverse-search",
+        "code \"C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+        "%PDF%",
+    ],
+    "latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe"
+}
+\end{verbatim}
 
 \hypertarget{atom-installation}{%
 \subsection{Atom Installation}\label{atom-installation}}
