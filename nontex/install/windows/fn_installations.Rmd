@@ -1,5 +1,8 @@
 ---
-title: "New Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations"
+title: |
+  | New Computer Fan Data-Science Set-up
+  | Python (Anaconda), R (Rstudio), Matlab and Latex (Texlive)
+  | Atom, VScode, Pycharm
 output:
   pdf_document:
     df_print: paged
@@ -22,46 +25,36 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 # Objective
 
-For the following types of programming tasks, install relevant programs, that are cross platform compatible. Test at the end that example programs work.
+Install various compilers and IDE:
 
-1. Python
-    + Anaconda Dist
-    + Pycharm
-    + atom hydrogen
-2. R
-    + R
-    + Rstudio
-    + atom hydrogen
+1. Python (Anaconda, Pycharm + VSCode + Atom)
+2. R (VSCode + Atom)
 3. Matlab
-    + Matlab
-4. Latex and PDF
-    + atom latex
-    + texstudio
-    + texlive
-    + okular pdf
+4. Latex and PDF (texlive, Okular, VSCode + Atom + Texstudio)
 
 Test at the end:
 
 1. Do sample *py* files work?
-    + work from command line?
-    + work from atom (hydrogen)
+    + work from command line
+    + work from atom (hydrogen), Pycharm, VSCode
 2. Do sample *rmd* files work?
     + work from r-studio
-    + work from atom (hydrogen), r file
+    + work from atom (hydrogen), VSCode
 3. Do tex templates compile?
-    + tikz files
-    + template files with bib
+    + tikz files, template files with bib
+    + work from texstudio, VSCode live compile, Atom
 
-*note*: Github people seem to have slowed down updating Atom since microsoft acquisition
+Installation Plan outline:
 
-# Conda
+1. Conda install (python)
+2. Install Atom along with Hydrogen and other packages.
+
+# Python and Anaconda Installation
 
 Use conda across platforms, so that locally on windows and ubuntu and remotely on aws, can have the same software setup environment.
 
-Search for Anaconda Prompt, right click, choose run as administrator.
-
-Check software versions.
-
+- Search for Anaconda Prompt, right click, choose run as administrator.
+- Check software versions.
 
 ```{bash}
 conda list anaconda
@@ -70,11 +63,11 @@ python -V
 
 ## First Time Conda Install
 
-Download and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path
+[Download Anaconda Python 3](https://www.anaconda.com/distribution/) and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path.
 
-To install conda in Debian, follow [these instructions](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html).
+To install conda in Linux/Debian, follow [these instructions](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html). Overall, installations are very similar.
 
-See Anaconda Installation Directory, in anaconda prompt:
+In command/anaconda prompt:
 
 ```{bash}
 # To remove conda Fully
@@ -98,7 +91,7 @@ where r
 ```
 
 To Add Anaconda to Path, In Windows
-1. search for: Environment Variables
+1. Search for: Environment Variables
 2. Edit Environment Variables
 3. Add new to Path (lower half):
     - C:/ProgramData/Anaconda3/Scripts/
@@ -110,6 +103,8 @@ To Add Anaconda to Path, In Windows
 ## Conda Update
 
 Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.
+
+There are different channels/repositories from which packages could be installed: *conda*, *conda-forge*, for example. Can change where to look for packages first. Many packages are in multiple channels. Conda-forge often have mroe recent packages.
 
 ```{bash}
 # if there are bugs
@@ -129,7 +124,7 @@ conda install -c conda-forge -y interpolation awscli
 conda install -c anaconda -y boto3
 ```
 
-## Conda Test Python
+## Python Command Line Test
 
 Fist test python under command line:
 
@@ -142,65 +137,23 @@ python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
 python ~/PyFan/ProjectSupport/graph/subplot.py
 ```
 
-## Jupyter and Atom Hydrogen
-
-For both Jupyter as well as Atom, always open from command prompt, open from *Anaconda Prompt* with admin rights.
-
-First, open up *Jupyter Notebook*, does the python kernel work? If does not, uninstall and re-install Anaconda.
-
-```{bash}
-# start jupyter lab, from prompt
-jupyter lab
-```
-
-Now test python within atom:
-
-1. install hydrogen in atom. Follow [instructions](http://nteract.io/atom).
-    - terminal in windows or linux after installation: *apm install hydrogen*
-    - apm is the atom package manager.
-2. Pull/Sync with Git and open mulitple projects in atom, follow [guide here](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html).
-3. go to the programs above and try to run.
-
-```{bash}
-# Once atom is installed, can use apm to install packages
-apm install hydrogen
-apm install project-manager
-apm install sublime-style-column-selection
-apm install minimap
-
-# vim distraction free editing
-apm install vim-mode-plus
-apm install zen
-
-# Inside Conda open up atom
-atom
-
-# open multiple projects from atom at the same time, after repos synced
-atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/Py4Econ
-# open up any py from from within, try 1+1, does it work?
-# also use script, try ctrl + shift + b, run whole file (not hydrogen)
-```
-
 # R Installation
 
-Try to install R from within Conda. The procedure here is the same for windows as well as linux machines.
+R could be installed from Anaconda or directly on windows outside of the Anaconda directories. When installing from within Anaconda, could create R environment that are isolated from the rest of the computer. The R environment could be updated and deleted without disturbing dependencies in conda main or the rest of the computer.
+
+The computer could have multiple R installations. Several in different conda R environment, and also several under windows/linux primary main user R directories. Type *which R/where R* to see if you open up R from command line at the moment, which directory's R will be used. Inside Conda R environment, it will be a different R if there is a different R version there.
 
 ## Fully Uninstall r
 
-Open up RStudio, and see where paths are.
-also open up R from command prompt, see where paths are.
+If R was installed in R enviornments, just delete the environment. Otherwise, use system's uninstaller. Before that, from terminal/command-prompt, type *R*, and *.libPaths()* to find paths. Do so inside conda main, outside of conda main, inside different environments, find all paths. After uninstaller finishes, check in the libPath folders to see if there are still stuff there, delete all, delete the folders.
 
 ```{R}
 .libPath()
+# C:/Users/fan/Documents/R/win-library/3.6
+# C:/Program Files/R/R-3.6.1/library
 ```
 
-Open up install and uninstall programs, find R and Rstudio, and uninstall them. Then delete all files found path paths shown by *.libPath()*, looking at these:
-    - *C:/Users/fan/Documents/R/win-library/3.6*
-    - *C:/Program Files/R/R-3.6.1/library*
-
-For Linux:
-
-- if used apt-get to install, R installed under main user drive, deactivate conda, and check which conda
+For Linux and for unsintalling inside conda:
 
 ```{bash}
 # Exit Conda
@@ -224,23 +177,24 @@ conda uninstall r-base
 
 ## Install R (outside of Conda)
 
+Need to install R. Then need to install also an editor/IDE for R. Rstudio is the dominant R IDE. VSCode and Atom also works well, especially VSCode as editors. Dramatically better experience for writing scripts outside of Rstudio which feels unwieldy and slow especially compared to VSCode.
+
+Overall plan:
+
 1. [download R](https://cloud.r-project.org/)
-    + for debian: [Johannes Ranke](https://cran.r-project.org/bin/linux/debian/)
+    + for debian: [Johannes Ranke](https://cran.r-project.org/bin/linux/debian/). For Linux/Debian installation, crucial to update the *source.list* to include sources that have more recent versions of R. If not, will get very old R versions that is not compatible with many packages.
+    + add R to path for Windows. In Windows Path, add for example: *C:/Program Files/R/R-3.6.2/bin/x64/* and *C:/Rtools/bin*
 2. [download R-studio](https://rstudio.com/products/rstudio/download/)
 3. Open R-studio and auto-detect R
-4. Install packages
+4. Install additional packages (from commandline)
+    + various R data-science packages have dependencies, and additional not-R programs might need to be installed. Install them as needed, for example:  *libcurl4-openssl-dev* and *libssl-dev* from command prompt first inside Debian.
 
-note that installation will not work if the machine's version of R is not up to date, this could be the case with default R versions for some linux installations. For Debian for example, need to update the *source.list* to include sources that have more recent versions of R.
 
-Additionally, need to install *libcurl4-openssl-dev* and *libssl-dev* from command prompt first inside Debian.
+### Linux R Install
+
+For linux/Debian, to Install latest R:
 
 ```{bash}
-# If inside Debian, due to some tidymodel install issues, do this`
-conda install -c r r
-conda install -c r r-essentials
-conda install -c r r-igraph
-conda install -c conda-forge igraph
-
 # Go to get latesdebian latest r sources.list
 cat /etc/apt/sources.list
 # Install this First (should already be installed)
@@ -265,11 +219,9 @@ sudo apt-get install libssl-dev
 sudo apt-get install libxml2-dev
 ```
 
-Which R?
+### Install Packages for R
 
-- *export RSTUDIO_WHICH_R=/usr/bin/R*
-- *export RSTUDIO_WHICH_R=/home/wangfanbsg75/anaconda3/bin/R*
-
+From command prompt, enter R by typeing *R*, and install packages:
 
 ```{r}
 # Can enter R from Command Prompt Conda ENV, much faster than from r-studio
@@ -298,11 +250,19 @@ install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtool
 IRkernel::installspec()
 ```
 
-## Set up R-Environment in Conda
+## Install R (inside Conda)
 
-Conda environments are language agnostic. pip is a package manager for Python. venv is an environment manager for Python. conda is both a package and environment manager and is language agnostic. Inside Anaconda Prompt:
+Key packages are generally available in conda's default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. After adding *conda-forge* to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the *r_env* generation line with and without first adding *conda-forge* to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the *conda-forge* channels.
 
-Key packages are generally available in conda's default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. after adding *conda-forge* to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the *r_env* generation line with and without first adding *conda-forge* to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the *conda-forge* channels.
+### Set up Conda R environment
+
+Create a Conda Environment called *r_env*, and update its channels.
+
+- **Location**: Installed environments are shown appear in the *envs* folder of *C:/ProgramData/Anaconda3/envs/*. Can be easily deleted without disrupting the main base installation for conda. This is very important. During installation, could easily run into problems, and need to re-install. Much better to only re-install a folder. Note that when R is installed in *envs*, it will not show up under add or remove programs for uninstallation from there, has to be uninstalled, deleted directly here.
+- **Use only in Env**: Note that if we installed r inside r_env, if we type *r* under the base environment, we can not enter r. We can only enter r within r_env. With PATH properly set-up, this happens under Conda Prompt, Windows Prompt, etc.
+- **Multiple Pythons**: With the above installation for R, one benefit is that if R requires a different version of Python than what the base environment uses, the r_env could have a different python version. So type *python* in the base environment as well as inside the *r_env*. This also means potentially there could be duplicated installations I think. Look at the python versions under *conda list* in the base and in the r-environment.
+- **File Size**: Note that this creates a large installation folder, *C:/ProgramData/Anaconda3/envs/r_env/*, without additional packages, is 1.3 GB in size
+
 
 ```{bash}
 # outside of conda, install some depencies
@@ -327,15 +287,6 @@ conda config --get channels
 # channels for cur env
 conda config --get channels --env
 
-# install files
-conda install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y
-
-# trouble with igraph installation, install here from conda
-# conda install -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
-conda install -n r_env -c r r-igraph
-conda install -n r_env -c conda-forge igraph
-conda install -n r_env -c r r-rstantools r-rstan r-rstanarm -y
-
 # see all installed environments
 conda env list
 # activate an environment to use it, if in base, r does not exist, isolated in r_env
@@ -346,26 +297,36 @@ conda list
 conda deactivate
 ```
 
-- **Location**: Installed environments are shown appear in the *envs* folder of *C:/ProgramData/Anaconda3/envs/*. Can be easily deleted without disrupting the main base installation for conda. This is very important. During installation, could easily run into problems, and need to re-install. Much better to only re-install a folder. Note that when R is installed in *envs*, it will not show up under add or remove programs for uninstallation from there, has to be uninstalled, deleted directly here.
-- **Use only in Env**: Note that if we installed r inside r_env, if we type *r* under the base environment, we can not enter r. We can only enter r within r_env. With PATH properly set-up, this happens under Conda Prompt, Windows Prompt, etc.
-- **Multiple Pythons**: With the above installation for R, one benefit is that if R requires a different version of Python than what the base environment uses, the r_env could have a different python version. So type *python* in the base environment as well as inside the *r_env*. This also means potentially there could be duplicated installations I think. Look at the python versions under *conda list* in the base and in the r-environment.
-- **File Size**: Note that this creates a large installation folder, *C:/ProgramData/Anaconda3/envs/r_env/*, without additional packages, is 1.3 GB in size
+### Install R and Some Packages in Conda
 
-## Install Additional Packages inside the R-environment
+Either inside a R specific environment, or outside of it, now do additional installations for R and also R packages.
 
-These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better.
-
-*tidymodel* has installation issues sometimes.
-
-In *r_env*, type in *R*, and then install from inside terminal's R:
+During installation, the R programs might require downgrading other programs in the Conda environment that Python for example also uses. That is why potentially it is safer to install in R environment. However, when installing in R enviornment, certain packages could have issues if installer does not realize it is in an environment with special folder structure, so installation could fail.
 
 ```{bash}
+# install files
+conda install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y
+
+# trouble with igraph installation, install here from conda
+# conda install -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
+conda install -n r_env -c r r-igraph
+conda install -n r_env -c conda-forge igraph
+conda install -n r_env -c r r-rstantools r-rstan r-rstanarm -y
+```
+
+## Install Additional Packages inside the R
+
+These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better. *tidymodel* has installation issues sometimes.
+
+In *r_env*, type in *R*, and then install from inside terminal's R. For conda env, devtools will be installed and will install packages inside *envs/r_env/Lib/R*.
+
+```{r}
 # enter into env
-conda activate r_env
+# conda activate r_env
 # enter R or type in rstudio
 # sicne R is only install inside r_env, has to enter rstudio from r_env
-R
-rstudio
+# R
+# rstudio
 
 # main packagevps
 # tidymodel installation on linux difficult
@@ -385,16 +346,6 @@ devtools::install_github("fanwangecon/R4Econ")
 # Kernel
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
 IRkernel::installspec()
-```
-
-Install additional packages from inside R. The devtools install will install packages inside *envs/r_env/Lib/R*.
-
-```{r}
-#######################################
-### Own Package
-#######################################
-devtools::install_github("fanwangecon/R4Econ")
-# install_dev("cli")
 ```
 
 ## R-Studio Set-up Download from Rstudio
@@ -432,45 +383,12 @@ cd "C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library"
 "C:/Program Files/RStudio/bin/rstudio.exe"
 ```
 
-## Install Packages from R-Studio
+Is RSTUDIO pointing to the R installation you want? Note you can open Rstudio from differen conda env command line, that will use different R installations. Or also set:
 
-Install addition files inside Rstudio. Easier to debug potentially. Install rtools as described [here](https://thecoatlessprofessor.com/programming/cpp/installing-rtools-for-compiled-code-via-rcpp/): [rtools download](https://cran.r-project.org/bin/windows/Rtools/). Alternatively:
+- *export RSTUDIO_WHICH_R=/usr/bin/R*
+- *export RSTUDIO_WHICH_R=/home/wangfanbsg75/anaconda3/bin/R*
 
-```{r}
-install.packages("installr")
-library("installr")
-# Note that this will generate several pop-up windows
-install.Rtools()
-# choose to only install 64 bit toolchain
-# this installs g++ which is needed for rstanarm
-# Add these below to windows path
-# c:/Rtools/bin;
-# c:/Rtools/mingw_64/bin;
-
-if (!require(devtools)) {
-  install.packages("devtools")
-  library(devtools)
-}
-library(devtools)
-install_github("stan-dev/rstanarm", args = "--preclean")
-
-setwd('C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library')
-
-install.packages("stan-dev/rstanarm", dependencies=TRUE, INSTALL_opts = c('--no-lock'))
-
-# other packages
-install.packages(c("tidymodels", "AER", "minpack.lm", "knitr", "kableExtra", "matlab"))
-
-# for r-kernel to work in Atom
-install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
-devtools::install_github('IRkernel/IRkernel')
-IRkernel::installspec()
-
-# Install my package
-devtools::install_github("fanwangecon/R4Econ")
-```
-
-### Test Files
+## R Tests
 
 Test the following file to see if we can execute a R file. Do it inside *r_env* and inside a *r* session.
 
@@ -487,7 +405,7 @@ source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
 # C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd
 ```
 
-# Install Latex
+# Install Latex and PDF
 
 Use a combination of overleaf and local compile. The goal is to have the same installation set-up for windows as well as linux. And hopefully, locally compilable file also can be compiled on overleaf (only use packages also available on overleaf).
 
@@ -521,7 +439,266 @@ sudo apt-get install texlive-full
 sudo apt-get install texstudio
 ```
 
-## Compile in Atom and Texstudio
+Test file compilations in TexStudio.
+
+## SumatraPDF
+
+For windows, install [SumatraPDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer.html). Can easily modify colors.
+
+**Settings**
+
+[Kindle Sepia](https://medium.com/greatnote/kindle-sepia-color-code-1fed14b1a5ef) modifications:
+
+- Background color:
+    + Kindle Sepia: *fbf0d9*
+    + Kindle Sepia Light: *fff8e6*
+- Text color:
+    + Kindle Sepia: *5f4b32*
+    + Kindle Sepia Darker: *503f2a*
+    + Kindle Sepia Darkerer: *1e170f*
+
+
+```
+FixedPageUI [
+	TextColor = #1e170f
+	BackgroundColor = #fff8e6
+	SelectionColor = #f5fc0c
+	WindowMargin = 2 4 2 4
+	PageSpacing = 4 4
+]
+```
+
+## Okular PDF
+
+Linux: *sudo apt-get install okular*
+Windows: install okular from windows app store
+
+### Okular Shortcuts and Features
+
+**Settings**:
+
+- Background color:
+    + background behind pdf: configure okular, general, use custom backgroun color, Gainsboro gray: *DCDCDC*, kindle sepia: *FBF0D9*
+    + pdf background itself: configure okular, accessbility, change color, change paper color, Light Kindle Sepia: *fff8e6*
+
+**Features**:
+
+- Okular 3 pages per row view: view, overview
+- Automatic Update when PDF updated elsewhere: this is one of the key reasons to use okular, when I knit a Rmd file to PDF, the currently open Okular PDF file automatically updates and does not give file is open error like Acrobat.
+- Background color:
+    + background behind pdf: configure okular, general, use custom backgroun color, Gainsboro gray: *DCDCDC*, kindle sepia: *FBF0D9*
+    + pdf background itself: configure okular, accessbility, change color, change paper color, Light Kindle Sepia: *fff8e6*
+
+**Shortcuts**:
+
++ Okular configure shortcuts: setting, configure shortcuts
++ Okular if menu bar lost: *Ctrl + m*
++ Okular comment pane: *F6*
++ Okular close left pane: *F7*
++ Okular full scrren: *Ctrl + Shift + F*
+    * unlike acrobat, pdf allows for multiple scrrens
+
+## Adobe PDF
+
+PDF Adobe Acrobat Installation
+  + go to adobe website, log in using fwang26@uh.edu
+  + go to my account, choose view and download my apps, choose acrobat & PDF, download Acrobat DC
+  + UH account can only be activated on two accounts at once, so need to kick other computers out temporarily potentially
+
+# Install Various Editors
+
+Atom, VSCode, Notepad++, Sublime, etc. These are essential editors that allows for pleasant programming and writing experiences. See here for [fan](http://fanwangecon.github.io/) instructions on [vim](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html) installations.
+
+
+All settings here JSON files here:
+
+- windows: *C:/Users/fan/AppData/Roaming/Code/User*, can be modified here directly
+
+## VSCode Installation
+
+VSCode is much more light-weight than Atom, much faster. On Windows, download [here](https://code.visualstudio.com/download). VScode settings easy to change for various extensions. Very very good Latex Editor, probably the best I have used.
+
+For Linux:
+
+```{bash}
+# Debian Install
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install code # or code-insiders
+
+# Change Font (https://wwFw.reddit.com/r/Crostini/comments/cesxr0/vscode_ui_and_fonts_too_small_heres_how_to_fix_it/)
+# modify: /usr/share/applications/code.desktop
+nvim /usr/share/applications/code.desktop
+#replace this line: Exec=/usr/share/code/code --unity-launch %F
+Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--unity-launch %F"
+#replace this line: Exec=/usr/share/code/code --new-window %F
+Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--new-window %F"
+
+# Open File
+# low density mode to see cleary
+code
+```
+
+### VSCode Extensions
+
+Press *Ctrl + P*, paste the *ext install* commands below to install extensions. Extensions are in: *%USERPROFILE%\.vscode\extensions* for windows. Can change code for extension there.
+
+```{bash}
+# [Microsoft Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+ext install ms-python.python
+# [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+ext install latex-workshop
+# [R](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)
+ext install ikuyadeu.r
+```
+
+### VSCode Shortcuts and Features
+
+**Features**:
+
+1. open a file, if have workspace where the file is in, automatically expand tree and show where file is on left pane.
+
+**Shortcuts** :
+
+- Zen model: *Ctrl + k, z*, this means press control k, then press z
+- Open up Settings: *Ctrl + ,*
+- Preview Markdown in VSCode: *Ctrl + Shift + V*
+- Open up left pane: *Ctrl + B*
+- Wrap Text: *alt + Z*, switch between wrap or not to save screen space for example.
+
+### VSCode and R
+
+VSCode works pretty well it seems with Rmd files. Rmd files are useful to work through algorithm, examples in preparation for writing usable functions. Rstudio has been often very slow for me, and I generally feel like can not stretch around and work in RStudio IDE.
+
+In Atom, Hydrogen works, but really only works with very basic line by line testing.
+
+Using VSCode with RMD files seems much quicker, and there is room to breath.
+
+1. Install R following R installation instructions.
+2. Then install extension [R](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r). Microsoft stopped supporting rmd in VSCode: [R Tools for Visual Studio](https://github.com/microsoft/RTVS)
+3. properly set path (might have to call vscode from r env)
+    + *r.rterm.linux*: */home/wangfanbsg75/anaconda3/envs/r_env/bin/R*
+    + *r.rterm.windows*: *C:/Program Files/R/R-3.6.2/bin/x64/R.exe*
+        * note *R.exe* at the end
+4. Run:
+    - ctrl + enter to activate R terminal
+    - VSCode 2019 allows for Knit Rmd: *Ctrl + Shift + K*
+    - also can run code segment: select lines and *ctrl + enter*
+
+### VSCode and Latex
+
+Download [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
+
+**Settings**
+
+change background border pdf color (not pdf but border): *ctrl + shift + x*, LatexWorkshop, Settings, Configure Extension Settings, Search for background, change color name. or enter: *latex-workshop.view.pdf.backgroundColor*. use gainsboro gray: *#DCDCDC*, or lightgray *#D3D3D3*.
+
+To take advantage of Okular (where background color can be none-white for example). Go to settings, and:
+1. Change: *latex-workshop.view.pdf.viewer* to external
+2. Change: *latex-workshop.view.pdf.external.viewer.command* to *C:/Program Files/SumatraPDF/SumatraPDF.exe*
+ open up *C:/Users/fan/AppData/Roaming/Code/User/settings.json*, and copy these in:
+
+```{JSON}
+"latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+"latex-workshop.view.pdf.external.synctex.args": [
+  "-forward-search",
+  "%TEX%",
+  "%LINE%",
+  "-reuse-instance",
+  "-inverse-search",
+  "code \"C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+  "%PDF%",
+]
+```
+
+**Features**:
+
+1. upon savings, rebuid file and update pdf (similar to overleaf)
+2. hover offers equation preview
+
+**Shortcuts**:
+
+1. preview: *ctrl + alt + v*
+2. synctex location: *ctrl + alt + j*
+
+### VSCode settings.json
+
+The settings.json file, *%APPDATA%/Code/User/settings.json*:
+
+```
+{
+  "r.rterm.windows": "C:/Program Files/R/R-3.6.2/bin/x64/R.exe",
+  "window.zoomLevel": 0,
+  "latex-workshop.view.pdf.viewer": "external",
+  "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+  "latex-workshop.view.pdf.external.synctex.args": [
+		"-forward-search",
+		"%TEX%",
+		"%LINE%",
+		"-reuse-instance",
+		"-inverse-search",
+		"code \"C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+		"%PDF%",
+	],
+	"latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe"
+}
+```
+## Atom Installation
+
+Atom is slow but has clean look and nice git/github integration.
+
+### Atom Extensions
+
+Terminal in windows or linux after installation: *apm install hydrogen*. apm is the atom package manager:
+
+```{bash}
+# Once atom is installed, can use apm to install packages
+apm install hydrogen
+apm install project-manager
+apm install sublime-style-column-selection
+apm install minimap
+
+# vim distraction free editing
+apm install vim-mode-plus
+apm install zen
+
+# Inside Conda open up atom
+atom
+
+```
+
+### Atom Shortcuts and Features
+
+**Features**:
+
+```{bash}
+# open multiple projects from atom at the same time, after repos synced
+atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/Py4Econ
+# open up any py from from within, try 1+1, does it work?
+# also use script, try ctrl + shift + b, run whole file (not hydrogen)
+```
+
+**Shortcuts** :
+
+- Git Pane: *Ctrl + 9*, *Ctrl + 8*
+
+### Atom and Python
+
+Having installed Anaconda, now install Atom and Hydrogen to Test with Python. For both Jupyter as well as Atom, always open from command prompt, open from *Anaconda Prompt* with admin rights.
+
+Open up *Jupyter Notebook*, does the python kernel work? If does not, uninstall and re-install Anaconda.
+
+```{bash}
+# start jupyter lab, from prompt
+jupyter lab
+```
+
+Try *1+1*.
+
+### Atom and Latex
 
 Install the following two packages in atom:
 
@@ -550,97 +727,7 @@ which latex
 # /usr/bin/latex
 ```
 
-Go to Tex4Econ and compile various template files and other types of files there to see if tex is working.
-
-Compile the same files in texstudio.
-
-# Other Programs to Install
-
-## Package Managers
-
-- [scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)
-
-```{bash}
-# in powershell
-# enter cmd
-# type powershell in cmd to enter powershell from cmd
-powershell
-# permission
-set-executionpolicy remotesigned -scope currentuser
-# install
-iwr -useb get.scoop.sh | iex
-```
-
-## Editors
-
-In addition to Atom, which is pretty slow, and harder to run on lower spec computers.
-
-### VSCode
-
-VSCode is much more light-weight than Atom, does not have hydrogen.
-
-```{bash}
-# Debian Install
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code # or code-insiders
-
-# Change Font (https://www.reddit.com/r/Crostini/comments/cesxr0/vscode_ui_and_fonts_too_small_heres_how_to_fix_it/)
-# modify: /usr/share/applications/code.desktop
-nvim /usr/share/applications/code.desktop
-#replace this line: Exec=/usr/share/code/code --unity-launch %F
-Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--unity-launch %F"
-#replace this line: Exec=/usr/share/code/code --new-window %F
-Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code "--new-window %F"
-
-# Open File
-# low density mode to see cleary
-code
-```
-
-Extensions to Download for VSCode:
-
-2. [Microsoft Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-```{bash}
-ext install ms-python.python
-ext install latex-workshop
-```
-
-#### VSCode Shortcuts
-
-- Open up Settings: *Ctrl + ,*
-- Preview Markdown in VSCode: *Ctrl + Shift + V*
-- Open up left pane: *Ctrl + B*
-- Wrap Text: *alt + Z*, switch between wrap or not to save screen space for example.
-
-#### VSCode Benefits
-
-1. open a file, if have workspace where the file is in, automatically expand tree and show where file is on left pane.
-
-#### VSCode and R
-
-VSCode works pretty well it seems with Rmd files. Rmd files are useful to work through algorithm, examples in preparation for writing usable functions. Rstudio has been often very slow for me, and I generally feel like can not stretch around and work in RStudio IDE.
-
-In Atom, Hydrogen works, but really only works with very basic line by line testing.
-
-Using VSCode with RMD files seems much quicker, and there is room to breath.
-
-1. Install R following R installation instructions.
-2. Then install extension [R](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r). Microsoft stopped supporting rmd in VSCode: [R Tools for Visual Studio](https://github.com/microsoft/RTVS)
-3. properly set path (might have to call vscode from r env)
-    + *r.rterm.linux*: */home/wangfanbsg75/anaconda3/envs/r_env/bin/R*
-4. Run:
-    - ctrl + enter to activate R terminal
-    - VSCode 2019 allows for Knit Rmd: *Ctrl + Shift + K*
-    - also can run code segment: select lines and *ctrl + enter*
-
-#### VSCode and Latex
-
-1. download [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+## Other Editors
 
 ### Notepad++
 
@@ -673,37 +760,32 @@ subl
 
 [pycharm](https://www.)jetbrains.com/pycharm/)
 
-## Key Programs
+# Other Programs to Install
 
-**PDF**
+## Package Managers
 
-- PDF Okular
-    + Linux: *sudo apt-get install okular*
-    + Windows: install okular from windows app store
-    + Okular configure shortcuts: setting, configure shortcuts
-    + Okular if menu bar lost: *Ctrl + m*
-    + Okular comment pane: *F6*
-    + Okular close left pane: *F7*
-    + Okular full scrren: *Ctrl + Shift + F*
-        * unlike acrobat, pdf allows for multiple scrrens
-    + Okular 3 pages per row view:
-        * view, overview
-    + Automatic Update when PDF updated elsewhere
-        * this is one of the key reasons to use okular, when I knit a Rmd file to PDF, the currently open Okular PDF file automatically updates and does not give file is open error like Acrobat.
-    + Background color:
-        * can easily change background color to non-white.
-- PDF Adobe Acrobat
-    + go to adobe website, log in using fwang26@uh.edu
-    + go to my account, choose view and download my apps, choose acrobat & PDF, download Acrobat DC
-    + UH account can only be activated on two accounts at once, so need to kick other computers out temporarily potentially
+To install packages in windows more easily:
 
-**VPN**
+- [scoop](https://github.com/lukesampson/scoop/wiki/Quick-Start)
 
-- [Proton VPN](https://protonvpn.com/): unlimited usage free version available.
-- Express VPN
+```{bash}
+# in powershell
+# enter cmd
+# type powershell in cmd to enter powershell from cmd
+powershell
+# permission
+set-executionpolicy remotesigned -scope currentuser
+# install
+iwr -useb get.scoop.sh | iex
+```
 
 ## Utilities
 
 - 7-zip
 - evernote
+
+## Security
+
 - keepass
+- [Proton VPN](https://protonvpn.com/): unlimited usage free version available.
+- Express VPN
