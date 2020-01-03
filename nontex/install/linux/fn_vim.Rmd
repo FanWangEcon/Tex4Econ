@@ -140,7 +140,7 @@ let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
 " highlight line
 let g:limelight_bop = '^.*$'
-let g:limelight_eop = '\n'
+" let g:limelight_eop = '\n'
 let g:limelight_paragraph_span = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -152,6 +152,10 @@ set so=999
 " autocmd VimEnter * Limelight
 " Turn Goyo on by default
 autocmd VimEnter * Goyo
+" autocmd VimEnter * AirlineToggle
+" In Goyo, if airline is turned on, do nto show scratch area
+" autocmd! User GoyoEnter nested set eventignore=FocusGained
+" autocmd! User GoyoLeave nested set eventignore=
 ```
 
 ## Install Neovim in Windows
@@ -358,17 +362,6 @@ j0
 j$
 ```
 
-# Vim Editing
-
-Delete a line.
-
-```{bash}
-# select text with cursor, then d for delete
-d
-# delete until end of line, outside insert mode
-D
-```
-
 # Very Convinent Functions
 
 Some functionalities take much more efforts to complete in many other editors, but are very easy in vim:
@@ -381,6 +374,31 @@ Vjjjj
 J
 ```
 
+## Vim go to Spot in Text Quickly
+
+```
+# ESC
+# Search for word
+/abc
+# esc
+# next occurance of word
+n
+# last occurance
+N
+# first occurance overall
+ggn
+# last occurance overall
+G
+# clear search highlighting
+:noh
+```
+
+back to previous point
+
+```
+~.
+```
+
 ## Combo Operations
 
 1. Delete:
@@ -390,6 +408,11 @@ J
     - Delete from cursor to end of line: *d$* or *D*
     - Delete until end of paragraph: *dip*
     - Delete all text in file: *ggdG*
+
+## Vim Statistics
+
+- word count: *g, ctrl+g*
+
 
 # Vim Errors
 
@@ -404,10 +427,11 @@ vim error: "E297: Write error in swap file"
 :e!
 ```
 
-# Vim Set-Up
+# Vim Set-Up Others
 
-Use [one-dark atom theme](https://github.com/joshdick/onedark.vim), otherwise color hard to read.
+## Chromebook
 
-```{bash}
+pressing esc key is an issue, too far away. On chromebook, remap the search key which is in the spot of the caps lock key to esc. and remap the esc key to search key.
 
-```
+1. search for keyboard under settings
+2. launcher to escape, and escape to launcher

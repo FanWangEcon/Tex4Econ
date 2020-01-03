@@ -1,0 +1,1240 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={New Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{New Computer Data-Science Set-up: Python (anaconda, pycharm), R
+(r-studio) and other Programs Installations}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{}
+    \preauthor{}\postauthor{}
+    \date{}
+    \predate{}\postdate{}
+  
+
+\begin{document}
+\maketitle
+
+Go back to \href{http://fanwangecon.github.io/}{fan}'s
+\href{http://fanwangecon.github.io/Tex4Econ/}{Tex4Econ and Miscellaneous
+Repository}.
+
+\hypertarget{objective}{%
+\section{Objective}\label{objective}}
+
+For the following types of programming tasks, install relevant programs,
+that are cross platform compatible. Test at the end that example
+programs work.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Python
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Anaconda Dist
+  \item
+    Pycharm
+  \item
+    atom hydrogen
+  \end{itemize}
+\item
+  R
+
+  \begin{itemize}
+  \tightlist
+  \item
+    R
+  \item
+    Rstudio
+  \item
+    atom hydrogen
+  \end{itemize}
+\item
+  Matlab
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Matlab
+  \end{itemize}
+\item
+  Latex and PDF
+
+  \begin{itemize}
+  \tightlist
+  \item
+    atom latex
+  \item
+    texstudio
+  \item
+    texlive
+  \item
+    okular pdf
+  \end{itemize}
+\end{enumerate}
+
+Test at the end:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Do sample \emph{py} files work?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    work from command line?
+  \item
+    work from atom (hydrogen)
+  \end{itemize}
+\item
+  Do sample \emph{rmd} files work?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    work from r-studio
+  \item
+    work from atom (hydrogen), r file
+  \end{itemize}
+\item
+  Do tex templates compile?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    tikz files
+  \item
+    template files with bib
+  \end{itemize}
+\end{enumerate}
+
+\emph{note}: Github people seem to have slowed down updating Atom since
+microsoft acquisition
+
+\hypertarget{conda}{%
+\section{Conda}\label{conda}}
+
+Use conda across platforms, so that locally on windows and ubuntu and
+remotely on aws, can have the same software setup environment.
+
+Search for Anaconda Prompt, right click, choose run as administrator.
+
+Check software versions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{conda}\NormalTok{ list anaconda}
+\ExtensionTok{python}\NormalTok{ -V}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{first-time-conda-install}{%
+\subsection{First Time Conda Install}\label{first-time-conda-install}}
+
+Download and install for all users. Afterwards, Anaconda does not
+automatically get added to Windows Path. Need to use Anaconda Prompt to
+access programs. To access Anaconda packages from windows prompt, from
+git bash, from R, etc, need to Add Anaconda to Windows Path
+
+To install conda in Debian, follow
+\href{https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html}{these
+instructions}.
+
+See Anaconda Installation Directory, in anaconda prompt:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# To remove conda Fully}
+\FunctionTok{rm}\NormalTok{ -rf ~/anaconda3}
+
+\ExtensionTok{where}\NormalTok{ anaconda}
+\CommentTok{# C:/ProgramData/Anaconda3/Scripts/anaconda.exe}
+\ExtensionTok{where}\NormalTok{ python}
+\CommentTok{# C:/ProgramData/Anaconda3/python.exe}
+\ExtensionTok{where}\NormalTok{ jupyter}
+\CommentTok{# C:/ProgramData/Anaconda3/Scripts/jupyter.exe}
+\ExtensionTok{where}\NormalTok{ jupyter-kernelspec}
+\CommentTok{# if R installed already}
+\ExtensionTok{where}\NormalTok{ r}
+
+\CommentTok{###############################}
+\CommentTok{# Add these to Windows PATH:}
+\CommentTok{###############################}
+\CommentTok{# C:\textbackslash{}ProgramData\textbackslash{}Anaconda3\textbackslash{}Scripts}
+\CommentTok{# C:\textbackslash{}ProgramData\textbackslash{}Anaconda3}
+\end{Highlighting}
+\end{Shaded}
+
+To Add Anaconda to Path, In Windows 1. search for: Environment Variables
+2. Edit Environment Variables 3. Add new to Path (lower half): -
+C:/ProgramData/Anaconda3/Scripts/ - C:/ProgramData/Anaconda3/ 4. Now
+open up regular windows command Prompt, Type in: - conda --version -
+also Close and Open up Git Bash: conda --version
+
+\hypertarget{conda-update}{%
+\subsection{Conda Update}\label{conda-update}}
+
+Open up Anaconda Navigator, it will update navigator automatically. If
+there are errors, might have to clean first.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# if there are bugs}
+\CommentTok{# conda clean --packages}
+\CommentTok{# use conda-forge as main channel, more updated packages}
+\ExtensionTok{conda}\NormalTok{ config --get channels}
+\ExtensionTok{conda}\NormalTok{ config --add channels conda-forge}
+\ExtensionTok{conda}\NormalTok{ config --get channels}
+\CommentTok{# remove conda-forge from channels (do so for main env install)}
+\ExtensionTok{conda}\NormalTok{ config --remove channels conda-forge}
+\CommentTok{# normal update}
+\ExtensionTok{conda}\NormalTok{ update --all}
+
+\CommentTok{# install additional packages}
+\ExtensionTok{conda}\NormalTok{ install -y statsmodels datashape seaborn}
+\ExtensionTok{conda}\NormalTok{ install -c conda-forge -y interpolation awscli}
+\ExtensionTok{conda}\NormalTok{ install -c anaconda -y boto3}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{conda-test-python}{%
+\subsection{Conda Test Python}\label{conda-test-python}}
+
+Fist test python under command line:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# windows}
+\ExtensionTok{python} \StringTok{"C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py"}
+\ExtensionTok{python} \StringTok{"C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py"}
+\CommentTok{# linux}
+\ExtensionTok{python}\NormalTok{ ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py}
+\ExtensionTok{python}\NormalTok{ ~/PyFan/ProjectSupport/graph/subplot.py}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{jupyter-and-atom-hydrogen}{%
+\subsection{Jupyter and Atom Hydrogen}\label{jupyter-and-atom-hydrogen}}
+
+For both Jupyter as well as Atom, always open from command prompt, open
+from \emph{Anaconda Prompt} with admin rights.
+
+First, open up \emph{Jupyter Notebook}, does the python kernel work? If
+does not, uninstall and re-install Anaconda.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# start jupyter lab, from prompt}
+\ExtensionTok{jupyter}\NormalTok{ lab}
+\end{Highlighting}
+\end{Shaded}
+
+Now test python within atom:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  install hydrogen in atom. Follow
+  \href{http://nteract.io/atom}{instructions}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    terminal in windows or linux after installation: \emph{apm install
+    hydrogen}
+  \item
+    apm is the atom package manager.
+  \end{itemize}
+\item
+  Pull/Sync with Git and open mulitple projects in atom, follow
+  \href{https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html}{guide
+  here}.
+\item
+  go to the programs above and try to run.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Once atom is installed, can use apm to install packages}
+\FunctionTok{apm}\NormalTok{ install hydrogen}
+\FunctionTok{apm}\NormalTok{ install project-manager}
+\FunctionTok{apm}\NormalTok{ install sublime-style-column-selection}
+\FunctionTok{apm}\NormalTok{ install minimap}
+
+\CommentTok{# vim distraction free editing}
+\FunctionTok{apm}\NormalTok{ install vim-mode-plus}
+\FunctionTok{apm}\NormalTok{ install zen}
+
+\CommentTok{# Inside Conda open up atom}
+\ExtensionTok{atom}
+
+\CommentTok{# open multiple projects from atom at the same time, after repos synced}
+\ExtensionTok{atom}\NormalTok{ ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/Py4Econ}
+\CommentTok{# open up any py from from within, try 1+1, does it work?}
+\CommentTok{# also use script, try ctrl + shift + b, run whole file (not hydrogen)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{r-installation}{%
+\section{R Installation}\label{r-installation}}
+
+Try to install R from within Conda. The procedure here is the same for
+windows as well as linux machines.
+
+\hypertarget{fully-uninstall-r}{%
+\subsection{Fully Uninstall r}\label{fully-uninstall-r}}
+
+Open up RStudio, and see where paths are. also open up R from command
+prompt, see where paths are.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{.libPath}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Open up install and uninstall programs, find R and Rstudio, and
+uninstall them. Then delete all files found path paths shown by
+\emph{.libPath()}, looking at these: -
+\emph{C:/Users/fan/Documents/R/win-library/3.6} - \emph{C:/Program
+Files/R/R-3.6.1/library}
+
+For Linux:
+
+\begin{itemize}
+\tightlist
+\item
+  if used apt-get to install, R installed under main user drive,
+  deactivate conda, and check which conda
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Exit Conda}
+\ExtensionTok{conda}\NormalTok{ deactivate}
+\CommentTok{# where is R installed outside of Conda}
+\FunctionTok{which}\NormalTok{ R}
+\CommentTok{# /usr/bin/R}
+\CommentTok{# To remove all}
+\FunctionTok{sudo}\NormalTok{ apt-get remove r-base}
+\FunctionTok{sudo}\NormalTok{ apt-get remove r-base-core}
+
+\CommentTok{# Inside Conda base}
+\ExtensionTok{conda}\NormalTok{ activate}
+\CommentTok{# Conda r_env}
+\ExtensionTok{conda}\NormalTok{ activate r_env}
+\CommentTok{# Where is it installed?}
+\FunctionTok{which}\NormalTok{ R}
+\CommentTok{# /home/wangfanbsg75/anaconda3/bin/R}
+\ExtensionTok{conda}\NormalTok{ uninstall r-base}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{install-r-outside-of-conda}{%
+\subsection{Install R (outside of
+Conda)}\label{install-r-outside-of-conda}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://cloud.r-project.org/}{download R}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    for debian:
+    \href{https://cran.r-project.org/bin/linux/debian/}{Johannes Ranke}
+  \end{itemize}
+\item
+  \href{https://rstudio.com/products/rstudio/download/}{download
+  R-studio}
+\item
+  Open R-studio and auto-detect R
+\item
+  Install packages
+\end{enumerate}
+
+note that installation will not work if the machine's version of R is
+not up to date, this could be the case with default R versions for some
+linux installations. For Debian for example, need to update the
+\emph{source.list} to include sources that have more recent versions of
+R.
+
+Additionally, need to install \emph{libcurl4-openssl-dev} and
+\emph{libssl-dev} from command prompt first inside Debian.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# If inside Debian, due to some tidymodel install issues, do this`}
+\ExtensionTok{conda}\NormalTok{ install -c r r}
+\ExtensionTok{conda}\NormalTok{ install -c r r-essentials}
+\ExtensionTok{conda}\NormalTok{ install -c r r-igraph}
+\ExtensionTok{conda}\NormalTok{ install -c conda-forge igraph}
+
+\CommentTok{# Go to get latesdebian latest r sources.list}
+\FunctionTok{cat}\NormalTok{ /etc/apt/sources.list}
+\CommentTok{# Install this First (should already be installed)}
+\FunctionTok{sudo}\NormalTok{ apt install dirmngr}
+
+\CommentTok{# Debian R is maintained by Johannes Ranke, copied from https://cran.r-project.org/bin/linux/debian/:}
+\ExtensionTok{apt-key}\NormalTok{ adv --keyserver keys.gnupg.net --recv-key }\StringTok{'E19F5F87128899B192B1A2C2AD5F960A256A04AF'}
+\CommentTok{# Add to source.list, for debian stretch (9)}
+\CommentTok{# sudo su added for security issue as super-user}
+\FunctionTok{sudo}\NormalTok{ su -c }\StringTok{"sudo echo 'deb http://cloud.r-project.org/bin/linux/debian stretch-cran35/' >> /etc/apt/sources.list"}
+\CommentTok{# if added wrong lines, delete 3rd line}
+\FunctionTok{sudo}\NormalTok{ sed }\StringTok{'3d'}\NormalTok{ /etc/apt/sources.list}
+
+\CommentTok{# Update and Install R, should say updated from cloud.r}
+\FunctionTok{sudo}\NormalTok{ apt-get update}
+\FunctionTok{sudo}\NormalTok{ apt-get install r-base r-base-dev}
+
+\CommentTok{# Also install these, otherwise r-packages do not install}
+\CommentTok{# libxml2 seems need for tidymodels}
+\FunctionTok{sudo}\NormalTok{ apt-get install libcurl4-openssl-dev}
+\FunctionTok{sudo}\NormalTok{ apt-get install libssl-dev}
+\FunctionTok{sudo}\NormalTok{ apt-get install libxml2-dev}
+\end{Highlighting}
+\end{Shaded}
+
+Which R?
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{export RSTUDIO\_WHICH\_R=/usr/bin/R}
+\item
+  \emph{export RSTUDIO\_WHICH\_R=/home/wangfanbsg75/anaconda3/bin/R}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Can enter R from Command Prompt Conda ENV, much faster than from r-studio}
+\CommentTok{# Install R-tools, RTOOLS is for WINDOWS}
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"installr"}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(}\StringTok{"installr"}\NormalTok{)}
+\KeywordTok{install.Rtools}\NormalTok{()}
+\CommentTok{# c:/Rtools/bin;}
+\CommentTok{# c:/Rtools/mingw_32/bin;}
+\CommentTok{# c:/Rtools/mingw_64/bin;}
+
+\CommentTok{# main packagevps}
+\CommentTok{# tidymodel installation on linux difficult}
+\KeywordTok{install.packages}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{, }\StringTok{"tidymodels"}\NormalTok{, }\StringTok{"tidyr"}\NormalTok{))}
+\CommentTok{# development packages}
+\KeywordTok{install.packages}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\StringTok{"IRkernel"}\NormalTok{, }\StringTok{"pkgdown"}\NormalTok{, }\StringTok{"roxygen2"}\NormalTok{, }\StringTok{"kableExtra"}\NormalTok{))}
+\CommentTok{# other packages}
+\KeywordTok{install.packages}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"AER"}\NormalTok{, }\StringTok{"minpack.lm"}\NormalTok{, }\StringTok{"knitr"}\NormalTok{, }\StringTok{"matlab"}\NormalTok{))}
+
+\CommentTok{# Install my package, need to prepare package to work for ubuntu}
+\CommentTok{# if install does not work, load locally}
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"fanwangecon/R4Econ"}\NormalTok{)}
+
+\CommentTok{# Kernel}
+\KeywordTok{install.packages}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{'repr'}\NormalTok{, }\StringTok{'IRdisplay'}\NormalTok{, }\StringTok{'evaluate'}\NormalTok{, }\StringTok{'crayon'}\NormalTok{, }\StringTok{'pbdZMQ'}\NormalTok{, }\StringTok{'devtools'}\NormalTok{, }\StringTok{'uuid'}\NormalTok{, }\StringTok{'digest'}\NormalTok{))}
+\NormalTok{IRkernel}\OperatorTok{::}\KeywordTok{installspec}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{set-up-r-environment-in-conda}{%
+\subsection{Set up R-Environment in
+Conda}\label{set-up-r-environment-in-conda}}
+
+Conda environments are language agnostic. pip is a package manager for
+Python. venv is an environment manager for Python. conda is both a
+package and environment manager and is language agnostic. Inside
+Anaconda Prompt:
+
+Key packages are generally available in conda's default channel
+(official distribution) and also the more frequently updated conda-forge
+channel. Prioritize conda-forge to get the latest packages. after adding
+\emph{conda-forge} to channels, that will be prioritized, so when
+creating a new environment, conda will install first from conda-forge if
+package exists there. Try the \emph{r\_env} generation line with and
+without first adding \emph{conda-forge} to channel, and see that the
+packages installed will have different versions, reflecting versions in
+the default channel and in the \emph{conda-forge} channels.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# outside of conda, install some depencies}
+\FunctionTok{sudo}\NormalTok{ apt-get install libcurl4-openssl-dev}
+\FunctionTok{sudo}\NormalTok{ apt-get install libssl-dev}
+\FunctionTok{sudo}\NormalTok{ apt-get install libxml2-dev}
+
+\CommentTok{# install key r packages within a r-environment}
+\ExtensionTok{conda}\NormalTok{ env remove -n r_env}
+\CommentTok{# start empty environment}
+\ExtensionTok{conda}\NormalTok{ create -n r_env}
+\CommentTok{# activate env and check, nothing yet}
+\ExtensionTok{conda}\NormalTok{ activate r_env}
+\ExtensionTok{conda}\NormalTok{ list}
+
+\CommentTok{# check channel and add env specific channel}
+\ExtensionTok{conda}\NormalTok{ config --get channels}
+\CommentTok{# to get latest r, use conda-forge, which has more recent Rs}
+\CommentTok{# conda config --env --add channels conda-forge}
+\CommentTok{# channels for base}
+\ExtensionTok{conda}\NormalTok{ config --get channels}
+\CommentTok{# channels for cur env}
+\ExtensionTok{conda}\NormalTok{ config --get channels --env}
+
+\CommentTok{# install files}
+\ExtensionTok{conda}\NormalTok{ install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y}
+
+\CommentTok{# trouble with igraph installation, install here from conda}
+\CommentTok{# conda install -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2}
+\ExtensionTok{conda}\NormalTok{ install -n r_env -c r r-igraph}
+\ExtensionTok{conda}\NormalTok{ install -n r_env -c conda-forge igraph}
+\ExtensionTok{conda}\NormalTok{ install -n r_env -c r r-rstantools r-rstan r-rstanarm -y}
+
+\CommentTok{# see all installed environments}
+\ExtensionTok{conda}\NormalTok{ env list}
+\CommentTok{# activate an environment to use it, if in base, r does not exist, isolated in r_env}
+\ExtensionTok{conda}\NormalTok{ activate r_env}
+\CommentTok{# see packages in environment}
+\ExtensionTok{conda}\NormalTok{ list}
+\CommentTok{# to quit}
+\ExtensionTok{conda}\NormalTok{ deactivate}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Location}: Installed environments are shown appear in the
+  \emph{envs} folder of \emph{C:/ProgramData/Anaconda3/envs/}. Can be
+  easily deleted without disrupting the main base installation for
+  conda. This is very important. During installation, could easily run
+  into problems, and need to re-install. Much better to only re-install
+  a folder. Note that when R is installed in \emph{envs}, it will not
+  show up under add or remove programs for uninstallation from there,
+  has to be uninstalled, deleted directly here.
+\item
+  \textbf{Use only in Env}: Note that if we installed r inside r\_env,
+  if we type \emph{r} under the base environment, we can not enter r. We
+  can only enter r within r\_env. With PATH properly set-up, this
+  happens under Conda Prompt, Windows Prompt, etc.
+\item
+  \textbf{Multiple Pythons}: With the above installation for R, one
+  benefit is that if R requires a different version of Python than what
+  the base environment uses, the r\_env could have a different python
+  version. So type \emph{python} in the base environment as well as
+  inside the \emph{r\_env}. This also means potentially there could be
+  duplicated installations I think. Look at the python versions under
+  \emph{conda list} in the base and in the r-environment.
+\item
+  \textbf{File Size}: Note that this creates a large installation
+  folder, \emph{C:/ProgramData/Anaconda3/envs/r\_env/}, without
+  additional packages, is 1.3 GB in size
+\end{itemize}
+
+\hypertarget{install-additional-packages-inside-the-r-environment}{%
+\subsection{Install Additional Packages inside the
+R-environment}\label{install-additional-packages-inside-the-r-environment}}
+
+These are packages that I use, these should be installed inside the
+environment. Or they could be installed later from inside r-studio.
+Installing inside r-studio is a lot better.
+
+\emph{tidymodel} has installation issues sometimes.
+
+In \emph{r\_env}, type in \emph{R}, and then install from inside
+terminal's R:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# enter into env}
+\ExtensionTok{conda}\NormalTok{ activate r_env}
+\CommentTok{# enter R or type in rstudio}
+\CommentTok{# sicne R is only install inside r_env, has to enter rstudio from r_env}
+\ExtensionTok{R}
+\ExtensionTok{rstudio}
+
+\CommentTok{# main packagevps}
+\CommentTok{# tidymodel installation on linux difficult}
+\ExtensionTok{install.packages}\NormalTok{(c(}\StringTok{"rstantools"}\NormalTok{, }\StringTok{"rstan"}\NormalTok{, }\StringTok{"rstanarm"}\NormalTok{))}
+\ExtensionTok{install.packages}\NormalTok{(c(}\StringTok{"tidyr"}\NormalTok{, }\StringTok{"tidyverse"}\NormalTok{, }\StringTok{"tidymodels"}\NormalTok{))}
+
+\CommentTok{# tidymodels}
+\CommentTok{# development packages}
+\ExtensionTok{install.packages}\NormalTok{(c(}\StringTok{"devtools"}\NormalTok{, }\StringTok{"IRkernel"}\NormalTok{, }\StringTok{"pkgdown"}\NormalTok{, }\StringTok{"roxygen2"}\NormalTok{, }\StringTok{"kableExtra"}\NormalTok{))}
+\CommentTok{# other packages}
+\ExtensionTok{install.packages}\NormalTok{(c(}\StringTok{"AER"}\NormalTok{, }\StringTok{"minpack.lm"}\NormalTok{, }\StringTok{"knitr"}\NormalTok{, }\StringTok{"matlab"}\NormalTok{))}
+
+\CommentTok{# Install my package, need to prepare package to work for ubuntu}
+\CommentTok{# if install does not work, load locally}
+\ExtensionTok{devtools}\NormalTok{::install_github(}\StringTok{"fanwangecon/R4Econ"}\NormalTok{)}
+
+\CommentTok{# Kernel}
+\ExtensionTok{install.packages}\NormalTok{(c(}\StringTok{'repr'}\NormalTok{, }\StringTok{'IRdisplay'}\NormalTok{, }\StringTok{'evaluate'}\NormalTok{, }\StringTok{'crayon'}\NormalTok{, }\StringTok{'pbdZMQ'}\NormalTok{, }\StringTok{'devtools'}\NormalTok{, }\StringTok{'uuid'}\NormalTok{, }\StringTok{'digest'}\NormalTok{))}
+\FunctionTok{IRkernel::installspec()}
+\end{Highlighting}
+\end{Shaded}
+
+Install additional packages from inside R. The devtools install will
+install packages inside \emph{envs/r\_env/Lib/R}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#######################################}
+\CommentTok{### Own Package}
+\CommentTok{#######################################}
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"fanwangecon/R4Econ"}\NormalTok{)}
+\CommentTok{# install_dev("cli")}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{r-studio-set-up-download-from-rstudio}{%
+\subsection{R-Studio Set-up Download from
+Rstudio}\label{r-studio-set-up-download-from-rstudio}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Download R-studio, and install, as normal (not from conda, directly
+  from rstudio website latest windows version)
+\item
+  Open up anaconda prompt, enter \emph{r\_env} environment:
+  \emph{activate r\_env}
+\item
+  cd into rstudio exe file folder: cd ``C:/Program Files/RStudio/bin''
+\item
+  start r-studio from inside \emph{r\_env}: rstudio.exe
+\item
+  inside r-studio, check: \emph{.libPaths()}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``C:/ProgramData/Anaconda3/envs/r\_env/Lib/R/library''
+  \end{itemize}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{activate}\NormalTok{ r_env}
+\BuiltInTok{cd} \StringTok{"C:/Program Files/RStudio/bin"}
+\ExtensionTok{rstudio.exe}
+
+\BuiltInTok{cd} \StringTok{"C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library"}
+\StringTok{"C:/Program Files/RStudio/bin/rstudio.exe"}
+\end{Highlighting}
+\end{Shaded}
+
+For linux, note that rstudio offers Ubuntu as well as Debian versions
+that can be installed with wget:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{<}\NormalTok{!}\ExtensionTok{--}\NormalTok{ for ubuntu --}\OperatorTok{>}
+\FunctionTok{wget} \StringTok{"https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb"}
+\OperatorTok{<}\NormalTok{!}\ExtensionTok{--}\NormalTok{ for debian --}\OperatorTok{>}
+\FunctionTok{sudo}\NormalTok{ apt install ./rstudio-1.2.5033-amd64.deb}
+\FunctionTok{wget} \StringTok{"https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb"}
+\FunctionTok{sudo}\NormalTok{ apt install ./rstudio-1.2.5033-amd64.deb}
+\ExtensionTok{conda}\NormalTok{ install -c r rstudio}
+\BuiltInTok{cd} \StringTok{"C:/Program Files/RStudio/bin"}
+\ExtensionTok{rstudio.exe}
+
+\BuiltInTok{cd} \StringTok{"C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library"}
+\StringTok{"C:/Program Files/RStudio/bin/rstudio.exe"}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{install-packages-from-r-studio}{%
+\subsection{Install Packages from
+R-Studio}\label{install-packages-from-r-studio}}
+
+Install addition files inside Rstudio. Easier to debug potentially.
+Install rtools as described
+\href{https://thecoatlessprofessor.com/programming/cpp/installing-rtools-for-compiled-code-via-rcpp/}{here}:
+\href{https://cran.r-project.org/bin/windows/Rtools/}{rtools download}.
+Alternatively:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"installr"}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(}\StringTok{"installr"}\NormalTok{)}
+\CommentTok{# Note that this will generate several pop-up windows}
+\KeywordTok{install.Rtools}\NormalTok{()}
+\CommentTok{# choose to only install 64 bit toolchain}
+\CommentTok{# this installs g++ which is needed for rstanarm}
+\CommentTok{# Add these below to windows path}
+\CommentTok{# c:/Rtools/bin;}
+\CommentTok{# c:/Rtools/mingw_64/bin;}
+
+\ControlFlowTok{if}\NormalTok{ (}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools)) \{}
+  \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{)}
+  \KeywordTok{library}\NormalTok{(devtools)}
+\NormalTok{\}}
+\KeywordTok{library}\NormalTok{(devtools)}
+\KeywordTok{install_github}\NormalTok{(}\StringTok{"stan-dev/rstanarm"}\NormalTok{, }\DataTypeTok{args =} \StringTok{"--preclean"}\NormalTok{)}
+
+\KeywordTok{setwd}\NormalTok{(}\StringTok{'C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library'}\NormalTok{)}
+
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"stan-dev/rstanarm"}\NormalTok{, }\DataTypeTok{dependencies=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{INSTALL_opts =} \KeywordTok{c}\NormalTok{(}\StringTok{'--no-lock'}\NormalTok{))}
+
+\CommentTok{# other packages}
+\KeywordTok{install.packages}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"tidymodels"}\NormalTok{, }\StringTok{"AER"}\NormalTok{, }\StringTok{"minpack.lm"}\NormalTok{, }\StringTok{"knitr"}\NormalTok{, }\StringTok{"kableExtra"}\NormalTok{, }\StringTok{"matlab"}\NormalTok{))}
+
+\CommentTok{# for r-kernel to work in Atom}
+\KeywordTok{install.packages}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{'repr'}\NormalTok{, }\StringTok{'IRdisplay'}\NormalTok{, }\StringTok{'evaluate'}\NormalTok{, }\StringTok{'crayon'}\NormalTok{, }\StringTok{'pbdZMQ'}\NormalTok{, }\StringTok{'devtools'}\NormalTok{, }\StringTok{'uuid'}\NormalTok{, }\StringTok{'digest'}\NormalTok{))}
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{'IRkernel/IRkernel'}\NormalTok{)}
+\NormalTok{IRkernel}\OperatorTok{::}\KeywordTok{installspec}\NormalTok{()}
+
+\CommentTok{# Install my package}
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"fanwangecon/R4Econ"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{test-files}{%
+\subsubsection{Test Files}\label{test-files}}
+
+Test the following file to see if we can execute a R file. Do it inside
+\emph{r\_env} and inside a \emph{r} session.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# A simple file with summary statistics using tidyverse}
+\KeywordTok{source}\NormalTok{(}\StringTok{'C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.R'}\NormalTok{)}
+\CommentTok{# Another simple file with summary statistics using tidyverse}
+\KeywordTok{source}\NormalTok{(}\StringTok{'C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R'}\NormalTok{)}
+\CommentTok{# A file involving estimation}
+\KeywordTok{source}\NormalTok{(}\StringTok{'C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R'}\NormalTok{)}
+
+\CommentTok{# C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.Rmd}
+\CommentTok{# C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.Rmd}
+\CommentTok{# C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{install-latex}{%
+\section{Install Latex}\label{install-latex}}
+
+Use a combination of overleaf and local compile. The goal is to have the
+same installation set-up for windows as well as linux. And hopefully,
+locally compilable file also can be compiled on overleaf (only use
+packages also available on overleaf).
+
+There are several pieces of things to install:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  latex compiler: pdflatex, etc
+\item
+  tex distributions: MikTex, texlive
+
+  \begin{itemize}
+  \tightlist
+  \item
+    these folders, once various packages are installed, could be very
+    large, many GB
+  \end{itemize}
+\item
+  latex packages from distributions
+\item
+  editor (gui): Atom, Sublime text, texStudio, etc
+\end{enumerate}
+
+\hypertarget{uninstall}{%
+\subsection{Uninstall}\label{uninstall}}
+
+\begin{itemize}
+\tightlist
+\item
+  uninstall \emph{MiKTeX}: delete from programs, then delete remaining
+  folder in Program Files.
+\item
+  uninstall \emph{texlive}: go to \emph{c:/texlive}, delete the folder
+\end{itemize}
+
+\hypertarget{install}{%
+\subsection{Install}\label{install}}
+
+\emph{Install on Windows}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.texstudio.org/}{Install Texstudio}
+\item
+  \href{https://www.tug.org/texlive/acquire-netinstall.html}{Install
+  texlive}
+\end{itemize}
+
+\emph{Install on Ubuntu}
+
+install texlive and texstudio ubuntu/debian.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt-get update}
+\FunctionTok{sudo}\NormalTok{ apt-get install texlive-full}
+\FunctionTok{sudo}\NormalTok{ apt-get install texstudio}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{compile-in-atom-and-texstudio}{%
+\subsection{Compile in Atom and
+Texstudio}\label{compile-in-atom-and-texstudio}}
+
+Install the following two packages in atom:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://github.com/thomasjo/atom-latex}{latex} package on atom.
+\item
+  \href{https://atom.io/packages/language-latex}{language-latex} package
+  on atom
+\end{enumerate}
+
+In Atom Latex setting, note that on different platforms, paths to
+texlive are different:
+
+\begin{itemize}
+\tightlist
+\item
+  Path:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Windows: \emph{C:/texlive/2019/bin/win32}
+  \item
+    Chromebook Linux: \emph{/usr/bin/latex}
+  \end{itemize}
+\item
+  Which PDF viewer to use:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    download Okular and use \href{https://okular.kde.org/}{Okular}
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# set TeX path}
+\CommentTok{# C:/texlive/2019/bin/win32}
+
+\CommentTok{# Latex, after installation}
+\CommentTok{# see where texlive appears under root folder directories}
+\FunctionTok{sudo}\NormalTok{ find / -name }\StringTok{"texlive"}
+\CommentTok{# see latex version, if texlive is used}
+\ExtensionTok{latex}\NormalTok{ -v}
+\CommentTok{# see main exe directory}
+\FunctionTok{which}\NormalTok{ latex}
+\CommentTok{# /usr/bin/latex}
+\end{Highlighting}
+\end{Shaded}
+
+Go to Tex4Econ and compile various template files and other types of
+files there to see if tex is working.
+
+Compile the same files in texstudio.
+
+\hypertarget{other-programs-to-install}{%
+\section{Other Programs to Install}\label{other-programs-to-install}}
+
+\hypertarget{package-managers}{%
+\subsection{Package Managers}\label{package-managers}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/lukesampson/scoop/wiki/Quick-Start}{scoop}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# in powershell}
+\CommentTok{# enter cmd}
+\CommentTok{# type powershell in cmd to enter powershell from cmd}
+\ExtensionTok{powershell}
+\CommentTok{# permission}
+\ExtensionTok{set-executionpolicy}\NormalTok{ remotesigned -scope currentuser}
+\CommentTok{# install}
+\ExtensionTok{iwr}\NormalTok{ -useb get.scoop.sh }\KeywordTok{|} \ExtensionTok{iex}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{editors}{%
+\subsection{Editors}\label{editors}}
+
+In addition to Atom, which is pretty slow, and harder to run on lower
+spec computers.
+
+\hypertarget{vscode}{%
+\subsubsection{VSCode}\label{vscode}}
+
+VSCode is much more light-weight than Atom, does not have hydrogen.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Debian Install}
+\ExtensionTok{curl}\NormalTok{ https://packages.microsoft.com/keys/microsoft.asc }\KeywordTok{|} \ExtensionTok{gpg}\NormalTok{ --dearmor }\OperatorTok{>}\NormalTok{ microsoft.gpg}
+\FunctionTok{sudo}\NormalTok{ install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg}
+\FunctionTok{sudo}\NormalTok{ sh -c }\StringTok{'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'}
+\FunctionTok{sudo}\NormalTok{ apt-get install apt-transport-https}
+\FunctionTok{sudo}\NormalTok{ apt-get update}
+\FunctionTok{sudo}\NormalTok{ apt-get install code }\CommentTok{# or code-insiders}
+
+\CommentTok{# Change Font (https://www.reddit.com/r/Crostini/comments/cesxr0/vscode_ui_and_fonts_too_small_heres_how_to_fix_it/)}
+\CommentTok{# modify: /usr/share/applications/code.desktop}
+\ExtensionTok{nvim}\NormalTok{ /usr/share/applications/code.desktop}
+\CommentTok{#replace this line: Exec=/usr/share/code/code --unity-launch %F}
+\VariableTok{Exec=}\NormalTok{sommelier }\ExtensionTok{-X}\NormalTok{ --scale=0.8 --dpi=160 /usr/share/code/code }\StringTok{"--unity-launch %F"}
+\CommentTok{#replace this line: Exec=/usr/share/code/code --new-window %F}
+\VariableTok{Exec=}\NormalTok{sommelier }\ExtensionTok{-X}\NormalTok{ --scale=0.8 --dpi=160 /usr/share/code/code }\StringTok{"--new-window %F"}
+
+\CommentTok{# Open File}
+\CommentTok{# low density mode to see cleary}
+\ExtensionTok{code}
+\end{Highlighting}
+\end{Shaded}
+
+Extensions to Download for VSCode:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \href{https://marketplace.visualstudio.com/items?itemName=ms-python.python}{Microsoft
+  Python Extension}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{ext}\NormalTok{ install ms-python.python}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{vscode-shortcuts}{%
+\paragraph{VSCode Shortcuts}\label{vscode-shortcuts}}
+
+\begin{itemize}
+\tightlist
+\item
+  Open up Settings: \emph{Ctrl + ,}
+\item
+  Preview Markdown in VSCode: \emph{Ctrl + Shift + V}
+\item
+  Open up left pane: \emph{Ctrl + B}
+\item
+  Wrap Text: \emph{alt + Z}, switch between wrap or not to save screen
+  space for example.
+\end{itemize}
+
+\hypertarget{vscode-benefits}{%
+\paragraph{VSCode Benefits}\label{vscode-benefits}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  open a file, if have workspace where the file is in, automatically
+  expand tree and show where file is on left pane.
+\end{enumerate}
+
+\hypertarget{vscode-and-r}{%
+\paragraph{VSCode and R}\label{vscode-and-r}}
+
+VSCode works pretty well it seems with Rmd files. Rmd files are useful
+to work through algorithm, examples in preparation for writing usable
+functions. Rstudio has been often very slow for me, and I generally feel
+like can not stretch around and work in RStudio IDE.
+
+In Atom, Hydrogen works, but really only works with very basic line by
+line testing.
+
+Using VSCode with RMD files seems much quicker, and there is room to
+breath.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Install R following R installation instructions.
+\item
+  Then install extension
+  \href{https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r}{R}.
+  Microsoft stopped supporting rmd in VSCode:
+  \href{https://github.com/microsoft/RTVS}{R Tools for Visual Studio}
+\item
+  properly set path (might have to call vscode from r env)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{r.rterm.linux}:
+    \emph{/home/wangfanbsg75/anaconda3/envs/r\_env/bin/R}
+  \end{itemize}
+\item
+  Run:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ctrl + enter to activate R terminal
+  \item
+    VSCode 2019 allows for Knit Rmd: \emph{Ctrl + Shift + K}
+  \item
+    also can run code segment: select lines and \emph{ctrl + enter}
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{vscode-and-latex}{%
+\paragraph{VSCode and Latex}\label{vscode-and-latex}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  download
+  \href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{Latex
+  Workshop}
+\end{enumerate}
+
+\hypertarget{notepad}{%
+\subsubsection{Notepad++}\label{notepad}}
+
+\href{https://notepad-plus-plus.org/downloads/v7.8.2/}{Notepad++}. Many
+old projects have xml folder structures for Notepad++.
+
+\begin{itemize}
+\tightlist
+\item
+  Silently update file changes made in other editors: Settings,
+  Preferences, MISC., File Status Auto Detection, Update Silently.
+\end{itemize}
+
+\hypertarget{sublime}{%
+\subsubsection{Sublime}\label{sublime}}
+
+\href{https://www.sublimetext.com/3}{Sublime}
+
+there are some issues with atom. When a file is edited inside Vim, when
+changes are saved, a
+\href{https://github.com/atom/atom/issues/17186}{temp file is created in
+atom}. Sublime would, however, still show the file with the changes.
+This makes dual screen editing very difficult. Sublime text is used for
+this situation.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Sublime Linux}
+\FunctionTok{wget}\NormalTok{ -qO - https://download.sublimetext.com/sublimehq-pub.gpg }\KeywordTok{|} \FunctionTok{sudo}\NormalTok{ apt-key add -}
+\FunctionTok{sudo}\NormalTok{ apt-get install apt-transport-https}
+\BuiltInTok{echo} \StringTok{"deb https://download.sublimetext.com/ apt/stable/"} \KeywordTok{|} \FunctionTok{sudo}\NormalTok{ tee /etc/apt/sources.list.d/sublime-text.list}
+\FunctionTok{sudo}\NormalTok{ apt-get update}
+\FunctionTok{sudo}\NormalTok{ apt-get install sublime-text}
+\CommentTok{# launch from terminal}
+\ExtensionTok{subl}
+\end{Highlighting}
+\end{Shaded}
+
+\emph{Sublime Setup}:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://weibeld.net/r/rmd_sublime_package.html}{r and rmd setup}
+\end{itemize}
+
+\hypertarget{pycharm}{%
+\subsubsection{PyCharm}\label{pycharm}}
+
+\href{https://www.}{pycharm}jetbrains.com/pycharm/)
+
+\hypertarget{key-programs}{%
+\subsection{Key Programs}\label{key-programs}}
+
+\textbf{PDF}
+
+\begin{itemize}
+\tightlist
+\item
+  PDF Okular
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Linux: \emph{sudo apt-get install okular}
+  \item
+    Windows: install okular from windows app store
+  \item
+    Okular if menu bar lost: \emph{Ctrl + m}
+  \end{itemize}
+\item
+  PDF Adobe Acrobat
+
+  \begin{itemize}
+  \tightlist
+  \item
+    go to adobe website, log in using
+    \href{mailto:fwang26@uh.edu}{\nolinkurl{fwang26@uh.edu}}
+  \item
+    go to my account, choose view and download my apps, choose acrobat
+    \& PDF, download Acrobat DC
+  \item
+    UH account can only be activated on two accounts at once, so need to
+    kick other computers out temporarily potentially
+  \end{itemize}
+\end{itemize}
+
+\textbf{VPN}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://protonvpn.com/}{Proton VPN}: unlimited usage free
+  version available.
+\item
+  Express VPN
+\end{itemize}
+
+\hypertarget{utilities}{%
+\subsection{Utilities}\label{utilities}}
+
+\begin{itemize}
+\tightlist
+\item
+  7-zip
+\item
+  evernote
+\item
+  keepass
+\end{itemize}
+
+
+\end{document}
