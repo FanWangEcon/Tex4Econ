@@ -401,18 +401,25 @@ back to previous point
 
 ## Combo Operations
 
-1. Delete:
+1. Delete
     - delete current word and go into insert mode: *ciw*
     - Delete current word: *dw*
     - Delete from cursor until end of sentence: *dis*
     - Delete from cursor to end of line: *d$* or *D*
     - Delete until end of paragraph: *dip*
     - Delete all text in file: *ggdG*
+2. Copying: replace *d* by *y* for all oeprations.
+    - Copy current word: *dw*
+    - Copy from cursor to end of line (need to set this): *y$* or *Y*
+    - Copy until end of paragraph: *yip*
+3. Insert to edit:
+    - Insert after last character of document: *GA*
+    - Insert at the end of line: *A*
+    - Insert after cursor, *a*, insert before curosr *i*
 
 ## Vim Statistics
 
 - word count: *g, ctrl+g*
-
 
 # Vim Errors
 
