@@ -4,14 +4,14 @@ title: |
   | Python (Anaconda), R (Rstudio), Matlab and Latex (Texlive)
   | Atom, VScode, Pycharm
 output:
-  pdf_document:
-    df_print: paged
+  html_document:
     number_sections: true
   html_notebook:
     number_sections: true
   word_document:
     number_sections: true
-  html_document:
+  pdf_document:
+    df_print: paged
     number_sections: true
 urlcolor: blue
 always_allow_html: yes
@@ -388,6 +388,15 @@ Is RSTUDIO pointing to the R installation you want? Note you can open Rstudio fr
 - *export RSTUDIO_WHICH_R=/usr/bin/R*
 - *export RSTUDIO_WHICH_R=/home/wangfanbsg75/anaconda3/bin/R*
 
+R-studio theme, [VSCode theme](https://github.com/anthonynorth/rscodeio) for Rstudio works very well:
+
+```{r}
+# admin rights
+sudo rstudio --no-sandbox
+remotes::install_github("anthonynorth/rscodeio")
+rscodeio::install_theme()
+```
+
 ## R Tests
 
 Test the following file to see if we can execute a R file. Do it inside *r_env* and inside a *r* session.
@@ -565,9 +574,10 @@ ext install ikuyadeu.r
 
 - Zen model: *Ctrl + k, z*, this means press control k, then press z
 - Open up Settings: *Ctrl + ,*
-- Preview Markdown in VSCode: *Ctrl + Shift + V*
-- Open up left pane: *Ctrl + B*
-- Wrap Text: *alt + Z*, switch between wrap or not to save screen space for example.
+- Preview Markdown in VSCode: *Ctrl + Shift + v*
+- Open up left pane: *Ctrl + b*
+- Wrap Text: *alt + z*, switch between wrap or not to save screen space for example.
+- Hide Console Pane (running code): *Ctrl + j*
 
 ### VSCode and R
 
@@ -657,9 +667,13 @@ Terminal in windows or linux after installation: *apm install hydrogen*. apm is 
 ```{bash}
 # Once atom is installed, can use apm to install packages
 apm install hydrogen
-apm install project-manager
+# apm install project-manager
 apm install sublime-style-column-selection
 apm install minimap
+
+# r-related
+# for me the best r-syntax highlighter I have found
+apm install r-syntax
 
 # vim distraction free editing
 apm install vim-mode-plus

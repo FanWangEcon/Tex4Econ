@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -268,7 +268,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -330,6 +329,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -341,18 +341,6 @@ summary {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -383,11 +371,13 @@ $(document).ready(function () {
 <h1><span class="header-section-number">1</span> Atom Install</h1>
 <p>Can be directly installed from Ubuntu store.</p>
 <pre class="bash"><code># install atom
-sudo apt-get install atom</code></pre>
+sudo apt-get install atom
+# install various atom packages that are necessary
+apm install vim-mode-plus</code></pre>
 <ul>
-<li><em>personal access token</em>: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f</li>
+<li><p><em>personal access token</em>: d8a293d30ef620a8b27ab0ad6294cdd8942a0b6f</p></li>
 <li><p><em>Gist id</em>: 754fa9ca57eb7ddc1ee89775f934b59f</p></li>
-<li><em>personal access token</em>: b36b4d26ff2b5b626a1d7f66e3bc60c582a85c21</li>
+<li><p><em>personal access token</em>: b36b4d26ff2b5b626a1d7f66e3bc60c582a85c21</p></li>
 <li><p><em>Gist id</em>: a883a7ba62661dbe9b907d24b651b780</p></li>
 </ul>
 </div>
@@ -476,8 +466,28 @@ cd /opt/pycharm-*/bin
 <div id="r-install" class="section level1">
 <h1><span class="header-section-number">5</span> R install</h1>
 <p>R could be installed first as below. Or follow the <a href="https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html">instructions on this page</a> to install from conda an environment for R, with associated R-studio.</p>
-<pre class="bash"><code>apt-get update
-apt-get install r-base r-base-dev</code></pre>
+<pre class="bash"><code># Debian R is maintained by Johannes Ranke, copied from https://cran.r-project.org/bin/linux/debian/:
+apt-key adv --keyserver keys.gnupg.net --recv-key &#39;E19F5F87128899B192B1A2C2AD5F960A256A04AF&#39;
+# Add to source.list, for debian stretch (9)
+# sudo su added for security issue as super-user
+sudo su -c &quot;sudo echo &#39;deb http://cloud.r-project.org/bin/linux/debian stretch-cran35/&#39; &gt;&gt; /etc/apt/sources.list&quot;
+# if added wrong lines, delete 3rd line
+sudo sed &#39;3d&#39; /etc/apt/sources.list
+
+# Update and Install R, should say updated from cloud.r
+sudo apt-get update
+sudo apt-get install r-base r-base-dev</code></pre>
+</div>
+<div id="install-other-programs-and-packages" class="section level1">
+<h1><span class="header-section-number">6</span> Install Other Programs and Packages</h1>
+<p>Other key programs and packages to install.</p>
+<ul>
+<li>vim: faster editor, on lower resource machines, atom is slow and typing could feel laggy.</li>
+<li>htop: for resource monitoring</li>
+</ul>
+<pre><code>sudo apt-get install vim
+sudo apt-get install sublime-text
+sudo apt-get install htop</code></pre>
 </div>
 
 
@@ -497,6 +507,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

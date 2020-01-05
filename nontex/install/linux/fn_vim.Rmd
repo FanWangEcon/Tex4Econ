@@ -1,14 +1,14 @@
 ---
 title: "Example and Tutorial for Vim Editor (Linux)"
 output:
-  pdf_document:
-    df_print: paged
+  html_document:
     number_sections: true
   html_notebook:
     number_sections: true
   word_document:
     number_sections: true
-  html_document:
+  pdf_document:
+    df_print: paged
     number_sections: true
 urlcolor: blue
 always_allow_html: yes

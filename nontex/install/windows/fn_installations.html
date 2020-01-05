@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>New Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations</title>
+<title>fn_installations.utf8</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -268,7 +268,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -330,6 +329,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -341,18 +341,6 @@ summary {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -373,74 +361,74 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">New Computer Data-Science Set-up: Python (anaconda, pycharm), R (r-studio) and other Programs Installations</h1>
+<h1 class="title toc-ignore"><div class="line-block">New Computer Fan Data-Science Set-up<br />
+Python (Anaconda), R (Rstudio), Matlab and Latex (Texlive)<br />
+Atom, VScode, Pycharm</div></h1>
 
 </div>
 
 
+<!-- rnb-text-begin -->
 <p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="http://fanwangecon.github.io/Tex4Econ/">Tex4Econ and Miscellaneous Repository</a>.</p>
+<!-- rnb-text-end -->
+<!-- rnb-text-begin -->
 <div id="objective" class="section level1">
 <h1><span class="header-section-number">1</span> Objective</h1>
-<p>For the following types of programming tasks, install relevant programs, that are cross platform compatible. Test at the end that example programs work.</p>
+<p>Install various compilers and IDE:</p>
 <ol style="list-style-type: decimal">
-<li>Python
-<ul>
-<li>Anaconda Dist</li>
-<li>Pycharm</li>
-<li>atom hydrogen</li>
-</ul></li>
-<li>R
-<ul>
-<li>R</li>
-<li>Rstudio</li>
-<li>atom hydrogen</li>
-</ul></li>
-<li>Matlab
-<ul>
+<li>Python (Anaconda, Pycharm + VSCode + Atom)</li>
+<li>R (VSCode + Atom)</li>
 <li>Matlab</li>
-</ul></li>
-<li>Latex and PDF
-<ul>
-<li>atom latex</li>
-<li>texstudio</li>
-<li>texlive</li>
-<li>okular pdf</li>
-</ul></li>
+<li>Latex and PDF (texlive, Okular, VSCode + Atom + Texstudio)</li>
 </ol>
 <p>Test at the end:</p>
 <ol style="list-style-type: decimal">
 <li>Do sample <em>py</em> files work?
 <ul>
-<li>work from command line?</li>
-<li>work from atom (hydrogen)</li>
+<li>work from command line</li>
+<li>work from atom (hydrogen), Pycharm, VSCode</li>
 </ul></li>
 <li>Do sample <em>rmd</em> files work?
 <ul>
 <li>work from r-studio</li>
-<li>work from atom (hydrogen), r file</li>
+<li>work from atom (hydrogen), VSCode</li>
 </ul></li>
 <li>Do tex templates compile?
 <ul>
-<li>tikz files</li>
-<li>template files with bib</li>
+<li>tikz files, template files with bib</li>
+<li>work from texstudio, VSCode live compile, Atom</li>
 </ul></li>
 </ol>
+<p>Installation Plan outline:</p>
+<ol style="list-style-type: decimal">
+<li>Conda install (python)</li>
+<li>Install Atom along with Hydrogen and other packages.</li>
+</ol>
 </div>
-<div id="conda" class="section level1">
-<h1><span class="header-section-number">2</span> Conda</h1>
+<div id="python-and-anaconda-installation" class="section level1">
+<h1><span class="header-section-number">2</span> Python and Anaconda Installation</h1>
 <p>Use conda across platforms, so that locally on windows and ubuntu and remotely on aws, can have the same software setup environment.</p>
-<p>Search for Anaconda Prompt, right click, choose run as administrator.</p>
-<p>Check software versions.</p>
+<ul>
+<li>Search for Anaconda Prompt, right click, choose run as administrator.</li>
+<li>Check software versions.</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuY29uZGEgbGlzdCBhbmFjb25kYVxucHl0aG9uIC1WXG5gYGAifQ== -->
 <pre class="bash"><code>conda list anaconda
 python -V</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <div id="first-time-conda-install" class="section level2">
 <h2><span class="header-section-number">2.1</span> First Time Conda Install</h2>
-<p>Download and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path</p>
-<p>To install conda in Debian, follow <a href="https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html">these instructions</a>.</p>
-<p>See Anaconda Installation Directory, in anaconda prompt:</p>
-<pre class="bash"><code># To remove conda Fully
-rm -rf ~/anaconda3
-
+<p><a href="https://www.anaconda.com/distribution/">Download Anaconda Python 3</a> and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path.</p>
+<p>To install conda in Linux/Debian, follow <a href="https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html">these instructions</a>. Overall, installations are very similar.</p>
+<p>In command/anaconda prompt:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxud2hlcmUgYW5hY29uZGFcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvYW5hY29uZGEuZXhlXG53aGVyZSBweXRob25cbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL3B5dGhvbi5leGVcbndoZXJlIGp1cHl0ZXJcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvanVweXRlci5leGVcbndoZXJlIGp1cHl0ZXIta2VybmVsc3BlY1xuIyBpZiBSIGluc3RhbGxlZCBhbHJlYWR5XG53aGVyZSByXG5cbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQWRkIHRoZXNlIHRvIFdpbmRvd3MgUEFUSDpcbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHNcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzXG5gYGBcbmBgYCJ9 -->
+<pre class="bash"><code>```bash
 where anaconda
 # C:/ProgramData/Anaconda3/Scripts/anaconda.exe
 where python
@@ -456,12 +444,43 @@ where r
 ###############################
 # C:/ProgramData/Anaconda3/Scripts
 # C:/ProgramData/Anaconda3</code></pre>
-<p>To Add Anaconda to Path, In Windows 1. search for: Environment Variables 2. Edit Environment Variables 3. Add new to Path (lower half): - C:/ProgramData/Anaconda3/Scripts/ - C:/ProgramData/Anaconda3/ 4. Now open up regular windows command Prompt, Type in: - conda –version - also Close and Open up Git Bash: conda –version</p>
-</div>
-<div id="conda-update" class="section level2">
-<h2><span class="header-section-number">2.2</span> Conda Update</h2>
-<p>Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.</p>
-<pre class="bash"><code># # if there are bugs
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+To Add Anaconda to Path, In Windows
+1. Search for: Environment Variables
+2. Edit Environment Variables
+3. Add new to Path (lower half):
+    - C:/ProgramData/Anaconda3/Scripts/
+    - C:/ProgramData/Anaconda3/
+4. Now open up regular windows command Prompt, Type in:
+    - conda --version
+    - also Close and Open up Git Bash: conda --version
+
+## Conda Update
+
+Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.
+
+There are different channels/repositories from which packages could be installed: *conda*, *conda-forge*, for example. Can change where to look for packages first. Many packages are in multiple channels. Conda-forge often have mroe recent packages.
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxuIyAjIGlmIHRoZXJlIGFyZSBidWdzXG4jIGNvbmRhIGNsZWFuIC0tcGFja2FnZXNcbiMgdXNlIGNvbmRhLWZvcmdlIGFzIG1haW4gY2hhbm5lbCwgbW9yZSB1cGRhdGVkIHBhY2thZ2VzXG5jb25kYSBjb25maWcgLS1nZXQgY2hhbm5lbHNcbmNvbmRhIGNvbmZpZyAtLWFkZCBjaGFubmVscyBjb25kYS1mb3JnZVxuY29uZGEgY29uZmlnIC0tZ2V0IGNoYW5uZWxzXG4jIHJlbW92ZSBjb25kYS1mb3JnZSBmcm9tIGNoYW5uZWxzIChkbyBzbyBmb3IgbWFpbiBlbnYgaW5zdGFsbClcbmNvbmRhIGNvbmZpZyAtLXJlbW92ZSBjaGFubmVscyBjb25kYS1mb3JnZVxuIyBub3JtYWwgdXBkYXRlXG5jb25kYSB1cGRhdGUgLS1hbGxcbmBgYFxuYGBgIn0= --&gt;
+
+```bash
+```bash
+# # if there are bugs
 # conda clean --packages
 # use conda-forge as main channel, more updated packages
 conda config --get channels
@@ -470,107 +489,124 @@ conda config --get channels
 # remove conda-forge from channels (do so for main env install)
 conda config --remove channels conda-forge
 # normal update
-conda update --all
+conda update --all</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
 
-# install additional packages
-conda install -y statsmodels datashape seaborn
-conda install -c conda-forge -y interpolation awscli
-conda install -c anaconda -y boto3</code></pre>
-</div>
-<div id="conda-test-python" class="section level2">
-<h2><span class="header-section-number">2.3</span> Conda Test Python</h2>
-<p>Fist test python under command line:</p>
-<pre class="r"><code># windows
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## Python Command Line Test
+
+Fist test python under command line:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyB3aW5kb3dzXG5weXRob24gXCJDOi9Vc2Vycy9mYW4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcIlxucHl0aG9uIFwiQzovVXNlcnMvZmFuL1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcIlxuIyBsaW51eFxucHl0aG9uIH4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcbnB5dGhvbiB+L1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcbmBgYCJ9 --&gt;
+
+```bash
+# windows
 python &quot;C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py&quot;
 python &quot;C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py&quot;
 # linux
 python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
 python ~/PyFan/ProjectSupport/graph/subplot.py</code></pre>
-</div>
-<div id="jupyter-and-atom-hydrogen" class="section level2">
-<h2><span class="header-section-number">2.4</span> Jupyter and Atom Hydrogen</h2>
-<p>For both Jupyter as well as Atom, always open from command prompt, open from <em>Anaconda Prompt</em> with admin rights.</p>
-<p>First, open up <em>Jupyter Notebook</em>, does the python kernel work? If does not, uninstall and re-install Anaconda.</p>
-<pre class="bash"><code># start jupyter lab, from prompt
-jupyter lab</code></pre>
-<p>Now test python within atom:</p>
-<ol style="list-style-type: decimal">
-<li>install hydrogen in atom. Follow <a href="http://nteract.io/atom">instructions</a>.
-<ul>
-<li>terminal in windows or linux after installation: <em>apm install hydrogen</em></li>
-<li>apm is the atom package manager.</li>
-</ul></li>
-<li>go to the programs above and try to run.</li>
-</ol>
-<pre class="bash"><code># Once atom is installed, can use apm to install packages
-apm install hydrogen
-# Inside Conda open up atom
-atom
-# open up any py from from within, try 1+1, does it work?
-# also use script, try ctrl + shift + b, run whole file (not hydrogen)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 </div>
 <div id="r-installation" class="section level1">
 <h1><span class="header-section-number">3</span> R Installation</h1>
-<p>Try to install R from within Conda. The procedure here is the same for windows as well as linux machines.</p>
+<p>R could be installed from Anaconda or directly on windows outside of the Anaconda directories. When installing from within Anaconda, could create R environment that are isolated from the rest of the computer. The R environment could be updated and deleted without disturbing dependencies in conda main or the rest of the computer.</p>
+<p>The computer could have multiple R installations. Several in different conda R environment, and also several under windows/linux primary main user R directories. Type <em>which R/where R</em> to see if you open up R from command line at the moment, which directory’s R will be used. Inside Conda R environment, it will be a different R if there is a different R version there.</p>
 <div id="fully-uninstall-r" class="section level2">
 <h2><span class="header-section-number">3.1</span> Fully Uninstall r</h2>
-<p>Open up RStudio, and see where paths are. also open up R from command prompt, see where paths are.</p>
-<pre class="r"><code>.libPath()</code></pre>
-<p>Open up install and uninstall programs, find R and Rstudio, and uninstall them. Then delete all files found path paths shown by <em>.libPath()</em>, looking at these: - <em>C:/Users/fan/Documents/R/win-library/3.6</em> - <em>C:/Program Files/R/R-3.6.1/library</em></p>
-<p>For Linux:</p>
-<ul>
-<li>if used apt-get to install, R installed under main user drive, deactivate conda, and check which conda</li>
-</ul>
-<pre class="bash"><code># Exit Conda
-conda deactivate
-# where is R installed outside of Conda
-which R
-# /usr/bin/R
-# To remove all
-sudo apt-get remove r-base
-sudo apt-get remove r-base-core
+<p>If R was installed in R enviornments, just delete the environment. Otherwise, use system’s uninstaller. Before that, from terminal/command-prompt, type <em>R</em>, and <em>.libPaths()</em> to find paths. Do so inside conda main, outside of conda main, inside different environments, find all paths. After uninstaller finishes, check in the libPath folders to see if there are still stuff there, delete all, delete the folders.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLmxpYlBhdGgoKVxuIyBDOi9Vc2Vycy9mYW4vRG9jdW1lbnRzL1Ivd2luLWxpYnJhcnkvMy42XG4jIEM6L1Byb2dyYW0gRmlsZXMvUi9SLTMuNi4xL2xpYnJhcnlcbmBgYCJ9 -->
+<pre class="r"><code>.libPath()
+# C:/Users/fan/Documents/R/win-library/3.6
+# C:/Program Files/R/R-3.6.1/library</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>For Linux and for unsintalling inside conda:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgclxuY29uZGEgaW5zdGFsbCBzdGF0c21vZGVscyBkYXRhc2hhcGUgc2VhYm9yblxuIyBjb25kYSBpbnN0YWxsIHN0YXRzbW9kZWxzXG4jIGNvbmRhIGluc3RhbGwgZGF0YXNoYXBlXG4jIGNvbmRhIGluc3RhbGwgc2VhYm9yblxuXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGludGVycG9sYXRpb24gYXdzY2xpXG4jIGNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2UgaW50ZXJwb2xhdGlvblxuIyBjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGF3c2NsaVxuXG5jb25kYSBpbnN0YWxsIC1jIGFuYWNvbmRhIGJvdG8zXG5cbiMgY29uZGEgaW5zdGFsbCAtYyByIHItaXJrZXJuZWxcbmBgYFxuYGBgIn0= -->
+<pre class="bash"><code>```r
+conda install statsmodels datashape seaborn
+# conda install statsmodels
+# conda install datashape
+# conda install seaborn
 
-# Inside Conda base
-conda activate
-# Conda r_env
-conda activate r_env
-# Where is it installed?
-which R
-# /home/wangfanbsg75/anaconda3/bin/R
-conda uninstall r-base</code></pre>
-</div>
-<div id="install-r-outside-of-conda" class="section level2">
-<h2><span class="header-section-number">3.2</span> Install R (outside of Conda)</h2>
-<ol style="list-style-type: decimal">
-<li><a href="https://cloud.r-project.org/">download R</a>
-<ul>
-<li>for debian: <a href="https://cran.r-project.org/bin/linux/debian/">Johannes Ranke</a></li>
-</ul></li>
-<li><a href="https://rstudio.com/products/rstudio/download/">download R-studio</a></li>
-<li>Open R-studio and auto-detect R</li>
-<li>Install packages</li>
-</ol>
-<p>note that installation will not work if the machine’s version of R is not up to date, this could be the case with default R versions for some linux installations. For Debian for example, need to update the <em>source.list</em> to include sources that have more recent versions of R.</p>
-<p>Additionally, need to install <em>libcurl4-openssl-dev</em> and <em>libssl-dev</em> from command prompt first inside Debian.</p>
-<pre class="bash"><code># If inside Debian, due to some tidymodel install issues, do this`
-conda install -c r r
-conda install -c r r-essentials
-conda install -c r r-igraph
-conda install -c conda-forge igraph
+conda install -c conda-forge interpolation awscli
+# conda install -c conda-forge interpolation
+# conda install -c conda-forge awscli
 
+conda install -c anaconda boto3
+
+# conda install -c r r-irkernel</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## Install R (outside of Conda)
+
+Need to install R. Then need to install also an editor/IDE for R. Rstudio is the dominant R IDE. VSCode and Atom also works well, especially VSCode as editors. Dramatically better experience for writing scripts outside of Rstudio which feels unwieldy and slow especially compared to VSCode.
+
+Overall plan:
+
+1. [download R](https://cloud.r-project.org/)
+    + for debian: [Johannes Ranke](https://cran.r-project.org/bin/linux/debian/). For Linux/Debian installation, crucial to update the *source.list* to include sources that have more recent versions of R. If not, will get very old R versions that is not compatible with many packages.
+    + add R to path for Windows. In Windows Path, add for example: *C:/Program Files/R/R-3.6.2/bin/x64/* and *C:/Rtools/bin*
+2. [download R-studio](https://rstudio.com/products/rstudio/download/)
+3. Open R-studio and auto-detect R
+4. Install additional packages (from commandline)
+    + various R data-science packages have dependencies, and additional not-R programs might need to be installed. Install them as needed, for example:  *libcurl4-openssl-dev* and *libssl-dev* from command prompt first inside Debian.
+
+
+### Linux R Install
+
+For linux/Debian, to Install latest R:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBHbyB0byBnZXQgbGF0ZXNkZWJpYW4gbGF0ZXN0IHIgc291cmNlcy5saXN0XG5jYXQgL2V0Yy9hcHQvc291cmNlcy5saXN0XG4jIEluc3RhbGwgdGhpcyBGaXJzdCAoc2hvdWxkIGFscmVhZHkgYmUgaW5zdGFsbGVkKVxuc3VkbyBhcHQgaW5zdGFsbCBkaXJtbmdyXG5cbiMgRGViaWFuIFIgaXMgbWFpbnRhaW5lZCBieSBKb2hhbm5lcyBSYW5rZSwgY29waWVkIGZyb20gaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvYmluL2xpbnV4L2RlYmlhbi86XG5hcHQta2V5IGFkdiAtLWtleXNlcnZlciBrZXlzLmdudXBnLm5ldCAtLXJlY3Yta2V5ICdFMTlGNUY4NzEyODg5OUIxOTJCMUEyQzJBRDVGOTYwQTI1NkEwNEFGJ1xuIyBBZGQgdG8gc291cmNlLmxpc3QsIGZvciBkZWJpYW4gc3RyZXRjaCAoOSlcbiMgc3VkbyBzdSBhZGRlZCBmb3Igc2VjdXJpdHkgaXNzdWUgYXMgc3VwZXItdXNlclxuc3VkbyBzdSAtYyBcInN1ZG8gZWNobyAnZGViIGh0dHA6Ly9jbG91ZC5yLXByb2plY3Qub3JnL2Jpbi9saW51eC9kZWJpYW4gc3RyZXRjaC1jcmFuMzUvJyA+PiAvZXRjL2FwdC9zb3VyY2VzLmxpc3RcIlxuIyBpZiBhZGRlZCB3cm9uZyBsaW5lcywgZGVsZXRlIDNyZCBsaW5lXG5zdWRvIHNlZCAnM2QnIC9ldGMvYXB0L3NvdXJjZXMubGlzdFxuXG4jIFVwZGF0ZSBhbmQgSW5zdGFsbCBSLCBzaG91bGQgc2F5IHVwZGF0ZWQgZnJvbSBjbG91ZC5yXG5zdWRvIGFwdC1nZXQgdXBkYXRlXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCByLWJhc2Ugci1iYXNlLWRldlxuXG4jIEFsc28gaW5zdGFsbCB0aGVzZSwgb3RoZXJ3aXNlIHItcGFja2FnZXMgZG8gbm90IGluc3RhbGxcbiMgbGlieG1sMiBzZWVtcyBuZWVkIGZvciB0aWR5bW9kZWxzXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBsaWJjdXJsNC1vcGVuc3NsLWRldlxuc3VkbyBhcHQtZ2V0IGluc3RhbGwgbGlic3NsLWRldlxuc3VkbyBhcHQtZ2V0IGluc3RhbGwgbGlieG1sMi1kZXZcbmBgYCJ9 --&gt;
+
+```bash
 # Go to get latesdebian latest r sources.list
 cat /etc/apt/sources.list
 # Install this First (should already be installed)
 sudo apt install dirmngr
 
 # Debian R is maintained by Johannes Ranke, copied from https://cran.r-project.org/bin/linux/debian/:
-apt-key adv --keyserver keys.gnupg.net --recv-key 'E19F5F87128899B192B1A2C2AD5F960A256A04AF'
+apt-key adv --keyserver keys.gnupg.net --recv-key &#39;E19F5F87128899B192B1A2C2AD5F960A256A04AF&#39;
 # Add to source.list, for debian stretch (9)
 # sudo su added for security issue as super-user
-sudo su -c &quot;sudo echo 'deb http://cloud.r-project.org/bin/linux/debian stretch-cran35/' &gt;&gt; /etc/apt/sources.list&quot;
+sudo su -c &quot;sudo echo &#39;deb http://cloud.r-project.org/bin/linux/debian stretch-cran35/&#39; &gt;&gt; /etc/apt/sources.list&quot;
 # if added wrong lines, delete 3rd line
-sudo sed '3d' /etc/apt/sources.list
+sudo sed &#39;3d&#39; /etc/apt/sources.list
 
 # Update and Install R, should say updated from cloud.r
 sudo apt-get update
@@ -581,11 +617,15 @@ sudo apt-get install r-base r-base-dev
 sudo apt-get install libcurl4-openssl-dev
 sudo apt-get install libssl-dev
 sudo apt-get install libxml2-dev</code></pre>
-<p>Which R?</p>
-<ul>
-<li><em>export RSTUDIO_WHICH_R=/usr/bin/R</em></li>
-<li><em>export RSTUDIO_WHICH_R=/home/wangfanbsg75/anaconda3/bin/R</em></li>
-</ul>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="install-packages-for-r" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Install Packages for R</h3>
+<p>From command prompt, enter R by typeing <em>R</em>, and install packages:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDYW4gZW50ZXIgUiBmcm9tIENvbW1hbmQgUHJvbXB0IENvbmRhIEVOViwgbXVjaCBmYXN0ZXIgdGhhbiBmcm9tIHItc3R1ZGlvXG4jIEluc3RhbGwgUi10b29scywgUlRPT0xTIGlzIGZvciBXSU5ET1dTXG5pbnN0YWxsLnBhY2thZ2VzKFwiaW5zdGFsbHJcIilcbmxpYnJhcnkoXCJpbnN0YWxsclwiKVxuaW5zdGFsbC5SdG9vbHMoKVxuIyBjOi9SdG9vbHMvYmluO1xuIyBjOi9SdG9vbHMvbWluZ3dfMzIvYmluO1xuIyBjOi9SdG9vbHMvbWluZ3dfNjQvYmluO1xuXG4jIG1haW4gcGFja2FnZXZwc1xuIyB0aWR5bW9kZWwgaW5zdGFsbGF0aW9uIG9uIGxpbnV4IGRpZmZpY3VsdFxuaW5zdGFsbC5wYWNrYWdlcyhjKFwidGlkeXZlcnNlXCIsIFwidGlkeW1vZGVsc1wiLCBcInRpZHlyXCIpKVxuIyBkZXZlbG9wbWVudCBwYWNrYWdlc1xuaW5zdGFsbC5wYWNrYWdlcyhjKFwiZGV2dG9vbHNcIiwgXCJJUmtlcm5lbFwiLCBcInBrZ2Rvd25cIiwgXCJyb3h5Z2VuMlwiLCBcImthYmxlRXh0cmFcIikpXG4jIG90aGVyIHBhY2thZ2VzXG5pbnN0YWxsLnBhY2thZ2VzKGMoXCJBRVJcIiwgXCJtaW5wYWNrLmxtXCIsIFwia25pdHJcIiwgXCJtYXRsYWJcIikpXG5cbiMgSW5zdGFsbCBteSBwYWNrYWdlLCBuZWVkIHRvIHByZXBhcmUgcGFja2FnZSB0byB3b3JrIGZvciB1YnVudHVcbiMgaWYgaW5zdGFsbCBkb2VzIG5vdCB3b3JrLCBsb2FkIGxvY2FsbHlcbmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YihcImZhbndhbmdlY29uL1I0RWNvblwiKVxuXG4jIEtlcm5lbFxuaW5zdGFsbC5wYWNrYWdlcyhjKCdyZXByJywgJ0lSZGlzcGxheScsICdldmFsdWF0ZScsICdjcmF5b24nLCAncGJkWk1RJywgJ2RldnRvb2xzJywgJ3V1aWQnLCAnZGlnZXN0JykpXG5JUmtlcm5lbDo6aW5zdGFsbHNwZWMoKVxuYGBgIn0= -->
 <pre class="r"><code># Can enter R from Command Prompt Conda ENV, much faster than from r-studio
 # Install R-tools, RTOOLS is for WINDOWS
 install.packages(&quot;installr&quot;)
@@ -608,44 +648,35 @@ install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &
 devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
 
 # Kernel
-install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;))
 IRkernel::installspec()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
-<div id="set-up-r-environment-in-conda" class="section level2">
-<h2><span class="header-section-number">3.3</span> Set up R-Environment in Conda</h2>
-<p>Conda environments are language agnostic. pip is a package manager for Python. venv is an environment manager for Python. conda is both a package and environment manager and is language agnostic. Inside Anaconda Prompt:</p>
-<p>Key packages are generally available in conda’s default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. after adding <em>conda-forge</em> to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the <em>r_env</em> generation line with and without first adding <em>conda-forge</em> to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the <em>conda-forge</em> channels.</p>
-<pre class="bash"><code># outside of conda, install some depencies
-sudo apt-get install libcurl4-openssl-dev
-sudo apt-get install libssl-dev
-sudo apt-get install libxml2-dev
-
+</div>
+<div id="install-r-inside-conda" class="section level2">
+<h2><span class="header-section-number">3.2</span> Install R (inside Conda)</h2>
+<p>Key packages are generally available in conda’s default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. After adding <em>conda-forge</em> to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the <em>r_env</em> generation line with and without first adding <em>conda-forge</em> to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the <em>conda-forge</em> channels.</p>
+<div id="set-up-conda-r-environment" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Set up Conda R environment</h3>
+<p>Create a Conda Environment called <em>r_env</em>, and update its channels.</p>
+<ul>
+<li><strong>Location</strong>: Installed environments are shown appear in the <em>envs</em> folder of <em>C:/ProgramData/Anaconda3/envs/</em>. Can be easily deleted without disrupting the main base installation for conda. This is very important. During installation, could easily run into problems, and need to re-install. Much better to only re-install a folder. Note that when R is installed in <em>envs</em>, it will not show up under add or remove programs for uninstallation from there, has to be uninstalled, deleted directly here.</li>
+<li><strong>Use only in Env</strong>: Note that if we installed r inside r_env, if we type <em>r</em> under the base environment, we can not enter r. We can only enter r within r_env. With PATH properly set-up, this happens under Conda Prompt, Windows Prompt, etc.</li>
+<li><strong>Multiple Pythons</strong>: With the above installation for R, one benefit is that if R requires a different version of Python than what the base environment uses, the r_env could have a different python version. So type <em>python</em> in the base environment as well as inside the <em>r_env</em>. This also means potentially there could be duplicated installations I think. Look at the python versions under <em>conda list</em> in the base and in the r-environment.</li>
+<li><strong>File Size</strong>: Note that this creates a large installation folder, <em>C:/ProgramData/Anaconda3/envs/r_env/</em>, without additional packages, is 1.3 GB in size</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxuIyBTZXQgdXAgQ2hhbm5lbCwgZm9yIFIsIHRvIGdldCBsYXRlc3Qgci1wYWNrYWdlc1xuIyBkbyBub3Qgc2V0LXVwIGNoYW5uZWxzIHRvIHByaW9yaXRpemUgY29uZGEtZm9yZ2UgZm9yIG1haW4gZW52LlxuY29uZGEgY29uZmlnIC0tYWRkIGNoYW5uZWxzIGNvbmRhLWZvcmdlXG4jIGluc3RhbGwga2V5IHIgcGFja2FnZXMgd2l0aGluIGEgci1lbnZpcm9ubWVudFxuY29uZGEgZW52IHJlbW92ZSAtbiByX2VudlxuY29uZGEgY3JlYXRlIC1uIHJfZW52IHItZXNzZW50aWFscyByLWJhc2Ugci10aWR5ciByLXRpZHl2ZXJzZSByLWRldnRvb2xzIHItaXJrZXJuZWwgci1wa2dkb3duIHItcm94eWdlbjJcbiMgc2VlIGFsbCBpbnN0YWxsZWQgZW52aXJvbm1lbnRzXG5jb25kYSBlbnYgbGlzdFxuIyBhY3RpdmF0ZSBhbiBlbnZpcm9ubWVudCB0byB1c2UgaXQsIGlmIGluIGJhc2UsIHIgZG9lcyBub3QgZXhpc3QsIGlzb2xhdGVkIGluIHJfZW52XG5jb25kYSBhY3RpdmF0ZSByX2VudlxuIyBzZWUgcGFja2FnZXMgaW4gZW52aXJvbm1lbnRcbmNvbmRhIGxpc3RcbiMgdG8gcXVpdFxuY29uZGEgZGVhY3RpdmF0ZVxuYGBgXG5gYGAifQ== -->
+<pre class="bash"><code>```bash
+# Set up Channel, for R, to get latest r-packages
+# do not set-up channels to prioritize conda-forge for main env.
+conda config --add channels conda-forge
 # install key r packages within a r-environment
 conda env remove -n r_env
-# start empty environment
-conda create -n r_env
-# activate env and check, nothing yet
-conda activate r_env
-conda list
-
-# check channel and add env specific channel
-conda config --get channels
-# to get latest r, use conda-forge, which has more recent Rs
-# conda config --env --add channels conda-forge
-# channels for base
-conda config --get channels
-# channels for cur env
-conda config --get channels --env
-
-# install files
-conda install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y
-
-# trouble with igraph installation, install here from conda
-# conda install -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
-conda install -n r_env -c r r-igraph
-conda install -n r_env -c conda-forge igraph
-conda install -n r_env -c r r-rstantools r-rstan r-rstanarm -y
-
+conda create -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
 # see all installed environments
 conda env list
 # activate an environment to use it, if in base, r does not exist, isolated in r_env
@@ -654,70 +685,120 @@ conda activate r_env
 conda list
 # to quit
 conda deactivate</code></pre>
-<ul>
-<li><strong>Location</strong>: Installed environments are shown appear in the <em>envs</em> folder of <em>C:/ProgramData/Anaconda3/envs/</em>. Can be easily deleted without disrupting the main base installation for conda. This is very important. During installation, could easily run into problems, and need to re-install. Much better to only re-install a folder. Note that when R is installed in <em>envs</em>, it will not show up under add or remove programs for uninstallation from there, has to be uninstalled, deleted directly here.</li>
-<li><strong>Use only in Env</strong>: Note that if we installed r inside r_env, if we type <em>r</em> under the base environment, we can not enter r. We can only enter r within r_env. With PATH properly set-up, this happens under Conda Prompt, Windows Prompt, etc.</li>
-<li><strong>Multiple Pythons</strong>: With the above installation for R, one benefit is that if R requires a different version of Python than what the base environment uses, the r_env could have a different python version. So type <em>python</em> in the base environment as well as inside the <em>r_env</em>. This also means potentially there could be duplicated installations I think. Look at the python versions under <em>conda list</em> in the base and in the r-environment.</li>
-<li><strong>File Size</strong>: Note that this creates a large installation folder, <em>C:/ProgramData/Anaconda3/envs/r_env/</em>, without additional packages, is 1.3 GB in size</li>
-</ul>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### Install R and Some Packages in Conda
+
+Either inside a R specific environment, or outside of it, now do additional installations for R and also R packages.
+
+During installation, the R programs might require downgrading other programs in the Conda environment that Python for example also uses. That is why potentially it is safer to install in R environment. However, when installing in R enviornment, certain packages could have issues if installer does not realize it is in an environment with special folder structure, so installation could fail.
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBpbnN0YWxsIGZpbGVzXG5jb25kYSBpbnN0YWxsIC1uIHJfZW52IC1jIHIgciByLWVzc2VudGlhbHMgci10aWR5dmVyc2Ugci10aWR5bW9kZWxzIC15XG5cbiMgdHJvdWJsZSB3aXRoIGlncmFwaCBpbnN0YWxsYXRpb24sIGluc3RhbGwgaGVyZSBmcm9tIGNvbmRhXG4jIGNvbmRhIGluc3RhbGwgLW4gcl9lbnYgci1lc3NlbnRpYWxzIHItYmFzZSByLXRpZHlyIHItdGlkeXZlcnNlIHItZGV2dG9vbHMgci1pcmtlcm5lbCByLXBrZ2Rvd24gci1yb3h5Z2VuMlxuY29uZGEgaW5zdGFsbCAtbiByX2VudiAtYyByIHItaWdyYXBoXG5jb25kYSBpbnN0YWxsIC1uIHJfZW52IC1jIGNvbmRhLWZvcmdlIGlncmFwaFxuY29uZGEgaW5zdGFsbCAtbiByX2VudiAtYyByIHItcnN0YW50b29scyByLXJzdGFuIHItcnN0YW5hcm0gLXlcbmBgYCJ9 --&gt;
+
+```bash
+# install files
+conda install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y
+
+# trouble with igraph installation, install here from conda
+# conda install -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
+conda install -n r_env -c r r-igraph
+conda install -n r_env -c conda-forge igraph
+conda install -n r_env -c r r-rstantools r-rstan r-rstanarm -y</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
-<div id="install-additional-packages-inside-the-r-environment" class="section level2">
-<h2><span class="header-section-number">3.4</span> Install Additional Packages inside the R-environment</h2>
-<p>These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better.</p>
-<p><em>tidymodel</em> has installation issues sometimes.</p>
-<p>In <em>r_env</em>, type in <em>R</em>, and then install from inside terminal’s R:</p>
-<pre class="bash"><code># enter into env
-conda activate r_env
-# enter R or type in rstudio
-# sicne R is only install inside r_env, has to enter rstudio from r_env
-R
-rstudio
-
-# main packagevps
-# tidymodel installation on linux difficult
-install.packages(c(&quot;rstantools&quot;, &quot;rstan&quot;, &quot;rstanarm&quot;))
-install.packages(c(&quot;tidyr&quot;, &quot;tidyverse&quot;, &quot;tidymodels&quot;))
-
-# tidymodels
-# development packages
-install.packages(c(&quot;devtools&quot;, &quot;IRkernel&quot;, &quot;pkgdown&quot;, &quot;roxygen2&quot;, &quot;kableExtra&quot;))
-# other packages
-install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;matlab&quot;))
-
-# Install my package, need to prepare package to work for ubuntu
-# if install does not work, load locally
-devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
-
-# Kernel
-install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
-IRkernel::installspec()</code></pre>
-<p>Install additional packages from inside R. The devtools install will install packages inside <em>envs/r_env/Lib/R</em>.</p>
-<pre class="r"><code>#######################################
+</div>
+<div id="install-additional-packages-inside-the-r" class="section level2">
+<h2><span class="header-section-number">3.3</span> Install Additional Packages inside the R</h2>
+<p>These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better. <em>tidymodel</em> has installation issues sometimes.</p>
+<p>In <em>r_env</em>, type in <em>R</em>, and then install from inside terminal’s R. For conda env, devtools will be installed and will install packages inside <em>envs/r_env/Lib/R</em>.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgT3duIFBhY2thZ2VcbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjI1xuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFxcZmFud2FuZ2Vjb24vUjRFY29uXFwpXG4jIGluc3RhbGxfZGV2KFxcY2xpXFwpXG5gYGBcbmBgYCJ9 -->
+<pre class="r"><code>```r
+#######################################
 ### Own Package
 #######################################
-devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
-# install_dev(&quot;cli&quot;)</code></pre>
-</div>
-<div id="r-studio-set-up-download-from-rstudio" class="section level2">
-<h2><span class="header-section-number">3.5</span> R-Studio Set-up Download from Rstudio</h2>
-<ol style="list-style-type: decimal">
-<li>Download R-studio, and install, as normal (not from conda, directly from rstudio website latest windows version)</li>
-<li>Open up anaconda prompt, enter <em>r_env</em> environment: <em>activate r_env</em></li>
-<li>cd into rstudio exe file folder: cd “C:/Program Files/RStudio/bin”</li>
-<li>start r-studio from inside <em>r_env</em>: rstudio.exe</li>
-<li>inside r-studio, check: <em>.libPaths()</em>
-<ul>
-<li>“C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library”</li>
-</ul></li>
-</ol>
-<pre class="bash"><code>activate r_env
-cd &quot;C:/Program Files/RStudio/bin&quot;
+devtools::install_github(\fanwangecon/R4Econ\)
+# install_dev(\cli\)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## R-Studio Set-up Download from Rstudio
+
+1. Download R-studio, and install, as normal (not from conda, directly from rstudio website latest windows version)
+2. Open up anaconda prompt, enter *r_env* environment: *activate r_env*
+3. cd into rstudio exe file folder: cd &quot;C:/Program Files/RStudio/bin&quot;
+4. start r-studio from inside *r_env*: rstudio.exe
+5. inside r-studio, check: *.libPaths()*
+    - &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxuPCEtLSBmb3IgdWJ1bnR1IC0tPlxud2dldCBcXGh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvYmlvbmljL2FtZDY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXFxcbjwhLS0gZm9yIGRlYmlhbiAtLT5cbnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYlxud2dldCBcXGh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvZGViaWFuOS94ODZfNjQvcnN0dWRpby0xLjIuNTAzMy1hbWQ2NC5kZWJcXFxuc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXG5jb25kYSBpbnN0YWxsIC1jIHIgcnN0dWRpb1xuY2QgXFxDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluXFxcbnJzdHVkaW8uZXhlXG5cbmNkIFxcQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeVxcXG5cXEM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4vcnN0dWRpby5leGVcXFxuYGBgXG5gYGAifQ== --&gt;
+
+```bash
+```bash
+&lt;!-- for ubuntu --&gt;
+wget \https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb\
+&lt;!-- for debian --&gt;
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+wget \https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb\
+sudo apt install ./rstudio-1.2.5033-amd64.deb
+conda install -c r rstudio
+cd \C:/Program Files/RStudio/bin\
 rstudio.exe
 
-cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
-&quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
-<p>For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:</p>
-<pre class="bash"><code>&lt;!-- for ubuntu --&gt;
+cd \C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library\
+\C:/Program Files/RStudio/bin/rstudio.exe\</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuPCEtLSBmb3IgdWJ1bnR1IC0tPlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvYmlvbmljL2FtZDY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXCJcbjwhLS0gZm9yIGRlYmlhbiAtLT5cbnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvZGViaWFuOS94ODZfNjQvcnN0dWRpby0xLjIuNTAzMy1hbWQ2NC5kZWJcIlxuc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXG5jb25kYSBpbnN0YWxsIC1jIHIgcnN0dWRpb1xuY2QgXCJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluXCJcbnJzdHVkaW8uZXhlXG5cbmNkIFwiQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeVwiXG5cIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4vcnN0dWRpby5leGVcIlxuYGBgIn0= --&gt;
+
+```bash
+&lt;!-- for ubuntu --&gt;
 wget &quot;https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb&quot;
 &lt;!-- for debian --&gt;
 sudo apt install ./rstudio-1.2.5033-amd64.deb
@@ -729,59 +810,49 @@ rstudio.exe
 
 cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
 &quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Is RSTUDIO pointing to the R installation you want? Note you can open Rstudio from differen conda env command line, that will use different R installations. Or also set:</p>
+<ul>
+<li><em>export RSTUDIO_WHICH_R=/usr/bin/R</em></li>
+<li><em>export RSTUDIO_WHICH_R=/home/wangfanbsg75/anaconda3/bin/R</em></li>
+</ul>
+<p>R-studio theme, <a href="https://github.com/anthonynorth/rscodeio">VSCode theme</a> for Rstudio works very well:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhZG1pbiByaWdodHNcbnN1ZG8gcnN0dWRpbyAtLW5vLXNhbmRib3hcbnJlbW90ZXM6Omluc3RhbGxfZ2l0aHViKFwiYW50aG9ueW5vcnRoL3JzY29kZWlvXCIpXG5yc2NvZGVpbzo6aW5zdGFsbF90aGVtZSgpXG5gYGAifQ== -->
+<pre class="r"><code># admin rights
+sudo rstudio --no-sandbox
+remotes::install_github(&quot;anthonynorth/rscodeio&quot;)
+rscodeio::install_theme()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
-<div id="install-packages-from-r-studio" class="section level2">
-<h2><span class="header-section-number">3.6</span> Install Packages from R-Studio</h2>
-<p>Install addition files inside Rstudio. Easier to debug potentially. Install rtools as described <a href="https://thecoatlessprofessor.com/programming/cpp/installing-rtools-for-compiled-code-via-rcpp/">here</a>: <a href="https://cran.r-project.org/bin/windows/Rtools/">rtools download</a>. Alternatively:</p>
-<pre class="r"><code>install.packages(&quot;installr&quot;)
-library(&quot;installr&quot;)
-# Note that this will generate several pop-up windows
-install.Rtools()
-# choose to only install 64 bit toolchain
-# this installs g++ which is needed for rstanarm
-# Add these below to windows path
-# c:/Rtools/bin;
-# c:/Rtools/mingw_64/bin;
-
-if (!require(devtools)) {
-  install.packages(&quot;devtools&quot;)
-  library(devtools)
-}
-library(devtools)
-install_github(&quot;stan-dev/rstanarm&quot;, args = &quot;--preclean&quot;)
-
-setwd('C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library')
-
-install.packages(&quot;stan-dev/rstanarm&quot;, dependencies=TRUE, INSTALL_opts = c('--no-lock'))
-
-# other packages
-install.packages(c(&quot;tidymodels&quot;, &quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;matlab&quot;))
-
-# for r-kernel to work in Atom
-install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
-devtools::install_github('IRkernel/IRkernel')
-IRkernel::installspec()
-
-# Install my package
-devtools::install_github(&quot;fanwangecon/R4Econ&quot;)</code></pre>
-<div id="test-files" class="section level3">
-<h3><span class="header-section-number">3.6.1</span> Test Files</h3>
+<div id="r-tests" class="section level2">
+<h2><span class="header-section-number">3.4</span> R Tests</h2>
 <p>Test the following file to see if we can execute a R file. Do it inside <em>r_env</em> and inside a <em>r</em> session.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBBIHNpbXBsZSBmaWxlIHdpdGggc3VtbWFyeSBzdGF0aXN0aWNzIHVzaW5nIHRpZHl2ZXJzZVxuc291cmNlKCdDOi9Vc2Vycy9mYW4vUjRFY29uL3N1bW1hcml6ZS9kaXN0L2ZzdF9oaXN0X29uZXZhci5SJylcbiMgQW5vdGhlciBzaW1wbGUgZmlsZSB3aXRoIHN1bW1hcnkgc3RhdGlzdGljcyB1c2luZyB0aWR5dmVyc2VcbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9zdXBwb3J0L3RpYmJsZS9mc190aWJfYmFzaWNzLlInKVxuIyBBIGZpbGUgaW52b2x2aW5nIGVzdGltYXRpb25cbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUicpXG5cbiMgQzovVXNlcnMvZmFuL1I0RWNvbi9zdW1tYXJpemUvZGlzdC9mc3RfaGlzdF9vbmV2YXIuUm1kXG4jIEM6L1VzZXJzL2Zhbi9SNEVjb24vc3VwcG9ydC90aWJibGUvZnNfdGliX2Jhc2ljcy5SbWRcbiMgQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUm1kXG5gYGAifQ== -->
 <pre class="r"><code># A simple file with summary statistics using tidyverse
-source('C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.R')
+source(&#39;C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.R&#39;)
 # Another simple file with summary statistics using tidyverse
-source('C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R')
+source(&#39;C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.R&#39;)
 # A file involving estimation
-source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
+source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39;)
 
 # C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.Rmd
 # C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.Rmd
 # C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 </div>
-</div>
-<div id="install-latex" class="section level1">
-<h1><span class="header-section-number">4</span> Install Latex</h1>
+<div id="install-latex-and-pdf" class="section level1">
+<h1><span class="header-section-number">4</span> Install Latex and PDF</h1>
 <p>Use a combination of overleaf and local compile. The goal is to have the same installation set-up for windows as well as linux. And hopefully, locally compilable file also can be compiled on overleaf (only use packages also available on overleaf).</p>
 <p>There are several pieces of things to install:</p>
 <ol style="list-style-type: decimal">
@@ -791,7 +862,7 @@ source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
 <li>these folders, once various packages are installed, could be very large, many GB</li>
 </ul></li>
 <li>latex packages from distributions</li>
-<li>editor (gui): Atom, texStudio, etc</li>
+<li>editor (gui): Atom, Sublime text, texStudio, etc</li>
 </ol>
 <div id="uninstall" class="section level2">
 <h2><span class="header-section-number">4.1</span> Uninstall</h2>
@@ -809,12 +880,288 @@ source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
 </ul>
 <p><em>Install on Ubuntu</em></p>
 <p>install texlive and texstudio ubuntu/debian.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc3VkbyBhcHQtZ2V0IHVwZGF0ZVxuc3VkbyBhcHQtZ2V0IGluc3RhbGwgdGV4bGl2ZS1mdWxsXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCB0ZXhzdHVkaW9cbmBgYCJ9 -->
 <pre class="bash"><code>sudo apt-get update
 sudo apt-get install texlive-full
 sudo apt-get install texstudio</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Test file compilations in TexStudio.</p>
 </div>
-<div id="compile-in-atom-and-texstudio" class="section level2">
-<h2><span class="header-section-number">4.3</span> Compile in Atom and Texstudio</h2>
+<div id="sumatrapdf" class="section level2">
+<h2><span class="header-section-number">4.3</span> SumatraPDF</h2>
+<p>For windows, install <a href="https://www.sumatrapdfreader.org/download-free-pdf-viewer.html">SumatraPDF</a>. Can easily modify colors.</p>
+<p><strong>Settings</strong></p>
+<p><a href="https://medium.com/greatnote/kindle-sepia-color-code-1fed14b1a5ef">Kindle Sepia</a> modifications:</p>
+<ul>
+<li>Background color:
+<ul>
+<li>Kindle Sepia: <em>fbf0d9</em></li>
+<li>Kindle Sepia Light: <em>fff8e6</em></li>
+</ul></li>
+<li>Text color:
+<ul>
+<li>Kindle Sepia: <em>5f4b32</em></li>
+<li>Kindle Sepia Darker: <em>503f2a</em></li>
+<li>Kindle Sepia Darkerer: <em>1e170f</em></li>
+</ul></li>
+</ul>
+<pre><code>FixedPageUI [
+    TextColor = #1e170f
+    BackgroundColor = #fff8e6
+    SelectionColor = #f5fc0c
+    WindowMargin = 2 4 2 4
+    PageSpacing = 4 4
+]</code></pre>
+</div>
+<div id="okular-pdf" class="section level2">
+<h2><span class="header-section-number">4.4</span> Okular PDF</h2>
+<p>Linux: <em>sudo apt-get install okular</em> Windows: install okular from windows app store</p>
+<div id="okular-shortcuts-and-features" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Okular Shortcuts and Features</h3>
+<p><strong>Settings</strong>:</p>
+<ul>
+<li>Background color:
+<ul>
+<li>background behind pdf: configure okular, general, use custom backgroun color, Gainsboro gray: <em>DCDCDC</em>, kindle sepia: <em>FBF0D9</em></li>
+<li>pdf background itself: configure okular, accessbility, change color, change paper color, Light Kindle Sepia: <em>fff8e6</em></li>
+</ul></li>
+</ul>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Okular 3 pages per row view: view, overview</li>
+<li>Automatic Update when PDF updated elsewhere: this is one of the key reasons to use okular, when I knit a Rmd file to PDF, the currently open Okular PDF file automatically updates and does not give file is open error like Acrobat.</li>
+<li>Background color:
+<ul>
+<li>background behind pdf: configure okular, general, use custom backgroun color, Gainsboro gray: <em>DCDCDC</em>, kindle sepia: <em>FBF0D9</em></li>
+<li>pdf background itself: configure okular, accessbility, change color, change paper color, Light Kindle Sepia: <em>fff8e6</em></li>
+</ul></li>
+</ul>
+<p><strong>Shortcuts</strong>:</p>
+<ul>
+<li>Okular configure shortcuts: setting, configure shortcuts</li>
+<li>Okular if menu bar lost: <em>Ctrl + m</em></li>
+<li>Okular comment pane: <em>F6</em></li>
+<li>Okular close left pane: <em>F7</em></li>
+<li>Okular full scrren: <em>Ctrl + Shift + F</em>
+<ul>
+<li>unlike acrobat, pdf allows for multiple scrrens</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="adobe-pdf" class="section level2">
+<h2><span class="header-section-number">4.5</span> Adobe PDF</h2>
+<p>PDF Adobe Acrobat Installation + go to adobe website, log in using <a href="mailto:fwang26@uh.edu" class="email">fwang26@uh.edu</a> + go to my account, choose view and download my apps, choose acrobat &amp; PDF, download Acrobat DC + UH account can only be activated on two accounts at once, so need to kick other computers out temporarily potentially</p>
+</div>
+</div>
+<div id="install-various-editors" class="section level1">
+<h1><span class="header-section-number">5</span> Install Various Editors</h1>
+<p>Atom, VSCode, Notepad++, Sublime, etc. These are essential editors that allows for pleasant programming and writing experiences. See here for <a href="http://fanwangecon.github.io/">fan</a> instructions on <a href="https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html">vim</a> installations.</p>
+<p>All settings here JSON files here:</p>
+<ul>
+<li>windows: <em>C:/Users/fan/AppData/Roaming/Code/User</em>, can be modified here directly</li>
+</ul>
+<div id="vscode-installation" class="section level2">
+<h2><span class="header-section-number">5.1</span> VSCode Installation</h2>
+<p>VSCode is much more light-weight than Atom, much faster. On Windows, download <a href="https://code.visualstudio.com/download">here</a>. VScode settings easy to change for various extensions. Very very good Latex Editor, probably the best I have used.</p>
+<p>For Linux:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBEZWJpYW4gSW5zdGFsbFxuY3VybCBodHRwczovL3BhY2thZ2VzLm1pY3Jvc29mdC5jb20va2V5cy9taWNyb3NvZnQuYXNjIHwgZ3BnIC0tZGVhcm1vciA+IG1pY3Jvc29mdC5ncGdcbnN1ZG8gaW5zdGFsbCAtbyByb290IC1nIHJvb3QgLW0gNjQ0IG1pY3Jvc29mdC5ncGcgL3Vzci9zaGFyZS9rZXlyaW5ncy9taWNyb3NvZnQtYXJjaGl2ZS1rZXlyaW5nLmdwZ1xuc3VkbyBzaCAtYyAnZWNobyBcImRlYiBbYXJjaD1hbWQ2NCBzaWduZWQtYnk9L3Vzci9zaGFyZS9rZXlyaW5ncy9taWNyb3NvZnQtYXJjaGl2ZS1rZXlyaW5nLmdwZ10gaHR0cHM6Ly9wYWNrYWdlcy5taWNyb3NvZnQuY29tL3JlcG9zL3ZzY29kZSBzdGFibGUgbWFpblwiID4gL2V0Yy9hcHQvc291cmNlcy5saXN0LmQvdnNjb2RlLmxpc3QnXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBhcHQtdHJhbnNwb3J0LWh0dHBzXG5zdWRvIGFwdC1nZXQgdXBkYXRlXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBjb2RlICMgb3IgY29kZS1pbnNpZGVyc1xuXG4jIENoYW5nZSBGb250IChodHRwczovL3d3RncucmVkZGl0LmNvbS9yL0Nyb3N0aW5pL2NvbW1lbnRzL2Nlc3hyMC92c2NvZGVfdWlfYW5kX2ZvbnRzX3Rvb19zbWFsbF9oZXJlc19ob3dfdG9fZml4X2l0LylcbiMgbW9kaWZ5OiAvdXNyL3NoYXJlL2FwcGxpY2F0aW9ucy9jb2RlLmRlc2t0b3Bcbm52aW0gL3Vzci9zaGFyZS9hcHBsaWNhdGlvbnMvY29kZS5kZXNrdG9wXG4jcmVwbGFjZSB0aGlzIGxpbmU6IEV4ZWM9L3Vzci9zaGFyZS9jb2RlL2NvZGUgLS11bml0eS1sYXVuY2ggJUZcbkV4ZWM9c29tbWVsaWVyIC1YIC0tc2NhbGU9MC44IC0tZHBpPTE2MCAvdXNyL3NoYXJlL2NvZGUvY29kZSBcIi0tdW5pdHktbGF1bmNoICVGXCJcbiNyZXBsYWNlIHRoaXMgbGluZTogRXhlYz0vdXNyL3NoYXJlL2NvZGUvY29kZSAtLW5ldy13aW5kb3cgJUZcbkV4ZWM9c29tbWVsaWVyIC1YIC0tc2NhbGU9MC44IC0tZHBpPTE2MCAvdXNyL3NoYXJlL2NvZGUvY29kZSBcIi0tbmV3LXdpbmRvdyAlRlwiXG5cbiMgT3BlbiBGaWxlXG4jIGxvdyBkZW5zaXR5IG1vZGUgdG8gc2VlIGNsZWFyeVxuY29kZVxuYGBgIn0= -->
+<pre class="bash"><code># Debian Install
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg
+sudo sh -c &#39;echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#39;
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install code # or code-insiders
+
+# Change Font (https://wwFw.reddit.com/r/Crostini/comments/cesxr0/vscode_ui_and_fonts_too_small_heres_how_to_fix_it/)
+# modify: /usr/share/applications/code.desktop
+nvim /usr/share/applications/code.desktop
+#replace this line: Exec=/usr/share/code/code --unity-launch %F
+Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code &quot;--unity-launch %F&quot;
+#replace this line: Exec=/usr/share/code/code --new-window %F
+Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code &quot;--new-window %F&quot;
+
+# Open File
+# low density mode to see cleary
+code</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="vscode-extensions" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> VSCode Extensions</h3>
+<p>Press <em>Ctrl + P</em>, paste the <em>ext install</em> commands below to install extensions. Extensions are in: <em>%USERPROFILE%/.vscode/extensions</em> for windows. Can change code for extension there.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBbTWljcm9zb2Z0IFB5dGhvbiBFeHRlbnNpb25dKGh0dHBzOi8vbWFya2V0cGxhY2UudmlzdWFsc3R1ZGlvLmNvbS9pdGVtcz9pdGVtTmFtZT1tcy1weXRob24ucHl0aG9uKVxuZXh0IGluc3RhbGwgbXMtcHl0aG9uLnB5dGhvblxuIyBbTGF0ZXggV29ya3Nob3BdKGh0dHBzOi8vbWFya2V0cGxhY2UudmlzdWFsc3R1ZGlvLmNvbS9pdGVtcz9pdGVtTmFtZT1KYW1lcy1ZdS5sYXRleC13b3Jrc2hvcClcbmV4dCBpbnN0YWxsIGxhdGV4LXdvcmtzaG9wXG4jIFtSXShodHRwczovL21hcmtldHBsYWNlLnZpc3VhbHN0dWRpby5jb20vaXRlbXM/aXRlbU5hbWU9SWt1eWFkZXUucilcbmV4dCBpbnN0YWxsIGlrdXlhZGV1LnJcbmBgYCJ9 -->
+<pre class="bash"><code># [Microsoft Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+ext install ms-python.python
+# [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+ext install latex-workshop
+# [R](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)
+ext install ikuyadeu.r</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="vscode-shortcuts-and-features" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> VSCode Shortcuts and Features</h3>
+<p><strong>Features</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>open a file, if have workspace where the file is in, automatically expand tree and show where file is on left pane.</li>
+</ol>
+<p><strong>Shortcuts</strong> :</p>
+<ul>
+<li>Zen model: <em>Ctrl + k, z</em>, this means press control k, then press z</li>
+<li>Open up Settings: <em>Ctrl + ,</em></li>
+<li>Preview Markdown in VSCode: <em>Ctrl + Shift + v</em></li>
+<li>Open up left pane: <em>Ctrl + b</em></li>
+<li>Wrap Text: <em>alt + z</em>, switch between wrap or not to save screen space for example.</li>
+<li>Hide Console Pane (running code): <em>Ctrl + j</em></li>
+</ul>
+</div>
+<div id="vscode-and-r" class="section level3">
+<h3><span class="header-section-number">5.1.3</span> VSCode and R</h3>
+<p>VSCode works pretty well it seems with Rmd files. Rmd files are useful to work through algorithm, examples in preparation for writing usable functions. Rstudio has been often very slow for me, and I generally feel like can not stretch around and work in RStudio IDE.</p>
+<p>In Atom, Hydrogen works, but really only works with very basic line by line testing.</p>
+<p>Using VSCode with RMD files seems much quicker, and there is room to breath.</p>
+<ol style="list-style-type: decimal">
+<li>Install R following R installation instructions.</li>
+<li>Then install extension <a href="https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r">R</a>. Microsoft stopped supporting rmd in VSCode: <a href="https://github.com/microsoft/RTVS">R Tools for Visual Studio</a></li>
+<li>properly set path (might have to call vscode from r env)
+<ul>
+<li><em>r.rterm.linux</em>: <em>/home/wangfanbsg75/anaconda3/envs/r_env/bin/R</em></li>
+<li><em>r.rterm.windows</em>: <em>C:/Program Files/R/R-3.6.2/bin/x64/R.exe</em>
+<ul>
+<li>note <em>R.exe</em> at the end</li>
+</ul></li>
+</ul></li>
+<li>Run:
+<ul>
+<li>ctrl + enter to activate R terminal</li>
+<li>VSCode 2019 allows for Knit Rmd: <em>Ctrl + Shift + K</em></li>
+<li>also can run code segment: select lines and <em>ctrl + enter</em></li>
+</ul></li>
+</ol>
+</div>
+<div id="vscode-and-latex" class="section level3">
+<h3><span class="header-section-number">5.1.4</span> VSCode and Latex</h3>
+<p>Download <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">Latex Workshop</a>.</p>
+<p><strong>Settings</strong></p>
+<p>change background border pdf color (not pdf but border): <em>ctrl + shift + x</em>, LatexWorkshop, Settings, Configure Extension Settings, Search for background, change color name. or enter: <em>latex-workshop.view.pdf.backgroundColor</em>. use gainsboro gray: <em>#DCDCDC</em>, or lightgray <em>#D3D3D3</em>.</p>
+<p>To take advantage of Okular (where background color can be none-white for example). Go to settings, and: 1. Change: <em>latex-workshop.view.pdf.viewer</em> to external 2. Change: <em>latex-workshop.view.pdf.external.viewer.command</em> to <em>C:/Program Files/SumatraPDF/SumatraPDF.exe</em> open up <em>C:/Users/fan/AppData/Roaming/Code/User/settings.json</em>, and copy these in:</p>
+<pre><code>&quot;latex-workshop.view.pdf.external.synctex.command&quot;: &quot;C:/Program Files/SumatraPDF/SumatraPDF.exe&quot;,
+&quot;latex-workshop.view.pdf.external.synctex.args&quot;: [
+  &quot;-forward-search&quot;,
+  &quot;%TEX%&quot;,
+  &quot;%LINE%&quot;,
+  &quot;-reuse-instance&quot;,
+  &quot;-inverse-search&quot;,
+  &quot;code \&quot;C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\&quot; -r -g \&quot;%f:%l\&quot;&quot;,
+  &quot;%PDF%&quot;,
+]</code></pre>
+<p><strong>Features</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>upon savings, rebuid file and update pdf (similar to overleaf)</li>
+<li>hover offers equation preview</li>
+</ol>
+<p><strong>Shortcuts</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>preview: <em>ctrl + alt + v</em></li>
+<li>synctex location: <em>ctrl + alt + j</em></li>
+</ol>
+</div>
+<div id="vscode-settings.json" class="section level3">
+<h3><span class="header-section-number">5.1.5</span> VSCode settings.json</h3>
+<p>The settings.json file, <em>%APPDATA%/Code/User/settings.json</em>:</p>
+<pre><code>{
+  &quot;r.rterm.windows&quot;: &quot;C:/Program Files/R/R-3.6.2/bin/x64/R.exe&quot;,
+  &quot;window.zoomLevel&quot;: 0,
+  &quot;latex-workshop.view.pdf.viewer&quot;: &quot;external&quot;,
+  &quot;latex-workshop.view.pdf.external.synctex.command&quot;: &quot;C:/Program Files/SumatraPDF/SumatraPDF.exe&quot;,
+  &quot;latex-workshop.view.pdf.external.synctex.args&quot;: [
+        &quot;-forward-search&quot;,
+        &quot;%TEX%&quot;,
+        &quot;%LINE%&quot;,
+        &quot;-reuse-instance&quot;,
+        &quot;-inverse-search&quot;,
+        &quot;code \&quot;C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\&quot; -r -g \&quot;%f:%l\&quot;&quot;,
+        &quot;%PDF%&quot;,
+    ],
+    &quot;latex-workshop.view.pdf.external.viewer.command&quot;: &quot;C:/Program Files/SumatraPDF/SumatraPDF.exe&quot;
+}</code></pre>
+</div>
+</div>
+<div id="atom-installation" class="section level2">
+<h2><span class="header-section-number">5.2</span> Atom Installation</h2>
+<p>Atom is slow but has clean look and nice git/github integration.</p>
+<div id="atom-extensions" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Atom Extensions</h3>
+<p>Terminal in windows or linux after installation: <em>apm install hydrogen</em>. apm is the atom package manager:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBPbmNlIGF0b20gaXMgaW5zdGFsbGVkLCBjYW4gdXNlIGFwbSB0byBpbnN0YWxsIHBhY2thZ2VzXG5hcG0gaW5zdGFsbCBoeWRyb2dlblxuIyBhcG0gaW5zdGFsbCBwcm9qZWN0LW1hbmFnZXJcbmFwbSBpbnN0YWxsIHN1YmxpbWUtc3R5bGUtY29sdW1uLXNlbGVjdGlvblxuYXBtIGluc3RhbGwgbWluaW1hcFxuXG4jIHItcmVsYXRlZFxuIyBmb3IgbWUgdGhlIGJlc3Qgci1zeW50YXggaGlnaGxpZ2h0ZXIgSSBoYXZlIGZvdW5kXG5hcG0gaW5zdGFsbCByLXN5bnRheFxuXG4jIHZpbSBkaXN0cmFjdGlvbiBmcmVlIGVkaXRpbmdcbmFwbSBpbnN0YWxsIHZpbS1tb2RlLXBsdXNcbmFwbSBpbnN0YWxsIHplblxuXG4jIEluc2lkZSBDb25kYSBvcGVuIHVwIGF0b21cbmF0b21cblxuYGBgIn0= -->
+<pre class="bash"><code># Once atom is installed, can use apm to install packages
+apm install hydrogen
+# apm install project-manager
+apm install sublime-style-column-selection
+apm install minimap
+
+# r-related
+# for me the best r-syntax highlighter I have found
+apm install r-syntax
+
+# vim distraction free editing
+apm install vim-mode-plus
+apm install zen
+
+# Inside Conda open up atom
+atom
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="atom-shortcuts-and-features" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Atom Shortcuts and Features</h3>
+<p><strong>Features</strong>:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBvcGVuIG11bHRpcGxlIHByb2plY3RzIGZyb20gYXRvbSBhdCB0aGUgc2FtZSB0aW1lLCBhZnRlciByZXBvcyBzeW5jZWRcbmF0b20gfi9mYW53YW5nZWNvbi5naXRodWIuaW8gfi9QeWZhbiB+L1RlYWNoaW5nIH4vVGV4NEVjb24gfi9SNEVjb24gfi9NNEVjb24gfi9QeTRFY29uXG4jIG9wZW4gdXAgYW55IHB5IGZyb20gZnJvbSB3aXRoaW4sIHRyeSAxKzEsIGRvZXMgaXQgd29yaz9cbiMgYWxzbyB1c2Ugc2NyaXB0LCB0cnkgY3RybCArIHNoaWZ0ICsgYiwgcnVuIHdob2xlIGZpbGUgKG5vdCBoeWRyb2dlbilcbmBgYCJ9 -->
+<pre class="bash"><code># open multiple projects from atom at the same time, after repos synced
+atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/Py4Econ
+# open up any py from from within, try 1+1, does it work?
+# also use script, try ctrl + shift + b, run whole file (not hydrogen)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>Shortcuts</strong> :</p>
+<ul>
+<li>Git Pane: <em>Ctrl + 9</em>, <em>Ctrl + 8</em></li>
+</ul>
+</div>
+<div id="atom-and-python" class="section level3">
+<h3><span class="header-section-number">5.2.3</span> Atom and Python</h3>
+<p>Having installed Anaconda, now install Atom and Hydrogen to Test with Python. For both Jupyter as well as Atom, always open from command prompt, open from <em>Anaconda Prompt</em> with admin rights.</p>
+<p>Open up <em>Jupyter Notebook</em>, does the python kernel work? If does not, uninstall and re-install Anaconda.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBzdGFydCBqdXB5dGVyIGxhYiwgZnJvbSBwcm9tcHRcbmp1cHl0ZXIgbGFiXG5gYGAifQ== -->
+<pre class="bash"><code># start jupyter lab, from prompt
+jupyter lab</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Try <em>1+1</em>.</p>
+</div>
+<div id="atom-and-latex" class="section level3">
+<h3><span class="header-section-number">5.2.4</span> Atom and Latex</h3>
 <p>Install the following two packages in atom:</p>
 <ol style="list-style-type: decimal">
 <li><a href="https://github.com/thomasjo/atom-latex">latex</a> package on atom.</li>
@@ -832,6 +1179,9 @@ sudo apt-get install texstudio</code></pre>
 <li>download Okular and use <a href="https://okular.kde.org/">Okular</a></li>
 </ul></li>
 </ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBzZXQgVGVYIHBhdGhcbiMgQzovdGV4bGl2ZS8yMDE5L2Jpbi93aW4zMlxuXG4jIExhdGV4LCBhZnRlciBpbnN0YWxsYXRpb25cbiMgc2VlIHdoZXJlIHRleGxpdmUgYXBwZWFycyB1bmRlciByb290IGZvbGRlciBkaXJlY3Rvcmllc1xuc3VkbyBmaW5kIC8gLW5hbWUgXCJ0ZXhsaXZlXCJcbiMgc2VlIGxhdGV4IHZlcnNpb24sIGlmIHRleGxpdmUgaXMgdXNlZFxubGF0ZXggLXZcbiMgc2VlIG1haW4gZXhlIGRpcmVjdG9yeVxud2hpY2ggbGF0ZXhcbiMgL3Vzci9iaW4vbGF0ZXhcbmBgYCJ9 -->
 <pre class="bash"><code># set TeX path
 # C:/texlive/2019/bin/win32
 
@@ -843,47 +1193,87 @@ latex -v
 # see main exe directory
 which latex
 # /usr/bin/latex</code></pre>
-<p>Go to Tex4Econ and compile various template files and other types of files there to see if tex is working.</p>
-<p>Compile the same files in texstudio.</p>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="other-editors" class="section level2">
+<h2><span class="header-section-number">5.3</span> Other Editors</h2>
+<div id="notepad" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Notepad++</h3>
+<p><a href="https://notepad-plus-plus.org/downloads/v7.8.2/">Notepad++</a>. Many old projects have xml folder structures for Notepad++.</p>
+<ul>
+<li>Silently update file changes made in other editors: Settings, Preferences, MISC., File Status Auto Detection, Update Silently.</li>
+</ul>
+</div>
+<div id="sublime" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Sublime</h3>
+<p><a href="https://www.sublimetext.com/3">Sublime</a></p>
+<p>there are some issues with atom. When a file is edited inside Vim, when changes are saved, a <a href="https://github.com/atom/atom/issues/17186">temp file is created in atom</a>. Sublime would, however, still show the file with the changes. This makes dual screen editing very difficult. Sublime text is used for this situation.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBTdWJsaW1lIExpbnV4XG53Z2V0IC1xTyAtIGh0dHBzOi8vZG93bmxvYWQuc3VibGltZXRleHQuY29tL3N1YmxpbWVocS1wdWIuZ3BnIHwgc3VkbyBhcHQta2V5IGFkZCAtXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBhcHQtdHJhbnNwb3J0LWh0dHBzXG5lY2hvIFwiZGViIGh0dHBzOi8vZG93bmxvYWQuc3VibGltZXRleHQuY29tLyBhcHQvc3RhYmxlL1wiIHwgc3VkbyB0ZWUgL2V0Yy9hcHQvc291cmNlcy5saXN0LmQvc3VibGltZS10ZXh0Lmxpc3RcbnN1ZG8gYXB0LWdldCB1cGRhdGVcbnN1ZG8gYXB0LWdldCBpbnN0YWxsIHN1YmxpbWUtdGV4dFxuIyBsYXVuY2ggZnJvbSB0ZXJtaW5hbFxuc3VibFxuYGBgIn0= -->
+<pre class="bash"><code># Sublime Linux
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo &quot;deb https://download.sublimetext.com/ apt/stable/&quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+# launch from terminal
+subl</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><em>Sublime Setup</em>:</p>
+<ul>
+<li><a href="https://weibeld.net/r/rmd_sublime_package.html">r and rmd setup</a></li>
+</ul>
+</div>
+<div id="pycharm" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> PyCharm</h3>
+<p><a href="https://www.">pycharm</a>jetbrains.com/pycharm/)</p>
+</div>
 </div>
 </div>
 <div id="other-programs-to-install" class="section level1">
-<h1><span class="header-section-number">5</span> Other Programs to Install</h1>
-<div id="development-programs" class="section level2">
-<h2><span class="header-section-number">5.1</span> Development Programs</h2>
+<h1><span class="header-section-number">6</span> Other Programs to Install</h1>
+<div id="package-managers" class="section level2">
+<h2><span class="header-section-number">6.1</span> Package Managers</h2>
+<p>To install packages in windows more easily:</p>
 <ul>
-<li><a href="https://www.jetbrains.com/pycharm/">pycharm</a></li>
+<li><a href="https://github.com/lukesampson/scoop/wiki/Quick-Start">scoop</a></li>
 </ul>
-</div>
-<div id="key-programs" class="section level2">
-<h2><span class="header-section-number">5.2</span> Key Programs</h2>
-<p><strong>PDF</strong></p>
-<ul>
-<li>PDF Okular
-<ul>
-<li>Linux: <em>sudo apt-get install okular</em></li>
-<li>Windows: install okular from windows app store</li>
-</ul></li>
-<li>PDF Adobe Acrobat
-<ul>
-<li>go to adobe website, log in using <a href="mailto:fwang26@uh.edu" class="email">fwang26@uh.edu</a></li>
-<li>go to my account, choose view and download my apps, choose acrobat &amp; PDF, download Acrobat DC</li>
-<li>UH account can only be activated on two accounts at once, so need to kick other computers out temporarily potentially</li>
-</ul></li>
-</ul>
-<p><strong>VPN</strong></p>
-<ul>
-<li><a href="https://protonvpn.com/">Proton VPN</a>: unlimited usage free version available.</li>
-<li>Express VPN</li>
-</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBpbiBwb3dlcnNoZWxsXG4jIGVudGVyIGNtZFxuIyB0eXBlIHBvd2Vyc2hlbGwgaW4gY21kIHRvIGVudGVyIHBvd2Vyc2hlbGwgZnJvbSBjbWRcbnBvd2Vyc2hlbGxcbiMgcGVybWlzc2lvblxuc2V0LWV4ZWN1dGlvbnBvbGljeSByZW1vdGVzaWduZWQgLXNjb3BlIGN1cnJlbnR1c2VyXG4jIGluc3RhbGxcbml3ciAtdXNlYiBnZXQuc2Nvb3Auc2ggfCBpZXhcbmBgYCJ9 -->
+<pre class="bash"><code># in powershell
+# enter cmd
+# type powershell in cmd to enter powershell from cmd
+powershell
+# permission
+set-executionpolicy remotesigned -scope currentuser
+# install
+iwr -useb get.scoop.sh | iex</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="utilities" class="section level2">
-<h2><span class="header-section-number">5.3</span> Utilities</h2>
+<h2><span class="header-section-number">6.2</span> Utilities</h2>
 <ul>
 <li>7-zip</li>
 <li>evernote</li>
-<li>keepass</li>
 </ul>
+</div>
+<div id="security" class="section level2">
+<h2><span class="header-section-number">6.3</span> Security</h2>
+<ul>
+<li>keepass</li>
+<li><a href="https://protonvpn.com/">Proton VPN</a>: unlimited usage free version available.</li>
+<li>Express VPN</li>
+</ul>
+<!-- rnb-text-end -->
 </div>
 </div>
 
@@ -904,6 +1294,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -150,8 +150,10 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
 
 # 6. Program Installations
 
-1. [Software Updates: Python (Conda), R (R-studio), etc](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/windows/fn_installations.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html)
-    - Conda base Python, and Conda environment for R
+1. [Install Python, R, Latex, VSCode, Atom etc](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/windows/fn_installations.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html)
+    - Conda base Python, R in and outside of Conda
+    - Windows and Linux instructions
+    - Install various editors: VSCode, Atom, etc. 
     - *conda update --all*
     - *Rtools, install.packages(), devtools::install_github()*
 2. [Atom, Git, Github, etc Set-up for Linux](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/linux/fn_ubuntu.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html)
@@ -159,6 +161,11 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     - *git init; config; git remote add; git pull*
     - *wget; bash; source*
     - *ssh-keygen -t rsa; cat*
+3. [Vim and Neovim Set-up](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/linux/fn_vim.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html)
+    - vimrc file, Vim-Plug plugin setup
+    - *Plug 'vim-airline/vim-airline'*
+    - *vim-airline, onedkar, Goyo, Limelight*
+
 
 # 7. gitpages and git
 
