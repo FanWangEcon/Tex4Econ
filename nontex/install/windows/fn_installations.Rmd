@@ -656,6 +656,7 @@ The settings.json file, *%APPDATA%/Code/User/settings.json*:
 	"latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe"
 }
 ```
+
 ## Atom Installation
 
 Atom is slow but has clean look and nice git/github integration.
@@ -668,16 +669,22 @@ Terminal in windows or linux after installation: *apm install hydrogen*. apm is 
 # Once atom is installed, can use apm to install packages
 apm install hydrogen
 # apm install project-manager
-apm install sublime-style-column-selection
-apm install minimap
 
 # r-related
 # for me the best r-syntax highlighter I have found
 apm install r-syntax
 
+# Selection and Overview
+apm install sublime-style-column-selection
+apm install minimap
+apm install highlight-selected
+
 # vim distraction free editing
 apm install vim-mode-plus
 apm install zen
+
+# support
+apm install date
 
 # Inside Conda open up atom
 atom
@@ -740,6 +747,30 @@ latex -v
 which latex
 # /usr/bin/latex
 ```
+
+### Atom settings file
+
+The settings.json file, *%APPDATA%/Code/User/settings.json*:
+
+```
+{
+  "r.rterm.windows": "C:/Program Files/R/R-3.6.2/bin/x64/R.exe",
+  "window.zoomLevel": 0,
+  "latex-workshop.view.pdf.viewer": "external",
+  "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+  "latex-workshop.view.pdf.external.synctex.args": [
+		"-forward-search",
+		"%TEX%",
+		"%LINE%",
+		"-reuse-instance",
+		"-inverse-search",
+		"code \"C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+		"%PDF%",
+	],
+	"latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe"
+}
+```
+
 
 ## Other Editors
 
