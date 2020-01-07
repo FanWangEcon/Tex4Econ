@@ -156,6 +156,11 @@ autocmd VimEnter * Goyo
 " In Goyo, if airline is turned on, do nto show scratch area
 " autocmd! User GoyoEnter nested set eventignore=FocusGained
 " autocmd! User GoyoLeave nested set eventignore=
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap Keys
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" esc in insert mode
+" inoremap jj <esc>
 ```
 
 ## Install Neovim in Windows
@@ -286,6 +291,13 @@ autocmd VimEnter * Goyo
 " Other Settings
 """""""""""""""""""""""""""""""""""""""""""""""""
 set paste               " to enable pasting in windows
+set nofoldenable        " avoid folding by default
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap Keys
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" esc in insert mode
+" inoremap jj <esc>
 ```
 
 ```
@@ -401,21 +413,31 @@ back to previous point
 
 ## Combo Operations
 
-1. Delete
-    - delete current word and go into insert mode: *ciw*
-    - Delete current word: *dw*
-    - Delete from cursor until end of sentence: *dis*
-    - Delete from cursor to end of line: *d$* or *D*
-    - Delete until end of paragraph: *dip*
-    - Delete all text in file: *ggdG*
-2. Copying: replace *d* by *y* for all oeprations.
-    - Copy current word: *dw*
-    - Copy from cursor to end of line (need to set this): *y$* or *Y*
-    - Copy until end of paragraph: *yip*
-3. Insert to edit:
-    - Insert after last character of document: *GA*
-    - Insert at the end of line: *A*
-    - Insert after cursor, *a*, insert before curosr *i*
+**Delete**:
+
+- delete current word and go into insert mode: *ciw*
+- Delete current word: *dw*
+- Delete from cursor until end of sentence: *dis*
+- Delete from cursor to end of line: *d$* or *D*
+- Delete until end of paragraph: *dip*
+- Delete all text in file: *ggdG*
+
+**Copying**: replace *d* by *y* for all oeprations.
+
+- Copy current word: *dw*
+- Copy from cursor to end of line (need to set this): *y$* or *Y*
+- Copy until end of paragraph: *yip*
+
+**Insert to edit**:
+
+- Insert after last character of document: *GA*
+- Insert at the end of line: *A*
+- Insert after cursor, *a*, insert before curosr *i*
+
+**Copy and Replace**:
+
+- copy current word: *yiw*, then move to the next word to replace: *viwp*
+
 
 ## Vim Statistics
 

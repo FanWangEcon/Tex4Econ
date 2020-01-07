@@ -1,13 +1,15 @@
 Package: rprjtemplate
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
+Authors@R:
+    person(given = "Fan",
+           family = "Wang",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "fanwecon@gmail.com",
+           comment = c(ORCID = "0000-0003-2640-5420"))
 Description: What the package does (one paragraph).
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr

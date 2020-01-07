@@ -602,6 +602,12 @@ Using VSCode with RMD files seems much quicker, and there is room to breath.
 
 Download [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
 
+**Shortcuts**
+
+- compile: *ctrl + alt + b*
+- sync: *ctrl + alt + j*
+- live save
+
 **Settings**
 
 change background border pdf color (not pdf but border): *ctrl + shift + x*, LatexWorkshop, Settings, Configure Extension Settings, Search for background, change color name. or enter: *latex-workshop.view.pdf.backgroundColor*. use gainsboro gray: *#DCDCDC*, or lightgray *#D3D3D3*.
@@ -673,6 +679,10 @@ apm install hydrogen
 # r-related
 # for me the best r-syntax highlighter I have found
 apm install r-syntax
+
+# latex-related
+apm install language-latex
+apm install latex
 
 # Selection and Overview
 apm install sublime-style-column-selection
@@ -750,25 +760,12 @@ which latex
 
 ### Atom settings file
 
-The settings.json file, *%APPDATA%/Code/User/settings.json*:
+Atom keymap.cson file:
 
 ```
-{
-  "r.rterm.windows": "C:/Program Files/R/R-3.6.2/bin/x64/R.exe",
-  "window.zoomLevel": 0,
-  "latex-workshop.view.pdf.viewer": "external",
-  "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
-  "latex-workshop.view.pdf.external.synctex.args": [
-		"-forward-search",
-		"%TEX%",
-		"%LINE%",
-		"-reuse-instance",
-		"-inverse-search",
-		"code \"C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
-		"%PDF%",
-	],
-	"latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe"
-}
+# https://github.com/t9md/atom-vim-mode-plus/issues/130
+'atom-text-editor.vim-mode-plus.insert-mode':
+  'j j': 'vim-mode-plus:activate-normal-mode'
 ```
 
 
