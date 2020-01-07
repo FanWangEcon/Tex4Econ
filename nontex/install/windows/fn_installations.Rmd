@@ -243,7 +243,7 @@ install.packages(c("AER", "minpack.lm", "knitr", "matlab"))
 
 # Install my package, need to prepare package to work for ubuntu
 # if install does not work, load locally
-devtools::install_github("fanwangecon/R4Econ")
+devtools::install_github("fanwangecon/REconTools")
 
 # Kernel
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
@@ -341,7 +341,7 @@ install.packages(c("AER", "minpack.lm", "knitr", "matlab"))
 
 # Install my package, need to prepare package to work for ubuntu
 # if install does not work, load locally
-devtools::install_github("fanwangecon/R4Econ")
+devtools::install_github("fanwangecon/REconTools")
 
 # Kernel
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
