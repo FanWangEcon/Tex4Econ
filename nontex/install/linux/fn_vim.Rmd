@@ -206,6 +206,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" Rmd Syntax Highlighting, Nvim-R renders
+Plug 'jalvesaq/Nvim-R' 
+Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
 " Visual Settings
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -297,7 +302,7 @@ set nofoldenable        " avoid folding by default
 " Remap Keys
 """""""""""""""""""""""""""""""""""""""""""""""""
 " esc in insert mode
-" inoremap jj <esc>
+inoremap jj <Esc>
 ```
 
 ```

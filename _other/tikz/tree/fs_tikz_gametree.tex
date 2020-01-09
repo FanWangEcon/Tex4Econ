@@ -166,9 +166,11 @@ There are three choices, choose consumption share first, which also means the re
   \item \textbf{discrete}, within type 2 asset, choose a achieve the desired level of type two, rightward, five nodes, equi-distance
 \end{enumerate}
 
-\subsection{Nodes Only}
+\subsection{Develop Tree Outline}
 
-When developing trees, to simply the problem, first just draw nodes and branches, no text, no benidng, no coloring.
+\subsubsection{Nodes Only}
+
+Draw nodes and branches, no text, no bending, no coloring.
 
 \def\famm{5mm}
 \begin{center}
@@ -189,7 +191,6 @@ child{
         child
         child
         child
-        child
         }
     child
     }
@@ -197,6 +198,106 @@ child;
 \end{tikzpicture}
 \end{center}
 
+
+\subsubsection{First Two Nodes with Continuous Curved Bend Right}
+
+Add Continuous bending curves.
+
+\def\famm{5mm}
+\begin{center}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]W
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 3}=[level distance=\famm,sibling distance=\famm]
+% B Level 1 point
+\node(0)[solid node,label=left:{$P1$}]{}
+[grow=right]
+child{ 
+    [black] node(11)[]{}
+}
+child{
+    [grow=right]
+    child{
+        [black] node(21)[]{}
+    }
+    child{
+        [grow=right]
+        child
+        child
+        child
+        child
+    }
+    child{
+        [black] node(23)[]{}
+    }
+}
+child{
+    [black] node(13)[]{}
+};
+% information set
+\draw[dashed, bend right]
+    (11) to (13);
+\draw[dashed, bend right]
+    (21) to (23);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Extend Middle node Rightward}
+
+Continuous bending exceed middle node, now offset middle node.
+
+\def\famm{5mm}
+\begin{center}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]W
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 3}=[level distance=\famm,sibling distance=\famm]
+% B Level 1 point
+\node(0)[solid node,label=left:{$P1$}]{}
+[grow=right]
+child{ 
+    [black] node(11)[]{}
+}
+child{
+    [grow=right]
+    [white] node(12)[solid node, xshift=7.5, yshift=0]{}
+    child{
+        [black] node(21)[]{}
+    }
+    child{
+        [grow=right]
+        [white] node(22)[solid node, xshift=7.5, yshift=0]{}
+        child {
+            [black] node(31)[]{}
+        }
+        child{
+            [black] node(32)[]{}
+        }
+        child{
+            [black] node(33)[]{}   
+        }
+        child{
+            [black] node(34)[]{}
+        }
+    }
+    child{
+        [black] node(23)[]{}
+    }
+}
+child{
+    [black] node(13)[]{}
+};
+% information set
+\draw[dashed, bend right]
+    (11) to (13);
+\draw[dashed, bend right]
+    (21) to (23);
+\draw[dotted, line width=0.35mm]
+    (0) to (12);
+\draw[dotted, line width=0.35mm]
+    (12) to (22);
+\end{tikzpicture}
+\end{center}
 
 
 

@@ -147,7 +147,7 @@ The computer could have multiple R installations. Several in different conda R e
 
 If R was installed in R enviornments, just delete the environment. Otherwise, use system's uninstaller. Before that, from terminal/command-prompt, type *R*, and *.libPaths()* to find paths. Do so inside conda main, outside of conda main, inside different environments, find all paths. After uninstaller finishes, check in the libPath folders to see if there are still stuff there, delete all, delete the folders.
 
-```{R}
+```{r}
 .libPath()
 # C:/Users/fan/Documents/R/win-library/3.6
 # C:/Program Files/R/R-3.6.1/library
@@ -691,6 +691,7 @@ apm install highlight-selected
 
 # vim distraction free editing
 apm install vim-mode-plus
+apm install ex-mode
 apm install zen
 
 # support
