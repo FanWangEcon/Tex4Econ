@@ -418,9 +418,15 @@ back to previous point
 
 ## Combo Operations
 
+**Delete and Insert**:
+
+- delete from now till end of sentence and insert mode: *C*
+- delete whole sentence you are on and insert: *cc*
+- delete until end of sentence and insert mode: *cis*
+- delete current word and go into insert mode: *cw*
+
 **Delete**:
 
-- delete current word and go into insert mode: *ciw*
 - Delete current word: *dw*
 - Delete from cursor until end of sentence: *dis*
 - Delete from cursor to end of line: *d$* or *D*
@@ -432,6 +438,8 @@ back to previous point
 - Copy current word: *dw*
 - Copy from cursor to end of line (need to set this): *y$* or *Y*
 - Copy until end of paragraph: *yip*
+- Copy all text on page: *ggVGY*
+
 
 **Insert to edit**:
 
