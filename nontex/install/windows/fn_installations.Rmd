@@ -572,12 +572,19 @@ ext install ikuyadeu.r
 
 **Shortcuts** :
 
+- see all shortcuts: *Ctrl + k, ctrl + s*
 - Zen model: *Ctrl + k, z*, this means press control k, then press z
+    + note that z mode can be adjusted by shiftin the bar on the left
 - Open up Settings: *Ctrl + ,*
 - Preview Markdown in VSCode: *Ctrl + Shift + v*
 - Open up left pane: *Ctrl + b*
 - Wrap Text: *alt + z*, switch between wrap or not to save screen space for example.
 - Hide Console Pane (running code): *Ctrl + j*
+
+
+*personal bindings*
+
+- toggle minimap: *Ctrl + k, ctrl + z*
 
 ### VSCode and R
 
@@ -764,6 +771,22 @@ which latex
 Atom keymap.cson file:
 
 ```
+'atom-text-editor':
+  'ctrl-shift-j': 'pretty-json:prettify'
+  'alt-z':'date:date'
+  'alt-x':'date:time'
+  'alt-c':'date:datetime'
+'body':
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+'.editor':
+  'ctrl-alt-z': 'atom-beautify:beautify-editor'
+  'ctrl-shift-r': 'hydrogen:restart-kernel'
+'atom-text-editor:not([mini])':
+  'ctrl-*': 'highlight-selected:select-all'
+'atom-text-editor, webview.markdown-preview-plus':
+  'ctrl-shift-X': 'markdown-preview-plus:toggle-render-latex'
+
 # https://github.com/t9md/atom-vim-mode-plus/issues/130
 'atom-text-editor.vim-mode-plus.insert-mode':
   'j j': 'vim-mode-plus:activate-normal-mode'
