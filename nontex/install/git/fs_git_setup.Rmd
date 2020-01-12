@@ -3,14 +3,14 @@ title: |
   | Git and Github Example and Tutorial
   | Sync with Multiple Repositories, Store Password etc.
 output:
-  html_document:
+  pdf_document:
+    df_print: paged
     number_sections: true
   html_notebook:
     number_sections: true
   word_document:
     number_sections: true
-  pdf_document:
-    df_print: paged
+  html_document:
     number_sections: true
 urlcolor: blue
 always_allow_html: yes
@@ -210,4 +210,72 @@ chmod u+x ~/PyFan/bin/pull_repos
 chmod u+x ~/PyFan/bin/push_repos
 # execute script
 bash ~/PyFan/bin/pull_repos
+```
+
+## Quick Pull and Push Single Repo and Delete
+
+Suppose temporarily need to work on a repo, but don't want it to take up too much space. Create two bash files with these single repo info
+
+1. initialize
+2. secure and pull
+3. push 
+4. delete
+
+Steps 1 and 2, note do not leave space when defining bash variables around the equality symbol:
+
+```{bash}
+#!/usr/bin/bash
+STRREPO='EconStatClass'
+echo pull single repository
+echo going to pull from $STRREPO
+
+# generate all needed key repositories
+cd ~
+mkdir $STRREPO
+
+# Set global config settings, in ~/.gitconfig
+git config --global user.name "Fan Wang"
+git config --global user.email wangfanbsg75@live.com
+
+# Initialize
+cd ~
+cd $STRREPO
+git init
+git remote add github git@github.com:fanwangecon/$STRREPO
+
+# Secure
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/id_rsa
+
+# Pull
+cd ~
+cd $STRREPO
+git pull github master
+
+# Open Repository in Atom
+atom ~/$STRREPO
+```
+
+Steps 3 and 4:
+
+```{bash}
+# push
+cd ~
+cd $STR_REPO
+git push -u github master
+
+# remove fully
+cd ~
+cd $STR_REPO
+git rm -r $STR_REPO
+```
+
+bash scripts
+
+```{bash}
+# change permission to make file an executable
+chmod u+x ~/PyFan/bin/pull_one
+chmod u+x ~/PyFan/bin/push_one
+# execute script
+bash ~/PyFan/bin/pull_one
 ```

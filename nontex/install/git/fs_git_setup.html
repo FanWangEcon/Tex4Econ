@@ -499,32 +499,99 @@ cd ~/Py4Econ
 git push -u github master
 cd ~/Teaching
 git push -u github master</code></pre>
-<p>to create bash file to store these (from git bash in windows):</p>
+<p>to create bash file to store these (from git bash in windows), generate a pull_repos and push_repos file.</p>
 <pre class="bash"><code># store bash file in ~\PyFan\bin
 mkdir ~/PyFan/bin
 cd ~/PyFan/bin
 
 # create bash file
 vim pull_repos
-vim push_repos
-
-# paste the text below over, comfirm bash loc with: which bash
+vim push_repos</code></pre>
+<p>What <em>pull_repos</em> could look like, <em>push_repos</em> will look similar:</p>
+<pre class="bash"><code># paste the text below over, comfirm bash loc with: which bash
 #!/usr/bin/bash
 echo start fan github pull
-# Security
+
+# Security, will prompt for password once.
 eval &quot;$(ssh-agent)&quot;
 ssh-add ~/.ssh/id_rsa
+
 # Pull from Persistent Repos
 cd ~/fanwangecon.github.io
 git pull github master
+cd ~/PyFan
+git pull github master
+cd ~/Teaching
+git pull github master
+
 # Stop Secured SSH
 kill $SSH_AGENT_PID
 
-# change permission to make file an executable
+# Open Atom with the Projects
+atom ~/fanwangecon.github.io ~/PyFan ~/Teaching</code></pre>
+<p>Possibly do this:</p>
+<pre class="bash"><code># change permission to make file an executable
 chmod u+x ~/PyFan/bin/pull_repos
 chmod u+x ~/PyFan/bin/push_repos
 # execute script
 bash ~/PyFan/bin/pull_repos</code></pre>
+</div>
+<div id="quick-pull-and-push-single-repo-and-delete" class="section level2">
+<h2><span class="header-section-number">3.4</span> Quick Pull and Push Single Repo and Delete</h2>
+<p>Suppose temporarily need to work on a repo, but don’t want it to take up too much space. Create two bash files with these single repo info</p>
+<ol style="list-style-type: decimal">
+<li>initialize</li>
+<li>secure and pull</li>
+<li>push</li>
+<li>delete</li>
+</ol>
+<p>Steps 1 and 2, note do not leave space when defining bash variables around the equality symbol:</p>
+<pre class="bash"><code>#!/usr/bin/bash
+STRREPO=&#39;EconStatClass&#39;
+echo pull single repository
+echo going to pull from $STRREPO
+
+# generate all needed key repositories
+cd ~
+mkdir $STRREPO
+
+# Set global config settings, in ~/.gitconfig
+git config --global user.name &quot;Fan Wang&quot;
+git config --global user.email wangfanbsg75@live.com
+
+# Initialize
+cd ~
+cd $STRREPO
+git init
+git remote add github git@github.com:fanwangecon/$STRREPO
+
+# Secure
+eval &quot;$(ssh-agent)&quot;
+ssh-add ~/.ssh/id_rsa
+
+# Pull
+cd ~
+cd $STRREPO
+git pull github master
+
+# Open Repository in Atom
+atom ~/$STRREPO</code></pre>
+<p>Steps 3 and 4:</p>
+<pre class="bash"><code># push
+cd ~
+cd $STR_REPO
+git push -u github master
+
+# remove fully
+cd ~
+cd $STR_REPO
+git rm -r $STR_REPO</code></pre>
+<p>bash scripts</p>
+<pre class="bash"><code># change permission to make file an executable
+chmod u+x ~/PyFan/bin/pull_one
+chmod u+x ~/PyFan/bin/push_one
+# execute script
+bash ~/PyFan/bin/pull_one</code></pre>
 </div>
 </div>
 
