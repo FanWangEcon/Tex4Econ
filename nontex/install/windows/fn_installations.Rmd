@@ -119,8 +119,13 @@ conda config --remove channels conda-forge
 conda update --all
 
 # install additional packages
+# linux utilites
+conda install -y m2-base 
+# stats and graphs
 conda install -y statsmodels datashape seaborn
+# various
 conda install -c conda-forge -y interpolation awscli
+# aws communicate
 conda install -c anaconda -y boto3
 ```
 
@@ -819,6 +824,12 @@ subl
 ```
 
 *Sublime Setup*:
+
+Put sublime path in windows path for example:
+
+```
+C:\Program Files\Sublime Text 3\
+```
 
 - [r and rmd setup](https://weibeld.net/r/rmd_sublime_package.html)
 

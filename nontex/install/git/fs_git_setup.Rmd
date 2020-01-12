@@ -164,7 +164,7 @@ cd ~/Teaching
 git push -u github master
 ```
 
-to create bash file to store these (from git bash in windows):
+to create bash file to store these (from git bash in windows), generate a pull_repos and push_repos file.
 
 ```{bash}
 # store bash file in ~\PyFan\bin
@@ -174,19 +174,37 @@ cd ~/PyFan/bin
 # create bash file
 vim pull_repos
 vim push_repos
+```
 
+What *pull_repos* could look like, *push_repos* will look similar:
+
+```{bash}
 # paste the text below over, comfirm bash loc with: which bash
 #!/usr/bin/bash
 echo start fan github pull
-# Security
+
+# Security, will prompt for password once.
 eval "$(ssh-agent)"
 ssh-add ~/.ssh/id_rsa
+
 # Pull from Persistent Repos
 cd ~/fanwangecon.github.io
 git pull github master
+cd ~/PyFan
+git pull github master
+cd ~/Teaching
+git pull github master
+
 # Stop Secured SSH
 kill $SSH_AGENT_PID
 
+# Open Atom with the Projects
+atom ~/fanwangecon.github.io ~/PyFan ~/Teaching
+```
+
+Possibly do this:
+
+```{bash}
 # change permission to make file an executable
 chmod u+x ~/PyFan/bin/pull_repos
 chmod u+x ~/PyFan/bin/push_repos
