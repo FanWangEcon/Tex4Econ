@@ -368,10 +368,7 @@ Atom, VScode, Pycharm</div></h1>
 </div>
 
 
-<!-- rnb-text-begin -->
 <p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="http://fanwangecon.github.io/Tex4Econ/">Tex4Econ and Miscellaneous Repository</a>.</p>
-<!-- rnb-text-end -->
-<!-- rnb-text-begin -->
 <div id="objective" class="section level1">
 <h1><span class="header-section-number">1</span> Objective</h1>
 <p>Install various compilers and IDE:</p>
@@ -412,23 +409,16 @@ Atom, VScode, Pycharm</div></h1>
 <li>Search for Anaconda Prompt, right click, choose run as administrator.</li>
 <li>Check software versions.</li>
 </ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuY29uZGEgbGlzdCBhbmFjb25kYVxucHl0aG9uIC1WXG5gYGAifQ== -->
 <pre class="bash"><code>conda list anaconda
 python -V</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <div id="first-time-conda-install" class="section level2">
 <h2><span class="header-section-number">2.1</span> First Time Conda Install</h2>
 <p><a href="https://www.anaconda.com/distribution/">Download Anaconda Python 3</a> and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path.</p>
 <p>To install conda in Linux/Debian, follow <a href="https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html">these instructions</a>. Overall, installations are very similar.</p>
 <p>In command/anaconda prompt:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxud2hlcmUgYW5hY29uZGFcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvYW5hY29uZGEuZXhlXG53aGVyZSBweXRob25cbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL3B5dGhvbi5leGVcbndoZXJlIGp1cHl0ZXJcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHMvanVweXRlci5leGVcbndoZXJlIGp1cHl0ZXIta2VybmVsc3BlY1xuIyBpZiBSIGluc3RhbGxlZCBhbHJlYWR5XG53aGVyZSByXG5cbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQWRkIHRoZXNlIHRvIFdpbmRvd3MgUEFUSDpcbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL1NjcmlwdHNcbiMgQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzXG5gYGBcbmBgYCJ9 -->
-<pre class="bash"><code>```bash
+<pre class="bash"><code># To remove conda Fully
+rm -rf ~/anaconda3
+
 where anaconda
 # C:/ProgramData/Anaconda3/Scripts/anaconda.exe
 where python
@@ -442,45 +432,15 @@ where r
 ###############################
 # Add these to Windows PATH:
 ###############################
-# C:/ProgramData/Anaconda3/Scripts
-# C:/ProgramData/Anaconda3</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-To Add Anaconda to Path, In Windows
-1. Search for: Environment Variables
-2. Edit Environment Variables
-3. Add new to Path (lower half):
-    - C:/ProgramData/Anaconda3/Scripts/
-    - C:/ProgramData/Anaconda3/
-4. Now open up regular windows command Prompt, Type in:
-    - conda --version
-    - also Close and Open up Git Bash: conda --version
-
-## Conda Update
-
-Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.
-
-There are different channels/repositories from which packages could be installed: *conda*, *conda-forge*, for example. Can change where to look for packages first. Many packages are in multiple channels. Conda-forge often have mroe recent packages.
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxuIyAjIGlmIHRoZXJlIGFyZSBidWdzXG4jIGNvbmRhIGNsZWFuIC0tcGFja2FnZXNcbiMgdXNlIGNvbmRhLWZvcmdlIGFzIG1haW4gY2hhbm5lbCwgbW9yZSB1cGRhdGVkIHBhY2thZ2VzXG5jb25kYSBjb25maWcgLS1nZXQgY2hhbm5lbHNcbmNvbmRhIGNvbmZpZyAtLWFkZCBjaGFubmVscyBjb25kYS1mb3JnZVxuY29uZGEgY29uZmlnIC0tZ2V0IGNoYW5uZWxzXG4jIHJlbW92ZSBjb25kYS1mb3JnZSBmcm9tIGNoYW5uZWxzIChkbyBzbyBmb3IgbWFpbiBlbnYgaW5zdGFsbClcbmNvbmRhIGNvbmZpZyAtLXJlbW92ZSBjaGFubmVscyBjb25kYS1mb3JnZVxuIyBub3JtYWwgdXBkYXRlXG5jb25kYSB1cGRhdGUgLS1hbGxcbmBgYFxuYGBgIn0= --&gt;
-
-```bash
-```bash
-# # if there are bugs
+# C:\ProgramData\Anaconda3\Scripts
+# C:\ProgramData\Anaconda3</code></pre>
+<p>To Add Anaconda to Path, In Windows 1. Search for: Environment Variables 2. Edit Environment Variables 3. Add new to Path (lower half): - C:/ProgramData/Anaconda3/Scripts/ - C:/ProgramData/Anaconda3/ 4. Now open up regular windows command Prompt, Type in: - conda –version - also Close and Open up Git Bash: conda –version</p>
+</div>
+<div id="conda-update" class="section level2">
+<h2><span class="header-section-number">2.2</span> Conda Update</h2>
+<p>Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.</p>
+<p>There are different channels/repositories from which packages could be installed: <em>conda</em>, <em>conda-forge</em>, for example. Can change where to look for packages first. Many packages are in multiple channels. Conda-forge often have mroe recent packages.</p>
+<pre class="bash"><code># if there are bugs
 # conda clean --packages
 # use conda-forge as main channel, more updated packages
 conda config --get channels
@@ -489,39 +449,27 @@ conda config --get channels
 # remove conda-forge from channels (do so for main env install)
 conda config --remove channels conda-forge
 # normal update
-conda update --all</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
+conda update --all
 
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## Python Command Line Test
-
-Fist test python under command line:
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyB3aW5kb3dzXG5weXRob24gXCJDOi9Vc2Vycy9mYW4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcIlxucHl0aG9uIFwiQzovVXNlcnMvZmFuL1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcIlxuIyBsaW51eFxucHl0aG9uIH4vUHlGYW4vUHJvamVjdFN1cHBvcnQvVGVzdGluZy9OdW1weS9GdW5jdGlvbnMucHlcbnB5dGhvbiB+L1B5RmFuL1Byb2plY3RTdXBwb3J0L2dyYXBoL3N1YnBsb3QucHlcbmBgYCJ9 --&gt;
-
-```bash
-# windows
+# install additional packages
+# linux utilites
+conda install -y m2-base 
+# stats and graphs
+conda install -y statsmodels datashape seaborn
+# various
+conda install -c conda-forge -y interpolation awscli
+# aws communicate
+conda install -c anaconda -y boto3</code></pre>
+</div>
+<div id="python-command-line-test" class="section level2">
+<h2><span class="header-section-number">2.3</span> Python Command Line Test</h2>
+<p>Fist test python under command line:</p>
+<pre class="bash"><code># windows
 python &quot;C:/Users/fan/PyFan/ProjectSupport/Testing/Numpy/Functions.py&quot;
 python &quot;C:/Users/fan/PyFan/ProjectSupport/graph/subplot.py&quot;
 # linux
 python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
 python ~/PyFan/ProjectSupport/graph/subplot.py</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 </div>
 <div id="r-installation" class="section level1">
@@ -531,71 +479,49 @@ python ~/PyFan/ProjectSupport/graph/subplot.py</code></pre>
 <div id="fully-uninstall-r" class="section level2">
 <h2><span class="header-section-number">3.1</span> Fully Uninstall r</h2>
 <p>If R was installed in R enviornments, just delete the environment. Otherwise, use system’s uninstaller. Before that, from terminal/command-prompt, type <em>R</em>, and <em>.libPaths()</em> to find paths. Do so inside conda main, outside of conda main, inside different environments, find all paths. After uninstaller finishes, check in the libPath folders to see if there are still stuff there, delete all, delete the folders.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLmxpYlBhdGgoKVxuIyBDOi9Vc2Vycy9mYW4vRG9jdW1lbnRzL1Ivd2luLWxpYnJhcnkvMy42XG4jIEM6L1Byb2dyYW0gRmlsZXMvUi9SLTMuNi4xL2xpYnJhcnlcbmBgYCJ9 -->
 <pre class="r"><code>.libPath()
 # C:/Users/fan/Documents/R/win-library/3.6
 # C:/Program Files/R/R-3.6.1/library</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p>For Linux and for unsintalling inside conda:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgclxuY29uZGEgaW5zdGFsbCBzdGF0c21vZGVscyBkYXRhc2hhcGUgc2VhYm9yblxuIyBjb25kYSBpbnN0YWxsIHN0YXRzbW9kZWxzXG4jIGNvbmRhIGluc3RhbGwgZGF0YXNoYXBlXG4jIGNvbmRhIGluc3RhbGwgc2VhYm9yblxuXG5jb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGludGVycG9sYXRpb24gYXdzY2xpXG4jIGNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2UgaW50ZXJwb2xhdGlvblxuIyBjb25kYSBpbnN0YWxsIC1jIGNvbmRhLWZvcmdlIGF3c2NsaVxuXG5jb25kYSBpbnN0YWxsIC1jIGFuYWNvbmRhIGJvdG8zXG5cbiMgY29uZGEgaW5zdGFsbCAtYyByIHItaXJrZXJuZWxcbmBgYFxuYGBgIn0= -->
-<pre class="bash"><code>```r
-conda install statsmodels datashape seaborn
-# conda install statsmodels
-# conda install datashape
-# conda install seaborn
+<pre class="bash"><code># Exit Conda
+conda deactivate
+# where is R installed outside of Conda
+which R
+# /usr/bin/R
+# To remove all
+sudo apt-get remove r-base
+sudo apt-get remove r-base-core
 
-conda install -c conda-forge interpolation awscli
-# conda install -c conda-forge interpolation
-# conda install -c conda-forge awscli
-
-conda install -c anaconda boto3
-
-# conda install -c r r-irkernel</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## Install R (outside of Conda)
-
-Need to install R. Then need to install also an editor/IDE for R. Rstudio is the dominant R IDE. VSCode and Atom also works well, especially VSCode as editors. Dramatically better experience for writing scripts outside of Rstudio which feels unwieldy and slow especially compared to VSCode.
-
-Overall plan:
-
-1. [download R](https://cloud.r-project.org/)
-    + for debian: [Johannes Ranke](https://cran.r-project.org/bin/linux/debian/). For Linux/Debian installation, crucial to update the *source.list* to include sources that have more recent versions of R. If not, will get very old R versions that is not compatible with many packages.
-    + add R to path for Windows. In Windows Path, add for example: *C:/Program Files/R/R-3.6.2/bin/x64/* and *C:/Rtools/bin*
-2. [download R-studio](https://rstudio.com/products/rstudio/download/)
-3. Open R-studio and auto-detect R
-4. Install additional packages (from commandline)
-    + various R data-science packages have dependencies, and additional not-R programs might need to be installed. Install them as needed, for example:  *libcurl4-openssl-dev* and *libssl-dev* from command prompt first inside Debian.
-
-
-### Linux R Install
-
-For linux/Debian, to Install latest R:
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBHbyB0byBnZXQgbGF0ZXNkZWJpYW4gbGF0ZXN0IHIgc291cmNlcy5saXN0XG5jYXQgL2V0Yy9hcHQvc291cmNlcy5saXN0XG4jIEluc3RhbGwgdGhpcyBGaXJzdCAoc2hvdWxkIGFscmVhZHkgYmUgaW5zdGFsbGVkKVxuc3VkbyBhcHQgaW5zdGFsbCBkaXJtbmdyXG5cbiMgRGViaWFuIFIgaXMgbWFpbnRhaW5lZCBieSBKb2hhbm5lcyBSYW5rZSwgY29waWVkIGZyb20gaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvYmluL2xpbnV4L2RlYmlhbi86XG5hcHQta2V5IGFkdiAtLWtleXNlcnZlciBrZXlzLmdudXBnLm5ldCAtLXJlY3Yta2V5ICdFMTlGNUY4NzEyODg5OUIxOTJCMUEyQzJBRDVGOTYwQTI1NkEwNEFGJ1xuIyBBZGQgdG8gc291cmNlLmxpc3QsIGZvciBkZWJpYW4gc3RyZXRjaCAoOSlcbiMgc3VkbyBzdSBhZGRlZCBmb3Igc2VjdXJpdHkgaXNzdWUgYXMgc3VwZXItdXNlclxuc3VkbyBzdSAtYyBcInN1ZG8gZWNobyAnZGViIGh0dHA6Ly9jbG91ZC5yLXByb2plY3Qub3JnL2Jpbi9saW51eC9kZWJpYW4gc3RyZXRjaC1jcmFuMzUvJyA+PiAvZXRjL2FwdC9zb3VyY2VzLmxpc3RcIlxuIyBpZiBhZGRlZCB3cm9uZyBsaW5lcywgZGVsZXRlIDNyZCBsaW5lXG5zdWRvIHNlZCAnM2QnIC9ldGMvYXB0L3NvdXJjZXMubGlzdFxuXG4jIFVwZGF0ZSBhbmQgSW5zdGFsbCBSLCBzaG91bGQgc2F5IHVwZGF0ZWQgZnJvbSBjbG91ZC5yXG5zdWRvIGFwdC1nZXQgdXBkYXRlXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCByLWJhc2Ugci1iYXNlLWRldlxuXG4jIEFsc28gaW5zdGFsbCB0aGVzZSwgb3RoZXJ3aXNlIHItcGFja2FnZXMgZG8gbm90IGluc3RhbGxcbiMgbGlieG1sMiBzZWVtcyBuZWVkIGZvciB0aWR5bW9kZWxzXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBsaWJjdXJsNC1vcGVuc3NsLWRldlxuc3VkbyBhcHQtZ2V0IGluc3RhbGwgbGlic3NsLWRldlxuc3VkbyBhcHQtZ2V0IGluc3RhbGwgbGlieG1sMi1kZXZcbmBgYCJ9 --&gt;
-
-```bash
-# Go to get latesdebian latest r sources.list
+# Inside Conda base
+conda activate
+# Conda r_env
+conda activate r_env
+# Where is it installed?
+which R
+# /home/wangfanbsg75/anaconda3/bin/R
+conda uninstall r-base</code></pre>
+</div>
+<div id="install-r-outside-of-conda" class="section level2">
+<h2><span class="header-section-number">3.2</span> Install R (outside of Conda)</h2>
+<p>Need to install R. Then need to install also an editor/IDE for R. Rstudio is the dominant R IDE. VSCode and Atom also works well, especially VSCode as editors. Dramatically better experience for writing scripts outside of Rstudio which feels unwieldy and slow especially compared to VSCode.</p>
+<p>Overall plan:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://cloud.r-project.org/">download R</a>
+<ul>
+<li>for debian: <a href="https://cran.r-project.org/bin/linux/debian/">Johannes Ranke</a>. For Linux/Debian installation, crucial to update the <em>source.list</em> to include sources that have more recent versions of R. If not, will get very old R versions that is not compatible with many packages.</li>
+<li>add R to path for Windows. In Windows Path, add for example: <em>C:/Program Files/R/R-3.6.2/bin/x64/</em> and <em>C:/Rtools/bin</em></li>
+</ul></li>
+<li><a href="https://rstudio.com/products/rstudio/download/">download R-studio</a></li>
+<li>Open R-studio and auto-detect R</li>
+<li>Install additional packages (from commandline)
+<ul>
+<li>various R data-science packages have dependencies, and additional not-R programs might need to be installed. Install them as needed, for example: <em>libcurl4-openssl-dev</em> and <em>libssl-dev</em> from command prompt first inside Debian.</li>
+</ul></li>
+</ol>
+<div id="linux-r-install" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Linux R Install</h3>
+<p>For linux/Debian, to Install latest R:</p>
+<pre class="bash"><code># Go to get latesdebian latest r sources.list
 cat /etc/apt/sources.list
 # Install this First (should already be installed)
 sudo apt install dirmngr
@@ -617,15 +543,10 @@ sudo apt-get install r-base r-base-dev
 sudo apt-get install libcurl4-openssl-dev
 sudo apt-get install libssl-dev
 sudo apt-get install libxml2-dev</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
+</div>
 <div id="install-packages-for-r" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Install Packages for R</h3>
+<h3><span class="header-section-number">3.2.2</span> Install Packages for R</h3>
 <p>From command prompt, enter R by typeing <em>R</em>, and install packages:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDYW4gZW50ZXIgUiBmcm9tIENvbW1hbmQgUHJvbXB0IENvbmRhIEVOViwgbXVjaCBmYXN0ZXIgdGhhbiBmcm9tIHItc3R1ZGlvXG4jIEluc3RhbGwgUi10b29scywgUlRPT0xTIGlzIGZvciBXSU5ET1dTXG5pbnN0YWxsLnBhY2thZ2VzKFwiaW5zdGFsbHJcIilcbmxpYnJhcnkoXCJpbnN0YWxsclwiKVxuaW5zdGFsbC5SdG9vbHMoKVxuIyBjOi9SdG9vbHMvYmluO1xuIyBjOi9SdG9vbHMvbWluZ3dfMzIvYmluO1xuIyBjOi9SdG9vbHMvbWluZ3dfNjQvYmluO1xuXG4jIG1haW4gcGFja2FnZXZwc1xuIyB0aWR5bW9kZWwgaW5zdGFsbGF0aW9uIG9uIGxpbnV4IGRpZmZpY3VsdFxuaW5zdGFsbC5wYWNrYWdlcyhjKFwidGlkeXZlcnNlXCIsIFwidGlkeW1vZGVsc1wiLCBcInRpZHlyXCIpKVxuIyBkZXZlbG9wbWVudCBwYWNrYWdlc1xuaW5zdGFsbC5wYWNrYWdlcyhjKFwiZGV2dG9vbHNcIiwgXCJJUmtlcm5lbFwiLCBcInBrZ2Rvd25cIiwgXCJyb3h5Z2VuMlwiLCBcImthYmxlRXh0cmFcIikpXG4jIG90aGVyIHBhY2thZ2VzXG5pbnN0YWxsLnBhY2thZ2VzKGMoXCJBRVJcIiwgXCJtaW5wYWNrLmxtXCIsIFwia25pdHJcIiwgXCJtYXRsYWJcIikpXG5cbiMgSW5zdGFsbCBteSBwYWNrYWdlLCBuZWVkIHRvIHByZXBhcmUgcGFja2FnZSB0byB3b3JrIGZvciB1YnVudHVcbiMgaWYgaW5zdGFsbCBkb2VzIG5vdCB3b3JrLCBsb2FkIGxvY2FsbHlcbmRldnRvb2xzOjppbnN0YWxsX2dpdGh1YihcImZhbndhbmdlY29uL1I0RWNvblwiKVxuXG4jIEtlcm5lbFxuaW5zdGFsbC5wYWNrYWdlcyhjKCdyZXByJywgJ0lSZGlzcGxheScsICdldmFsdWF0ZScsICdjcmF5b24nLCAncGJkWk1RJywgJ2RldnRvb2xzJywgJ3V1aWQnLCAnZGlnZXN0JykpXG5JUmtlcm5lbDo6aW5zdGFsbHNwZWMoKVxuYGBgIn0= -->
 <pre class="r"><code># Can enter R from Command Prompt Conda ENV, much faster than from r-studio
 # Install R-tools, RTOOLS is for WINDOWS
 install.packages(&quot;installr&quot;)
@@ -645,21 +566,18 @@ install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &
 
 # Install my package, need to prepare package to work for ubuntu
 # if install does not work, load locally
-devtools::install_github(&quot;fanwangecon/R4Econ&quot;)
+devtools::install_github(&quot;fanwangecon/REconTools&quot;)
 
 # Kernel
 install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;))
 IRkernel::installspec()</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 </div>
 <div id="install-r-inside-conda" class="section level2">
-<h2><span class="header-section-number">3.2</span> Install R (inside Conda)</h2>
+<h2><span class="header-section-number">3.3</span> Install R (inside Conda)</h2>
 <p>Key packages are generally available in conda’s default channel (official distribution) and also the more frequently updated conda-forge channel. Prioritize conda-forge to get the latest packages. After adding <em>conda-forge</em> to channels, that will be prioritized, so when creating a new environment, conda will install first from conda-forge if package exists there. Try the <em>r_env</em> generation line with and without first adding <em>conda-forge</em> to channel, and see that the packages installed will have different versions, reflecting versions in the default channel and in the <em>conda-forge</em> channels.</p>
 <div id="set-up-conda-r-environment" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Set up Conda R environment</h3>
+<h3><span class="header-section-number">3.3.1</span> Set up Conda R environment</h3>
 <p>Create a Conda Environment called <em>r_env</em>, and update its channels.</p>
 <ul>
 <li><strong>Location</strong>: Installed environments are shown appear in the <em>envs</em> folder of <em>C:/ProgramData/Anaconda3/envs/</em>. Can be easily deleted without disrupting the main base installation for conda. This is very important. During installation, could easily run into problems, and need to re-install. Much better to only re-install a folder. Note that when R is installed in <em>envs</em>, it will not show up under add or remove programs for uninstallation from there, has to be uninstalled, deleted directly here.</li>
@@ -667,16 +585,28 @@ IRkernel::installspec()</code></pre>
 <li><strong>Multiple Pythons</strong>: With the above installation for R, one benefit is that if R requires a different version of Python than what the base environment uses, the r_env could have a different python version. So type <em>python</em> in the base environment as well as inside the <em>r_env</em>. This also means potentially there could be duplicated installations I think. Look at the python versions under <em>conda list</em> in the base and in the r-environment.</li>
 <li><strong>File Size</strong>: Note that this creates a large installation folder, <em>C:/ProgramData/Anaconda3/envs/r_env/</em>, without additional packages, is 1.3 GB in size</li>
 </ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxuIyBTZXQgdXAgQ2hhbm5lbCwgZm9yIFIsIHRvIGdldCBsYXRlc3Qgci1wYWNrYWdlc1xuIyBkbyBub3Qgc2V0LXVwIGNoYW5uZWxzIHRvIHByaW9yaXRpemUgY29uZGEtZm9yZ2UgZm9yIG1haW4gZW52LlxuY29uZGEgY29uZmlnIC0tYWRkIGNoYW5uZWxzIGNvbmRhLWZvcmdlXG4jIGluc3RhbGwga2V5IHIgcGFja2FnZXMgd2l0aGluIGEgci1lbnZpcm9ubWVudFxuY29uZGEgZW52IHJlbW92ZSAtbiByX2VudlxuY29uZGEgY3JlYXRlIC1uIHJfZW52IHItZXNzZW50aWFscyByLWJhc2Ugci10aWR5ciByLXRpZHl2ZXJzZSByLWRldnRvb2xzIHItaXJrZXJuZWwgci1wa2dkb3duIHItcm94eWdlbjJcbiMgc2VlIGFsbCBpbnN0YWxsZWQgZW52aXJvbm1lbnRzXG5jb25kYSBlbnYgbGlzdFxuIyBhY3RpdmF0ZSBhbiBlbnZpcm9ubWVudCB0byB1c2UgaXQsIGlmIGluIGJhc2UsIHIgZG9lcyBub3QgZXhpc3QsIGlzb2xhdGVkIGluIHJfZW52XG5jb25kYSBhY3RpdmF0ZSByX2VudlxuIyBzZWUgcGFja2FnZXMgaW4gZW52aXJvbm1lbnRcbmNvbmRhIGxpc3RcbiMgdG8gcXVpdFxuY29uZGEgZGVhY3RpdmF0ZVxuYGBgXG5gYGAifQ== -->
-<pre class="bash"><code>```bash
-# Set up Channel, for R, to get latest r-packages
-# do not set-up channels to prioritize conda-forge for main env.
-conda config --add channels conda-forge
+<pre class="bash"><code># outside of conda, install some depencies
+sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libssl-dev
+sudo apt-get install libxml2-dev
+
 # install key r packages within a r-environment
 conda env remove -n r_env
-conda create -n r_env r-essentials r-base r-tidyr r-tidyverse r-devtools r-irkernel r-pkgdown r-roxygen2
+# start empty environment
+conda create -n r_env
+# activate env and check, nothing yet
+conda activate r_env
+conda list
+
+# check channel and add env specific channel
+conda config --get channels
+# to get latest r, use conda-forge, which has more recent Rs
+# conda config --env --add channels conda-forge
+# channels for base
+conda config --get channels
+# channels for cur env
+conda config --get channels --env
+
 # see all installed environments
 conda env list
 # activate an environment to use it, if in base, r does not exist, isolated in r_env
@@ -685,32 +615,12 @@ conda activate r_env
 conda list
 # to quit
 conda deactivate</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-### Install R and Some Packages in Conda
-
-Either inside a R specific environment, or outside of it, now do additional installations for R and also R packages.
-
-During installation, the R programs might require downgrading other programs in the Conda environment that Python for example also uses. That is why potentially it is safer to install in R environment. However, when installing in R enviornment, certain packages could have issues if installer does not realize it is in an environment with special folder structure, so installation could fail.
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBpbnN0YWxsIGZpbGVzXG5jb25kYSBpbnN0YWxsIC1uIHJfZW52IC1jIHIgciByLWVzc2VudGlhbHMgci10aWR5dmVyc2Ugci10aWR5bW9kZWxzIC15XG5cbiMgdHJvdWJsZSB3aXRoIGlncmFwaCBpbnN0YWxsYXRpb24sIGluc3RhbGwgaGVyZSBmcm9tIGNvbmRhXG4jIGNvbmRhIGluc3RhbGwgLW4gcl9lbnYgci1lc3NlbnRpYWxzIHItYmFzZSByLXRpZHlyIHItdGlkeXZlcnNlIHItZGV2dG9vbHMgci1pcmtlcm5lbCByLXBrZ2Rvd24gci1yb3h5Z2VuMlxuY29uZGEgaW5zdGFsbCAtbiByX2VudiAtYyByIHItaWdyYXBoXG5jb25kYSBpbnN0YWxsIC1uIHJfZW52IC1jIGNvbmRhLWZvcmdlIGlncmFwaFxuY29uZGEgaW5zdGFsbCAtbiByX2VudiAtYyByIHItcnN0YW50b29scyByLXJzdGFuIHItcnN0YW5hcm0gLXlcbmBgYCJ9 --&gt;
-
-```bash
-# install files
+</div>
+<div id="install-r-and-some-packages-in-conda" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Install R and Some Packages in Conda</h3>
+<p>Either inside a R specific environment, or outside of it, now do additional installations for R and also R packages.</p>
+<p>During installation, the R programs might require downgrading other programs in the Conda environment that Python for example also uses. That is why potentially it is safer to install in R environment. However, when installing in R enviornment, certain packages could have issues if installer does not realize it is in an environment with special folder structure, so installation could fail.</p>
+<pre class="bash"><code># install files
 conda install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y
 
 # trouble with igraph installation, install here from conda
@@ -718,87 +628,58 @@ conda install -n r_env -c r r r-essentials r-tidyverse r-tidymodels -y
 conda install -n r_env -c r r-igraph
 conda install -n r_env -c conda-forge igraph
 conda install -n r_env -c r r-rstantools r-rstan r-rstanarm -y</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 </div>
 <div id="install-additional-packages-inside-the-r" class="section level2">
-<h2><span class="header-section-number">3.3</span> Install Additional Packages inside the R</h2>
+<h2><span class="header-section-number">3.4</span> Install Additional Packages inside the R</h2>
 <p>These are packages that I use, these should be installed inside the environment. Or they could be installed later from inside r-studio. Installing inside r-studio is a lot better. <em>tidymodel</em> has installation issues sometimes.</p>
 <p>In <em>r_env</em>, type in <em>R</em>, and then install from inside terminal’s R. For conda env, devtools will be installed and will install packages inside <em>envs/r_env/Lib/R</em>.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4jIyMgT3duIFBhY2thZ2VcbiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjI1xuZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKFxcZmFud2FuZ2Vjb24vUjRFY29uXFwpXG4jIGluc3RhbGxfZGV2KFxcY2xpXFwpXG5gYGBcbmBgYCJ9 -->
-<pre class="r"><code>```r
-#######################################
-### Own Package
-#######################################
-devtools::install_github(\fanwangecon/R4Econ\)
-# install_dev(\cli\)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
+<pre class="r"><code># enter into env
+# conda activate r_env
+# enter R or type in rstudio
+# sicne R is only install inside r_env, has to enter rstudio from r_env
+# R
+# rstudio
 
-&lt;!-- rnb-chunk-end --&gt;
+# main packagevps
+# tidymodel installation on linux difficult
+install.packages(c(&quot;rstantools&quot;, &quot;rstan&quot;, &quot;rstanarm&quot;))
+install.packages(c(&quot;tidyr&quot;, &quot;tidyverse&quot;, &quot;tidymodels&quot;))
 
+# tidymodels
+# development packages
+install.packages(c(&quot;devtools&quot;, &quot;IRkernel&quot;, &quot;pkgdown&quot;, &quot;roxygen2&quot;, &quot;kableExtra&quot;))
+# other packages
+install.packages(c(&quot;AER&quot;, &quot;minpack.lm&quot;, &quot;knitr&quot;, &quot;matlab&quot;))
 
-&lt;!-- rnb-text-begin --&gt;
+# Install my package, need to prepare package to work for ubuntu
+# if install does not work, load locally
+devtools::install_github(&quot;fanwangecon/REconTools&quot;)
 
-
-## R-Studio Set-up Download from Rstudio
-
-1. Download R-studio, and install, as normal (not from conda, directly from rstudio website latest windows version)
-2. Open up anaconda prompt, enter *r_env* environment: *activate r_env*
-3. cd into rstudio exe file folder: cd &quot;C:/Program Files/RStudio/bin&quot;
-4. start r-studio from inside *r_env*: rstudio.exe
-5. inside r-studio, check: *.libPaths()*
-    - &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuYGBgYmFzaFxuPCEtLSBmb3IgdWJ1bnR1IC0tPlxud2dldCBcXGh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvYmlvbmljL2FtZDY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXFxcbjwhLS0gZm9yIGRlYmlhbiAtLT5cbnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYlxud2dldCBcXGh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvZGViaWFuOS94ODZfNjQvcnN0dWRpby0xLjIuNTAzMy1hbWQ2NC5kZWJcXFxuc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXG5jb25kYSBpbnN0YWxsIC1jIHIgcnN0dWRpb1xuY2QgXFxDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluXFxcbnJzdHVkaW8uZXhlXG5cbmNkIFxcQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeVxcXG5cXEM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4vcnN0dWRpby5leGVcXFxuYGBgXG5gYGAifQ== --&gt;
-
-```bash
-```bash
-&lt;!-- for ubuntu --&gt;
-wget \https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb\
-&lt;!-- for debian --&gt;
-sudo apt install ./rstudio-1.2.5033-amd64.deb
-wget \https://download1.rstudio.org/desktop/debian9/x86_64/rstudio-1.2.5033-amd64.deb\
-sudo apt install ./rstudio-1.2.5033-amd64.deb
-conda install -c r rstudio
-cd \C:/Program Files/RStudio/bin\
+# Kernel
+install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;))
+IRkernel::installspec()</code></pre>
+</div>
+<div id="r-studio-set-up-download-from-rstudio" class="section level2">
+<h2><span class="header-section-number">3.5</span> R-Studio Set-up Download from Rstudio</h2>
+<ol style="list-style-type: decimal">
+<li>Download R-studio, and install, as normal (not from conda, directly from rstudio website latest windows version)</li>
+<li>Open up anaconda prompt, enter <em>r_env</em> environment: <em>activate r_env</em></li>
+<li>cd into rstudio exe file folder: cd “C:/Program Files/RStudio/bin”</li>
+<li>start r-studio from inside <em>r_env</em>: rstudio.exe</li>
+<li>inside r-studio, check: <em>.libPaths()</em>
+<ul>
+<li>“C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library”</li>
+</ul></li>
+</ol>
+<pre class="bash"><code>activate r_env
+cd &quot;C:/Program Files/RStudio/bin&quot;
 rstudio.exe
 
-cd \C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library\
-\C:/Program Files/RStudio/bin/rstudio.exe\</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuPCEtLSBmb3IgdWJ1bnR1IC0tPlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvYmlvbmljL2FtZDY0L3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXCJcbjwhLS0gZm9yIGRlYmlhbiAtLT5cbnN1ZG8gYXB0IGluc3RhbGwgLi9yc3R1ZGlvLTEuMi41MDMzLWFtZDY0LmRlYlxud2dldCBcImh0dHBzOi8vZG93bmxvYWQxLnJzdHVkaW8ub3JnL2Rlc2t0b3AvZGViaWFuOS94ODZfNjQvcnN0dWRpby0xLjIuNTAzMy1hbWQ2NC5kZWJcIlxuc3VkbyBhcHQgaW5zdGFsbCAuL3JzdHVkaW8tMS4yLjUwMzMtYW1kNjQuZGViXG5jb25kYSBpbnN0YWxsIC1jIHIgcnN0dWRpb1xuY2QgXCJDOi9Qcm9ncmFtIEZpbGVzL1JTdHVkaW8vYmluXCJcbnJzdHVkaW8uZXhlXG5cbmNkIFwiQzovUHJvZ3JhbURhdGEvQW5hY29uZGEzL2VudnMvcl9lbnYvTGliL1IvbGlicmFyeVwiXG5cIkM6L1Byb2dyYW0gRmlsZXMvUlN0dWRpby9iaW4vcnN0dWRpby5leGVcIlxuYGBgIn0= --&gt;
-
-```bash
-&lt;!-- for ubuntu --&gt;
+cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
+&quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
+<p>For linux, note that rstudio offers Ubuntu as well as Debian versions that can be installed with wget:</p>
+<pre class="bash"><code>&lt;!-- for ubuntu --&gt;
 wget &quot;https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb&quot;
 &lt;!-- for debian --&gt;
 sudo apt install ./rstudio-1.2.5033-amd64.deb
@@ -810,32 +691,20 @@ rstudio.exe
 
 cd &quot;C:/ProgramData/Anaconda3/envs/r_env/Lib/R/library&quot;
 &quot;C:/Program Files/RStudio/bin/rstudio.exe&quot;</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p>Is RSTUDIO pointing to the R installation you want? Note you can open Rstudio from differen conda env command line, that will use different R installations. Or also set:</p>
 <ul>
 <li><em>export RSTUDIO_WHICH_R=/usr/bin/R</em></li>
 <li><em>export RSTUDIO_WHICH_R=/home/wangfanbsg75/anaconda3/bin/R</em></li>
 </ul>
 <p>R-studio theme, <a href="https://github.com/anthonynorth/rscodeio">VSCode theme</a> for Rstudio works very well:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhZG1pbiByaWdodHNcbnN1ZG8gcnN0dWRpbyAtLW5vLXNhbmRib3hcbnJlbW90ZXM6Omluc3RhbGxfZ2l0aHViKFwiYW50aG9ueW5vcnRoL3JzY29kZWlvXCIpXG5yc2NvZGVpbzo6aW5zdGFsbF90aGVtZSgpXG5gYGAifQ== -->
 <pre class="r"><code># admin rights
 sudo rstudio --no-sandbox
 remotes::install_github(&quot;anthonynorth/rscodeio&quot;)
 rscodeio::install_theme()</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 <div id="r-tests" class="section level2">
-<h2><span class="header-section-number">3.4</span> R Tests</h2>
+<h2><span class="header-section-number">3.6</span> R Tests</h2>
 <p>Test the following file to see if we can execute a R file. Do it inside <em>r_env</em> and inside a <em>r</em> session.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBBIHNpbXBsZSBmaWxlIHdpdGggc3VtbWFyeSBzdGF0aXN0aWNzIHVzaW5nIHRpZHl2ZXJzZVxuc291cmNlKCdDOi9Vc2Vycy9mYW4vUjRFY29uL3N1bW1hcml6ZS9kaXN0L2ZzdF9oaXN0X29uZXZhci5SJylcbiMgQW5vdGhlciBzaW1wbGUgZmlsZSB3aXRoIHN1bW1hcnkgc3RhdGlzdGljcyB1c2luZyB0aWR5dmVyc2VcbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9zdXBwb3J0L3RpYmJsZS9mc190aWJfYmFzaWNzLlInKVxuIyBBIGZpbGUgaW52b2x2aW5nIGVzdGltYXRpb25cbnNvdXJjZSgnQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUicpXG5cbiMgQzovVXNlcnMvZmFuL1I0RWNvbi9zdW1tYXJpemUvZGlzdC9mc3RfaGlzdF9vbmV2YXIuUm1kXG4jIEM6L1VzZXJzL2Zhbi9SNEVjb24vc3VwcG9ydC90aWJibGUvZnNfdGliX2Jhc2ljcy5SbWRcbiMgQzovVXNlcnMvZmFuL1I0RWNvbi9vcHRpbWl6YXRpb24vY2VzbG9nbGluL2ZzdF9jZXNfcGxhbl9saW5sb2cuUm1kXG5gYGAifQ== -->
 <pre class="r"><code># A simple file with summary statistics using tidyverse
 source(&#39;C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.R&#39;)
 # Another simple file with summary statistics using tidyverse
@@ -846,9 +715,6 @@ source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39
 # C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.Rmd
 # C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.Rmd
 # C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 </div>
 <div id="install-latex-and-pdf" class="section level1">
@@ -880,15 +746,9 @@ source(&#39;C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R&#39
 </ul>
 <p><em>Install on Ubuntu</em></p>
 <p>install texlive and texstudio ubuntu/debian.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuc3VkbyBhcHQtZ2V0IHVwZGF0ZVxuc3VkbyBhcHQtZ2V0IGluc3RhbGwgdGV4bGl2ZS1mdWxsXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCB0ZXhzdHVkaW9cbmBgYCJ9 -->
 <pre class="bash"><code>sudo apt-get update
 sudo apt-get install texlive-full
 sudo apt-get install texstudio</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p>Test file compilations in TexStudio.</p>
 </div>
 <div id="sumatrapdf" class="section level2">
@@ -969,9 +829,6 @@ sudo apt-get install texstudio</code></pre>
 <h2><span class="header-section-number">5.1</span> VSCode Installation</h2>
 <p>VSCode is much more light-weight than Atom, much faster. On Windows, download <a href="https://code.visualstudio.com/download">here</a>. VScode settings easy to change for various extensions. Very very good Latex Editor, probably the best I have used.</p>
 <p>For Linux:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBEZWJpYW4gSW5zdGFsbFxuY3VybCBodHRwczovL3BhY2thZ2VzLm1pY3Jvc29mdC5jb20va2V5cy9taWNyb3NvZnQuYXNjIHwgZ3BnIC0tZGVhcm1vciA+IG1pY3Jvc29mdC5ncGdcbnN1ZG8gaW5zdGFsbCAtbyByb290IC1nIHJvb3QgLW0gNjQ0IG1pY3Jvc29mdC5ncGcgL3Vzci9zaGFyZS9rZXlyaW5ncy9taWNyb3NvZnQtYXJjaGl2ZS1rZXlyaW5nLmdwZ1xuc3VkbyBzaCAtYyAnZWNobyBcImRlYiBbYXJjaD1hbWQ2NCBzaWduZWQtYnk9L3Vzci9zaGFyZS9rZXlyaW5ncy9taWNyb3NvZnQtYXJjaGl2ZS1rZXlyaW5nLmdwZ10gaHR0cHM6Ly9wYWNrYWdlcy5taWNyb3NvZnQuY29tL3JlcG9zL3ZzY29kZSBzdGFibGUgbWFpblwiID4gL2V0Yy9hcHQvc291cmNlcy5saXN0LmQvdnNjb2RlLmxpc3QnXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBhcHQtdHJhbnNwb3J0LWh0dHBzXG5zdWRvIGFwdC1nZXQgdXBkYXRlXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBjb2RlICMgb3IgY29kZS1pbnNpZGVyc1xuXG4jIENoYW5nZSBGb250IChodHRwczovL3d3RncucmVkZGl0LmNvbS9yL0Nyb3N0aW5pL2NvbW1lbnRzL2Nlc3hyMC92c2NvZGVfdWlfYW5kX2ZvbnRzX3Rvb19zbWFsbF9oZXJlc19ob3dfdG9fZml4X2l0LylcbiMgbW9kaWZ5OiAvdXNyL3NoYXJlL2FwcGxpY2F0aW9ucy9jb2RlLmRlc2t0b3Bcbm52aW0gL3Vzci9zaGFyZS9hcHBsaWNhdGlvbnMvY29kZS5kZXNrdG9wXG4jcmVwbGFjZSB0aGlzIGxpbmU6IEV4ZWM9L3Vzci9zaGFyZS9jb2RlL2NvZGUgLS11bml0eS1sYXVuY2ggJUZcbkV4ZWM9c29tbWVsaWVyIC1YIC0tc2NhbGU9MC44IC0tZHBpPTE2MCAvdXNyL3NoYXJlL2NvZGUvY29kZSBcIi0tdW5pdHktbGF1bmNoICVGXCJcbiNyZXBsYWNlIHRoaXMgbGluZTogRXhlYz0vdXNyL3NoYXJlL2NvZGUvY29kZSAtLW5ldy13aW5kb3cgJUZcbkV4ZWM9c29tbWVsaWVyIC1YIC0tc2NhbGU9MC44IC0tZHBpPTE2MCAvdXNyL3NoYXJlL2NvZGUvY29kZSBcIi0tbmV3LXdpbmRvdyAlRlwiXG5cbiMgT3BlbiBGaWxlXG4jIGxvdyBkZW5zaXR5IG1vZGUgdG8gc2VlIGNsZWFyeVxuY29kZVxuYGBgIn0= -->
 <pre class="bash"><code># Debian Install
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg
@@ -991,24 +848,15 @@ Exec=sommelier -X --scale=0.8 --dpi=160 /usr/share/code/code &quot;--new-window 
 # Open File
 # low density mode to see cleary
 code</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <div id="vscode-extensions" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> VSCode Extensions</h3>
 <p>Press <em>Ctrl + P</em>, paste the <em>ext install</em> commands below to install extensions. Extensions are in: <em>%USERPROFILE%/.vscode/extensions</em> for windows. Can change code for extension there.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBbTWljcm9zb2Z0IFB5dGhvbiBFeHRlbnNpb25dKGh0dHBzOi8vbWFya2V0cGxhY2UudmlzdWFsc3R1ZGlvLmNvbS9pdGVtcz9pdGVtTmFtZT1tcy1weXRob24ucHl0aG9uKVxuZXh0IGluc3RhbGwgbXMtcHl0aG9uLnB5dGhvblxuIyBbTGF0ZXggV29ya3Nob3BdKGh0dHBzOi8vbWFya2V0cGxhY2UudmlzdWFsc3R1ZGlvLmNvbS9pdGVtcz9pdGVtTmFtZT1KYW1lcy1ZdS5sYXRleC13b3Jrc2hvcClcbmV4dCBpbnN0YWxsIGxhdGV4LXdvcmtzaG9wXG4jIFtSXShodHRwczovL21hcmtldHBsYWNlLnZpc3VhbHN0dWRpby5jb20vaXRlbXM/aXRlbU5hbWU9SWt1eWFkZXUucilcbmV4dCBpbnN0YWxsIGlrdXlhZGV1LnJcbmBgYCJ9 -->
 <pre class="bash"><code># [Microsoft Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 ext install ms-python.python
 # [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 ext install latex-workshop
 # [R](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)
 ext install ikuyadeu.r</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 <div id="vscode-shortcuts-and-features" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> VSCode Shortcuts and Features</h3>
@@ -1018,12 +866,20 @@ ext install ikuyadeu.r</code></pre>
 </ol>
 <p><strong>Shortcuts</strong> :</p>
 <ul>
-<li>Zen model: <em>Ctrl + k, z</em>, this means press control k, then press z</li>
+<li>see all shortcuts: <em>Ctrl + k, ctrl + s</em></li>
+<li>Zen model: <em>Ctrl + k, z</em>, this means press control k, then press z
+<ul>
+<li>note that z mode can be adjusted by shiftin the bar on the left</li>
+</ul></li>
 <li>Open up Settings: <em>Ctrl + ,</em></li>
 <li>Preview Markdown in VSCode: <em>Ctrl + Shift + v</em></li>
 <li>Open up left pane: <em>Ctrl + b</em></li>
 <li>Wrap Text: <em>alt + z</em>, switch between wrap or not to save screen space for example.</li>
 <li>Hide Console Pane (running code): <em>Ctrl + j</em></li>
+</ul>
+<p><em>personal bindings</em></p>
+<ul>
+<li>toggle minimap: <em>Ctrl + k, ctrl + z</em></li>
 </ul>
 </div>
 <div id="vscode-and-r" class="section level3">
@@ -1053,6 +909,12 @@ ext install ikuyadeu.r</code></pre>
 <div id="vscode-and-latex" class="section level3">
 <h3><span class="header-section-number">5.1.4</span> VSCode and Latex</h3>
 <p>Download <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">Latex Workshop</a>.</p>
+<p><strong>Shortcuts</strong></p>
+<ul>
+<li>compile: <em>ctrl + alt + b</em></li>
+<li>sync: <em>ctrl + alt + j</em></li>
+<li>live save</li>
+</ul>
 <p><strong>Settings</strong></p>
 <p>change background border pdf color (not pdf but border): <em>ctrl + shift + x</em>, LatexWorkshop, Settings, Configure Extension Settings, Search for background, change color name. or enter: <em>latex-workshop.view.pdf.backgroundColor</em>. use gainsboro gray: <em>#DCDCDC</em>, or lightgray <em>#D3D3D3</em>.</p>
 <p>To take advantage of Okular (where background color can be none-white for example). Go to settings, and: 1. Change: <em>latex-workshop.view.pdf.viewer</em> to external 2. Change: <em>latex-workshop.view.pdf.external.viewer.command</em> to <em>C:/Program Files/SumatraPDF/SumatraPDF.exe</em> open up <em>C:/Users/fan/AppData/Roaming/Code/User/settings.json</em>, and copy these in:</p>
@@ -1104,43 +966,42 @@ ext install ikuyadeu.r</code></pre>
 <div id="atom-extensions" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> Atom Extensions</h3>
 <p>Terminal in windows or linux after installation: <em>apm install hydrogen</em>. apm is the atom package manager:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBPbmNlIGF0b20gaXMgaW5zdGFsbGVkLCBjYW4gdXNlIGFwbSB0byBpbnN0YWxsIHBhY2thZ2VzXG5hcG0gaW5zdGFsbCBoeWRyb2dlblxuIyBhcG0gaW5zdGFsbCBwcm9qZWN0LW1hbmFnZXJcbmFwbSBpbnN0YWxsIHN1YmxpbWUtc3R5bGUtY29sdW1uLXNlbGVjdGlvblxuYXBtIGluc3RhbGwgbWluaW1hcFxuXG4jIHItcmVsYXRlZFxuIyBmb3IgbWUgdGhlIGJlc3Qgci1zeW50YXggaGlnaGxpZ2h0ZXIgSSBoYXZlIGZvdW5kXG5hcG0gaW5zdGFsbCByLXN5bnRheFxuXG4jIHZpbSBkaXN0cmFjdGlvbiBmcmVlIGVkaXRpbmdcbmFwbSBpbnN0YWxsIHZpbS1tb2RlLXBsdXNcbmFwbSBpbnN0YWxsIHplblxuXG4jIEluc2lkZSBDb25kYSBvcGVuIHVwIGF0b21cbmF0b21cblxuYGBgIn0= -->
 <pre class="bash"><code># Once atom is installed, can use apm to install packages
 apm install hydrogen
 # apm install project-manager
-apm install sublime-style-column-selection
-apm install minimap
 
 # r-related
 # for me the best r-syntax highlighter I have found
 apm install r-syntax
 
+# latex-related
+apm install language-latex
+apm install latex
+
+# Selection and Overview
+apm install sublime-style-column-selection
+apm install minimap
+apm install highlight-selected
+
 # vim distraction free editing
 apm install vim-mode-plus
+apm install ex-mode
 apm install zen
+
+# support
+apm install date
 
 # Inside Conda open up atom
 atom
 </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 <div id="atom-shortcuts-and-features" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> Atom Shortcuts and Features</h3>
 <p><strong>Features</strong>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBvcGVuIG11bHRpcGxlIHByb2plY3RzIGZyb20gYXRvbSBhdCB0aGUgc2FtZSB0aW1lLCBhZnRlciByZXBvcyBzeW5jZWRcbmF0b20gfi9mYW53YW5nZWNvbi5naXRodWIuaW8gfi9QeWZhbiB+L1RlYWNoaW5nIH4vVGV4NEVjb24gfi9SNEVjb24gfi9NNEVjb24gfi9QeTRFY29uXG4jIG9wZW4gdXAgYW55IHB5IGZyb20gZnJvbSB3aXRoaW4sIHRyeSAxKzEsIGRvZXMgaXQgd29yaz9cbiMgYWxzbyB1c2Ugc2NyaXB0LCB0cnkgY3RybCArIHNoaWZ0ICsgYiwgcnVuIHdob2xlIGZpbGUgKG5vdCBoeWRyb2dlbilcbmBgYCJ9 -->
 <pre class="bash"><code># open multiple projects from atom at the same time, after repos synced
 atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/Py4Econ
 # open up any py from from within, try 1+1, does it work?
 # also use script, try ctrl + shift + b, run whole file (not hydrogen)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p><strong>Shortcuts</strong> :</p>
 <ul>
 <li>Git Pane: <em>Ctrl + 9</em>, <em>Ctrl + 8</em></li>
@@ -1150,14 +1011,8 @@ atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/P
 <h3><span class="header-section-number">5.2.3</span> Atom and Python</h3>
 <p>Having installed Anaconda, now install Atom and Hydrogen to Test with Python. For both Jupyter as well as Atom, always open from command prompt, open from <em>Anaconda Prompt</em> with admin rights.</p>
 <p>Open up <em>Jupyter Notebook</em>, does the python kernel work? If does not, uninstall and re-install Anaconda.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBzdGFydCBqdXB5dGVyIGxhYiwgZnJvbSBwcm9tcHRcbmp1cHl0ZXIgbGFiXG5gYGAifQ== -->
 <pre class="bash"><code># start jupyter lab, from prompt
 jupyter lab</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p>Try <em>1+1</em>.</p>
 </div>
 <div id="atom-and-latex" class="section level3">
@@ -1179,9 +1034,6 @@ jupyter lab</code></pre>
 <li>download Okular and use <a href="https://okular.kde.org/">Okular</a></li>
 </ul></li>
 </ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBzZXQgVGVYIHBhdGhcbiMgQzovdGV4bGl2ZS8yMDE5L2Jpbi93aW4zMlxuXG4jIExhdGV4LCBhZnRlciBpbnN0YWxsYXRpb25cbiMgc2VlIHdoZXJlIHRleGxpdmUgYXBwZWFycyB1bmRlciByb290IGZvbGRlciBkaXJlY3Rvcmllc1xuc3VkbyBmaW5kIC8gLW5hbWUgXCJ0ZXhsaXZlXCJcbiMgc2VlIGxhdGV4IHZlcnNpb24sIGlmIHRleGxpdmUgaXMgdXNlZFxubGF0ZXggLXZcbiMgc2VlIG1haW4gZXhlIGRpcmVjdG9yeVxud2hpY2ggbGF0ZXhcbiMgL3Vzci9iaW4vbGF0ZXhcbmBgYCJ9 -->
 <pre class="bash"><code># set TeX path
 # C:/texlive/2019/bin/win32
 
@@ -1193,9 +1045,29 @@ latex -v
 # see main exe directory
 which latex
 # /usr/bin/latex</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
+</div>
+<div id="atom-settings-file" class="section level3">
+<h3><span class="header-section-number">5.2.5</span> Atom settings file</h3>
+<p>Atom keymap.cson file:</p>
+<pre><code>&#39;atom-text-editor&#39;:
+  &#39;ctrl-shift-j&#39;: &#39;pretty-json:prettify&#39;
+  &#39;alt-z&#39;:&#39;date:date&#39;
+  &#39;alt-x&#39;:&#39;date:time&#39;
+  &#39;alt-c&#39;:&#39;date:datetime&#39;
+&#39;body&#39;:
+  &#39;ctrl-tab&#39;: &#39;pane:show-next-item&#39;
+  &#39;ctrl-shift-tab&#39;: &#39;pane:show-previous-item&#39;
+&#39;.editor&#39;:
+  &#39;ctrl-alt-z&#39;: &#39;atom-beautify:beautify-editor&#39;
+  &#39;ctrl-shift-r&#39;: &#39;hydrogen:restart-kernel&#39;
+&#39;atom-text-editor:not([mini])&#39;:
+  &#39;ctrl-*&#39;: &#39;highlight-selected:select-all&#39;
+&#39;atom-text-editor, webview.markdown-preview-plus&#39;:
+  &#39;ctrl-shift-X&#39;: &#39;markdown-preview-plus:toggle-render-latex&#39;
+
+# https://github.com/t9md/atom-vim-mode-plus/issues/130
+&#39;atom-text-editor.vim-mode-plus.insert-mode&#39;:
+  &#39;j j&#39;: &#39;vim-mode-plus:activate-normal-mode&#39;</code></pre>
 </div>
 </div>
 <div id="other-editors" class="section level2">
@@ -1211,9 +1083,6 @@ which latex
 <h3><span class="header-section-number">5.3.2</span> Sublime</h3>
 <p><a href="https://www.sublimetext.com/3">Sublime</a></p>
 <p>there are some issues with atom. When a file is edited inside Vim, when changes are saved, a <a href="https://github.com/atom/atom/issues/17186">temp file is created in atom</a>. Sublime would, however, still show the file with the changes. This makes dual screen editing very difficult. Sublime text is used for this situation.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBTdWJsaW1lIExpbnV4XG53Z2V0IC1xTyAtIGh0dHBzOi8vZG93bmxvYWQuc3VibGltZXRleHQuY29tL3N1YmxpbWVocS1wdWIuZ3BnIHwgc3VkbyBhcHQta2V5IGFkZCAtXG5zdWRvIGFwdC1nZXQgaW5zdGFsbCBhcHQtdHJhbnNwb3J0LWh0dHBzXG5lY2hvIFwiZGViIGh0dHBzOi8vZG93bmxvYWQuc3VibGltZXRleHQuY29tLyBhcHQvc3RhYmxlL1wiIHwgc3VkbyB0ZWUgL2V0Yy9hcHQvc291cmNlcy5saXN0LmQvc3VibGltZS10ZXh0Lmxpc3RcbnN1ZG8gYXB0LWdldCB1cGRhdGVcbnN1ZG8gYXB0LWdldCBpbnN0YWxsIHN1YmxpbWUtdGV4dFxuIyBsYXVuY2ggZnJvbSB0ZXJtaW5hbFxuc3VibFxuYGBgIn0= -->
 <pre class="bash"><code># Sublime Linux
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
@@ -1222,10 +1091,9 @@ sudo apt-get update
 sudo apt-get install sublime-text
 # launch from terminal
 subl</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p><em>Sublime Setup</em>:</p>
+<p>Put sublime path in windows path for example:</p>
+<pre><code>C:\Program Files\Sublime Text 3\</code></pre>
 <ul>
 <li><a href="https://weibeld.net/r/rmd_sublime_package.html">r and rmd setup</a></li>
 </ul>
@@ -1244,9 +1112,6 @@ subl</code></pre>
 <ul>
 <li><a href="https://github.com/lukesampson/scoop/wiki/Quick-Start">scoop</a></li>
 </ul>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgYmFzaFxuIyBpbiBwb3dlcnNoZWxsXG4jIGVudGVyIGNtZFxuIyB0eXBlIHBvd2Vyc2hlbGwgaW4gY21kIHRvIGVudGVyIHBvd2Vyc2hlbGwgZnJvbSBjbWRcbnBvd2Vyc2hlbGxcbiMgcGVybWlzc2lvblxuc2V0LWV4ZWN1dGlvbnBvbGljeSByZW1vdGVzaWduZWQgLXNjb3BlIGN1cnJlbnR1c2VyXG4jIGluc3RhbGxcbml3ciAtdXNlYiBnZXQuc2Nvb3Auc2ggfCBpZXhcbmBgYCJ9 -->
 <pre class="bash"><code># in powershell
 # enter cmd
 # type powershell in cmd to enter powershell from cmd
@@ -1255,9 +1120,6 @@ powershell
 set-executionpolicy remotesigned -scope currentuser
 # install
 iwr -useb get.scoop.sh | iex</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 </div>
 <div id="utilities" class="section level2">
 <h2><span class="header-section-number">6.2</span> Utilities</h2>
@@ -1273,7 +1135,6 @@ iwr -useb get.scoop.sh | iex</code></pre>
 <li><a href="https://protonvpn.com/">Proton VPN</a>: unlimited usage free version available.</li>
 <li>Express VPN</li>
 </ul>
-<!-- rnb-text-end -->
 </div>
 </div>
 

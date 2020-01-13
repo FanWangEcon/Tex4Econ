@@ -4,14 +4,14 @@ title: |
   | Python (Anaconda), R (Rstudio), Matlab and Latex (Texlive)
   | Atom, VScode, Pycharm
 output:
-  html_document:
+  pdf_document:
+    df_print: paged
     number_sections: true
   html_notebook:
     number_sections: true
   word_document:
     number_sections: true
-  pdf_document:
-    df_print: paged
+  html_document:
     number_sections: true
 urlcolor: blue
 always_allow_html: yes
