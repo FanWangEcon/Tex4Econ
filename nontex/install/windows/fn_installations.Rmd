@@ -771,6 +771,15 @@ which latex
 # /usr/bin/latex
 ```
 
+**Latex Package Option**
+
+*clean* pattern
+
+```{bash}
+**/*.run.xml, **/*.aux, **/*.aux.bak, **/*.bbl, **/*.bcf, **/*.blg, **/*.dvi, **/*.fdb_latexmk, **/*.fls, **/*.idx, **/*.idx.bak, **/*.ilg, **/*.ind, **/*.lof, **/*.log, **/*.lol, **/*.lot, **/*.nav, **/*.out, **/*.ps, **/*.snm, **/*.synctex.gz, **/*.toc, /**/_minted-{jobname}, /{output_dir}/sage-plots-for-{jobname}.tex, /missfont.log, /texput.log, /texput.aux
+```
+
+
 ### Atom settings file
 
 Atom keymap.cson file:
