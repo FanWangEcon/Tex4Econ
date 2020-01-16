@@ -700,6 +700,7 @@ apm install latex
 apm install sublime-style-column-selection
 apm install minimap
 apm install highlight-selected
+apm install split-diff
 
 # vim distraction free editing
 apm install vim-mode-plus
