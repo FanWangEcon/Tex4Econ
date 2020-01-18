@@ -1,0 +1,31 @@
+---
+title: |
+  | Basics of Reveal.js
+  | for Mathmatical Presentations
+output:
+  pdf_document:
+    df_print: paged
+    number_sections: true
+  html_notebook:
+    number_sections: true
+  word_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# Equations and Reveal.js
+
+## Page Fragments
+
+- long html multiple files
+- html fragments separate files
+- rmd bookdown revealjs

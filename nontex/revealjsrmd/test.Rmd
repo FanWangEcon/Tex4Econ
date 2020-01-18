@@ -1,0 +1,40 @@
+---
+title: "Habits"
+author: John Doe
+date: March 22, 2005
+output: 
+  revealjs::revealjs_presentation:
+    theme: sky
+    highlight: pygments
+    center: true
+    transition: none
+    css: serif_fan.css
+    mathjax: local
+    self_contained: false
+---
+
+# In the morning
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+$1+2=3$
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+# In the evening
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
+Display Modes

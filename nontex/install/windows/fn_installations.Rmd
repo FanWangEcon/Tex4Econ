@@ -250,6 +250,8 @@ install.packages(c("AER", "minpack.lm", "knitr", "matlab"))
 # if install does not work, load locally
 devtools::install_github("fanwangecon/REconTools")
 
+# Present
+install.packages("revealjs")
 # Kernel
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
 IRkernel::installspec()
@@ -348,6 +350,8 @@ install.packages(c("AER", "minpack.lm", "knitr", "matlab"))
 # if install does not work, load locally
 devtools::install_github("fanwangecon/REconTools")
 
+# Present
+install.packages("revealjs")
 # Kernel
 install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
 IRkernel::installspec()
@@ -671,7 +675,35 @@ The settings.json file, *%APPDATA%/Code/User/settings.json*:
 		"code \"C:\\Users\\fan\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
 		"%PDF%",
 	],
-	"latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe"
+	"latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe",
+  "editor.minimap.enabled": false,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.snm",
+    "*.synctex(busy)",
+    "*.synctex.gz(busy)",
+    "*.nav",
+    "*.xml",
+    "*.gz",
+    "*.bcf"
+  ]  
 }
 ```
 
