@@ -22,6 +22,27 @@ Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Re
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
+
+In *serif_fan.css* To change main body font, change font-size below.
+
+```
+.reveal p {
+  margin: 20px 0;
+  font-size: 1em;
+  line-height: 1.3; }
+```
+
+To change MathJax font size, add to end of *serif_fan.css*:
+
+[MathJax, how to change text size?](https://stackoverflow.com/questions/48136559/mathjax-how-to-change-text-size)
+[How to change font for MathJax](https://stackoverflow.com/questions/41474096/how-to-change-font-for-mathjax)
+
+```
+.math span {
+  font-size: 12px;
+}
+```
+
 # Equations and Reveal.js
 
 ## Page Fragments
