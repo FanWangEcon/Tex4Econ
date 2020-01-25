@@ -1,0 +1,74 @@
+\documentclass[12pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+% url package
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\usepackage{listings}
+\lstset{
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true
+}
+
+
+% Titling and Author
+\title{Latex Example, Latex Text Colors}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+Following examples require the \textbf{xcolor} package.
+
+\section{Nice Colors}
+\subsection{From Latex Color Website}
+\href{http://latexcolor.com/}{latexcolor.com}
+\begin{lstlisting}
+  \usepackage{xcolor}
+  \definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+  \definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
+  \definecolor{bronze}{rgb}{0.8, 0.5, 0.2}
+\end{lstlisting}
+
+\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+\definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
+\definecolor{bronze}{rgb}{0.8, 0.5, 0.2}
+\begin{enumerate}
+  \item \textcolor{ceruleanblue}{This is cerulean blue.}
+  \item \textcolor{brightmaroon}{This is bright maroon.}
+  \item \textcolor{bronze}{This is bronze.}
+\end{enumerate}
+
+\section{Comment Tools}
+\subsection{Mark Several Types of Edits}
+\begin{lstlisting}
+  \newcommand{\AlertStr}{=:}
+  \newcommand{\AlertEnd}{:=}
+  \newcommand{\AlertLit}[1]{$\Big[$\textbf{LL\AlertStr}\emph{\textbf{\textcolor{ceruleanblue}{#1}}}\textbf{\AlertEnd LL}$\Big]$}
+  \newcommand{\AlertPol}[1]{$\Big[$\textbf{PP\AlertStr}\underline{\textbf{\textcolor{bronze}{#1}}}\textbf{\AlertEnd PP}$\Big]$}
+  \newcommand{\AlertMath}[1]{$\Big[$\textbf{MM\AlertStr}\thinspace\textbf{\textcolor{brightmaroon}{#1}}\textbf{\AlertEnd MM}$\Big]$}
+\end{lstlisting}
+
+\newcommand{\AlertStr}{=:}
+\newcommand{\AlertEnd}{:=}
+\newcommand{\AlertLit}[1]{$\Big[$\textbf{LL\AlertStr}\emph{\textbf{\textcolor{ceruleanblue}{#1}}}\textbf{\AlertEnd LL}$\Big]$}
+\newcommand{\AlertPol}[1]{$\Big[$\textbf{PP\AlertStr}\underline{\textbf{\textcolor{bronze}{#1}}}\textbf{\AlertEnd PP}$\Big]$}
+\newcommand{\AlertMath}[1]{$\Big[$\textbf{MM\AlertStr}\thinspace\textbf{\textcolor{brightmaroon}{#1}}\textbf{\AlertEnd MM}$\Big]$}
+
+\begin{enumerate}
+  \item \AlertLit{Literature alert, remember to check some references.}
+  \item \AlertPol{Policy alert, check here policy relevant.}
+  \item \AlertMath{Math alert, need to check the relevant equations.}
+\end{enumerate}
+
+\end{document}
