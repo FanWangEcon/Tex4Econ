@@ -1,0 +1,40 @@
+---
+title: |
+  | Windows Tricks
+  | Shortcuts
+output:
+  pdf_document:
+    df_print: paged
+    number_sections: true
+  html_notebook:
+    number_sections: true
+  word_document:
+    number_sections: true
+  html_document:
+    number_sections: true
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# Windows Shortcuts
+
+[Microsoft Keyboard shortcuts](https://www.microsoft.com/accessories/en-us/support/hardware-tips-and-tricks)
+
+## Launch Programs Pinned to Task Bar
+
+Can pin 1 through 0 programs to windows task bar, and access quickly via **win + 1** for the first pinned program for example.
+
+But how to access the 11th pinned program?
+
+**Info**:
+
+- [5 Ways To Quickly Launch Programs On Windows](https://www.howtogeek.com/124109/5-ways-to-quickly-launch-programs-on-windows/)
+- [Hey, Scripting Guy! How Can I Add a Windows PowerShell Shortcut to the Quick Launch Toolbar?](https://devblogs.microsoft.com/scripting/hey-scripting-guy-how-can-i-add-a-windows-powershell-shortcut-to-the-quick-launch-toolbar/)
+- [Define shortcut key for shortcut in PowerShell](https://stackoverflow.com/questions/32126697/define-shortcut-key-for-shortcut-in-powershell)
+- [get target path of shortcuts](https://social.technet.microsoft.com/Forums/en-US/fddb6ec0-cc48-43f0-929e-bf25d07fbf48/get-target-path-of-shortcuts?forum=winserverpowershell)

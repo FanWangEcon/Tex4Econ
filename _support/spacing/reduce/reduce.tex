@@ -1,8 +1,6 @@
 \documentclass[12pt,english]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx}
-
-
 \usepackage{amsfonts}
 
 \usepackage{listings}
@@ -21,16 +19,6 @@
 \titlespacing\subsection{0pt}{2pt}{0pt}
 \titlespacing\subsubsection{0pt}{2pt}{0pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Reduce Spacing for Math Equations
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\g@addto@macro\normalsize{%
-  \setlength\abovedisplayskip{1pt}
-  \setlength\belowdisplayskip{1pt}
-  \setlength\abovedisplayshortskip{1pt}
-  \setlength\belowdisplayshortskip{1pt}
-}
 
 % Titling and Author
 \title{Reduce Latex Spacing}
@@ -100,6 +88,71 @@ text
 \end{equation}
 \end{document}
 \end{lstlisting}
+
+\subsection{Code to Change Equation Spacing in One Spot}
+\begin{lstlisting}
+  {
+  \abovedisplayskip=25pt
+  \belowdisplayskip=25pt
+  \abovedisplayshortskip=5pt
+  \belowdisplayshortskip=5pt
+  let's skip a lot on top
+  \begin{align*}
+    \begin{gathered}
+          1+1=2\\
+          2+2=4
+  \end{gathered}
+  \end{align*}  
+  let's skip not skip a lot at the bottom
+  }
+\end{lstlisting}
+{
+  \abovedisplayskip=125pt
+  \belowdisplayskip=125pt
+  \abovedisplayshortskip=5pt
+  \belowdisplayshortskip=5pt
+  let's skip a lot on top
+  \[
+  1+1=2
+  \]
+  let's skip not skip a lot at the bottom
+}
+
+\subsection{Change Equation Spacing Different Equations}
+
+Some types of equations one spacing, others another. 
+
+\begin{lstlisting}
+\newcommand{\assumptionskip}{
+\abovedisplayskip=6pt
+\belowdisplayskip=6pt
+\abovedisplayshortskip=6pt
+\belowdisplayshortskip=6pt
+}
+\newcommand{\theoremskip}{
+\abovedisplayskip=12.0pt plus 3.0pt minus 7.0pt
+\belowdisplayskip=12.0pt plus 3.0pt minus 7.0pt
+\abovedisplayshortskip=0.0pt plus 3.0pt
+\belowdisplayshortskip=6.5pt plus 3.5pt minus 3.0pt
+}
+{
+\assumptionskip
+\begin{assumption}
+\label{as:2a}
+Let $A$ be an $i$ specific function with input $b$, specifically:
+\begin{align*}
+	\begin{gathered}
+        1+1=2\\
+        2+2=4\\
+\end{gathered}
+\end{align*}
+where the effects of binary input $B$ on $C$ is additively separable from $Z$.
+\end{assumption}
+}
+
+\end{lstlisting}
+
+see: \href{https://www.overleaf.com/learn/latex/%5Cabovedisplayskip%20and%20related%20commands}{abovedisplayskip and related commands}
 
 
 \section{Margins}
