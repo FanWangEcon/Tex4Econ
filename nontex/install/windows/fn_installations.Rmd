@@ -875,6 +875,9 @@ C:\Program Files\Sublime Text 3\
 
 - [r and rmd setup](https://weibeld.net/r/rmd_sublime_package.html)
 
+- [sublime markdown Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended), [sublime markdown extended](https://github.com/jonschlinkert/sublime-markdown-extended)
+
+
 ### PyCharm
 
 [pycharm](https://www.)jetbrains.com/pycharm/)

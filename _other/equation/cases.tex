@@ -46,7 +46,7 @@ x =
 
 \pagebreak
 
-\section{Two Cases, same line}
+\section{Two Cases, Same Line}
 
 \begin{verbatim}
   \begin{equation*}
@@ -99,5 +99,31 @@ f(x)-1  & if $ x \ge 0$
 \end{align}
 
 \pagebreak
+
+\pagebreak
+
+\section{Cases with Fraction Large Using Array dcases}
+
+Here, we compare the difference between using dcases and cases with fractions.
+
+\subsection{cases}
+
+\begin{align}
+f(x) = \begin{cases*}
+             \frac{a+b}{c+d}  & \text{if } x < 0 \\
+             1  & \text{if } x \ge 0
+       \end{cases*}
+\end{align}
+
+\subsection{dcases}
+Fraction show up larger
+
+\begin{align}
+f(x) = \begin{dcases*}
+             \frac{a+b}{c+d}  & \text{if } x < 0 \\
+             1  & \text{if } x \ge 0
+       \end{dcases*}
+\end{align}
+
 
 \end{document}
