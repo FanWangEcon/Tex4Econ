@@ -2,13 +2,13 @@
 title: "Habits"
 author: John Doe
 date: March 22, 2005
-output: 
+output:
   revealjs::revealjs_presentation:
     theme: sky
     highlight: pygments
     center: true
     transition: none
-    css: serif_fan.css
+    css: fan_present.css
     mathjax: local
     self_contained: false
 ---

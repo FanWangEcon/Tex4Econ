@@ -153,7 +153,7 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
 1. [Install Python, R, Latex, VSCode, Atom etc](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/windows/fn_installations.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html)
     - Conda base Python, R in and outside of Conda
     - Windows and Linux instructions
-    - Install various editors: VSCode, Atom, etc. 
+    - Install various editors: VSCode, Atom, etc.
     - *conda update --all*
     - *Rtools, install.packages(), devtools::install_github()*
 2. [Atom, Git, Github, etc Set-up for Linux](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/linux/fn_ubuntu.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_ubuntu.html)
@@ -196,11 +196,19 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     - in a *present* folder that is parallel to the *css*, *js*, and other folders, put in there testing and other html files.
     - replace links to css, js, lib and plugin in the testing files
 
-## 8.2 Tests
+## 8.2 Default Tests
 
 1. [Default Testing File](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/index.html)
 2. [Default Demo File](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/demo.html)
 3. [Modified Math Presentation](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/math.html)
+
+## 8.3 Rmd and revealjs
+
+1. [Revealjs Rmd and PDF](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.html): [**Rmd**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.Rmd) \| [**pdf**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.pdf) \| [**html**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.html)
+    - R for revealjs, include pictures
+    - convert to PDF using [decktape](https://github.com/astefanutti/decktape)
+    - **git**: *git subtree add, push, pull*
+
 
 * * *
 

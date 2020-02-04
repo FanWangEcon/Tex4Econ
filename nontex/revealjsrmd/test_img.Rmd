@@ -1,0 +1,74 @@
+---
+title: "Test Include Several Images in Revealjs and Generate PDF"
+author: Fan Wang (fanwangecon.github.io)
+date: February 4th, 2020
+output:
+  revealjs::revealjs_presentation:
+    theme: sky
+    highlight: pygments
+    center: false
+    transition: none
+    css: fan_present.css
+    mathjax: local
+    self_contained: false
+params:
+    imgwidth: 25px
+---
+
+# Rmd RevealJS and Decktape
+<!--
+decktape convert to PDF
+cd "C:/Users/fan/Tex4Econ/nontex/revealjsrmd/"
+decktape automatic test_img.html test_img.pdf
+-->
+
+To produce very low cost, easy to compile, easy to produce presentations, use these:
+
+1. [revealjs](https://revealjs.com/#/)
+2. [revealjs_presentation](https://github.com/rstudio/revealjs)
+3. [decktape](https://github.com/astefanutti/decktape)
+
+Use the revealjs r package to write revealjs documents in r markdown and knit to html. Then use decktape to conver html to pdf.
+
+## revealjs and r
+
+See the [rmd file](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.Rmd) that generated this presentation.
+
+## revealjs and r
+
+<!-- cd "C:/Users/fan/Tex4Econ/nontex/revealjsrmd/" -->
+
+Once the HTML file is created, we can use decktape to convert it to pdf:
+
+- install decktape: install [nodejs](https://nodejs.org/en/), npm install -g decktape
+- to save results as image slides individually:
+    * *decktape reveal --screenshots test_img.html test_img.pdf*
+- to save results as a single pdf
+    * *decktape reveal --size='2048x1536' test_img.html test_img.pdf*
+    * [gap issue with large size workaround](https://github.com/astefanutti/decktape/issues/151)
+
+# Image Group One
+
+## Image One JPG
+
+- small jpg profile photo
+- Equation: $1+2=3$
+
+![](images/profile_tiny.jpg)
+
+## Two JPGs Together
+
+- Two Images Together Same Page
+- Equation: $1+2=3$
+
+![](images/profile_tiny.jpg){width=100px}
+![](images/github_logo.jpg){width=100px}
+
+# Image Group Two
+
+## pDF and SVG
+
+- svg and then pdf
+
+![](images/github_logo.svg){width=100px}
+![Alt](images/github_logo.pdf){width=100px}
