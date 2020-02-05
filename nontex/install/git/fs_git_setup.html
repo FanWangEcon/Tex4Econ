@@ -425,8 +425,8 @@ mkdir fanwangecon.github.io PyFan Tex4Econ R4Econ M4Econ Py4Econ Teaching
 git config --global user.name &quot;Fan Wang&quot;
 git config --global user.email wangfanbsg75@live.com</code></pre>
 </div>
-<div id="initalize-and-add-remote-repo-for-each" class="section level2">
-<h2><span class="header-section-number">3.2</span> Initalize and add remote repo for each:</h2>
+<div id="initialize-and-add-remote-repo-for-each" class="section level2">
+<h2><span class="header-section-number">3.2</span> Initialize and add remote repo for each:</h2>
 <pre class="bash"><code># Initialize Repositories
 cd ~/fanwangecon.github.io
 git init
@@ -452,12 +452,12 @@ git remote add github git@github.com:fanwangecon/Teaching</code></pre>
 </div>
 <div id="sync-repo-in-ssh-secure-session" class="section level2">
 <h2><span class="header-section-number">3.3</span> Sync Repo in SSH Secure Session</h2>
-<p>Pull latested from multiple repositories. Just Paste the following lines.</p>
+<p>Pull latest from multiple repositories. Just Paste the following lines.</p>
 <ol style="list-style-type: decimal">
 <li>start ssh-agent secure session</li>
 <li>pull from multiple Repositories upon start of working session.</li>
 <li>commit changes as work on one computer</li>
-<li>upon leaving a computer with commited changes, push all</li>
+<li>upon leaving a computer with committed changes, push all</li>
 <li>create bash file to make it easier to repeat steps</li>
 </ol>
 <p>Start and end ssh session:</p>
@@ -523,6 +523,17 @@ cd ~/PyFan
 git pull github master
 cd ~/Teaching
 git pull github master
+
+# Conditional Pull, pull if some conditional satisfied
+# For example, if a computer has some folder, pull to that.
+if [ -d &quot;D:/Dropbox (UH-ECON)/Project_Nguyen_Townsend_Wang_ThaiFinChoice/draft&quot; ]
+then
+  echo &quot;On Office Precision Desktop, Pull also for NTW Dropbox from Git Repo&quot;
+  cd &quot;D:/Dropbox (UH-ECON)/Project_Nguyen_Townsend_Wang_ThaiFinChoice/draft&quot;
+  git pull github master
+else
+  echo &quot;Not on office Precision, do not pull from NTW git repo to NTW Dropbox&quot;
+fi
 
 # Stop Secured SSH
 kill $SSH_AGENT_PID

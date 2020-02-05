@@ -76,7 +76,7 @@ git config --global user.name "Fan Wang"
 git config --global user.email wangfanbsg75@live.com
 ```
 
-## Initalize and add remote repo for each:
+## Initialize and add remote repo for each:
 
 ```{bash}
 # Initialize Repositories
@@ -105,12 +105,12 @@ git remote add github git@github.com:fanwangecon/Teaching
 
 ## Sync Repo in SSH Secure Session
 
-Pull latested from multiple repositories. Just Paste the following lines.
+Pull latest from multiple repositories. Just Paste the following lines.
 
 1. start ssh-agent secure session
 2. pull from multiple Repositories upon start of working session.
 3. commit changes as work on one computer
-4. upon leaving a computer with commited changes, push all
+4. upon leaving a computer with committed changes, push all
 5. create bash file to make it easier to repeat steps
 
 Start and end ssh session:
@@ -195,6 +195,17 @@ git pull github master
 cd ~/Teaching
 git pull github master
 
+# Conditional Pull, pull if some conditional satisfied
+# For example, if a computer has some folder, pull to that.
+if [ -d "D:/Dropbox (UH-ECON)/Project_Nguyen_Townsend_Wang_ThaiFinChoice/draft" ]
+then
+  echo "On Office Precision Desktop, Pull also for NTW Dropbox from Git Repo"
+  cd "D:/Dropbox (UH-ECON)/Project_Nguyen_Townsend_Wang_ThaiFinChoice/draft"
+  git pull github master
+else
+  echo "Not on office Precision, do not pull from NTW git repo to NTW Dropbox"
+fi
+
 # Stop Secured SSH
 kill $SSH_AGENT_PID
 
@@ -218,7 +229,7 @@ Suppose temporarily need to work on a repo, but don't want it to take up too muc
 
 1. initialize
 2. secure and pull
-3. push 
+3. push
 4. delete
 
 Steps 1 and 2, note do not leave space when defining bash variables around the equality symbol:
