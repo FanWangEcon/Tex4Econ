@@ -22,10 +22,31 @@
 
 \maketitle
 
-
 \section{Multiple Lines of Equation}
 
-\subsection{Split, Center around Symbol}
+Below, I demonstrate several possible ways of aligning and labeling four lines of equations. First, I label some of the four lines with own labels and align by equality sign. Second, we align by the equality sign but use one single label for all lines of equations. Third, we center align on page label each line using gather. Fourth, we center align on page with one label putting gather inside align.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% A.1 Align and Split
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\subsection{Align and Split}
+\subsubsection{Align and Label Lines}
+\begin{verbatim}
+  \begin{align}
+    x_1  =& 1        \label{eq:lineone}\\
+    x_2  =& 1        \nonumber\\
+    h(x) =& f(-20 + 15 + 17) \label{eq:linethree}\\
+    h(x) =& f(12) \approx 1  \label{eq:linefour}
+  \end{align}
+\end{verbatim}
+\begin{align}
+  x_1  =& 1        \label{eq:lineone}\\
+  x_2  =& 1        \nonumber\\
+  h(x) =& f(-20 + 15 + 17) \label{eq:linethree}\\
+  h(x) =& f(12) \approx 1  \label{eq:linefour}
+\end{align}
+\subsubsection{Align Split One Label}
 \begin{verbatim}
 \begin{align}\label{eq:split}
   \begin{split}
@@ -36,7 +57,6 @@
   \end{split}
 \end{align}
 \end{verbatim}
-
 \begin{align}\label{eq:split}
   \begin{split}
     x_1 &= 1 \\
@@ -46,29 +66,50 @@
   \end{split}
 \end{align}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% A.2 Align and Gather
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
-
-\subsection{Gathered, Center of Page}
+\subsection{Align and Gather}
+\subsubsection{Gather and Label Lines}
 \begin{verbatim}
-\begin{align}\label{eq:gathered}
-  \begin{gathered}
-    x_1 = 1, x_2 = 1        \\
-    h(x) = f(-20 + 15 + 17) \\
-    h(x) = f(12) \approx 1
-  \end{gathered}
-\end{align}
+  \begin{gather}
+    x_1  = 1        \label{eq:lineone}\\
+    x_2  = 1        \nonumber\\
+    h(x) = f(-20 + 15 + 17) \label{eq:linethree}\\
+    h(x) = f(12) \approx 1  \label{eq:linefour}
+\end{gather}
 \end{verbatim}
-
-\begin{align}\label{eq:gathered}
+\begin{gather}
+  x_1  = 1        \label{eq:lineone}\\
+  x_2  = 1        \nonumber\\
+  h(x) = f(-20 + 15 + 17) \label{eq:linethree}\\
+  h(x) = f(12) \approx 1  \label{eq:linefour}
+\end{gather}
+\subsubsection{Align Gathered}
+\begin{verbatim}
+  \label{eq:gathered}
   \begin{gathered}
-    x_1 = 1, x_2 = 1        \\
+    x_1 = 1       \\
+    x_2 = 1        \\
+    h(x) = f(-20 + 15 + 17) \\
+    h(x) = f(12) \approx 1
+  \end{gathered}
+\end{verbatim}
+\begin{align}
+  \label{eq:gathered}
+  \begin{gathered}
+    x_1 = 1       \\
+    x_2 = 1        \\
     h(x) = f(-20 + 15 + 17) \\
     h(x) = f(12) \approx 1
   \end{gathered}
 \end{align}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% B. Substack vs Array
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
-
 \section{Substack vs Array}
 \begin{verbatim}
 \begin{align}
