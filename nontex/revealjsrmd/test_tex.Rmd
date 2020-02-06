@@ -1,0 +1,119 @@
+---
+title: "rmd revealjs Latex test"
+author: Fan Wang 
+date: Feb 5, 2020
+output:
+  revealjs::revealjs_presentation:
+    theme: sky
+    highlight: pygments
+    center: true
+    transition: none
+    css: fan_present.css
+    mathjax: local
+    self_contained: false
+---
+
+# Overview
+
+See more from [Fan](fanwangecon.github.io)'s [Tex4Econ](fanwangecon.github.io/Tex4Econ)
+
+We will test out writing equations in RMD + revealjs
+
+# Defining NEWCOMMAND
+
+\newcommand{\vara}{\mathrm{Var}}
+\newcommand{\varb}{\mathrm{\alpha + \beta}}
+\newcommand{\varc}{
+  \frac{a + b}{c + d} \times \exp\left( x \right) = y
+}
+
+<section style="font-size:60%;">
+
+- This is from *\\vara+2*: $\vara+2$ 
+- This is from *\\varb+2*: $\varb+2$ 
+- This is from *\\varc+2*: $\varc+2$ 
+
+</section>
+
+```{tex echo=TRUE, eval=FALSE}
+\newcommand{\vara}{\mathrm{Var}}
+\newcommand{\varb}{\mathrm{\alpha + \beta}}
+\newcommand{\varc}{
+  \frac{a + b}{c + d} \times \exp\left( x \right) = y
+}
+```
+
+
+# Equations
+
+## Inline Equation
+
+<div style="color:darkred;margin:20px;margin-top:50px;" >
+Here is some text that is in red, 
+<b>in between the b symbols mean put this text in bold</b> 
+but this text is not bold
+</div>
+
+
+<p style="margin:10px;font-size:50%;">
+<i>This is smaller italisized text</i>, font size 50 percent.
+</p>
+
+- Regular sized Equation: $1+2=3$
+- Smaller Equation: <span style="font-size:50%;"> $1+2=3$ </span>
+
+## Display Equation
+
+<div style="font-size:40%;" >
+$$
+\begin{equation}
+\label{eq:targetcost}
+Z\left(\tau,\delta\right) =
+\sum\limits_{
+	\substack{
+	\mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+	}
+\left\{\delta\cdot
+\int_{\epsilon}
+\int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+\int_{X}
+N\Big(
+\substack{
+	Y,X,\epsilon; \\
+	\delta, \Gamma_{\mathrm{cohort}}
+}
+\Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+\end{equation}
+$$
+</div>
+
+# Equations New Command
+
+\newcommand{\target}{
+\begin{equation}
+Z\left(\tau,\delta\right) =
+\sum\limits_{
+	\substack{
+	\mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+	}
+\left\{\delta\cdot
+\int_{\epsilon}
+\int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+\int_{X}
+N\Big(
+\substack{
+	Y,X,\epsilon; \\
+	\delta, \Gamma_{\mathrm{cohort}}
+}
+\Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+\end{equation}
+}
+
+Equation defined as new command with different zoom:
+
+<span style="font-size:10%;"> $$\target$$ </span>
+<span style="font-size:20%;"> $$\target$$ </span>
+<span style="font-size:30%;"> $$\target$$ </span>
+<span style="font-size:40%;"> $$\target$$ </span>
+<span style="font-size:50%;"> $$\target$$ </span>
+
