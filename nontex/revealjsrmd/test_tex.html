@@ -518,7 +518,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h3 class="date">Feb 5, 2020</h3>
 </section>
 
-<section id="overview" class="title-slide slide level1"><h1>Overview</h1><p>See more from <a href="fanwangecon.github.io">Fan</a>’s <a href="fanwangecon.github.io/Tex4Econ">Tex4Econ</a></p>
+<section id="overview" class="title-slide slide level1"><h1>Overview</h1><!--
+decktape convert to PDF
+cd "C:/Users/fan/Tex4Econ/nontex/revealjsrmd/"
+decktape automatic test_tex.html test_tex.pdf
+-->
+<p>See more from <a href="fanwangecon.github.io">Fan</a>’s <a href="fanwangecon.github.io/Tex4Econ">Tex4Econ</a></p>
 <p>We will test out writing equations in RMD + revealjs</p></section>
 <section id="defining-newcommand" class="title-slide slide level1"><h1>Defining NEWCOMMAND</h1><section style="font-size:60%;">
 <ul>
@@ -571,7 +576,11 @@ N\Big(
 \]</span></p>
 </div>
 </section></section>
-<section id="equations-new-command" class="title-slide slide level1"><h1>Equations New Command</h1><p>Equation defined as new command with different zoom:</p>
+<section><section id="equations-space-saving" class="title-slide slide level1"><h1>Equations Space Saving</h1><p>The paper latex file already contains various newcommands pre-defined, want to share those latex files with RMD.</p></section><section id="new-command-define-first" class="slide level2">
+<h2>New Command Define First</h2>
+<p>Define long newcommand in RMD and show equation multiple times.</p>
+
+<p>Equation defined as new command with different zoom:</p>
 <p><span style="font-size:10%;"> <span class="math display">\[
 \begin{equation}
 Z\left(\tau,\delta\right) =
@@ -662,7 +671,31 @@ N\Big(
 }
 \Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
 \end{equation}
-\]</span> </span></p></section>
+\]</span> </span></p>
+</section><section id="include-equations-and-symbols-defined-elsewhere" class="slide level2">
+<h2>INclude Equations and Symbols Defined Elsewhere</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">{r child =<span class="st"> &#39;test_tex_define.tex&#39;</span>}</a></code></pre></div>
+
+<p><span style="font-size:40%;"> <span class="math display">\[\text{from external file: } \alpha + \beta\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[\text{from external file: } \sigma_{i=1}^{N} X_i\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[
+  \begin{equation}
+  \text{EXTERNAL: } Z\left(\tau,\delta\right) =
+  \sum\limits_{
+    \substack{
+    \mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+    }
+  \left\{\delta\cdot
+  \int_{\epsilon}
+  \int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+  \int_{X}
+  N\Big(
+  \substack{
+    Y,X,\epsilon; \\
+    \delta, \Gamma_{\mathrm{cohort}}
+  }
+  \Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+  \end{equation}
+\]</span> </span></p>
+</section></section>
     </div>
   </div>
 

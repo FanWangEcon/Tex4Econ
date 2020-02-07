@@ -1,6 +1,6 @@
 ---
 title: "rmd revealjs Latex test"
-author: Fan Wang 
+author: Fan Wang
 date: Feb 5, 2020
 output:
   revealjs::revealjs_presentation:
@@ -14,6 +14,12 @@ output:
 ---
 
 # Overview
+
+<!--
+decktape convert to PDF
+cd "C:/Users/fan/Tex4Econ/nontex/revealjsrmd/"
+decktape automatic test_tex.html test_tex.pdf
+-->
 
 See more from [Fan](fanwangecon.github.io)'s [Tex4Econ](fanwangecon.github.io/Tex4Econ)
 
@@ -29,9 +35,9 @@ We will test out writing equations in RMD + revealjs
 
 <section style="font-size:60%;">
 
-- This is from *\\vara+2*: $\vara+2$ 
-- This is from *\\varb+2*: $\varb+2$ 
-- This is from *\\varc+2*: $\varc+2$ 
+- This is from *\\vara+2*: $\vara+2$
+- This is from *\\varb+2*: $\varb+2$
+- This is from *\\varc+2*: $\varc+2$
 
 </section>
 
@@ -49,8 +55,8 @@ We will test out writing equations in RMD + revealjs
 ## Inline Equation
 
 <div style="color:darkred;margin:20px;margin-top:50px;" >
-Here is some text that is in red, 
-<b>in between the b symbols mean put this text in bold</b> 
+Here is some text that is in red,
+<b>in between the b symbols mean put this text in bold</b>
 but this text is not bold
 </div>
 
@@ -87,7 +93,13 @@ N\Big(
 $$
 </div>
 
-# Equations New Command
+# Equations Space Saving
+
+The paper latex file already contains various newcommands pre-defined, want to share those latex files with RMD.
+
+## New Command Define First
+
+Define long newcommand in RMD and show equation multiple times.
 
 \newcommand{\target}{
 \begin{equation}
@@ -117,3 +129,15 @@ Equation defined as new command with different zoom:
 <span style="font-size:40%;"> $$\target$$ </span>
 <span style="font-size:50%;"> $$\target$$ </span>
 
+## INclude Equations and Symbols Defined Elsewhere
+
+```{r echo=TRUE, eval=FALSE}
+{r child = 'test_tex_define.tex'}
+```
+
+```{r child = 'test_tex_define.tex'}
+```
+
+<span style="font-size:40%;"> $$\exa$$ </span>
+<span style="font-size:40%;"> $$\exb$$ </span>
+<span style="font-size:40%;"> $$\exc$$ </span>

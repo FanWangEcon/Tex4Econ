@@ -208,7 +208,11 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     - R for revealjs, include pictures
     - convert to PDF using [decktape](https://github.com/astefanutti/decktape)
     - **git**: *git subtree add, push, pull*
-
+2. [Revealjs Rmd, Tex and PDF](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_tex.html): [**Rmd**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_tex.Rmd) \| [**pdf**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_tex.pdf) \| [**html**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_tex.html)
+    - R for revealjs, include equations, newcommands
+    - Include child tex files that define a set of newcommands
+    - convert to PDF using [decktape](https://github.com/astefanutti/decktape)
+    - **git**: *git subtree add, push, pull*
 
 * * *
 
