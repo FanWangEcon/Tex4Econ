@@ -38,15 +38,18 @@ Following examples require the \textbf{xcolor} package.
   \definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
   \definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
   \definecolor{bronze}{rgb}{0.8, 0.5, 0.2}
+  \definecolor{dartmouthgreen}{rgb}{0.05, 0.5, 0.06}
 \end{lstlisting}
 
 \definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
 \definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
 \definecolor{bronze}{rgb}{0.8, 0.5, 0.2}
+\definecolor{dartmouthgreen}{rgb}{0.05, 0.5, 0.06}
 \begin{enumerate}
   \item \textcolor{ceruleanblue}{This is cerulean blue.}
   \item \textcolor{brightmaroon}{This is bright maroon.}
   \item \textcolor{bronze}{This is bronze.}
+  \item \textcolor{dartmouthgreen}{This is dartmouth green.}
 \end{enumerate}
 
 \section{Comment Tools}
@@ -57,6 +60,7 @@ Following examples require the \textbf{xcolor} package.
   \newcommand{\AlertLit}[1]{$\Big[$\textbf{LL\AlertStr}\emph{\textbf{\textcolor{ceruleanblue}{#1}}}\textbf{\AlertEnd LL}$\Big]$}
   \newcommand{\AlertPol}[1]{$\Big[$\textbf{PP\AlertStr}\underline{\textbf{\textcolor{bronze}{#1}}}\textbf{\AlertEnd PP}$\Big]$}
   \newcommand{\AlertMath}[1]{$\Big[$\textbf{MM\AlertStr}\thinspace\textbf{\textcolor{brightmaroon}{#1}}\textbf{\AlertEnd MM}$\Big]$}
+  \newcommand{\AlertEdit}[1]{$\Big[$\textbf{EDIT--POINT\AlertStr}\emph{\textbf{\textcolor{dartmouthgreen}{#1}}}\textbf{\AlertEnd EDIT--POINT}$\Big]$}
 \end{lstlisting}
 
 \newcommand{\AlertStr}{=:}
@@ -64,11 +68,13 @@ Following examples require the \textbf{xcolor} package.
 \newcommand{\AlertLit}[1]{$\Big[$\textbf{LL\AlertStr}\emph{\textbf{\textcolor{ceruleanblue}{#1}}}\textbf{\AlertEnd LL}$\Big]$}
 \newcommand{\AlertPol}[1]{$\Big[$\textbf{PP\AlertStr}\underline{\textbf{\textcolor{bronze}{#1}}}\textbf{\AlertEnd PP}$\Big]$}
 \newcommand{\AlertMath}[1]{$\Big[$\textbf{MM\AlertStr}\thinspace\textbf{\textcolor{brightmaroon}{#1}}\textbf{\AlertEnd MM}$\Big]$}
+\newcommand{\AlertEdit}[1]{$\Big[$\textbf{EDIT--POINT\AlertStr}\emph{\textbf{\textcolor{dartmouthgreen}{#1}}}\textbf{\AlertEnd EDIT--POINT}$\Big]$}
 
 \begin{enumerate}
   \item \AlertLit{Literature alert, remember to check some references.}
   \item \AlertPol{Policy alert, check here policy relevant.}
   \item \AlertMath{Math alert, need to check the relevant equations.}
+  \item \AlertEdit{Last time writing stopped here, I want to do these next. so remember what to do when coming back to file.}
 \end{enumerate}
 
 \end{document}
