@@ -1,0 +1,168 @@
+\documentclass[12pt,english]{article}
+
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage[bottom]{footmisc}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{assumption}{Assumption}[section]
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+\usepackage{blindtext}
+
+\usepackage{mathtools}
+\usepackage{bm}
+
+\begin{document}
+
+\title{Math Testing}
+\author{\href{http://fanwangecon.github.io/}{Fan Wang} \thanks{See \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ} for more latex examples.}}
+
+\maketitle
+
+\section{Discrete Allocations}
+
+\subsection{Binary Allocation}
+
+Theorems in each section and corollaries follow section numbering. See \href{https://www.overleaf.com/learn/latex/Theorems_and_proofs}{theorems and proofs}
+
+\subsubsection{Allocation Space}
+
+\begin{assumption}
+    \label{as:1a}
+    \begin{align}
+         f(x)  &= a x^2+b x +c   &   g(x)  &= d x^3 \\
+         f'(x) &= 2 a x +b       &   g'(x) &= 3 d x^2
+    \end{align}
+    \end{assumption}
+    
+\blindtext
+
+\subsubsection{Optimal Targeting Queue}
+
+\begin{theorem}
+\label{thm:1a}
+\blindtext
+\begin{align}
+    f(x) &= (x+a)(x+b) \\
+         &= x^2 + (a+b)x + ab
+\end{align}
+\blindtext
+\end{theorem}
+
+\blindtext
+
+\subsubsection{Special Cases}
+
+\begin{corollary}
+\label{corr:1a}
+$$x^n + y^n = z^n$$
+\blinditemize
+\end{corollary}
+
+\begin{corollary}
+\label{corr:1b}
+\[
+ f(x) = \begin{dcases*}
+        x  & when $x$ is even\\
+        -x & when $x$ is odd
+        \end{dcases*}
+\]
+\end{corollary}
+
+\subsection{Discrete Allocations}
+
+\subsubsection{Discrete Allocation Space}
+
+\begin{assumption}
+\label{as:1b}
+\begin{equation}
+ \boxed{x^2+y^2 = z^2}
+\end{equation}
+\end{assumption}
+
+\subsubsection{Optimal Targeting Discrete Queues}
+
+\begin{theorem}
+\label{thm:1b}
+\blinddescription
+\begin{alignat}{2}
+ \sigma_1 &= x + y  &\quad \sigma_2 &= \frac{x}{y} \\
+ \sigma_1' &= \frac{\partial x + y}{\partial x} & \sigma_2'
+    &= \frac{\partial \frac{x}{y}}{\partial x}
+\end{alignat}
+\end{theorem}
+
+\blindtext
+
+\section{Continuous Allocations}
+
+\blindtext
+
+\subsection{Lower Bounded Continuous Allocations}
+
+\subsubsection{Allocation Space}
+
+\blindtext
+
+\begin{assumption}
+\label{as:2a}
+\[
+ u(x) =
+  \begin{cases}
+   \exp{x} & \text{if } x \geq 0 \\
+   1       & \text{if } x < 0
+  \end{cases}
+\]
+\end{assumption}
+
+\subsubsection{Tageting Queues}
+
+\begin{theorem}
+\label{thm:2a}
+\blindenumerate
+\[
+\lim_{x\to 0}{\frac{e^x-1}{2x}}
+\overset{\left[\frac{0}{0}\right]}{\underset{\mathrm{H}}{=}}
+\lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}
+\]
+\blindtext
+\end{theorem}
+
+\subsubsection{Special cases}
+
+\begin{corollary}
+\label{corr:2a}
+\[
+z = \overbracket[3pt]{
+		\underbracket{x}_{\text{real}} +
+		\underbracket[0.5pt][7pt]{iy}_{\text{imaginary}}
+		}^{\text{complex number}}
+\]
+\blinditemize
+\end{corollary}
+
+\subsection{Lower and Upper Bounded Continuous Allocations}
+\begin{theorem}
+\label{thm:2b}
+\begin{gather}
+ a \xleftrightarrow[under]{over} b\\
+%
+ A \xLeftarrow[under]{over} B\\
+%
+ B \xRightarrow[under]{over} C\\
+%
+ C \xLeftrightarrow[under]{over} D\\
+%
+ D \xhookleftarrow[under]{over} E\\
+%
+ E \xhookrightarrow[under]{over} F\\
+%
+ F \xmapsto[under]{over} G\\
+\end{gather}
+\end{theorem}
+
+
+\end{document}
