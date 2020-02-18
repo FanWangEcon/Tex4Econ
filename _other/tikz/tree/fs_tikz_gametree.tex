@@ -26,6 +26,8 @@
 % url package
 \usepackage{hyperref}
 \usepackage{subcaption}
+\usepackage{relsize} % make some math large
+\usepackage{bm} % make some math bold
 
 % Titling and Author
 \title{Latex Tikz Examples, Discrete and Continuous Strategy Trees}
@@ -121,7 +123,8 @@ child{
 child{
     % Main node of level 2 middle node, same y-axis height as node left and right
     % Y-shift to move level 3 child node lower
-    [purple] node(2)[solid node, xshift=30, yshift=-50, label=right:{hello}]{}
+    [red]  % this is the style of the line middle line
+        node(2)[solid node, xshift=30, yshift=-50, label=right:{hello}]{} % this is the style of the middle point that would have matched up the middle line        
     % D.1 Left level 3 (from middle level 2)
     child{
         [black]
@@ -136,6 +139,8 @@ child{
             node[right]{$D$}
         }
     edge from parent
+        % draw none here prevents the middle line extending rom P1 to hello to be drawn
+        [draw=none]
         %note that you need to adjust the yshift if you change the level distance
         node[left, black, xshift=-5, yshift=0, text width = 1mm]{$\alpha$\\$\beta$\\$\sigma$}
     }
@@ -218,7 +223,7 @@ child{
 child{
     [grow=right]
     child{
-        [black] node(21)[]{}
+        [blue] node(21)[]{}
     }
     child{
         [grow=right]
@@ -228,11 +233,11 @@ child{
         child
     }
     child{
-        [black] node(23)[]{}
+        [red] node(23)[]{}
     }
 }
 child{
-    [black] node(13)[]{}
+    [red] node(13)[]{}
 };
 % information set
 \draw[dashed, bend right]
@@ -248,7 +253,7 @@ Continuous bending exceed middle node, now offset middle node.
 
 \def\famm{5mm}
 \begin{center}
-\begin{tikzpicture}[scale=1.5,font=\footnotesize]W
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
 \tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
 \tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
 \tikzstyle{level 3}=[level distance=\famm,sibling distance=\famm]
@@ -299,6 +304,86 @@ child{
 \end{tikzpicture}
 \end{center}
 
+
+\subsection{Spanning Multi--Tree with Text as a part of Timeline}
+
+Two spanning continuous choices, with text on boundary, clear descriptions. inside of what choices are made. Then inset this as a part of a longer timeline. 
+
+\subsubsection{Two Nodes and Text Along Edges}
+
+Draw nodes and branches, no text, no bending, no coloring.
+
+\def\famm{13mm}
+\begin{center}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
+% B Level 1 point
+\node(0)[solid node, % solid node gives fist (left to right) black dot
+         label=left:{
+            $\textcolor{black}{\mathlarger{\mathlarger{\mathlarger{\bm{\phi}}}}}$
+             }]{}
+[grow=right]
+child{ 
+    [black] node(11)[]{}
+    edge from parent
+            node[sloped, below, black]{$\phi=0$}
+}
+child{
+    [grow=right]
+    % The starting node for theta
+    node(12)[solid node, xshift=16, yshift=0, % solid node gives second (left to right) black dot
+                     label=left:{
+                        $\textcolor{black}{\mathlarger{\mathlarger{\mathlarger{\bm{\theta}}}}}$
+                     }]{}
+    % Draw the theta branches
+        child{
+            [red] node(21)[]{}
+            edge from parent
+                node[sloped, below, black]{$\theta=0$}
+        }
+        child{
+            [white] node(22)[xshift=16, yshift=0]{}        
+            edge from parent
+                [draw=none] % prevents a line to be drawn from phi to phi
+                node[above, black, xshift=7]{$k' = \theta \cdot \Lambda$}
+                node[below, black, xshift=10]{$b' = \Lambda - k'$}    
+        }
+        child{
+            [black] node(23)[]{}
+            edge from parent
+                node[sloped, above, black]{$\theta=1$}
+        }
+    edge from parent
+        [draw=none] % prevents a line to be drawn from phi to phi
+        % node[above, black, yshift=-55]{$c = \phi \cdot \Gamma$}
+        % node[below, black, yshift=-55]{$\Lambda = \left(1-\phi\right) \cdot \Gamma$}
+        node[above, black, xshift=4]{$c = \phi \cdot \Gamma$}
+        node[below, black, xshift=4]{$\Lambda = \Gamma - c$}
+        }
+child{
+    [red] node(13)[]{}
+    edge from parent
+            node[sloped, above, black]{$\phi=1$}
+};
+% information set
+\draw[dashed, bend right]
+    (11) to (13);
+\draw[dashed, bend right]
+    (21) to (23);
+\end{tikzpicture}
+\end{center}
+
+% child{
+%     % C.1.a Node line color
+%     [red]
+%     % C.1.b Node dot
+%     node(1)[solid node, label=below:{red dot}]{}
+%     % C.1.c now go to edge
+%     edge from parent
+%         % C.1.c Node along edge
+%         node[sloped, above, black, text width=3cm]{Minimum Choice showing up along this red line}
+%     }
 
 
 % \begin{istgame}[font=\scriptsize]
