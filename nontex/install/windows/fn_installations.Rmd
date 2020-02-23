@@ -622,6 +622,7 @@ Download [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=Ja
 
 - compile: *ctrl + alt + b*
 - sync: *ctrl + alt + j*
+- terminate pdflatex compile hang: *ctrl + shift + p; kill latex compiler process*
 - live save
 
 **Settings**

@@ -2,7 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathtools}
-
+\usepackage{relsize} % make some math large
+\usepackage{bm} % make some math bold
+\usepackage{bbm}
 % url package
 
 \usepackage{hyperref}
@@ -21,6 +23,38 @@
 \begin{document}
 
 \maketitle
+
+\section{Indicator Function}
+\begin{align}\label{eq:indi}
+  \begin{gathered}
+    \mathbbm{1}\left\{1 + 2 +3\right\}
+    \\
+    \mathlarger{\mathlarger{\mathlarger{
+      \mathbbm{1}
+    }}}
+    \left\{
+      \begin{array}{cc}
+          1 + 2 + 3\\
+          + 4 + 5\\
+          > 0\\
+      \end{array}
+    \right\}
+    \\
+    \mathlarger{\mathlarger{\mathlarger{
+    \mathlarger{\mathlarger{\mathlarger{
+      \mathbbm{1}
+    }}}}}}
+    \left\{
+      \begin{array}{cc}
+          1 + 2 + 3\\
+          + 4 + 5 + 6 \\
+          + 7 + 8 + 9 \\
+          > 0\\
+      \end{array}
+    \right\}
+  \end{gathered}
+\end{align}
+
 
 \section{Multiple Lines of Equation}
 

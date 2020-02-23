@@ -124,7 +124,7 @@ child{
     % Main node of level 2 middle node, same y-axis height as node left and right
     % Y-shift to move level 3 child node lower
     [red]  % this is the style of the line middle line
-        node(2)[solid node, xshift=30, yshift=-50, label=right:{hello}]{} % this is the style of the middle point that would have matched up the middle line        
+        node(2)[solid node, xshift=30, yshift=-50, label=right:{hello}]{} % this is the style of the middle point that would have matched up the middle line
     % D.1 Left level 3 (from middle level 2)
     child{
         [black]
@@ -217,7 +217,7 @@ Add Continuous bending curves.
 % B Level 1 point
 \node(0)[solid node,label=left:{$P1$}]{}
 [grow=right]
-child{ 
+child{
     [black] node(11)[]{}
 }
 child{
@@ -260,7 +260,7 @@ Continuous bending exceed middle node, now offset middle node.
 % B Level 1 point
 \node(0)[solid node,label=left:{$P1$}]{}
 [grow=right]
-child{ 
+child{
     [black] node(11)[]{}
 }
 child{
@@ -279,7 +279,7 @@ child{
             [black] node(32)[]{}
         }
         child{
-            [black] node(33)[]{}   
+            [black] node(33)[]{}
         }
         child{
             [black] node(34)[]{}
@@ -304,10 +304,86 @@ child{
 \end{tikzpicture}
 \end{center}
 
+\subsubsection{State Node and Choice Nodes}
+
+States Nodes, Realizations, and then Continuous and Discrete Choice Nodes
+\def\famm{5mm}
+\def\fammlong{20mm}
+\begin{center}
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+\tikzstyle{level 1}=[level distance=\fammlong,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\fammlong,sibling distance=\famm]
+\tikzstyle{level 3}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 4}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 5}=[level distance=\famm,sibling distance=\famm]
+
+% B Level 1 point
+\node(0)[solid node, red, label=left:{
+    $k,b$ chosen
+    }]{}
+[grow=right]
+child{
+    [grow=right]
+    node(1)[solid node, blue, label=left:{
+        $\Gamma$ realized 
+        }]{}
+    edge from parent
+        [draw=none]
+    child{
+        [grow=right]
+        node(2)[solid node, black, label=left:{$P1$}]{}
+        edge from parent
+            [draw=none]
+        child{
+            [black] node(11)[]{}
+        }
+        child{
+            [grow=right]
+            [white] node(12)[solid node, xshift=7.5, yshift=0]{}
+            child{
+                [black] node(21)[]{}
+            }
+            child{
+                [grow=right]
+                [white] node(22)[solid node, xshift=7.5, yshift=0]{}
+                child {
+                    [black] node(31)[]{}
+                }
+                child{
+                    [black] node(32)[]{}
+                }
+                child{
+                    [black] node(33)[]{}
+                }
+                child{
+                    [black] node(34)[]{}
+                }
+            }
+            child{
+                [black] node(23)[]{}
+            }
+        }
+        child{
+            [black] node(13)[]{}
+        }
+    }
+};
+% information set
+\draw[dashed, bend right]
+    (11) to (13);
+\draw[dashed, bend right]
+    (21) to (23);
+\draw[dotted, line width=0.35mm]
+    (2) to (12);
+\draw[dotted, line width=0.35mm]
+    (12) to (22);
+\end{tikzpicture}
+\end{center}
+
 
 \subsection{Spanning Multi--Tree with Text as a part of Timeline}
 
-Two spanning continuous choices, with text on boundary, clear descriptions. inside of what choices are made. Then inset this as a part of a longer timeline. 
+Two spanning continuous choices, with text on boundary, clear descriptions. inside of what choices are made. Then inset this as a part of a longer timeline.
 
 \subsubsection{Two Nodes and Text Along Edges}
 
@@ -324,7 +400,7 @@ Draw nodes and branches, no text, no bending, no coloring.
             $\textcolor{black}{\mathlarger{\mathlarger{\mathlarger{\bm{\phi}}}}}$
              }]{}
 [grow=right]
-child{ 
+child{
     [black] node(11)[]{}
     edge from parent
             node[sloped, below, black]{$\phi=0$}
@@ -343,11 +419,11 @@ child{
                 node[sloped, below, black]{$\theta=0$}
         }
         child{
-            [white] node(22)[xshift=16, yshift=0]{}        
+            [white] node(22)[xshift=16, yshift=0]{}
             edge from parent
                 [draw=none] % prevents a line to be drawn from phi to phi
                 node[above, black, xshift=7]{$k' = \theta \cdot \Lambda$}
-                node[below, black, xshift=10]{$b' = \Lambda - k'$}    
+                node[below, black, xshift=10]{$b' = \Lambda - k'$}
         }
         child{
             [black] node(23)[]{}
@@ -373,6 +449,8 @@ child{
     (21) to (23);
 \end{tikzpicture}
 \end{center}
+
+
 
 % child{
 %     % C.1.a Node line color
