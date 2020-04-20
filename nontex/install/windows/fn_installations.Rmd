@@ -49,6 +49,204 @@ Installation Plan outline:
 1. Conda install (python)
 2. Install Atom along with Hydrogen and other packages.
 
+# Python Testing and Installation with Poetry and Docs
+
+Locally test specially functions in [poetry](https://python-poetry.org/docs/#installation) environment. Push to github and Pypi, and then install via pip for system wide use. 
+
+
+## Poetry 
+
+
+1. If a module requires another dependency: *poetry add numpy*, if adding numpy. This will install in the virtual env *numpy*.
+2. Type in *poetry env info*, and copy path: *C:/Users/fan/AppData/Local/pypoetry/Cache/virtualenvs/py4econ-6xnVtByB-py3.7*, to pycharm, so that can test module in pycharm using the poetry generated isolated packaging testing env. 
+    + in Pycharm: Settings (ctrl+alt+s) > Project > Python interpreter > click on the cog, "Add" > Right menu, "Virtual Environement" > Existing environement > Three dots > paste the path and point it to the python.exe in Scripts
+3. When finished, *build* and *publish*
+
+```{bash}
+rm -rf dist/ build/
+poetry install
+poetry build 
+poetry publish
+# provide pypi username and password
+```
+
+## Local Install 
+
+```{bash}
+pip install --no-index --find-links="C:/Users/fan/Py4Econ/dist/fantools-0.0.0.900.tar.gz" fantools --ignore-installed
+```
+
+## Pypi Install 
+
+Open up conda prompt, pip install from base. Will install dependencies of package that are in the poetry env but not otherwise in python installation main path. 
+
+```{bash}
+pip install git+https://github.com/fanwangecon/Py4Econ.git#egg=fantools
+
+pip install fantools --ignore-installed
+pip show fantools
+```
+
+```{python}
+import fantools as fantools
+
+```
+
+## sphinx and readthedocs
+
+readthedocs is logged in via github account. Automatically recognizes github repositories, and can import repositories to generate documentation that it can. 
+
+1. install sphinx 
+
+```{bash}
+pip install sphinx
+cd ~/Py4Econ
+mkdir docs
+sphinx-quickstart
+make html
+```
+
+### autodoc
+
+[Documenting Python Packages with Sphinx and ReadTheDocs](https://brendanhasz.github.io/2019/01/05/sphinx.html)
+
+The Napoleon extension for Sphinx allows for NumPy/Google style docstrings instead of using the hard-to-read reStructuredText in your docstrings
+
+> The autodoc extension for sphinx can automatically generate API reference doc pages from the docstrings in your python code. Python docstrings are string literals which occur immediately after function or class definitions. They’re treated as comments, and it’s customary to document a function or class in its docstring. The autodoc extension allows you to include reStructuredText in your docstrings, and will build an API reference automatically for your module from the docstrings, while allowing for further customization.
+
+To enable the autodoc extension, in your conf.py file, add the string 'sphinx.ext.autodoc' to the extensions list (this should have already been done if you answered yes to enabling the autodoc extension during sphinx-quickstart).
+
+```{python}
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('.'))
+```
+
+After enabling autodoc, in the documentation’s .rst files, you can use the automodule directive:
+
+.. automodule:: package_name.module
+   :members:
+
+
+.. autosummary::
+   :toctree: _autosummary
+
+   fantools.utility
+   fantools.utility.inout
+   fantools.utility.inout.bookdownparse
+   fantools.utility.inout.rmdparse
+   fantools.utility.timer
+
+### rst 
+
+= for page titles,
+- for sections,
+^ for subsections, and
+" for subsubsections.
+
+Bulleted lists use asterisks, numbered lists use numbers, and nesting is done with indentation, like Markdown (though nested lists need to be surrounded by blank lines):
+
+* Bulleted
+* list
+
+  * nested
+  * list
+
+* con't
+
+1. Numbered
+2. list
+
+``Code sample``
+
+For hyperlinks, use:
+
+`Link text <http://www.link-address.com>`_
+
+
+Commented lines begin with two periods and a space (like a directive w/o the double colons):
+
+.. I'm a comment!
+And multiline comments are also like directives w/o the colons:
+
+..
+   I am
+   a multiline
+
+   comment
+
+## Python, Poetry, Docs, Git 
+
+Start from without a package. Create two packages: pyecon, pyfan
+
+1. generate poetry repos first, before adding in .git with pull_repos
+2. 
+
+```{bash}
+cd ~
+poetry new pyfan
+
+cd ~
+poetry new pyecon
+
+base ~/base/bin/pull_repos
+
+cd ~/pyfan
+cd "C:/Users/fan/pyfan"
+mkdir docs
+<!-- change release number conf.py and .toml -->
+<!-- sphinx-quickstart -->
+make html
+poetry build 
+poetry publish
+
+cd ~/pyecon
+cd "C:/Users/fan/pyecon"
+mkdir docs
+poetry build 
+poetry publish
+sphinx-quickstart
+make html
+
+poetry env info
+<!-- get virtual env info  -->
+```
+
+install git locally so can use outside of env
+
+pip install git+https://github.com/fanwangecon/pyfan.git#egg=pyfan
+pip show pyfan
+
+> Name: pyfan
+> Version: 0.1.2
+> Summary:
+> Home-page: None
+> Author: Fan Wang
+> Author-email: wangfanbsg75@live.com
+> License: None
+> Location: c:\programdata\anaconda3\lib\site-packages
+> Requires:
+> Required-by:
+
+```{python}
+import pyfan.util.rmd.rmdparse as ft_rmdparse
+ft_rmdparse.fs_rmd_yml_parse()
+
+import pyfan.util.rmd.bookdownparse as ft_bookdownparse
+sfc_prj = 'R4Econ'
+sph_prj = 'C:/Users/fan/R4Econ/'
+spn_prj_bookdown_yml = '_bookdown.yml'
+spn_prj_readme_toc = 'README_toc_three.md'
+
+ft_bookdownparse.fs_yml2readme(sfc_prj=sfc_prj, sph_prj=sph_prj,
+                          spn_prj_bookdown_yml=spn_prj_bookdown_yml,
+                          spn_prj_readme_toc=spn_prj_readme_toc)
+```
+
 # Python and Anaconda Installation
 
 Use conda across platforms, so that locally on windows and ubuntu and remotely on aws, can have the same software setup environment.
@@ -100,7 +298,7 @@ To Add Anaconda to Path, In Windows
     - conda --version
     - also Close and Open up Git Bash: conda --version
 
-## Conda Update
+## Conda Update 
 
 Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.
 
@@ -128,6 +326,17 @@ conda install -c conda-forge -y interpolation awscli
 # aws communicate
 conda install -c anaconda -y boto3
 ```
+
+## Install Packages
+
+Note that some packages are dependencies for fantools and fanecon packages, they would be installed jointly with those packages. 
+
+```{bash}
+pip install --user --upgrade setuptools wheel
+pip install sphinx
+pip install fantools --ignore-installed
+```
+
 
 ## Python Command Line Test
 
@@ -225,6 +434,17 @@ sudo apt-get install libxml2-dev
 ```
 
 ### Install Packages for R
+
+What are the packages I need in R: 
+
+**Use Multiple Languages**:
+
+- [reticulate](https://github.com/rstudio/reticulate)
+
+**Visualization, Packaging Etc**:
+
+- [bookdown](https://bookdown.org/)
+- [formatR](https://cran.r-project.org/web/packages/formatR/index.html): to tidy up rmd chunks
 
 From command prompt, enter R by typeing *R*, and install packages:
 
@@ -878,6 +1098,19 @@ C:\Program Files\Sublime Text 3\
 
 - [sublime markdown Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended), [sublime markdown extended](https://github.com/jonschlinkert/sublime-markdown-extended)
 
+#### Sublime and Outline (Markdown)
+
+To get the markdown outline of the current document if it is markdown press *Ctrl + R*, shows tabbed nested outline view. 
+
+#### Sublime Search and Replace
+
+Append to end of all lines with starting string some suffix. We have many lines that start with *print('abc')*, but the printed statements differ in length. Within the document, want to change all print statements to message statements, and have: *message(print('abc'))*:
+
+1. cursor select *print(*
+2. *alt + F3*, this selects all occurances
+3. *ctrl + end*, moves cursor to end of each line, any other single cursor point speicifc left right end start operation should work
+4. append new text suffix
+5. *ctrl + home*, move cursor to the start of all print lines, and append prefix as needed.
 
 ### PyCharm
 

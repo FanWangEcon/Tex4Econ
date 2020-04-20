@@ -1,0 +1,49 @@
+---
+title: "Basic Git Commands"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+  html_notebook: default
+urlcolor: blue
+always_allow_html: yes
+---
+
+### Basic Git Commands
+
+#### Check File Status
+
+Check if a particular file has had local changes that have not been commited yet.
+
+Use the [*git status*](https://git-scm.com/docs/git-status) command, with short *-s* option:
+
+- *modified*: the *grepl(' M ')* check will be true
+- *new*: the *grepl('?? ')* check will be true
+- *existing no change*: the *(st_git_status == "")* check will be true
+
+```{r}
+spg_modified <- 
+  paste0('git status -s',
+         'C:/Users/fan/R4Econ/amto/array/fs_ary_mesh.Rmd')
+spg_anewfile <- 
+  paste0('git status -s',
+         'C:/Users/fan/R4Econ/math/differentiation/fs_differentiate_lhopital.Rmd')
+spg_nochange <- 
+  paste0('git status -s',
+         'C:/Users/fan/R4Econ/math/func_ineq/fs_atkinson_ces.Rmd')
+
+st_git_status <- toString(system(spg_modified, intern=TRUE))
+grepl(' M ', st_git_status, fixed=TRUE)
+grepl('?? ', st_git_status, fixed=TRUE)
+(st_git_status == "")
+
+st_git_status <- toString(system(spg_anewfile, intern=TRUE))
+grepl(' M ', st_git_status, fixed=TRUE)
+grepl('?? ', st_git_status, fixed=TRUE)
+(st_git_status == "")
+
+st_git_status <- toString(system(spg_nochange, intern=TRUE))
+grepl(' M ', st_git_status, fixed=TRUE)
+grepl('?? ', st_git_status, fixed=TRUE)
+(st_git_status == "")
+```
