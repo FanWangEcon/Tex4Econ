@@ -25,12 +25,18 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 2.  [Equation Cases](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.pdf)
     - *cases*
 
-## 1.3 [Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/)
+## 1.3 [Symbols, Operators and Accents](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols)
+
+1.  [Symbols and Accents](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.pdf)
+    - *underline vs overline*, *underaccent bar vs bar*
+    - bold
+
+## 1.4 [Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/)
 
 1.  [Multi-Panel Estimation Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.pdf)
 2.  [Small Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.pdf)
 
-## 1.4 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
+## 1.5 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
 
 1. [Tikz Page Layout](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning/fs_tikz_position.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning/fs_tikz_position.pdf)
     - relative positioning, proportional to textwidth

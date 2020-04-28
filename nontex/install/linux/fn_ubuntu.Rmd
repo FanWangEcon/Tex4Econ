@@ -46,14 +46,14 @@ apm install vim-mode-plus
 # install git
 sudo apt-get install git
 # generate repo directory and sync
-mkdir ~/PyFan
-# mkdir fanwangecon.github.io PyFan Tex4Econ R4Econ M4Econ Py4Econ Teaching
-cd ~/PyFan
+mkdir ~/base
+# mkdir fanwangecon.github.io base Tex4Econ R4Econ M4Econ Py4Econ Teaching
+cd ~/base
 git init
 # git config only needs to happen once, info stored under ~/.gitconfig
 git config --global user.name "Fan Wang"
 git config --global user.email wangfanbsg75@live.com
-git remote add github git@github.com:FanWangEcon/PyFan.git
+git remote add github git@github.com:FanWangEcon/base.git
 git pull github master
 ```
 
@@ -84,9 +84,9 @@ rm -rf ~/anaconda3
 
 # could be saved in current folder: pwd
 # could be saved in download folder: ~/Downloads
-wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
 # install file
-bash "Anaconda3-2019.10-Linux-x86_64.sh"
+bash "Anaconda3-2020.02-Linux-x86_64.sh"
 # refresh
 source ~/.bashrc
 
@@ -103,17 +103,21 @@ conda update --all
 Additional statistics and related models to install:
 
 ```{r}
-conda install -y statsmodels datashape seaborn
+# Install poetry 
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+# Install pyecon pyfan
+pip install pyfan
+
+# conda install -y statsmodels datashape seaborn
 # conda install statsmodels
 # conda install datashape
 # conda install seaborn
 
-conda install -c conda-forge -y interpolation awscli
+# conda install -c conda-forge -y interpolation awscli
 # conda install -c conda-forge interpolation
 # conda install -c conda-forge awscli
 
-conda install -c anaconda -y boto3
-
+# conda install -c anaconda -y boto3
 # conda install -c r r-irkernel
 ```
 

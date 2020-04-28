@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 Install various compilers and IDE:
 
-1. Python (Anaconda, Pycharm + VSCode + Atom)
+1. Python (Anaconda, Pycharm + VSCode + Atom, Poetry)
 2. R (VSCode + Atom)
 3. Matlab
 4. Latex and PDF (texlive, Okular, VSCode + Atom + Texstudio)
@@ -51,52 +51,176 @@ Installation Plan outline:
 
 # Python Testing and Installation with Poetry and Docs
 
-Locally test specially functions in [poetry](https://python-poetry.org/docs/#installation) environment. Push to github and Pypi, and then install via pip for system wide use. 
+When to use Python:
 
+1. Main use Python for Dynamic programing type tasks
+2. All immediate data tasks should be done in R, including things like generating data structures. Also graph generation in R.
+3. Certain basic tabulation summary statistics etc things done in Stata
 
-## Poetry 
+Two types of python usage cases:
 
+1. Small chunks of python code in RMD for tutorial/class files, combine files in book format as bookdown.
+2. Python installable packages and modules created with poetry, push to github as pypi: Locally test specially functions in [poetry](https://python-poetry.org/docs/#installation) environment. Push to github and Pypi, and then install via pip for system wide use.
 
-1. If a module requires another dependency: *poetry add numpy*, if adding numpy. This will install in the virtual env *numpy*.
-2. Type in *poetry env info*, and copy path: *C:/Users/fan/AppData/Local/pypoetry/Cache/virtualenvs/py4econ-6xnVtByB-py3.7*, to pycharm, so that can test module in pycharm using the poetry generated isolated packaging testing env. 
-    + in Pycharm: Settings (ctrl+alt+s) > Project > Python interpreter > click on the cog, "Add" > Right menu, "Virtual Environement" > Existing environement > Three dots > paste the path and point it to the python.exe in Scripts
-3. When finished, *build* and *publish*
+Installations:
+
+1. Python package development in poetry virtual environment, install with needed dependencies.
+	- This means, during python package development, do not install the packages needed directly in conda, but add as dependency in Poetry
+2. General environment with pip installed packages and conda installed path discoverable pathon packages for rmd chunks.
+
+## Poetry
+
+Install Python via Anaconda first following other instructions. Possibly cleanly uninstall and reinstall. Use Poetry to build python packages and modules.
+
+For development machines, install [Poetry](https://github.com/python-poetry/poetry) and nstall [sphinx](https://www.sphinx-doc.org/en/master/).
 
 ```{bash}
+# poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+# sphinx
+pip install sphinx
+```
+
+Initialize a Poetry-style Python Package and add Sphinx style docs. This creates the folder *~/pyfan* and initialize it with various:
+
+```{bash}
+# creates ~/pyfan as poetry packaging
+cd ~
+poetry new pyfan
+
+# sphinix quickstart
+cd ~/pyfan
+mkdir docs
+sphinx-quickstart
+make html
+
+# build empty package
 rm -rf dist/ build/
 poetry install
-poetry build 
+poetry build
 poetry publish
-# provide pypi username and password
+
+# What is the virtual Env id
+poetry env info
 ```
 
-## Local Install 
+### Installating Poetry Created Packages 
+
+Normally install/test/use inside conda virtual env or poetry virtual env. Poetry would install with *poetry add* and *poetry install*. After seeing some package of interest on github etc, see if the package is on pypi. pip install from pypi if possible. 
+
+Local Install
 
 ```{bash}
-pip install --no-index --find-links="C:/Users/fan/Py4Econ/dist/fantools-0.0.0.900.tar.gz" fantools --ignore-installed
+pip install --no-index --find-links="C:/Users/fan/Py4Econ/dist/pyfan-0.0.0.900.tar.gz" pyfan --ignore-installed
 ```
 
-## Pypi Install 
+Pypi Install
 
-Open up conda prompt, pip install from base. Will install dependencies of package that are in the poetry env but not otherwise in python installation main path. 
+Open up conda prompt, pip install from base. Will install dependencies of package that are in the poetry env but not otherwise in python installation main path.
 
 ```{bash}
-pip install git+https://github.com/fanwangecon/Py4Econ.git#egg=fantools
-
-pip install fantools --ignore-installed
-pip show fantools
+pip install git+https://github.com/fanwangecon/pyfan.git#egg=pyfan
+pip install pyfan --ignore-installed
+pip show pyfan
 ```
 
-```{python}
-import fantools as fantools
+Sometimes, someone ports a package and adds certain things that I need, so need to install from git a package whose modified version is not on pypi, then use git+https
 
+#### What are egg, tar.gz, whl?
+
+poetry creates tar.gz and whl in the dist folder, what are they?
+
+- tarballs: tar.gz 
+
+
+### Developing and testing new tools Pycharm + Poetry
+
+When tesing and developing tools, do so in the poetry virtual environment for the package in which testing is taking place.
+
+After a package has been created and poetry built and poetry publish:
+
+1. Type in *poetry env info*, and copy for example path: *C:/Users/fan/AppData/Local/pypoetry/Cache/virtualenvs/py4econ-6xnVtByB-py3.7*, to pycharm, so that can test module in pycharm using the poetry generated isolated packaging testing env.
+2. In Pycharm: Settings (ctrl+alt+s), Project, Python interpreter.
+3. Click on the cog button, "Add" > Right menu, "Virtual Environement" > Existing environement > Three dots > paste the path and point it to the python.exe in Scripts
+
+```{bash}
+poetry env info
 ```
+
+When a particular tool is needed to build this new module inside package, add the tool via poetry add as a dependency. If a module requires another dependency: *poetry add numpy*, if adding numpy. This will install in the virtual env *numpy*. When packages are added, they are automatically installed. When the the *pyfan* package repo is downloaded somewhere, the dependencies might not be installed yet, and *poetry install* would install them.
+
+```{bash}
+poetry add numpy
+```
+
+#### Development for pyfan
+
+pyfan is the general python tools package for various projects, not economics related directly.
+
+Poetry added dependencies are in */pyfan/pyproject.toml*, Poetry add:
+
+```{bash}
+cd "C:/Users/fan/pyfan"
+cd ~/pyfan
+poetry env info
+```
+
+All installations: 
+
+```{bash}
+poetry remove python-frontmatter pyyaml
+poetry add python-frontmatter pyyaml
+```
+
+Poetry modules added over time:
+
+```{bash}
+# 2020-04
+poetry add pyyaml
+poetry add python-frontmatter
+```
+
+After modules are added and new programs developed
+
+```{bash}
+cd ~/pyfan
+cd "C:/Users/fan/pyfan"
+poetry install
+make html
+rm -rf dist/ build/
+poetry build
+poetry publish
+```
+
+On some local computer install pyfan:
+
+```{bash}
+pip show pyfan
+# conda activate pyfan
+pip install pyfan
+```
+
+##### Uninstall
+
+uninstall packages in the overall environment
+```{bash}
+# list all installed packages
+pip list
+pip show pyyaml
+pip show python-frontmatter
+pip show pyfan
+# unstall packages
+pip uninstall pyyaml
+pip uninstall python-frontmatter
+```
+
+
 
 ## sphinx and readthedocs
 
-readthedocs is logged in via github account. Automatically recognizes github repositories, and can import repositories to generate documentation that it can. 
+readthedocs is logged in via github account. Automatically recognizes github repositories, and can import repositories to generate documentation that it can.
 
-1. install sphinx 
+1. install sphinx
 
 ```{bash}
 pip install sphinx
@@ -141,7 +265,7 @@ After enabling autodoc, in the documentation’s .rst files, you can use the aut
    fantools.utility.inout.rmdparse
    fantools.utility.timer
 
-### rst 
+### rst
 
 = for page titles,
 - for sections,
@@ -179,12 +303,12 @@ And multiline comments are also like directives w/o the colons:
 
    comment
 
-## Python, Poetry, Docs, Git 
+## Python, Poetry, Docs, Git
 
 Start from without a package. Create two packages: pyecon, pyfan
 
 1. generate poetry repos first, before adding in .git with pull_repos
-2. 
+2.
 
 ```{bash}
 cd ~
@@ -201,13 +325,13 @@ mkdir docs
 <!-- change release number conf.py and .toml -->
 <!-- sphinx-quickstart -->
 make html
-poetry build 
+poetry build
 poetry publish
 
 cd ~/pyecon
 cd "C:/Users/fan/pyecon"
 mkdir docs
-poetry build 
+poetry build
 poetry publish
 sphinx-quickstart
 make html
@@ -259,7 +383,9 @@ conda list anaconda
 python -V
 ```
 
-## First Time Conda Install
+## Anaconda Install
+
+### First Time Conda Install
 
 [Download Anaconda Python 3](https://www.anaconda.com/distribution/) and install for all users. Afterwards, Anaconda does not automatically get added to Windows Path. Need to use Anaconda Prompt to access programs. To access Anaconda packages from windows prompt, from git bash, from R, etc, need to Add Anaconda to Windows Path.
 
@@ -284,21 +410,23 @@ where r
 ###############################
 # Add these to Windows PATH:
 ###############################
-# C:\ProgramData\Anaconda3\Scripts
 # C:\ProgramData\Anaconda3
+# C:\ProgramData\Anaconda3\Scripts
+# C:\ProgramData\Anaconda3\Scripts\bin
 ```
 
 To Add Anaconda to Path, In Windows
 1. Search for: Environment Variables
 2. Edit Environment Variables
 3. Add new to Path (lower half):
-    - C:/ProgramData/Anaconda3/Scripts/
     - C:/ProgramData/Anaconda3/
+    - C:/ProgramData/Anaconda3/Scripts/
+    - C:/ProgramData/Anaconda3/Scripts/bin        
 4. Now open up regular windows command Prompt, Type in:
     - conda --version
     - also Close and Open up Git Bash: conda --version
 
-## Conda Update 
+### Conda Update, Install, Channels
 
 Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.
 
@@ -315,21 +443,76 @@ conda config --get channels
 conda config --remove channels conda-forge
 # normal update
 conda update --all
-
-# install additional packages
-# linux utilites
-conda install -y m2-base 
-# stats and graphs
-conda install -y statsmodels datashape seaborn
-# various
-conda install -c conda-forge -y interpolation awscli
-# aws communicate
-conda install -c anaconda -y boto3
 ```
 
-## Install Packages
+### Conda Environments 
 
-Note that some packages are dependencies for fantools and fanecon packages, they would be installed jointly with those packages. 
+For testing installed packages. Note that for development, using poetry for testing package dependencies for package development, and associate pycharm for projects with poetry virtual environments. The idea is that there might be dependency problems etc for packages depending on where/when they were made, might not work in the overall conda environment where pyfan and pyecon, my main tools are installed. Some specific task might only need one particular package. And when working on these, use a conda environment. When this works, could incorporate whatever I am working on into a pyfan, pyecon package along with other packages. 
+
+```{bash}
+conda list env
+conda env remove -n test_package_name
+conda create -n test_package_name -y
+conda activate test_package_name
+conda list
+conda deactivate
+
+conda install pip
+
+# see if package exists on pip and install from pip
+pip install smop
+```
+
+#### Conda Perl Environment
+
+To run some perl tools in an isolated environment:
+
+1. [latexpand](https://tex.stackexchange.com/a/21840/109818)
+
+```{bash}
+# Set up
+conda list env
+conda env remove -n wk_perl
+conda create -n wk_perl -y
+conda activate wk_perl
+conda install -c anaconda perl
+conda list
+conda deactivate
+
+# intall packages in virtual env
+cd "C:\Users\fan\.conda\envs\wk_perl\"
+git clone https://gitlab.com/latexpand/latexpand.git
+
+# use latexpand
+conda activate wk_perl
+cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\Project Emily Minority Survey\Drafts_RR\OverleafChinaSchoolClosure"
+perl "C:\Users\fan\.conda\envs\wk_perl\latexpand\latexpand" draft_edcc_submit_rr.tex > draft_edcc_submit_rr_flat.tex
+```
+
+
+#### Conda Jinja Environment
+
+For testing and packaging latex files. In particular, single folder latex files for final paper submissions. 
+
+```{r}
+# Set up
+conda deactivate
+conda list env
+conda env remove -n wk_jinja
+conda create -n wk_jinja -y
+conda activate wk_jinja
+conda install -c anaconda jinja2
+conda install -c anaconda pyyaml
+
+
+# use yaml2tex
+cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\repos\fanwangecon.github.io\_cv\templating\"
+python yaml2tex.py
+```
+
+## Essential Programs to Install
+
+Install Packages, note that some packages are dependencies for fantools and fanecon packages, they would be installed jointly with those packages.
 
 ```{bash}
 pip install --user --upgrade setuptools wheel
@@ -337,10 +520,21 @@ pip install sphinx
 pip install fantools --ignore-installed
 ```
 
+Previously:
 
-## Python Command Line Test
+```{bash}
+# install additional packages
+# linux utilites
+# conda install -y m2-base
+# stats and graphs
+# conda install -y statsmodels datashape seaborn
+# various
+# conda install -c conda-forge -y interpolation awscli
+# aws communicate
+# conda install -c anaconda -y boto3
+```
 
-Fist test python under command line:
+## Fist test python under command line:
 
 ```{bash}
 # windows
@@ -435,7 +629,7 @@ sudo apt-get install libxml2-dev
 
 ### Install Packages for R
 
-What are the packages I need in R: 
+What are the packages I need in R:
 
 **Use Multiple Languages**:
 
@@ -924,7 +1118,7 @@ The settings.json file, *%APPDATA%/Code/User/settings.json*:
     "*.xml",
     "*.gz",
     "*.bcf"
-  ]  
+  ]
 }
 ```
 
@@ -1100,7 +1294,7 @@ C:\Program Files\Sublime Text 3\
 
 #### Sublime and Outline (Markdown)
 
-To get the markdown outline of the current document if it is markdown press *Ctrl + R*, shows tabbed nested outline view. 
+To get the markdown outline of the current document if it is markdown press *Ctrl + R*, shows tabbed nested outline view.
 
 #### Sublime Search and Replace
 
@@ -1137,6 +1331,7 @@ iwr -useb get.scoop.sh | iex
 
 ## Utilities
 
+- [pandoc](https://pandoc.org/installing.html)
 - 7-zip
 - evernote
 

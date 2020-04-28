@@ -1,0 +1,165 @@
+\documentclass[12pt,english]{article}
+% math tool collection
+\usepackage{mathtools}
+% for math fonts
+\usepackage{bm}
+\usepackage{accents}
+% for links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+% Titling and Author
+\title{Latex Special Symbols}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+Dependencies:
+\begin{verbatim}
+  \usepackage{mathtools}
+  \usepackage{bm}
+  \usepackage{accents}
+\end{verbatim}
+
+\section{Under and Below Hat, Bar and Tilde}
+
+Under and below bar, allowing for bold notation for vector.
+
+\subsection{Accents Package}
+
+Reference:
+\begin{itemize}
+  \item \href{https://tex.stackexchange.com/questions/125412/bar-below-symbol}{SE: bar-below-symbol}
+  \item \href{https://tex.stackexchange.com/questions/66537/making-hats-and-other-accents-bold}{SE: Making hats (and other accents) bold}
+\end{itemize}
+
+\subsubsection{Accents Package Regular Font}
+
+Define:
+
+\newcommand{\uhat}[1]{\underaccent{\hat}{#1}}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\newcommand{\utilde}[1]{\underaccent{\tilde}{#1}}
+% \newcommand{\barbm}[1]{\bm{\bar{#1}}}
+% \newcommand{\ubarbm}[1]{\underaccent{\bar}{\bm{#1}}}
+\begin{verbatim}
+  \newcommand{\uhat}[1]{\underaccent{\hat}{#1}}
+  \newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+  \newcommand{\utilde}[1]{\underaccent{\tilde}{#1}}
+\end{verbatim}
+
+Now write letters with under and over bars etc:
+
+\begin{verbatim}
+  \hat{ABC}, \bar{ABC}, \tilde{ABC},
+  \uhat{ABC}, \ubar{ABC}, \utilde{ABC},
+\end{verbatim}
+\begin{align}
+    \begin{gathered}
+      \hat{a}, \bar{a}, \tilde{a}, \uhat{a}, \ubar{a}, \utilde{a},
+      \hat{A}, \bar{A}, \tilde{A}, \uhat{A}, \ubar{A}, \utilde{A}
+      \\
+      \hat{abc}, \bar{abc}, \tilde{abc}, \uhat{abc}, \ubar{abc}, \utilde{abc},
+      \hat{ABC}, \bar{ABC}, \tilde{ABC}, \uhat{ABC}, \ubar{ABC}, \utilde{ABC}
+      \\
+      \hat{\alpha}, \bar{\alpha}, \tilde{\alpha}, \uhat{\alpha}, \ubar{\alpha}, \utilde{\alpha},
+      \hat{\alpha}, \bar{\alpha}, \tilde{\alpha}, \uhat{\alpha}, \ubar{\alpha}, \utilde{\alpha}
+      \\
+      \hat{\alpha\Gamma\beta}, \bar{\alpha\Gamma\beta}, \tilde{\alpha\Gamma\beta}, \uhat{\alpha\Gamma\beta}, \ubar{\alpha\Gamma\beta}, \utilde{\alpha\Gamma\beta},
+      \hat{\alpha\Gamma\beta}, \bar{\alpha\Gamma\beta}, \tilde{\alpha\Gamma\beta}, \uhat{\alpha\Gamma\beta}, \ubar{\alpha\Gamma\beta}, \utilde{\alpha\Gamma\beta}
+      \\
+    \end{gathered}
+\end{align}
+
+\subsubsection{Accents Package Bold}
+
+Define these new commands that combine \href{https://ctan.org/pkg/accents?lang=en}{accent} and the \href{https://ctan.org/pkg/bm?lang=en}{bm} packages. Note that the accents are defined outside of the bold letters, so accents are not bold. Can not define bold accents with bm directly using the accents package it seems:
+
+\newcommand{\hatbm}[1]{\hat{\bm{#1}}}
+\newcommand{\barbm}[1]{\bar{\bm{#1}}}
+\newcommand{\tildebm}[1]{\tilde{\bm{#1}}}
+\newcommand{\uhatbm}[1]{\underaccent{\hat}{\bm{#1}}}
+\newcommand{\ubarbm}[1]{\underaccent{\bar}{\bm{#1}}}
+\newcommand{\utildebm}[1]{\underaccent{\tilde}{\bm{#1}}}
+\begin{verbatim}
+\newcommand{\hatbm}[1]{\hat{\bm{#1}}}
+\newcommand{\barbm}[1]{\bar{\bm{#1}}}
+\newcommand{\tildebm}[1]{\tilde{\bm{#1}}}
+\newcommand{\uhatbm}[1]{\underaccent{\hat}{\bm{#1}}}
+\newcommand{\ubarbm}[1]{\underaccent{\bar}{\bm{#1}}}
+\newcommand{\utildebm}[1]{\underaccent{\tilde}{\bm{#1}}}
+\end{verbatim}
+
+Now write letters with under and over bars etc:
+
+\begin{verbatim}
+  \hatbm{ABC}, \barbm{ABC}, \tildebm{ABC},
+  \uhatbm{ABC}, \ubarbm{ABC}, \utildebm{ABC},
+\end{verbatim}
+\begin{align}
+    \begin{gathered}
+      \hatbm{\Gamma}, \uhatbm{\Gamma\beta}\\
+      \barbm{a}, \ubarbm{a}\\
+      \tildebm{a}, \utildebm{a}\\
+      \hatbm{a}, \barbm{a}, \tildebm{a}, \uhatbm{a}, \ubarbm{a}, \utildebm{a},
+      \hatbm{A}, \barbm{A}, \tildebm{A}, \uhatbm{A}, \ubarbm{A}, \utildebm{A},
+      \\
+      \hatbm{abc}, \barbm{abc}, \tildebm{abc}, \uhatbm{abc}, \ubarbm{abc}, \utildebm{abc},
+      \hatbm{ABC}, \barbm{ABC}, \tildebm{ABC}, \uhatbm{ABC}, \ubarbm{ABC}, \utildebm{ABC},
+      \\
+      \hatbm{\alpha}, \barbm{\alpha}, \tildebm{\alpha}, \uhatbm{\alpha}, \ubarbm{\alpha}, \utildebm{\alpha},
+      \hatbm{\alpha}, \barbm{\alpha}, \tildebm{\alpha}, \uhatbm{\alpha}, \ubarbm{\alpha}, \utildebm{\alpha}\\
+      \hatbm{\alpha\Gamma\beta}, \barbm{\alpha\Gamma\beta}, \tildebm{\alpha\Gamma\beta}, \uhatbm{\alpha\Gamma\beta}, \ubarbm{\alpha\Gamma\beta}, \utildebm{\alpha\Gamma\beta},
+      \hatbm{\alpha\Gamma\beta}, \barbm{\alpha\Gamma\beta}, \tildebm{\alpha\Gamma\beta}, \uhatbm{\alpha\Gamma\beta}, \ubarbm{\alpha\Gamma\beta}, \utildebm{\alpha\Gamma\beta}\\
+    \end{gathered}
+\end{align}
+
+\subsubsection{Mathcal and Accents}
+
+\begin{verbatim}
+  \bar{\mathcal{Q}^{C}}, \ubar{\mathcal{Q}^{C}},
+  \barbm{\mathcal{Q}^{C}}, \ubarbm{\mathcal{Q}^{C}}
+\end{verbatim}
+\begin{align}
+    \begin{gathered}
+      \bar{\mathcal{A}}, \ubar{\mathcal{A}},
+      \barbm{\mathcal{A}}, \ubarbm{\mathcal{A}}\\
+      \bar{\mathcal{Q}^{C}}, \ubar{\mathcal{Q}^{C}},
+      \barbm{\mathcal{Q}^{C}}, \ubarbm{\mathcal{Q}^{C}}\\
+      \tilde{\mathcal{A}}, \utilde{\mathcal{A}},
+      \tildebm{\mathcal{A}}, \utildebm{\mathcal{A}}\\
+      \tilde{\mathcal{Q}^{C}}, \utilde{\mathcal{Q}^{C}},
+      \tildebm{\mathcal{Q}^{C}}, \utildebm{\mathcal{Q}^{C}}\\
+    \end{gathered}
+\end{align}
+
+\subsubsection{bm and Underline and Overline}
+
+Rather than using bar and under bar that are fixed width, use underline and overline which change width and can change in boldness.
+
+\newcommand{\overlinebm}[1]{\bm{\overline{#1}}}
+\newcommand{\underlinebm}[1]{\bm{\underline{#1}}}
+\begin{verbatim}
+\newcommand{\overlinebm}[1]{\bm{\overline{#1}}}
+\newcommand{\underlinebm}[1]{\bm{\underline{#1}}}
+\end{verbatim}
+
+\begin{verbatim}
+  \bar{\mathcal{Q}^{C}}, \ubar{\mathcal{Q}^{C}},
+  \barbm{\mathcal{Q}^{C}}, \ubarbm{\mathcal{Q}^{C}}
+\end{verbatim}
+\begin{align}
+    \begin{gathered}
+      \overlinebm{\mathcal{Q}^{C}}, \underlinebm{\mathcal{Q}^{C}}, \overlinebm{\mathcal{ABC}^{C}}, \underlinebm{\mathcal{ABC}^{C}}\\
+      \overlinebm{\alpha\Gamma\beta}, \underlinebm{\alpha\Gamma\beta}\\
+    \end{gathered}
+\end{align}
+
+\end{document}

@@ -1,0 +1,52 @@
+---
+title: "Tex Flatten Subdirectory files to Root"
+titleshort: "Tex Flatten Subdirectory files to Root"
+description: |
+  Working directory has multiple subfolders, folders, and refer to input files, flatten all into one level without subfolders.
+  Extract subdirectory files to main directory and edit main file links.
+core:
+  - package: tex
+    code: |
+      tex
+date: 2020-04-27
+date_start: 2020-04-27
+output:
+  pdf_document:
+    pandoc_args: '../../_output_kniti_pdf.yaml'
+    includes:
+      in_header: '../../preamble.tex'
+  html_document:
+    pandoc_args: '../../_output_kniti_html.yaml'
+    includes:
+      in_header: "../../hdga.html"
+always_allow_html: true
+urlcolor: blue
+---
+
+### Flatten Latex File
+
+```{r global_options, include = FALSE}
+try(source("../../.Rprofile"))
+```
+
+`r text_shared_preamble_one`
+`r text_shared_preamble_two`
+`r text_shared_preamble_thr`
+
+- latex automatically extract \input to put in same file
+- [Replace \input{fileX} by the content of fileX automatically](https://tex.stackexchange.com/questions/21838/replace-inputfilex-by-the-content-of-filex-automatically/21840)
+
+Can use Pandoc, but pandoc conversion leads to all incorrect labels, confusing references.
+
+```{bash}
+cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\Project Emily Minority Survey\Drafts_RR\ChinaSchoolClosure"
+pandoc -s draft_edcc_submit_rr.tex -o draft_edcc_submit_rr_flat.tex
+```
+
+use latexpand
+
+```{bash}
+conda activate wk_perl
+cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\Project Emily Minority Survey\Drafts_RR\OverleafChinaSchoolClosure"
+perl "C:\Users\fan\.conda\envs\wk_perl\latexpand\latexpand" draft_main.tex > draft_main_flat.tex
+```
