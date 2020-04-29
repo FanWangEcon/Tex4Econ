@@ -17,7 +17,7 @@ params:
 
 # Rmd RevealJS and Decktape
 <!--
-decktape convert to PDF
+# decktape convert to PDF
 cd "C:/Users/fan/Tex4Econ/nontex/revealjsrmd/"
 decktape automatic test_img.html test_img.pdf
 -->

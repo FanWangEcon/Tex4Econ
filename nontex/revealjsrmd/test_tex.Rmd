@@ -17,7 +17,7 @@ output:
 
 <!--
 decktape convert to PDF
-cd "C:/Users/fan/Tex4Econ/nontex/revealjsrmd/"
+cd "C:/Users/fan/Documents/Dropbox (UH-ECON)/repos/Tex4Econ/nontex/revealjsrmd/"
 decktape automatic test_tex.html test_tex.pdf
 -->
 
@@ -129,14 +129,28 @@ Equation defined as new command with different zoom:
 <span style="font-size:40%;"> $$\target$$ </span>
 <span style="font-size:50%;"> $$\target$$ </span>
 
-## INclude Equations and Symbols Defined Elsewhere
+## Include Equations and Symbols Defined Elsewhere
+
+Reuse tex preamble from paper, load as child, and clean comments.
 
 ```{r echo=TRUE, eval=FALSE}
-{r child = 'test_tex_define.tex'}
+# This loads the tex preamble with predefined formula, reuseable symbols etc.
+test_tex_define_out = knitr::knit_child('test_tex_define.tex')
+# Delete all comment lines, which starts with percent, and end with carriage return
+# This deletes all but the last line
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+# Delete last comment if on final line
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
 ```
 
-```{r child = 'test_tex_define.tex'}
+```{r include=FALSE, eval=TRUE}
+test_tex_define_out = knitr::knit_child('test_tex_define.tex')
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
 ```
+
+`r paste(test_tex_define_out, collapse='\n')`
+
 
 <span style="font-size:40%;"> $$\exa$$ </span>
 <span style="font-size:40%;"> $$\exb$$ </span>
