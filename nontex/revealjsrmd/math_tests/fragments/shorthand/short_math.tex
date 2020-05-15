@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Math Common Symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cdotf}{\boldsymbol{\cdot}}
+%\newcommand{\widetilde}[1]{\overset{\sim}{#1}}
+
+\newcommand{\thickhat}[1]{\mathbf{\hat{\text{#1}}}}
+\newcommand{\thickbar}[1]{\mathbf{\bar{\text{#1}}}}
+\newcommand{\thicktilde}[1]{\mathbf{\tilde{\text{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% A. Index
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Group Total and Group Index
+\newcommand{\Nc}{N}
+\newcommand{\Nccons}{\mathcal{M}}
+\newcommand{\Ic}{i}
+\newcommand{\Ich}{\widehat{\Ic}}
+% \newcommand{\Ic}{{\color{redm}}
+% \newcommand{\Icp}{{\color{black}m^{\prime}}}
+% \newcommand{\Icp}{\widetilde{\Ic}}
+% \newcommand{\Icp}{\widehat{\Ic}}
+\newcommand{\Icp}{j}
+\newcommand{\Icpp}{\widetilde{\Ic}}
+\newcommand{\Io}{{\color{black}q}} % q is the current child allocating for, m is the other child, all others, relative allocation for m given allocation for q. When summing up, m disappear, only allocation for q left over.
+\newcommand{\Ii}{\mathbb{I}} % q is the current child allocating for, m is the other child, all others, relative allocation for m given allocation for q. When summing up, m disappear, only allocation for q left over.
+% Extra indexing if i and j already used, another summation index, cpe: indi, prime, extra
+\newcommand{\Icpe}{l}
+
+% Discrete Units Index
+% Nk not needed, use VDhg
+\newcommand{\Ik}{l}
+\newcommand{\Ikp}{\widetilde{\Ik}} % second tier index
+\newcommand{\Ikpp}{\Ik^{\prime}} % third tier index
+
+% Group Total and Group Index
+\newcommand{\Ng}{J}
+\newcommand{\Ig}{j}
+\newcommand{\Ncg}{M_{\Ig}}
+
+% Age/time variable
+\newcommand{\DAY}{t}
+\newcommand{\DAYMAX}{T}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% B. Function
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fprodi}{\mathcal{\HL}}
+\newcommand{\Fplanner}{O}
+\newcommand{\FuHgt}{g}
+\newcommand{\FuCon}{u}
+
+% Generic constrained set
+\newcommand{\Fconsgn}{\mathcal{C}}
+% Binary Constrained Set
+\newcommand{\Fconsbi}{\mathcal{C}^{\VB}}
+\newcommand{\Fconsbipf}{\mathcal{C}^{\widehat{\VB}}}
+% Discrete Constrained Set
+\newcommand{\Fconsds}{\mathcal{C}^{\VD}}
+\newcommand{\Fconsdspf}{\mathcal{C}^{\widehat{\VD}}}
+% Continous Pos Constrained Set
+\newcommand{\Fconspo}{\mathcal{C}^{\VN}}
+\newcommand{\Fconspopf}{\mathcal{C}^{\widehat{\VN}}}
+% Continous bounded Constrained Set
+\newcommand{\Fconsbd}{\mathcal{C}^{\VC}}
+\newcommand{\Fconsbdpf}{\mathcal{C}^{\widehat{\VC}}}
+% Log Linear Problem Set
+\newcommand{\Fconslg}{\mathcal{C}^{\VG}}
+\newcommand{\Fconslgpf}{\mathcal{C}^{\widehat{\VG}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% C. Solutions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main Symbols
+\newcommand{\Fh}{H}
+\newcommand{\Fopti}{\mathcal{N}}
+
+% share solution Notations
+% Q for queue, K for knots
+\newcommand{\Opti}{\ast}
+\newcommand{\ValueQ}{R}
+\newcommand{\IndexQ}{Q}
+\newcommand{\LevelQ}{K}
+\newcommand{\Start}{\mathbb{S}}
+\newcommand{\End}{\mathbb{E}}
+
+% Optimal generic choice
+\newcommand{\FVopti}{\mathit{\VV}^{\Opti}}
+% \newcommand{\FVoptiidx}{\mathcal{\IndexQ}^{\VB}}
+
+% Optimal binary choice
+\newcommand{\FBopti}{\mathit{\VB}^{\Opti}}
+\newcommand{\FBoptiiter}{\mathit{\widehat{\VB}}^{\Opti}}
+\newcommand{\FBoptiidx}{\mathcal{\IndexQ}^{\VB}}
+
+% Optimal Discrete Choice
+% FDoptivalrela: relative value
+\newcommand{\FDoptiV}{\bm{\VD}^{\Opti}}
+\newcommand{\FDopti}{\mathit{\VD}^{\Opti}}
+\newcommand{\FDoptiiter}{\mathit{\widehat{\VD}}^{\Opti}}
+\newcommand{\FDoptiidx}{\mathcal{\IndexQ}^{\VD}}
+\newcommand{\FDoptivalrela}{\mathcal{\ValueQ}}
+
+% Optimal CRS/linear solutions lower bound
+\newcommand{\FNopti}{\mathit{\VN}^{\Opti}}
+\newcommand{\FNoptiequal}{\mathit{\VN}^{\Opti,\text{unc}}} % only equality constrained, unconstrained by inequalities, in proof,
+\newcommand{\FNoptiidxstr}{\ubar{\mathcal{\IndexQ}}^{\VN}} % start allocate index
+\newcommand{\FNoptilvlstr}{\ubar{\mathcal{\LevelQ}}^{\VN}} % start allocate index
+% \newcommand{\FNoptitworat}{\mathcal{F}^{\frac{\VN_1}{\VN_2}}} % unconstrained ratio
+\newcommand{\FNoptitworat}{\mathcal{F}^{\VN_1/\VN_2}} % unconstrained ratio
+\newcommand{\FNoptitworatone}{\mathcal{F}^1} % unconstrained ratio
+\newcommand{\FNoptitworattwo}{\mathcal{F}^2} % unconstrained ratio
+%\newcommand{\FNoptitworat}{\mathcal{F}} % unconstrained ratio
+
+% Optimal CRS/linear solutions lower + upper bounded
+\newcommand{\FCoptiV}{\bm{\VC}^{\Opti}}
+\newcommand{\FCopti}{\mathit{\VC}^{\Opti}}
+\newcommand{\FCoptiidxstr}{\ubar{\mathcal{\IndexQ}}^{\VC}} % start allocate index
+\newcommand{\FCoptilvlstr}{\ubar{\mathcal{\LevelQ}}^{\VC}} % start allocate index
+\newcommand{\FCoptiidxend}{\bar{\mathcal{\IndexQ}}^{\VC}} % start allocate index
+\newcommand{\FCoptilvlend}{\bar{\mathcal{\LevelQ}}^{\VC}} % start allocate index
+
+\newcommand{\FCoptiidxstrV}{\underlinebm{\mathcal{\IndexQ}}^{\VC}} % start allocate index
+\newcommand{\FCoptilvlstrV}{\underlinebm{\mathcal{\LevelQ}}^{\VC}} % start allocate index
+\newcommand{\FCoptiidxendV}{\overlinebm{\mathcal{\IndexQ}}^{\VC}} % start allocate index
+\newcommand{\FCoptilvlendV}{\overlinebm{\mathcal{\LevelQ}}^{\VC}} % start allocate index
+
+% Log Linear
+% Optimal Discrete Choice
+\newcommand{\FGopti}{\mathit{\VG}^{\Opti}}
+\newcommand{\FGoptiidx}{\mathcal{\IndexQ}^{\VG}}
+
+%%% OLD
+\newcommand{\Foptirela}{\Fopti^{\text{relative}\ast}}
+\newcommand{\Foptilin}{\Fopti^{\text{}\ast}}
+\newcommand{\Foptiidx}{\mathcal{Q}}
+\newcommand{\Foptiidxfc}[1]{\Foptiidx\left(#1\right)}
+
+% Optimal CRS/linear solutions
+\newcommand{\FCoptirela}{\Fopti^{\text{relative,\bounded}\ast}}
+\newcommand{\FCoptilin}{\Fopti^{\text{\bounded}\ast}}
+%\newcommand{\FCoptiidxstr}{\ubar{\mathcal{Q}}^{\mathbb{S}}}
+%\newcommand{\FCoptiidxend}{\bar{\mathcal{Q}}^{\mathbb{E}}}
+\newcommand{\FCoptiidxstrfc}[1]{\ubar{\mathcal{Q}}\left(#1\right)}
+\newcommand{\FCoptiidxendfc}[1]{\bar{\mathcal{Q}}\left(#1\right)}
+%\newcommand{\FCoptilvlstr}{\mathbb{\VNagg}^{\mathbb{S}}}
+%\newcommand{\FCoptilvlend}{\mathbb{\VNagg}^{\mathbb{E}}}
+\newcommand{\FCoptilvlstrfc}[1]{\FCoptilvlstr\left(#1\right)}
+\newcommand{\FCoptilvlendfc}[1]{\FCoptilvlend\left(#1\right)}
+
+
+% Optimal DRS/Log-linear solutions
+\newcommand{\Foptilog}{\Fopti^{\VG\ast}}
+\newcommand{\Fhev}{\Delta^{\text{WEV}}}
+\newcommand{\Frev}{\Delta^{\text{REV}}}

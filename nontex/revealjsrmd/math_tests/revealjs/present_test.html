@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Fan Wang (fanwangecon.github.io)" />
+  <meta name="dcterms.date" content="2020-05-04" />
+  <title>Test RevealJS Loading Many Latex Files with Many Newcommands</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="present_test_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="present_test_files/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="fan_present.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Test RevealJS Loading Many Latex Files with Many Newcommands</h1>
+    <h2 class="author">Fan Wang (fanwangecon.github.io)</h2>
+    <h3 class="date">May 4, 2020</h3>
+</section>
+
+<section id="loading-many-latex-files-with-many-newcommands" class="title-slide slide level1"><h1>Loading Many Latex Files with Many Newcommands</h1><p>Need to avoid retyping latex newcommands which have many formated equations with parameters, symbols, and words that are concontrolled centrally.</p></section>
+<section><section id="loading-files-from-another-directory" class="title-slide slide level1"><h1>Loading Files from Another Directory</h1><p>Usually the latex preamble files are stored somewhere else to work with the main paper draft tex file.</p></section><section id="load-tex-from-the-same-folder" class="slide level2">
+<h2>Load Tex from the same folder</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">test_tex_define_out =<span class="st"> </span>knitr<span class="op">::</span><span class="kw">knit_child</span>(<span class="st">&#39;tex_preamble.tex&#39;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2">test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">%.*?</span><span class="ch">\\\n</span><span class="st">&quot;</span>, <span class="st">&quot;&quot;</span>, test_tex_define_out)</a>
+<a class="sourceLine" id="cb1-3" title="3">test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\\n</span><span class="st">%.*&quot;</span>,<span class="st">&quot;&quot;</span>, test_tex_define_out)</a></code></pre></div>
+
+<p><span style="font-size:40%;"> <span class="math display">\[\text{from external file: } \alpha + \beta\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[\text{from external file: } \sigma_{i=1}^{N} X_i\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[
+  \begin{equation}
+  \text{EXTERNAL: } Z\left(\tau,\delta\right) =
+  \sum\limits_{
+    \substack{
+    \mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+    }
+  \left\{\delta\cdot
+  \int_{\epsilon}
+  \int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+  \int_{X}
+  N\Big(
+  \substack{
+    Y,X,\epsilon; \\
+    \delta, \Gamma_{\mathrm{cohort}}
+  }
+  \Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+  \end{equation}
+\]</span> </span></p>
+</section><section id="load-tex-from-the-parallel-folder" class="slide level2">
+<h2>Load Tex from the parallel folder</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">test_tex_define_out =<span class="st"> </span>knitr<span class="op">::</span><span class="kw">knit_child</span>(<span class="st">&#39;../fragments/tex_preamble.tex&#39;</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2">test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">%.*?</span><span class="ch">\\\n</span><span class="st">&quot;</span>, <span class="st">&quot;&quot;</span>, test_tex_define_out)</a>
+<a class="sourceLine" id="cb2-3" title="3">test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\\n</span><span class="st">%.*&quot;</span>,<span class="st">&quot;&quot;</span>, test_tex_define_out)</a></code></pre></div>
+
+<p><span style="font-size:40%;"> <span class="math display">\[\text{from external in parallel folder: } \alpha + \beta\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[\text{from external in parallel folder: } \sigma_{i=1}^{N} X_i\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[
+  \begin{equation}
+  \text{EXTERNAL in parallel folder: } Z\left(\tau,\delta\right) =
+  \sum\limits_{
+    \substack{
+    \mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+    }
+  \left\{\delta\cdot
+  \int_{\epsilon}
+  \int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+  \int_{X}
+  N\Big(
+  \substack{
+    Y,X,\epsilon; \\
+    \delta, \Gamma_{\mathrm{cohort}}
+  }
+  \Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+  \end{equation}
+\]</span> </span></p>
+</section><section id="load-tex-from-the-parallel-folder-subfolder" class="slide level2">
+<h2>Load Tex from the parallel folder subfolder</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">test_tex_define_out =<span class="st"> </span>knitr<span class="op">::</span><span class="kw">knit_child</span>(<span class="st">&#39;../fragments/shorthand/tex_preamble.tex&#39;</span>)</a>
+<a class="sourceLine" id="cb3-2" title="2">test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">%.*?</span><span class="ch">\\\n</span><span class="st">&quot;</span>, <span class="st">&quot;&quot;</span>, test_tex_define_out)</a>
+<a class="sourceLine" id="cb3-3" title="3">test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\\n</span><span class="st">%.*&quot;</span>,<span class="st">&quot;&quot;</span>, test_tex_define_out)</a></code></pre></div>
+
+<p><span style="font-size:40%;"> <span class="math display">\[\text{from external in parallel folder subfolder: } \alpha + \beta\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[\text{from external in parallel folder subfolder: } \sigma_{i=1}^{N} X_i\]</span> </span> <span style="font-size:40%;"> <span class="math display">\[
+  \begin{equation}
+  \text{EXTERNAL in parallel folder subfolder: } Z\left(\tau,\delta\right) =
+  \sum\limits_{
+    \substack{
+    \mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+    }
+  \left\{\delta\cdot
+  \int_{\epsilon}
+  \int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+  \int_{X}
+  N\Big(
+  \substack{
+    Y,X,\epsilon; \\
+    \delta, \Gamma_{\mathrm{cohort}}
+  }
+  \Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+  \end{equation}
+\]</span> </span></p>
+</section></section>
+<section><section id="loading-multiple-latex-files-together-with-single-input" class="title-slide slide level1"><h1>Loading Multiple Latex Files Together with single input</h1><p>Find all files with certain suffix in a folder, and then load them all in as child:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">spt_root &lt;-<span class="st"> &#39;C:/Users/fan/Documents/Dropbox (UH-ECON)/repos/Tex4Econ/&#39;</span></a>
+<a class="sourceLine" id="cb4-2" title="2">spt_texfolder &lt;-<span class="st"> &#39;nontex/revealjsrmd/math_tests/fragments/shorthand&#39;</span></a>
+<a class="sourceLine" id="cb4-3" title="3">ls_path_group_use &lt;-<span class="st"> </span><span class="kw">paste0</span>(spt_root, spt_texfolder)</a>
+<a class="sourceLine" id="cb4-4" title="4">ls_sfls &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="dt">path=</span>ls_path_group_use, <span class="dt">recursive=</span>T, <span class="dt">pattern=</span><span class="st">&quot;short.*.tex&quot;</span>, <span class="dt">full.names=</span>T)</a>
+<a class="sourceLine" id="cb4-5" title="5"></a>
+<a class="sourceLine" id="cb4-6" title="6">test_tex_define_all &lt;-<span class="st"> &#39;&#39;</span></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="cf">for</span> (spt_file <span class="cf">in</span> ls_sfls) {</a>
+<a class="sourceLine" id="cb4-8" title="8">  test_tex_define_out =<span class="st"> </span>knitr<span class="op">::</span><span class="kw">knit_child</span>(spt_file)</a>
+<a class="sourceLine" id="cb4-9" title="9">  test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">%.*?</span><span class="ch">\\\n</span><span class="st">&quot;</span>, <span class="st">&quot;&quot;</span>, test_tex_define_out)</a>
+<a class="sourceLine" id="cb4-10" title="10">  test_tex_define_out =<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\\n</span><span class="st">%.*&quot;</span>,<span class="st">&quot;&quot;</span>, test_tex_define_out)</a>
+<a class="sourceLine" id="cb4-11" title="11">  test_tex_define_all &lt;-<span class="st"> </span><span class="kw">paste0</span>(test_tex_define_all, test_tex_define_out)</a>
+<a class="sourceLine" id="cb4-12" title="12">}</a></code></pre></div></section><section id="equations-from-tex-preamble" class="slide level2">
+<h2>Equations from Tex Preamble</h2>
+<p>These are equations created for paper:</p>
+<p><span class="math display">\[
+            \left(
+                    \left(
+                        \frac{\beta_{i} \alpha_{i} P_{i}^{-1}}{\beta_{j} \alpha_{j} P_{j}^{-1}}
+                    \right)^{\frac{1}{\lambda-1}}
+                    \frac{A_{i}}{\alpha_{j}}
+                -
+                    \frac{A_{j}}{\alpha_{j}}
+                \right)
+            \]</span> <span class="math display">\[
+            \left(
+                  \dfrac{\beta_{i}}{\beta_{j}}
+                        \right)^{\frac{1}{1-\lambda}}
+                        \left(
+                                    \dfrac{\alpha_{i}}{\alpha_{j}}
+                        \right)^{\frac{\lambda}{1-\lambda}}
+            \]</span></p>
+</section><section id="more-equations-from-tex-preamble" class="slide level2">
+<h2>More Equations from Tex Preamble</h2>
+<p>These are equations created for paper:</p>
+<p><span class="math display">\[
+                    \left(
+                        \dfrac{\beta_{i} \alpha_{i}}{\beta_{j} \alpha_{j}}
+                    \right)^{\frac{1}{1-\lambda}}
+                    \frac{\left(A_{j} \right)}{\alpha_{i}}
+                    -
+                    \frac{\left(A_{i} \right)}{\alpha_{i}}
+                \]</span></p>
+</section><section id="longer-equation" class="slide level2">
+<h2>Longer Equation</h2>
+<p><span style="font-size:40%;"> <span class="math display">\[\begin{align}
+    \label{eq:disconstrainset}
+    \begin{split}
+    \mathcal{C}^{D}\equiv \Bigg\{
+        \bm{D} =
+        \left( D_1, \cdots, D_{N} \right) :
+        D_{i} \in \Big\{ 0, 1, \dots, \bar{D}\Big\}
+        \text{, and, }
+        \sum_{i=1}^{N} D_{i}\le \widehat{W}\in \mathcal{N}_{+}
+    \Bigg\}.\\
+    \end{split}
+\end{align}\]</span> </span></p>
+<p>There exist <span class="math inline">\(\mathit{D}^{\ast}_{1}, \cdots, \mathit{D}^{\ast}_{N}\)</span> allocation mappings <span class="math display">\[\begin{align}
+    \begin{split}
+    \mathit{D}^{\ast}_{i}\left(
+      \widehat{W}, \lambda, \left\{\beta_{j}\right\}_{j=1}^{N}
+                , \left\{A_{j}\right\}_{j=1}^{N},
+                \left\{
+                    \left\{\alpha_{jl}\right\}_{l= 1}^{\bar{D}}
+                    \right\}_{j=1}^{N}
+        \right)
+    \end{split}
+\end{align}\]</span></p>
+</section><section id="equations-with-options-1" class="slide level2">
+<h2>Equations with Options 1</h2>
+<span class="math display">\[\begin{align}
+        \label{eq:twoctsinvoptilub}
+    \begin{split}
+        \widehat{W}^{\ast}
+      =
+        \min
+        \Big(
+          \bar{C}_{1} , \thinspace C_{1}
+        \Big)
+      +
+        \thinspace\thinspace
+        \min
+        \Big(
+          \bar{C}_{2}
+        ,\thinspace
+          \phi^{\text{s}}_{2, 1}
+          \boldsymbol{\cdot}
+          \left(
+            C_{1} - \phi^{\text{x}}_{2, 1}
+          \right)
+        \Big)
+        \boldsymbol{\cdot}
+        \mathbb{1}\Big\{
+            C_{1} \ge \phi^{\text{x}}_{2, 1}
+        \Big\}
+    \end{split}
+\end{align}\]</span>
+</section><section id="equations-with-options-2" class="slide level2">
+<h2>Equations with Options 2</h2>
+<span class="math display">\[\begin{align}
+        \label{eq:twoctsoptilub}
+    \begin{split}
+        \mathit{C}^{\ast}_{1}\left(\widehat{W}\right)
+      = &amp;\thinspace\thinspace
+        \widehat{W}
+        \boldsymbol{\cdot}
+        \mathbb{1}\left\{
+          \widehat{W}\le \phi^{\text{x}}_{2, 1}
+        \right\} +
+      \\
+        &amp;\thinspace\thinspace
+        \left(
+          \frac{\widehat{W}- \phi^{\text{x}}_{2, 1}}{1+\phi^{\text{s}}_{2, 1}}
+          + \phi^{\text{x}}_{2, 1}
+        \right)
+        \boldsymbol{\cdot}
+        \mathbb{1}
+        \left\{
+          \phi^{\text{x}}_{2, 1}
+            &lt;
+          \widehat{W}
+            \le
+          \left(
+            \bar{C}_{2} +
+            \frac{\bar{C}_{2}-\phi^{\text{y}}_{2, 1}}{\phi^{\text{s}}_{2, 1}}
+          \right)
+        \right\}
+         +
+      \\
+        &amp; \thinspace\thinspace
+        \left(
+          \widehat{W}- \bar{C}_{2}
+        \right)
+        \boldsymbol{\cdot}
+        \mathbb{1}
+        \left\{
+          \left(
+            \bar{C}_{2} +
+            \frac{\bar{C}_{2}-\phi^{\text{y}}_{2, 1}}{\phi^{\text{s}}_{2, 1}}
+          \right)
+            &lt;
+          \widehat{W}
+            \le
+          \left(\bar{C}_{1} + \bar{C}_{2}\right)
+        \right\}
+    \end{split}
+\end{align}\]</span>
+</section><section id="additional-symbol-testing" class="slide level2">
+<h2>Additional symbol testing</h2>
+<p>Using mathbf:</p>
+<p><span class="math inline">\(mathbf\mathbf{this is bold} not bold\)</span> <span class="math inline">\(a + b \mathbf{+ a + b} + a + b\)</span> <span class="math inline">\(A + B \mathbf{+ A + B} + A + B\)</span> <span class="math inline">\(\alpha + \beta \mathbf{+ \alpha + \beta} + \alpha + \beta\)</span></p>
+<p>Using boldsymbol:</p>
+<p><span class="math inline">\(boldsymbol\boldsymbol{this is boldsymbol} not boldsymbol\)</span> <span class="math inline">\(a + b \boldsymbol{+ a + b} + a + b\)</span> <span class="math inline">\(A + B \boldsymbol{+ A + B} + A + B\)</span> <span class="math inline">\(\alpha + \beta \boldsymbol{+ \alpha + \beta} + \alpha + \beta\)</span></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="present_test_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="present_test_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "present_test_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

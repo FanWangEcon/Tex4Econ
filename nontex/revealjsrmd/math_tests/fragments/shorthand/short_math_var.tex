@@ -1,0 +1,177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SHORT_MATH_VAR: from estimation or choices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% A. Input Choices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Shared symbol for underline
+\newcommand{\overlinebm}[1]{\bm{\overline{#1}}}
+\newcommand{\underlinebm}[1]{\bm{\underline{#1}}}
+\newcommand{\ubar}[1]{\text{\b{$#1$}}}
+% \newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\newcommand{\Tobs}{o}
+
+%%% A.0 Generic provision, for any case
+% L C B D G already taken
+\newcommand{\VV}{V}
+\newcommand{\VVc}{\VV_{\Ic}}
+\newcommand{\VVset}{\Omega}
+\newcommand{\VVcp}{\VV_{\Icp}}
+\newcommand{\VVg}{\widehat{\VV}_{\Ig}}
+%\newcommand{\VBagg}{\widehat{\mathbb{\VB}}}
+\newcommand{\VVagg}{\VWagg}
+\newcommand{\VVcobs}{\VVc^{\text{\Tobs}}}
+
+%%% A.1 Continuous Linear
+% Nutritional choice Continous zero bounded, lower bounded
+% L for lower bounded continuous inputs
+\newcommand{\VN}{L}
+\newcommand{\VNc}{\VN_{\Ic}}
+\newcommand{\VNcp}{\VN_{\Icp}}
+\newcommand{\VNg}{\widehat{\VN}_{\Ig}}
+%\newcommand{\VNagg}{\widehat{\VN}}
+\newcommand{\VNagg}{\VWagg}
+\newcommand{\VNaggobs}{\VNagg^{\text{\Tobs}}}
+\newcommand{\VNcobs}{\VNc^{\text{\Tobs}}}
+%\newcommand{\VNlw}{\ubar{\VN}^{}}
+%\newcommand{\VNlw}{\ubar{\VN}^{}}
+\newcommand{\VNlw}{0}
+
+% Observed Nutritional Choices
+\newcommand{\VNcalt}{\tilde{\VN}_{\Ic}}
+
+% Nutritional choice Continuous bounded on both sides
+% S for Constrained on both ends, (C taken by constraint set symbol), C ok if not mathcal
+% \newcommand{\VC}{\left\lfloor{\VN}\right\rceil}
+\newcommand{\bounded}{}
+\newcommand{\VC}{C}
+\newcommand{\VCc}{\VC_{\Ic}}
+\newcommand{\VCcp}{\VC_{\Icp}}
+\newcommand{\VCg}{\widehat{\VC}_{\Ig}}
+%\newcommand{\VCagg}{\widehat{\VC}}
+%\newcommand{\VClw}{\ubar{\VN}}
+%\newcommand{\VChg}{\bar{\VN}}
+\newcommand{\VCagg}{\VWagg}
+\newcommand{\VCaggobs}{\VCagg^{\text{\Tobs}}}
+\newcommand{\VCobs}{\VC^{\text{\Tobs}}}
+\newcommand{\VCcobs}{\VCc^{\text{\Tobs}}}
+\newcommand{\VClw}{\ubar{\VC}}
+\newcommand{\VChg}{\bar{\VC}}
+\newcommand{\VClwc}{\ubar{\VC}_{\Ic}}
+\newcommand{\VChgc}{\bar{\VC}_{\Ic}}
+\newcommand{\VClwcp}{\ubar{\VC}_{\Icp}}
+\newcommand{\VChgcp}{\bar{\VC}_{\Icp}}
+\newcommand{\VClwzr}{0}
+\newcommand{\VClwczr}{0}
+\newcommand{\VClwcpzr}{0}
+
+% Binary provision
+%%% A.2 Binary and Discrete
+% B for binary
+\newcommand{\VB}{B}
+\newcommand{\VBvec}{\bm{\VB}}
+\newcommand{\VBiter}[1]{\widehat{\VB}^{\VWaggiter#1}} % for proof
+\newcommand{\VBveciter}[1]{\bm{\VBiter{#1}}} % for proof
+\newcommand{\VBc}{\VB_{\Ic}}
+\newcommand{\VBcp}{\VB_{\Icp}}
+\newcommand{\VBg}{\widehat{\VB}_{\Ig}}
+%\newcommand{\VBagg}{\widehat{\mathbb{\VB}}}
+\newcommand{\VBagg}{\VWagg}
+% Observed Nutritional Choices
+\newcommand{\VBcobs}{\VBc^{\text{\Tobs}}}
+\newcommand{\VBaggobs}{\VBagg^{\text{\Tobs}}}
+
+% Discrete Provisions
+% D for Discrete
+\newcommand{\VD}{D}
+\newcommand{\VDvec}{\bm{\VD}}
+\newcommand{\VDiter}[1]{\widehat{\VD}^{\VWaggiter#1}} % for proof
+\newcommand{\VDveciter}[1]{\bm{\VDiter{#1}}} % for proof
+\newcommand{\VDc}{\VD_{\Ic}}
+\newcommand{\VDck}{\VD_{\Ic\Ik}}
+\newcommand{\VDcp}{\VD_{\Icp}}
+\newcommand{\VDg}{\widehat{\VD}_{\Ig}}
+%\newcommand{\VDagg}{\widehat{\mathbb{\VD}}}
+% Upper and Lower DIscount BOunds
+%\newcommand{\VDlw}{\ubar{\VD}^{}}
+%\newcommand{\VDhg}{\bar{\VD}^{}}
+\newcommand{\VDagg}{\VWagg}
+\newcommand{\VDobs}{\VD^{\text{\Tobs}}}
+\newcommand{\VDcobs}{\VDc^{\text{\Tobs}}}
+\newcommand{\VDaggobs}{\VDagg^{\text{\Tobs}}}
+% Upper and Lower DIscount BOunds
+% \newcommand{\VDlw}{\ubar{\VD}}
+\newcommand{\VDlw}{1}
+\newcommand{\VDlwtwo}{\ubar{\VD}} % for N=2
+\newcommand{\VDhg}{\bar{\VD}}
+\newcommand{\VDhgtwo}{\bar{\VD}} % for N=2
+\newcommand{\VDhgc}{\bar{\VD}_{\Ic}}
+
+%%% A.3 Log linear
+\newcommand{\VG}{G}
+\newcommand{\VGc}{\VG_{\Ic}}
+\newcommand{\VGcp}{\VG_{\Icp}}
+\newcommand{\VGg}{\widehat{\VG}_{\Ig}}
+%\newcommand{\VNagg}{\widehat{\VN}}
+\newcommand{\VGagg}{\VWagg}
+\newcommand{\VGaggobs}{\VGagg^{\text{\Tobs}}}
+\newcommand{\VGcobs}{\VGc^{\text{\Tobs}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% B. A and alpha, esti parameters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initial Condition
+\newcommand{\VA}{A}
+\newcommand{\VAc}{\VA_{\Ic}}
+\newcommand{\VAo}{\VA_{\Io}}
+\newcommand{\VAcp}{\VA_{\Icp}}
+\newcommand{\VAgc}{\VA_{\Ig\Ic}}
+
+% Marginal Productivity
+\newcommand{\VM}{\alpha}
+\newcommand{\VMc}{\VM_{\Ic}}
+\newcommand{\VMck}{\VM_{\Ic\Ik}} % for discrete outcome effects
+\newcommand{\VMDcj}{\VM_{\Ic}} % m and j specific additional effects for more discrete units
+\newcommand{\VMo}{\VM_{\Io}}
+\newcommand{\VMcp}{\VM_{\Icp}}
+\newcommand{\VMgc}{\VM_{\Ig\Ic}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% C. Outcome Variable
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PREVIOUS
+% The generic health outcome variable, standing in for height or weight
+\newcommand{\HL}{H}
+\newcommand{\EHL}{\mathbb{E}\VHc}
+% Shock
+\newcommand{\SHK}{\eta}
+
+% 2020-01-16 10:59
+\newcommand{\VH}{H}
+\newcommand{\VHc}{\VH_{\Ic}}
+\newcommand{\VHcp}{\VH_{\Icp}}
+\newcommand{\VEH}{\mathbb{E}\VH}
+\newcommand{\VEHc}{\mathbb{E}\VH_{\Ic}}
+\newcommand{\VEHBc}{\mathbb{E}\VH^{\VB}_{\Ic}}
+\newcommand{\VEHDc}{\mathbb{E}\VH^{\VD}_{\Ic}}
+\newcommand{\VEHNc}{\mathbb{E}\VH^{\VN}_{\Ic}}
+\newcommand{\VEHCc}{\mathbb{E}\VH^{\VC}_{\Ic}}
+\newcommand{\VEHGc}{\mathbb{E}\VH^{\VG}_{\Ic}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% B. Variable Single Input
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The generic input variable, standing in for nutrition
+\newcommand{\NT}{N}
+
+% Time varying Inputs no Longer Relevant
+\newcommand{\NTvec}{\pmb{N}} % Vector of nutrition input over periods
+\newcommand{\NTthres}[1]{\hat{\textit{N}}^{E\left(\frac{\HL_{\DAY+1}}{\HL_\DAY}\right) = #1}} % nutrition needed to achieve some height increase
+\newcommand{\NTtot}{\NT^\text{total}} % Vector of nutrition input over periods
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% B. Variables: multiple inputs and prices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

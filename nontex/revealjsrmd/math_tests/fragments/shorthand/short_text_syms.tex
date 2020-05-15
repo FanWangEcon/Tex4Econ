@@ -1,0 +1,40 @@
+\newcommand{\twoyearsage}{two years of age\xspace}
+\newcommand{\thmplanstates}{Resource and Preference}
+\newcommand{\thmindistates}{Estimates and Individual Observables}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+% Alerts could be turned ON or OFF
+% When editing use alerts to note where possible changes should appear
+% When releasing paper, turn all alerts off
+% Define Colors and alerts
+
+\usepackage{xcolor}
+\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+\definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
+\definecolor{bronze}{rgb}{0.8, 0.5, 0.2}
+\definecolor{dartmouthgreen}{rgb}{0.05, 0.5, 0.06}
+
+\newcommand{\AlertStr}{=:}
+\newcommand{\AlertEnd}{:=}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% uncomment to turn ALERTS ON
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\AlertLit}[1]{$\Big[$\textbf{LL\AlertStr}\emph{\textbf{\textcolor{ceruleanblue}{#1}}}\textbf{\AlertEnd LL}$\Big]$}
+\newcommand{\AlertPol}[1]{$\Big[$\textbf{PP\AlertStr}\underline{\textbf{\textcolor{bronze}{#1}}}\textbf{\AlertEnd PP}$\Big]$}
+\newcommand{\AlertMath}[1]{$\Big[$\textbf{MM\AlertStr}\thinspace\textbf{\textcolor{brightmaroon}{#1}}\textbf{\AlertEnd MM}$\Big]$}
+\newcommand{\AlertEdit}[1]{$\Big[$\textbf{EDIT--POINT\AlertStr}\emph{\textbf{\textcolor{dartmouthgreen}{#1}}}\textbf{\AlertEnd EDIT--POINT}$\Big]$}
+
+
+%\newcommand{\AlertNote}[1]{{\setstretch{1.0}\scriptsize#1}}
+\newcommand{\AlertNote}[1]{}
+\newcommand{\AlertLong}[1]{}
+\newcommand{\AlertShort}[1]{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% uncomment to turn ALERTS OFF
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newcommand{\AlertLit}[1]{}
+% \newcommand{\AlertPol}[1]{}
+% \newcommand{\AlertMath}[1]{}

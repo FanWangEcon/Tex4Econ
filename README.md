@@ -29,7 +29,7 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 1.  [Symbols and Accents](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.pdf)
     - *underline vs overline*, *underaccent bar vs bar*
-    - bold
+    - *boldsymbol vs mathbf*
 
 ## 1.4 [Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/)
 
@@ -43,13 +43,17 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
     - two or four subfigures
 2. [Tikz Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.pdf)
     - straight and curved connected lines
-3. [Tikz Linear Spline Equation Plotting](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.pdf)
+3. [Tikz Eight Pane Model Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.pdf)
+    - panes for prior, current and next periods, with left and right in current period
+    - text panes, graph panes and labeling areas
+    - parametrized proportioning of panes with dynamic adjustments
+4. [Tikz Linear Spline Equation Plotting](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.pdf)
     - sum of linear equations
     - linear spline and inverted linear spline
     - *def, domain, variable, plot*
-4.  [Tikz Figure Annotation](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.pdf)
+5.  [Tikz Figure Annotation](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.pdf)
     - point to intercept and slope
-5.  [Tikz Game Strategy Graphs](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.pdf)
+6.  [Tikz Game Strategy Graphs](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.pdf)
     - continuous and discrete strategies
     - strategy branches, curved and straight lines
 

@@ -1,0 +1,256 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Intercept and Slope
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\optirelaintercepty}[2]{\phi^{\text{y}}_{#1, #2}}
+\newcommand{\optirelaslopey}[2]{\phi^{\text{s}}_{#1, #2}}
+\newcommand{\optirelainterceptx}[2]{\phi^{\text{x}}_{#1, #2}}
+
+%%%%%%%%
+%% A. Short-hand Intercept and Slope
+%%%%%%%%
+% Linear > 0 intercept and slope
+% also work for lower and upper bounded cases
+\newcommand{\optirebdintercepty}[2]{\optirelaintercepty{#1}{#2}}
+\newcommand{\optirebdslopey}[2]{\optirelaslopey{#1}{#2}}
+
+% log-linear intercept and slope
+\newcommand{\optirlogintercepty}[2]{\phi^{\VG}_{#1, #2}}
+\newcommand{\optirlogslopey}[2]{\theta^{\VG}_{#1, #2}}
+
+%%%%%%%%
+%% B. Full Intercept and Slope, with Alpha and A
+%%%%%%%%
+
+% Linear > 0 intercept and slope
+% also work for lower and upper bounded cases
+\newcommand{\optirelainterceptyfull}[2]{
+				\left(
+					\dfrac{\Pwg_{#2} \cdotf \VM_{#2} }{\Pwg_{#1} \cdotf \VM_{#1} }
+				\right)^{\frac{1}{\Peq-1}}
+				\cdotf
+				\dfrac{\VA_{#2}}{\VM_{#1}}
+			-
+				\dfrac{\VA_{#1}}{\VM_{#1}}
+            }
+\newcommand{\optirelaslopeyfull}[2]{
+                \left(
+                    \dfrac{\Pwg_{#2} \cdotf \VM_{#2} }{\Pwg_{#1} \cdotf \VM_{#1}}
+				\right)^{\frac{1}{\Peq-1}}
+				\cdotf
+                \dfrac{\VM_{#2}}{\VM_{#1}}
+            }
+% reorg to show more clearly relative roles and effects
+\newcommand{\optirelainterceptyfullreorg}[2]{
+					\left(
+						\dfrac{\Pwg_{#1} \VM_{#1}}{\Pwg_{#2} \VM_{#2}}
+					\right)^{\frac{1}{1-\Peq}}
+					\frac{\left(\VA_{#2} \right)}{\VM_{#1}}
+					-
+					\frac{\left(\VA_{#1} \right)}{\VM_{#1}}
+				}
+\newcommand{\optirelaslopeyfullreorg}[2]{
+            \left(
+                  \dfrac{\Pwg_{#1}}{\Pwg_{#2}}
+						\right)^{\frac{1}{1-\Peq}}
+						\left(
+									\dfrac{\VM_{#1}}{\VM_{#2}}
+						\right)^{\frac{\Peq}{1-\Peq}}
+            }
+
+% log-linear intercept and slope
+\newcommand{\optirloginterceptyfull}[2]{
+    \frac{
+        \Peq\cdotf\left(\VA_{#1} - \VA_{#2}\right)
+        +
+        \log
+        \left(
+            \frac{\Pwg_{#1}\cdotf\VM_{#1}}{\Pwg_{#2}\cdotf\VM_{#2}}
+        \right)
+    }{
+        \left(\Peq\cdotf\VM_{#1}-1\right)
+        }
+    }
+\newcommand{\optirlogslopeyfull}[2]{
+    \frac{\left(\Peq\cdotf\VM_{#1}-1\right)}{\left(\Peq\cdotf\VM_{#2}-1\right)}
+            }
+
+%%%%%%%%
+%% C. Fulller Intercept and Slope, also with Prices
+%%%%%%%%
+
+% Linear > 0 intercept and slope
+% also work for lower and upper bounded cases
+\newcommand{\optirelainterceptyfullprc}[2]{
+            \left(
+                    \left(
+                        \frac{\Pwg_{#1} \VM_{#1} \VP_{#1}^{-1}}{\Pwg_{#2} \VM_{#2} \VP_{#2}^{-1}}
+                    \right)^{\frac{1}{\Peq-1}}
+                    \frac{\VA_{#1}}{\VM_{#2}}
+                -
+                    \frac{\VA_{#2}}{\VM_{#2}}
+                \right)
+            }
+\newcommand{\optirelaslopeyfullprc}[2]{
+                \left(
+                    \frac{\Pwg_{#1} \VM_{#1} \VP_{#1}^{-1}}{\Pwg_{#2} \VM_{#2} \VP_{#2}^{-1}}
+                \right)^{\frac{1}{\Peq-1}}
+                \frac{\VM_{#1}}{\VM_{#2}}
+            }
+
+% log-linear intercept and slope
+\newcommand{\optirloginterceptyfullprc}[2]{
+    \frac{
+        \Peq\left(\VA_{#1} - \VA_{#2}\right)
+        +
+        \log
+        \left(
+            \frac{\Pwg_{#1}\VM_{#1}\VP_{#1}^{-1}}{\Pwg_{#2}\VM_{#2}\VP_{#2}^{-1}}
+        \right)
+    }{
+        \left(\Peq\VMcp-1\right)
+        }
+    }
+\newcommand{\optirlogslopeyfullprc}[2]{
+    \frac{\left(\Peq\VM_{#1}-1\right)}{\left(\Peq\VM_{#2}-1\right)}
+            }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Continuous Relative Allocation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eqtwoctsoptiequal}[3]{
+\blockequaskipfc{
+\begin{align}
+  \begin{gathered}
+  \label{#3}
+        \VC_{#2}
+        =
+        \underbrace{
+          \left(
+          \optirelainterceptyfullreorg{#2}{#1}
+          \right)
+        }_{ \optirelaintercepty{#2}{#1} }
+        +
+        \underbrace{
+          \left(
+          \optirelaslopeyfullreorg{#2}{#1}
+          \right)
+        }_{ \optirelaslopey{#2}{#1} }
+        \cdotf
+        \thinspace
+          \VC_{#1}
+        \thinspace,
+      \\
+        \text{with relative y-intercept }
+        \optirelaintercepty{#2}{#1}
+        \text{,}\thinspace\thinspace
+        \text{slope }
+        \optirelaslopey{#2}{#1}
+        \text{,}\thinspace\thinspace
+        \text{and x-intercept }
+        \optirelainterceptx{#2}{#1}
+        = -\optirelaintercepty{#2}{#1}/\optirelaslopey{#2}{#1}
+        \thinspace.
+      \\
+  \end{gathered}
+\end{align}
+}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Continuous Ranking value
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eqtwoctsvalrank}[1]{
+  \left(
+      \frac{\VA_{#1}}{\VM_{#1}\Pwg_{#1}}
+  \right)^{\frac{1}{1-\Peq}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Inverse Optimal Allocation Equation: given C_1 what is W*
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eqtwoctsinvoptilub}[2]{
+\begin{align}
+    % twodiscvl: two discrete comparison value
+    \label{eq:twoctsinvoptilub}
+    \begin{split}
+        \VCagg^{\ast}
+      =
+        \min
+        \Big(
+          \VChg_{#1} , \thinspace \VC_{#1}
+        \Big)
+      +
+        \thinspace\thinspace
+        \min
+        \Big(
+          \VChg_{#2}
+        ,\thinspace
+          \optirelaslopey{#2}{#1}
+          \cdotf
+          \left(
+            \VC_{#1} - \optirelainterceptx{\intw}{\inon}
+          \right)
+        \Big)
+        \cdotf
+        \mathbb{1}\Big\{
+            \VC_{#1} \ge \optirelainterceptx{\intw}{\inon}
+        \Big\}
+    \end{split}
+\end{align}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Optimal Allocation Equation (not inverse): given w, what is c1*
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eqtwoctsoptilub}[2]{
+\begin{align}
+    % twodiscvl: two discrete comparison value
+    \label{eq:twoctsoptilub}
+    \begin{split}
+        \FCopti_{\inon}\left(\VCagg\right)
+      = &\thinspace\thinspace
+        \VCagg
+        \cdotf
+        \mathbb{1}\left\{
+          \VCagg \le \optirelainterceptx{\intw}{\inon}
+        \right\} +
+      \\
+        &\thinspace\thinspace
+        \left(
+          \frac{\VCagg - \optirelainterceptx{\intw}{\inon}}{1+\optirelaslopey{#2}{#1}}
+          + \optirelainterceptx{\intw}{\inon}
+        \right)
+        \cdotf
+        \mathbb{1}
+        \left\{
+          \optirelainterceptx{\intw}{\inon}
+            <
+          \VCagg
+            \le
+          \left(
+            \VChg_{\intw} +
+            \frac{\VChg_{\intw}-\optirelaintercepty{\intw}{\inon}}{\optirelaslopey{\intw}{\inon}}
+          \right)
+        \right\}
+         +
+      \\
+        & \thinspace\thinspace
+        \left(
+          \VCagg - \VChg_{\intw}
+        \right)
+        \cdotf
+        \mathbb{1}
+        \left\{
+          \left(
+            \VChg_{\intw} +
+            \frac{\VChg_{\intw}-\optirelaintercepty{\intw}{\inon}}{\optirelaslopey{\intw}{\inon}}
+          \right)
+            <
+          \VCagg
+            \le
+          \left(\VChg_{\inon} + \VChg_{\intw}\right)
+        \right\}
+    \end{split}
+\end{align}
+}

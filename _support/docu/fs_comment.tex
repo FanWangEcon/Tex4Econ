@@ -1,0 +1,41 @@
+\documentclass[12pt,english]{article}
+\usepackage[utf8]{inputenc}
+
+% url package
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+% Bibliography package
+\usepackage[authordate, backend=biber]{biblatex-chicago}
+\bibliography{fansample}
+
+% Titling and Author
+\title{Latex Preamble}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+
+\begin{document}
+
+Comment will not appear with percent in front
+
+\begin{verbatim}
+% Comment
+\end{verbatim}
+% Comment
+
+yml block?
+
+\begin{verbatim}
+<!-- regular html comment -->
+\end{verbatim}
+
+<!-- regular html comment -->
+
+
+
+
+\end{document}

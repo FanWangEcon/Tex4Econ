@@ -214,8 +214,6 @@ pip uninstall pyyaml
 pip uninstall python-frontmatter
 ```
 
-
-
 ## sphinx and readthedocs
 
 readthedocs is logged in via github account. Automatically recognizes github repositories, and can import repositories to generate documentation that it can.
@@ -489,7 +487,6 @@ cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\Project Emily Minority Survey\Draft
 perl "C:\Users\fan\.conda\envs\wk_perl\latexpand\latexpand" draft_edcc_submit_rr.tex > draft_edcc_submit_rr_flat.tex
 ```
 
-
 #### Conda Jinja Environment
 
 For testing and packaging latex files. In particular, single folder latex files for final paper submissions. 
@@ -509,6 +506,30 @@ conda install -c anaconda pyyaml
 cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\repos\fanwangecon.github.io\_cv\templating\"
 python yaml2tex.py
 ```
+
+#### Conda revealjs nodejs Environment
+
+revealjs, decktape to pdf conversions
+
+```{r}
+# Set up
+conda deactivate
+conda list env
+conda env remove -n wk_nodejs
+conda create -n wk_nodejs -y
+conda activate wk_nodejs
+
+conda install -c conda-forge nodejs -y
+# ended up downloading installer for windows nodejs and installing out of conda
+# was having lots of bugs
+npm i -g --production windows-build-tools
+npm install -g --force decktape
+# use yaml2tex
+
+cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\repos\fanwangecon.github.io\_cv\templating\"
+python yaml2tex.py
+```
+
 
 ## Essential Programs to Install
 
@@ -1254,16 +1275,7 @@ Atom keymap.cson file:
   'j j': 'vim-mode-plus:activate-normal-mode'
 ```
 
-
-## Other Editors
-
-### Notepad++
-
-[Notepad++](https://notepad-plus-plus.org/downloads/v7.8.2/). Many old projects have xml folder structures for Notepad++.
-
-- Silently update file changes made in other editors: Settings, Preferences, MISC., File Status Auto Detection, Update Silently.
-
-### Sublime
+## Sublime
 
 [Sublime](https://www.sublimetext.com/3)
 
@@ -1292,11 +1304,11 @@ C:\Program Files\Sublime Text 3\
 
 - [sublime markdown Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended), [sublime markdown extended](https://github.com/jonschlinkert/sublime-markdown-extended)
 
-#### Sublime and Outline (Markdown)
+### Sublime and Outline (Markdown)
 
 To get the markdown outline of the current document if it is markdown press *Ctrl + R*, shows tabbed nested outline view.
 
-#### Sublime Search and Replace
+### Sublime Search and Replace
 
 Append to end of all lines with starting string some suffix. We have many lines that start with *print('abc')*, but the printed statements differ in length. Within the document, want to change all print statements to message statements, and have: *message(print('abc'))*:
 
@@ -1306,9 +1318,26 @@ Append to end of all lines with starting string some suffix. We have many lines 
 4. append new text suffix
 5. *ctrl + home*, move cursor to the start of all print lines, and append prefix as needed.
 
-### PyCharm
+## PyCharm
 
 [pycharm](https://www.)jetbrains.com/pycharm/)
+
+### PyCharm Short Cuts
+
+- Auto-Indent: *CTRL + SHIFT + ALT + L*
+
+## Other Editors
+
+### Notepad++
+
+[Notepad++](https://notepad-plus-plus.org/downloads/v7.8.2/). Many old projects have xml folder structures for Notepad++.
+
+- Silently update file changes made in other editors: Settings, Preferences, MISC., File Status Auto Detection, Update Silently.
+
+
+
+
+
 
 # Other Programs to Install
 
@@ -1332,6 +1361,7 @@ iwr -useb get.scoop.sh | iex
 ## Utilities
 
 - [pandoc](https://pandoc.org/installing.html)
+- [nodejs](https://nodejs.org/en/) (revealjs pdf conversion)
 - 7-zip
 - evernote
 

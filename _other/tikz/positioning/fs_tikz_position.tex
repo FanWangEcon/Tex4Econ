@@ -10,7 +10,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 \usepackage{geometry}
@@ -55,6 +55,7 @@ For lines below, we draw several partial page lines and align to page center:
 \begin{tikzpicture}
 \draw (0,2) -- (0.25*\textwidth,2);
 \draw (0,1) -- (0.5*\textwidth,1);
+\draw (0,0) -- (0.75*\textwidth,0);
 \end{tikzpicture}
 \end{center}
 \end{verbatim}
@@ -63,6 +64,7 @@ For lines below, we draw several partial page lines and align to page center:
 \begin{tikzpicture}
 \draw (0,2) -- (0.25*\textwidth,2);
 \draw (0,1) -- (0.5*\textwidth,1);
+\draw (0,0) -- (0.75*\textwidth,0);
 \end{tikzpicture}
 \end{center}
 
@@ -102,9 +104,9 @@ Now draw half width relative position box in the middle of pageFor lines below, 
 \begin{verbatim}
 \begin{center}
 \begin{tikzpicture}
-\draw (0,0) -- 
-(0,0.5*\textwidth) -- 
-(0.5*\textwidth, 0.5*\textwidth) -- 
+\draw (0,0) --
+(0,0.5*\textwidth) --
+(0.5*\textwidth, 0.5*\textwidth) --
 (0.5*\textwidth, 0) -- (0, 0);
 \end{tikzpicture}
 \end{center}
@@ -118,7 +120,7 @@ Note that the box is centered.
 \end{center}
 
 \subsection{Four Boxes Same Page in Larger Box}
-There are four plots that I would like to draw together, four panels of tikz. We are defining height and width by textwidth, in this case textwidth is the width of each subfigure. 
+There are four plots that I would like to draw together, four panels of tikz. We are defining height and width by textwidth, in this case textwidth is the width of each subfigure.
 
 \begin{itemize}
     \item tikz page panels subplots
@@ -131,12 +133,12 @@ There are four plots that I would like to draw together, four panels of tikz. We
 \begin{subfigure}[b]{0.49\textwidth}
     \begin{center}
     \begin{tikzpicture}
-    \draw (0,0) -- 
-        (0,\fhratio*\textwidth) -- 
-        (\fwratio*\textwidth, \fhratio*\textwidth) -- 
+    \draw (0,0) --
+        (0,\fhratio*\textwidth) --
+        (\fwratio*\textwidth, \fhratio*\textwidth) --
         (\fwratio*\textwidth, 0) -- (0, 0);
-    \draw 
-        (0.3*\fwratio*\textwidth,0.3*\fhratio*\textwidth) -- 
+    \draw
+        (0.3*\fwratio*\textwidth,0.3*\fhratio*\textwidth) --
         (0.7*\fwratio*\textwidth,0.7*\fhratio*\textwidth);
     \end{tikzpicture}
     \end{center}
@@ -193,7 +195,7 @@ Repeat this four timnes in a figure:
         \end{center}
         \caption{Panel D}
         \label{fig:paneld}
-    \end{subfigure}    
+    \end{subfigure}
     \caption{Figure with Four Subfigures Each Containing Tikz Figure}\label{fig:tikztogether}
 \end{figure}
 

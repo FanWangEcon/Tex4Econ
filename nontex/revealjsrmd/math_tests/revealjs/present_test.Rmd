@@ -1,0 +1,185 @@
+---
+title: "Test RevealJS Loading Many Latex Files with Many Newcommands"
+author: Fan Wang (fanwangecon.github.io)
+date: May 4, 2020
+output:
+  revealjs::revealjs_presentation:
+    theme: sky
+    highlight: pygments
+    center: false
+    transition: none
+    css: fan_present.css
+    mathjax: local
+    self_contained: false
+    includes:
+      in_header:
+params:
+    imgwidth: 25px
+---
+
+# Loading Many Latex Files with Many Newcommands
+
+Need to avoid retyping latex newcommands which have many formated equations with parameters, symbols, and words that are concontrolled centrally.
+
+# Loading Files from Another Directory
+
+Usually the latex preamble files are stored somewhere else to work with the main paper draft tex file. 
+
+## Load Tex from the same folder
+
+```{r echo=TRUE, eval=FALSE}
+test_tex_define_out = knitr::knit_child('tex_preamble.tex')
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+```
+
+```{r include=FALSE, eval=TRUE}
+test_tex_define_out = knitr::knit_child('tex_preamble.tex')
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+```
+`r paste(test_tex_define_out, collapse='\n')`
+
+<span style="font-size:40%;"> $$\exa$$ </span>
+<span style="font-size:40%;"> $$\exb$$ </span>
+<span style="font-size:40%;"> $$\exc$$ </span>
+
+## Load Tex from the parallel folder
+
+```{r echo=TRUE, eval=FALSE}
+test_tex_define_out = knitr::knit_child('../fragments/tex_preamble.tex')
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+```
+
+```{r include=FALSE, eval=TRUE}
+test_tex_define_out = knitr::knit_child('../fragments/tex_preamble.tex')
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+```
+`r paste(test_tex_define_out, collapse='\n')`
+
+<span style="font-size:40%;"> $$\exd$$ </span>
+<span style="font-size:40%;"> $$\exe$$ </span>
+<span style="font-size:40%;"> $$\exf$$ </span>
+
+## Load Tex from the parallel folder subfolder
+
+```{r echo=TRUE, eval=FALSE}
+test_tex_define_out = knitr::knit_child('../fragments/shorthand/tex_preamble.tex')
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+```
+
+```{r include=FALSE, eval=TRUE}
+test_tex_define_out = knitr::knit_child('../fragments/shorthand/tex_preamble.tex')
+test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+```
+`r paste(test_tex_define_out, collapse='\n')`
+
+<span style="font-size:40%;"> $$\exg$$ </span>
+<span style="font-size:40%;"> $$\exh$$ </span>
+<span style="font-size:40%;"> $$\exi$$ </span>
+
+# Loading Multiple Latex Files Together with single input
+
+Find all files with certain suffix in a folder, and then load them all in as child:
+
+```{r echo=TRUE, eval=FALSE}
+spt_root <- 'C:/Users/fan/Documents/Dropbox (UH-ECON)/repos/Tex4Econ/'
+spt_texfolder <- 'nontex/revealjsrmd/math_tests/fragments/shorthand'
+ls_path_group_use <- paste0(spt_root, spt_texfolder)
+ls_sfls <- list.files(path=ls_path_group_use, recursive=T, pattern="short.*.tex", full.names=T)
+
+test_tex_define_all <- ''
+for (spt_file in ls_sfls) {
+  test_tex_define_out = knitr::knit_child(spt_file)
+  test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+  test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+  test_tex_define_all <- paste0(test_tex_define_all, test_tex_define_out)
+}
+```
+
+```{r include=FALSE, eval=TRUE}
+spt_root <- 'C:/Users/fan/Documents/Dropbox (UH-ECON)/repos/Tex4Econ/'
+spt_texfolder <- 'nontex/revealjsrmd/math_tests/fragments/shorthand'
+ls_path_group_use <- paste0(spt_root, spt_texfolder)
+ls_sfls <- list.files(path=ls_path_group_use, recursive=T, pattern="short.*.tex", full.names=T)
+
+test_tex_define_all <- ''
+for (spt_file in ls_sfls) {
+  test_tex_define_out = knitr::knit_child(spt_file)
+  test_tex_define_out = gsub("\\%.*?\\\n", "", test_tex_define_out)
+  test_tex_define_out = gsub("\\\n%.*","", test_tex_define_out)
+  test_tex_define_all <- paste0(test_tex_define_all, test_tex_define_out)
+}
+```
+`r paste(test_tex_define_all, collapse='\n')`
+
+## Equations from Tex Preamble
+
+These are equations created for paper:
+
+$$\optirelainterceptyfullprc{\Ic}{\Icp}$$
+$$\optirelaslopeyfullreorg{\Ic}{\Icp}$$
+
+## More Equations from Tex Preamble
+
+These are equations created for paper:
+
+$$\optirelainterceptyfullreorg{\Ic}{\Icp}$$
+
+## Longer Equation 
+
+<span style="font-size:40%;">
+\begin{align}
+    \label{eq:disconstrainset}
+    \begin{split}
+    \Fconsds \equiv \Bigg\{
+        \bm{\VD} =
+        \left( \VD_1, \cdots, \VD_{\Nc} \right) :
+        \VD_{\Ic} \in \Big\{ 0, 1, \dots, \VDhg \Big\}
+        \text{, and, }
+        \sum_{\Ic=1}^{\Nc} \VDc \le \VDagg \in \mathcal{N}_{+}
+    \Bigg\}.\\
+    \end{split}
+\end{align}
+</span>
+
+There exist $\FDopti_{1}, \cdots, \FDopti_{\Nc}$ allocation mappings
+\begin{align}
+    \begin{split}
+    \FDopti_{\Ic}\left(
+      \VDagg, \Peq, \left\{\Pwgcp\right\}_{\Icp=1}^{\Nc}
+                , \left\{\VAcp\right\}_{\Icp=1}^{\Nc},
+                \left\{
+                    \left\{\VM_{\Icp\Ik}\right\}_{\Ik = \VDlw}^{\VDhg}
+                    \right\}_{\Icp=1}^{\Nc}
+        \right)
+    \end{split}
+\end{align}
+
+## Equations with Options 1
+
+\eqtwoctsinvoptilub{\inon}{\intw}
+
+## Equations with Options 2
+
+\eqtwoctsoptilub{\inon}{\intw}
+
+## Additional symbol testing
+
+Using mathbf (does not work with greeks):
+
+$mathbf\mathbf{this is bold} not bold$
+$a + b \mathbf{+ a + b} + a + b$
+$A + B \mathbf{+ A + B} + A + B$
+$\alpha + \beta \mathbf{+ \alpha + \beta} + \alpha + \beta$
+
+Using boldsymbol:
+
+$boldsymbol\boldsymbol{this is boldsymbol} not boldsymbol$
+$a + b \boldsymbol{+ a + b} + a + b$
+$A + B \boldsymbol{+ A + B} + A + B$
+$\alpha + \beta \boldsymbol{+ \alpha + \beta} + \alpha + \beta$

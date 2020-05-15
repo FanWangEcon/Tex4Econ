@@ -1,9 +1,19 @@
 \documentclass{article}
+\usepackage{amsmath} % aligned env
 
 \usepackage{relsize} % make some math large
 \usepackage{bm} % make some math bold
 
 \usepackage{caption}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
 
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
@@ -16,6 +26,10 @@
 \definecolor{myGreen}{RGB}{0,255,71}
 
 \begin{document}
+
+\title{Latex Tikz Examples, Timeline Charts}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
 
 \section{Tikz Example 1}
 
@@ -140,7 +154,7 @@
 
 \subsection{Tikz Timeline Plain}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Model Timeline 
+%%% Model Timeline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}[h]
@@ -180,7 +194,7 @@
   \emph{Notes:} (1) $k$, the risky capital choice, is determined before productivity shock $\epsilon$ realization. (2) $b^{\prime}$, the net financial choice including principle and interests owed, is determined given $r^I$, which is the interest rate cost of informal loan taken out this period.}
   \end{minipage}
   \end{figure}
-  
+
   \subsection{Tikz Timeline with Skeleton Tree}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%% Model Timeline With Tree Inside
@@ -191,19 +205,19 @@
       solid node/.style={circle,draw,inner sep=1.5,fill=black},
       hollow node/.style={circle,draw,inner sep=1.5,fill=white}
   }
-  
+
   \def\famm{15mm}
   \def\height{2}
   \tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
   \tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
-  
+
   \begin{figure}[h]
     \begin{minipage}{1\linewidth}
     \caption{Model Timeline With Tree Inside}
     \begin{tikzpicture}
     \draw (0,0) -- (12,0);
     \foreach \x in {0,2,4,12}
-      \draw (\x cm,2pt) -- (\x cm,-2pt);  
+      \draw (\x cm,2pt) -- (\x cm,-2pt);
     % Last Period
     \node[align=center] at (1, 0.7) {choose \\ $k, b$ };
     % Current Period
@@ -249,19 +263,19 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%% Model Timeline With Fancy Tree Inside
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  
+
   \def\famm{20mm}
   \def\height{2}
   \tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
   \tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
-  
+
   \begin{figure}[h]
     \begin{minipage}{1\linewidth}
     \caption{Model Timeline with Fancy Tree Inside}
     \begin{tikzpicture}
     \draw (0,0) -- (12,0);
     \foreach \x in {0,2,4,12}
-      \draw (\x cm,2pt) -- (\x cm,-2pt);  
+      \draw (\x cm,2pt) -- (\x cm,-2pt);
     % Last Period
     \node[align=center] at (1, 0.7) {choose \\ $k, b$ };
     % Current Period
@@ -270,12 +284,13 @@
     \node[align=center] at (3, 0.7) (b) {wealth  \\ $\Lambda(k,b, \epsilon)$ };
     \node[align=center] at (4, 1.6)  (a) {$ r^I$ \\ realized};
     \draw [thin, dashed] (4, 1.0) -- (4, 0);
+
     \node(0)[solid node, align=center, % solid node gives fist (left to right) black dot
     label=left:{
        $\textcolor{black}{\mathlarger{\mathlarger{\mathlarger{\bm{\phi}}}}}$
         }] at (5.75, 1.5) {}
     [grow=right]
-    child{ 
+    child{
     [black] node(11)[]{}
     edge from parent
           node[sloped, below, black]{$\phi=0$}
@@ -294,11 +309,11 @@
               node[sloped, below, black]{$\theta=0$}
       }
       child{
-          [white] node(22)[xshift=16, yshift=0]{}        
+          [white] node(22)[xshift=16, yshift=0]{}
           edge from parent
               [draw=none] % prevents a line to be drawn from phi to phi
               node[above, black, xshift=7]{$k' = \theta \cdot \Lambda$}
-              node[below, black, xshift=10]{$b' = \Lambda - k'$}    
+              node[below, black, xshift=10]{$b' = \Lambda - k'$}
       }
       child{
           [black] node(23)[]{}
@@ -337,9 +352,284 @@
     \emph{Notes:} (1) $k$, the risky capital choice, is determined before productivity shock $\epsilon$ realization. (2) $b^{\prime}$, the net financial choice including principle and interests owed, is determined given $r^I$, which is the interest rate cost of informal loan taken out this period.}
     \end{minipage}
     \end{figure}
-    
+
+\section{Tikz Timeline Frame}
+
+\subsection{Empty Frame}
+
+\def\fgw{1.0*\textwidth}
+\def\fgh{0.20*\textheight}
+
+\newcommand{\tikzframe}{
+	\draw (0,     \fgh) -- (\fgw,     \fgh);
+	\draw[loosely dotted] (0, 0.5*\fgh) -- (\fgw, 0.5*\fgh);
+	\draw (0, 0       ) -- (\fgw, 0       );
+	% Three Straight Lines
+	\draw[dashed] (0.125*\fgw, 0  ) -- (0.125*\fgw,   \fgh);
+	\draw[dotted] (0.500*\fgw, 0.2*\fgh ) -- (0.500*\fgw,   0.8*\fgh);
+	\draw[dashed] (0.875*\fgw, 0  ) -- (0.875*\fgw,   \fgh);
+
+	\node[align=center] at (0.065*\fgw, 0.900*\fgh) {last\\period};
+	\node[align=center] at (0.500*\fgw, 0.900*\fgh) {current period};
+	\node[align=center] at (0.935*\fgw, 0.900*\fgh) {next\\period};
+
+	\node[align=center] at (0.325*\fgw, 0.100*\fgh) {shocks and \\ income realization};
+	\node[align=center] at (0.675*\fgw, 0.100*\fgh) {asset choices};
+}
+\newcommand{\tikzframebelowtext}[4]{
+  \def\fgiw{#1*\textwidth}
+  \def\fgih{#2*\textheight}
+  \def\fgiwm{#3*\fgiw}
+  \def\fgihm{#4*\fgih}
+
+  % left pane middle point, align horizontally middle pane
+  \def\fgiwlm{0.125*\textwidth + \fgiwm*0.5 - 0.5*0.125*\textwidth}
+  % right pane middle point, align horizontally middle in pane
+  \def\fgiwrm{\fgiwm + \fgiw*0.5 - 0.125*\textwidth*0.5 - \fgiwm*0.5}
+
+  % fgihtb: figure internal height top pane bottom
+  % bottom 10 percent space of top pane space
+  \def\fgihtb{\fgihm + \fgih*0.085 - \fgihm*0.085}
 
 
+  % There is a flow line on top, limited text
+  % three parts, left prior, right after, middle current.
+  % current in two parts, shock realization and choices.
+  % In top part, span charts, simple text
+  % in bottom part, sufficient height to allow for detailed text
+  % descriptions.
+
+  % Bottom and top lines
+  \draw [solid] (0, \fgih) -- (\fgiw, \fgih);
+  \draw [solid] (0, 0    ) -- (\fgiw, 0    );
+
+  % Left and right lines
+  \draw [solid] (0,     0) -- (0,     \fgih);
+  \draw [solid] (\fgiw, 0) -- (\fgiw, \fgih);
+
+  % verticle middle line
+  \draw [solid] (\fgiwm, 0) -- (\fgiwm,   \fgih);
+  % horizontal middle line (divide text and flow)
+  \draw [solid] (0, \fgihm) -- (\fgiw,   \fgihm);
+
+  % left border last period
+  \draw[dashed] (0.125*\fgiw, 0  ) -- (0.125*\fgiw,   \fgih);
+  % right border next period
+  \draw[dashed] (0.875*\fgiw, 0  ) -- (0.875*\fgiw,   \fgih);
+
+  % %
+  % \draw[loosely dotted] (0, 0.575*\fgih) -- (\fgiw, 0.575*\fgih);
+  % \draw[loosely dotted] (0, 0.350*\fgih) -- (\fgiw, 0.350*\fgih);
+
+  \node[align=center] at (0.065*\fgiw, 0.900*\fgih) {last\\period};
+  \node[align=center] at (0.500*\fgiw, 0.900*\fgih) {current period};
+  \node[align=center] at (0.935*\fgiw, 0.900*\fgih) {next\\period};
+
+  \node[align=center] at (\fgiwlm, \fgihtb) {shocks};
+  \node[align=center] at (\fgiwrm, \fgihtb) {asset choices};
+}
+
+
+100 percent frame with 20 percent page height and 100 percent page width:
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+\tikzframe
+\end{tikzpicture}
+\end{center}
+
+50 percent rescaled center-aligned frame with 20 percent page height and 100 percent page width:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.5}]]
+\tikzframe
+\end{tikzpicture}
+\end{center}
+
+\subsection{Frame Filled Choice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Define Common Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define text block
+\newcommand{\textblock}{
+\node[align=center] (A) at (0.065*\fgw, 0.5*\fgh)
+    {choose \\ $k, b$ };
+\node[align=center] (B) at (0.370*\fgw, 0.5*\fgh)
+    {$\Gamma\left(k,b,\epsilon\right)$ };
+\node[align=center] (C) at (0.790*\fgw, 0.5*\fgh)
+    {$\begin{aligned}
+      c &= \Gamma\cdot\phi\\
+      k &= \Gamma\cdot\phi\cdot\theta\\
+      b &= \Gamma\cdot\phi\cdot\left(1-\theta\right)
+      \end{aligned}$};
+\node[align=center] (D) at (0.935*\fgw, 0.5*\fgh)
+    {draw \\$\epsilon^{\prime}$ shock};
+}
+
+% Define continuous choices
+\def\famm{10mm}
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
+\newcommand{\shkspan}[2]{
+\node(0)[solid node, align=center, % solid node gives fist (left to right) black dot
+label=left:{
+   $\textcolor{black}{\epsilon}$
+    }] at (#1, #2) {}
+[grow=right]
+child{
+    [black] node(31)[]{}
+    edge from parent
+          node[sloped, below, black]{}
+}
+child{
+    edge from parent
+      [draw=none]
+  }
+child{
+    [red] node(33)[]{}
+    edge from parent
+          node[sloped, above, black]{}
+};
+\draw[dashed, bend right]
+(31) to (33);
+}
+\newcommand{\ctsspans}[2]{
+\node[solid node, align=center, % solid node gives fist (left to right) black dot
+label=left:{
+   $\textcolor{black}{\phi}$
+    }] at (#1, #2) {}
+[grow=right]
+child{
+[black] node(11)[]{}
+edge from parent
+      node[sloped, below, black]{$\phi=0$}
+}
+child{
+[grow=right]
+% The starting node for theta
+node(12)[solid node, xshift=9, yshift=0, % solid node gives second (left to right) black dot
+                label=left:{
+                  $\theta$
+                }]{}
+% Draw the theta branches
+    child{
+        [red] node(21)[]{}
+        edge from parent
+            node[sloped, below, black]{$\theta=0$}
+    }
+    child{
+        [white] node(22)[xshift=16, yshift=0]{}
+        edge from parent
+          [draw=none]
+    }
+    child{
+        [black] node(23)[]{}
+        edge from parent
+            node[sloped, above, black]{$\theta=1$}
+    }
+    edge from parent
+      [draw=none]
+  }
+child{
+[red] node(13)[]{}
+edge from parent
+      node[sloped, above, black]{$\phi=1$}
+};
+\draw[dashed, bend right]
+(11) to (13);
+\draw[dashed, bend right]
+(21) to (23);
+}
+
+
+\subsubsection{Spans to Left of Descriptions, 100 percent}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+\tikzframe
+% B. Text
+\textblock
+% C. Arrows
+\draw [->, line width=0.25mm] (0.115*\fgw, 0.5*\fgh) -- (0.195*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.410*\fgw, 0.5*\fgh) -- (0.480*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.835*\fgw, 0.5*\fgh) -- (0.890*\fgw, 0.5*\fgh);
+% D. Span Children
+\ctsspans{0.530*\fgw}{0.500*\fgh}
+\shkspan{0.235*\fgw}{0.500*\fgh}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Spans to Left of Descriptions, 50 percent}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.5}]
+\tikzframe
+% B. Text
+\textblock
+% C. Arrows
+\draw [->, line width=0.25mm] (0.115*\fgw, 0.5*\fgh) -- (0.195*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.410*\fgw, 0.5*\fgh) -- (0.480*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.835*\fgw, 0.5*\fgh) -- (0.890*\fgw, 0.5*\fgh);
+% D. Span Children
+\ctsspans{0.530*\fgw}{0.500*\fgh}
+\shkspan{0.235*\fgw}{0.500*\fgh}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Frame Filled Choice Spans Above Descriptions}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{1}{0.25}{0.4}{0.35}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{0.6}{0.20}{0.4}{0.35}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{1}{0.15}{0.5}{0.5}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Frame Filled Choice Spans Above Descriptions}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{1}{0.25}{0.4}{0.4}
+% B. Text
+\node[align=center] (A) at (0.065*\fgw, 0.65*\fgh)
+    {choose \\ $k, b$ };
+\node[align=center] (B) at (0.320*\fgw, 0.350*\fgh)
+    {$\Gamma\left(k,b,\epsilon\right)$ };
+\node[align=center] (C) at (0.675*\fgw, 0.350*\fgh)
+    {$\begin{aligned}
+      c &= \Gamma\cdot\phi\\
+      k &= \Gamma\cdot\phi\cdot\theta\\
+      b &= \Gamma\cdot\phi\cdot\left(1-\theta\right)
+      \end{aligned}$};
+\node[align=center] (D) at (0.935*\fgw, 0.65*\fgh)
+    {draw \\$\epsilon^{\prime}$ shock};
+% C. Arrows
+\draw [->, line width=0.25mm] (0.115*\fgw, 0.65*\fgh) -- (0.250*\fgw, 0.65*\fgh);
+\draw [->, line width=0.25mm] (0.410*\fgw, 0.65*\fgh) -- (0.550*\fgw, 0.65*\fgh);
+\draw [->, line width=0.25mm] (0.790*\fgw, 0.65*\fgh) -- (0.890*\fgw, 0.65*\fgh);
+% D. Span Children
+\ctsspans{0.600*\fgw}{0.650*\fgh}
+\shkspan{0.300*\fgw}{0.650*\fgh}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
 
 
 \end{document}
