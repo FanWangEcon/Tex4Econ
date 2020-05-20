@@ -44,7 +44,7 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 2. [Tikz Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.pdf)
     - straight and curved connected lines
 3. [Tikz Dynamically Sized Eight Pane Model Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.pdf)
-    - Dynamically sized panes for prior, current and next periods, with left and right in current period
+    - Dynamically sized panes for prior, current and next periods
     - Dynamically sized ext panes, graph panes and labeling areas
     - Parametrized proportioning of panes with dynamic adjustments
 4. [Tikz Linear Spline Equation Plotting](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.pdf)
