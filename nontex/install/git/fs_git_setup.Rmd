@@ -290,3 +290,62 @@ chmod u+x ~/PyFan/bin/push_one
 # execute script
 bash ~/PyFan/bin/pull_one
 ```
+
+## Versioning and Tagging
+
+[Git Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging). [Semantic Versioning](https://semver.org/):
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+1. MAJOR version when you make incompatible API changes,
+2. MINOR version when you add functionality in a backwards compatible manner, and
+3. PATCH version when you make backwards compatible bug fixes.
+
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+
+
+By default, the **git push** command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them. This process is just like sharing remote branches — you can run git push origin <tagname>.
+
+```{bash}
+git tag -l
+git tag -a v0.1.1 -m "Genereate Package after updating to R 4.0.0 Arbor Day."
+git show v0.1.1
+git push github v0.1.1
+```
+
+## Githug pages
+
+local test github pages. [Testing your GitHub Pages site locally with Jekyll](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll).
+
+For testing github pages sites. On windows, install ruby using [windows-installer](https://rubyinstaller.org/downloads/). Windows choose install option 3, install toolchain.
+
+[jekyll with bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
+
+```{bash}
+ruby -v
+gem -v 
+gcc -v
+g++ -v 
+make -v 
+
+gem install jekyll bundler
+jekyll -v
+gem install bundler
+gem install minima
+gem install jekyll-feed
+
+cd ~/fanwangecon.github.io
+<!-- delete existing Gemfile Gemfile.lock possibly in directory -->
+bundle init
+bundle config set --local path 'vendor/bundle'
+bundle add jekyll
+bundle add minima
+bundle add jekyll-feed
+bundle exec jekyll new --force --skip-bundle .
+
+bundle exec jekyll serve
+http://localhost:4000
+
+https://jekyllrb.com/tutorials/using-jekyll-with-bundler/
+```
+

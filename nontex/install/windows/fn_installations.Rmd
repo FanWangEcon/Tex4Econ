@@ -81,6 +81,12 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 pip install sphinx
 ```
 
+Theme for sphinx
+```{bash}
+pip install sphinx-rtd-theme
+pip install sphinx_bootstrap_theme
+```
+
 Initialize a Poetry-style Python Package and add Sphinx style docs. This creates the folder *~/pyfan* and initialize it with various:
 
 ```{bash}
@@ -182,12 +188,20 @@ poetry add python-frontmatter
 
 After modules are added and new programs developed
 
+[sphinx readthedocx](https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/)
+
 ```{bash}
 cd ~/pyfan
 cd "C:/Users/fan/pyfan"
 poetry install
-make html
-rm -rf dist/ build/
+
+rm -rf dist/ build/ docs/
+cd docs/
+sphinx-build -b html ../ _build
+<!-- make html -->
+sphinx-build -b latexpdf ../ _build
+make latexpdf
+
 poetry build
 poetry publish
 ```
@@ -198,8 +212,14 @@ On some local computer install pyfan:
 pip show pyfan
 # conda activate pyfan
 pip install pyfan
+pip install git+https://github.com/fanwangecon/pyfan.git#egg=pyfan
 ```
 
+```{bash}
+ipython
+import pyfan.util.rmd.bookdownparse as bookdownparse
+?bookdownparse.fs_yml2readme
+```
 ##### Uninstall
 
 uninstall packages in the overall environment
@@ -501,11 +521,36 @@ conda activate wk_jinja
 conda install -c anaconda jinja2
 conda install -c anaconda pyyaml
 
+# use yaml2tex
+cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\repos\fanwangecon.github.io\_cv\templating\"
+python yaml2tex.py
+```
+
+#### Conda Jekyll Environment (Ruby)
+
+For testing github pages sites. On windows, install ruby using [windows-installer](https://rubyinstaller.org/downloads/). Windows choose install option 3, install toolchain.
+
+```{r}
+# Set up
+conda deactivate
+conda list env
+conda env remove -n wk_ruby
+conda create -n wk_ruby -y
+conda activate wk_ruby
+
+ruby -v
+gem -v 
+gcc -v
+g++ -v 
+make -v 
+
+gem install jekyll bundler
 
 # use yaml2tex
 cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\repos\fanwangecon.github.io\_cv\templating\"
 python yaml2tex.py
 ```
+
 
 #### Conda revealjs nodejs Environment
 
@@ -664,22 +709,48 @@ What are the packages I need in R:
 From command prompt, enter R by typeing *R*, and install packages:
 
 ```{r}
+# Install RTools First!
+# https://cran.r-project.org/bin/windows/Rtools/
+
+# Install tidyverse
+install.packages(c("tidyverse", "tidymodels"))
+
+# Install Packaging tools
+install.packages(c("devtools", "pkgdown", "roxygen2", "bookdown", "knitr", "kableExtra", "formatR"))
+
+# Install Statistics models
+install.packages(c("AER", "minpack.lm"))
+
+# Install Tools to Work with Other Packages
+install.packages(c("reticulate"))
+
+# Personal Packages
+devtools::install_github("fanwangecon/REconTools")
+```
+```{r}
 # Can enter R from Command Prompt Conda ENV, much faster than from r-studio
 # Install R-tools, RTOOLS is for WINDOWS
-install.packages("installr")
-library("installr")
-install.Rtools()
+# install.packages("installr")
+# library("installr")
+# install.Rtools()
 # c:/Rtools/bin;
 # c:/Rtools/mingw_32/bin;
 # c:/Rtools/mingw_64/bin;
 
+# Install RTools First!
+https://cran.r-project.org/bin/windows/Rtools/
+
 # main packagevps
 # tidymodel installation on linux difficult
-install.packages(c("tidyverse", "tidymodels", "tidyr"))
+# install.packages(c("tidyverse", "tidymodels", "tidyr"))
 # development packages
-install.packages(c("devtools", "IRkernel", "pkgdown", "roxygen2", "kableExtra"))
+# install.packages(c("devtools", "IRkernel", "pkgdown", "roxygen2", "kableExtra"))
 # other packages
-install.packages(c("AER", "minpack.lm", "knitr", "matlab"))
+install.packages(c("AER", "minpack.lm"))
+# install.packages(c("AER", "minpack.lm", "knitr", "matlab"))
+
+# for working with other tools
+# install.packages(c("reticulate"))
 
 # Install my package, need to prepare package to work for ubuntu
 # if install does not work, load locally
@@ -688,8 +759,8 @@ devtools::install_github("fanwangecon/REconTools")
 # Present
 install.packages("revealjs")
 # Kernel
-install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
-IRkernel::installspec()
+# install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+# IRkernel::installspec()
 ```
 
 ## Install R (inside Conda)
