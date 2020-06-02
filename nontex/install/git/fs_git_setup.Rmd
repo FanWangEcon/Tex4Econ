@@ -333,6 +333,7 @@ jekyll -v
 gem install bundler
 gem install minima
 gem install jekyll-feed
+gem install jekyll-sitemap
 
 cd ~/fanwangecon.github.io
 <!-- delete existing Gemfile Gemfile.lock possibly in directory -->
@@ -340,8 +341,7 @@ bundle init
 bundle config set --local path 'vendor/bundle'
 bundle add jekyll
 bundle add minima
-bundle add jekyll-feed
-bundle exec jekyll new --force --skip-bundle .
+bundle add jekyll-sitemap
 
 bundle exec jekyll serve
 http://localhost:4000

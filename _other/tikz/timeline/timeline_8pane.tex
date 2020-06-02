@@ -34,14 +34,14 @@
 \date{\today}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Define Core Frame
+%%% A. Define Core Frame
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\tikzframeeight}[7]{
 
   %%% 1. Define Figure Width and Height as Ratio of Page Width and Height
   % param 7 rescales, set same as every node/.style={scale=#7}
-  \def\fgiw{#1*\textwidth*#7}  
+  \def\fgiw{#1*\textwidth*#7}
   \def\fgih{#2*\textheight*#7}
 
   %%% 2. Cut Figure into Four Quadrants
@@ -104,7 +104,7 @@
   \node[align=center] at (0.5*\fgiw,              0.900*\fgih) {current period};
   \node[align=center] at (0.5*\fgire + 0.5*\fgiw, 0.900*\fgih) {next\\period};
 
-  % Sub-label for the left and right part of center pane 
+  % Sub-label for the left and right part of center pane
   \node[align=center] at (\fgiwlm, \fgihtb) {shocks};
   \node[align=center] at (\fgiwrm, \fgihtb) {asset choices};
 
@@ -115,7 +115,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Define text block
+%%% B. Define text block
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\textA}{choose \\ $k, b$}
@@ -124,7 +124,7 @@
 \newcommand{\textD}{draw \\$\epsilon^{\prime}$ shock}
 
 \newcommand{\tikztextblock}[4]{
-% #1=choose \\ $k, b$ 
+% #1=choose \\ $k, b$
 % #2=$\Gamma\left(k,b,\epsilon\right)$
 % #3=$\begin{aligned}c &= \Gamma\cdot\phi\\k &= \Gamma\cdot\phi\cdot\theta\\b &= \Gamma\cdot\phi\cdot\left(1-\theta\right)\end{aligned}$
 % #4=draw \\$\epsilon^{\prime}$ shock
@@ -139,6 +139,95 @@
 {#4};
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% C. Define Spaning Continuous Choices and Discrete Choices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% C.1 Continuous Shocks
+\tikzset{
+  % Two node styles for game trees: solid and hollow
+  solid node/.style={circle,draw,inner sep=1.5,fill=black},
+  hollow node/.style={circle,draw,inner sep=1.5,fill=white}
+}
+\newcommand{\shkspan}[3]{
+\def\famm{\fgiw*#3}
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\node(0)[solid node, align=center, % solid node gives fist (left to right) black dot
+label=left:{
+   $\textcolor{black}{\epsilon}$
+    }] at (#1, #2) {}
+[grow=right]
+child{
+    [black] node(31)[]{}
+    edge from parent
+          node[sloped, below, black]{}
+}
+child{
+    edge from parent
+      [draw=none]
+  }
+child{
+    [red] node(33)[]{}
+    edge from parent
+          node[sloped, above, black]{}
+};
+\draw[dashed, bend right]
+(31) to (33);
+}
+
+%%% C.2 Continuous Spanning Choices
+\newcommand{\ctsspans}[3]{
+\def\famm{\fgiw*#3}
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
+\node[solid node, align=center, % solid node gives fist (left to right) black dot
+label=left:{
+   $\textcolor{black}{\phi}$
+    }] at (#1, #2) {}
+[grow=right]
+child{
+[black] node(11)[]{}
+edge from parent
+      node[sloped, below, black]{$\phi=0$}
+}
+child{
+[grow=right]
+% The starting node for theta
+node(12)[solid node, xshift=9, yshift=0, % solid node gives second (left to right) black dot
+                label=left:{
+                  $\theta$
+                }]{}
+% Draw the theta branches
+    child{
+        [red] node(21)[]{}
+        edge from parent
+            node[sloped, below, black]{$\theta=0$}
+    }
+    child{
+        [white] node(22)[xshift=16, yshift=0]{}
+        edge from parent
+          [draw=none]
+    }
+    child{
+        [black] node(23)[]{}
+        edge from parent
+            node[sloped, above, black]{$\theta=1$}
+    }
+    edge from parent
+      [draw=none]
+  }
+child{
+[red] node(13)[]{}
+edge from parent
+      node[sloped, above, black]{$\phi=1$}
+};
+\draw[dashed, bend right]
+(11) to (13);
+\draw[dashed, bend right]
+(21) to (23);
+}
+
+
 \begin{document}
 
 \maketitle
@@ -147,7 +236,7 @@ Generate a eight pane model timeline tikz structure. The proportional sizes of e
 
 
 \section{Empty Frames with Eight Panes}
-The idea is that the top panes would show overall model timeline. The bottomw below horizontal line spaces could have equations that provide more information sufficiently about what is happening in timeline above. 
+The idea is that the top panes would show overall model timeline. The bottomw below horizontal line spaces could have equations that provide more information sufficiently about what is happening in timeline above.
 \begin{center}
   \begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
     \tikzframeeight{1}{0.25}{0.5}{0.35}{0.125}{0.875}{1.0}
@@ -167,12 +256,12 @@ The idea is that the top panes would show overall model timeline. The bottomw be
 
 \section{Eight Dynamic Panes and Four Dynamic Text Blocks}
 
-Now in addition to the frame structure, add in text, the texts are dynamically controlled with textblocks. The positions are dynamically sized automatically. Text contents could change. 
+Now in addition to the frame structure, add in text, the texts are dynamically controlled with textblocks. The positions are dynamically sized automatically. Text contents could change.
 
 \begin{center}
   \begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
     \tikzframeeight{1}{0.25}{0.5}{0.35}{0.125}{0.875}{1.0}
-    \tikztextblock{\textA}{\textB}{\textC}{\textD}    
+    \tikztextblock{\textA}{\textB}{\textC}{\textD}
   \end{tikzpicture}
 \end{center}
 \begin{center}
@@ -187,5 +276,36 @@ Now in addition to the frame structure, add in text, the texts are dynamically c
     \tikztextblock{$k$}{$\Gamma$}{$\Lambda$ \\ here you go \\ yes works}{$\epsilon$}
   \end{tikzpicture}
 \end{center}
+\pagebreak
+
+\section{Eight Dynamic Panes and Four Dynamic Text Blocks and Spanning Choices}
+Eight Pane, dynamic panes, and also dynamically positioned spanning choices.
+
+\begin{center}
+  \begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+    \tikzframeeight{1}{0.25}{0.5}{0.35}{0.125}{0.875}{1.0}
+    \tikztextblock{\textA}{\textB}{\textC}{\textD}
+    \shkspan{\fgile*0.600 + \fgiwm*0.400}{\fgihtm}{0.065}
+    \ctsspans{\fgiwm*0.675 + \fgire*0.325}{\fgihtm}{0.065}
+  \end{tikzpicture}
+\end{center}
+\begin{center}
+  \begin{tikzpicture}[scale=1.0, every node/.style={scale=0.5}]
+    \tikzframeeight{1}{0.25}{0.6}{0.35}{0.125}{0.875}{0.5}
+    \tikztextblock{hello \\ there}{block two}{this is third}{now \\ fourth \\ text \\ block}
+    \shkspan{\fgile*0.600 + \fgiwm*0.400}{\fgihtm}{0.05}
+    \ctsspans{\fgiwm*0.675 + \fgire*0.325}{\fgihtm}{0.05}
+  \end{tikzpicture}
+\end{center}
+\begin{center}
+  \begin{tikzpicture}[scale=1.0, every node/.style={scale=0.75}]
+    \tikzframeeight{1}{0.20}{0.2}{0.50}{0.125}{0.875}{0.75}
+    \tikztextblock{$k$}{$\Gamma$}{$\Lambda$ \\ here you go \\ yes works}{$\epsilon$}
+    \shkspan{\fgile*0.600 + \fgiwm*0.400}{\fgihtm}{0.05}
+    \ctsspans{\fgiwm*0.675 + \fgire*0.325}{\fgihtm}{0.05}
+  \end{tikzpicture}
+\end{center}
+\pagebreak
+
 
 \end{document}

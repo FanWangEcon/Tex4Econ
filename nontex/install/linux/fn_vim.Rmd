@@ -440,7 +440,6 @@ back to previous point
 - Copy until end of paragraph: *yip*
 - Copy all text on page: *ggVGY*
 
-
 **Insert to edit**:
 
 - Insert after last character of document: *GA*
@@ -450,6 +449,13 @@ back to previous point
 **Copy and Replace**:
 
 - copy current word: *yiw*, then move to the next word to replace: *viwp*
+
+**Replace Text**:
+
+Replace text between quotations by currently copied text: 
+1. move cursor inside quotes
+2. vi"
+3. shift + P
 
 
 ## Vim Statistics
