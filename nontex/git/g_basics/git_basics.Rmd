@@ -11,6 +11,18 @@ always_allow_html: yes
 
 ### Basic Git Commands
 
+#### Git Connect to remote
+
+```{bash}
+# show all remote url
+git remote -v
+```
+
+#### Git Undo All Local changes
+
+```{r}
+```
+
 #### Check File Status
 
 Check if a particular file has had local changes that have not been commited yet.
@@ -22,13 +34,13 @@ Use the [*git status*](https://git-scm.com/docs/git-status) command, with short 
 - *existing no change*: the *(st_git_status == "")* check will be true
 
 ```{r}
-spg_modified <- 
+spg_modified <-
   paste0('git status -s',
          'C:/Users/fan/R4Econ/amto/array/fs_ary_mesh.Rmd')
-spg_anewfile <- 
+spg_anewfile <-
   paste0('git status -s',
          'C:/Users/fan/R4Econ/math/differentiation/fs_differentiate_lhopital.Rmd')
-spg_nochange <- 
+spg_nochange <-
   paste0('git status -s',
          'C:/Users/fan/R4Econ/math/func_ineq/fs_atkinson_ces.Rmd')
 

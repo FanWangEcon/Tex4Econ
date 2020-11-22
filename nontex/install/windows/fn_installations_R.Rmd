@@ -1,0 +1,141 @@
+---
+title: |
+  | R Installation and Update
+output:
+  html_document:
+    number_sections: true
+    toc: yes
+  html_notebook:
+    number_sections: true
+    toc: yes
+  word_document:
+    number_sections: true
+  pdf_document:
+    df_print: paged
+    number_sections: true
+    toc: yes
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# R Installation and Set-Up
+
+Install R and Update R
+
+## Fully Uninstall r
+
+Uninstall R, RStudio and RTools from Windows "Programs and Features" menu
+
+If R was installed in a virtual environment, delete the environment. Otherwise, use system's uninstaller. Before that, from terminal/command-prompt, type *R*, and *.libPaths()* to find paths. Do so inside conda main, outside of conda main, inside different environments, find all paths. After uninstaller finishes, check in the libPath folders to see if there are still stuff there, delete all, delete the folders.
+
+```{r}
+ls_spn_paths <- .libPaths()
+print(ls_spn_paths)
+# C:/Users/fan/Documents/R/win-library/3.6
+# C:/Program Files/R/R-3.6.1/library
+```
+
+## Install R First Time
+
+1. [download R](https://cloud.r-project.org/)
+    + for debian: [Johannes Ranke](https://cran.r-project.org/bin/linux/debian/). For Linux/Debian installation, crucial to update the *source.list* to include sources that have more recent versions of R. If not, will get very old R versions that is not compatible with many packages.
+    + add R to path for Windows. In Windows Path, add for example: *C:/Program Files/R/R-3.6.2/bin/x64/* and *C:/Rtools/bin*
+2. [Install Rtools](https://cran.r-project.org/bin/windows/Rtools/) for building R packages.
+2. [download R-studio](https://rstudio.com/products/rstudio/download/)
+3. Open R-studio and auto-detect R
+4. Install additional packages
+
+After installing R, change the path sequence so that packages install for all users:
+
+```{r}
+ls_spn_paths <- .libPaths()
+print(ls_spn_paths)
+ls_spn_paths <- c(ls_spn_paths[2], ls_spn_paths[1])
+.libPaths(ls_spn_paths)
+ls_spn_paths <- .libPaths()
+print(ls_spn_paths)
+```
+
+```{r}
+# Install RTools First!
+# https://cran.r-project.org/bin/windows/Rtools/
+
+# Install system tools
+install.packages(c("backports"))
+
+# Install tidyverse
+install.packages(c("tidyverse", "tidymodels", "vroom"))
+
+# Install Packaging tools
+install.packages(c("devtools", "pkgdown", "roxygen2", "bookdown", "knitr", "kableExtra", "formatR", "revealjs"))
+
+# Install Statistics models
+install.packages(c("AER", "minpack.lm"))
+install.packages(c("quantreg"))
+
+# Install Tools to Work with Other Packages
+install.packages(c("reticulate", "JuliaCall"))
+# for reticulate errors, install directly from: devtools::install_github("rstudio/reticulate")
+
+# Paralell
+install.packages(c("parallel", "doParallel", "foreach"))
+
+# for sublime r-ide
+# install.packages("languageserver")
+
+# Personal Packages
+devtools::install_github("fanwangecon/REconTools")
+devtools::install_github("fanwangecon/PrjOptiAlloc")
+
+# Stata in Rmd
+devtools::install_github("Hemken/Statamarkdown")
+```
+
+
+Temp Installs:
+```
+# 2020-10-19
+# Temp install development version due to but
+# https://github.com/rstudio/reticulate/issues/831
+devtools::install_github("rstudio/reticulate")
+```
+
+## Update R on Computer
+
+1. On windows, install the *installr* package, and use *updateR()*
+2. At the end, will ask if want to move all old pacages to new R directory
+
+New R will have new package directory, could keep all in old, should copy all to new, and not keep old.
+
+```{r}
+# https://www.r-project.org/nosvn/pandoc/installr.html
+install.packages('installr')
+# update R from inside R (not Rstudio)
+require(installr)
+# this will open dialog boxes to take you through the steps.
+updateR()
+# Set Rstudio to the Latest R
+```
+
+## R Tests
+
+Test the following file to see if we can execute a R file. Do it inside *r_env* and inside a *r* session.
+
+```{r}
+# # A simple file with summary statistics using tidyverse
+# source('C:/Users/fan/R4Econ/summarize/dist/htmlpdfr/fst_hist_onevar.R')
+# # Another simple file with summary statistics using tidyverse
+# source('C:/Users/fan/R4Econ/support/tibble/htmlpdfr/fs_tib_basics.R')
+# # A file involving estimation
+# source('C:/Users/fan/R4Econ/optimization/cesloglin/htmlpdfr/fst_ces_plan_linlog.R')
+#
+# C:/Users/fan/R4Econ/summarize/dist/fst_hist_onevar.Rmd
+# C:/Users/fan/R4Econ/support/tibble/fs_tib_basics.Rmd
+# C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd
+```

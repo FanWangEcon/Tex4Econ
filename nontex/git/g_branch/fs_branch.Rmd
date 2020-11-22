@@ -15,22 +15,31 @@ Go back to [fan](http://fanwangecon.github.io/)'s [Repositories](https://github.
 
 ```{bash, eval = FALSE}
 # Step into REPO
-cd ~/ThaiJMP
+cd ~/Repo
 
 # List my branches
 git branch
 
 # Create new branch
-git branch revise_for_red_submit
+git branch revise_for_submit
 git branch
 
 # Work on new branch
-git checkout revise_for_red_submit
+git checkout revise_for_submit
 
 # When pushing
-git push -u github revise_for_red_submit
+git push -u github revise_for_submit
+
+# When pulling
+git pull github revise_for_submit
 
 # On different computer
-git fetch github revise_for_red_submit
-git checkout revise_for_red_submit
+git fetch github revise_for_submit
+git checkout revise_for_submit
+
+# merge branches
+# 1. checkout master
+git checkout master
+# 2. merge master with branch
+git merge revise_for_submit
 ```

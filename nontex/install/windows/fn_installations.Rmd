@@ -1,23 +1,28 @@
 ---
 title: |
-  | New Computer Fan Data-Science Set-up
+  | Data-Science Set-up
   | Python (Anaconda), R (Rstudio), Matlab and Latex (Texlive)
-  | Atom, VScode, Pycharm
+  | VScode, Atom, Sublime Pycharm
 output:
+  html_document:
+    number_sections: true
+    toc: yes
+  html_notebook:
+    number_sections: true
+    toc: yes
+  word_document:
+    number_sections: true
   pdf_document:
     df_print: paged
     number_sections: true
-  html_notebook:
-    number_sections: true
-  word_document:
-    number_sections: true
-  html_document:
-    number_sections: true
+    toc: yes
 urlcolor: blue
 always_allow_html: yes
 ---
 
-Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/). This file contains various excessive details on installations. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
@@ -77,6 +82,7 @@ For development machines, install [Poetry](https://github.com/python-poetry/poet
 ```{bash}
 # poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+poetry --version
 # sphinx
 pip install sphinx
 ```
@@ -85,6 +91,7 @@ Theme for sphinx
 ```{bash}
 pip install sphinx-rtd-theme
 pip install sphinx_bootstrap_theme
+pip install nbsphinx --user
 ```
 
 Initialize a Poetry-style Python Package and add Sphinx style docs. This creates the folder *~/pyfan* and initialize it with various:
@@ -109,6 +116,21 @@ poetry publish
 # What is the virtual Env id
 poetry env info
 ```
+
+### Poetry Update Python Version 
+
+[poetry change python version to 3.x](https://stackoverflow.com/questions/60580113/poetry-change-python-version-to-3-x)
+
+The existing poetry env needs to be deleted and re-created if need to update python version. 
+
+```{bash}
+poetry env list 
+```
+
+1. Update python requirement in .toml to *python = "^3.8"*
+2. delete current env: *poetry env remove python*
+3. run: *poetry lock*
+4. run: *poetry update*, *poetry install*, etc...
 
 ### Installating Poetry Created Packages 
 
@@ -174,8 +196,27 @@ poetry env info
 All installations: 
 
 ```{bash}
+# pyfan
 poetry remove python-frontmatter pyyaml
 poetry add python-frontmatter pyyaml
+poetry add numpy
+poetry add scipy
+poetry add cython
+
+# Compuational and Stats
+poetry add statsmodels
+poetry add numba
+poetry add sklearn
+
+# visualize
+poetry add matplotlib
+poetry add seaborn
+
+# pyecon
+poetry add pyfan
+
+# aws
+poetry add boto3
 ```
 
 Poetry modules added over time:
@@ -190,13 +231,18 @@ After modules are added and new programs developed
 
 [sphinx readthedocx](https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/)
 
+SEE BELOW *pyfan/pyecon workflow and files added*:
+
 ```{bash}
 cd ~/pyfan
 cd "C:/Users/fan/pyfan"
+cd "C:/Users/fan/pyecon"
 poetry install
 
-rm -rf dist/ build/ docs/
-cd docs/
+<!-- rm -rf dist/ build/ docs/
+mkdir docs -->
+cd doc/
+rm -rf _build/ auto_examples/ gen_modules/backreferences gen_modules/generators
 sphinx-build -b html ../ _build
 <!-- make html -->
 sphinx-build -b latexpdf ../ _build
@@ -206,7 +252,7 @@ poetry build
 poetry publish
 ```
 
-On some local computer install pyfan:
+SEE BELOW *pyfan/pyecon workflow and files added*, on some local computer install pyfan:
 
 ```{bash}
 pip show pyfan
@@ -235,7 +281,7 @@ pip uninstall pyyaml
 pip uninstall python-frontmatter
 ```
 
-##### pyfan workflow and files added
+##### pyfan/pyecon workflow and files added
 
 New python functions are added, or new Rmd files are added with python exampls. 
 
@@ -265,19 +311,43 @@ New py functions:
 9. Uninstall and install in wk_pyfan envir
 
 ```{bash}
-cd "C:/Users/fan/pyfan"
+conda activate base
+
+<!-- to update all dependencies -->
+poetry update
+
+cd "C:/Users/fan/pyfan/"
+cd "C:/Users/fan/pyecon/"
 poetry install
 
-rm -rf dist/ build/ docs/
-mkdir docs
-cd docs/
-sphinx-build -b html ../ _build
+cd "C:/Users/fan/pyfan/doc/"
+cd "C:/Users/fan/pyecon/doc"
+rm -rf _build/ auto_examples/ gen_modules/backreferences gen_modules/generators
+make html
 
+<!-- Check Results in: C:\Users\fan\pyfan\doc\_build\html\index.html -->
+
+cd "C:/Users/fan/pyfan/"
+cd "C:/Users/fan/pyecon/"
 poetry build
 poetry publish
 ```
 
+pip install works inside conda env. Uninstall first. Then install pyfan in conda env using pip. With user option, seems to install system-wide. 
+
+Note that if some of the conda env use different python versions than base, then when base programs are updated, will not update in env. 
+
+Might need to update this in all sub-directories
+
 ```{bash}
+<!-- local install, this does not install in conda env -->
+cd "C:/Users/fan/pyfan/"
+cd "C:/Users/fan/pyecon/"
+python setup.py install --user
+<!-- after installing show appear under pip: pip show pyfan, with latest version ID -->
+<!-- after installing this does not appear on conda list: conda list -n base, but in python, import pyfan as pyfan works -->
+<!-- help('modules') in python to see if installed-->
+
 pip show pyfan
 <!-- pip install pyfan -->
 pip uninstall pyfan -y
@@ -285,12 +355,17 @@ pip install pyfan
 pip install git+https://github.com/fanwangecon/pyfan.git#egg=pyfan
 
 conda activate wk_pyfan
+conda activate wk_cgefi
+
+<!-- if pyfan already installed, but not in conda env, uninstall and installing puts it in conda env -->
 pip uninstall pyfan -y
 pip install pyfan
+<!-- --user installs it for outside of env -->
+pip install pyfan --user
+
 pip install git+https://github.com/fanwangecon/pyfan.git#egg=pyfan
 conda deactivate
 ```
-
 
 ## sphinx and readthedocs
 
@@ -304,6 +379,14 @@ cd ~/Py4Econ
 mkdir docs
 sphinx-quickstart
 make html
+```
+
+2. install sphinx packages
+
+- [phinx-gallery](https://sphinx-gallery.github.io/stable/index.html)
+
+```{bash}
+pip install sphinx-gallery
 ```
 
 ### autodoc
@@ -504,6 +587,13 @@ To Add Anaconda to Path, In Windows
 
 ### Conda Update, Install, Channels
 
+Conda update python version 
+
+```{bash}
+conda install -c anaconda python=3.7
+conda update --all
+```
+
 Open up Anaconda Navigator, it will update navigator automatically. If there are errors, might have to clean first.
 
 There are different channels/repositories from which packages could be installed: *conda*, *conda-forge*, for example. Can change where to look for packages first. Many packages are in multiple channels. Conda-forge often have mroe recent packages.
@@ -518,6 +608,7 @@ conda config --get channels
 # remove conda-forge from channels (do so for main env install)
 conda config --remove channels conda-forge
 # normal update
+# to show all currently installed: conda list -n base
 conda update --all
 ```
 
@@ -537,6 +628,12 @@ conda install pip
 
 # see if package exists on pip and install from pip
 pip install smop
+```
+#### Conda Base
+
+```{base}
+conda install -c anaconda boto3 -y
+
 ```
 
 #### Conda Perl Environment
@@ -611,34 +708,136 @@ cd "C:\Users\fan\Documents\Dropbox (UH-ECON)\repos\fanwangecon.github.io\_cv\tem
 python yaml2tex.py
 ```
 
-#### Conda revealjs nodejs Environment
+#### Conda wk_pyfan bookdown
 
 revealjs, decktape to pdf conversions
 
 ```{r}
+conda update -n base -c defaults conda
+
 # Set up
 conda deactivate
 conda list env
 conda env remove -n wk_pyfan
-conda create -n wk_pyfan -y
+conda create -n wk_pyfan -y python=3.8
 conda activate wk_pyfan
 
+
 # add channel
-conda config --env --add channels conda-forge
+# conda config --env --add channels conda-forge
 conda config --get channels
 conda config --get channels --env
 
 # yaml
-conda install python-frontmatter -y
+# conda install python-frontmatter -y
+pip install python-frontmatter
 conda install pyyaml -y
-
-# environment data
-conda install cdsapi -y
-conda install -c conda-forge eccodes -y
 
 # pyfan install 
 pip install pyfan
 
+# numpy etc install
+conda install -c anaconda numpy
+# https://github.com/numpy/numpy/issues/17726
+# https://github.com/numpy/numpy/wiki/FMod-Bug-on-Windows
+# pip install numpy==1.19.3
+# conda install -c anaconda cython
+
+# matplotlib install
+# conda install -c anaconda matplotlib -y
+# python -m pip install -U matplotlib
+
+# to test aws
+conda install boto3 -y
+
+# environment data
+conda install cdsapi -y
+conda install -c conda-forge eccodes -y
+conda install -c conda-forge cfgrib
+
+
+```
+
+#### Conda ECMWF Envir 
+
+```
+
+conda deactivate
+conda list env
+conda env remove -n wk_ecmwf
+conda create -n wk_ecmwf -y
+conda activate wk_ecmwf
+
+conda install -c conda-forge cdsapi -y
+conda install -c conda-forge eccodes -y
+conda install -c conda-forge cfgrib -y
+conda install -c conda-forge xarray -y
+conda install -c conda-forge netcdf4 -y
+
+```
+
+#### Conda ECMWF Envir Python 2
+
+```
+
+conda deactivate
+conda list env
+conda env remove -n wk_ecmwf_py2
+conda create -n wk_ecmwf_py2 python=2.7 -y 
+conda activate wk_ecmwf_py2
+
+python --version
+```
+
+#### Conda CGE Environment
+
+Installing pip installed/updated python version from 3.7 to 3.8.
+
+```
+conda deactivate
+conda list env
+conda env remove -n wk_cgefi
+conda create -n wk_cgefi -y
+conda activate wk_cgefi
+
+# Install External Tools
+conda install -c anaconda pip -y
+
+# Cloud
+conda install -c anaconda boto3 -y
+
+# Python tools
+conda install -c anaconda pytest -y
+
+# Install Own Tools
+pip install pyfan
+
+# Scientific Computing
+conda install -c anaconda numpy -y
+conda install -c anaconda statsmodels -y
+conda install -c conda-forge interpolation -y
+conda install -c anaconda pandas -y
+conda install -c anaconda scikit-learn
+conda install -c anaconda cython
+
+# Graphing
+conda install -c anaconda matplotlib -y
+conda install -c anaconda pillow -y
+
+```
+
+#### Conda AWS Environment
+
+AWS environment and set-up on local computer
+
+```
+conda deactivate
+conda list env
+conda env remove -n wk_aws
+conda create -n wk_aws -y
+conda activate wk_aws
+
+install docker
 ```
 
 
@@ -704,6 +903,15 @@ python ~/PyFan/ProjectSupport/Testing/Numpy/Functions.py
 python ~/PyFan/ProjectSupport/graph/subplot.py
 ```
 
+## Numpydoc 
+
+```{bash}
+Returns:
+    None
+
+``` 
+
+
 # R Installation
 
 R could be installed from Anaconda or directly on windows outside of the Anaconda directories. When installing from within Anaconda, could create R environment that are isolated from the rest of the computer. The R environment could be updated and deleted without disturbing dependencies in conda main or the rest of the computer.
@@ -735,7 +943,7 @@ sudo apt-get remove r-base-core
 # Inside Conda base
 conda activate
 # Conda r_env
-conda activate r_env
+conda activate r_envr
 # Where is it installed?
 which R
 # /home/wangfanbsg75/anaconda3/bin/R
@@ -786,6 +994,23 @@ sudo apt-get install libssl-dev
 sudo apt-get install libxml2-dev
 ```
 
+### Update R 
+
+1. On windows, install the *installr* package, and use *updateR()*
+2. At the end, will ask if want to move all old pacages to new R directory
+
+New R will have new package directory, could keep all in old, should copy all to new, and not keep old.
+
+```{r}
+# https://www.r-project.org/nosvn/pandoc/installr.html
+install.packages('installr')
+# update R from inside R (not Rstudio)
+require(installr)
+# this will open dialog boxes to take you through the steps.
+updateR() 
+# Set Rstudio to the Latest R
+```
+
 ### Install Packages for R
 
 What are the packages I need in R:
@@ -793,6 +1018,7 @@ What are the packages I need in R:
 **Use Multiple Languages**:
 
 - [reticulate](https://github.com/rstudio/reticulate)
+    + install directly from: devtools::install_github("rstudio/reticulate")
 
 **Visualization, Packaging Etc**:
 
@@ -805,8 +1031,11 @@ From command prompt, enter R by typeing *R*, and install packages:
 # Install RTools First!
 # https://cran.r-project.org/bin/windows/Rtools/
 
+# Install system tools
+install.packages(c("backports"))
+
 # Install tidyverse
-install.packages(c("tidyverse", "tidymodels"))
+install.packages(c("tidyverse", "tidymodels", "vroom"))
 
 # Install Packaging tools
 install.packages(c("devtools", "pkgdown", "roxygen2", "bookdown", "knitr", "kableExtra", "formatR"))
@@ -816,9 +1045,14 @@ install.packages(c("AER", "minpack.lm"))
 
 # Install Tools to Work with Other Packages
 install.packages(c("reticulate", "JuliaCall"))
+# for reticulate errors, install directly from: devtools::install_github("rstudio/reticulate")
+
+# Paralell
+install.packages(c("parallel", "doParallel", "foreach"))
 
 # Personal Packages
 devtools::install_github("fanwangecon/REconTools")
+devtools::install_github("fanwangecon/PrjOptiAlloc")
 ```
 ```{r}
 # Can enter R from Command Prompt Conda ENV, much faster than from r-studio
@@ -1022,6 +1256,20 @@ source('C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.R')
 # C:/Users/fan/R4Econ/optimization/cesloglin/fst_ces_plan_linlog.Rmd
 ```
 
+# Matlab Installation 
+
+1. go to Mathworks, download the latest file.s 
+
+# Word
+
+[Change background color and text color in word](https://www.davidbosman.fr/scsaw/?p=687)
+
+Use these for my preferred background and text colors, consistent with SumatraPDF
+
+> TextColor = #1e170f, R=30, G=23, B=15
+> BackgroundColor = #fff8e6, R=255, G=248, B=230
+
+
 # Install Latex and PDF
 
 Use a combination of overleaf and local compile. The goal is to have the same installation set-up for windows as well as linux. And hopefully, locally compilable file also can be compiled on overleaf (only use packages also available on overleaf).
@@ -1074,7 +1322,6 @@ For windows, install [SumatraPDF](https://www.sumatrapdfreader.org/download-free
     + Kindle Sepia Darker: *503f2a*
     + Kindle Sepia Darkerer: *1e170f*
 
-
 ```
 FixedPageUI [
 	TextColor = #1e170f
@@ -1124,8 +1371,12 @@ PDF Adobe Acrobat Installation
 
 # Install Various Editors
 
-Atom, VSCode, Notepad++, Sublime, etc. These are essential editors that allows for pleasant programming and writing experiences. See here for [fan](http://fanwangecon.github.io/) instructions on [vim](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html) installations.
+Editors to Install:
 
+1. Notepad++: for sync with Sumatra and quick edit by section, and fast quick editor in general
+2. 
+
+Atom, VSCode, Notepad++, Sublime, etc. These are essential editors that allows for pleasant programming and writing experiences. See here for [fan](http://fanwangecon.github.io/) instructions on [vim](https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html) installations.
 
 All settings here JSON files here:
 
@@ -1190,10 +1441,18 @@ ext install ikuyadeu.r
 - Wrap Text: *alt + z*, switch between wrap or not to save screen space for example.
 - Hide Console Pane (running code): *Ctrl + j*
 
-
 *personal bindings*
 
 - toggle minimap: *Ctrl + k, ctrl + z*
+
+### VSCode and Python 
+
+#### Virtual Env Python VSCode
+
+(Using Python environments in VS Code)[https://code.visualstudio.com/docs/python/environments]
+
+1. Ctrl + Shift + P
+2. type in: Python: Select Interpreter
 
 ### VSCode and R
 
@@ -1260,8 +1519,6 @@ To take advantage of Okular (where background color can be none-white for exampl
 ### VSCode Spell Check 
 
 Download [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright).
-
-
 
 
 ### VSCode settings.json
@@ -1355,7 +1612,7 @@ atom
 
 ```
 
-### Atom Shortcuts and Features
+### Atom Shortcuts, Features and Settings
 
 **Features**:
 
@@ -1369,6 +1626,12 @@ atom ~/fanwangecon.github.io ~/Pyfan ~/Teaching ~/Tex4Econ ~/R4Econ ~/M4Econ ~/P
 **Shortcuts** :
 
 - Git Pane: *Ctrl + 9*, *Ctrl + 8*
+- Hard Wrap Text: *Ctrl + Shift + q*
+
+**Spellcheck Scope** :
+
+- cmd+shift+p, run *Editor: Log Cursor Scope*, see notification that comes up, add the *scopes* found to the *spell-check* package scope list. 
+
 
 ### Atom and Python
 
@@ -1476,6 +1739,9 @@ C:\Program Files\Sublime Text 3\
 
 - [sublime markdown Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended), [sublime markdown extended](https://github.com/jonschlinkert/sublime-markdown-extended)
 
+### Sublime Shortcut
+
+- *json pretty*, "alt + shift + j"
 ### Sublime and Outline (Markdown)
 
 To get the markdown outline of the current document if it is markdown press *Ctrl + R*, shows tabbed nested outline view.
@@ -1490,25 +1756,91 @@ Append to end of all lines with starting string some suffix. We have many lines 
 4. append new text suffix
 5. *ctrl + home*, move cursor to the start of all print lines, and append prefix as needed.
 
+## RStudio
+
+### RStudio Short Cuts
+
+**GUI**
+
+- clear all console outputs, collapse all: *edit + clear all outputs*
+
 ## PyCharm
 
 [pycharm](https://www.)jetbrains.com/pycharm/)
 
+
+### PyCharm Settings GUI View etc
+
+Change Theme, modify by changing plug-in.
+
+Go to Settings, *Ctrl + Alt + S*, inside settings, go to theme/appearances, and chagne which theme is used. Material theme has a number of different options.
+
+- Change where Tabs are displayed top or side: Settings -> Editor -> Editor Tabs -> Tab Placement (right)
+- To change font: Settings -> Color Scheme -> Color Scheme Font ->
+
+### PyCharm Set Virtual Env
+
+
+1. In conda env: `where python`: `C:\ProgramData\Anaconda3\envs\wk_cgefi\python.exe`
+2. In Pycharm: Settings (ctrl+alt+s), Project, Python interpreter.
+3. Click on the cog button, "Add" > Right menu, "Virtual Environement" > Existing environement > Three dots > paste the path and point it to the python.exe in Scripts
+
+
 ### PyCharm Short Cuts
 
+**copy/paste**
+
+- copy current function/line reference: *Ctrl + Shift + Alt + C*
+- copy current file full path: *Ctrl + Shift + C*
+
+**run/debug/test**
+
+- Run current file: *ctrl+shift+f10*
+- Run all tests in current file: *alt+shift+f10*
+- Clear all Break-Points: *Ctrl+Shift+F8, Delete*
+- Open up evaluator during debug: *Alt + F8*
+- right click on a file and choose to run all "pytest", then should start test x of N
+
+**Coding**
+
+[code editor help](https://www.jetbrains.com/help/pycharm/using-code-editor.html)
+
+- Refractor Names: *SHIFT + F6*
 - Auto-Indent: *CTRL + SHIFT + ALT + L*
+- Upper Case All: "CTRL + SHFT + U"
+- Lower Case All: "CTRL + SHFT + L"
+- reformat auto-indent: "Ctrl + Alt + L"
+- Highlight searched: "Ctrl + Shift + F7"
 
-## Other Editors
+**GUI**
 
-### Notepad++
+Switching between panes:
+
+1. set up default: Windows - Store Current as Default, go to default with *Shift + F12*
+2. back to editor main: *CTRL + SHIFT + F12*
+
+- Hide All non-code Windows: *CTRL + SHIFT + F12*
+- Shift to last active: *F12*
+- Maximize Output/Console Pane: *CTRL + SHIFT + QUOTE*
+- Hide Output Pane: *SHIFT + ESC*
+- Show Console output max: first debug, where debug is activate, *Ctrl + Shift + '*
+
+**Settings**
+
+- Go to Settings: *Ctrl + Alt + S*, click on keymap
+
+
+## Notepad++
 
 [Notepad++](https://notepad-plus-plus.org/downloads/v7.8.2/). Many old projects have xml folder structures for Notepad++.
 
 - Silently update file changes made in other editors: Settings, Preferences, MISC., File Status Auto Detection, Update Silently.
 
+### Installation 
 
-
-
+- Install Notepad++
+- Settings + Preferences + Cloud + Google Drive/App/Notepad++ Sync Setting there. 
+- install [Npp-1-Dark](https://github.com/60ss/Npp-1-Dark)
 
 
 # Other Programs to Install

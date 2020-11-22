@@ -22,6 +22,13 @@ Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Re
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
+# Windows Files
+
+## Reset Quick Access in Windows
+
+1. start cmd prompt with admin rights
+2. run: del /F /Q %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*
+
 # Windows Shortcuts
 
 [Microsoft Keyboard shortcuts](https://www.microsoft.com/accessories/en-us/support/hardware-tips-and-tricks)

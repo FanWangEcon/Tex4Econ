@@ -308,12 +308,13 @@ By default, the **git push** command doesn’t transfer tags to remote servers. 
 
 ```{bash}
 git tag -l
-git tag -a v0.1.1 -m "Genereate Package after updating to R 4.0.0 Arbor Day."
-git show v0.1.1
-git push github v0.1.1
+git tag -a v0.1.3 -m "Genereate Package after updating to R 4.0.0 Arbor Day."
+git tag -a v0.1.37 -m "pyfan with sphinx"
+git show v0.1.37
+git push github v0.1.37
 ```
 
-## Githug pages
+## Github pages
 
 local test github pages. [Testing your GitHub Pages site locally with Jekyll](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll).
 
@@ -323,10 +324,10 @@ For testing github pages sites. On windows, install ruby using [windows-installe
 
 ```{bash}
 ruby -v
-gem -v 
+gem -v
 gcc -v
-g++ -v 
-make -v 
+g++ -v
+make -v
 
 gem install jekyll bundler
 jekyll -v
@@ -349,3 +350,12 @@ http://localhost:4000
 https://jekyllrb.com/tutorials/using-jekyll-with-bundler/
 ```
 
+
+# Git Commands
+
+## Stop tracking a particular file
+
+```
+cd ~/PrjOptiSNW
+git filter-branch --tree-filter 'rm -f ~/PrjOptiSNW/PrjOptiSNW.mltbx' -- --all
+```

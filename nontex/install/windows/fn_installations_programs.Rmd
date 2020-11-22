@@ -1,0 +1,73 @@
+---
+title: |
+  | Program Installations
+output:
+  html_document:
+    number_sections: true
+    toc: yes
+  html_notebook:
+    number_sections: true
+    toc: yes
+  word_document:
+    number_sections: true
+  pdf_document:
+    df_print: paged
+    number_sections: true
+    toc: yes
+urlcolor: blue
+always_allow_html: yes
+---
+
+Go back to [fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# Program Installations
+
+Installing various editors, support programs etc. Keep Track of program versions etc.
+
+## Additional Programs that I Use
+
+- Pandoc
+
+
+## Computing Programs
+
+1. MATLAB
+
+### MATLAB
+
+Packages:
+
+- MATLAB
+- simulink
+- curve fitting
+- database
+- econometrics
+- financial
+- global optimization
+- gpu coder
+- Matlab coder
+- Matlab compiler
+- Matlab compiler SDK
+- Optimization
+- Parallel Computing
+- Partial Differential Equation
+- Statistics and Machine Learning
+- Symbolic Math
+
+Update Sequence:
+
++ 2020-09-30 22:17, 2020b
+
+## Editor Programs
+
+1. Notepad ++
+
+### Notepad ++
+
+Update Sequence
+
++ 2020-09-30 19:36
