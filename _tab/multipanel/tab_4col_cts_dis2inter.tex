@@ -1,0 +1,143 @@
+\documentclass[12pt,english]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+% \usepackage[monochrome]{xcolor}
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs,dcolumn}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[font=singlespacing, skip=3pt]{caption}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{float}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{subfig}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.5in,
+	right=1.5in,
+	top=1.0in,
+	bottom=1.0in,
+}
+% \geometry{
+% 	a2paper,
+% 	noheadfoot=true,
+% 	left=1.0in,
+% 	right=1.0in,
+% 	top=0.0in,
+% 	bottom=0.0in,
+% }
+
+
+\setlength{\parindent}{0pt}
+\makeatletter
+%\doublespacing
+\onehalfspacing
+\date{December 22, 2020}
+\author{Fan Wang}
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+\newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% Titling and Author
+\title{A Regression Table with Multiple Specifications and Groups of Coefficients.\\
+With Table Caption, Multi-line Table Notes, and Column Groupings.}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+
+\begin{table}[htbp]
+\centering
+\caption{\hspace*{0mm}OLS regression analysis of birthweight with interactions of composite index and extreme temperature exposure with maternal education.\label{tab:mainthree}}
+\begin{adjustbox}{max width=1\textwidth}
+\begin{tabular}{m{5.2cm}*{4}{>{\centering\arraybackslash}m{2cm}}}
+\toprule
+& \multicolumn{4}{c}{Varying cutoffs of extreme temperature exposures}\\
+\cmidrule(l{5pt}r{5pt}){2-5}
+& \multicolumn{2}{c}{1 percent cutoff} & \multicolumn{2}{c}{2.5 percent cutoff}\\
+\cmidrule(l{5pt}r{5pt}){2-3} \cmidrule(l{5pt}r{5pt}){4-5}
+Variable & (1) & (2) & (3) & (4) \\
+\midrule
+\addlinespace
+\multicolumn{5}{l}{\hspace*{0mm}Environmental exposure variables}\\
+\addlinespace
+\hspace*{6mm}Composite index & -139.90\sym{***} & -143.50\sym{***} & -129.50\sym{***} & -132.90\sym{***}\\
+\addlinespace
+ & (10.81) & (10.87) & (11.03) & (11.08)\\
+\addlinespace
+\hspace*{6mm}Extreme heat & -51.80\sym{***} & -56.69\sym{***} & -5.41 & -7.51\\
+\addlinespace
+ & (11.52) & (11.74) & (7.07) & (7.19)\\
+\addlinespace
+\hspace*{6mm}Extreme cold & -26.81\sym{*} & -25.05 & -29.52\sym{***} & -29.31\sym{***}\\
+\addlinespace
+ & (16.14) & (16.44) & (7.11) & (7.22)\\
+\addlinespace
+\addlinespace
+\multicolumn{5}{l}{\hspace*{0mm}Education and environmental exposure interactions}\\
+\addlinespace
+\hspace*{6mm}College completion & 45.01\sym{***} & 32.36\sym{***} & 45.17\sym{***} & 27.27\sym{**}\\
+\addlinespace
+ & (4.40) & (9.46) & (4.40) & (12.92)\\
+\addlinespace
+\hspace*{6mm}College x composite index &  & 9.08\sym{***} &   & 9.25\sym{***}\\
+\addlinespace
+ &  & (2.48) &   & (2.49)\\
+\addlinespace
+\hspace*{6mm}College x extreme heat &  & 12.14\sym{***} &   & 6.08\sym{***}\\
+\addlinespace
+ &  & (3.89) &   & (2.19)\\
+\addlinespace
+\hspace*{6mm}Ccollege x extreme cold &  & -5.88 &   & -1.03\\
+\addlinespace
+ &  & (7.52) &   & (3.53)\\
+\addlinespace
+\addlinespace
+\multicolumn{5}{l}{\hspace*{0mm}Control variables}\\
+\addlinespace
+\hspace*{6mm}Male & 104.60\sym{***} & 104.60\sym{***} & 104.40\sym{***} & 104.40\sym{***}\\
+\addlinespace
+ & (3.89) & (3.89) & (3.89) & (3.89)\\
+\addlinespace
+\hspace*{6mm}Mother’s age & 54.68\sym{***} & 54.16\sym{***} & 54.75\sym{***} & 54.23\sym{***}\\
+\addlinespace
+ & (4.88) & (4.88) & (4.88) & (4.89)\\
+\addlinespace
+\hspace*{6mm}Mother’s age$^2$ & -0.88\sym{***} & -0.87\sym{***} & -0.88\sym{***} & -0.87\sym{***}\\
+\addlinespace
+ & (0.08) & (0.08) & (0.08) & (0.08)\\
+\addlinespace
+\hspace*{0mm}Intercept & -346.20\sym{***} & -331.40\sym{**} & -262.00\sym{*} & -244.10\sym{*}\\
+\addlinespace
+ & (134.20) & (134.30) & (134.70) & (134.90)\\
+\addlinespace
+\midrule
+Observations & 54,828 & 54,828 & 54,828 & 54,828\\
+R$^2$	& 0.073	& 0.073	& 0.073	& 0.073\\
+\bottomrule
+\addlinespace[0.5em]
+\multicolumn{5}{p{1.1\textwidth}}{\hspace*{0mm}\footnotesize
+\parbox[t]{1.1\textwidth}{Notets Line 1: * 0.10 ** 0.05 *** 0.01. \\
+Notets Line 2: Table notes, more information, additional information. This is a longer piece of note that will wrap to
+the next line because it is fairly long. Does this work. Hopefully. \\
+Notets Line 3: Also this is important. \\
+Notets Line 4: And that as well. The text is wrapped.}
+}\\
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+
+
+\end{document}
