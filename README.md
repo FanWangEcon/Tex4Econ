@@ -1,7 +1,8 @@
 [![HitCount](http://hits.dwyl.com/fanwangecon/Tex4Econ.svg)](https://github.com/FanWangEcon/Tex4Econ)  [![Star](https://img.shields.io/github/stars/fanwangecon/Tex4Econ?style=social)](https://github.com/FanWangEcon/Tex4Econ/stargazers) [![Fork](https://img.shields.io/github/forks/fanwangecon/Tex4Econ?style=social)](https://github.com/FanWangEcon/Tex4Econ/network/members) [![Star](https://img.shields.io/github/watchers/fanwangecon/Tex4Econ?style=social)](https://github.com/FanWangEcon/Tex4Econ/watchers) [![DOI](https://zenodo.org/badge/182257793.svg)](https://zenodo.org/badge/latestdoi/182257793)
 
-
 This is a work-in-progress [website](https://fanwangecon.github.io/Tex4Econ/) of support files for writing various files with latex, produced by [Fan](https://fanwangecon.github.io/). The project includes sample file for papers, exams, homeworks, etc.
+
+This package is synced with [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq), all latex files and examples here are viewable and compilable on the overleaf project synced site. 
 
 From [Fan](https://fanwangecon.github.io/)'s other repositories: For dynamic borrowing and savings problems, see [MEconTools](https://fanwangecon.github.io/MEconTools/); For code examples, see also [Python Example Code](https://fanwangecon.github.io/Py4Econ/), [Matlab Example Code](https://fanwangecon.github.io/M4Econ/), [R Example Code](https://fanwangecon.github.io/R4Econ/) and [Stata Example Code](https://fanwangecon.github.io/Stata4Econ/); For intro econ with Matlab, see [Intro Mathematics for Economists](https://fanwangecon.github.io/Math4Econ/), and for intro stat with R, see [Intro Statistics for Undergraduates](https://fanwangecon.github.io/Stat4Econ/). See [here](https://github.com/FanWangEcon) for all of [Fan](https://fanwangecon.github.io/)'s public repositories.
 
