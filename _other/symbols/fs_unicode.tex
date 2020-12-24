@@ -1,0 +1,43 @@
+\documentclass[12pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\DeclareUnicodeCharacter{25FC}{$\blacksquare$}
+
+% for links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+% Titling and Author
+\title{Latex Handling Unicode}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+Dependencies:
+\begin{verbatim}
+  \usepackage[utf8]{inputenc}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{amsthm}
+\end{verbatim}
+
+\section{End of Proof as Unicode}
+
+\begin{verbatim}
+  \DeclareUnicodeCharacter{25FC}{$\blacksquare$}
+\end{verbatim}
+
+Suppose want to directly use unicode 25FC, which is a black-box for end of proof. Pasting ◼ into latex is OK, if we declare 25FC to be a blacksquare. Without this declaration, would have unicode error upon compile when using ◼. 
+
+When there are unicode issues, look at the output error message, will say which is the CODE of the unicode character that is having an issue. Search online for what that character looks like add U+ in front of the four letter-numeric code possibly.
+
+\end{document}
