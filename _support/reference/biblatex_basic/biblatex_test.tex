@@ -47,6 +47,37 @@
 	date = {2010-09-01},
 	keywords = {health, education, genetics, treatment effects}
 }
+@article{hao_air_2016,
+	title = {Air {Pollution} and {Preterm} {Birth} in the {U}.{S}. {State} of {Georgia} (2002–2006): {Associations} with {Concentrations} of 11 {Ambient} {Air} {Pollutants} {Estimated} by {Combining} {Community} {Multiscale} {Air} {Quality} {Model} ({CMAQ}) {Simulations} with {Stationary} {Monitor} {Measurements}},
+	volume = {124},
+	issn = {0091-6765, 1552-9924},
+	shorttitle = {Air {Pollution} and {Preterm} {Birth} in the {U}.{S}. {State} of {Georgia} (2002–2006)},
+	url = {https://ehp.niehs.nih.gov/doi/10.1289/ehp.1409651},
+	doi = {10.1289/ehp.1409651},
+	language = {en},
+	number = {6},
+	urldate = {2020-07-18},
+	journal = {Environmental Health Perspectives},
+	author = {Hao, Hua and Chang, Howard H. and Holmes, Heather A. and Mulholland, James A. and Klein, Mitch and Darrow, Lyndsey A. and Strickland, Matthew J.},
+	month = jun,
+	year = {2016},
+	pages = {875--880}
+}
+@article{westergaard_ambient_2017,
+	title = {Ambient air pollution and low birth weight - are some women more vulnerable than others?},
+	volume = {104},
+	issn = {01604120},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0160412017301976},
+	doi = {10.1016/j.envint.2017.03.026},
+	language = {en},
+	urldate = {2020-07-19},
+	journal = {Environment International},
+	author = {Westergaard, Nadja and Gehring, Ulrike and Slama, Rémy and Pedersen, Marie},
+	month = jul,
+	year = {2017},
+	pages = {146--154},
+}
+
 \end{filecontents}
 
 \usepackage[authordate,
@@ -68,7 +99,20 @@ sortcites=False]{biblatex-chicago}
 
 According to \textcite{becker_human_1986}, ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nunc orci, id pellentesque lacus ullamcorper at. Mauris venenatis gravida magna non dapibus. Nullam vel consequat purus, id luctus dui. Suspendisse vel auctor nulla. Proin ipsum felis, efficitur eu eleifend vitae, efficitur pellentesque mauris \autocite{case_lasting_2005, conti_understanding_2010}.
 
-\paragraph{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{Data}}
+\section{Possessive Citations}
+
+In this example, using possessive to put apostrophe after author names and before date. Accomplished by using \emph{citeauthor} first then \emph{parentcite}.
+
+\citeauthor{hao_air_2016}'s \parencite*{hao_air_2016} Georgia study
+found that associations of traffic-related pollutants, including NO\textsubscript{2} and
+PM\textsubscript{2.5}, with preterm birth tended to be stronger for mothers with low
+educational attainment.
+
+\section{Cite Only Date}
+
+To write more flexibly, can mention author names explicitly in text and then cite the article with \emph{parentcite} for the date only: Westergaard and her colleagues \parencite*{westergaard_ambient_2017} identified only a small handful of studies that addressed effect modification by dimensions of socioeconomic status.
+
+\section{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{Data}}
 
 Village closure information is taken from a village head survey, which was collected in conjunction with household surveys. Village heads were asked if the village currently had a primary school, and asked about the year of school closure if the village school had been closed. Based on the village heads survey, there are four categories of closure status. The first category includes 193 villages that did not have village schools in 2011 and experienced school closure between 1999 and 2010. In the second category, which included 22 villages, a school closure year between 1999 and 2010 was reported, but village heads also reported that the village currently had a school in 2011. In this case, it is plausible that new schools were built in these 22 villages after school closure.\footnote{Generally students went to schools in township centers after village school closure, but in these 22 villages, it is possible that a new consolidated school was built inside these villages.}
 
