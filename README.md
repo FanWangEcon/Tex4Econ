@@ -86,15 +86,18 @@ In overleaf, click on New Project, choose upload project, then select zip below.
 
 1.  [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
 2. [Template Image Only Appendix](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/fantemplate_image_appendix.zip)
+    -   An appendix file with only figures.
+    -   Page number, section number, and alignment control for multiple figures.
+    -   Captions below and above figure. Captions with heading and sub-notes.
 2.  [Template Figure Table and Reference Roman 12 Double Space](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/fantemplate_basic_roman.zip)
 3.  [Template Paper, Response to Referees, Section Numbering and Bib](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/fantemplate_paper_rr_response.zip)
-    -   figures, tables, references
-    -   separate page numbers for each section: _\\renewcommand{\\thesection}{\\arabic{section}}_
-    -   separate heading count for responses to referees: _\\setcounter{section}{0}_
-    -   separate bibliographies: _refsection_
+    -   Figures, tables, references.
+    -   Separate page numbers for each section: _\\renewcommand{\\thesection}{\\arabic{section}}_
+    -   Separate heading count for responses to referees: _\\setcounter{section}{0}_
+    -   Separate bibliographies: _refsection_
 4.  [Template Recommendation Letter](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/fantemplate_recommendation.zip)
-    -   recommendation letter with logo and signature
-    -   contact and address panel
+    -   Recommendation letter with logo and signature.
+    -   Contact and address panel.
 
 ## 3.4 Github Integration
 
