@@ -1,0 +1,18 @@
+\documentclass[tikz]{standalone}
+\usepackage[UTF8]{ctex}
+
+\tikzset{
+  pseudo vertical/.style={
+    % 1\ccwd is the width of one Chinese character, see user manual of ctex pkg
+    text width=1\ccwd,
+    % reduce line spacing and allow linebreak before Chinese period punct (。)
+    % c.f. user manual of xeCJK pkg
+    font=\linespread{1}\selectfont\xeCJKDeclareCharClass{CJK}{`。}
+  }
+}
+
+\begin{document}
+\begin{tikzpicture}
+  \node[draw, inner sep=2pt, pseudo vertical] at (0,0) {文章内容。};
+\end{tikzpicture}
+\end{document}
