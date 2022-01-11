@@ -1,0 +1,262 @@
+\documentclass[12pt,english]{article}
+
+% Basic packages
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{listings}
+
+% Margins 
+\usepackage{geometry}
+\geometry{
+	a3paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
+
+% url package
+\usepackage[colorlinks=true,
+            linkcolor=blue,
+            urlcolor=blue,
+            anchorcolor = blue,
+            citecolor=gray]{hyperref}
+
+% Specific Packages
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+
+% Titling and Author
+\title{Latex Examples, Figure Vertical and Horizontal Alignments with Subfigures}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\clearpage 
+
+\section{Vertical center align with subfigures}
+
+The figure has the following features:
+\begin{itemize}
+    \item An overall caption with width control
+    \item Below figure notes with width control
+    \item subfigure vertically center aligned
+\end{itemize}
+
+\lstset{%
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  language=[LaTeX]{TeX}
+}
+\begin{lstlisting}[frame=single]
+% Included Package
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+% Code
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=.85\textwidth}
+	\caption{\blindtext}
+	\label{fig:vert}
+	\begin{subfigure}[t]{0.45\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{Contours of indifference curves at given estimates}
+    		\includegraphics[width=\linewidth]{example-image-a}
+	\end{subfigure}
+	\par\bigskip % this line generates two rows
+	\begin{subfigure}[t]{0.35\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{Vary $\mu_{R}$}
+    		\includegraphics[width=0.5\linewidth]{example-image-b}
+	\end{subfigure}
+	\par\bigskip
+    \parbox[t]{0.90\textwidth}{\footnotesize \emph{Note:} \blindtext}\\
+\end{figure}
+\end{lstlisting}
+
+\par\medskip
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=.85\textwidth}
+	\caption{\blindtext}
+	\label{fig:vert}
+	\begin{subfigure}[t]{0.45\textwidth}
+        % Sub-caption
+        \centering
+    		\caption{Contours of indifference curves at given estimates}
+    		\includegraphics[width=\linewidth]{example-image-a}
+	\end{subfigure}
+	\par\bigskip % this line generates two rows
+	\begin{subfigure}[t]{0.35\textwidth}
+	    % Sub-caption
+	    \centering
+    		\caption{Vary $\mu_{R}$}
+    		\includegraphics[width=0.5\linewidth]{example-image-b}
+	\end{subfigure}
+	\par\bigskip
+    \parbox[t]{0.90\textwidth}{\footnotesize \emph{Note:} \blindtext}\\
+\end{figure}
+\pagebreak
+
+\section{Horizontal center align with subfigures}
+
+The figure has the following features:
+\begin{itemize}
+    \item Two subfigures on the same line, possibly exceeding pagewidth
+    \item Long wrapped captions
+\end{itemize}
+
+\lstset{%
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  language=[LaTeX]{TeX}
+}
+\begin{lstlisting}[frame=single]
+% Included Package
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+% Code
+\begin{figure}[H]
+    \centering
+	\label{fig:horz}
+    \begin{subfigure}[t]{.51\textwidth}
+        \centering
+        % included graphics appear smaller than full
+        \includegraphics[width=0.48\linewidth]{example-image-b}
+        \caption{\blindtext}
+    \end{subfigure}~
+    % tilde makes subfigures appear on the same row even if > 1.0 of textwidth
+	\begin{subfigure}[t]{0.48\textwidth}
+	    \centering
+	    % linewidth so that included graphics fills subfigure
+    	\includegraphics[width=\linewidth]{example-image-a}
+    	\caption{Vary $\mu_{R}$}
+	\end{subfigure}
+	\caption{\blindtext}
+\end{figure}
+\end{lstlisting}
+
+\par\medskip
+\begin{figure}[H]
+    \centering
+	\label{fig:horz}
+    \begin{subfigure}[t]{.51\textwidth}
+        \centering
+        % included graphics appear smaller than full
+        \includegraphics[width=0.48\linewidth]{example-image-b}
+        \caption{\blindtext}
+    \end{subfigure}~
+    % tilde makes subfigures appear on the same row even if > 1.0 of textwidth
+	\begin{subfigure}[t]{0.48\textwidth}
+	    \centering
+	    % linewidth so that included graphics fills subfigure
+    	\includegraphics[width=\linewidth]{example-image-a}
+    	\caption{Vary $\mu_{R}$}
+	\end{subfigure}
+	\caption{\blindtext}
+\end{figure}
+\pagebreak
+
+\section{Horizontal and vertical center align with subfigures}
+The figure has the following features:
+\begin{itemize}
+    \item Center align multiple rows of figures
+    \item Caption width and wrapping same as subfigure width
+\end{itemize}
+
+\lstset{%
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  language=[LaTeX]{TeX}
+}
+\begin{lstlisting}[frame=single]
+% Included Package
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+% Code
+\newcommand{\subFigWidth}{0.27}
+\newcommand{\subFigGraphWidth}{0.90}
+\newcommand{\maincapwidth}{0.80}
+\begin{figure}[H]
+    \centering
+	\label{fig:verthorz}
+    \begin{subfigure}[t]{\subFigWidth\textwidth}
+        \centering
+        \includegraphics[width=\subFigGraphWidth\linewidth]{example-image-a}
+        \captionsetup{width=\subFigGraphWidth\textwidth}
+        \caption{$\alpha$}
+    \end{subfigure}~
+	\begin{subfigure}[t]{\subFigWidth\textwidth}
+	    \centering
+    	\includegraphics[width=\subFigGraphWidth\linewidth]{example-image-b}
+    	\captionsetup{width=\subFigGraphWidth\textwidth}
+    	\caption{Primary school consolidation--the closure of small community schools or their mergers into larger.}
+	\end{subfigure}
+	\par\medskip
+	\begin{subfigure}[t]{\subFigWidth\textwidth}
+        \centering
+        \includegraphics[width=\subFigGraphWidth\linewidth]{example-image-a}
+        \captionsetup{width=\subFigGraphWidth\textwidth}
+        \caption{We consider heterogeneous treatment effects across groups defined at the intersections of minority status.}
+    \end{subfigure}~
+	\begin{subfigure}[t]{\subFigWidth\textwidth}
+	    \centering
+	    \captionsetup{width=\subFigGraphWidth\textwidth}
+    	\includegraphics[width=\subFigGraphWidth\linewidth]{example-image-b}
+    	\caption{Compared to villages with schools, villages whose schools had closed reported that the schools students}
+	\end{subfigure}
+	\captionsetup{width=\maincapwidth\textwidth}
+	\caption{Results show that intersections of minority status, gender, and community characteristics can delineate significant heterogeneities in policy impacts.}
+\end{figure}
+\end{lstlisting}
+
+\par\medskip
+\newcommand{\subFigWidth}{0.27}
+\newcommand{\subFigGraphWidth}{0.90}
+\newcommand{\maincapwidth}{0.80}
+\begin{figure}[H]
+    \centering
+	\label{fig:verthorz}
+    \begin{subfigure}[t]{\subFigWidth\textwidth}
+        \centering
+        \includegraphics[width=\subFigGraphWidth\linewidth]{example-image-a}
+        \captionsetup{width=\subFigGraphWidth\textwidth}
+        \caption{$\alpha$}
+    \end{subfigure}~
+	\begin{subfigure}[t]{\subFigWidth\textwidth}
+	    \centering
+    	\includegraphics[width=\subFigGraphWidth\linewidth]{example-image-b}
+    	\captionsetup{width=\subFigGraphWidth\textwidth}
+    	\caption{Primary school consolidation--the closure of small community schools or their mergers into larger.}
+	\end{subfigure}
+	\par\medskip
+	\begin{subfigure}[t]{\subFigWidth\textwidth}
+        \centering
+        \includegraphics[width=\subFigGraphWidth\linewidth]{example-image-a}
+        \captionsetup{width=\subFigGraphWidth\textwidth}
+        \caption{We consider heterogeneous treatment effects across groups defined at the intersections of minority status.}
+    \end{subfigure}~
+	\begin{subfigure}[t]{\subFigWidth\textwidth}
+	    \centering
+	    \captionsetup{width=\subFigGraphWidth\textwidth}
+    	\includegraphics[width=\subFigGraphWidth\linewidth]{example-image-b}
+    	\caption{Compared to villages with schools, villages whose schools had closed reported that the schools students}
+	\end{subfigure}
+	\captionsetup{width=\maincapwidth\textwidth}
+	\caption{Results show that intersections of minority status, gender, and community characteristics can delineate significant heterogeneities in policy impacts.}
+\end{figure}
+\pagebreak
+\end{document}
+

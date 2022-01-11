@@ -45,7 +45,14 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 2.  [Multi-Panel Estimation Table Large Size](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.pdf)
 3.  [Small Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.pdf)
 
-## 1.5 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
+## 1.5 [Figures](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/)
+
+1.  [Figure Alignment](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment/figalign.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment/figalign.pdf)
+    - Center align multiple sub-figures with captions, vertically and horizontally
+    - Caption equal-width with subfigure
+    - **latex**: *float, subcaption, caption*
+
+## 1.6 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
 
 1. [Tikz Page Layout](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning/fs_tikz_position.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning/fs_tikz_position.pdf)
     - Relative positioning, proportional to textwidth
