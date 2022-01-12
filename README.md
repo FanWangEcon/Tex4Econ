@@ -48,7 +48,7 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 ## 1.5 [Figures](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/)
 
 1.  [Figure Alignment](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment/figalign.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment/figalign.pdf)
-    - Center align multiple sub-figures with captions, vertically and horizontally
+    - Center align single or multiple sub-figures with captions, vertically and horizontally
     - Caption equal-width with subfigure
     - **latex**: *float, subcaption, caption*
 

@@ -31,7 +31,7 @@
 \captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
 
 % Titling and Author
-\title{Latex Examples, Figure Vertical and Horizontal Alignments with Subfigures}
+\title{Latex Examples with the \href{https://ctan.org/pkg/subcaption?lang=en}{subcaption} and \href{https://ctan.org/pkg/caption?lang=en}{caption} packages, Figure Vertical and Horizontal Alignments with Subfigures}
 \author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
 \date{\today}
 \begin{document}
@@ -40,9 +40,43 @@
 \tableofcontents
 \clearpage 
 
+\section{Center alignment of a single figure}
+
+Figure \ref{fig:single} has the following features:
+\begin{itemize}
+    \item Separate widths for caption and image.
+\end{itemize}
+
+\lstset{%
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  language=[LaTeX]{TeX}
+}
+\begin{lstlisting}[frame=single]
+% Included Package
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+% Code
+\end{lstlisting}
+
+\par\medskip
+\begin{figure}[H]
+    \centering
+    % Note 0.6 inside includegraphics control figure width
+	\includegraphics[width=0.5\linewidth]{example-image-a}
+	% Note 0.9 inside captionsetup control caption width
+	\captionsetup{width=0.6\textwidth}
+	\caption{\blindtext}
+	\label{fig:single}
+\end{figure}
+\pagebreak
+
+
 \section{Vertical center align with subfigures}
 
-The figure has the following features:
+Figure \ref{fig:vert} has the following features:
 \begin{itemize}
     \item An overall caption with width control
     \item Below figure notes with width control
@@ -110,7 +144,7 @@ The figure has the following features:
 
 \section{Horizontal center align with subfigures}
 
-The figure has the following features:
+Figure \ref{fig:horz} has the following features:
 \begin{itemize}
     \item Two subfigures on the same line, possibly exceeding pagewidth
     \item Long wrapped captions
@@ -129,7 +163,6 @@ The figure has the following features:
 % Code
 \begin{figure}[H]
     \centering
-	\label{fig:horz}
     \begin{subfigure}[t]{.51\textwidth}
         \centering
         % included graphics appear smaller than full
@@ -144,13 +177,13 @@ The figure has the following features:
     	\caption{Vary $\mu_{R}$}
 	\end{subfigure}
 	\caption{\blindtext}
+	\label{fig:horz}
 \end{figure}
 \end{lstlisting}
 
 \par\medskip
 \begin{figure}[H]
     \centering
-	\label{fig:horz}
     \begin{subfigure}[t]{.51\textwidth}
         \centering
         % included graphics appear smaller than full
@@ -165,11 +198,12 @@ The figure has the following features:
     	\caption{Vary $\mu_{R}$}
 	\end{subfigure}
 	\caption{\blindtext}
+	\label{fig:horz}
 \end{figure}
 \pagebreak
 
 \section{Horizontal and vertical center align with subfigures}
-The figure has the following features:
+Figure \ref{fig:verthorz} has the following features:
 \begin{itemize}
     \item Center align multiple rows of figures
     \item Caption width and wrapping same as subfigure width
@@ -191,7 +225,6 @@ The figure has the following features:
 \newcommand{\maincapwidth}{0.80}
 \begin{figure}[H]
     \centering
-	\label{fig:verthorz}
     \begin{subfigure}[t]{\subFigWidth\textwidth}
         \centering
         \includegraphics[width=\subFigGraphWidth\linewidth]{example-image-a}
@@ -219,6 +252,7 @@ The figure has the following features:
 	\end{subfigure}
 	\captionsetup{width=\maincapwidth\textwidth}
 	\caption{Results show that intersections of minority status, gender, and community characteristics can delineate significant heterogeneities in policy impacts.}
+	\label{fig:verthorz}
 \end{figure}
 \end{lstlisting}
 
@@ -228,7 +262,6 @@ The figure has the following features:
 \newcommand{\maincapwidth}{0.80}
 \begin{figure}[H]
     \centering
-	\label{fig:verthorz}
     \begin{subfigure}[t]{\subFigWidth\textwidth}
         \centering
         \includegraphics[width=\subFigGraphWidth\linewidth]{example-image-a}
@@ -256,6 +289,7 @@ The figure has the following features:
 	\end{subfigure}
 	\captionsetup{width=\maincapwidth\textwidth}
 	\caption{Results show that intersections of minority status, gender, and community characteristics can delineate significant heterogeneities in policy impacts.}
+	\label{fig:verthorz}
 \end{figure}
 \pagebreak
 \end{document}
