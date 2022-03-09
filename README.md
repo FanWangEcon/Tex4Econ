@@ -2,7 +2,7 @@
 
 This is a work-in-progress [website](https://fanwangecon.github.io/Tex4Econ/) of support files for writing various files with latex, produced by [Fan](https://fanwangecon.github.io/). The project includes sample file for papers, exams, homeworks, etc.
 
-This package is synced with [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq), all latex files and examples here are viewable and compilable on the overleaf project synced site. 
+This package is synced with [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq), all latex files and examples here are viewable and compilable on the overleaf project synced site.
 
 From other repositories: For code examples, see [Python Example Code](https://fanwangecon.github.io/Py4Econ/), [R Example Code](https://fanwangecon.github.io/R4Econ/), [Matlab Example Code](https://fanwangecon.github.io/M4Econ/), and [Stata Example Code](https://fanwangecon.github.io/Stata4Econ/). See [here](https://github.com/FanWangEcon) for all of [Fan](https://fanwangecon.github.io/)'s public repositories.
 
@@ -87,26 +87,40 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 1.  [Pandoc File Conversion](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.pdf)
 
-# 3. Overleaf Integration and Template
+# 3. Templates
 
 In overleaf, click on New Project, choose upload project, then select zip below.
 
+# 3.1 Working Paper Templates
+
 1.  [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
-2. [Template Image Only Appendix](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/fantemplate_image_appendix.zip)
-    -   An appendix file with only figures.
-    -   Page number, section number, and alignment control for multiple figures.
-    -   Captions below and above figure. Captions with heading and sub-notes.
-2.  [Template Figure Table and Reference Roman 12 Double Space](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/fantemplate_basic_roman.zip)
-3.  [Template Paper, Response to Referees, Section Numbering and Bib](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/fantemplate_paper_rr_response.zip)
+
+
+# 3.2 Revision Templates
+
+1.  [Template Paper, Response to Referees, Section Numbering and Bib](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/fantemplate_paper_rr_response.zip)
     -   Figures, tables, references.
     -   Separate page numbers for each section: _\\renewcommand{\\thesection}{\\arabic{section}}_
     -   Separate heading count for responses to referees: _\\setcounter{section}{0}_
     -   Separate bibliographies: _refsection_
-4.  [Template Recommendation Letter](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/fantemplate_recommendation.zip)
+
+# 3.3 Accepted Paper Journal Submission Template
+
+1.  [Accepted Paper Submission to Journal](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/manuscript.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/manuscript.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/fantemplate_acceptedsubmit.zip)
+    -   All paper contents in a single PDF 
+
+# 3.4 Other Templates
+
+1. [Template Image Only Appendix](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/fantemplate_image_appendix.zip)
+    -   An appendix file with only figures.
+    -   Page number, section number, and alignment control for multiple figures.
+    -   Captions below and above figure. Captions with heading and sub-notes.
+2.  [Template Figure Table and Reference Roman 12 Double Space](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_roman/fantemplate_basic_roman.zip)
+3.  [Template Recommendation Letter](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/recommendation.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_recommendation/fantemplate_recommendation.zip)
     -   Recommendation letter with logo and signature.
     -   Contact and address panel.
 
-## 3.4 Github Integration
+## 3.5 Github Integration
 
 This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
 

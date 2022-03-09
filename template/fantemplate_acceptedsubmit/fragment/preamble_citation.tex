@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Bibliography %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[authordate,
+giveninits,
+backend=biber,
+doi=false,
+isbn=false,
+sorting=nyt,
+maxcitenames=2,
+minbibnames=7,
+maxbibnames=7,
+% uniquename=true,
+sortcites=true]{biblatex-chicago}
+
+\bibliography{bib/references.bib}
+
+\AtEveryBibitem{\clearlist{note}\clearlist{language}\clearlist{issn}} % clears issn
+\AtEveryBibitem{%
+	\ifentrytype{online}{%
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}{%
+		\clearfield{eprint}%
+% 		\clearfield{url}
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}
+}%
+

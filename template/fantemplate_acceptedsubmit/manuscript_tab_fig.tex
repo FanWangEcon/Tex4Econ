@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Figure 1
+\newcommand{\subFigWidth}{0.50}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{\subFigWidth\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{\string"fig_main/fig1a_Tester_Indiff_person_495_med_2021".eps}
+        \caption{Contours of indifference curves at given estimates}
+    \end{subfigure}~
+	\begin{subfigure}[b]{\subFigWidth\textwidth}
+	    \centering
+    	\includegraphics[width=\linewidth]{\string"fig_main/fig1b_Tester_Indiff_person_495_lambdam3_20210130".eps}
+    	\caption{Vary $\lambda$}
+	\end{subfigure}
+	\par\medskip
+	\begin{subfigure}[b]{\subFigWidth\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{\string"fig_main/fig1c_Tester_Indiff_person_495_refmeanm3_20210130".eps}
+        \caption{Vary $\mu_{R}$}
+    \end{subfigure}~
+	\begin{subfigure}[b]{\subFigWidth\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{\string"fig_main/fig1d_Tester_Indiff_person_495_refsd_increasem3_20210130".eps}
+	    \caption{Vary $\sigma_{R}$}
+	\end{subfigure}
+	\caption{Consumption and height outcome indifference curves and choice frontiers. \emph{Note}: Health possibility frontier and indifference curves are visualized in blue (solid-line) given estimated parameters and characteristics for one particular child. The consumption and expected height outcome frontier is determined by the budget constraint as well as the production function. Panels b, c and d show results from varying one parameter at a time in red (dashed-line) and orange (dotted-line). See Section \ref{sec:maximize} for discussions.}
+	\label{fig:indiff}
+\end{figure}
+\pagebreak
+
+% Figure 2
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{.43\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{\string"fig_main/fig2a_ss_mean_hgt24_yr_trimmed".eps}
+        \caption{Height}
+    \end{subfigure}~
+	\begin{subfigure}[t]{0.57\textwidth}
+	    \centering
+    	\includegraphics[width=\linewidth]{\string"fig_main/fig2b_ss_mean_prot_15t24_yr".eps}
+    	\caption{Protein}
+	\end{subfigure}
+	\caption{Increasing protein and height gaps across cohorts. \emph{Note}: See Section \ref{sec:gap} for discussions.}
+	\label{fig:PortHgtGap}
+\end{figure}
+\pagebreak
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table 1
+\input{"tab_main/tab1_summ_stats_covar_main_keep.tex"}
+\clearpage
+% Table 2
+\input{tab_main/tab2_estimates_2018}
+\clearpage
+% Table 3
+\input{"tab_main/tab3_modelfit.tex"}
+\clearpage
+% Table 4
+\input{"tab_main/tab4_frescoatoledecompose.tex"}
+\clearpage
+% Table 5
+\input{tab_main/tab5_estimates_2021}
+\clearpage
+\pagebreak

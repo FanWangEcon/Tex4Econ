@@ -1,0 +1,73 @@
+\newcommand{\sefm}[1]{\vspace*{-2mm}{\footnotesize (#1)}}
+\begin{table}[htbp]
+\centering
+{\small
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{The fit of the estimated model's simulated choices to data\label{modelfit}}
+\begin{adjustbox}{max width=1\textwidth}
+\begin{tabular}{m{1.3cm}
+>{\centering\arraybackslash}m{0.9cm} 
+>{\centering\arraybackslash}m{0.9cm} 
+>{\centering\arraybackslash}m{0.9cm} 
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}
+>{\centering\arraybackslash}m{0.9cm}}
+\toprule
+& \multicolumn{6}{C{5.4cm}}{\hspace*{-10mm}\textbf{Average protein choices (s.e)}} 
+& \multicolumn{6}{C{5.4cm}}{\hspace*{-15mm}\textbf{Average height outcome (s.e)}} \\
+\cmidrule(l{5pt}r{5pt}){2-7} \cmidrule(l{5pt}r{5pt}){8-13}
+& 
+\multicolumn{3}{C{2.7cm}}{\small \textbf{Fresco}} & 
+\multicolumn{3}{C{2.7cm}}{\small \textbf{Atole}} & 
+\multicolumn{3}{C{2.7cm}}{\small \textbf{Fresco}} & 
+\multicolumn{3}{C{2.7cm}}{\small \textbf{Atole}} \\
+\cmidrule(l{5pt}r{5pt}){2-4} \cmidrule(l{5pt}r{5pt}){5-7} \cmidrule(l{5pt}r{5pt}){8-10} \cmidrule(l{5pt}r{5pt}){11-13}
+& 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Model}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Data}}} &
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{p-val}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Model}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Data}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{p-val}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Model}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Data}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{p-val}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Model}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{Data}}} & 
+\multicolumn{1}{C{0.9cm}}{\textit{\footnotesize{p-val}}}
+\\
+\midrule
+\multicolumn{13}{L{16.5cm}}{\vspace*{-5mm}\hspace*{-8mm}\textbf{\normalsize Panel a: Average}} \\
+             &            &            &     &           &            &      &           &            &      &           &            &\\
+All          &       19.38&       18.78& 0.18&      25.10&       25.84& 0.24 &      76.77&       76.97& 0.44 &      78.19&       78.30& 0.52\\
+             & \sefm{0.45}& \sefm{0.42}&     &\sefm{0.64}& \sefm{0.59}&      &\sefm{0.26}& \sefm{0.23}&      &\sefm{0.17}& \sefm{0.20}&\\
+\midrule
+\multicolumn{13}{L{16.5cm}}{\vspace*{-5mm}\hspace*{-8mm}\textbf{\normalsize Panel b: Averages across genders}} \\
+                    &            &            & &           &            & &           &            & &           &             &\\
+Female              &       18.15&       17.31& 0.18&      23.96&       25.19& 0.13&      76.07&       76.19& 0.75 &      77.60&       77.69 & 0.72\\
+                    & \sefm{0.63}& \sefm{0.61}& &\sefm{0.80}& \sefm{0.81}& &\sefm{0.37}& \sefm{0.30}& &\sefm{0.25}& \sefm{0.25} &\\
+Male                &       20.48&       20.10& 0.52&      26.16&       26.43& 0.81&      77.40&       77.67& 0.36&      78.74&       78.86 & 0.63\\
+                    & \sefm{0.60}& \sefm{0.56}& &\sefm{1.11}& \sefm{0.85}& &\sefm{0.30}& \sefm{0.33}& &\sefm{0.25}& \sefm{0.30} &\\
+\midrule
+\multicolumn{13}{L{16.5cm}}{\vspace*{-5mm}\hspace*{-8mm}\textbf{\normalsize Panel c: Averages across years}}\\
+                    &            &            & &            &            & &           &            & &           &             &\\
+1970-71             &       18.43&       18.17& 0.78&       23.13&       24.19& 0.37&      76.52&       76.83& 0.47&      77.71&       77.18 &0.18\\
+                    & \sefm{0.95}& \sefm{0.80}& & \sefm{1.18}& \sefm{1.12}& &\sefm{0.43}& \sefm{0.41}& &\sefm{0.39}& \sefm{0.40} &\\
+1972-73             &       19.30&       18.97& 0.68&       24.51&       25.68& 0.21 &      76.80&       76.73& 0.79&      78.07&       78.57&0.13\\
+                    & \sefm{0.79}& \sefm{0.74}& & \sefm{0.93}& \sefm{0.88}& &\sefm{0.27}& \sefm{0.42}& &\sefm{0.33}& \sefm{0.32} &\\
+1974-75             &       19.97&       18.96& 0.17&       27.13&       27.15& 0.99&      76.89&       77.24& 0.29&      78.65&       78.77 & 0.70\\
+                    & \sefm{0.74}& \sefm{0.66}& & \sefm{1.14}& \sefm{1.06}& &\sefm{0.33}& \sefm{0.36}& &\sefm{0.31}& \sefm{0.33} &\\
+\bottomrule
+\addlinespace[0.5em]
+\multicolumn{13}{p{1\textwidth}}{\parbox[t]{1.07\textwidth}{\footnotesize{\emph{Note}: For model columns, we report the model population mean predictions. Standard errors in model columns are based on the standard deviation of simulated sample means, with each simulated sample having the same sample size as the observed data. For data columns, we report sub-group observed sample means. Standard errors are based on the observed sample standard deviation and sample size. The p-value column reports the probability of results that deviate further from the observed sample mean occurring, given the sampling distribution given estimated parameters. See Section \ref{sec:model_fit} for discussions.}}}\\
+\addlinespace
+\end{tabular}\end{adjustbox}
+}
+\end{table}
+

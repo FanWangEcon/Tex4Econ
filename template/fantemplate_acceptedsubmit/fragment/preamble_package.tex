@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: PACKAGEs MAIN  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mathptmx}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs,dcolumn}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{enumitem}
+\usepackage[bottom, symbol]{footmisc}
+\usepackage[text={16cm,24cm}]{geometry}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% For Subfigure alignment and Labeling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{subfig}
+% \usepackage[font=singlespacing, skip=10pt]{caption}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+% http://www.peteryu.ca/tutorials/publishing/latex_captions
+% Alph for A, B, C, ... 
+\renewcommand\thesubfigure{\textbf{\alph{subfigure}}}
+% simple format: no parenthesis around (A) (B)
+% captionskip: gap between panel sub-eheading and figure
+% \captionsetup[subfigure]{labelformat=simple, labelsep=space, captionskip=0pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Indentation  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
+\makeatletter
+%\date{Janunary 2, 2018}
+% \date{April 15, 2021}
+\date{September 8, 2021}
+%\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: new commands  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\exhyphenpenalty=10000\hyphenpenalty=10000
+\newcommand\invisiblesection[1]{%
+	\refstepcounter{section}%
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+	\sectionmark{#1}}
+
+\newcommand{\rowgroup}[1]{\hspace{-0.5em}#1}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+\newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Footer  %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{calc}
+\setlength{\footskip}{\paperheight
+	-(1in+\voffset+\topmargin+\headheight+\headsep+\textheight)
+	-0.75in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Remove the spacing between paragraphs and have a small paragraph indentation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{15pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Line Spacing for Main Text and Footnotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Using the setspace package:
+%\setstretch{1.5}
+\doublespacing
+%\onehalfspacing
+
+%Change footnote
+% separation between foonotes
+\addtolength{\footnotesep}{1mm}
+% within footnote separation
+\renewcommand{\footnotelayout}{\setstretch{1.3}}%
+\setlength{\footnotemargin}{4mm}

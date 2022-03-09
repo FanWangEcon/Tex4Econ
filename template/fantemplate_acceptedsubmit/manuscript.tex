@@ -1,0 +1,123 @@
+\documentclass[12pt,english]{article}
+
+\input{fragment/preamble_package}
+\input{fragment/preamble_citation}
+
+\begin{document}
+
+% SUBMISSION COVER
+\thispagestyle{empty}
+\begingroup
+  \doublespacing
+  \centering
+  \LARGE JOURNAL of ECONOMETRICS\\[0.25em]
+  \LARGE ACCEPTED MANUSCRIPT: MS2020322 \\[1.0em]
+\endgroup
+This document and the associated contents in the zip-folder include the accepted version of manuscript:MS2020322 for the Journal of Econometrics. We include:
+\begin{enumerate}
+    \item A README.md file documenting folders and files in the zip folder.
+    \item Title page information
+    \begin{itemize}
+        \item Title and Authors
+        \item Abstract
+        \item Keywords
+        \item Acknowledgment
+    \end{itemize}
+    \item The manuscript
+    \begin{itemize}
+        \item Main manuscript text
+        \item Main manuscript references
+        \item Main manuscript figures
+        \item Main manuscript tables
+    \end{itemize}    
+    \item The online appendix, which is separately paged. It includes an online appendix title page, appendix A, appendix B, and references for citations in the appendix.
+\end{enumerate}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part I. Title Page, Authors, Abstract, etc. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load in title page information, title, author information, abstract, etc are stored here
+\input{manuscript_title_etc}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% Part I.a.1 Title
+\section*{TITLE AND AUTHORS}
+\subsection*{TITLE}
+\begin{itemize}[label={}, leftmargin=*]
+    \item Final Title: \textbf{\PAPERTITLE}
+    \item[] \emph{Note}: Upon initial submission to JoE, the paper was titled: ``You are What Your Parents \textbf{Think}: Height and Local Reference Points''. The title for the accepted version of the paper has replaced the word ``think'' with ``expect''.
+\end{itemize}
+% Part I.a.2 Author info
+\subsection*{AUTHORS}
+\begin{itemize}[label={}, leftmargin=*]
+    \item List of authors:
+    \begin{enumerate}
+        \item \AUTHORWANG
+        \item \AUTHORPUENTES
+        \item \AUTHORBEHRMAN
+        \item \AUTHORCUNHA
+    \end{enumerate}
+    \item Corresponding author with JoE:
+    \begin{itemize}
+        \item \textbf{\AUTHORCUNHA}
+    \end{itemize}
+\end{itemize}
+\clearpage 
+
+% Part I.b Abstract
+\doublespacing
+\section*{ABSTRACT}
+\PAPERABSTRACT
+\clearpage 
+
+% Part I.c Keywords
+\doublespacing
+\section*{KEYWORDS}
+\PAPERKEYWORDS
+\clearpage 
+
+% Part IV.d Acknowledgements
+\doublespacing
+\section*{ACKNOWLEDGMENT}
+\ACKNOWLEDGMENTS
+\clearpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part II. Manuscript main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+\begingroup
+  \centering
+  \Large MANUSCRIPT TEXT\\[1em]
+\endgroup
+% Manuscript main text
+\input{manuscript_main}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part III. Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begingroup
+\setstretch{1.0}
+\setlength\bibitemsep{0pt}
+\printbibliography[title=References for Manuscript]
+\endgroup
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part IV. Tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{manuscript_tab_fig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PART V. Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\begin{refsection}
+\input{manuscript_online_appendix}
+\end{refsection}
+
+\end{document}
