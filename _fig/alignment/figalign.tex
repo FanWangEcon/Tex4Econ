@@ -42,7 +42,7 @@
 
 \section{Center alignment of a single figure}
 
-Figure \ref{fig:single} has the following features:
+Figures \ref{fig:single_a} and \ref{fig:single_b} have the following features:
 \begin{itemize}
     \item Separate widths for caption and image.
 \end{itemize}
@@ -59,18 +59,48 @@ Figure \ref{fig:single} has the following features:
 \usepackage{caption}
 \captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
 % Code
+\begin{figure}[H]
+    \centering
+    % 0.3 inside includegraphics control figure proportional to textwidth
+	\includegraphics[width=0.3\textwidth]{example-image-a}
+	% Note 0.7 inside captionsetup control caption width
+	\captionsetup{width=0.7\textwidth}
+	\caption{\blindtext}
+	\label{fig:single_a}
+\end{figure}
+\par\medskip
+\begin{figure}[H]
+    \centering
+    % 0.3 inside includegraphics control figure proportional to raw image width
+	\includegraphics[scale=0.3]{example-image-a}
+	% Note 0.9 inside captionsetup control caption width
+	\captionsetup{width=0.7\textwidth}
+	\caption{\blindtext}
+	\label{fig:single_b}
+\end{figure}
 \end{lstlisting}
 
 \par\medskip
 \begin{figure}[H]
     \centering
-    % Note 0.6 inside includegraphics control figure width
-	\includegraphics[width=0.5\linewidth]{example-image-a}
-	% Note 0.9 inside captionsetup control caption width
-	\captionsetup{width=0.6\textwidth}
+    % 0.3 inside includegraphics control figure proportional to textwidth
+	\includegraphics[width=0.3\textwidth]{example-image-a}
+	% Note 0.7 inside captionsetup control caption width
+	\captionsetup{width=0.7\textwidth}
 	\caption{\blindtext}
-	\label{fig:single}
+	\label{fig:single_a}
 \end{figure}
+\par\medskip
+\begin{figure}[H]
+    \centering
+    % 0.3 inside includegraphics control figure proportional to raw image width
+	\includegraphics[scale=0.3]{example-image-a}
+	% Note 0.9 inside captionsetup control caption width
+	\captionsetup{width=0.7\textwidth}
+	\caption{\blindtext}
+	\label{fig:single_b}
+\end{figure}
+
 \pagebreak
 
 
