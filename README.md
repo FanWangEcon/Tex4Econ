@@ -91,12 +91,11 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 In overleaf, click on New Project, choose upload project, then select zip below.
 
-# 3.1 Working Paper Templates
+## 3.1 Working Paper Templates
 
 1.  [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
 
-
-# 3.2 Revision Templates
+## 3.2 Revise and Resubmit Templates
 
 1.  [Template Paper, Response to Referees, Section Numbering and Bib](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/fantemplate_paper_rr_response.zip)
     -   Figures, tables, references.
@@ -104,12 +103,12 @@ In overleaf, click on New Project, choose upload project, then select zip below.
     -   Separate heading count for responses to referees: _\\setcounter{section}{0}_
     -   Separate bibliographies: _refsection_
 
-# 3.3 Accepted Paper Journal Submission Template
+## 3.3 Accepted Paper Templates
 
 1.  [Accepted Paper Submission to Journal](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/manuscript.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/manuscript.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/fantemplate_acceptedsubmit.zip)
-    -   All paper contents in a single PDF 
+    -   All paper contents in a single PDF
 
-# 3.4 Other Templates
+## 3.4 Other Templates
 
 1. [Template Image Only Appendix](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/fantemplate_image_appendix.zip)
     -   An appendix file with only figures.
