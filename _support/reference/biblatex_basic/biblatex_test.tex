@@ -2,10 +2,22 @@
 
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
 \usepackage[bottom]{footmisc}
+% setspace: for spacing gap in references
+\usepackage{setspace}
 
 \usepackage{filecontents}
 % This creates a bib file called ref.bib in the same folder as the current tex file
 \begin{filecontents}{ref.bib}
+@book{becker_human_1994,
+  title = {Human {{Capital}}: {{A Theoretical}} and {{Empirical Analysis}}, with {{Special Reference}} to {{Education}}, 3rd {{Edition}}},
+  author = {Becker, Gary S.},
+  date = {1994-03-14},
+  edition = {3rd edition},
+  publisher = {{University of Chicago Press}},
+  location = {{Chicago}},
+  isbn = {978-0-226-04120-9},
+  pagetotal = {412}
+}
 @article{becker_human_1986,
 	title = {Human Capital and the Rise and Fall of Families},
 	volume = {4},
@@ -99,6 +111,7 @@ sortcites=False]{biblatex-chicago}
 
 According to \textcite{becker_human_1986}, ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nunc orci, id pellentesque lacus ullamcorper at. Mauris venenatis gravida magna non dapibus. Nullam vel consequat purus, id luctus dui. Suspendisse vel auctor nulla. Proin ipsum felis, efficitur eu eleifend vitae, efficitur pellentesque mauris \autocite{case_lasting_2005, conti_understanding_2010}.
 
+
 \section{Possessive Citations}
 
 In this example, using possessive to put apostrophe after author names and before date. Accomplished by using \emph{citeauthor} first then \emph{parentcite}.
@@ -112,14 +125,28 @@ educational attainment.
 
 To write more flexibly, can mention author names explicitly in text and then cite the article with \emph{parentcite} for the date only: Westergaard and her colleagues \parencite*{westergaard_ambient_2017} identified only a small handful of studies that addressed effect modification by dimensions of socioeconomic status.
 
+
+\section{Full Article Title In-Text Citation}
+
+To cite the entire title of the the paper, we can use \emph{citetitle}: The article, \citetitle{conti_understanding_2010}, by \citeauthor{conti_understanding_2010}, published in year \cite*{conti_understanding_2010}, is been discussed in this sentence. 
+
+We can also cite the full title of a book or an article, rather then using \emph{textcite}, we use \emph{citetitle} first, followed by \emph{autocite}: 
+\begin{itemize}
+    \item \citetitle{conti_understanding_2010} \autocite{conti_understanding_2010} is an article published in a journal.
+    \item \citetitle{becker_human_1994} \autocite{becker_human_1994} is a book we are reading today.
+\end{itemize}
+ 
+
+
+
 \section{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{Data}}
 
 Village closure information is taken from a village head survey, which was collected in conjunction with household surveys. Village heads were asked if the village currently had a primary school, and asked about the year of school closure if the village school had been closed. Based on the village heads survey, there are four categories of closure status. The first category includes 193 villages that did not have village schools in 2011 and experienced school closure between 1999 and 2010. In the second category, which included 22 villages, a school closure year between 1999 and 2010 was reported, but village heads also reported that the village currently had a school in 2011. In this case, it is plausible that new schools were built in these 22 villages after school closure.\footnote{Generally students went to schools in township centers after village school closure, but in these 22 villages, it is possible that a new consolidated school was built inside these villages.}
 
 \pagebreak
 \begingroup
-%\setstretch{1.1}
-\setlength\bibitemsep{0pt}
+\setstretch{1.1}
+\setlength\bibitemsep{6pt}
 \printbibliography
 \endgroup
 \pagebreak
