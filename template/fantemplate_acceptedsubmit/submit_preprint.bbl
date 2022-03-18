@@ -1,0 +1,1550 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{behrman_nutritional_2009}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=dab6dc54326700a84cc8827db796a966}{%
+           family={Behrman},
+           familyi={B\bibinitperiod},
+           given={Jere\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a041547da805f3453f280d8cce5f18d}{%
+           family={Calderon},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f82c675d8f9f93cd53a7b917c5af551}{%
+           family={Preston},
+           familyi={P\bibinitperiod},
+           given={Samuel\bibnamedelima H},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=923d9b95dbc1867d83ff7c2ab1cc0ad9}{%
+           family={Hoddinott},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e86269aafac8b99250b510045159}{%
+           family={Martorell},
+           familyi={M\bibinitperiod},
+           given={Reynaldo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bca33a4eeae3e372313153da05d1e338}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Aryeh\bibnamedelima D},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7da38265e593885786c42f0ea9148893}
+      \strng{fullhash}{19c7d72b6c8423bd0fdd9780fa3f05e0}
+      \strng{bibnamehash}{19c7d72b6c8423bd0fdd9780fa3f05e0}
+      \strng{authorbibnamehash}{19c7d72b6c8423bd0fdd9780fa3f05e0}
+      \strng{authornamehash}{7da38265e593885786c42f0ea9148893}
+      \strng{authorfullhash}{19c7d72b6c8423bd0fdd9780fa3f05e0}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9165}
+      \field{journaltitle}{The American Journal of Clinical Nutrition}
+      \field{month}{11}
+      \field{number}{5}
+      \field{title}{Nutritional Supplementation in Girls Influences the Growth of Their Children: Prospective Study in {{Guatemala}}}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2021}
+      \field{volume}{90}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1372\bibrangedash 1379}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.3945/ajcn.2009.27524
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3945/ajcn.2009.27524
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3945/ajcn.2009.27524
+      \endverb
+    \endentry
+    \entry{black_early_2017}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=d5aeb105f73d33f7be302c2427e2f8a2}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={Maureen\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1326b0ea0cc68ccc228ace5b2e8bdb23}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Susan\bibnamedelima P},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6df35f94cdf5d839619dd7a89a0bb4f2}{%
+           family={Fernald},
+           familyi={F\bibinitperiod},
+           given={Lia\bibnamedelima CH},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09e2538c202fd9384617e8790dd8adec}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Christopher\bibnamedelima T},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=715cc183ac65573fb33dcb67bc8f33e3}{%
+           family={DiGirolamo},
+           familyi={D\bibinitperiod},
+           given={Ann\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a84238e9da63cc8843673a38401cc22d}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Chunling},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7c5a80463ff57fdc38a151c864a6cff}{%
+           family={McCoy},
+           familyi={M\bibinitperiod},
+           given={Dana\bibnamedelima C},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1810c23ba83f53ab99ca7d49503c6db}{%
+           family={Fink},
+           familyi={F\bibinitperiod},
+           given={Günther},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f6f4ba259ed74ad169573b16054a192}{%
+           family={Shawar},
+           familyi={S\bibinitperiod},
+           given={Yusra\bibnamedelima R},
+           giveni={Y\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=133a42f22f07fb0b6e00ac60b68b4c83}{%
+           family={Shiffman},
+           familyi={S\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{71a91b6feb35614e0aa2638835235d55}
+      \strng{fullhash}{2ad72befbcc1ca47d376a0a62401cab5}
+      \strng{bibnamehash}{d1b768571ebc2f9f06a9f2214931203f}
+      \strng{authorbibnamehash}{d1b768571ebc2f9f06a9f2214931203f}
+      \strng{authornamehash}{71a91b6feb35614e0aa2638835235d55}
+      \strng{authorfullhash}{2ad72befbcc1ca47d376a0a62401cab5}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet}
+      \field{month}{1}
+      \field{number}{10064}
+      \field{title}{Early Childhood Development Coming of Age: Science through the Life Course}
+      \field{volume}{389}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{77\bibrangedash 90}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/S0140-6736(16)31389-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0140-6736(16)31389-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0140-6736(16)31389-7
+      \endverb
+    \endentry
+    \entry{cameron2015practitioner}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=dab37900e0b3d1bbd6b945d99fef4b06}{%
+           family={Cameron},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi Colin},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=666ff5de6a44e31611322ad1b6ddf9d3}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4812b38c4bb59442f6ac89330a8f3370}
+      \strng{fullhash}{4812b38c4bb59442f6ac89330a8f3370}
+      \strng{bibnamehash}{4812b38c4bb59442f6ac89330a8f3370}
+      \strng{authorbibnamehash}{4812b38c4bb59442f6ac89330a8f3370}
+      \strng{authornamehash}{4812b38c4bb59442f6ac89330a8f3370}
+      \strng{authorfullhash}{4812b38c4bb59442f6ac89330a8f3370}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-166X, 1548-8004}
+      \field{journaltitle}{Journal of Human Resources}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{A Practitioner’s Guide to Cluster-Robust Inference}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2021}
+      \field{volume}{50}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{317\bibrangedash 372}
+      \range{pages}{56}
+      \verb{doi}
+      \verb 10.3368/jhr.50.2.317
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3368/jhr.50.2.317
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3368/jhr.50.2.317
+      \endverb
+    \endentry
+    \entry{campbell_etal_2014}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=801fe7ec7e54eb2733b8e5cf8373fd50}{%
+           family={Campbell},
+           familyi={C\bibinitperiod},
+           given={Frances},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd2d1d35f84f8b4150058db635e1c149}{%
+           family={Conti},
+           familyi={C\bibinitperiod},
+           given={Gabriella},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43bb31a4cf9de3bcae7e18daeeb36ad1}{%
+           family={Moon},
+           familyi={M\bibinitperiod},
+           given={Seong\bibnamedelima Hyeok},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=849dd9a14dde0cb5a20e04bb03796903}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0693093a21002d2bde528e5377858425}{%
+           family={Pungello},
+           familyi={P\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04488b26a12d4372b9498c4ee04d9d50}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f04d81beb5d88d4f68b1228e9a5a7d71}
+      \strng{fullhash}{33b83d1b9bb1aafe50b9199b10bd7cce}
+      \strng{bibnamehash}{33b83d1b9bb1aafe50b9199b10bd7cce}
+      \strng{authorbibnamehash}{33b83d1b9bb1aafe50b9199b10bd7cce}
+      \strng{authornamehash}{f04d81beb5d88d4f68b1228e9a5a7d71}
+      \strng{authorfullhash}{33b83d1b9bb1aafe50b9199b10bd7cce}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{month}{3}
+      \field{number}{6178}
+      \field{title}{Early Childhood Investments Substantially Boost Adult Health}
+      \field{volume}{343}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{1478\bibrangedash 1485}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1126/science.1248429
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1126/science.1248429
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1126/science.1248429
+      \endverb
+    \endentry
+    \entry{carneiro_heckman_2003}{incollection}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0538951e6d9351de21fadfea0bd3810d}{%
+           family={Carneiro},
+           familyi={C\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b8637c92905b1c2183ded825cefc934a}{%
+           family={Krueger},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambrige, MA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{c7f8a4056fa4774f014437a5530dbc41}
+      \strng{fullhash}{c7f8a4056fa4774f014437a5530dbc41}
+      \strng{bibnamehash}{c7f8a4056fa4774f014437a5530dbc41}
+      \strng{authorbibnamehash}{c7f8a4056fa4774f014437a5530dbc41}
+      \strng{authornamehash}{c7f8a4056fa4774f014437a5530dbc41}
+      \strng{authorfullhash}{c7f8a4056fa4774f014437a5530dbc41}
+      \strng{editorbibnamehash}{f4d54f18847386af6be9f6f5f5b5a706}
+      \strng{editornamehash}{f4d54f18847386af6be9f6f5f5b5a706}
+      \strng{editorfullhash}{f4d54f18847386af6be9f6f5f5b5a706}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Inequality in {{America}}: {{What Role}} for {{Human Capital Policies}}?}
+      \field{isbn}{978-0-262-08328-7}
+      \field{title}{Human {{Capital Policy}}}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{77\bibrangedash 240}
+      \range{pages}{164}
+      \verb{urlraw}
+      \verb https://mitpress.mit.edu/books/inequality-america
+      \endverb
+      \verb{url}
+      \verb https://mitpress.mit.edu/books/inequality-america
+      \endverb
+    \endentry
+    \entry{cunha_heckman_2007}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2344f8a40345b4788cf51ef050e2ebb2}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Flávio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{fullhash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{bibnamehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{authorbibnamehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{authornamehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{authorfullhash}{51900b45c9deed30e5d455d24fdf075f}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review}
+      \field{month}{5}
+      \field{number}{2}
+      \field{title}{The Technology of Skill Formation}
+      \field{volume}{97}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{pages}{31\bibrangedash 47}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1257/aer.97.2.31
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1257/aer.97.2.31
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1257/aer.97.2.31
+      \endverb
+    \endentry
+    \entry{cunha_heckman_jeea}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2344f8a40345b4788cf51ef050e2ebb2}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Flávio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{fullhash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{bibnamehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{authorbibnamehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{authornamehash}{51900b45c9deed30e5d455d24fdf075f}
+      \strng{authorfullhash}{51900b45c9deed30e5d455d24fdf075f}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the European Economic Association}
+      \field{month}{5}
+      \field{number}{2-3}
+      \field{title}{The Economics and Psychology of Inequality and Human Development}
+      \field{volume}{7}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{320\bibrangedash 364}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1162/jeea.2009.7.2-3.320
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1162/jeea.2009.7.2-3.320
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1162/jeea.2009.7.2-3.320
+      \endverb
+    \endentry
+    \entry{cunha_heckman_schennach_2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2344f8a40345b4788cf51ef050e2ebb2}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Flávio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8d3d35cc516155304f25bf56a2861ac}{%
+           family={Schennach},
+           familyi={S\bibinitperiod},
+           given={Susanne\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{934795cc51fd3add9a2f5b483ea225f3}
+      \strng{fullhash}{30e05932c4d506f129553d1c1562f407}
+      \strng{bibnamehash}{30e05932c4d506f129553d1c1562f407}
+      \strng{authorbibnamehash}{30e05932c4d506f129553d1c1562f407}
+      \strng{authornamehash}{934795cc51fd3add9a2f5b483ea225f3}
+      \strng{authorfullhash}{30e05932c4d506f129553d1c1562f407}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{month}{5}
+      \field{number}{3}
+      \field{title}{Estimating the Technology of Cognitive and Noncognitive Skill Formation}
+      \field{volume}{78}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{883\bibrangedash 931}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.3982/ECTA6551
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3982/ECTA6551
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3982/ECTA6551
+      \endverb
+    \endentry
+    \entry{donald2007inference}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=10b27e1a35019b1c05f01c883142b50d}{%
+           family={Donald},
+           familyi={D\bibinitperiod},
+           given={Stephen\bibnamedelima G},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffc8200dad00583c74b36973725aadcb}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0e52a01e74b5cbbff1a9dd734ea300d6}
+      \strng{fullhash}{0e52a01e74b5cbbff1a9dd734ea300d6}
+      \strng{bibnamehash}{0e52a01e74b5cbbff1a9dd734ea300d6}
+      \strng{authorbibnamehash}{0e52a01e74b5cbbff1a9dd734ea300d6}
+      \strng{authornamehash}{0e52a01e74b5cbbff1a9dd734ea300d6}
+      \strng{authorfullhash}{0e52a01e74b5cbbff1a9dd734ea300d6}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0034-6535}
+      \field{journaltitle}{The Review of Economics and Statistics}
+      \field{month}{5}
+      \field{number}{2}
+      \field{title}{Inference with Difference-in-Differences and Other Panel Data}
+      \field{volume}{89}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{pages}{221\bibrangedash 233}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1162/rest.89.2.221
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1162/rest.89.2.221
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1162/rest.89.2.221
+      \endverb
+    \endentry
+    \entry{fao_state_2019}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4807e0aebe86c17f559853f35515b533}{%
+           family={FAO},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Rome, Italy}%
+      }
+      \list{publisher}{1}{%
+        {Food and Agriculture Organization of the United Nations}%
+      }
+      \strng{namehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{fullhash}{4807e0aebe86c17f559853f35515b533}
+      \strng{bibnamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{authorbibnamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{authornamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{authorfullhash}{4807e0aebe86c17f559853f35515b533}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-92-5-131570-5}
+      \field{pagetotal}{239}
+      \field{title}{The {{State}} of {{Food Security}} and {{Nutrition}} in the {{World}} 2019}
+      \field{urlday}{7}
+      \field{urlmonth}{4}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://doi.org/10.4060/CA5162EN
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4060/CA5162EN
+      \endverb
+    \endentry
+    \entry{gertler_etal_2014}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=57005c9a385a2c481de07b10b0f0e337}{%
+           family={Gertler},
+           familyi={G\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=849dd9a14dde0cb5a20e04bb03796903}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2dc121c400a25cbb3c5c7d8dc37ea28f}{%
+           family={Zanolini},
+           familyi={Z\bibinitperiod},
+           given={Arianna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1793b589d0f5347357406fad96d8d310}{%
+           family={Vermeersch},
+           familyi={V\bibinitperiod},
+           given={Christel},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06f6b5b18771d01fd398cdd7e30ab0ef}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5eca40c24702e2de6f7097fc5d2d2466}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Susan\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30243be507151a446e68a076c06bc674}{%
+           family={Grantham-McGregor},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a525077c7674e7622a53c852fbdade32}
+      \strng{fullhash}{a0c51f67182c4276bb874e58a11875d1}
+      \strng{bibnamehash}{4c56c053dbcafbb82477c6b912714860}
+      \strng{authorbibnamehash}{4c56c053dbcafbb82477c6b912714860}
+      \strng{authornamehash}{a525077c7674e7622a53c852fbdade32}
+      \strng{authorfullhash}{a0c51f67182c4276bb874e58a11875d1}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{month}{5}
+      \field{number}{6187}
+      \field{title}{Labor Market Returns to an Early Childhood Stimulation Intervention in {{Jamaica}}}
+      \field{volume}{344}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{998\bibrangedash 1001}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1251178
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1126/science.1251178
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1126/science.1251178
+      \endverb
+    \endentry
+    \entry{habicht_nutritional_1995}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f64ec728d924606ae965c7927a14d176}{%
+           family={Habicht},
+           familyi={H\bibinitperiod},
+           given={Jean-Pierre},
+           giveni={J\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e86269aafac8b99250b510045159}{%
+           family={Martorell},
+           familyi={M\bibinitperiod},
+           given={Reynaldo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4cd485d5490162bb7fc261ddf1b4041}{%
+           family={Rivera},
+           familyi={R\bibinitperiod},
+           given={Juan\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{655088aa265e89877d37fceaf11137da}
+      \strng{fullhash}{cf2756302c386fa43e3dc11b5799d81c}
+      \strng{bibnamehash}{cf2756302c386fa43e3dc11b5799d81c}
+      \strng{authorbibnamehash}{cf2756302c386fa43e3dc11b5799d81c}
+      \strng{authornamehash}{655088aa265e89877d37fceaf11137da}
+      \strng{authorfullhash}{cf2756302c386fa43e3dc11b5799d81c}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Nutrition}
+      \field{month}{4}
+      \field{number}{4}
+      \field{title}{Nutritional Impact of Supplementation in the {{INCAP}} Longitudinal Study: Analytical Strategies and Inferences}
+      \field{volume}{125}
+      \field{year}{1995}
+      \field{dateera}{ce}
+      \field{pages}{1042\bibrangedash 50}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1093/jn/125.suppl_4.1027S
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/jn/article-abstract/125/suppl_4/1027S/4730854
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/jn/article-abstract/125/suppl_4/1027S/4730854
+      \endverb
+    \endentry
+    \entry{heckman_etal_qe2010}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43bb31a4cf9de3bcae7e18daeeb36ad1}{%
+           family={Moon},
+           familyi={M\bibinitperiod},
+           given={Seong\bibnamedelima Hyeok},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=849dd9a14dde0cb5a20e04bb03796903}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22750ea0d3bbeeb36c3b955c0a4e0eb9}{%
+           family={Savelyev},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e51d01d62995f980dc4b2e287605da88}{%
+           family={Yavitz},
+           familyi={Y\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f006d0e2174466d5917902b66def5494}
+      \strng{fullhash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \strng{bibnamehash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \strng{authorbibnamehash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \strng{authornamehash}{f006d0e2174466d5917902b66def5494}
+      \strng{authorfullhash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quantitative Economics}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{Analyzing Social Experiments as Implemented: A Reexamination of the Evidence from the Highscope {{Perry Preschool Program}}}
+      \field{volume}{1}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 46}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.3982/QE8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3982/QE8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3982/QE8
+      \endverb
+    \endentry
+    \entry{heckman_etal_jpube2010}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43bb31a4cf9de3bcae7e18daeeb36ad1}{%
+           family={Moon},
+           familyi={M\bibinitperiod},
+           given={Seong\bibnamedelima Hyeok},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=849dd9a14dde0cb5a20e04bb03796903}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22750ea0d3bbeeb36c3b955c0a4e0eb9}{%
+           family={Savelyev},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e51d01d62995f980dc4b2e287605da88}{%
+           family={Yavitz},
+           familyi={Y\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f006d0e2174466d5917902b66def5494}
+      \strng{fullhash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \strng{bibnamehash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \strng{authorbibnamehash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \strng{authornamehash}{f006d0e2174466d5917902b66def5494}
+      \strng{authorfullhash}{7821f218a97ca1cdeac56e4a3e38a459}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Public Economics}
+      \field{month}{2}
+      \field{number}{1-2}
+      \field{title}{The Rate of Return to the Highscope {{Perry Preschool Program}}}
+      \field{volume}{94}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{114\bibrangedash 128}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.jpubeco.2009.11.001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.jpubeco.2009.11.001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.jpubeco.2009.11.001
+      \endverb
+    \endentry
+    \entry{heckman_etal_aer2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=849dd9a14dde0cb5a20e04bb03796903}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40a5d8b75795e7e306b9baf4160cf373}{%
+           family={Savelyev},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f006d0e2174466d5917902b66def5494}
+      \strng{fullhash}{c8f9641b4e6f614d9b418410882002d2}
+      \strng{bibnamehash}{c8f9641b4e6f614d9b418410882002d2}
+      \strng{authorbibnamehash}{c8f9641b4e6f614d9b418410882002d2}
+      \strng{authornamehash}{f006d0e2174466d5917902b66def5494}
+      \strng{authorfullhash}{c8f9641b4e6f614d9b418410882002d2}
+      \field{extraname}{3}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review}
+      \field{month}{10}
+      \field{number}{6}
+      \field{title}{Understanding the Mechanisms through Which an Influential Early Childhood Program Boosted Adult Outcomes}
+      \field{volume}{103}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{2052\bibrangedash 86}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1257/aer.103.6.2052
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1257/aer.103.6.2052
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1257/aer.103.6.2052
+      \endverb
+    \endentry
+    \entry{hoddinott_economic_2013}{article}{}
+      \name{author}{5}{ul=2}{%
+        {{un=0,uniquepart=base,hash=923d9b95dbc1867d83ff7c2ab1cc0ad9}{%
+           family={Hoddinott},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ede4cb416a72b518778a04cad0371d21}{%
+           family={Alderman},
+           familyi={A\bibinitperiod},
+           given={Harold},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dab6dc54326700a84cc8827db796a966}{%
+           family={Behrman},
+           familyi={B\bibinitperiod},
+           given={Jere\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a19337d097995a682b9e14934a3ecc7b}{%
+           family={Haddad},
+           familyi={H\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a737e23adced329ffc9a8ee9ace74c15}{%
+           family={Horton},
+           familyi={H\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1fcebf8c4fcdcc887d8ed344da4c183a}
+      \strng{fullhash}{8a02dc9225b1608edc78577b544cec1c}
+      \strng{bibnamehash}{8a02dc9225b1608edc78577b544cec1c}
+      \strng{authorbibnamehash}{8a02dc9225b1608edc78577b544cec1c}
+      \strng{authornamehash}{1fcebf8c4fcdcc887d8ed344da4c183a}
+      \strng{authorfullhash}{8a02dc9225b1608edc78577b544cec1c}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1740-8709}
+      \field{journaltitle}{Maternal \& Child Nutrition}
+      \field{month}{9}
+      \field{title}{The Economic Rationale for Investing in Stunting Reduction}
+      \field{urlday}{13}
+      \field{urlmonth}{3}
+      \field{urlyear}{2018}
+      \field{volume}{9}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{69\bibrangedash 82}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1111/mcn.12080
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/mcn.12080
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/mcn.12080
+      \endverb
+    \endentry
+    \entry{hoddinott_adult_2013}{article}{}
+      \name{author}{9}{ul=2}{%
+        {{un=0,uniquepart=base,hash=923d9b95dbc1867d83ff7c2ab1cc0ad9}{%
+           family={Hoddinott},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dab6dc54326700a84cc8827db796a966}{%
+           family={Behrman},
+           familyi={B\bibinitperiod},
+           given={Jere\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce60ecf26201cb6a83f960b99510c1ba}{%
+           family={Maluccio},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28d28a21fc3e489298f690bb3be39230}{%
+           family={Melgar},
+           familyi={M\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf9260fcf437b17d92c48d0a4095c6b8}{%
+           family={Quisumbing},
+           familyi={Q\bibinitperiod},
+           given={Agnes\bibnamedelima R},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0defdcd29a36dc2006f0fe70d358d201}{%
+           family={Ramirez-Zea},
+           familyi={R\bibinithyphendelim Z\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bca33a4eeae3e372313153da05d1e338}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Aryeh\bibnamedelima D},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f10e4c150521cc2db1da3090bad31b7b}{%
+           family={Yount},
+           familyi={Y\bibinitperiod},
+           given={Kathryn\bibnamedelima M},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e86269aafac8b99250b510045159}{%
+           family={Martorell},
+           familyi={M\bibinitperiod},
+           given={Reynaldo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ae6448ec845a2fdd6e3b307f24a53c67}
+      \strng{fullhash}{9482a09bdd9c0c1e4352eb54c074a4e7}
+      \strng{bibnamehash}{ae6448ec845a2fdd6e3b307f24a53c67}
+      \strng{authorbibnamehash}{ae6448ec845a2fdd6e3b307f24a53c67}
+      \strng{authornamehash}{ae6448ec845a2fdd6e3b307f24a53c67}
+      \strng{authorfullhash}{9482a09bdd9c0c1e4352eb54c074a4e7}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The American Journal of Clinical Nutrition}
+      \field{month}{11}
+      \field{number}{5}
+      \field{title}{Adult Consequences of Growth Failure in Early Childhood}
+      \field{volume}{98}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{1170\bibrangedash 78}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.3945/ajcn.113.064584
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3945/ajcn.113.064584
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3945/ajcn.113.064584
+      \endverb
+    \endentry
+    \entry{hoddinott_effect_2008}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=923d9b95dbc1867d83ff7c2ab1cc0ad9}{%
+           family={Hoddinott},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce60ecf26201cb6a83f960b99510c1ba}{%
+           family={Maluccio},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dab6dc54326700a84cc8827db796a966}{%
+           family={Behrman},
+           familyi={B\bibinitperiod},
+           given={Jere\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6340d2a8fa1ab4bb53189754b7eb8af7}{%
+           family={Flores},
+           familyi={F\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e86269aafac8b99250b510045159}{%
+           family={Martorell},
+           familyi={M\bibinitperiod},
+           given={Reynaldo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{94f1bcfdcc54cbcc8a27623e7949544c}
+      \strng{fullhash}{cbcfff5d16964c15e7fabadf6c2a2fa3}
+      \strng{bibnamehash}{cbcfff5d16964c15e7fabadf6c2a2fa3}
+      \strng{authorbibnamehash}{cbcfff5d16964c15e7fabadf6c2a2fa3}
+      \strng{authornamehash}{94f1bcfdcc54cbcc8a27623e7949544c}
+      \strng{authorfullhash}{cbcfff5d16964c15e7fabadf6c2a2fa3}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet}
+      \field{month}{2}
+      \field{number}{9610}
+      \field{title}{Effect of a Nutrition Intervention during Early Childhood on Economic Productivity in {{Guatemalan}} Adults}
+      \field{volume}{371}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{pages}{411\bibrangedash 416}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/S0140-6736(08)60205-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0140-6736(08)60205-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0140-6736(08)60205-6
+      \endverb
+    \endentry
+    \entry{islam_evidence_2009}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fd98fec3b7eba5e4ddb762385d79135c}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={Mahnaz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=923d9b95dbc1867d83ff7c2ab1cc0ad9}{%
+           family={Hoddinott},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{01ab06f81a0c65d9b12f509e77352dd0}
+      \strng{fullhash}{01ab06f81a0c65d9b12f509e77352dd0}
+      \strng{bibnamehash}{01ab06f81a0c65d9b12f509e77352dd0}
+      \strng{authorbibnamehash}{01ab06f81a0c65d9b12f509e77352dd0}
+      \strng{authornamehash}{01ab06f81a0c65d9b12f509e77352dd0}
+      \strng{authorfullhash}{01ab06f81a0c65d9b12f509e77352dd0}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economic Development and Cultural Change}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{Evidence of Intrahousehold Flypaper Effects from a Nutrition Intervention in Rural {{Guatemala}}}
+      \field{volume}{57}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{215\bibrangedash 238}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1086/592876
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1086/592876
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1086/592876
+      \endverb
+    \endentry
+    \entry{maluccio_impact_2009}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=ce60ecf26201cb6a83f960b99510c1ba}{%
+           family={Maluccio},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=923d9b95dbc1867d83ff7c2ab1cc0ad9}{%
+           family={Hoddinott},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dab6dc54326700a84cc8827db796a966}{%
+           family={Behrman},
+           familyi={B\bibinitperiod},
+           given={Jere\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e86269aafac8b99250b510045159}{%
+           family={Martorell},
+           familyi={M\bibinitperiod},
+           given={Reynaldo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf9260fcf437b17d92c48d0a4095c6b8}{%
+           family={Quisumbing},
+           familyi={Q\bibinitperiod},
+           given={Agnes\bibnamedelima R},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bca33a4eeae3e372313153da05d1e338}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Aryeh\bibnamedelima D},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{be50b19b945c0b027980e8ea2cf27d60}
+      \strng{fullhash}{9791ed2e681226157c7373454fe14d14}
+      \strng{bibnamehash}{9791ed2e681226157c7373454fe14d14}
+      \strng{authorbibnamehash}{9791ed2e681226157c7373454fe14d14}
+      \strng{authornamehash}{be50b19b945c0b027980e8ea2cf27d60}
+      \strng{authorfullhash}{9791ed2e681226157c7373454fe14d14}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Economic Journal}
+      \field{month}{3}
+      \field{number}{537}
+      \field{title}{The Impact of Improving Nutrition during Early Childhood on Education among {{Guatemalan}} Adults}
+      \field{volume}{119}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{734\bibrangedash 763}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1111/j.1468-0297.2009.02220.x
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/j.1468-0297.2009.02220.x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/j.1468-0297.2009.02220.x
+      \endverb
+    \endentry
+    \entry{puentes_early_2016}{article}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=1c8b55e2559998021969772730922f40}{%
+           family={Puentes},
+           familyi={P\bibinitperiod},
+           given={Esteban},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66dfac55d28d09b3d290ce69004e7324}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dab6dc54326700a84cc8827db796a966}{%
+           family={Behrman},
+           familyi={B\bibinitperiod},
+           given={Jere\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2344f8a40345b4788cf51ef050e2ebb2}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Flávio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=923d9b95dbc1867d83ff7c2ab1cc0ad9}{%
+           family={Hoddinott},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce60ecf26201cb6a83f960b99510c1ba}{%
+           family={Maluccio},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a870d70758a23030be119eb49adec399}{%
+           family={Adair},
+           familyi={A\bibinitperiod},
+           given={Linda\bibnamedelima S},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=173c422736e635c2072eb2fe6056da91}{%
+           family={Borja},
+           familyi={B\bibinitperiod},
+           given={Judith\bibnamedelima B},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e86269aafac8b99250b510045159}{%
+           family={Martorell},
+           familyi={M\bibinitperiod},
+           given={Reynaldo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bca33a4eeae3e372313153da05d1e338}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Aryeh\bibnamedelima D},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{407c527082ab2b62e96869100c9727dd}
+      \strng{fullhash}{ff0f674bc87b03d9985982e1d5a4fada}
+      \strng{bibnamehash}{0723fabe6173677672019882411b383b}
+      \strng{authorbibnamehash}{0723fabe6173677672019882411b383b}
+      \strng{authornamehash}{407c527082ab2b62e96869100c9727dd}
+      \strng{authorfullhash}{ff0f674bc87b03d9985982e1d5a4fada}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economics \& Human Biology}
+      \field{month}{9}
+      \field{title}{Early Life Height and Weight Production Functions with Endogenous Energy and Protein Inputs}
+      \field{volume}{22}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{65\bibrangedash 81}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.ehb.2016.03.002
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.ehb.2016.03.002
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.ehb.2016.03.002
+      \endverb
+    \endentry
+    \entry{richter_investing_2017}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=ece328f186a9bf8e617cbc5c5d4dcf8b}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Linda\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0fb4fffd3cf824d8a71699cf930ae9b}{%
+           family={Daelmans},
+           familyi={D\bibinitperiod},
+           given={Bernadette},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a3b439d97d1dda13a1f809f5194d95b}{%
+           family={Lombardi},
+           familyi={L\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30f42737299c631738a535bbc9274bee}{%
+           family={Heymann},
+           familyi={H\bibinitperiod},
+           given={Jody},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=adee57216980e8c6e3a247cee6a1ac1f}{%
+           family={Boo},
+           familyi={B\bibinitperiod},
+           given={Florencia\bibnamedelima Lopez},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dab6dc54326700a84cc8827db796a966}{%
+           family={Behrman},
+           familyi={B\bibinitperiod},
+           given={Jere\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a84238e9da63cc8843673a38401cc22d}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Chunling},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee0cb4a17eaeb0c7e0291e5843e97f5e}{%
+           family={Lucas},
+           familyi={L\bibinitperiod},
+           given={Jane\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5390a1f4285a2486966ca05c9fe49c7}{%
+           family={Perez-Escamilla},
+           familyi={P\bibinithyphendelim E\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a77a157cff9515ca7197bc42428fe97}{%
+           family={Dua},
+           familyi={D\bibinitperiod},
+           given={Tarun},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{786c2da6e362df5830a7bddab78858c8}
+      \strng{fullhash}{6fae1d7547f8425a77e741c5d9688bb6}
+      \strng{bibnamehash}{b53f4d16e525710e27a2a7d9ee17f813}
+      \strng{authorbibnamehash}{b53f4d16e525710e27a2a7d9ee17f813}
+      \strng{authornamehash}{786c2da6e362df5830a7bddab78858c8}
+      \strng{authorfullhash}{6fae1d7547f8425a77e741c5d9688bb6}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet}
+      \field{month}{1}
+      \field{number}{10064}
+      \field{title}{Investing in the Foundation of Sustainable Development: Pathways to Scale up for Early Childhood Development}
+      \field{volume}{389}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{103\bibrangedash 118}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/S0140-6736(16)31698-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0140-6736(16)31698-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0140-6736(16)31698-1
+      \endverb
+    \endentry
+    \entry{victora_maternal_2008}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=6fe9f06e84cf100206f0124cff21ca63}{%
+           family={Victora},
+           familyi={V\bibinitperiod},
+           given={Cesar\bibnamedelima G},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a5cd89a4c2c9c2d92e15bd91e7bf3fe}{%
+           family={Adair},
+           familyi={A\bibinitperiod},
+           given={Linda},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b34d357098028733d9b4f1fdd12dcb71}{%
+           family={Fall},
+           familyi={F\bibinitperiod},
+           given={Caroline},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1f7e7a048ae83be166570f35a85830a}{%
+           family={Hallal},
+           familyi={H\bibinitperiod},
+           given={Pedro\bibnamedelima C},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4c2e86269aafac8b99250b510045159}{%
+           family={Martorell},
+           familyi={M\bibinitperiod},
+           given={Reynaldo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ece328f186a9bf8e617cbc5c5d4dcf8b}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Linda\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4004fc5c5b5a8eb52259ed8a732823f5}{%
+           family={Sachdev},
+           familyi={S\bibinitperiod},
+           given={Harshpal\bibnamedelima Singh},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3925520d925841586e6e7e45ad1bb1bf}{%
+           family={{Maternal}},
+           familyi={M\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=3941d4ceec6ef6c7e7a010c3949a3e87}{%
+           family={Group},
+           familyi={G\bibinitperiod},
+           given={Child\bibnamedelimb Undernutrition\bibnamedelima Study},
+           giveni={C\bibinitperiod\bibinitdelim U\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ea81861511371729a42ab073178f1b5a}
+      \strng{fullhash}{c1282c289b6bf99bca893631e383b237}
+      \strng{bibnamehash}{832d0ee065cb779b7e70371698f2a6fa}
+      \strng{authorbibnamehash}{832d0ee065cb779b7e70371698f2a6fa}
+      \strng{authornamehash}{ea81861511371729a42ab073178f1b5a}
+      \strng{authorfullhash}{c1282c289b6bf99bca893631e383b237}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Lancet}
+      \field{month}{1}
+      \field{number}{9609}
+      \field{title}{Maternal and Child Undernutrition: Consequences for Adult Health and Human Capital}
+      \field{volume}{371}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{pages}{340\bibrangedash 357}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1016/S0140-6736(07)61692-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/S0140-6736(07)61692-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/S0140-6736(07)61692-4
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -11,10 +11,10 @@
   \doublespacing
   \centering
   \LARGE ACCEPTED PAPER SUBMISSION TEMPLATE (\href{https://fanwangecon.github.io/Tex4Econ}{Tex4Econ})\\[0.25em]
-  \LARGE JOURNAL of ECONOMETRICS\\[0.25em]
+  \LARGE JOURNAL of ABC \\[0.25em]
   \LARGE ACCEPTED MANUSCRIPT: MS2020XXX \\[1.0em]
 \endgroup
-This document and the associated contents in the zip-folder include the accepted version of manuscript:MS2020XXX for the Journal of Econometrics. We include:
+This document and the associated contents in the zip-folder include the accepted version of manuscript:MS2020XXX for the Journal of ABC. We include:
 \begin{enumerate}
     \item A README.md file documenting folders and files in the zip folder.
     \item Title page information
@@ -59,7 +59,7 @@ This document and the associated contents in the zip-folder include the accepted
     \end{enumerate}
     \item Corresponding author:
     \begin{itemize}
-        \item \textbf{\AUTHORWANG}
+        \item \textbf{\AUTHORWANGINFO}
     \end{itemize}
 \end{itemize}
 \clearpage 
@@ -115,7 +115,34 @@ This document and the associated contents in the zip-folder include the accepted
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \begin{refsection}
+
+% reset page numbers
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Title Page for Appendix
+% special footnote symbols
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begingroup
+  \doublespacing
+  \centering
+  \Large ONLINE APPENDIX \\[1.5em]
+  \LARGE \PAPERTITLE \\[0.75em]
+  \large
+    Fan Wang\footnote[1]{\AUTHORWANGINFO}\\[1.0em]
+\endgroup
+\clearpage
+
+% Online appendix
 \input{manuscript_online_appendix}
+
+% Appendix Bibliography
+\begingroup
+\setstretch{1.0}
+\setlength\bibitemsep{0pt}
+\printbibliography[title=References for Online Appendix]
+\endgroup
+\pagebreak
 \end{refsection}
 
 \end{document}

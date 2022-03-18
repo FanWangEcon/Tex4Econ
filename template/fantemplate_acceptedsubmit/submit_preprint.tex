@@ -1,0 +1,80 @@
+\documentclass[12pt,english]{article}
+
+\input{fragment/preamble_package}
+\input{fragment/preamble_citation}
+\input{manuscript_title_etc}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part I. Title Page, Authors, Abstract, etc. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\PAPERTITLE
+\thanks{
+\AUTHORWANGINFO
+\ACKNOWLEDGMENTS
+}}
+
+\author{
+\AUTHORWANG}
+
+\date{March 17, 2022}
+
+\maketitle
+
+\begin{abstract}
+\singlespacing
+\PAPERABSTRACT
+
+\noindent \PAPERKEYWORDS
+\thispagestyle{empty}
+\end{abstract}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part II. Manuscript main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+% Manuscript main text
+\input{manuscript_main}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part III. Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begingroup
+\setstretch{1.0}
+\setlength\bibitemsep{0pt}
+\printbibliography[title=References]
+\endgroup
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part IV. Tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{manuscript_tab_fig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PART V. Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+% Title Page for Appendix
+% special footnote symbols
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begingroup
+  \doublespacing
+  \centering
+  \Large ONLINE APPENDIX \\[1.25em]
+  \LARGE \PAPERTITLE \\[0.75em]
+  \large
+    Fan Wang\footnote[1]{\AUTHORWANGINFO}\\[1.0em]
+\endgroup
+% \clearpage
+
+% Online appendix
+\input{manuscript_online_appendix}
+
+\end{document}
