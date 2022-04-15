@@ -5,6 +5,15 @@
 % setspace: for spacing gap in references
 \usepackage{setspace}
 
+\usepackage[
+  authordate,
+  backend=biber,
+  isbn=false,
+  sorting=nyt,
+  maxbibnames=10,
+  maxcitenames=3,
+  sortcites=true]{biblatex-chicago}
+
 \usepackage{filecontents}
 % This creates a bib file called ref.bib in the same folder as the current tex file
 \begin{filecontents}{ref.bib}
@@ -89,18 +98,39 @@
 	year = {2017},
 	pages = {146--154},
 }
-
+@report{cavounidis_2022,
+  title = {Estimating the Nature of Technological Change:
+    Exploiting Shifts in Skill Use Within and Between Occupations},
+  author = {Cavounidis, Costas and
+    Dicandia, Vittoria and
+    Lang, Kevin and
+    Malhotra, Raghav},
+  date = {2022},
+  institution = {Mimeo,
+    Department of Economics,
+    Univerity of Warwick}
+}
+@report{morchio_moser_2021,
+  title = {The Gender Pay Gap: Micro Sources and Macro Consequences},
+  author = {Morchio, Iacopo and Moser, Christian},
+  date = {2021},
+  series = {CEPR Discussion Papers},
+  number = {15283},
+  url = {https://ideas.repec.org/p/cpr/ceprdp/16383.html}
+}
 \end{filecontents}
 
-\usepackage[authordate,
-backend=bibtex,
-doi=false,
-isbn=false,
-sorting=nyt,
-maxbibnames=10,
-maxcitenames=3,
-sortcites=False]{biblatex-chicago}
-\bibliography{ref}
+% https://tex.stackexchange.com/a/424775/109818
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map[overwrite]{
+      \step[fieldsource=doi, final]
+      \step[fieldset=url, null]
+      \step[fieldset=eprint, null]
+    }
+  }
+}
+\addbibresource{ref.bib}
 
 \begin{document}
 
@@ -112,7 +142,41 @@ sortcites=False]{biblatex-chicago}
 According to \textcite{becker_human_1986}, ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat nunc orci, id pellentesque lacus ullamcorper at. Mauris venenatis gravida magna non dapibus. Nullam vel consequat purus, id luctus dui. Suspendisse vel auctor nulla. Proin ipsum felis, efficitur eu eleifend vitae, efficitur pellentesque mauris \autocite{case_lasting_2005, conti_understanding_2010}.
 
 
-\section{Possessive Citations}
+\section{biblatex Settings}
+
+\subsection{Chicago Author-Date}
+
+To use authordate chicago stye, cite up to three authors in text, more than three authors use `et al.', and cite in the references at most ten author names. 
+
+\begin{verbatim}
+  \usepackage[
+    authordate,
+    backend=biber,
+    isbn=false,
+    sorting=nyt,
+    maxbibnames=10,
+    maxcitenames=3,
+    sortcites=true]{biblatex-chicago}
+\end{verbatim}
+
+\subsection{DOI or URL if DOI does not Exist}
+
+Using \textbf{biber} as backend, can use the `sourcemap' feature to control: (1) print doi if exists; (2) print url if doi does not exist; (3) print eprint if no doi and also no url. See \url{https://tex.stackexchange.com/a/424799/109818}.
+
+\begin{verbatim}
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map[overwrite]{
+      \step[fieldsource=doi, final]
+      \step[fieldset=url, null]
+      \step[fieldset=eprint, null]
+    }
+  }
+}
+\end{verbatim}
+
+\section{Citations}
+\subsection{Possessive Citations}
 
 In this example, using possessive to put apostrophe after author names and before date. Accomplished by using \emph{citeauthor} first then \emph{parentcite}.
 
@@ -121,23 +185,56 @@ found that associations of traffic-related pollutants, including NO\textsubscrip
 PM\textsubscript{2.5}, with preterm birth tended to be stronger for mothers with low
 educational attainment.
 
-\section{Cite Only Date}
+\subsection{Cite Only Date}
 
 To write more flexibly, can mention author names explicitly in text and then cite the article with \emph{parentcite} for the date only: Westergaard and her colleagues \parencite*{westergaard_ambient_2017} identified only a small handful of studies that addressed effect modification by dimensions of socioeconomic status.
 
 
-\section{Full Article Title In-Text Citation}
+\subsection{Full Article Title In-Text Citation}
 
-To cite the entire title of the the paper, we can use \emph{citetitle}: The article, \citetitle{conti_understanding_2010}, by \citeauthor{conti_understanding_2010}, published in year \cite*{conti_understanding_2010}, is been discussed in this sentence. 
+To cite the entire title of the the paper, we can use \emph{citetitle}: The article, \citetitle{conti_understanding_2010}, by \citeauthor{conti_understanding_2010}, published in year \cite*{conti_understanding_2010}, is been discussed in this sentence.
 
-We can also cite the full title of a book or an article, rather then using \emph{textcite}, we use \emph{citetitle} first, followed by \emph{autocite}: 
+We can also cite the full title of a book or an article, rather then using \emph{textcite}, we use \emph{citetitle} first, followed by \emph{autocite}:
 \begin{itemize}
     \item \citetitle{conti_understanding_2010} \autocite{conti_understanding_2010} is an article published in a journal.
     \item \citetitle{becker_human_1994} \autocite{becker_human_1994} is a book we are reading today.
 \end{itemize}
- 
 
+\section{BIB Entries}
 
+\subsection{BIB Entry for non-public Working Paper}
+
+For working papers that have not been shared on public repositories. Here we cite \textcite{cavounidis_2022}.
+
+\begin{verbatim}
+  @report{cavounidis_2022,
+    title = {Estimating the Nature of Technological Change:
+      Exploiting Shifts in Skill Use Within and Between Occupations},
+    author = {Cavounidis, Costas and
+      Dicandia, Vittoria and
+      Lang, Kevin and
+      Malhotra, Raghav},
+    date = {2022},
+    institution = {Mimeo,
+      Department of Economics,
+      Univerity of Warwick}
+  }
+\end{verbatim}
+
+\subsection{BIB Entry for Working Paper in Series}
+
+For working paper in various working paper series. \textcite{morchio_moser_2021} is a CEPR Discussion Paper.
+
+\begin{verbatim}
+@report{morchio_moser_2021,
+  title = {The Gender Pay Gap: Micro Sources and Macro Consequences},
+  author = {Morchio, Iacopo and Moser, Christian},
+  date = {2021},
+  series = {CEPR Discussion Papers},
+  number = {15283},
+  url = {https://ideas.repec.org/p/cpr/ceprdp/16383.html}
+}
+\end{verbatim}
 
 \section{\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3140132}{Data}}
 
@@ -145,8 +242,8 @@ Village closure information is taken from a village head survey, which was colle
 
 \pagebreak
 \begingroup
-\setstretch{1.1}
-\setlength\bibitemsep{6pt}
+\setstretch{1.0}
+\setlength\bibitemsep{3pt}
 \printbibliography
 \endgroup
 \pagebreak
