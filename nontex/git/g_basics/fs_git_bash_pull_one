@@ -1,0 +1,51 @@
+#!/usr/bin/bash
+
+# This bash file, after making the appropriate adjustments pulls from a remote
+# project and creates a new local folder.
+
+# ADJUT 1 STRREPO
+# STRREPO='Py4Econ'
+STRREPO='PrjHealthProductionCGW'
+
+if [ -d "/g/repos/" ]
+then
+  echo "Computer has g drive, on precision"
+  STRREPOWTHPATH="/g/repos/${STRREPO}"
+else
+  echo "Computer has c drive, on vostro"
+  STRREPOWTHPATH="/c/Users/fan/${STRREPO}"
+fi
+echo "${STRREPOWTHPATH}"
+
+echo pull single repository
+echo going to pull from $STRREPOWTHPATH
+
+# generate all needed key repositories
+mkdir $STRREPOWTHPATH
+
+# Initialize
+cd $STRREPOWTHPATH
+
+# ADJUT 2.1 ACCOUNT
+# Set global config settings, in ~/.gitconfig
+git config --global user.name "Fan Wang"
+git config --global user.email wangfanbsg75@live.com
+
+# Initialize
+git init
+# ADJUT 2.2 ACCOUNT
+git remote add github git@github.com:fanwangecon/$STRREPO
+
+# Secure
+eval "$(ssh-agent)"
+# ssh-add ~/.ssh/id_rsa_yy
+ssh-add ~/.ssh/id_rsa
+
+# Pull
+cd $STRREPOWTHPATH
+# ADJUT 3 root name
+git pull github main
+# git pull github master
+
+# Open Repository in Atom
+atom $STRREPOWTHPATH

@@ -9,18 +9,19 @@ urlcolor: blue
 always_allow_html: yes
 ---
 
-### Basic Git Commands
+Go back to [Fan](http://fanwangecon.github.io/)'s [Tex4Econ and Miscellaneous Repository](http://fanwangecon.github.io/Tex4Econ/).
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+### Basic git commands
 
 #### Git Connect to remote
 
 ```{bash}
 # show all remote url
 git remote -v
-```
-
-#### Git Undo All Local changes
-
-```{r}
 ```
 
 #### Check File Status
