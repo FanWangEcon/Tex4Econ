@@ -158,7 +158,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 1. [Bash Pull and Push from Single Remote Github Repo](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_basics/fs_git_bash.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.html)
     - Create a new local folder after checking directories
     - Pull from remote after prompting for password
-    - [Sample bash file](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/pull_one)
+    - [Sample bash file](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash_pull_one)
 2. [Multiple git Repositories setup with Github](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/git/fs_git_setup.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html)
     - set up ssh rsa security with github
     - initalize multiple repositories
