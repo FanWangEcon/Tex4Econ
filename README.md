@@ -17,6 +17,8 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 1.  [Biblatex Citation and Bibliography](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.pdf)
     - *biblatex-chicago; \textcite{becker_human_1986}; \autocite{becker_human_1986}*
     - Full title in-text citation: *\citetitle{becker_human_1994} \autocite{becker_human_1994}*
+    - Display URL in bibliography if DOI does not exist with biber backend
+    - Biblatex format for for working papers mimeo and in series
 2.  [Section References, Vary Link Colors by Section](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref/labelref_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref/labelref_test.pdf)
     - *Section \ref{sec:intro} (Page \pageref{sec:intro}); \hypersetup{hidelinks=true}*
 
@@ -108,7 +110,7 @@ In overleaf, click on New Project, choose upload project, then select zip below.
 
 1.  [Accepted Paper Submission to Journal](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/): [**journal-tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_journal.tex) \| [**journal-pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_journal.pdf) \| [**preprint-tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_preprint.tex) \| [**preprint-pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_preprint.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/fantemplate_acceptedsubmit.zip)
     - *journal-pdf* and *journal-tex*: All paper contents in a single PDF for submission to journal, with separate references and page numbering for the main text and the appendix, respectively. Contents are organized for copy-editors to find easily.
-    - *preprint-pdf* and *preprint-tex*: All paper contents in a single PDF with one page-numbering for main and appendix and a single set of references. This file uses the same input files and saved strings as the *journal-tex* file. The resulting PDF can be shared as a preprint. 
+    - *preprint-pdf* and *preprint-tex*: All paper contents in a single PDF with one page-numbering for main and appendix and a single set of references. This file uses the same input files and saved strings as the *journal-tex* file. The resulting PDF can be shared as a preprint.
 
 ## 3.4 Other Templates
 
@@ -132,68 +134,7 @@ The writing/structure is to:
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
-# 4. [One File Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex)
-
-For papers that are not too long, we might write all tex contents on the same page. This is the example single-file paper [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex) file, and this is the   [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.pdf) output. Even for single-file papers, various paper components listed below should be stored separately for clarity and convenience.
-
-The paper [**preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) is stored in its own file, and loads in the packages and settings, statistics/phrases/math, and citation from tex fragments listed below. A clear separation should be kept between these files, with the main [**preamble**](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_main.tex) only loading inputs in.
-
-The preamble file can be inserted at the top of a full paper file, for example at the top of this [**multi-section file**](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex).
-
-For one-file article, we could directly load in the various tex fragments below. For example, we load these packages below into [**this file**](https://github.com/FanWangEcon/Tex4Econ/blob/master/singlefile_article/article_fan.tex).
-
--   **Numbers/Phrases/Math**: various tex fragments store key file components in separate files
-    -   [_Numbers_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/stats/stats_one.tex): Sometimes, we want to use the same number if various spots in the paper, these numbers should be stored as newcommands so that the number can be updated in one spot.
-    -   [_Often Used Phrases_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/shorthand/short_text.tex): Generally, there are terms that are used often in a paper. To make it easy to change these terms or to avoid having to rewrite over and over again, these terms could be stored as new commands.
-    -   [_Often Used Math_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/shorthand/short_math.tex): We might need to reuse various Math Symbols or parts of equations, they should also be stored as newcommands.
-    -   The aggregate [_PDF_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.pdf) file, compiling all subsection tex files together.
-    -   The [_overleaf_](https://www.overleaf.com/read/xjsqdwrkfrhq) file, allowing for live compilation.
--   **Citation**: structure to cite efficiently
-    -   [_Preamble Settings_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/cite/cite_preamble.tex): One file to be loaded into preambles sets citation settings.
-    -   [_End File Citation Settings_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/cite/cite_end.tex): One file to be loaded at the end of the paper that determines bibliography text display.
-    -   [_bib Files_](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib): Various bib files loaded from [zotero](https://www.zotero.org/) stored in own folder. Sync directly to zotero via overleaf.
--   **Packages and Settings**: Package loading etc.
-    -   [_Package Loading_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_one.tex)
-    -   [_Additional Packages and Settings_](https://github.com/FanWangEcon/Tex4Econ/blob/master/fragments/preamble_two.tex)
-
-# 5. [Multi-Section Article](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex)
-
-When a paper is longer, it could be difficult to manage long latex files. Compiling could take long periods of time if the full paper requires compilation for any edits in a subsection. The structure below allows for editing paper in subsections and compiling by sections. The structure works locally as well as remotely on browser based compiler.
-
-We compile together two files with the same structure:
-1. [Multi-section blank template](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main_blank.pdf) has no contents in the sections, useful for copy/cloning when starting new projects
-2. [Multi-section template with contents](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.pdf) has sample contents in sections, demonstrates what the file looks like filled up.
-
-Inside [**overleaf**](https://www.overleaf.com/read/xjsqdwrkfrhq), the aggregate tex file that combines all sections together should be set as the main/default file under project options. Then as subsection text fragments are edited inside overleaf, the full pdf file is updated on the right showing current changes.
-
-The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) file structure and [**preamble fragments**](https://github.com/FanWangEcon/Tex4Econ/tree/master/fragments) structure is used here as in the single file case above.
-
--   **Aggregate Tex and PDF**: combine subsections together in one joint overall paper file
-    -   The aggregate [_tex_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.tex) file, only showing section and subsection headings.
-    -   The aggregate [_PDF_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_combine/draft_main.pdf) file, compiling all subsection tex files together.
-    -   The [_overleaf_](https://www.overleaf.com/read/xjsqdwrkfrhq) file, allowing for live compilation.
--   **Section PDF Compiles**: compile each section separately to reduce compile time and file length.
-    -   Introduction Conclusion Section: [_Tex Compile_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_sandbox/introconclude_sandbox.tex), [_PDF_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_sandbox/introconclude_sandbox.pdf)
-    -   Model Section: [_Tex Compile_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_sandbox/model_sandbox.tex), [_PDF_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_sandbox/model_sandbox.pdf)
-    -   Estimation Section: [_Tex Compile_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_sandbox/estimate_sandbox.tex), [_PDF_](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections_sandbox/estimate_sandbox.pdf)
--   **Section Folders**: each section has own folder.
-    -   [Introduction Conclusion Section Folder](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/)
-    -   [Model Section Folder](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/)
-    -   [Estimation Section Folder](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/esti/)
--   **Section Main Tex Files**: this file gathers subsection inputs together, used for section by section compilation
-    -   [Introduction Conclusion Section Main File](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/main.tex)
-    -   [Model Section Main File](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_main.tex)
-    -   [Estimation Section Main File](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/esti/esti_main.tex)
--   **Subsection Tex Files**: each subsection has own tex file:
-    -   [Introduction](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/intro.tex) from the intro and conclusion folder.
-    -   [Conclusion](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/conclude.tex) from the intro and conclusion folder.
-    -   [Literature review](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/literature.tex) from the intro and conclusion folder.
-    -   [Introduction](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/intro.tex) from the intro and conclusion folder.
-    -   [Conclusion](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/introconclude/conclude.tex) from the intro and conclusion folder.
-    -   [Model Subsection One](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
-    -   [Model Subsection Two](https://github.com/FanWangEcon/Tex4Econ/blob/master/sections/model/model_one.tex) from the model folder.
-
-# 6. Program Installations
+# 4. Program Installations
 
 1. [Install Python, R, Latex, VSCode, Atom etc](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/windows/fn_installations.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html)
     - Conda base Python, R in and outside of Conda
@@ -212,27 +153,33 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     - *vim-airline, onedkar, Goyo, Limelight*
 
 
-# 7. gitpages and git
+# 5. gitpages and git
 
-1. [Multiple git Repositories setup with Github](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/git/fs_git_setup.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html)
+1. [Bash Pull and Push from Single Remote Github Repo](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_basics/fs_git_bash.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.html)
+    - Create a new local folder after checking directories
+    - Pull from remote after prompting for password
+    - [Sample bash file](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/pull_one)
+2. [Multiple git Repositories setup with Github](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/git/fs_git_setup.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/git/fs_git_setup.html)
     - set up ssh rsa security with github
     - initalize multiple repositories
     - secure ssh session to avoid passphrase entry
     - *mkdir d1 d2; git config --global; git init; git remote add*
     - *eval "$(ssh-agent)"; ssh-add ~/.ssh/id_rsa*
     - *git pull github master; git pull -u github master*
-2. [Sample Githug page](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/): [**md**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/githubpages/sample/samplepage.md) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/)
+3. [Basic Git Commands](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_basics.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_basics/fs_git_basics.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_basics.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_basics.html)
+    - Git check file status
+4. [Sample Githug page](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/): [**md**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/githubpages/sample/samplepage.md) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/githubpages/sample/)
     - Conda base Python, and Conda environment for R
     - *conda update --all*
     - *Rtools, install.packages(), devtools::install_github()*
-3. [Git Subtree](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_subtree/fs_subtree.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
+4. [Git Subtree](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_subtree/fs_subtree.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
     - dropbox folder as main project git
     - subfolder also as git subtree synced to overleaf
     - **git**: *git subtree add, push, pull*
 
-# 8 reveal.js
+# 6 reveal.js
 
-## 8.1 reveal.js Basic Examples
+## 6.1 reveal.js Basic Examples
 
 1. Go to the latest [reveal.js release](https://github.com/hakimel/reveal.js/releases)
     - go to the end of the latest release's release info, look for zip file and download
@@ -241,13 +188,13 @@ The same [**bib**](https://github.com/FanWangEcon/Tex4Econ/tree/master/_bib) fil
     - in a *present* folder that is parallel to the *css*, *js*, and other folders, put in there testing and other html files.
     - replace links to css, js, lib and plugin in the testing files
 
-## 8.2 Default Tests
+## 6.2 Default Tests
 
 1. [Default Testing File](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/index.html)
 2. [Default Demo File](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/demo.html)
 3. [Modified Math Presentation](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/math.html)
 
-## 8.3 Rmd and revealjs
+## 6.3 Rmd and revealjs
 
 1. [Revealjs Rmd and PDF](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.html): [**Rmd**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.Rmd) \| [**pdf**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.pdf) \| [**html**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.html)
     - R for revealjs, include pictures
