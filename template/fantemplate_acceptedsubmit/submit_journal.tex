@@ -1,6 +1,7 @@
 \documentclass[12pt,english]{article}
 
 \input{fragment/preamble_package}
+% Citation comes loading other packages, so that footnotes follow biblatex-chicago style
 \input{fragment/preamble_citation}
 
 \begin{document}
@@ -55,7 +56,8 @@ This document and the associated contents in the zip-folder include the accepted
 \begin{itemize}[label={}, leftmargin=*]
     \item List of authors:
     \begin{enumerate}
-        \item \AUTHORWANG
+        \item \AUTHORWANGINFO
+        \item \AUTHORTEXFORECONINFO
     \end{enumerate}
     \item Corresponding author:
     \begin{itemize}
@@ -100,7 +102,7 @@ This document and the associated contents in the zip-folder include the accepted
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begingroup
 \setstretch{1.0}
-\setlength\bibitemsep{0pt}
+\setlength\bibitemsep{5.0pt}
 \printbibliography[title=References for Manuscript]
 \endgroup
 \pagebreak
@@ -124,12 +126,14 @@ This document and the associated contents in the zip-folder include the accepted
 % special footnote symbols
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 \begingroup
-  \doublespacing
-  \centering
-  \Large ONLINE APPENDIX \\[1.5em]
-  \LARGE \PAPERTITLE \\[0.75em]
-  \large
-    Fan Wang\footnote[1]{\AUTHORWANGINFO}\\[1.0em]
+\doublespacing
+\centering
+\Large ONLINE APPENDIX \\[1.5em]
+\LARGE \PAPERTITLE \\[0.75em]
+\large
+\AUTHORWANG\footnote[1]{\AUTHORWANGINFO}
+and 
+\AUTHORTEXFORECON\footnote[2]{\AUTHORTEXFORECONINFO}\\[1.0em]
 \endgroup
 \clearpage
 
