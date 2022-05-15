@@ -16,7 +16,8 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage[export]{adjustbox}[2011/08/13]
 \usepackage{enumitem}
-\usepackage[bottom, symbol]{footmisc}
+% FOOTMISC: https://tex.stackexchange.com/a/110401/109818, loading biblatex-chicago after footmisc over-rides footmisc.
+\usepackage[hang, flushmargin, bottom, symbol]{footmisc}
 \usepackage[text={16cm,24cm}]{geometry}
 \usepackage{ragged2e}
 \usepackage{csquotes}
@@ -98,9 +99,16 @@
 \doublespacing
 %\onehalfspacing
 
-%Change footnote
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Footnotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. Number hang with gap
+% 2. Gap between citations
+% 3. linespae
+
+\usepackage{footnotebackref}
 % separation between foonotes
-\addtolength{\footnotesep}{1mm}
+\addtolength{\footnotesep}{1.5mm}
 % within footnote separation
-\renewcommand{\footnotelayout}{\setstretch{1.3}}%
-\setlength{\footnotemargin}{4mm}
+\renewcommand{\footnotelayout}{\setstretch{1.10}}%
+\setlength{\footnotemargin}{3.5mm}

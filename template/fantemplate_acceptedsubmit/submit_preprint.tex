@@ -1,7 +1,9 @@
 \documentclass[12pt,english]{article}
 
-\input{fragment/preamble_package}
+% Load citation first, so that footmisc can change footnote, otherwise chicago style footnote overrides footmisc from biblatex-chicago
+% https://tex.stackexchange.com/a/110401/109818
 \input{fragment/preamble_citation}
+\input{fragment/preamble_package}
 \input{manuscript_title_etc}
 
 \begin{document}
@@ -10,26 +12,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Part I. Title Page, Authors, Abstract, etc. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{\PAPERTITLE
-\thanks{
-\AUTHORWANGINFO
+\title{
+% \vspace*{-3em}
+\onehalfspacing
+\PAPERTITLE
+\thanks{\PAPERINFO}}
+
+\author{
+\AUTHORWANG{} and \AUTHORTEXFORECON{}\thanks{
+\AUTHORWANGINFO;
+\AUTHORTEXFORECONINFO.
 \ACKNOWLEDGMENTS
 }}
 
-\author{
-\AUTHORWANG}
-
-\date{March 17, 2022}
+\date{
+% \vspace*{-0.5em}
+March 19, 2022}
 
 \maketitle
 
+% \vspace*{-2em}
 \begin{abstract}
+% \vspace*{-0.5em}
 \singlespacing
 \PAPERABSTRACT
-
-\noindent \PAPERKEYWORDS
-\thispagestyle{empty}
 \end{abstract}
+\vfil
+\hfil \small\PAPERKEYWORDS \hfil
+\vfil
+\thispagestyle{empty}
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,13 +51,14 @@
 \renewcommand*{\thefootnote}{\arabic{footnote}}
 % Manuscript main text
 \input{manuscript_main}
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Part III. Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begingroup
-\setstretch{1.0}
-\setlength\bibitemsep{0pt}
+\setstretch{1}
+\setlength\bibitemsep{5pt}
 \printbibliography[title=References]
 \endgroup
 \pagebreak
@@ -60,21 +72,21 @@
 % PART V. Appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
+\setlength{\footnotemargin}{5.75mm}
 
-% Title Page for Appendix
+% Title for Appendix
 % special footnote symbols
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 \begingroup
   \doublespacing
   \centering
-  \Large ONLINE APPENDIX \\[1.25em]
-  \LARGE \PAPERTITLE \\[0.75em]
-  \large
-    Fan Wang\footnote[1]{\AUTHORWANGINFO}\\[1.0em]
+  \Large ONLINE APPENDIX \\
+  \LARGE \begin{singlespace}\PAPERTITLE\end{singlespace}
+  \large \href{\AUTHORWANGURL}{\AUTHORWANG} and \href{\AUTHORTEXFORECONURL}{\AUTHORTEXFORECON}\\[1.0em]
 \endgroup
-% \clearpage
 
 % Online appendix
 \input{manuscript_online_appendix}
+\clearpage
 
 \end{document}
