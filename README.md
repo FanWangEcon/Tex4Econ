@@ -75,6 +75,9 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 6.  [Tikz Game Strategy Graphs](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.pdf)
     - continuous and discrete strategies
     - strategy branches, curved and straight lines
+7.  [Tikz Node-based Diagrams](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_nodediagram.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_nodediagram.pdf)
+    - Diagrams with line-connected and text-filled circles and rectangles
+    - Diagrams with equations, colored shapes, multiple connects rows and columns of shapes
 
 # 2. Latex Layout etc.
 
