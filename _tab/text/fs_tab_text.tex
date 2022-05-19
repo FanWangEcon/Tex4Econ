@@ -1,0 +1,356 @@
+\documentclass[12pt,english]{article}
+
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+% \usepackage[monochrome]{xcolor}
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs,dcolumn}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[font=singlespacing, skip=3pt]{caption}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{float}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{subfig}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{ragged2e}
+
+% rotate table
+\usepackage{lscape}
+
+% Thicker lines in table
+\usepackage{hhline}
+
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
+
+% \setlength{\parindent}{0pt}
+\makeatletter
+%\doublespacing
+\onehalfspacing
+\date{January 16, 2019}
+\newcommand{\rowgroup}[1]{\hspace{-0.5em}#1}
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+\newcommand{\sym}[1]{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\usepackage{array}
+\usepackage{makecell}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{colortbl}
+
+% Titling and Author
+\title{Latex Tables, All Text Table Examples}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{\url{https://fanwangecon.github.io}, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+\section{Double Panel Three Columns, Centered}
+
+\begin{table}[!ht]
+\centering{}
+{\small
+	\caption{\label{tab:paramesti}Comparison of Production and Commercial Units}
+	\begin{tabular}{>{\centering\arraybackslash}L{4cm} >{\centering\arraybackslash}L{4cm} >{\centering\arraybackslash}L{4cm}}
+		\toprule
+		\midrule
+		\multicolumn{3}{c}{\textbf{Panel A: Urban areas}}\\
+		\midrule
+		\textbf{\textit{Before}} & \textbf{\textit{After}} & \textbf{\textit{In Charge}}\\
+		\cmidrule(l){1-3}
+		A&B&C\\
+		\cmidrule(l){1-3}
+		E&F&G\\
+		\cmidrule(l){1-3}
+		State-owned retailers, state-owned wholesale companies&E&F\\
+		\cmidrule(l){1-3}
+		Z&Z&Q\\
+		\toprule
+		\midrule
+		\multicolumn{3}{c}{\textbf{Panel B: Rural areas}}\\
+		\midrule
+		\textbf{\textit{Before}} & \textbf{\textit{After}} & \textbf{\textit{In Charge}}\\
+		\cmidrule(l){1-3}
+		D&D&D\\
+		Z&Rural handicraft cooperative groups, Agriculture collectives and transportation cooperatives &Z\\
+		V&V&V\\
+		\bottomrule
+	\end{tabular}
+}
+\end{table}
+\clearpage
+
+\section{All Text Colored Table With Two Columns}
+
+In the table below, there are two columns, the left-side column contains a single cell. Each cell has a heading. The cells are separated by lines. There is extra padding/spacing. The cells have colors.
+
+Furthermore, we allow for thicker border lines via the \textbf{hhline} package. Additionally, we use the \textbf{hhline} package to draw horizontal hhline that is on top of background colors, it uses the same color as the background color in the first column, and uses black to show border in the second column.
+
+\begin{scriptsize}
+\begin{verbatim}
+\begin{table}[h] \bgroup
+\centering{}
+    \def\arraystretch{2}%
+    \fontsize{9}{9}\selectfont
+    \caption{\label{tab:paramesti}Key sources of global}
+    \arrayrulewidth=1.5mm
+    \begin{tabular}{|p{6cm}|p{8cm}|}
+    \hline
+    \cellcolor{gray!20} 
+    & \cellcolor{orange!5} \textbf{Heading Col 2 A}\newline ices augue, a dignissim nibh \\
+    \hhline{|>{\arrayrulecolor{gray!20}}->{\arrayrulecolor{black}}|-|}
+    \cellcolor{gray!20}
+    & \cellcolor{blue!5} \textbf{Heading Col 2 B}\newline ices augue, a dignissim nibh lec \\
+    \hhline{|>{\arrayrulecolor{gray!20}}->{\arrayrulecolor{black}}|-|}
+    \multirow{-9.5}{6cm}{\cellcolor[gray]{.9}
+    \textbf{Heading Col 1}\newline ipiscing elit. Etiam lobortis facilisis sem.}
+    & \cellcolor{purple!5} \textbf{Heading Col 2 C}\newline ices augue, a dignissim nibh lec \\
+    \hline
+    \end{tabular}
+\egroup\end{table}    
+\end{verbatim}
+\end{scriptsize}
+
+\begin{table}[h]
+\centering{}
+\bgroup
+\def\arraystretch{2}%
+\fontsize{9}{9}\selectfont
+\caption{\label{tab:paramesti}Key sources of global, comparative data on children's outcomes}
+% arrayrulewidth controls with table outter boundary and vertical lines
+\arrayrulewidth=1.5mm
+\begin{tabular}{|p{6cm}|p{8cm}|} % centered columns (4 columns) 
+\hline
+\cellcolor{gray!20}
+&
+\cellcolor{orange!5}
+\textbf{Heading Col 2 A}\newline
+ices augue, a dignissim nibh lec-
+tus placerat pede. Vivamus nunc nunc, mo-
+lestie ut, ultricies vel, semper in, velit. Ut
+porttitor. Praesent in sapien. Lorem ip-
+sum dolor sit amet, consectetuer adipiscing
+elit. Duis fringilla tristiq  ultricies vel, semper in, velit. Ut
+porttitor. Praesent in sapien. Lorem ip-
+sum dolor sit amet, consectetuer adipiscing
+elit. Duis fringilla tristiq
+\\
+% https://tex.stackexchange.com/a/65235/109818
+\hhline{|>{\arrayrulecolor{gray!20}}->{\arrayrulecolor{black}}|-|}
+\cellcolor{gray!20}
+&
+\cellcolor{blue!5}
+\textbf{Heading Col 2 B}\newline
+ices augue, a dignissim nibh lec-
+tus placerat pede. Vivamus nunc nunc, mo-
+lestie ut, ultricies vel, semper in, velit. Ut
+porttitor. Praesent in sapien. Lorem ip-
+sum dolor sit amet, consectetuer adipiscing
+elit. Duis fringilla tristiq
+\\
+% https://tex.stackexchange.com/a/65235/109818
+\hhline{|>{\arrayrulecolor{gray!20}}->{\arrayrulecolor{black}}|-|}
+\multirow{-9.5}{6cm}{\cellcolor[gray]{.9}\textbf{Heading Col 1}\newline
+ipiscing elit. Etiam lobortis facilisis sem.
+Nullam nec mi et neque pharetra sollicitudin.
+Praesent imperdiet mi nec ante. Donec ul-
+lamcorper, felis non sodales commodo, lec-
+tus velit ultrices augue, a dignissim nibh lec-
+tus placerat pede. Vivamus nunc nunc, mo-
+lestie ut, ultricies vel, semper in, velit. Ut
+porttitor. Praesent in sapien. Lorem ip-
+sum dolor sit amet, consectetuer adipiscing
+elit. Duis fringilla tristique neque. Sed in-
+terdum libero ut metus. Pellentesque plac-
+erat. Nam rutrum augue a leo. Morbi sed
+elit sit amet ante lobortis s
+}
+&
+\cellcolor{purple!5}
+\textbf{Heading Col 2 C}\newline
+ices augue, a dignissim nibh lec-
+tus placerat pede. Vivamus nunc nunc, mo-
+lestie ut, ultricies vel, semper in, velit. Ut
+porttitor. Praesent in sapien. Lorem ip-
+sum dolor sit amet, consectetuer adipiscing
+elit. Duis fringilla tristiq \\
+% \addlinespace[0.15cm]
+\hline
+\end{tabular}
+\egroup
+\end{table}
+
+\clearpage
+
+\section{Center-aligned Multiple Heading Landscape Table}
+
+A table with nine columns, all center aligned. There are three heading columns. Using \textbf{multicolumn} as well as \textbf{multirow} to generate heading groupings. 
+
+\begin{tiny}
+\begin{verbatim}
+\begin{landscape}
+\begin{table}[p]
+\centering{}
+{\fontsize{8}{8}\selectfont
+	\caption{\label{tab:paramesti}Key sources of global, comparative data on children's outcomes}
+	\begin{tabular}{
+	>{\centering\arraybackslash}L{2cm} >{\centering\arraybackslash}L{3.25cm} >{\centering\arraybackslash}L{1.3cm}
+	>{\centering\arraybackslash}L{1.3cm}
+	>{\centering\arraybackslash}L{1.7cm}
+	>{\centering\arraybackslash}L{1.4cm}
+	>{\centering\arraybackslash}L{2.0cm}
+	>{\centering\arraybackslash}L{1.9cm}
+	>{\centering\arraybackslash}L{1.3cm}
+	}
+		\toprule
+% 		\midrule
+		&\multicolumn{3}{c}{Climate and pollution hazard measures}
+		&\multicolumn{5}{c}{Child outcome measures}
+		\\
+		\cmidrule(lr){2-4}\cmidrule(lr){5-9}
+		&\multicolumn{1}{c}{\multirow{2}{3.25cm}{\centering Directly asked within population survey/census}}
+		&\multicolumn{2}{c}{Via GPS link}
+		&\multicolumn{1}{c}{\multirow{2}{1.7cm}{\centering Prenatal/birth outcomes}}
+		&\multicolumn{1}{c}{\multirow{2}{1.40cm}{\centering Physical health}}
+		&\multicolumn{1}{c}{\multirow{2}{2.0cm}{\centering Developmental or behavioral measures}}
+		&\multicolumn{2}{c}{Education}
+		\\
+		\cmidrule(lr){3-4}\cmidrule(lr){8-9}
+		&\multicolumn{1}{c}{}
+		&\emph{Available}
+		&\emph{Planned}
+		&\multicolumn{1}{c}{}
+		&\multicolumn{1}{c}{}
+		&\multicolumn{1}{c}{}
+		&\multicolumn{1}{c}{\multirow{1}{1.9cm}{\centering\emph{Enrollment or Attainment}}}
+		&\multicolumn{1}{c}{\multirow{1}{1.3cm}{Learning}}\\
+		\addlinespace[0.05cm]
+		\\
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{Demographic and Health Surveys}
+		& &x& &x&x& &x&
+		\\
+		\addlinespace[0.15cm]
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{Multiple Indicator Cluster Surveys}
+		& x [Child's school closed in last year due to natural disaster]
+		& &x& & &x&x&x
+		\\
+		\addlinespace[0.15cm]
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{Young Lives Surveys}
+		& x [Community reports natural disasters]
+		& &x&x&x&x&x&x
+		\\
+		\addlinespace[0.15cm]
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{IPUMS-Terra Census Data}
+		& & &x& & & &x&
+		\\
+		\addlinespace[0.15cm]
+		\bottomrule
+	\end{tabular}
+}
+\end{table}
+\end{landscape}    
+\end{verbatim}
+\end{tiny}
+
+\begin{landscape}
+\begin{table}[p]
+\centering{}
+{\fontsize{8}{8}\selectfont
+	\caption{\label{tab:paramesti}Key sources of global, comparative data on children's outcomes}
+	\begin{tabular}{
+	>{\centering\arraybackslash}L{2cm} >{\centering\arraybackslash}L{3.25cm} >{\centering\arraybackslash}L{1.3cm}
+	>{\centering\arraybackslash}L{1.3cm}
+	>{\centering\arraybackslash}L{1.7cm}
+	>{\centering\arraybackslash}L{1.4cm}
+	>{\centering\arraybackslash}L{2.0cm}
+	>{\centering\arraybackslash}L{1.9cm}
+	>{\centering\arraybackslash}L{1.3cm}
+	}
+		\toprule
+% 		\midrule
+		&\multicolumn{3}{c}{Climate and pollution hazard measures}
+		&\multicolumn{5}{c}{Child outcome measures}
+		\\
+		\cmidrule(lr){2-4}\cmidrule(lr){5-9}
+		&\multicolumn{1}{c}{\multirow{2}{3.25cm}{\centering Directly asked within population survey/census}}
+		&\multicolumn{2}{c}{Via GPS link}
+		&\multicolumn{1}{c}{\multirow{2}{1.7cm}{\centering Prenatal/birth outcomes}}
+		&\multicolumn{1}{c}{\multirow{2}{1.40cm}{\centering Physical health}}
+		&\multicolumn{1}{c}{\multirow{2}{2.0cm}{\centering Developmental or behavioral measures}}
+		&\multicolumn{2}{c}{Education}
+		\\
+		\cmidrule(lr){3-4}\cmidrule(lr){8-9}
+		&\multicolumn{1}{c}{}
+		&\emph{Available}
+		&\emph{Planned}
+		&\multicolumn{1}{c}{}
+		&\multicolumn{1}{c}{}
+		&\multicolumn{1}{c}{}
+		&\multicolumn{1}{c}{\multirow{1}{1.9cm}{\centering\emph{Enrollment or Attainment}}}
+		&\multicolumn{1}{c}{\multirow{1}{1.3cm}{Learning}}\\
+		\addlinespace[0.05cm]
+		\\
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{Demographic and Health Surveys}
+		& &x& &x&x& &x&
+		\\
+		\addlinespace[0.15cm]
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{Multiple Indicator Cluster Surveys}
+		& x [Child's school closed in last year due to natural disaster]
+		& &x& & &x&x&x
+		\\
+		\addlinespace[0.15cm]
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{Young Lives Surveys}
+		& x [Community reports natural disasters; households report natural disasters; child reports child reports natural hazard/flood as a difficulty in getting to school]
+		& &x&x&x&x&x&x
+		\\
+		\addlinespace[0.15cm]
+		\cmidrule(lr){1-9}
+		\addlinespace[0.15cm]
+		\textbf{IPUMS-Terra Census Data}
+		& & &x& & & &x&
+		\\
+		\addlinespace[0.15cm]
+		\bottomrule
+	\end{tabular}
+}
+\end{table}
+\end{landscape}
+
+\end{document}
+
+

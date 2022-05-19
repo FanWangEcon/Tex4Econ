@@ -10,9 +10,28 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 
 [![](https://img.shields.io/github/last-commit/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/m/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Tex4Econ)](https://github.com/FanWangEcon/Tex4Econ/pulls)
 
-# 1. Latex Bib, Equations, Tables, Figures
+# 1. Latex Equations, Symbols, etc.
 
-## 1.1 [References](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference)
+## 1.1 [Equations](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation)
+
+1.  [Multiple Lines](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/multilines.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/multilines.pdf)
+    - *split vs gathered*
+    - *substack vs array*
+2.  [Equation Cases](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.pdf)
+    - *cases*
+
+## 1.2 [Symbols, Operators and Accents](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols)
+
+1.  [Symbols and Accents](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.pdf)
+    - *underline vs overline*, *underaccent bar vs bar*
+    - *boldsymbol vs mathbf*
+2.  [Unicode Handling](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_unicode.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_unicode.pdf)
+    - Declare unicode and use unicode directly in latex
+    - *inputenc*, *DeclareUnicodeCharacter*
+
+# 2. Latex References, Spacing, etc
+
+## 2.1 [References](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference)
 
 1.  [Biblatex Citation and Bibliography](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/biblatex_basic/biblatex_test.pdf)
     - *biblatex-chicago; \textcite{becker_human_1986}; \autocite{becker_human_1986}*
@@ -22,24 +41,17 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 2.  [Section References, Vary Link Colors by Section](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref/labelref_test.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/reference/labelref/labelref_test.pdf)
     - *Section \ref{sec:intro} (Page \pageref{sec:intro}); \hypersetup{hidelinks=true}*
 
-## 1.2 [Equations](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation)
+## 2.2 [Spacing and Sizing](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing)
 
-1.  [Multiple Lines](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/multilines.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/multilines.pdf)
-    - *split vs gathered*
-    - *substack vs array*
-2.  [Equation Cases](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/equation/cases.pdf)
-    - *cases*
+1.  [Reduce Line-Gap](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.pdf)
 
-## 1.3 [Symbols, Operators and Accents](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols)
+## 2.3 [Footer and Headers](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead)
 
-1.  [Symbols and Accents](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_symbols.pdf)
-    - *underline vs overline*, *underaccent bar vs bar*
-    - *boldsymbol vs mathbf*
-2.  [Unicode Handling](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_unicode.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/symbols/fs_unicode.pdf)
-    - Declare unicode and use unicode directly in latex
-    - *inputenc*, *DeclareUnicodeCharacter*
+1.  [Repaginate Response for Referees](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.pdf)
 
-## 1.4 [Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/)
+# 3. Latex Tables
+
+## 3.1 [Multiple-Panel Estimation Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/)
 
 1.  [Multi-Panel Estimation Table Medium Size](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_4col_cts_dis2inter.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_4col_cts_dis2inter.pdf)
     - Three main variables, three interactions, three controls, presented in separate groups
@@ -48,60 +60,73 @@ Materials gathered from various [projects](https://fanwangecon.github.io/researc
 2.  [Multi-Panel Estimation Table Large Size](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/multipanel/tab_6col_cts_dis2inter.pdf)
 3.  [Small Estimates Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/estimates/estismall.pdf)
 
-## 1.5 [Figures](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/)
+## 3.2 [Text Table](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/text)
+
+1.  [Tables with Text Only](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/text): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/text/fs_tab_text.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_tab/text/fs_tab_text.pdf)
+    - Table with color-shading, padding, and thicker borders, with text inside
+    - Landscape table with multiple columns and multiple heading rows
+    - Wrapped text with multirow and multicolumn
+
+# 4. Latex Figures
+
+## 4.1 Figure Alignment [Figures](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/)
 
 1.  [Figure Alignment](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment/figalign.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_fig/alignment/figalign.pdf)
     - Center align single or multiple sub-figures with captions, vertically and horizontally
     - Caption equal-width with subfigure
     - **latex**: *float, subcaption, caption*
 
-## 1.6 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
+# 5. Latex Tikz
+
+## 5.1 [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/) Basics
 
 1. [Tikz Page Layout](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning/fs_tikz_position.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/positioning/fs_tikz_position.pdf)
     - Relative positioning, proportional to textwidth
     - Two or four subfigures
-2. [Tikz Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.pdf)
+2.  [Tikz Figure Annotation](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.pdf)
+    - point to intercept and slope
+
+## 5.2 Timeline with [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
+
+1. [Tikz Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline.pdf)
     - Straight and curved connected lines
-3. [Tikz Dynamically Sized Eight Pane Model Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.pdf)
+2. [Tikz Dynamically Sized Eight Pane Model Timeline](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/timeline/timeline_8pane.pdf)
     - Dynamically sized panes for prior, current and next periods
     - Dynamically sized ext panes, graph panes and labeling areas
     - Parametrized proportioning of panes with dynamic adjustments
-4. [Tikz Linear Spline Equation Plotting](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.pdf)
+
+## 5.3 Equation Graphing with [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
+
+1. [Tikz Linear Spline Equation Plotting](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/fplot/functionplot.pdf)
     - sum of linear equations
     - linear spline and inverted linear spline
     - *def, domain, variable, plot*
-5.  [Tikz Figure Annotation](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/annotate/fs_tikz_annotate.pdf)
-    - point to intercept and slope
-6.  [Tikz Game Strategy Graphs](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.pdf)
+
+## 5.4 Diagrams with [TIKZ](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/)
+
+1.  [Tikz Game Strategy Graphs](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_gametree.pdf)
     - continuous and discrete strategies
     - strategy branches, curved and straight lines
-7.  [Tikz Node-based Diagrams](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_nodediagram.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_nodediagram.pdf)
+2.  [Tikz Node-based Diagrams](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_nodediagram.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/tikz/tree/fs_tikz_nodediagram.pdf)
     - Diagrams with line-connected and text-filled circles and rectangles
     - Diagrams with equations, colored shapes, multiple connects rows and columns of shapes
 
-# 2. Latex Layout etc.
+# 6. Latex MISC. 
 
-## 2.1 Sizing
-
-1.  [Reduce Line-Gap](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/spacing/reduce/reduce.pdf)
-
-## 2.2 Footer and Headers
-
-1.  [Repaginate Response for Referees](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_support/foothead/repage/repage_response_referee.pdf)
-
-## 2.3 Conversion
+## 6.1 Conversion
 
 1.  [Pandoc File Conversion](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/_other/pandoc/fansample.pdf)
 
-# 3. Templates
+
+# 7. Templates
 
 In overleaf, click on New Project, choose upload project, then select zip below.
 
-## 3.1 Working Paper Templates
+## 7.1 Working Paper Templates
 
 1.  [Template Figure Table and Reference](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_basic_imgtabref/fantemplate_basic_imgtabref.zip)
 
-## 3.2 Revise and Resubmit Templates
+## 7.2 Revise and Resubmit Templates
 
 1.  [Template Paper, Response to Referees, Section Numbering and Bib](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_paper_rr_response/fantemplate_paper_rr_response.zip)
     -   Figures, tables, references.
@@ -109,13 +134,13 @@ In overleaf, click on New Project, choose upload project, then select zip below.
     -   Separate heading count for responses to referees: _\\setcounter{section}{0}_
     -   Separate bibliographies: _refsection_
 
-## 3.3 Joint Working and Accepted Paper Templates
+## 7.3 Joint Working and Accepted Paper Templates
 
 1.  [Working Preprint and Accepted Paper Submission to Journal](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/): [**journal-tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_journal.tex) \| [**journal-pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_journal.pdf) \| [**preprint-tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_preprint.tex) \| [**preprint-pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/submit_preprint.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_acceptedsubmit/fantemplate_acceptedsubmit.zip)
     - *journal-pdf* and *journal-tex*: All paper contents in a single PDF for submission to journal, with separate references and page numbering for the main text and the appendix, respectively. Contents are organized for copy-editors to find easily.
     - *preprint-pdf* and *preprint-tex*: All paper contents in a single PDF with one page-numbering for main and appendix and a single set of references. This file uses the same input files and saved strings as the *journal-tex* file. The resulting PDF can be shared as a preprint.
 
-## 3.4 Other Templates
+## 7.4 Other Templates
 
 1. [Template Image Only Appendix](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/): [**tex**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.tex) \| [**pdf**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/draft.pdf) \| [**zip**](https://github.com/FanWangEcon/Tex4Econ/blob/master/template/fantemplate_image_appendix/fantemplate_image_appendix.zip)
     -   An appendix file with only figures.
@@ -126,7 +151,7 @@ In overleaf, click on New Project, choose upload project, then select zip below.
     -   Recommendation letter with logo and signature.
     -   Contact and address panel.
 
-## 3.5 Github Integration
+## 7.5 Github Integration
 
 This [overleaf project](https://www.overleaf.com/read/xjsqdwrkfrhq) is synced with this git repository. You can clone the project, pull project to overleaf, and compile in overleaf browser. Specifically: clone the repo; go to your overleaf account and create a project; click on menu under sync with git/github.
 
@@ -137,7 +162,7 @@ The writing/structure is to:
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
-# 4. Program Installations
+# 8. Program Installations
 
 1. [Install Python, R, Latex, VSCode, Atom etc](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/install/windows/fn_installations.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/install/windows/fn_installations.html)
     - Conda base Python, R in and outside of Conda
@@ -156,7 +181,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - *vim-airline, onedkar, Goyo, Limelight*
 
 
-# 5. gitpages and git
+# 9. gitpages and git
 
 1. [Bash Pull and Push from Single Remote Github Repo](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_basics/fs_git_bash.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_basics/fs_git_bash.html)
     - Create a new local folder after checking directories
@@ -175,14 +200,14 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - Conda base Python, and Conda environment for R
     - *conda update --all*
     - *Rtools, install.packages(), devtools::install_github()*
-4. [Git Subtree](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_subtree/fs_subtree.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
+5. [Git Subtree](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html): [**Rmd**](https://github.com/FanWangEcon/Tex4Econ/blob/master/nontex/git/g_subtree/fs_subtree.Rmd) \| [**pdf**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.pdf) \| [**html**](https://fanwangecon.github.io/Tex4Econ/nontex/git/g_subtree/fs_subtree.html)
     - dropbox folder as main project git
     - subfolder also as git subtree synced to overleaf
     - **git**: *git subtree add, push, pull*
 
-# 6 reveal.js
+# 10 reveal.js
 
-## 6.1 reveal.js Basic Examples
+## 10.1 reveal.js Basic Examples
 
 1. Go to the latest [reveal.js release](https://github.com/hakimel/reveal.js/releases)
     - go to the end of the latest release's release info, look for zip file and download
@@ -191,13 +216,13 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - in a *present* folder that is parallel to the *css*, *js*, and other folders, put in there testing and other html files.
     - replace links to css, js, lib and plugin in the testing files
 
-## 6.2 Default Tests
+## 10.2 Default Tests
 
 1. [Default Testing File](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/index.html)
 2. [Default Demo File](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/demo.html)
 3. [Modified Math Presentation](http://fanwangecon.github.io/Tex4Econ/nontex/revealjs/test/math.html)
 
-## 6.3 Rmd and revealjs
+## 10.3 Rmd and revealjs
 
 1. [Revealjs Rmd and PDF](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.html): [**Rmd**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.Rmd) \| [**pdf**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.pdf) \| [**html**](http://fanwangecon.github.io/Tex4Econ/nontex/revealjsrmd/test_img.html)
     - R for revealjs, include pictures
