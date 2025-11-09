@@ -1,0 +1,573 @@
+\documentclass{article}
+\usepackage{amsmath} % aligned env
+
+\usepackage{relsize} % make some math large
+\usepackage{bm} % make some math bold
+
+\usepackage{caption}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	noheadfoot=true,
+	left=1.0in,
+	right=1.0in,
+	top=1.0in,
+	bottom=1.0in,
+}
+
+% Specific Packages
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\definecolor{myLightGray}{RGB}{191,191,191}
+\definecolor{myGray}{RGB}{160,160,160}
+\definecolor{myDarkGray}{RGB}{144,144,144}
+\definecolor{myDarkRed}{RGB}{167,114,115}
+\definecolor{myRed}{RGB}{255,58,70}
+\definecolor{myGreen}{RGB}{0,255,71}
+
+\begin{document}
+
+\title{Latex Tikz Examples, Bridge Loan Charts}
+\author{\href{https://fanwangecon.github.io/}{Fan Wang}\thanks{https://fanwangecon.github.io, repository: \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ}}}
+\date{\today}
+
+\section{Bridge construction}
+
+
+
+% type a bridge
+% x positions for a, b, c
+\def\fatabxla{0.10*\textwidth}
+\def\fatabxha{0.45*\textwidth}
+\def\fatabxlb{0.35*\textwidth}
+\def\fatabxhb{0.65*\textwidth}
+\def\fatabxlc{0.55*\textwidth}
+\def\fatabxhc{0.90*\textwidth}
+% y positions for a, b, and c
+\def\fatabyla{0.00}
+\def\fatabyha{0.04*\textheight}
+\def\fatabylb{0.01*\textheight}
+\def\fatabyhb{0.05*\textheight}
+\def\fatabylc{0.00}
+\def\fatabyhc{0.04*\textheight}
+
+% type b bridge
+% x positions for a, b, c
+\def\fatbbxla{0.10*\textwidth}
+\def\fatbbxha{0.40*\textwidth}
+\def\fatbbxlb{0.39*\textwidth}
+\def\fatbbxhb{0.61*\textwidth}
+\def\fatbbxlc{0.60*\textwidth}
+\def\fatbbxhc{0.90*\textwidth}
+% y positions for a, b, and c
+\def\fatbbyla{0.00}
+\def\fatbbyha{0.04*\textheight}
+\def\fatbbylb{0.01*\textheight}
+\def\fatbbyhb{0.05*\textheight}
+\def\fatbbylc{0.00}
+\def\fatbbyhc{0.04*\textheight}
+
+% type c bridge
+% x positions for a, b, c
+\def\fatcbxla{0.10*\textwidth}
+\def\fatcbxha{0.49*\textwidth}
+\def\fatcbxlb{0.50*\textwidth}
+\def\fatcbxhb{0.50*\textwidth}
+\def\fatcbxlc{0.51*\textwidth}
+\def\fatcbxhc{0.90*\textwidth}
+% y positions for a, b, and c
+\def\fatcbyla{0.00}
+\def\fatcbyha{0.04*\textheight}
+\def\fatcbylb{0.01*\textheight}
+\def\fatcbyhb{0.05*\textheight}
+\def\fatcbylc{0.00}
+\def\fatcbyhc{0.04*\textheight}
+
+\newcommand{\fatikzbridgetypea}{        
+    \draw[line width=1mm, red] (\fatabxla,   \fatabyha) -- (\fatabxla, \fatabyla) -- (\fatabxha, \fatabyla) -- (\fatabxha, \fatabyha) ;
+    \draw[line width=1mm, brown] (\fatabxlc,   \fatabyhc) -- (\fatabxlc, \fatabylc) -- (\fatabxhc, \fatabylc) -- (\fatabxhc, \fatabyhc) ;
+    \draw[line width=1mm, blue] (\fatabxlb,   \fatabylb) -- (\fatabxlb, \fatabyhb) -- (\fatabxhb, \fatabyhb) -- (\fatabxhb, \fatabylb) ;
+}
+\newcommand{\fatikzbridgetypeb}{
+    \draw[line width=1mm, red] (\fatbbxla,   \fatbbyha) -- (\fatbbxla, \fatbbyla) -- (\fatbbxha, \fatbbyla) -- (\fatbbxha, \fatbbyha) ;
+    \draw[line width=1mm, brown] (\fatbbxlc,   \fatbbyhc) -- (\fatbbxlc, \fatbbylc) -- (\fatbbxhc, \fatbbylc) -- (\fatbbxhc, \fatbbyhc) ;
+    \draw[line width=1mm, blue] (\fatbbxlb,   \fatbbylb) -- (\fatbbxlb, \fatbbyhb) -- (\fatbbxhb, \fatbbyhb) -- (\fatbbxhb, \fatbbylb) ;
+}
+\newcommand{\fatikzbridgetypec}{
+    \draw[line width=1mm, red] (\fatcbxla,   \fatcbyha) -- (\fatcbxla, \fatcbyla) -- (\fatcbxha, \fatcbyla) -- (\fatcbxha, \fatcbyha) ;
+    \draw[line width=1mm, brown] (\fatcbxlc,   \fatcbyhc) -- (\fatcbxlc, \fatcbylc) -- (\fatcbxhc, \fatcbylc) -- (\fatcbxhc, \fatcbyhc) ;
+    \draw[line width=1mm, blue] (\fatcbxlb,   \fatcbylb) -- (\fatcbxlb, \fatcbyhb) -- (\fatcbxhb, \fatcbyhb) -- (\fatcbxhb, \fatcbylb) ;
+}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{.33\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1.0, every node/.style={scale=0.5}]]
+        \fatikzbridgetypea
+    \end{tikzpicture}
+    \caption{abc}
+\end{subfigure}~
+% tilde makes subfigures appear on the same row even if > 1.0 of textwidth
+\begin{subfigure}[t]{0.33\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1.0, every node/.style={scale=0.5}]]
+        \fatikzbridgetypeb
+    \end{tikzpicture}
+    \caption{Vary $\mu_{R}$}
+\end{subfigure}~
+\begin{subfigure}[t]{0.33\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1.0, every node/.style={scale=0.5}]]
+        \fatikzbridgetypec`
+    \end{tikzpicture}
+    \caption{Vary $\mu_{R}$}
+\end{subfigure}
+\caption{efg}
+\label{fig:hortwo}
+\end{figure}
+
+\subsection{Three bridges annotated}
+
+
+% type a bridge
+% x positions for a, b, c
+\def\tabxla{0.10*\textwidth}
+\def\tabxha{0.45*\textwidth}
+\def\tabxlb{0.35*\textwidth}
+\def\tabxhb{0.65*\textwidth}
+\def\tabxlc{0.55*\textwidth}
+\def\tabxhc{0.90*\textwidth}
+% text positions along x
+\def\tatxtxa{0.275*\textwidth}
+\def\tatxtxb{0.500*\textwidth}
+\def\tatxtxc{0.725*\textwidth}
+% y positions for a, b, and c
+\def\tabyla{0.00}
+\def\tabyha{0.04*\textheight}
+\def\tabylb{0.01*\textheight}
+\def\tabyhb{0.05*\textheight}
+\def\tabylc{0.00}
+\def\tabyhc{0.04*\textheight}
+% text positions along y
+\def\tatytxa{-0.015*\textheight}
+\def\tatytxb{0.065*\textheight}
+\def\tatytxc{-0.015*\textheight}
+
+% type b bridge
+% x positions for a, b, c
+\def\tbbxla{0.10*\textwidth}
+\def\tbbxha{0.40*\textwidth}
+\def\tbbxlb{0.39*\textwidth}
+\def\tbbxhb{0.61*\textwidth}
+\def\tbbxlc{0.60*\textwidth}
+\def\tbbxhc{0.90*\textwidth}
+% text positions along x
+\def\tbtxtxa{0.25*\textwidth}
+\def\tbtxtxb{0.500*\textwidth}
+\def\tbtxtxc{0.75*\textwidth}
+% y positions for a, b, and c
+\def\tbbyla{0.00}
+\def\tbbyha{0.04*\textheight}
+\def\tbbylb{0.01*\textheight}
+\def\tbbyhb{0.05*\textheight}
+\def\tbbylc{0.00}
+\def\tbbyhc{0.04*\textheight}
+% text positions along y
+\def\tbtytxa{-0.015*\textheight}
+\def\tbtytxb{0.065*\textheight}
+\def\tbtytxc{-0.015*\textheight}
+
+% type c bridge
+% x positions for a, b, c
+\def\tcbxla{0.10*\textwidth}
+\def\tcbxha{0.49*\textwidth}
+\def\tcbxlb{0.50*\textwidth}
+\def\tcbxhb{0.50*\textwidth}
+\def\tcbxlc{0.51*\textwidth}
+\def\tcbxhc{0.90*\textwidth}
+% text positions along x
+\def\tctxtxa{0.295*\textwidth}
+\def\tctxtxb{0.500*\textwidth}
+\def\tctxtxc{0.705*\textwidth}
+% y positions for a, b, and c
+\def\tcbyla{0.00}
+\def\tcbyha{0.04*\textheight}
+\def\tcbylb{0.01*\textheight}
+\def\tcbyhb{0.05*\textheight}
+\def\tcbylc{0.00}
+\def\tcbyhc{0.04*\textheight}
+% text positions along y
+\def\tctytxa{-0.015*\textheight}
+\def\tctytxb{0.065*\textheight}
+\def\tctytxc{-0.015*\textheight}
+
+\newcommand{\tikzbridgetypea}{        
+    \draw[line width=1mm, red] (\tabxla,   \tabyha) -- (\tabxla, \tabyla) -- (\tabxha, \tabyla) -- (\tabxha, \tabyha) ;
+    \draw[dash pattern={on 10pt off 3pt on 10pt off 3pt}, line width=1mm, brown] (\tabxlc,   \tabyhc) -- (\tabxlc, \tabylc) -- (\tabxhc, \tabylc) -- (\tabxhc, \tabyhc) ;
+    \draw[densely dotted, line width=1mm, blue] (\tabxlb,   \tabylb) -- (\tabxlb, \tabyhb) -- (\tabxhb, \tabyhb) -- (\tabxhb, \tabylb) ;
+
+    \node[align=center] (A) at (\tatxtxa, \tatytxa) {$\bm{\tilde{l}}$ };
+    \node[align=center] (B) at (\tatxtxb, \tatytxb) {$\bm{\widehat{l}}$ };
+    \node[align=center] (C) at (\tatxtxc, \tatytxc) {$\bm{l}$ };
+}
+\newcommand{\tikzbridgetypeb}{
+    \draw[line width=1mm, red] (\tbbxla,   \tbbyha) -- (\tbbxla, \tbbyla) -- (\tbbxha, \tbbyla) -- (\tbbxha, \tbbyha) ;
+    \draw[dash pattern={on 10pt off 3pt on 10pt off 3pt}, line width=1mm, brown] (\tbbxlc,   \tbbyhc) -- (\tbbxlc, \tbbylc) -- (\tbbxhc, \tbbylc) -- (\tbbxhc, \tbbyhc) ;
+    \draw[densely dotted, line width=1mm, blue] (\tbbxlb,   \tbbylb) -- (\tbbxlb, \tbbyhb) -- (\tbbxhb, \tbbyhb) -- (\tbbxhb, \tbbylb) ;
+
+    \node[align=center] (A) at (\tbtxtxa, \tbtytxa) {$\bm{\tilde{l}}$ };
+    \node[align=center] (B) at (\tbtxtxb, \tbtytxb) {$\bm{\widehat{l}}$ };
+    \node[align=center] (C) at (\tbtxtxc, \tbtytxc) {$\bm{l}$ };    
+}
+\newcommand{\tikzbridgetypec}{
+    \draw[line width=1mm, red] (\tcbxla,   \tcbyha) -- (\tcbxla, \tcbyla) -- (\tcbxha, \tcbyla) -- (\tcbxha, \tcbyha) ;
+    \draw[dash pattern={on 10pt off 3pt on 10pt off 3pt}, line width=1mm, brown] (\tcbxlc,   \tcbyhc) -- (\tcbxlc, \tcbylc) -- (\tcbxhc, \tcbylc) -- (\tcbxhc, \tcbyhc) ;
+    \draw[densely dotted, line width=1mm, blue] (\tcbxlb,   \tcbylb) -- (\tcbxlb, \tcbyhb) -- (\tcbxhb, \tcbyhb) -- (\tcbxhb, \tcbylb) ;
+    
+    \node[align=center] (A) at (\tctxtxa, \tctytxa) {$\bm{\tilde{l}}$ };
+    \node[align=center] (B) at (\tctxtxb, \tctytxb) {$\bm{\widehat{l}}$ };
+    \node[align=center] (C) at (\tctxtxc, \tctytxc) {$\bm{l}$ };        
+}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{.30\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1.0, every node/.style={scale=1}]]
+        \tikzbridgetypea
+    \end{tikzpicture}
+    \caption{Loan $\tilde{l}$ from loan set $A$ (solid red), loan $\widehat{l}$ from loan set $B$ (dotted blue), and loan $l$ from loan set $C$ (dashed brown) are ``hooked'' to each other, with some gaps between the hooks---the bridging loan $\widehat{l}$ is taken out before the due date of loan $\tilde{l}$ and repaid after the origination date of loan $l$.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.30\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1.0, every node/.style={scale=1}]]
+        \tikzbridgetypeb
+    \end{tikzpicture}
+    \caption{The ``hooks'' between loan set loan $\tilde{l}$ from loan set $A$ (solid red), loan $\widehat{l}$ from loan set $B$ (dotted blue), and loan $l$ from loan set $C$ (dashed brown) are tight---the bridging loan $\widehat{l}$ is taken out in the same month loan $\tilde{l}$ is due and repaid in the same month that loan $\widehat{l}$ originates.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.30\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=1.0, every node/.style={scale=1}]]
+        \tikzbridgetypec`
+    \end{tikzpicture}
+    \caption{The ``bridge'' is length-less---the bridge loan $\widehat{l}$ from loan set $B$ (dotted blue) originates and is repaid in the same month that loan $\tilde{l}$ is repaid and loan $l$ originates.}
+\end{subfigure}
+\captionsetup{width=1\textwidth}
+\caption{
+The bridge-loan linkage defined in Eq. \eqref{eq:rills:invest:loan:set:bridge} allows for three types of  triply-linked bridge loans, $\left(\tilde{l}, \widehat{l}, l\right) \in \text{BRIDGE}_{j,k}$. We illustrate the three types in three panels. Investment-linked loan $\tilde{l}$ (set $A$) is shown in red, middle bridge-loan $\widehat{l}$ (set $B$) is shown in blue, and third loan $l$ (set $C$) is shown in brown. The left and right vertical lines for each loan illustrates origination and due months for each loan.
+}
+\label{fig:tikz:bridge:types}
+\end{figure}
+
+
+
+\subsection{Empty Frame}
+
+% we need to define three boxes
+% xl, xh, yl, yh, for a, b, and c
+% x positions for a, b, and c
+\def\bxla{0.02*\textwidth}
+\def\bxha{0.12*\textwidth}
+\def\bxlb{0.10*\textwidth}
+\def\bxhb{0.20*\textwidth}
+\def\bxlc{0.18*\textwidth}
+\def\bxhc{0.28*\textwidth}
+% y positions for a, b, and c
+\def\byla{0.00}
+\def\byha{0.03*\textheight}
+\def\bylb{0.02*\textheight}
+\def\byhb{0.05*\textheight}
+\def\bylc{0.00}
+\def\byhc{0.03*\textheight}
+
+\def\fgw{1.0*\textwidth}
+\def\fgh{0.20*\textheight}
+
+\newcommand{\tikzframe}{        
+	\draw (0,     \fgh) -- (\fgw,     \fgh);
+	\draw[loosely dotted] (0, 0.5*\fgh) -- (\fgw, 0.5*\fgh);
+        \draw (0, 0       ) -- (\fgw, 0       );
+        
+	% \draw[line width=0.25mm, red] (\bxla, \byha) -- (\bxla, \byla);
+        \draw[line width=1mm, red] (\bxla,   \byha) -- (\bxla, \byla) -- (\bxha, \byla) -- (\bxha, \byha) ;
+        \draw[line width=1mm, blue] (\bxlb,   \bylb) -- (\bxlb, \byhb) -- (\bxhb, \byhb) -- (\bxhb, \bylb) ;
+        \draw[line width=1mm, brown] (\bxlc,   \byhc) -- (\bxlc, \bylc) -- (\bxhc, \bylc) -- (\bxhc, \byhc) ;
+        
+        % \draw (\aax, 0) -- (\aax+\aaw, 0)
+	% Three Straight Lines
+	\draw[dashed] (0.125*\fgw, 0  ) -- (0.125*\fgw,   \fgh);
+	\draw[dotted] (0.500*\fgw, 0.2*\fgh ) -- (0.500*\fgw,   0.8*\fgh);
+	\draw[dashed] (0.875*\fgw, 0  ) -- (0.875*\fgw,   \fgh);
+
+	\node[align=center] at (0.065*\fgw, 0.900*\fgh) {last\\period};
+	\node[align=center] at (0.500*\fgw, 0.900*\fgh) {current period};
+	\node[align=center] at (0.935*\fgw, 0.900*\fgh) {next\\period};
+
+	\node[align=center] at (0.325*\fgw, 0.100*\fgh) {shocks and \\ income realization};
+	\node[align=center] at (0.675*\fgw, 0.100*\fgh) {asset choices};
+}
+\newcommand{\tikzframebelowtext}[4]{
+  \def\fgiw{#1*\textwidth}
+  \def\fgih{#2*\textheight}
+  \def\fgiwm{#3*\fgiw}
+  \def\fgihm{#4*\fgih}
+
+  % left pane middle point, align horizontally middle pane
+  \def\fgiwlm{0.125*\textwidth + \fgiwm*0.5 - 0.5*0.125*\textwidth}
+  % right pane middle point, align horizontally middle in pane
+  \def\fgiwrm{\fgiwm + \fgiw*0.5 - 0.125*\textwidth*0.5 - \fgiwm*0.5}
+
+  % fgihtb: figure internal height top pane bottom
+  % bottom 10 percent space of top pane space
+  \def\fgihtb{\fgihm + \fgih*0.085 - \fgihm*0.085}
+
+
+  % There is a flow line on top, limited text
+  % three parts, left prior, right after, middle current.
+  % current in two parts, shock realization and choices.
+  % In top part, span charts, simple text
+  % in bottom part, sufficient height to allow for detailed text
+  % descriptions.
+
+  % Bottom and top lines
+  \draw [solid] (0, \fgih) -- (\fgiw, \fgih);
+  \draw [solid] (0, 0    ) -- (\fgiw, 0    );
+
+  % Left and right lines
+  \draw [solid] (0,     0) -- (0,     \fgih);
+  \draw [solid] (\fgiw, 0) -- (\fgiw, \fgih);
+
+  % verticle middle line
+  \draw [solid] (\fgiwm, 0) -- (\fgiwm,   \fgih);
+  % horizontal middle line (divide text and flow)
+  \draw [solid] (0, \fgihm) -- (\fgiw,   \fgihm);
+
+  % left border last period
+  \draw[dashed] (0.125*\fgiw, 0  ) -- (0.125*\fgiw,   \fgih);
+  % right border next period
+  \draw[dashed] (0.875*\fgiw, 0  ) -- (0.875*\fgiw,   \fgih);
+
+  % %
+  % \draw[loosely dotted] (0, 0.575*\fgih) -- (\fgiw, 0.575*\fgih);
+  % \draw[loosely dotted] (0, 0.350*\fgih) -- (\fgiw, 0.350*\fgih);
+
+  \node[align=center] at (0.065*\fgiw, 0.900*\fgih) {last\\period};
+  \node[align=center] at (0.500*\fgiw, 0.900*\fgih) {current period};
+  \node[align=center] at (0.935*\fgiw, 0.900*\fgih) {next\\period};
+
+  \node[align=center] at (\fgiwlm, \fgihtb) {shocks};
+  \node[align=center] at (\fgiwrm, \fgihtb) {asset choices};
+}
+
+
+100 percent frame with 20 percent page height and 100 percent page width:
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+\tikzframe
+\end{tikzpicture}
+\end{center}
+
+50 percent rescaled center-aligned frame with 20 percent page height and 100 percent page width:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.5}]]
+\tikzframe
+\end{tikzpicture}
+\end{center}
+
+\subsection{Frame Filled Choice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Define Common Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define text block
+\newcommand{\textblock}{
+\node[align=center] (A) at (0.065*\fgw, 0.5*\fgh)
+    {choose \\ $k, b$ };
+\node[align=center] (B) at (0.370*\fgw, 0.5*\fgh)
+    {$\Gamma\left(k,b,\epsilon\right)$ };
+\node[align=center] (C) at (0.790*\fgw, 0.5*\fgh)
+    {$\begin{aligned}
+      c &= \Gamma\cdot\phi\\
+      k &= \Gamma\cdot\phi\cdot\theta\\
+      b &= \Gamma\cdot\phi\cdot\left(1-\theta\right)
+      \end{aligned}$};
+\node[align=center] (D) at (0.935*\fgw, 0.5*\fgh)
+    {draw \\$\epsilon^{\prime}$ shock};
+}
+
+% Define continuous choices
+\def\famm{10mm}
+\tikzstyle{level 1}=[level distance=\famm,sibling distance=\famm]
+\tikzstyle{level 2}=[level distance=\famm,sibling distance=\famm]
+\newcommand{\shkspan}[2]{
+\node(0)[solid node, align=center, % solid node gives fist (left to right) black dot
+label=left:{
+   $\textcolor{black}{\epsilon}$
+    }] at (#1, #2) {}
+[grow=right]
+child{
+    [black] node(31)[]{}
+    edge from parent
+          node[sloped, below, black]{}
+}
+child{
+    edge from parent
+      [draw=none]
+  }
+child{
+    [red] node(33)[]{}
+    edge from parent
+          node[sloped, above, black]{}
+};
+\draw[dashed, bend right]
+(31) to (33);
+}
+\newcommand{\ctsspans}[2]{
+\node[solid node, align=center, % solid node gives fist (left to right) black dot
+label=left:{
+   $\textcolor{black}{\phi}$
+    }] at (#1, #2) {}
+[grow=right]
+child{
+[black] node(11)[]{}
+edge from parent
+      node[sloped, below, black]{$\phi=0$}
+}
+child{
+[grow=right]
+% The starting node for theta
+node(12)[solid node, xshift=9, yshift=0, % solid node gives second (left to right) black dot
+                label=left:{
+                  $\theta$
+                }]{}
+% Draw the theta branches
+    child{
+        [red] node(21)[]{}
+        edge from parent
+            node[sloped, below, black]{$\theta=0$}
+    }
+    child{
+        [white] node(22)[xshift=16, yshift=0]{}
+        edge from parent
+          [draw=none]
+    }
+    child{
+        [black] node(23)[]{}
+        edge from parent
+            node[sloped, above, black]{$\theta=1$}
+    }
+    edge from parent
+      [draw=none]
+  }
+child{
+[red] node(13)[]{}
+edge from parent
+      node[sloped, above, black]{$\phi=1$}
+};
+\draw[dashed, bend right]
+(11) to (13);
+\draw[dashed, bend right]
+(21) to (23);
+}
+
+
+\subsubsection{Spans to Left of Descriptions, 100 percent}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+\tikzframe
+% B. Text
+\textblock
+% C. Arrows
+\draw [->, line width=0.25mm] (0.115*\fgw, 0.5*\fgh) -- (0.195*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.410*\fgw, 0.5*\fgh) -- (0.480*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.835*\fgw, 0.5*\fgh) -- (0.890*\fgw, 0.5*\fgh);
+% D. Span Children
+\ctsspans{0.530*\fgw}{0.500*\fgh}
+\shkspan{0.235*\fgw}{0.500*\fgh}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Spans to Left of Descriptions, 50 percent}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.5}]
+\tikzframe
+% B. Text
+\textblock
+% C. Arrows
+\draw [->, line width=0.25mm] (0.115*\fgw, 0.5*\fgh) -- (0.195*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.410*\fgw, 0.5*\fgh) -- (0.480*\fgw, 0.5*\fgh);
+\draw [->, line width=0.25mm] (0.835*\fgw, 0.5*\fgh) -- (0.890*\fgw, 0.5*\fgh);
+% D. Span Children
+\ctsspans{0.530*\fgw}{0.500*\fgh}
+\shkspan{0.235*\fgw}{0.500*\fgh}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Frame Filled Choice Spans Above Descriptions}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{1}{0.25}{0.4}{0.35}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{0.6}{0.20}{0.4}{0.35}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{1}{0.15}{0.5}{0.5}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Frame Filled Choice Spans Above Descriptions}
+% A. Frame
+\begin{center}
+\begin{tikzpicture}[scale=1.0, every node/.style={scale=1.0}]
+\tikzframebelowtext{1}{0.25}{0.4}{0.4}
+% B. Text
+\node[align=center] (A) at (0.065*\fgw, 0.65*\fgh)
+    {choose \\ $k, b$ };
+\node[align=center] (B) at (0.320*\fgw, 0.350*\fgh)
+    {$\Gamma\left(k,b,\epsilon\right)$ };
+\node[align=center] (C) at (0.675*\fgw, 0.350*\fgh)
+    {$\begin{aligned}
+      c &= \Gamma\cdot\phi\\
+      k &= \Gamma\cdot\phi\cdot\theta\\
+      b &= \Gamma\cdot\phi\cdot\left(1-\theta\right)
+      \end{aligned}$};
+\node[align=center] (D) at (0.935*\fgw, 0.65*\fgh)
+    {draw \\$\epsilon^{\prime}$ shock};
+% C. Arrows
+\draw [->, line width=0.25mm] (0.115*\fgw, 0.65*\fgh) -- (0.250*\fgw, 0.65*\fgh);
+\draw [->, line width=0.25mm] (0.410*\fgw, 0.65*\fgh) -- (0.550*\fgw, 0.65*\fgh);
+\draw [->, line width=0.25mm] (0.790*\fgw, 0.65*\fgh) -- (0.890*\fgw, 0.65*\fgh);
+% D. Span Children
+\ctsspans{0.600*\fgw}{0.650*\fgh}
+\shkspan{0.300*\fgw}{0.650*\fgh}
+% \draw  -- (10,0);
+\end{tikzpicture}
+\end{center}
+
+
+\end{document}
