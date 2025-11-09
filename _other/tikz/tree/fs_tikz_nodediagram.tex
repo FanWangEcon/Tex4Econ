@@ -5,6 +5,8 @@
 \usepackage{caption}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usetikzlibrary{decorations.text}
+
 \usepackage{pgfplots}
 \usepackage{hyperref}
 \hypersetup{
@@ -174,6 +176,488 @@ To present the relationship between data and research analysis, show visually ho
 \end{center}
 \clearpage
 \newpage
+
+\section{Concentric Circle Diagrams}
+
+\subsection{Single Set of Concentric Circles}
+
+We have three circles concentric, with word on top. Here is the code:
+\begin{verbatim}
+\begin{tikzpicture}[thick, font=\small]
+\def\sizechd{1cm}
+\def\sizehum{3cm}
+\def\sizefac{4.5cm}
+    % Objective I
+    \node(101) at (0,0) [fill, circle, 
+        draw=black!50, fill=yellow!40, 
+        minimum size=\sizefac] {};
+    \node(102) at (0,0) [fill, circle, 
+        draw=blue!50, fill=blue!20, 
+        minimum size=\sizehum, label=above:Home] {};
+    \node(103) at (0,0) [circle, 
+        draw=black!50, fill=white!20, 
+        scale=1, minimum size=\sizechd, label=above:Caretakers] {Children};
+\end{tikzpicture}
+\end{verbatim}
+
+Here is the figure:
+\begin{center}
+\begin{tikzpicture}[thick, font=\small]
+\def\sizechd{1cm}
+\def\sizehum{3cm}
+\def\sizefac{4.5cm}
+    % Objective I
+    \node(101) at (0,0) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {Data 3};
+    \node(102) at (0,0) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum, label=above:Home] {Data 2};
+    \node(103) at (0,0) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd, label=above:Caretakers] {Children};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Three Sets of Concentric Circles}
+
+We have three sets of three circles concentric, with word on top.
+\begin{center}
+\begin{tikzpicture}[thick, font=\small]
+\def\sizechd{1cm}
+\def\sizehum{3cm}
+\def\sizefac{4.5cm}
+\def\xcira{-2.15}
+\def\xcirb{2.15}
+\def\xcirc{0}
+\def\ycira{0}
+\def\ycirb{0}
+\def\ycirc{-3.75}
+
+% Circle A
+\node(101) at (\xcira, \ycira) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(102) at (\xcira, \ycira) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum, label=above:Home] {};
+\node(103) at (\xcira, \ycira) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd, label=above:Caretakers] {Children};
+% \path   [thin, draw=blue, text=black,    % <--- new
+%          postaction={decorate},           % <--- changed
+%          text effects={text along path}]  % <--- new
+%         (4,0) arc [start angle=-60,end angle=80,radius=4];
+
+
+% Circle B
+\node(101) at (\xcirb, \ycirb) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {Data 3};
+\node(102) at (\xcirb, \ycirb) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum, label=above:Home] {Data 2};
+\node(103) at (\xcirb, \ycirb) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd, label=above:Caretakers] {Children};
+
+% Circle C
+\node(101) at (\xcirc, \ycirc) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {Data 3};
+\node(102) at (\xcirc, \ycirc) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum, label=above:Home] {Data 2};
+\node(103) at (\xcirc, \ycirc) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd, label=above:Caretakers] {Children};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Circle with Circular Text}
+
+We have three circles concentric, with concentric text. The text starts from 180 degree and goes to 0 degree, covering half a circle. The text is centered, so if there is less text, the text appears in the center. 
+
+\begin{center}
+\begin{tikzpicture}[thick, font=\small]
+\def\sizechd{1cm}
+\def\sizehum{3cm}
+\def\sizefac{4.5cm}
+\def\xcira{0}
+\def\ycira{0}
+
+% Circle A
+\node(101) at (\xcira, \ycira) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(102) at (\xcira, \ycira) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(103) at (\xcira, \ycira) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+
+\draw[decoration={
+    text along path,
+    text={Caretakers are here.},
+    text align={center},
+    raise=0cm},decorate] (-1, 0) arc (180:0:1);
+\draw[decoration={
+    text along path,
+    text={This is our home!},
+    text align={center},
+    raise=0cm},decorate] (-1.8, 0) arc (180:0:1.8);
+
+\end{tikzpicture}
+\end{center}
+
+\subsection{Three Sets of Concentric Circles with Circular Text}
+
+We have three sets of three circles concentric, with word on top.
+
+\begin{center}
+\begin{tikzpicture}[thick, font=\normalsize]
+\def\sizechd{1.5cm}
+\def\sizehum{3.5cm}
+\def\sizefac{5cm}
+% Cirlce x and y
+\def\xcira{-2.4}
+\def\xcirb{2.4}
+\def\xcirc{0}
+\def\ycira{0}
+\def\ycirb{0}
+\def\ycirc{-4.2}
+
+% Circle A
+\node(101) at (\xcira, \ycira) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(102) at (\xcira, \ycira) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(103) at (\xcira, \ycira) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Child health professionals},
+    text align={center},
+    raise=0cm},decorate] (-3.60, 0) arc (180:0:1.22);
+\draw[decoration={
+    text along path,
+    text={Health facilities},
+    text align={center},
+    raise=0cm},decorate] (-4.4, 0) arc (180:0:2);
+
+% Circle B
+\node(101) at (\xcirb, \ycirb) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {Data 3};
+\node(102) at (\xcirb, \ycirb) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {Data 2};
+\node(103) at (\xcirb, \ycirb) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Teachers Teachers Teachers Teachers Teachers.},
+    text align={center},
+    raise=0cm},decorate] (1.20, 0) arc (180:-179:1.22);
+\draw[decoration={
+    text along path,
+    text={Schools Schools Schools Schools Schools Schools Schools Schools Schools.},
+    text align={center},
+    raise=0cm},decorate] (0.4, 0) arc (180:-179:2);
+    
+% Circle C
+\node(101) at (\xcirc, \ycirc) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {Data 3};
+\node(102) at (\xcirc, \ycirc) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {Data 2};
+\node(103) at (\xcirc, \ycirc) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Teachers Teachers Teachers Teachers Teachers.},
+    text align={center},
+    raise=0cm},decorate] (-1.22, -4.20) arc (180:-179:1.22);
+\draw[decoration={
+    text along path,
+    text={Schools Schools Schools Schools Schools Schools Schools Schools Schools.},
+    text align={center},
+    raise=0cm},decorate] (-2.02, -4.20) arc (180:-179:2);
+    
+\end{tikzpicture}
+\end{center}
+\clearpage
+
+\subsection{Three Sets of Concentric Circles with Circular Text and Big Eclipse}
+
+We have three sets of three circles concentric, with word on top.
+
+\begin{center}
+\begin{tikzpicture}[thick, font=\normalsize]
+\def\sizechd{1.5cm}
+\def\sizehum{3.5cm}
+\def\sizefac{5cm}
+% Cirlce x and y
+\def\xcira{-2.4}
+\def\xcirb{2.4}
+\def\xcirc{0}
+\def\ycira{0}
+\def\ycirb{0}
+\def\ycirc{-4.2}
+
+\draw [black, fill=gray!20] (0, -1.7) ellipse (6.75cm and 5.5cm);
+
+% Circle A
+\node(101) at (\xcira, \ycira) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(102) at (\xcira, \ycira) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(103) at (\xcira, \ycira) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Child health professionals},
+    text align={center},
+    raise=0cm},decorate] (-3.60, 0) arc (180:0:1.22);
+\draw[decoration={
+    text along path,
+    text={Health facilities},
+    text align={center},
+    raise=0cm},decorate] (-4.4, 0) arc (180:0:2);
+
+% Circle B
+\node(101) at (\xcirb, \ycirb) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {Data 3};
+\node(102) at (\xcirb, \ycirb) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {Data 2};
+\node(103) at (\xcirb, \ycirb) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Teachers Teachers Teachers Teachers Teachers.},
+    text align={center},
+    raise=0cm},decorate] (1.20, 0) arc (180:-179:1.22);
+\draw[decoration={
+    text along path,
+    text={Schools Schools Schools Schools Schools Schools Schools Schools Schools.},
+    text align={center},
+    raise=0cm},decorate] (0.4, 0) arc (180:-179:2);
+    
+% Circle C
+\node(101) at (\xcirc, \ycirc) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {Data 3};
+\node(102) at (\xcirc, \ycirc) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {Data 2};
+\node(103) at (\xcirc, \ycirc) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Teachers Teachers Teachers Teachers Teachers.},
+    text align={center},
+    raise=0cm},decorate] (-1.22, -4.20) arc (180:-179:1.22);
+\draw[decoration={
+    text along path,
+    text={Schools Schools Schools Schools Schools Schools Schools Schools Schools.},
+    text align={center},
+    raise=0cm},decorate] (-2.02, -4.20) arc (180:-179:2);
+
+% Text 
+% \node[below] at (0, 3.5) {
+% Climatic environment, extreme weather, etc.};
+\node[below] at (0, 3.5) [rectangle, draw=gray!50, fill=gray!10, text width=3cm] {Climate shocks environmental crisis.};
+    
+\end{tikzpicture}
+\end{center}
+\clearpage
+
+
+
+\subsection{Three Sets of Concentric Circles with Circular Text and Big Eclipse and Arrows Outcomes}
+
+We have three sets of three circles concentric, with word on top. Edges and centered text below. 
+
+\begin{center}
+\begin{tikzpicture}[thick, font=\small]
+\tikzstyle{every node}=[draw,shape=ellipse];
+\def\sizechd{1.5cm}
+\def\sizehum{3.5cm}
+\def\sizefac{5cm}
+% Cirlce x and y
+\def\xcira{-2.4}
+\def\xcirb{2.4}
+\def\xcirc{0}
+\def\ycira{0}
+\def\ycirb{0}
+\def\ycirc{-4.2}
+
+% Background gray
+\draw [black, fill=gray!20] (0, -1.4) ellipse (5.75cm and 5.75cm);
+
+% Circle A
+\node(101) at (\xcira, \ycira) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(102) at (\xcira, \ycira) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(103) at (\xcira, \ycira) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Child health professionals},
+    text align={center},
+    raise=0cm},decorate] (-3.60, 0) arc (180:0:1.22);
+\draw[decoration={
+    text along path,
+    text={Health facilities},
+    text align={center},
+    raise=0cm},decorate] (-4.4, 0) arc (180:0:2);
+
+% Circle B
+\node(201) at (\xcirb, \ycirb) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(202) at (\xcirb, \ycirb) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(203) at (\xcirb, \ycirb) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Teachers Teachers Teachers Teachers Teachers.},
+    text align={center},
+    raise=0cm},decorate] (1.20, 0) arc (180:-179:1.22);
+\draw[decoration={
+    text along path,
+    text={Schools Schools Schools Schools Schools Schools Schools Schools Schools.},
+    text align={center},
+    raise=0cm},decorate] (0.4, 0) arc (180:-179:2);
+    
+% Circle C
+\node(301) at (\xcirc, \ycirc) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(302) at (\xcirc, \ycirc) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(303) at (\xcirc, \ycirc) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Teachers Teachers Teachers Teachers Teachers.},
+    text align={center},
+    raise=0cm},decorate] (-1.22, -4.20) arc (180:-179:1.22);
+\draw[decoration={
+    text along path,
+    text={Schools Schools Schools Schools Schools Schools Schools Schools Schools.},
+    text align={center},
+    raise=0cm},decorate] (-2.02, -4.20) arc (180:-179:2);
+
+% Text 
+% \node[below] at (0, 3.5) {
+% Climatic environment, extreme weather, etc.};
+% \node[below] at (0, 3.5) [rectangle, draw=gray!50, fill=gray!10, text width=3.5cm] {\textbf{{\normalsize \textcolor{blue}{Extreme Weather Crisis}}}};
+\draw[decoration={
+    text along path,
+    text={Extreme Weather Crisis Extreme Weather Crisis Extreme Weather Crisis Extreme Weather Crisis.},
+    text align={center},
+    raise=0cm},decorate] (-6, -1.45) arc (180:0:6);
+
+\node(898) at (-4, -3.75) [rectangle, draw=gray!20, fill=gray!20, text width=0cm] {};
+\node(899) at (+4, -3.75) [rectangle, draw=gray!20, fill=gray!20, text width=0cm] {};
+
+\node at (0, 3.5) [rectangle, draw=blue!20, fill=gray!20, minimum width=3.8cm] {\textcolor{blue}{Extreme temperature}};
+\node at (0, 2.9) [rectangle, draw=blue!20, fill=gray!20, minimum width=3.8cm] {\textcolor{blue}{Pollution}};
+\node(998) at (0, -7.75) [rectangle, draw=gray!10, fill=gray!0, minimum width=3.8cm] {\textcolor{red}{Human Capital Formation}};
+\node(999) at (0, -8.25) [rectangle, draw=gray!10, fill=gray!0, minimum width=7.1cm] {\textcolor{black}{Learning, psychological, socio-emotional, physical outcomes}};
+
+\path[->] (101.south west) edge [double, out=-1200, 
+    in=100, draw=red,line width=1pt] (898.north);
+\path[->] (301.west) edge [double, out=-1200, 
+    in=0, draw=red,line width=1pt] (898.east);
+\path[->] (898.south west) edge [double, out=-1200, 
+    in=150, draw=red,line width=1pt] (998.west);    
+
+\path[->] (201.south east) edge [double, out=-70, 
+    in=100, draw=red,line width=1pt] (899.north);
+\path[->] (301.east) edge [double, out=0, 
+    in=-200, draw=red,line width=1pt] (899.west);
+\path[->] (899.south east) edge [double, out=0, 
+    in=20, draw=red,line width=1pt] (998.east);    
+
+    
+\end{tikzpicture}
+\end{center}
+% \clearpage
+
+\subsection{Three Sets of Concentric Circles with Circular Text and Big Eclipse and Arrows Outcomes and Outside Arrows and Central Circle}
+
+We have three sets of three circles concentric, with word on top. Edges and centered text below. Additional circle inside, and centered areas. We also resize the area the make it smaller
+% VSPACE reduction needed after adding the outside dashed lines, which somehow added extra spaces
+\begin{center}
+\vspace*{-1cm}
+\hspace*{-0.5cm}
+\resizebox{8cm}{!}{
+\begin{tikzpicture}[font=\small]
+\tikzstyle{every node}=[draw,shape=ellipse];
+\def\sizechd{1.5cm}
+\def\sizehum{3.5cm}
+\def\sizefac{5cm}
+% Cirlce x and y
+\def\xcira{-2.4}
+\def\xcirb{2.4}
+\def\xcirc{0}
+\def\ycira{0}
+\def\ycirb{0}
+\def\ycirc{-4.2}
+
+% Background gray
+\draw [black, fill=gray!20] (0, -1.4) ellipse (5.75cm and 5.75cm);
+
+% Circle A
+\node(101) at (\xcira, \ycira) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(102) at (\xcira, \ycira) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(103) at (\xcira, \ycira) [circle, draw=black!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Child health professionals},
+    text align={center},
+    raise=0cm},decorate] (-3.60, 0) arc (180:0:1.22);
+\draw[decoration={
+    text along path,
+    text={Maternal/Child health facilities},
+    text align={center},
+    raise=0cm},decorate] (-4.4, 0) arc (180:0:2);
+
+% Circle B
+\node(201) at (\xcirb, \ycirb) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(202) at (\xcirb, \ycirb) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(203) at (\xcirb, \ycirb) [circle, draw=blue!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Teachers and curriculum},
+    text align={center},
+    raise=0cm},decorate] (1.20, 0) arc (180:0:1.22);
+\draw[decoration={
+    text along path,
+    text={Pre-school, primary/secondary schools},
+    text align={center},
+    raise=0cm},decorate] (0.4, 0) arc (180:0:2);
+    
+% Circle C
+\node(301) at (\xcirc, \ycirc) [fill, circle, draw=black!50, fill=yellow!40, minimum size=\sizefac] {};
+\node(302) at (\xcirc, \ycirc) [fill, circle, draw=blue!50, fill=blue!20, minimum size=\sizehum] {};
+\node(303) at (\xcirc, \ycirc) [circle, draw=blue!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Parents and caretakers},
+    text align={center},
+    raise=0cm},decorate] (-1.3, -4.20) arc (-180:0:1.3);
+\draw[decoration={
+    text along path,
+    text={Living environment and housing},
+    text align={center},
+    raise=0cm},decorate] (-2.2, -4.20) arc (-180:0:2.2);
+
+% Circle D
+\path [draw=red!50, fill=red!30, fill opacity = 1.0, line width=1pt, even odd rule] (0,-1.42) circle (1.5) (0,-1.42) circle (0.8);
+\node(403) at (0,-1.42) [circle, draw=red!50, fill=white!20, scale=1, minimum size=\sizechd] {Children};
+\draw[decoration={
+    text along path,
+    text={Policies and community},
+    text align={center},
+    raise=0cm},decorate] (-1.30, -1.35) arc (-180:0:1.25);
+
+
+% Text 
+% \node[below] at (0, 3.5) {
+% Climatic environment, extreme weather, etc.};
+% \node[below] at (0, 3.5) [rectangle, draw=gray!50, fill=gray!10, text width=3.5cm] {\textbf{{\normalsize \textcolor{blue}{Extreme Weather Crisis}}}};
+\draw[decoration={
+    text along path,
+    text={Climatic ambient environmental exposures during childhood that condition human capital growth and development},
+    text align={center},
+    raise=0cm},decorate] (-6, -1.45) arc (180:0:6);
+
+\node(898) at (-4, -3.75) [rectangle, draw=gray!20, fill=gray!20, text width=0cm] {};
+\node(899) at (+4, -3.75) [rectangle, draw=gray!20, fill=gray!20, text width=0cm] {};
+
+\node(996) at (0, 3.5) [rectangle, draw=black!20, fill=gray!20, minimum width=3.8cm, font=\bfseries] {\textcolor{black}{Extreme temperature}};
+\node(997) at (0, 3.0) [rectangle, draw=black!20, fill=gray!20, minimum width=3.8cm, font=\bfseries] {\textcolor{black}{Pollution}};
+\node(998) at (0, -7.75) [rectangle, draw=gray!10, fill=gray!0, minimum width=3.8cm] {\textcolor{red}{Human Capital Formation}};
+\node(999) at (0, -8.25) [rectangle, draw=gray!10, fill=gray!0, minimum width=7.1cm] {\textcolor{black}{Learning, psychological, socio-emotional, physical outcomes}};
+
+% to and out
+% https://tikz.dev/library-edges
+% out = The angle at which the curve leaves the start coordinate. If the start coordinate is a node, the start coordinate is the point on the border of the node at the given ⟨angle⟩. The control point will, thus, lie at a certain distance in the direction ⟨angle⟩ from the start coordinate.
+% in = The angle at which the curve reaches the target coordinate.
+\path[->] (101.south west) edge [double, out=-105, 
+    in=100, draw=blue,line width=1pt] (898.north);
+\path[->] (301.west) edge [double, out=-105, 
+    in=0, draw=blue,line width=1pt] (898.east);
+\path[->] (898.south west) edge [double, out=-105, 
+    in=150, draw=blue,line width=1pt] (998.west);    
+
+\path[->] (201.south east) edge [double, 
+    out=-70, in=100, 
+    draw=blue,line width=1pt] (899.north);
+\path[->] (301.east) edge [double, 
+    out=0, in=-200, 
+    draw=blue,line width=1pt] (899.west);
+\path[->] (899.south east) edge [double, 
+    out=-75, in=30, 
+    draw=blue,line width=1pt] (998.east);        
+\path[dashed, ->] (999.north east) edge [
+    out=30, in=35, looseness=1
+    ] (996.north east);
+\path[dashed, ->] (999.north west) edge [
+    out=150, in=145, looseness=1
+    ] (996.north west);
+
+\path[<->] (103.east) edge [double, draw=black, line width=1pt] (403.north west);
+\path[<->] (203.west) edge [double, draw=black, line width=1pt] (403.north east);
+\path[<->] (303.north) edge [double, draw=black, line width=1pt] (403.south);
+    
+\end{tikzpicture}
+}
+\end{center}
+Above we have the picture we are interested in including.
+\clearpage
 
 
 
@@ -529,5 +1013,96 @@ child{
         (2);
 \end{tikzpicture}
 \end{center}
+
+\section{Consumption, cash, and other spending}
+
+\subsection{Diagram with box edge color and box fill color and parameterized layer gaps}
+
+\def\txbwa{50}
+\def\linewa{2.5}
+
+\def\xsft{-25}
+\def\lvla{0}
+\def\lvlb{\lvla -1.25}
+\def\lvlc{\lvlb -1.75}
+\def\lvld{\lvlc -1.5}
+\def\lvle{\lvld -2.25}
+
+\def\clrsavings{orange}
+\def\clrresource{gray}
+\def\clrother{gray}
+\def\clrcash{red}
+\def\clrbank{black}
+
+\begin{center}
+\begin{tikzpicture}[thick]
+    % \tikz[align=center]
+    % level 1
+    % \draw (0,0) rectangle (2,2) node[pos=.5, text width=2cm,  align=center] {Test sdkf ljlkdjfa lkdsjf };
+
+    \node(101) at (0,\lvla) [rectangle,draw=\clrcash!50,fill=\clrresource!20,align=center,line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Cash earn
+        };
+    \node(102) at (5,\lvla) [rectangle,draw=\clrcash!50,fill=\clrsavings!20, align=center, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Cash save
+        };
+    % level 2
+    \node(201) at (2.5,\lvlb) [rectangle,draw=\clrresource!50,fill=\clrresource!20, align=center, text width=\txbwa, xshift=\xsft, align=center] {
+        Resources (all cash)
+        };
+    % level 3
+    \node(301) at (-1.5,\lvlc) [rectangle,draw=\clrother!50, fill=blue!20, align=center, text width=\txbwa, xshift=\xsft, align=center] {
+        Cash consumption
+        };
+    \node(302) at (+2.5,\lvlc) [rectangle,draw=\clrother!50,fill=blue!20, align=center, text width=\txbwa, xshift=\xsft, align=center] {
+        Non-cash cons.
+        };
+    \node(303) at (+6.5,\lvlc) [rectangle,draw=\clrother!50,fill=\clrsavings!20, align=center, text width=\txbwa, xshift=\xsft, align=center] {
+        Savings
+        };
+    % level 3.5
+    \node(351) at (0.075,\lvld) [rectangle,draw=\clrbank!50,fill=blue!20, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Deposit to bank
+        };
+    % level 4
+    \node(401) at (-3.5,\lvle) [rectangle,draw=\clrcash!50,fill=blue!20, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Cash pay: Pocket-in-Pocket-out
+        };
+    \node(402) at (-1.1,\lvle) [rectangle,draw=\clrcash!50,fill=blue!20, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Cash pay: ATM-to-cons.
+        };
+    \node(403) at (1.3,\lvle) [rectangle,draw=\clrbank!50,fill=blue!20, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Bank pay: Bank-card cons.
+        };
+    \node(404) at (3.7,\lvle) [rectangle,draw=\clrbank!50,fill=blue!20, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Bank pay: Digital cons.
+        };
+    \node(405) at (6.1,\lvle) [rectangle,draw=\clrcash!50,fill=\clrsavings!20, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Cash save: Savings in pocket
+        };
+    \node(406) at (8.5,\lvle) [rectangle, draw=\clrbank!50, fill=\clrsavings!20, line width=\linewa, text width=\txbwa, xshift=\xsft, align=center] {
+        Bank save: Savings at bank
+        };        
+
+    \draw [->] (101.south) to (201.north west); 
+    \draw [->] (102.south) to (201.north east); 
+
+    \draw [->] (201.south) to (301.north); 
+    \draw [->] (201.south) to (302.north);
+    \draw [->] (201.south) to (303.north); 
+
+    \draw [->] (301.south) to (401.north); 
+    \draw [->] (301.south) to (351.north west);
+    \draw [->] (302.south) to (351.north east);
+    \draw [->] (351.south) to (402.north); 
+    \draw [->] (351.south) to (403.north); 
+    \draw [->] (351.south) to (404.north);
+
+    \draw [->] (303.south) to (405.north);
+    \draw [->] (303.south) to (406.north);
+
+\end{tikzpicture}
+\end{center}
+\clearpage
 
 \end{document}
